@@ -38,7 +38,8 @@
           {{ section.settings.heading }}
         </h2>
 
-        {%- if section.settings.blog != blank
+        {%-
+          if section.settings.blog != blank
           and section.settings.show_view_all
           and section.settings.post_limit < section.settings.blog.articles_count
         -%}
@@ -55,7 +56,7 @@
     <slider-component class="slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       <ul
         id="Slider-{{ section.id }}"
-        class="blog__posts articles-wrapper contains-card contains-card--article{% if settings.blog_card_style == 'standard' %} contains-card--standard{% endif %} grid grid--peek grid--2-col-tablet grid--{{ section.settings.columns_desktop }}-col-desktop slider {% if posts_displayed > 2 %}slider--tablet{% else %}slider--mobile{% endif %}"
+        class="blog__posts articles-wrapper contains-card contains-card--article{% if settings.blog_card_style == 'standard' %} contains-card--standard{% endif %} grid_dawn grid--peek grid--2-col-tablet grid--{{ section.settings.columns_desktop }}-col-desktop slider {% if posts_displayed > 2 %}slider--tablet{% else %}slider--mobile{% endif %}"
         role="list"
       >
         {%- if section.settings.blog != blank and section.settings.blog.articles_count > 0 -%}
@@ -68,7 +69,8 @@
                 style="--animation-order: {{ forloop.index }};"
               {% endif %}
             >
-              {% render 'article-card',
+              {%
+                render 'article-card',
                 blog: section.settings.blog,
                 article: article,
                 media_aspect_ratio: 1.66,
@@ -191,7 +193,10 @@
   "name": "t:sections.featured-blog.name",
   "tag": "section",
   "disabled_on": {
-    "groups": ["header", "footer"]
+    "groups": [
+      "header",
+      "footer"
+    ]
   },
   "settings": [
     {

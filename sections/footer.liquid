@@ -42,7 +42,8 @@
       assign only_empty_brand = true
     endif
   -%}
-  {%- if section.blocks.size > 0
+  {%-
+    if section.blocks.size > 0
     or section.settings.newsletter_enable
     or section.settings.show_social and has_social_icons == true
     or section.settings.enable_follow_on_shop
@@ -60,7 +61,7 @@
             endif
           -%}
           <div
-            class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            class="footer__blocks-wrapper grid_dawn grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
             {% if settings.animations_reveal_on_scroll %}
               data-cascade
             {% endif %}
@@ -103,7 +104,8 @@
                   {%- when 'brand_information' -%}
                     <div class="footer-block__brand-info">
                       {%- if settings.brand_image != blank -%}
-                        {%- assign brand_image_height = settings.brand_image_width
+                        {%-
+                          assign brand_image_height = settings.brand_image_width
                           | divided_by: settings.brand_image.aspect_ratio
                         -%}
                         <div
@@ -114,10 +116,10 @@
                             settings.brand_image
                             | image_url: width: 1100
                             | image_tag:
-                              loading: 'lazy',
-                              widths: '50, 100, 150, 200, 300, 400, 550, 800, 1100',
-                              height: brand_image_height,
-                              width: settings.brand_image_width
+                            loading: 'lazy',
+                            widths: '50, 100, 150, 200, 300, 400, 550, 800, 1100',
+                            height: brand_image_height,
+                            width: settings.brand_image_width
                           }}
                         </div>
                       {%- endif -%}

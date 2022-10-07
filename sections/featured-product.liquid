@@ -60,7 +60,7 @@
 
 <section class="color-{{ section.settings.color_scheme }} {% if section.settings.secondary_background %}background-secondary{% else %}gradient{% endif %}">
   <div class="page-width section-{{ section.id }}-padding{% if section.settings.secondary_background %} isolate{% endif %}">
-    <div class="featured-product product product--{{ section.settings.media_size }} grid grid--1-col gradient color-{{ section.settings.color_scheme }} product--{{ section.settings.media_position }}{% if section.settings.secondary_background == false %} isolate{% endif %} {% if product.media.size > 0 or section.settings.product == blank %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
+    <div class="featured-product product product--{{ section.settings.media_size }} grid_dawn grid--1-col gradient color-{{ section.settings.color_scheme }} product--{{ section.settings.media_position }}{% if section.settings.secondary_background == false %} isolate{% endif %} {% if product.media.size > 0 or section.settings.product == blank %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
         <media-gallery
           id="MediaGallery-{{ section.id }}"
@@ -76,7 +76,8 @@
               {%- if product.selected_or_first_available_variant.featured_media != null -%}
                 {%- assign media = product.selected_or_first_available_variant.featured_media -%}
                 <div class="product__media-item" data-media-id="{{ section.id }}-{{ media.id }}">
-                  {% render 'product-thumbnail',
+                  {%
+                    render 'product-thumbnail',
                     media: media,
                     position: 'featured',
                     loop: section.settings.enable_video_looping,
@@ -95,11 +96,13 @@
                 endfor
               -%}
               {%- for media in product.media -%}
-                {%- if media_to_render contains media.id
+                {%-
+                  if media_to_render contains media.id
                   and media.id != product.selected_or_first_available_variant.featured_media.id
                 -%}
                   <div class="product__media-item" data-media-id="{{ section.id }}-{{ media.id }}">
-                    {% render 'product-thumbnail',
+                    {%
+                      render 'product-thumbnail',
                       media: media,
                       position: forloop.index,
                       loop: section.settings.enable_video_looping,
@@ -169,7 +172,8 @@
                 </h2>
               {%- when 'price' -%}
                 <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
-                  {%- render 'price',
+                  {%-
+                    render 'price',
                     product: product,
                     use_variant: true,
                     show_badges: true,
@@ -217,7 +221,8 @@
                 >
                   {% comment %} TODO: enable theme-check once `item_count_for_variant` is accepted as valid filter {% endcomment %}
                   {% # theme-check-disable %}
-                  {%- assign cart_qty = cart
+                  {%-
+                    assign cart_qty = cart
                     | item_count_for_variant: product.selected_or_first_available_variant.id
                   -%}
                   {% # theme-check-enable %}
@@ -305,7 +310,8 @@
                               </dl>
                             {%- endif -%}
                             {%- if current_qty_for_volume_pricing < volume_pricing_array.last.minimum_quantity -%}
-                              {%- assign variant_price = product.selected_or_first_available_variant.price
+                              {%-
+                                assign variant_price = product.selected_or_first_available_variant.price
                                 | money_with_currency
                               -%}
                               <span class="price-per-item--current">
@@ -327,7 +333,8 @@
                             {%- endif -%}
                           </div>
                         {%- else -%}
-                          {%- assign variant_price = product.selected_or_first_available_variant.price
+                          {%-
+                            assign variant_price = product.selected_or_first_available_variant.price
                             | money_with_currency
                           -%}
                           {%- assign variant_price_compare = product.selected_or_first_available_variant.compare_at_price -%}
@@ -394,7 +401,8 @@
                         <ul class="list-unstyled no-js-hidden">
                           <li>
                             <span>{{ product.selected_or_first_available_variant.quantity_rule.min }}+</span>
-                            {%- assign price = product.selected_or_first_available_variant.price
+                            {%-
+                              assign price = product.selected_or_first_available_variant.price
                               | money_with_currency
                             -%}
                             <span data-text="{{ 'products.product.volume_pricing.price_at_each' | t: price: variant_price }}">
@@ -419,7 +427,8 @@
                           <ul class="list-unstyled">
                             <li>
                               <span>{{ product.selected_or_first_available_variant.quantity_rule.min }}+</span>
-                              {%- assign price = product.selected_or_first_available_variant.price
+                              {%-
+                                assign price = product.selected_or_first_available_variant.price
                                 | money_with_currency
                               -%}
                               <span> {{ 'sections.quick_order_list.each' | t: money: price }}</span>
@@ -457,14 +466,16 @@
                 {% assign share_url = product.selected_variant.url | default: product.url | prepend: request.origin %}
                 {% render 'share-button', block: block, share_link: share_url %}
               {%- when 'variant_picker' -%}
-                {% render 'product-variant-picker',
+                {%
+                  render 'product-variant-picker',
                   product: product,
                   block: block,
                   product_form_id: product_form_id,
                   update_url: false
                 %}
               {%- when 'buy_buttons' -%}
-                {%- render 'buy-buttons',
+                {%-
+                  render 'buy-buttons',
                   block: block,
                   product: product,
                   product_form_id: product_form_id,
@@ -541,7 +552,8 @@
                 {%- if product.selected_or_first_available_variant.featured_media != null -%}
                   {%- assign media = product.selected_or_first_available_variant.featured_media -%}
                   <div class="product__media-item" data-media-id="{{ section.id }}-{{ media.id }}">
-                    {% render 'product-thumbnail',
+                    {%
+                      render 'product-thumbnail',
                       media: media,
                       position: 'featured',
                       loop: section.settings.enable_video_looping,
@@ -554,11 +566,13 @@
                   </div>
                 {%- endif -%}
                 {%- for media in product.media -%}
-                  {%- if media_to_render contains media.id
+                  {%-
+                    if media_to_render contains media.id
                     and media.id != product.selected_or_first_available_variant.featured_media.id
                   -%}
                     <div class="product__media-item" data-media-id="{{ section.id }}-{{ media.id }}">
-                      {% render 'product-thumbnail',
+                      {%
+                        render 'product-thumbnail',
                         media: media,
                         position: forloop.index,
                         loop: section.settings.enable_video_looping,
@@ -710,7 +724,10 @@
   "tag": "section",
   "class": "section section-featured-product",
   "disabled_on": {
-    "groups": ["header", "footer"]
+    "groups": [
+      "header",
+      "footer"
+    ]
   },
   "blocks": [
     {

@@ -12,7 +12,7 @@
 }
 
 @media screen and (max-width: 749px) {
-  .footer .grid {
+  .footer .grid_dawn {
     display: block;
   }
 
@@ -34,7 +34,7 @@
 }
 
 @media screen and (min-width: 750px) {
-  .footer__content-top .grid {
+  .footer__content-top .grid_dawn {
     row-gap: 6rem;
     margin-bottom: 0;
   }
@@ -493,13 +493,13 @@
 /* check for flexbox gap in older Safari versions */
 @supports not (inset: 10px) {
   @media screen and (max-width: 749px) {
-    .footer .grid {
+    .footer .grid_dawn {
       margin-left: 0;
     }
   }
 
   @media screen and (min-width: 750px) {
-    .footer__content-top .grid {
+    .footer__content-top .grid_dawn {
       margin-left: -3rem;
     }
 
