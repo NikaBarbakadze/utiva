@@ -1,0 +1,20 @@
+<script src='{{ 'accordion.js' | asset_url }}' defer='defer'></script>
+
+<ul class='accordion-wrapper__content'>
+	{% for link in parent_link.links %}
+		<li class='mega-menu__mob--item'>
+			<a href='{{ link.url }}' class='mega-menu__mob--link'>{{ link.title }}</a>
+			{% if link.links.size > 0 %}
+				<ul class='mega-menu__nested'>
+					{% for child_link in link.links %}
+						<li class='mega-menu__nested--item'>
+							<a href='{{ child_link.url }}' class='mega-menu__nested--link'>
+								{{- child_link.title -}}
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+			{% endif %}
+		</li>
+	{% endfor %}
+</ul>

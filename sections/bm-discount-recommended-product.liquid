@@ -1,0 +1,89 @@
+<div class="bm-discount-recommended-product">
+  <div class="bm-discount-code-container">
+    <div class="bm-discount-recommended-product-main">
+      <h2>{{ section.settings.bm_recommended_product_title }}</h2>
+      <div class="bm-discount-recommended-product-item">
+        {% for block in section.blocks %}
+        {% assign product = all_products[block.settings.bm_recommended_product] %}
+        <div class="bm-discount-recommended-product-block">
+          
+          <div class="bm-discount-recommended-product-img">
+            <a href="{{ product.url}}">
+            {% if block.settings.bm_recommended_product_image %}
+            <img src="{{ block.settings.bm_recommended_product_image | img_url:"master" }}"/>
+            {% else %}
+            <img src="{{ product.featured_image | img_url:"master" }}"/>
+            {% endif %}
+            </a>
+          </div>
+          <div class="bm-discount-recommended-product-content">
+            <div>
+            {% if block.settings.bm_recommended_collection_name %}
+            <h4>{{block.settings.bm_recommended_collection_name}}</h4>
+            {% endif %}
+            {% if block.settings.bm_recommended_product_text %}
+            <a href="{{ product.url}}">
+            <h3>{{block.settings.bm_recommended_product_text}}</h3>
+            </a>
+            {% else %}
+            <a href="{{ product.url}}">
+            <h3>{{product.title}}</h3>
+            </a>
+            {% endif %}
+            <span class="bm-recomended-review stamped-product-reviews-badge" data-id="{{ product.id }}" data-product-title="{{product.title}}" data-product-type="{{product.type}}" style="display:block;" data-product-sku="{{ product.handle }}"></span>
+            </div>
+            <div>
+            <a  class="bm-discount-btn" href="{{ product.url}}">Shop Now</a>
+            </div>
+          </div>
+          
+        </div>
+        {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+{% schema %}
+    
+    {
+        "name": "Recommended Product",
+        "settings": [
+          {
+            "type": "text",
+            "id": "bm_recommended_product_title",
+            "label": "Title"
+          }
+        ],
+        "blocks": [
+            {
+              "name": "product",
+              "type": "Blocks",
+              "settings": [
+                {
+                  "type": "image_picker",
+                  "id": "bm_recommended_product_image",
+                  "label": "Product image"
+                },
+                {
+                  "type": "text",
+                  "id": "bm_recommended_collection_name",
+                  "label": "Collection Name"
+                },
+                {
+                  "type": "text",
+                  "id": "bm_recommended_product_text",
+                  "label": "Product title"
+                },
+                {
+                  "type": "product",
+                  "id": "bm_recommended_product",
+                  "label": "Product"
+                }
+              ]
+            }
+          ]
+    }
+{% endschema %} 

@@ -1,0 +1,74 @@
+{% if section.settings.bm_bundle_product_hide != true %}
+<div class="bm-collection-bundles">
+  <div class="page-width">
+    <div id="bm-collection-bundles-main">
+      <div class="bm-collection-bundles-product-title">
+        {% if section.settings.bm_bundle_product_title != blank %}
+        <h2>{{section.settings.bm_bundle_product_title}}</h2>
+        {% endif %}
+      </div>
+      <div class="bm-collection-bundles-product">
+        {% for block in section.blocks %}
+        {% assign product = all_products[block.settings.bm_bundle_product] %}
+        {% include 'bm-product-item' %}
+        {% else %}
+        <div class="bm-no-product">
+          <p>{{ 'collections.general.no_matches' | t }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+
+{% schema %}
+  {
+    "name": "Bundles product",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "bm_bundle_product_hide",
+        "label": "Hide Section",
+        "default":true
+      },
+      {
+        "type": "text",
+        "id": "bm_bundle_product_title",
+        "label": "Button Text"
+      },
+	  {
+        "type": "checkbox",
+        "id": "show_most_popular",
+        "label": "Show Most Popular Badge",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_best_deal",
+        "label": "Show Best Deal Badge",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "hide_sale_badge",
+        "label": "Hide Sale Badge",
+        "default": true
+      }
+    ],
+    "blocks": [
+      {
+        "type": "bundle_product",
+        "name": "Product",
+        "settings": [
+          {
+            "type": "product",
+            "id": "bm_bundle_product",
+            "label": "Product"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

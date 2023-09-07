@@ -1,0 +1,295 @@
+{% include 'bm-product-template'
+ , section_id: product.id,
+ product_shipping_callout: section.settings.product_shipping_callout,
+ product_image_size: section.settings.product_image_size,
+ product_image_type: section.settings.product_image_type,
+ product_zoom_enable: section.settings.product_zoom_enable,
+ variant_type: section.settings.variant_type,
+ variant_labels_enable: section.settings.variant_labels_enable,
+ sku_enable: section.settings.sku_enable,
+ quantity_enable: section.settings.quantity_enable,
+ inventory_enable: section.settings.inventory_enable,
+ inventory_threshold: section.settings.inventory_threshold,
+ inventory_transfers_enable: section.settings.inventory_transfers_enable,
+ enable_payment_button: section.settings.enable_payment_button,
+ social_enable: section.settings.social_enable,
+ video_looping: section.settings.enable_video_looping,
+ video_style: section.settings.product_video_style %}
+{% if section.settings.bm_new_customer_offer == false %}
+  <style>
+    a.bm-save-text {
+      display: none;
+    }
+    ul.bm-rcprice-text-new {
+      display: none;
+    }
+  </style>
+{% endif %}
+{% schema %}
+  {
+    "name": "Product",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Media"
+      },
+      {
+        "type": "select",
+        "id": "product_image_size",
+        "label": "Image size",
+        "default": "large",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          }, {
+            "value": "medium",
+            "label": "Medium"
+          }, {
+            "value": "large",
+            "label": "Large"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "product_image_type",
+        "label": "Image style",
+        "default": "stacked",
+        "options": [
+          {
+            "value": "stacked",
+            "label": "Stacked"
+          }, {
+            "value": "slider",
+            "label": "Fade"
+          }
+        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "product_zoom_enable",
+        "label": "Enable image zoom",
+        "default": true
+      }, {
+        "type": "checkbox",
+        "id": "enable_video_looping",
+        "label": "Enable video looping",
+        "default": true
+      }, {
+        "type": "select",
+        "id": "product_video_style",
+        "label": "Video style",
+        "default": "muted",
+        "options": [
+          {
+            "value": "muted",
+            "label": "Video without sound"
+          }, {
+            "value": "unmuted",
+            "label": "Video with sound"
+          }
+        ],
+        "info": "Video with sound will not autoplay"
+      }, {
+        "type": "header",
+        "content": "Product settings"
+      }, {
+        "type": "checkbox",
+        "id": "enable_payment_button",
+        "label": "Show dynamic checkout button",
+        "info": "Lets customers check out directly using a familiar payment method. [Learn more](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "default": true
+      }, {
+        "type": "text",
+        "id": "product_shipping_callout",
+        "label": "Callout text",
+        "info": "E.g. Free shipping + returns"
+      }, {
+        "type": "select",
+        "id": "variant_type",
+        "label": "Variant picker style",
+        "default": "button",
+        "options": [
+          {
+            "value": "button",
+            "label": "Buttons"
+          }, {
+            "value": "dropdown",
+            "label": "Dropdown"
+          }
+        ]
+      }, {
+        "type": "checkbox",
+        "id": "variant_labels_enable",
+        "label": "Show variant labels",
+        "default": true
+      }, {
+        "type": "checkbox",
+        "id": "bm_new_customer_offer",
+        "label": "Enable New Customer Offer",
+        "default": true
+      }, {
+        "type": "checkbox",
+        "id": "bm_most_popular",
+        "label": "Show Most Popular Batch",
+        "default": true
+      }, {
+        "type": "text",
+        "id": "bm_most_popular_text",
+        "label": "Most Popular Label"
+      }, {
+        "type": "checkbox",
+        "id": "sku_enable",
+        "label": "Show SKU"
+      }, {
+        "type": "checkbox",
+        "id": "inventory_enable",
+        "label": "Show inventory notice"
+      }, {
+        "type": "range",
+        "id": "inventory_threshold",
+        "label": "Inventory threshold",
+        "default": 10,
+        "min": 0,
+        "max": 20,
+        "step": 2
+      }, {
+        "type": "checkbox",
+        "id": "inventory_transfers_enable",
+        "label": "Show inventory transfer notice",
+        "info": "Learn how to create inventory transfers [here](https://help.shopify.com/en/manual/products/inventory/transfers/create-transfer)"
+      }, {
+        "type": "checkbox",
+        "id": "quantity_enable",
+        "label": "Show quantity field"
+      }, {
+        "type": "checkbox",
+        "id": "social_enable",
+        "label": "Enable social sharing",
+        "default": true
+      }
+    ]
+  }
+{% endschema %}
+
+
+{% if section.settings.bm_most_popular == true %}
+  <style>
+    span.bm-variation-text {
+      display: inline-flex !important;
+    }
+  </style>
+{% endif %}
+
+<script>
+  $(document).ready(function() {
+    {% if product.handle == "uti-test-strips" %}
+      let checkurl = setInterval(function() {
+        if ($('.variant-input-wrap input[type=radio]:checked').length) {
+          $('.bm-qtn-wrapper').addClass("bm-limited-quantity");
+          clearInterval(checkurl);
+        }
+      }, 100);{% endif %}
+
+
+    let variationcontent = $('.variant-input-wrap > div:nth-child(3) > label');
+    {% assign bm_populartext = section.settings.bm_most_popular_text %}
+    let variationcontentext = "<span class='bm-variation-text'>  {{bm_populartext}} </span>"
+    variationcontent.append(variationcontentext);
+
+    let checkreviewcount = setInterval(function() {
+
+      if ($('.bm-product-review .stamped-badge-caption').length) {
+        let reviewcount = $('.bm-product-review .stamped-badge-caption');
+        let reviewcountNum = reviewcount.attr('data-reviews');
+        let reviewstar = $('.bm-product-review .stamped-badge-starrating');
+        let bmnewcaption = '<div><span class="bm-variation-bmnewcaption">Based on</span>' + reviewcountNum + '<span class="bm-variation-bmnewcaption-tow">Happy   {{product.title}} customers</span> </div>'
+        $('bm-product-review span.stamped-badge').css('display', 'flex');
+        reviewstar.after(bmnewcaption);
+        clearInterval(checkreviewcount);
+      }
+    }, 100);
+
+    let bm_updateSaving = setInterval(function() {
+      if ($('.loop-subscription-container').length) { // code for save 25%
+        $('.loop-subscription-group-label').text("Subscribe & Save");
+        let bm_rc_save = $('.loop-subscription-group-discount-badge').text();
+        let bm_rc_save_text = $.trim(bm_rc_save);
+        let bm_save_caption = '<span class="bm-rcprice-save">(' + bm_rc_save_text + ')' + '</span>';
+        $('.loop-subscription-group-label').after(bm_save_caption);
+
+// code for subscribe and save
+        let bm_save_caption_list = '<ul class="bm-rcprice-text-list"><li>Modify, skip or cancel at any time</li> <li>We email you 3 days before each renewal</li></ul>';
+        $('.loop-subscription-group').append(bm_save_caption_list);
+
+        let bm_text_caption = '<a class="bm-save-text" href="https://omniform1.com/signup/v1/5cf158148653ed3ed5351052_61e6e2c87bb78f396b1804cf.html" target="_blank"><ul><li class="bm-rcprice-text">New customers click here for your 25% discount</li></ul></a>';
+        $('.loop-one-time-purchase-option').append(bm_text_caption);
+
+// Add compare price and save anount
+
+        if ($(".bm-com-save-price").length) {
+          if ($(".bm-compare-price").length == 0) {
+            $(".loop-one-time-purchase-option-price-amount , .bm-loop-onetime-price").before("<span class='bm-compare-price'></span>");
+            $(".loop-one-time-purchase-option-price-amount , .bm-loop-onetime-price").after("<span class='bm-save-price'></span>");
+          }
+
+// show content on page reload
+
+          let bm_selected_varient_value = $(".bm-variant-wrapper select [selected='selected']").data("option-title");
+          $(".bm-com-save-price").each(function() {
+            let bm_com_value = $(this).data("varient-title");
+            if (bm_selected_varient_value == bm_com_value) {
+              let bm_compare_price = $(this).find(".bm-rc-compare-price").text();
+              $('.bm-compare-price').html(bm_compare_price);
+              let bm_save_amt = $(this).find(".bm-rc-save-amt").text();
+              $('.bm-save-price').html('<span>' + bm_save_amt + '</span>');
+              $(".loop-one-time-purchase-option-price-amount , .bm-loop-onetime-price").addClass("bm-save-com-amt");
+            }
+          });
+
+// show content after click
+          $(".bm-variant-wrapper .variant-input").click(function() {
+            let bm_varient_value = $(this).data("value");
+            $(".bm-com-save-price").each(function() {
+              let bm_com_value = $(this).data("varient-title");
+              if (bm_varient_value == bm_com_value) {
+                let bm_compare_price = $(this).find(".bm-rc-compare-price").text();
+                $('.bm-compare-price').html(bm_compare_price);
+                let bm_save_amt = $(this).find(".bm-rc-save-amt").text();
+                $('.bm-save-price').html('<span>' + bm_save_amt + '</span>');
+                $(".loop-one-time-purchase-option-price-amount, .bm-loop-onetime-price").addClass("bm-save-com-amt");
+                return false;
+              } else {
+                $('.bm-compare-price').html("");
+                $('.bm-save-price').html("");
+              }
+            });
+            if (window.location.href.indexOf("39479923867807") != -1) {
+              $('.bm-qtn-wrapper').addClass("bm-limited-quantity");
+              $('.bm-qtn-wrapper .quantity-nav.quantity input').val("1");
+            } else {
+              $('.bm-qtn-wrapper').removeClass("bm-limited-quantity");
+            }
+          });
+        }
+
+// Add compare price and save anount on without variation
+        if ($(".bm-com-save-price-single").length) {
+          $(".loop-one-time-purchase-option-price-amount , .bm-loop-onetime-price").before("<span class='bm-compare-price'></span>");
+          $(".loop-one-time-purchase-option-price-amount , .bm-loop-onetime-price").after("<span class='bm-save-price'></span>");
+          var singlePricecom = $('.bm-com-save-price-single .bm-rc-compare-price').text();
+          var singlePricesave = $('.bm-com-save-price-single .bm-rc-save-amt').text();
+          $('.bm-compare-price').text(singlePricecom);
+          $('.bm-save-price').html('<span>' + singlePricesave + '</span>');
+          $(".loop-one-time-purchase-option-price-amount , .bm-loop-onetime-price").addClass("bm-save-com-amt");
+        }
+
+        $('input[name="Size"]').trigger('change');
+
+        clearInterval(bm_updateSaving);
+      }
+    }, 1000);
+
+  });
+</script>

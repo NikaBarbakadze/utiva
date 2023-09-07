@@ -1,0 +1,26 @@
+<div class="bm-why-text">
+    <div class="bm-why-text-container">
+        <div class="bm-why-text-main">
+            {% if section.settings.bm_why_text_description != blank %}
+           <p class="bm-why-text-content">
+            {{section.settings.bm_why_text_description}}
+           </p>
+           {% endif %}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Why Text",
+    "settings": [
+        {
+          "type": "textarea",
+          "id": "bm_why_text_description",
+          "label": "Description"
+        }
+       
+	]
+    
+  }
+{% endschema %}	

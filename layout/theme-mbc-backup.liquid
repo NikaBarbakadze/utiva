@@ -1,0 +1,337 @@
+<!doctype html>
+<html class="no-js" lang="{{ request.locale.iso_code }}">
+<head>
+  <!-- Hotjar Tracking Code for https://www.utivahealth.ca -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:1591226,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+  
+  
+  {% render 'sizechartsrelentless' %}
+
+<meta name="uri-translation" content="on" />
+
+  <meta name="google-site-verification" content="2bcKVxBKujX46mFr3eif_x_JXzeklotRnZBONfKj838" />
+  <!--Cozy Country Redirect Speedup Script-->
+     {{"https://cozycountryredirect.addons.business/js/eggbox/4231/dtag/script.js?shop=utiva.myshopify.com" | script_tag }}
+  <!--Cozy Country Redirect Speedup Script-->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="{{ settings.color_button }}">
+  <link rel="canonical" href="{{ canonical_url }}">
+
+{% if template == 'index' %}
+  <link rel="alternate" href="https://www.utivahealth.com" hreflang="en-us" />
+  <link rel="alternate" href="https://www.utivahealth.ca" hreflang="en-ca" />
+  <link rel="alternate" href="https://www.utivahealth.com" hreflang="x-default" />  
+{% elsif template contains 'collection' and collection.url == '/collections/utiva-collection' %}
+  <link rel="alternate" href="https://www.utivahealth.com/collections/utiva-collection" hreflang="en-us" />
+  <link rel="alternate" href="https://www.utivahealth.ca/collections/utiva-collection" hreflang="en-ca" />
+  <link rel="alternate" href="https://www.utivahealth.com/collections/utiva-collection" hreflang="x-default" />   
+{% elsif template contains 'product' and product.url == '/products/utiva-uti-test-strips' %}
+  <link rel="alternate" href="https://www.utivahealth.com/products/utiva-uti-test-strips" hreflang="en-us" />
+  <link rel="alternate" href="https://www.utivahealth.ca/products/utiva-uti-test-strips" hreflang="en-ca" />
+  <link rel="alternate" href="https://www.utivahealth.com/products/utiva-uti-test-strips" hreflang="x-default" /> 
+{% elsif template contains 'product' and product.url == '/products/utiva-uti-control' %}
+  <link rel="alternate" href="https://www.utivahealth.com/products/utiva-uti-control" hreflang="en-us" />
+  <link rel="alternate" href="https://www.utivahealth.ca/products/utiva-uti-control" hreflang="en-ca" />
+  <link rel="alternate" href="https://www.utivahealth.com/products/utiva-uti-control" hreflang="x-default" /> 
+{% elsif template contains 'product' and product.url == '/products/utiva-starter-kit' %}
+  <link rel="alternate" href="https://www.utivahealth.com/products/utiva-starter-kit" hreflang="en-us" />
+  <link rel="alternate" href="https://www.utivahealth.ca/products/utiva-starter-kit" hreflang="en-ca" />
+  <link rel="alternate" href="https://www.utivahealth.com/products/utiva-starter-kit" hreflang="x-default" />   
+{% elsif template contains 'product' and product.url == '/products/utiva-uti-ebook' %}
+  <link rel="alternate" href="https://www.utivahealth.com/products/utiva-uti-ebook" hreflang="en-us" />
+  <link rel="alternate" href="https://www.utivahealth.ca/products/utiva-uti-ebook" hreflang="en-ca" />
+  <link rel="alternate" href="https://www.utivahealth.com/products/utiva-uti-ebook" hreflang="x-default" />     
+{% elsif template contains 'product' and product.url == '/products/utiva-probiotic-power' %}
+  <link rel="alternate" href="https://www.utivahealth.com/products/utiva-probiotic-power" hreflang="en-us" />
+  <link rel="alternate" href="https://www.utivahealth.ca/products/utiva-probiotic-power" hreflang="en-ca" />
+  <link rel="alternate" href="https://www.utivahealth.com/products/utiva-probiotic-power" hreflang="x-default" />       
+{% elsif template contains 'product' and product.url == '/products/utiva-power-bundle' %}
+  <link rel="alternate" href="https://www.utivahealth.com/products/utiva-power-bundle" hreflang="en-us" />
+  <link rel="alternate" href="https://www.utivahealth.ca/products/utiva-power-bundle" hreflang="en-ca" />
+  <link rel="alternate" href="https://www.utivahealth.com/products/utiva-power-bundle" hreflang="x-default" />         
+{% elsif template contains 'product' and product.url == '/products/gift-card' %}
+  <link rel="alternate" href="https://www.utivahealth.com/products/gift-card" hreflang="en-us" />
+  <link rel="alternate" href="https://www.utivahealth.ca/products/gift-card" hreflang="en-ca" />
+  <link rel="alternate" href="https://www.utivahealth.com/products/gift-card" hreflang="x-default" />           
+{% elsif template contains 'page' and page.url == '/pages/why-utiva' %}
+  <link rel="alternate" href="https://www.utivahealth.com/pages/why-utiva" hreflang="en-us" />
+  <link rel="alternate" href="https://www.utivahealth.ca/pages/why-utiva" hreflang="en-ca" />
+  <link rel="alternate" href="https://www.utivahealth.com/pages/why-utiva" hreflang="x-default" />
+{% elsif template contains 'page' and page.url == '/pages/uti-101' %}
+  <link rel="alternate" href="https://www.utivahealth.com/pages/uti-101" hreflang="en-us" />
+  <link rel="alternate" href="https://www.utivahealth.ca/pages/uti-101" hreflang="en-ca" />
+  <link rel="alternate" href="https://www.utivahealth.com/pages/uti-101" hreflang="x-default" /> 
+{% elsif template contains 'page' and page.url == '/pages/36mg-of-pacs' %}
+  <link rel="alternate" href="https://www.utivahealth.com/pages/36mg-of-pacs" hreflang="en-us" />
+  <link rel="alternate" href="https://www.utivahealth.ca/pages/36mg-of-pacs" hreflang="en-ca" />
+  <link rel="alternate" href="https://www.utivahealth.com/pages/36mg-of-pacs" hreflang="x-default" />
+{% elsif template contains 'page' and page.url == '/pages/faq-about-utiva-uti-control-supplements' %}
+  <link rel="alternate" href="https://www.utivahealth.com/pages/faq-about-utiva-uti-control-supplements" hreflang="en-us" />
+  <link rel="alternate" href="https://www.utivahealth.ca/pages/faq-about-utiva-uti-control-supplements" hreflang="en-ca" />
+  <link rel="alternate" href="https://www.utivahealth.com/pages/faq-about-utiva-uti-control-supplements" hreflang="x-default" />  
+{% elsif template contains 'page' and page.url == '/pages/reviews' %}
+  <link rel="alternate" href="https://www.utivahealth.com/pages/reviews" hreflang="en-us" />
+  <link rel="alternate" href="https://www.utivahealth.ca/pages/reviews" hreflang="en-ca" />
+  <link rel="alternate" href="https://www.utivahealth.com/pages/reviews" hreflang="x-default" /> 
+{% elsif template contains 'page' and page.url == '/pages/about-us' %}
+  <link rel="alternate" href="https://www.utivahealth.com/pages/about-us" hreflang="en-us" />
+  <link rel="alternate" href="https://www.utivahealth.ca/pages/about-us" hreflang="en-ca" />
+  <link rel="alternate" href="https://www.utivahealth.com/pages/about-us" hreflang="x-default" />  
+{% elsif template contains 'page' and page.url == '/pages/contact-us' %}
+  <link rel="alternate" href="https://www.utivahealth.com/pages/contact-us" hreflang="en-us" />
+  <link rel="alternate" href="https://www.utivahealth.ca/pages/contact-us" hreflang="en-ca" />
+  <link rel="alternate" href="https://www.utivahealth.com/pages/contact-us" hreflang="x-default" />    
+{% elsif template contains 'page' and page.url == '/pages/youtiva-blog' %}
+  <link rel="alternate" href="https://www.utivahealth.com/pages/youtiva-blog" hreflang="en-us" />
+  <link rel="alternate" href="https://www.utivahealth.ca/pages/youtiva-blog" hreflang="en-ca" />
+  <link rel="alternate" href="https://www.utivahealth.com/pages/youtiva-blog" hreflang="x-default" />
+{% elsif request.path == '/blogs/resources/diabetes-utis' %}
+  <link rel="alternate" href="https://www.utivahealth.com/blogs/resources/diabetes-utis" hreflang="en-us" />
+  <link rel="alternate" href="https://www.utivahealth.ca/blogs/resources/diabetes-utis" hreflang="en-ca" />
+  <link rel="alternate" href="https://www.utivahealth.com/blogs/resources/diabetes-utis" hreflang="x-default" />  
+{% elsif request.path == '/blogs/resources/share-your-story-read-about-kims-uti-journey' %}
+  <link rel="alternate" href="https://www.utivahealth.com/blogs/resources/share-your-story-read-about-kims-uti-journey" hreflang="en-us" />
+  <link rel="alternate" href="https://www.utivahealth.ca/blogs/resources/share-your-story-read-about-kims-uti-journey" hreflang="en-ca" />
+  <link rel="alternate" href="https://www.utivahealth.com/blogs/resources/share-your-story-read-about-kims-uti-journey" hreflang="x-default" />  
+{% elsif request.path == '/blogs/resources/antibiotics-resistence' %}
+  <link rel="alternate" href="https://www.utivahealth.com/blogs/resources/antibiotics-resistence" hreflang="en-us" />
+  <link rel="alternate" href="https://www.utivahealth.ca/blogs/resources/antibiotics-resistence" hreflang="en-ca" />
+  <link rel="alternate" href="https://www.utivahealth.com/blogs/resources/antibiotics-resistence" hreflang="x-default" />    
+{% elsif request.path == '/blogs/resources/uti-symptoms-and-diagnosis' %}
+  <link rel="alternate" href="https://www.utivahealth.com/blogs/resources/uti-symptoms-and-diagnosis" hreflang="en-us" />
+  <link rel="alternate" href="https://www.utivahealth.ca/blogs/resources/uti-symptoms-and-diagnosis" hreflang="en-ca" />
+  <link rel="alternate" href="https://www.utivahealth.com/blogs/resources/uti-symptoms-and-diagnosis" hreflang="x-default" />
+{% elsif request.path == '/blogs/resources/clinical-studies-for-pacs-and-utiva-control-supplement' %}
+  <link rel="alternate" href="https://www.utivahealth.com/blogs/resources/clinical-studies-for-pacs-and-utiva-control-supplement" hreflang="en-us" />
+  <link rel="alternate" href="https://www.utivahealth.ca/blogs/resources/clinical-studies-for-pacs-and-utiva-control-supplement" hreflang="en-ca" />
+  <link rel="alternate" href="https://www.utivahealth.com/blogs/resources/clinical-studies-for-pacs-and-utiva-control-supplement" hreflang="x-default" />  
+{% elsif request.path == '/blogs/resources/utivas-manufacturing-process' %}
+  <link rel="alternate" href="https://www.utivahealth.com/blogs/resources/utivas-manufacturing-process" hreflang="en-us" />
+  <link rel="alternate" href="https://www.utivahealth.ca/blogs/resources/utivas-manufacturing-process" hreflang="en-ca" />
+  <link rel="alternate" href="https://www.utivahealth.com/blogs/resources/utivas-manufacturing-process" hreflang="x-default" />    
+{% elsif request.path == '/blogs/resources/summer-time-tips' %}
+  <link rel="alternate" href="https://www.utivahealth.com/blogs/resources/summer-time-tips" hreflang="en-us" />
+  <link rel="alternate" href="https://www.utivahealth.ca/blogs/resources/summer-time-tips" hreflang="en-ca" />
+  <link rel="alternate" href="https://www.utivahealth.com/blogs/resources/summer-time-tips" hreflang="x-default" />
+{% elsif request.path == '/blogs/resources/when-your-period-and-uti-hits-at-the-same-time' %}
+  <link rel="alternate" href="https://www.utivahealth.com/blogs/resources/when-your-period-and-uti-hits-at-the-same-time" hreflang="en-us" />
+  <link rel="alternate" href="https://www.utivahealth.ca/blogs/resources/when-your-period-and-uti-hits-at-the-same-time" hreflang="en-ca" />
+  <link rel="alternate" href="https://www.utivahealth.com/blogs/resources/when-your-period-and-uti-hits-at-the-same-time" hreflang="x-default" />  
+{% elsif request.path == '/blogs/resources/what-to-wear-if-you-re-constantly-getting-a-uti' %}
+  <link rel="alternate" href="https://www.utivahealth.com/blogs/resources/what-to-wear-if-you-re-constantly-getting-a-uti" hreflang="en-us" />
+  <link rel="alternate" href="https://www.utivahealth.ca/blogs/resources/what-to-wear-if-you-re-constantly-getting-a-uti" hreflang="en-ca" />
+  <link rel="alternate" href="https://www.utivahealth.com/blogs/resources/what-to-wear-if-you-re-constantly-getting-a-uti" hreflang="x-default" />    
+{% elsif request.path == '/blogs/resources/sex-utis' %}
+  <link rel="alternate" href="https://www.utivahealth.com/blogs/resources/sex-utis" hreflang="en-us" />
+  <link rel="alternate" href="https://www.utivahealth.ca/blogs/resources/sex-utis" hreflang="en-ca" />
+  <link rel="alternate" href="https://www.utivahealth.com/blogs/resources/sex-utis" hreflang="x-default" />      
+{% elsif request.path == '/blogs/resources/menopause-utis' %}
+  <link rel="alternate" href="https://www.utivahealth.com/blogs/resources/menopause-utis" hreflang="en-us" />
+  <link rel="alternate" href="https://www.utivahealth.ca/blogs/resources/menopause-utis" hreflang="en-ca" />
+  <link rel="alternate" href="https://www.utivahealth.com/blogs/resources/menopause-utis" hreflang="x-default" />        
+{% elsif request.path == '/blogs/resources/spinal-cord-injuries-and-utis' %}
+  <link rel="alternate" href="https://www.utivahealth.com/blogs/resources/spinal-cord-injuries-utis" hreflang="en-us" />
+  <link rel="alternate" href="https://www.utivahealth.ca/blogs/resources/spinal-cord-injuries-and-utis" hreflang="en-ca" />
+  <link rel="alternate" href="https://www.utivahealth.com/blogs/resources/spinal-cord-injuries-utis" hreflang="x-default" />          
+{% elsif template contains 'page' and page.url == '/pages/covid-19-updates-on-orders-and-shipping' %}
+  <link rel="alternate" href="https://www.utivahealth.com/pages/covid-19-updates-on-orders-and-shipping" hreflang="en-us" />
+  <link rel="alternate" href="https://www.utivahealth.ca/pages/covid-19-updates-on-orders-and-shipping" hreflang="en-ca" />
+  <link rel="alternate" href="https://www.utivahealth.com/pages/covid-19-updates-on-orders-and-shipping" hreflang="x-default" />
+{% endif %}    
+  			   	   
+  {%- if settings.favicon -%}
+    <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png" />
+  {%- endif -%}
+
+  {% include 'seo-title' %}
+  <title>{{ seo_title }}</title>
+
+  {%- if page_description -%}
+  <meta name="description" content="{{ page_description | escape }}">
+  {%- endif -%}
+
+  {% include 'social-meta-tags' %}
+
+  {% include 'GPO_script' %}{{ content_for_header }}
+{%- render 'bold-common' -%}
+{%- render 'bold-ro-init' -%}
+
+  <script>
+    var theme = {
+      stylesheet: "{{ 'theme.scss.css' | asset_url }}",
+      template: {{ template | json }},
+      routes: {
+        cart: "{{ routes.cart_url }}",
+        cartAdd: "{{ routes.cart_add_url }}",
+        cartChange: "{{ routes.cart_change_url }}"
+      },
+      strings: {
+        addToCart: {{ 'products.product.add_to_cart' | t | json }},
+        soldOut: {{ 'products.product.sold_out' | t | json }},
+        unavailable: {{ 'products.product.unavailable' | t | json }},
+        regularPrice: {{ 'products.general.regular_price' | t | json }},
+        salePrice: {{ 'products.general.sale_price' | t | json }},
+        stockLabel: {{ 'products.product.stock_label' | t: count: '[count]' | json }},
+        willNotShipUntil: {{ 'products.product.will_not_ship_until' | t: date: '[date]' | json }},
+        willBeInStockAfter: {{ 'products.product.will_be_in_stock_after' | t: date: '[date]' | json }},
+        waitingForStock: {{ 'products.product.waiting_for_stock' | t | json }},
+        cartItems: {{ 'cart.general.item_count' | t: count: '[count]' | json }},
+        cartConfirmDelete: {{ 'cart.general.delete_confirm' | t | json }},
+        cartTermsConfirmation: {{ 'cart.general.terms_confirm' | t | json }}
+      },
+      settings: {
+        dynamicVariantsEnable: true,
+        cartType: {{ settings.cart_type | json }},
+        moneyFormat: {{ shop.money_format | json }},
+        quickView: {{ settings.quick_shop_enable }},
+        hoverProductGrid: {{ settings.product_hover_image }},
+        themeName: 'Streamline',
+        themeVersion: "3.0.5"
+      }
+    };
+
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+  </script>
+
+  {% include 'critical-css' %}
+  {% include 'load-css' %}
+
+  <script src="{{ 'vendor-v2.js' | asset_url | split: '?' | first }}" defer="defer"></script>
+  {%- if shop.enabled_currencies.size > 1 -%}
+    <link rel="preload" as="style" href="{{ 'currency-flags.css' | asset_url }}" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ 'currency-flags.css' | asset_url }}"></noscript>
+  {%- endif -%}
+  <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
+  {%- if request.page_type contains 'customers/' -%}
+    <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer="defer"></script>
+  {%- endif -%}
+  {% render 'minmaxify-head' %}
+ 
+{% render 'pagefly-header' %}
+ 
+  
+
+  {% render 'shogun-head' %}
+<script>var scaaffCheck = false;</script>
+{{ 'sca_affiliate.js' | asset_url | script_tag }}
+</head> 
+
+
+{% include 'globo.formbuilder.scripts' %}
+<body class="template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}{% if settings.cart_type == 'sticky' and cart.item_count > 0 and template != 'cart' %} body--sticky-cart-open{% endif %}{% if cart.item_count > 0 %} cart-has-items{% endif %}" data-transitions="{{ settings.animate_page_transitions }}" ontouchstart="return true;">
+  <div id="OverscrollLoader" class="overscroll-loader" aria-hidden="true">
+    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--full-color icon-loader--full-color"><path class="icon-loader__close" d="M19 17.61l27.12 27.13m0-27.12L19 44.74"/><path class="icon-loader__path" d="M40 90a40 40 0 1 1 20 0"/></svg>
+  </div>
+
+  <div class="root">
+
+    {% if settings.animate_page_transitions %}
+      <script>window.setTimeout(function() { document.body.className += " loaded"; }, 25);</script>
+    {% endif %}
+
+    {%- assign loader_size = settings.desktop_loader_width | append: 'x' -%}
+    {%- assign loader_size_mobile = settings.mobile_loader_width | append: 'x' -%}
+
+    <div class="splash-screen">
+      {% if settings.logo_loader_image != blank %}
+        <div class="splash-screen__loader">
+          <img
+            class="loader-logo__img"
+            src="{{ settings.logo_loader_image | img_url: loader_size }}"
+            srcset="{{ settings.logo_loader_image | img_url: loader_size }} 1x, {{ settings.logo_loader_image | img_url: loader_size, scale: 2 }} 2x"
+            aria-hidden="true">
+        </div>
+      {% else %}
+        <span class="loader-text">{{ 'general.accessibility.loading' | t }}</span>
+      {% endif %}
+    </div>
+
+    <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
+
+    <div id="PageContainer" class="page-container">
+      <div class="transition-body">
+        {% section 'header' %}
+
+        <main class="main-content" id="MainContent">
+          {{ content_for_layout }}
+        </main>
+
+        {% section 'social' %}
+        {% section 'footer' %}
+      </div>
+    </div>
+
+    {% section 'newsletter-popup' %}
+
+    {% include 'video-modal' %}
+    {% if settings.animate_page_transition_style == 'page-logo' %}
+      <div class="loader-logo">
+        {% if settings.logo_loader_image != blank %}
+          <div class="splash-screen__loader">
+            <img
+              class="loader-logo__img"
+              src="{{ settings.logo_loader_image | img_url: loader_size }}"
+              srcset="{{ settings.logo_loader_image | img_url: loader_size }} 1x, {{ settings.logo_loader_image | img_url: loader_size, scale: 2 }} 2x"
+              aria-hidden="true">
+          </div>
+        {% else %}
+          <span class="loader-text">{{ 'general.accessibility.loading' | t }}</span>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+  <div id="ProductScreens"></div>
+  {% include 'photoswipe-template' %}
+  {% if settings.cart_type == 'drawer' %}
+    {% include 'cart-drawer' %}
+  {% endif %}
+
+
+<script>
+   jQuery('<div class="quantity-nav"><div class="quantity-button quantity-up">&#708;</div><div class="quantity-button quantity-down">&#709;</div>').insertAfter('.quantity input');
+    jQuery('.quantity').each(function() {
+      var spinner = jQuery(this),
+        input = spinner.find('input[type="number"]'),
+        btnUp = spinner.find('.quantity-up'),
+        btnDown = spinner.find('.quantity-down'),
+        min = input.attr('min'),
+        max = input.attr('max');
+
+      btnUp.click(function() {
+        var oldValue = parseFloat(input.val());
+        if (oldValue >= max) {
+          var newVal = oldValue;
+        } else {
+          var newVal = oldValue + 1;
+        }
+        spinner.find("input").val(newVal);
+        spinner.find("input").trigger("change");
+      });
+
+      btnDown.click(function() {
+        var oldValue = parseFloat(input.val());
+        if (oldValue <= min) {
+          var newVal = oldValue;
+        } else {
+          var newVal = oldValue - 1;
+        }
+        spinner.find("input").val(newVal);
+        spinner.find("input").trigger("change");
+      });
+
+    });
+</script>
+
+</body>
+</html>

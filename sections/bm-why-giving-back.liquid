@@ -1,0 +1,80 @@
+<div class="bm-why-giving-back">
+    <div class="bm-why-giving-back-main" 
+      style="background-image: url({{section.settings.bm_about_giving_img | img_url:'master' }});">
+        <div class="bm-why-giving-back-img">
+            {% if section.settings.bm_about_giving_img != blank %}
+            <img src="{{section.settings.bm_about_giving_img | img_url:'master' }}" alt="">
+            {% endif %}
+        </div>
+        <div class="bm-why-giving-back-content">
+            {% if section.settings.bm_about_giving_back_title != blank %}
+            <h2>{{section.settings.bm_about_giving_back_title}}</h2>
+            {% endif %}
+            {% if section.settings.bm_about_giving_back_description != blank %}
+            <p>{{section.settings.bm_about_giving_back_description}}</p>
+            {% endif %}
+            <div class="bm-why-giving-logo">
+                <div class="bm-why-giving-logo-left">
+                    <a href="{{ section.settings.bm_about_giving_logo_left_link }}">
+                    {% if section.settings.bm_about_giving_logo_left_img != blank %}
+                    <img src="{{section.settings.bm_about_giving_logo_left_img | img_url:'master' }}" alt="">
+                    {% endif %}
+                    </a>
+
+                </div>
+                <div class="bm-why-giving-logo-right">
+                    <a href="{{ section.settings.bm_about_giving_logo_right_link }}">
+                    {% if section.settings.bm_about_giving_logo_right_img != blank %}
+                    <img src="{{section.settings.bm_about_giving_logo_right_img | img_url:'master' }}" alt="">
+                    {% endif %}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Why Giving Back",
+    "settings": [
+        {
+          "type": "image_picker",
+          "id": "bm_about_giving_img",
+          "label": "Image"
+        },
+        {
+            "type": "text",
+            "id": "bm_about_giving_back_title",
+            "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "bm_about_giving_back_description",
+          "label": "Description"
+        },
+        {
+          "type": "image_picker",
+          "id": "bm_about_giving_logo_left_img",
+          "label": "Left Logo"
+        },
+        {
+          "type": "url",
+          "id": "bm_about_giving_logo_left_link",
+          "label": "Left Logo Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "bm_about_giving_logo_right_img",
+          "label": "Right Logo"
+        },
+        {
+          "type": "url",
+          "id": "bm_about_giving_logo_right_link",
+          "label": "Right Logo Link"
+        }
+       
+	]
+    
+  }
+{% endschema %}	

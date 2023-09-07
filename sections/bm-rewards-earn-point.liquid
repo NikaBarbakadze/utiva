@@ -1,0 +1,120 @@
+ <!-- <div class="bm-rewards-earn-point">
+    <div class="bm-rewards-earn-point-main">
+        {% if section.settings.bm_rewards_earn_point_title != blank %}
+        <h2 class="bm-rewards-earn-point-title">{{section.settings.bm_rewards_earn_point_title}}</h2>
+        {% endif %}
+        <div class="bm-rewards-earn-point-content">
+            {% for block in section.blocks %}
+            <div class="bm-rewards-earn-point-item">
+                <div class="bm-rewards-earn-point-img">
+                    {% if block.settings.bm_rewards_earn_point_img != blank %}
+                    <img src="{{block.settings.bm_rewards_earn_point_img |  img_url: 'master'}}" alt="">
+                    {% endif %}
+                </div>
+                {% if block.settings.bm_rewards_earn_point_title != blank %}
+                <h2>{{block.settings.bm_rewards_earn_point_title}}</h2>
+                {% endif %}
+                {% if block.settings.bm_rewards_earn_point_subtitle != blank %}
+                <h3>{{block.settings.bm_rewards_earn_point_subtitle}}</h3>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+        {% if section.settings.bm_rewards_earn_point_btn-text != blank %}
+        <a class="bm-rewards-earn-btn" href="{{section.settings.bm_rewards_earn_point_btn-url}}">{{section.settings.bm_rewards_earn_point_btn-text}}</a>
+        {% endif %}
+    </div>
+</div>-->
+     <div class="bm-rewards-earn-point">
+        {% if section.settings.bm_rewards_earn_point_title != blank %}
+        <h2 class="bm-rewards-earn-point-title">{{section.settings.bm_rewards_earn_point_title}}</h2>
+        {% endif %}
+     
+       <div id="stamped-rewards-widget" data-widget-type="rewards-earnings-v2" data-label-title="EARN POINTS"></div>
+       {% if customer.id == null %}
+        {% if section.settings.bm_rewards_earn_point_btn-text != blank %}
+        <a class="bm-rewards-earn-btn" href="{{section.settings.bm_rewards_earn_point_btn-url}}">{{section.settings.bm_rewards_earn_point_btn-text}}</a>
+        {% endif %}
+       {% endif %}  
+     </div>
+{% schema %}
+    {
+      "name": "Earn Point",
+      "settings": [
+           {
+              "type": "text",
+              "id": "bm_rewards_earn_point_title",
+              "label": "Heading"
+           },
+           {
+            "type": "text",
+            "id": "bm_rewards_earn_point_btn-text",
+            "label": "Button Text"
+           },
+           {
+            "type": "url",
+            "id": "bm_rewards_earn_point_btn-url",
+            "label": "Button Link"
+           }
+      ],
+      "blocks": [
+       {
+         "name": "content",
+         "type": "text",
+         "settings": [
+           {
+              "type": "image_picker",
+              "id": "bm_rewards_earn_point_img",
+              "label": "Image"
+           },
+           {
+              "type": "text",
+              "id": "bm_rewards_earn_point_title",
+              "label": "Title"
+           },
+           {
+            "type": "text",
+            "id": "bm_rewards_earn_point_subtitle",
+            "label": "Subtitle"
+           }
+         ]
+       }
+     ]
+    }
+  {% endschema %}
+
+
+  <style>
+
+    .stamped-rewards-widget-campaign-title {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px !important;
+    line-height: 35px !important;
+    text-align: center !important;
+    color: #253C51;
+}
+    .stamped-rewards-widget-campaign-image {
+    text-align: center;
+}
+    .stamped-rewards-widget-campaign-value {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px !important;
+    line-height: 16px !important;
+    text-align: center !important;
+    color: #DA212C;
+}
+    .stamped-rewards-widget-item-inner {
+    text-align: center;
+}
+    div#stamped-rewards-widget {
+    background: none;
+    margin: 0;
+}
+    div#shopify-section-bm-rewards-earn-point {
+    text-align: center;
+}
+  </style>

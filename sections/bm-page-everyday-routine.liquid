@@ -1,0 +1,149 @@
+<div class="bm-page-everyday-routine" style="background-color:{{section.settings.bm_routine_bg_color}}">
+  <div class="page-width">
+    <div class="bm-page-everyday-routine-main">
+      {% if section.settings.bm_contents_text != blank %}
+      <div class="bm-contents-text-top">
+        <strong class="bm-contents-text">{{section.settings.bm_contents_text}}</strong>
+      </div>
+      {% endif %}
+      {% if section.settings.bm_routine_title != blank %}
+      <h2 class="bm-everyday-routine-title" style="margin-bottom:{{section.settings.bm_routine_title_margin}}px">
+        {{section.settings.bm_routine_title}}</h2>
+      {% endif %}
+      {% if section.settings.bm_routine_pragraph != blank %}
+      <p class="bm-everyday-routine-pragraph">{{section.settings.bm_routine_pragraph}}</p>
+      {% endif %}
+      
+      <div class="bm-page-everyday-routine-content">
+        {% for block in section.blocks %}
+        <div class="bm-page-everyday-routine-block">
+          <div class="bm-everyday-routine-img">
+            {% if block.settings.bm_routine_img != blank %}
+            <img src="{{block.settings.bm_routine_img | img_url:"master"}}" alt="">
+            {% endif %}
+          </div>
+          {% if block.settings.bm_routine_heading != blank %}
+          <h2>{{block.settings.bm_routine_heading }}</h2>
+          {% endif %}
+          {% if block.settings.bm_routine_description != blank %}
+          <p>{{block.settings.bm_routine_description }}</p>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<style>
+  {% if section.settings.bm_routine_bg_color !=blank %}
+  .bm-page-everyday-routine {
+    padding: 115px 0;
+  }
+  {% endif %}
+
+  {% if section.settings.bm_routine_item_row == 2 %}
+  .bm-page-everyday-routine-block {
+    width: calc(50% - 35px);
+  }
+  .bm-page-everyday-routine-block:nth-child(2n+0) {
+    margin-right: 0;
+  }
+  .bm-page-everyday-routine-block:last-child {
+    margin-right: 0;
+  }
+  {% endif %}
+  
+  {% if section.settings.bm_routine_item_row == 3 %}
+  .bm-page-everyday-routine-block {
+    width: calc(33.33% - 47px);
+  }
+  .bm-page-everyday-routine-block:nth-child(3n+0) {
+    margin-right: 0;
+  }
+  .bm-page-everyday-routine-block:last-child {
+    margin-right: 0;
+  }
+  {% endif %}
+</style>
+
+
+{% schema %}
+  {
+    "name": "Page Treatment",
+    "settings": [
+        {
+            "type": "range",
+            "id": "bm_routine_item_row",
+            "min":  2,
+            "max":  4,
+            "step":  1,
+            "label": "Item Per Row",
+            "default":  2
+        },
+        {
+            "type": "range",
+            "id": "bm_routine_title_margin",
+            "min":  1,
+            "max":  100,
+            "step":  1,
+            "unit": "px",
+            "label": "Title margin bottom",
+            "default":  32
+        },
+        {
+           "type": "color",
+           "id": "bm_routine_bg_color",
+           "label": "Background Color"
+        },
+        {
+          "type": "text",
+          "id": "bm_contents_text",
+          "label": "Contents Text"
+        },
+        {
+           "type": "text",
+           "id": "bm_routine_title",
+           "label": "Heading"
+        },
+        {
+           "type": "textarea",
+           "id": "bm_routine_pragraph",
+           "label": "Description"
+        }
+	],
+  "blocks": [
+    {
+      "type": "block",
+      "name": "content",
+      "settings": [
+  		{
+           "type": "image_picker",
+           "id": "bm_routine_img",
+           "label": "Image"
+        },
+        {
+           "type": "text",
+           "id": "bm_routine_heading",
+           "label": "Title"
+        },
+        {
+           "type": "html",
+           "id": "bm_routine_description",
+           "label": "Description"
+        }
+      ]
+    }
+  ],
+    "presets": [
+      {
+        "name": "Page Treatment",
+        "category": "Bm Page Sections"
+      }
+    ]
+    
+  }
+{% endschema %}	
+

@@ -1,0 +1,100 @@
+
+<div class="bm-what-is-difference">
+  <div class="page-width">
+    <div class="bm-what-is-difference-main">
+      {% if section.settings.bm_what_is_difference_title != blank %}
+      <h2 class="bm-what-is-difference-title">
+        {{section.settings.bm_what_is_difference_title}}
+      </h2>
+      {% endif %}
+      <div class="bm-what-is-difference-top">
+        <div class="bm-what-is-difference-top-img">
+          {% if section.settings.bm_what_is_difference_top_image != blank %}
+          <img loading="lazy" src="{{section.settings.bm_what_is_difference_top_image | img_url:'master' }}" />
+          {% endif %}
+        </div>
+        <div class="bm-what-is-difference-top-content">
+          {% for block in section.blocks %}
+          <div class="bm-what-is-difference-top-content-block">
+            <div class="bm-what-is-difference-top-content-block-img">
+              {% if block.settings.bm_what_is_difference_top_content_block_image != blank %}
+              <div>
+                <img loading="lazy" src="{{block.settings.bm_what_is_difference_top_content_block_image | img_url:'master' }}" />
+              </div>
+              {% endif %}
+            </div>
+            {% if block.settings.bm_what_is_difference_top_content_block_title != blank %}
+            <div class="bm-what-is-difference-top-content-block-text">
+              <h2>{{block.settings.bm_what_is_difference_top_content_block_title }}</h2>
+            </div>
+            {% endif %}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="bm-what-is-difference-bottom">
+        {% if section.settings.bm_what_is_difference_bottom_title != blank %}
+        <h2>{{section.settings.bm_what_is_difference_bottom_title }}</h2>
+        {% endif %}
+        {% if section.settings.bm_what_is_difference_bottom_description != blank %}
+        <p>{{section.settings.bm_what_is_difference_bottom_description }}</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "What is difference",
+    "settings": [
+        {
+          "type": "text",
+          "id": "bm_what_is_difference_title",
+          "label": "Hedding"
+        },
+		{
+          "type": "image_picker",
+          "id": "bm_what_is_difference_top_image",
+          "label": "Image"
+        },
+     {
+            "type": "text",
+            "id": "bm_what_is_difference_bottom_title",
+            "label": "Bottom title"
+         },
+     {
+            "type": "textarea",
+            "id": "bm_what_is_difference_bottom_description",
+            "label": "Bottom Description"
+         }
+	],
+	"blocks": [
+     {
+       "name": "Feature",
+       "type": "Feature",
+       "settings": [
+         {
+           "type": "image_picker",
+           "id": "bm_what_is_difference_top_content_block_image",
+           "label": "Image"
+         },
+		 {
+            "type": "text",
+            "id": "bm_what_is_difference_top_content_block_title",
+            "label": "title"
+         }
+       ]
+     }
+   ],
+    "presets": [
+      {
+        "name": "What is difference",
+        "category": "BM Sections"
+      }
+    ]
+  }
+{% endschema %}
+
+

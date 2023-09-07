@@ -1,0 +1,89 @@
+{{ 'announcement.css' | asset_url | stylesheet_tag }}
+{{ 'announcement-close.js' | asset_url | script_tag }}
+
+{% liquid
+	assign icon = section.settings.icon
+	assign description = section.settings.description
+
+	assign bg_color = section.settings.bg_color
+	assign text_color = section.settings.text_color
+	assign text_alignment = section.settings.text_alignment
+%}
+<div
+	id='announcement-bar'
+	style='justify-content: {{ text_alignment }};  background-color: {{ bg_color }}; color: {{ text_color }}'
+>
+	<div class='announcement-bar__wrapper'>
+		{% if icon != blank %}
+			{{
+				icon
+				| image_url: width: icon.width
+				| image_tag:
+					loading: 'lazy',
+					width: icon.width,
+					height: icon.height,
+					sizes: '10vw',
+					class: 'announcement-bar__icon',
+					widths: '200'
+			}}
+		{% else %}
+			{% render 'icon', icon: 'delivery' %}
+		{% endif %}
+
+		<span class='announcement-bar__description'> {{ description }}</span>
+	</div>
+
+	<button class='announcement-bar__close'>
+		{% render 'icon', icon: 'close-16' %}
+	</button>
+</div>
+
+{% schema %}
+{
+	"name": "Announcement bar",
+	"settings": [
+		{
+			"type": "image_picker",
+			"id": "icon",
+			"label": "Icon"
+		},
+		{
+			"type": "richtext",
+			"id": "description",
+			"label": "Description"
+		},
+		{
+			"type": "color",
+			"id": "bg_color",
+			"label": "Background color",
+			"default": "#fff"
+		},
+		{
+			"type": "color",
+			"id": "text_color",
+			"label": "Text color",
+			"default": "#000"
+		},
+		{
+			"type": "select",
+			"id": "text_alignment",
+			"options": [
+				{
+					"value": "start",
+					"label": "Left"
+				},
+				{
+					"value": "center",
+					"label": "Center"
+				},
+				{
+					"value": "end",
+					"label": "Right"
+				}
+			],
+			"default": "center",
+			"label": "Position text"
+		}
+	]
+}
+{% endschema %}

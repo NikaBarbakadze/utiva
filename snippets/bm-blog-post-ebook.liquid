@@ -1,0 +1,184 @@
+<div class="bm-blog-post-ebook" style="display:none">
+  <div class="bm-i-want-to-find-main-container" id="bm-i-want-to-find-main-container-id">
+    <div class="bm-i-want-to-find-main page-width">
+      <div class="bm-i-want-to-find-img">
+        <img src="//cdn.shopify.com/s/files/1/0060/4677/7455/files/image13.png?v=1645703997" alt="">
+      </div>
+      <div class="bm-i-want-to-find-input-parent-div">
+        <div class="bm-i-want-to-find-heading"><h3>I want to find relief<br> and prevent my UTIs.</h3></div>
+        {%- assign newsletter_form_id = 'newsletter-' | append: section_id -%}
+        <form class="omnisend-subscribe-form">
+          {% form 'customer', id: newsletter_form_id %}
+          {% if form.posted_successfully? %}
+          <div class="note note--success">
+            {{ 'general.newsletter_form.newsletter_confirmation' | t }}
+          </div>
+          {% endif %}
+          {% if form.errors and form.context == snippet_context %}
+          {{ form.errors | default_errors }}
+          {% endif %}
+
+          {%- unless form.posted_successfully? -%}
+          <label for="Email-{{ section_id }}" class="hidden-label">
+            {{ 'general.newsletter_form.newsletter_email' | t }}
+          </label>
+          <input type="hidden" name="contact[tags]" value="prospect,newsletter">
+          <input type="hidden" name="contact[context]" value="{{ snippet_context }}">
+          <div class="newsletter-form-group">
+            <div class="bm-i-want-to-find-input2"> <input type="email" onclick="this.value = (this.value == 'Email' ? '' : this.value);" value="{% if customer %}{{ customer.email }}{% endif %}" placeholder="Email" name="contact[email]" id="Email-{{ section.id }}" class="newsletter-form-group__input omnisend-subscribe-input-email" autocapitalize="off">
+            </div>
+            <button type="submit" class="newsletter-form-group__submit" name="commit" title="{{ 'general.newsletter_form.submit' | t }}">
+              <span>Get your free UTI Guide</span>
+            </button>
+          </div>
+          {%- endunless -%}
+          {% endform %} 
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+
+  html body .bm-i-want-to-find-main-container {
+    background-color:#87cdc7;
+  }
+
+  html body .bm-i-want-to-find-main {
+    display:flex;
+    justify-content:center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  html body .bm-i-want-to-find-img {
+    flex-basis:50%;
+    margin: -40px 0;
+  }
+  .bm-i-want-to-find-img img {
+    width: 100%;
+    margin: 0 !important;
+  }
+
+  html body .bm-i-want-to-find-input-parent-div {
+    flex-basis:50%;
+    text-align:center;
+  }
+
+  html body .newsletter-form-group {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+
+  html body .bm-i-want-to-find-heading h3 {
+    font-family:'Nunito';
+    font-weight:bolder;
+    font-size:28px;
+    color:#ffffff;
+    margin-bottom: 15px;
+  }
+
+  html body .bm-i-want-to-find-input2 {
+    max-width: 400px;
+    display: block;
+    margin: auto;
+  }
+
+
+
+  html body .bm-i-want-to-find-input2 input {
+    border:1px solid white !important;
+    background-color:#ffffff !important;
+    border-radius:50px !important;
+    padding:5px 20px;
+    margin-bottom:15px;
+    font-size: 21px;
+    font-family: 'Kometa-Book'!important;
+    color: #c9c9c9;
+    width: 80%;
+  }
+
+  html body .newsletter-form-group__submit {
+    font-family: 'Nunito';
+    background-color: #db232c;
+    font-weight: bolder;
+    border: 1px solid #db232c;
+    color:#fff;
+    font-size: 16.92px;
+    border-radius: 50px;
+    padding:7px 20px;
+    display:inline-block;
+    text-align:center;
+    position:relative;
+  } 
+
+  html body .newsletter-form-group__submit span {
+    display:inline-block;
+  }
+
+
+  @media only screen and (max-width: 768px) {
+
+    html body .bm-i-want-to-find-main-container {
+      text-align:center;
+      padding:20px 10px;
+    }
+
+    html body .newsletter-form-group {
+      max-width: 100%;
+    }
+    html body .bm-i-want-to-find-main {
+      padding: 0;
+    }
+    html body .bm-i-want-to-find-img {
+      margin: 0;
+      margin-bottom: 20px;
+    }
+    html body .bm-i-want-to-find-main {
+      flex-direction: column;
+    }
+
+    html body .bm-i-want-to-find-img img {
+      padding-left:0;
+    }
+
+    html body .bm-i-want-to-find-heading h3 {
+      padding-left:0;
+    }
+
+    html body .bm-i-want-to-find-input2 {
+      padding-left:0;
+    }
+
+    html body .newsletter-form-group__submit  {
+      font-size: 16px;
+      max-width: 100%;
+      border-radius: 50px;
+      padding: 10px 25px;
+    }
+  }
+
+
+</style>
+
+<script>
+  
+  
+  $(document).ready(function(){
+    
+    var ebookContent = $(".bm-blog-post-ebook").html();
+    
+    $('.article-banner a').each(function() {
+      if ($(this).attr('href').indexOf('/products/utiva-uti-ebook') > -1) {
+        $(this).parent('.article-banner').replaceWith(ebookContent);
+      }
+    });
+    
+    
+  });
+  
+  
+</script>

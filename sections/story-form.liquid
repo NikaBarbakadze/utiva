@@ -1,0 +1,74 @@
+<section>
+  <div class="page-width">
+    <p class="story-text">We love hearing from you. Tell us about your story and how Utiva has help change your life for the better.</p>
+    <a href="#" class="btn show-story-form">Submit Your Story</a>
+  </div>
+  
+  <div class="form-wrapper">
+    <div class="globo-formbuilder" data-id="86519"></div>
+    <div class="form-explanation">
+      <div class="page-width">
+        <p class="explanation-heading">There are no rules or requirements for your story.</p>
+        <p class="explanation-subheading">This is an opportunity for you to share your story in your own words!</p>
+
+        <div class="explanations-wrapper"> 
+          <div class="explanation">
+            <p>Anonymity:</p>
+            <p>Your submission can be anonymous if you wish. However, we do encourage you to help break the stigma around UTIs by sharing your experience and making it feel more personal by either signing your name or submitting a video.</p>
+          </div>
+          <div class="explanation">
+            <p>Length:</p>
+            <p>There is no required length or limit to your story — it can be as short or long as you want it to be.</p>
+          </div>
+          <div class="explanation">
+            <p>Language:</p>
+            <p>Submit your story in the language that feels more natural to you! We can help translate it if submitted in a language other than English.</p>
+          </div>
+          <div class="explanation">
+            <p>Video:</p>
+            <p>Rather submit a video? We love to put a face to a story. Please submit it in .MOV or Mp4 format. </p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    {% comment %} {% form 'contact', class:'page-width story-form' %}
+      {% if form.posted_successfully? %}
+        <p class="note note--success">
+          {{ 'contact.form.post_success' | t }}
+        </p>
+      {% endif %}
+
+      {{ form.errors | default_errors }}
+      
+      <div class="input-fields">
+        <div class="name-wrapper">
+          <input type="text" id="StoryFormFirstName" class="input-full" name="contact[firstname]" autocapitalize="words" placeholder="First Name" value="{% if form.first_name %}{{ form.first_name }}{% elsif customer %}{{ customer.first_name }}{% endif %}">
+          <input type="text" id="StoryFormLastName" class="input-full" name="contact[lastname]" autocapitalize="words" placeholder="Last Name" value="{% if form.last_name %}{{ form.last_name }}{% elsif customer %}{{ customer.last_name }}{% endif %}">
+        </div>
+        <input type="email" id="StoryFormEmail" class="input-full" name="contact[email]" autocapitalize="off" placeholder="Email" value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}">
+      </div>
+
+      <div class="form-description">
+        <p class="form-description-heading">Tell us your story:</p>
+        <p class="form-description-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+      </div>
+      
+      <textarea rows="5" id="StoryFormMessage" class="input-full" name="contact[body]">{% if form.body %}{{ form.body }}{% endif %}</textarea>
+
+      <div class="submisison-check-wrapper">
+        <input type="checkbox" name="Submission" id="submission-check">
+        <label for="submission-check">By clicking submit, you acknowledge and agree to the <a href="#">Submission Release</a></label>
+      </div>
+      
+      <input type="submit" value="Submit" class="btn">
+    {% endform %} {% endcomment %}
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Story Form",
+    "class": "story-form-section"
+  }
+{% endschema %}

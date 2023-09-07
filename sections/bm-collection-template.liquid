@@ -1,0 +1,72 @@
+{% comment %} 
+
+{%- assign paginate_by = 6 -%} 
+
+{% if section.settings.collection_tags_style == 'inline' and collection.all_tags.size > 0 %}
+{%- assign paginate_by = paginate_by | minus: 1 -%}
+{% endif %}
+
+{% endcomment %}
+
+
+<div class="bm-collection-template">
+  <div class="page-width">
+    <div id="bm-collection-template-main">
+      <div class="bm-collection-product">
+        {% for product in collection.products %}
+        {% include 'bm-product-item' %}
+        {% else %}
+        <div class="bm-no-product">
+          <p>{{ 'collections.general.no_matches' | t }}</p>
+        </div>
+        {% endfor %}
+      </div>
+
+      {% comment %}
+      {% if paginate.pages > 1 %}
+      <div class="bm-pagination">
+      {% include 'pagination' %}
+      </div>
+      {% endif %}
+      {% endcomment %}
+      
+    </div>
+
+  </div>
+</div>
+
+
+<style>
+  {% if section.settings.hide_sale_badge %}
+  html body .grid-product__tag--sale {
+  	display: none !important;
+  }
+  {% endif %}
+</style>
+
+
+{% schema %}
+  {
+    "name": "Collection pages",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_most_popular",
+        "label": "Show Most Popular Badge",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_best_deal",
+        "label": "Show Best Deal Badge",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "hide_sale_badge",
+        "label": "Hide Sale Badge",
+        "default": true
+      }
+    ]
+  }
+{% endschema %}

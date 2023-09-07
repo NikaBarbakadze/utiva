@@ -1,0 +1,174 @@
+{{ 'targeted-solutions.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+	    #shopify-section-{{ section.id }}{
+	        --padding-top: {{ section.settings.paddingTop_desktop }}px;
+	        --padding-bottom: {{ section.settings.paddingBottom_desktop }}px;
+	}
+
+	@media screen and (max-width: 768px) {
+	    #shopify-section-{{ section.id }}{
+	        --padding-top: {{ section.settings.paddingTop_mobile }}px;
+	        --padding-bottom: {{ section.settings.paddingBottom_mobile }}px;
+	    }
+	}
+{% endstyle %}
+
+<div
+	class='targeted-solutions'
+	style='
+		margin-top: var(--padding-top);
+		margin-bottom: var(--padding-bottom);
+		background-color: {{ section.settings.bg_color }}
+	'
+>
+	<div class='targeted-solution__top'>
+		<h2 class='targeted-solution__top--title'>{{ section.settings.title }}</h2>
+		<p class='targeted-solution__top--description'>{{ section.settings.description }}</p>
+	</div>
+	<ul class='targeted-solutions__blocks'>
+		{% for block in section.blocks %}
+			{% assign image = block.settings.image | image_url: width: image.width %}
+			<li class='targeted-solutions__block' style='background-image: url({{ image }});'>
+				<a
+					href='{{ block.settings.url }}'
+					class='targeted-solutions__block--link'
+				>
+					{% if block.settings.title != blank %}
+						<span class='targeted-solutions__block--link--text'>{{ block.settings.title }}</span>
+					{% endif %}
+				</a>
+			</li>
+		{% endfor %}
+	</ul>
+	{% if section.settings.button_text != blank %}
+		<div class='targeted-solutions__btn'>
+			<a
+				href='{{ section.settings.button_url }}'
+				class='btn-new btn-new--primary targeted-solutions__btn-link'
+			>
+				{{- section.settings.button_text -}}
+				{% render 'icon', icon: 'primary-btn-icon' %}
+			</a>
+		</div>
+	{% endif %}
+</div>
+
+{% schema %}
+{
+	"name": "Targeted solutions",
+	"tag": "section",
+	"settings": [
+		{
+			"type": "header",
+			"content": "Backround settings"
+		},
+		{
+			"type": "range",
+			"id": "paddingTop_mobile",
+			"min": 0,
+			"max": 100,
+			"step": 2,
+			"unit": "px",
+			"label": "Padding top for mobile",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "paddingBottom_mobile",
+			"min": 0,
+			"max": 100,
+			"step": 2,
+			"unit": "px",
+			"label": "Padding bottom for mobile",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "paddingTop_desktop",
+			"min": 0,
+			"max": 100,
+			"step": 2,
+			"unit": "px",
+			"label": "Padding top for desktop",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "paddingBottom_desktop",
+			"min": 0,
+			"max": 100,
+			"step": 2,
+			"unit": "px",
+			"label": "Padding bottom for desktop",
+			"default": 0
+		},
+		{
+			"type": "color",
+			"id": "bg_color",
+			"label": "Backround color"
+		},
+		{
+			"type": "header",
+			"content": "Content settings"
+		},
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Title",
+			"placeholder": "Text"
+		},
+		{
+			"type": "text",
+			"id": "description",
+			"placeholder": "Text",
+			"label": "Description"
+		},
+		{
+			"type": "header",
+			"content": "Button settings"
+		},
+		{
+			"type": "text",
+			"id": "button_text",
+			"label": "Button text",
+			"placeholder": "Text"
+		},
+		{
+			"type": "url",
+			"id": "button_url",
+			"label": "Button link"
+		}
+	],
+	"blocks": [
+		{
+			"name": "Target",
+			"type": "card",
+			"limit": 4,
+			"settings": [
+				{
+					"type": "image_picker",
+					"id": "image",
+					"label": "background image"
+				},
+				{
+					"type": "text",
+					"id": "title",
+					"label": "Title",
+					"placeholder": "Text"
+				},
+				{
+					"type": "url",
+					"id": "url",
+					"label": "Link"
+				}
+			]
+		}
+	],
+	"presets": [
+		{
+			"name": "Targeted solutions"
+		}
+	]
+}
+{% endschema %}

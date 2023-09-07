@@ -1,0 +1,408 @@
+<div class="bm-what-inside-container">
+  <div class="bm-what-inside-heading"><h1>{{ section.settings.bm_what_inside_heading }}</h1></div>
+  <div class="bm-what-inside-main">
+    <div class="bm-what-inside-main-left-row1 common-class">
+      <div class="bm-what-inside-main-left-row1-img1 common-class-img">
+        <img src="{{ section.settings.bm_what_inside_main_left_row1_img1 | img_url: 'master' }}" alt="{{ section.settings.bm_what_inside_main_left_row1_img1.alt | escape }}">
+      </div>
+      <div class="bm-what-inside-main-left-row1-text1">{{ section.settings.bm_what_inside_main_left_row1_text1 }}
+      </div>
+    </div>
+    <div class="bm-what-inside-main-right-row1 common-class">
+      <div class="bm-what-inside-main-right-row1-img1 common-class-img">
+        <img src="{{ section.settings.bm_what_inside_main_right_row1_img1 | img_url: 'master' }}" alt="{{ section.settings.bm_what_inside_main_right_row1_img1.alt | escape }}">
+      </div>
+      <div class="bm-what-inside-main-right-row1-text1">{{ section.settings.bm_what_inside_main_right_row1_text1 }}</div>
+    </div>
+    <div class="bm-what-inside-main-left-row2 common-class">
+      <div class="bm-what-inside-main-left-row2-img2 common-class-img">
+        <img src="{{ section.settings.bm_what_inside_main_left_row2_img2 | img_url: 'master' }}" alt="{{ section.settings.bm_what_inside_main_left_row2_img2.alt | escape }}">
+      </div>
+      <div class="bm-what-inside-main-left-row2-text2">{{ section.settings.bm_what_inside_main_left_row2_text2 }}</div>
+    </div>
+    <div class="bm-what-inside-main-right-row2 common-class">
+      <div class="bm-what-inside-main-right-row2-img2 common-class-img">
+        <img src="{{ section.settings.bm_what_inside_main_right_row2_img2 | img_url: 'master' }}" alt="{{ section.settings.bm_what_inside_main_right_row2_img2.alt | escape }}">
+      </div>
+      <div class="bm-what-inside-main-right-row2-text2">{{ section.settings.bm_what_inside_main_right_row2_text2 }}</div>
+    </div>
+    <div class="bm-what-inside-main-left-row3 common-class">
+      <div class="bm-what-inside-main-left-row3-img3 common-class-img">
+        <img src="{{ section.settings.bm_what_inside_main_left_row3_img3 | img_url: 'master' }}" alt="{{ section.settings.bm_what_inside_main_left_row3_img3.alt | escape }}">
+      </div>
+      <div class="bm-what-inside-main-left-row3-text3">{{ section.settings.bm_what_inside_main_left_row3_text3 }}</div>
+    </div>
+    <div class="bm-what-inside-main-right-row3 common-class">
+      <div class="bm-what-inside-main-right-row3-img3 common-class-img">
+        <img src="{{ section.settings.bm_what_inside_main_right_row3_img3 | img_url: 'master' }}" alt="{{ section.settings.bm_what_inside_main_right_row3_img3.alt | escape }}">
+      </div>
+      <div class="bm-what-inside-main-right-row3-text3">{{ section.settings.bm_what_inside_main_right_row3_text3 }}</div>
+    </div>
+  </div>
+  <div class="bm-what-inside-footer"><h1>{{section.settings.bm_what_inside_footer }}</h1></div>
+</div>
+
+
+
+
+
+<style>
+
+  html body .bm-what-inside-container {
+    padding: 50px 0px !important;
+  }
+
+  html body .bm-what-inside-heading {
+    display: block;
+    text-align: center;
+  }
+
+  html body .bm-what-inside-heading h1 {
+    font-family: 'Nunito';
+    font-weight: bolder;
+    font-size: 45px;
+    color: #da212c;
+  }
+
+  html body .bm-what-inside-main {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-gap:20px;
+    margin-left:50px;
+
+  }
+
+  html body .bm-what-inside-main-left-row1, html body .bm-what-inside-main-left-row2, html body .bm-what-inside-main-left-row3 {
+    justify-self: end;
+    max-width:415px;
+    width:100%;
+  }
+
+  html body .bm-what-inside-main-right-row1, html body .bm-what-inside-main-right-row2, html body .bm-what-inside-main-right-row3 {
+    justify-self: start;
+    max-width:415px;
+    width:100%;
+  }
+
+
+  html body .bm-what-inside-main-left-row1 {
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 20px;
+  }
+
+  html body .bm-what-inside-main-left-row1-img1{
+    width: 50px;
+  }
+  html body .bm-what-inside-main-left-row1-text1 {
+    padding-left: 15px;
+    font-family: 'Nunito';
+    font-weight: 500;
+    font-size: 25px;
+  }
+  html body .bm-what-inside-main-left-row2 {
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 20px;
+    padding-left: 20px;
+  }
+
+  html body .bm-what-inside-main-left-row2-img2{
+    width: 50px;
+    display:block;
+    margin:auto;
+  }
+
+  html body .bm-what-inside-main-left-row2-text2 {
+    padding-left: 15px;
+    font-family: 'Nunito';
+    font-weight: 500;
+    font-size: 25px;
+  }
+
+  html body .bm-what-inside-main-left-row3 {
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 20px;
+    padding-left: 20px;
+  }
+
+  html body .bm-what-inside-main-left-row3-img3{
+    width: 50px;
+    display:block;
+    margin:auto;
+  }
+
+  html body .bm-what-inside-main-left-row3-text3 {
+    padding-left: 15px;
+    font-family: 'Nunito';
+    font-weight: 500;
+    font-size: 25px;
+  }
+
+  html body .bm-what-inside-main-right-row1 {
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 20px;
+    padding-left:15px;
+  }
+
+  html body .bm-what-inside-main-right-row1-img1{
+    width: 60px;
+  }
+
+  html body .bm-what-inside-main-right-row1-text1 {
+    padding-left: 15px;
+    font-family: 'Nunito';
+    font-weight: 500;
+    font-size: 25px;
+  }
+
+  html body .bm-what-inside-main-right-row2 {
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 20px;
+/*     padding-left: 30px; */
+  }
+
+  html body .bm-what-inside-main-right-row2-img2{
+    width: 50px;
+  }
+
+  html body .bm-what-inside-main-right-row2-text2 {
+    padding-left: 20px;
+    font-family: 'Nunito';
+    font-weight: 500;
+    font-size: 25px;
+    display:block;
+/*     margin:auto; */
+  }
+
+  html body .bm-what-inside-main-right-row3 {
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 20px;
+/*     padding-left:20px; */
+  }
+
+  html body .bm-what-inside-main-right-row3-img3{
+    width: 50px;
+  }
+
+  html body .bm-what-inside-main-right-row3-text3 {
+/*     padding-left: 15px; */
+    font-family: 'Nunito';
+    font-weight: 500;
+    font-size: 25px;
+    margin:0 20px;
+  }
+
+  html body .bm-what-inside-footer {
+    display: block;
+    text-align: center;
+  }
+
+  html body .bm-what-inside-footer h1 {
+    font-family: 'Nunito';
+    font-weight: bold;
+    font-size: 40px;
+    color: #253c51;
+  }
+
+
+  @media only screen and (max-width:900px){
+    
+    html body .bm-what-inside-main {
+      margin-left:15px;
+    }
+    
+   html body .bm-what-inside-main br {
+      display:none;
+    }
+
+    html body .bm-what-inside-main-left-row1-img1 {
+      width: 100%;
+      max-width: 50px;
+    }
+
+    html body .bm-what-inside-main-right-row1-img1 {
+      width: 100%;
+      max-width: 60px;
+    }
+
+    html body .bm-what-inside-main-left-row2-img2 {
+      width: 100%;
+      max-width: 50px;
+    }
+
+    html body .bm-what-inside-main-right-row2-img2 {
+       width: 100%;
+       max-width: 50px;
+    }
+
+    html body .bm-what-inside-main-left-row3-img3 {
+       width: 100%;
+       max-width: 50px;
+    }
+
+    html body .bm-what-inside-main-right-row3-img3 {
+    	 width: 100%;
+         max-width: 50px;
+    }
+
+
+  }
+
+
+
+  @media only screen and (max-width:768px){
+
+    html body .bm-what-inside-container {
+      padding: 50px 10px !important;
+    }
+
+    html body .bm-what-inside-main {
+      display:flex;
+      flex-direction:column;
+      margin-left:0 !important;
+    }
+
+
+    html body .common-class {
+      max-width:unset;
+      padding:5px 20px !important;
+    }
+
+
+    html body .bm-what-inside-footer {
+      margin-top:15px;
+    }
+
+    html body .common-class-img  {
+      width: 100%;
+      max-width: 50px;
+    }
+    
+    html body .bm-what-inside-main-left-row2-img2, html body .bm-what-inside-main-left-row3-img3 {
+      margin:0;
+    }
+    
+    html body .bm-what-inside-main-left-row1-text1, html body .bm-what-inside-main-left-row2-text2,
+    html body .bm-what-inside-main-right-row2-text2, html body .bm-what-inside-main-left-row3-text3,
+    html body .bm-what-inside-main-right-row3-text3 {
+      padding-left:0;
+      margin-left:20px;
+    }
+    
+    html body .bm-what-inside-main-right-row1-text1 {
+       padding-left:0;
+      margin-left:15px;
+    }
+    
+    
+  } 
+
+
+
+  @media only screen and (max-width:427px){
+    html body .bm-what-inside-container {
+      padding: 35px 0px !important;
+    }
+
+    html body .common-class {
+      max-width:unset;
+      padding:5px 20px !important;
+    }
+  }
+
+</style>
+
+
+
+
+{% schema %}
+  {
+    "name": "What's Inside",
+    "settings": [
+	  {
+        "type": "text",
+        "id": "bm_what_inside_heading",
+        "label": "Heading Text",
+        "default": "What's inside"
+      },
+	  {
+        "type": "image_picker",
+        "id": "bm_what_inside_main_left_row1_img1",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "bm_what_inside_main_left_row1_text1",
+        "label": "Text"
+      },
+	   {
+        "type": "image_picker",
+        "id": "bm_what_inside_main_left_row2_img2",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "bm_what_inside_main_left_row2_text2",
+        "label": "Text"
+      },
+	 {
+        "type": "image_picker",
+        "id": "bm_what_inside_main_left_row3_img3",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "bm_what_inside_main_left_row3_text3",
+        "label": "Text"
+      },
+     {
+        "type": "image_picker",
+        "id": "bm_what_inside_main_right_row1_img1",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "bm_what_inside_main_right_row1_text1",
+        "label": "Text"
+      },
+       {
+        "type": "image_picker",
+        "id": "bm_what_inside_main_right_row2_img2",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "bm_what_inside_main_right_row2_text2",
+        "label": "Text"
+      },
+	  {
+        "type": "image_picker",
+        "id": "bm_what_inside_main_right_row3_img3",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "bm_what_inside_main_right_row3_text3",
+        "label": "Text"
+      },
+	  {
+        "type": "text",
+        "id": "bm_what_inside_footer",
+        "label": "Footer Text",
+        "default": "And much more!"
+      }
+    ]
+  }
+{% endschema %}
+

@@ -1,0 +1,105 @@
+{{ 'money-back-garantee.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+		#shopify-section-{{ section.id }}{
+			--padding-top: {{ section.settings.paddingTop_desktop }}px;
+			--padding-bottom: {{ section.settings.paddingBottom_desktop }}px;
+	}
+
+	@media screen and (max-width: 768px) {
+		#shopify-section-{{ section.id }}{
+			--padding-top: {{ section.settings.paddingTop_mobile }}px;
+			--padding-bottom: {{ section.settings.paddingBottom_mobile }}px;
+		}
+	}
+{% endstyle %}
+
+<div
+	class='money-back-garantee'
+	style='
+		margin-top: var(--padding-top);
+		margin-bottom: var(--padding-bottom);
+		background-color: {{ section.settings.bg_color }};
+	'
+>
+	<h2 class='money-back-garantee__title'>{{ section.settings.title }}</h2>
+	<div class='money-back-garantee__description'>{{ section.settings.description }}</div>
+</div>
+
+{% schema %}
+{
+	"name": "Money back guarantee",
+	"settings": [
+		{
+			"type": "header",
+			"content": "Background settings"
+		},
+		{
+			"type": "range",
+			"id": "paddingTop_mobile",
+			"min": 0,
+			"max": 100,
+			"step": 2,
+			"unit": "px",
+			"label": "Padding top for mobile",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "paddingBottom_mobile",
+			"min": 0,
+			"max": 100,
+			"step": 2,
+			"unit": "px",
+			"label": "Padding bottom for mobile",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "paddingTop_desktop",
+			"min": 0,
+			"max": 100,
+			"step": 2,
+			"unit": "px",
+			"label": "Padding top for desktop",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "paddingBottom_desktop",
+			"min": 0,
+			"max": 100,
+			"step": 2,
+			"unit": "px",
+			"label": "Padding bottom for desktop",
+			"default": 0
+		},
+		{
+			"type": "color",
+			"id": "bg_color",
+			"label": "Background color"
+		},
+		{
+			"type": "header",
+			"content": "Content settings"
+		},
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Title",
+			"placeholder": "Text"
+		},
+		{
+			"type": "richtext",
+			"id": "description",
+			"label": "Description",
+			"info": "To make button alike insertion just select text piece and click bold"
+		}
+	],
+	"presets": [
+		{
+			"name": "Money back guarantee"
+		}
+	]
+}
+{% endschema %}

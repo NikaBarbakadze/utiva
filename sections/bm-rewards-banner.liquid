@@ -1,0 +1,81 @@
+<div class="bm-rewards-banner">
+  <div class="bm-rewards-banner-main">
+    <div class="bm-rewards-banner-content">
+      <div class="bm-rewards-banner-moba-Image">
+         {% if section.settings.bm_rewards_banner_bg_moba_img != blank %}
+        <img src="{{section.settings.bm_rewards_banner_bg_moba_img | img_url:'master'}}"/>
+         {% endif %}
+      </div>
+      <div class="bm-rewards-banner-bottom">
+        {% if section.settings.bm_rewards_banner_title != blank %}
+      <h2>{{section.settings.bm_rewards_banner_title}}</h2>
+      {% endif %}
+      <div class="bm-rewards-banner-text">
+        <div  class="bm-rewards-banner-text-img">
+          {% if section.settings.bm_rewards_banner_text_image != blank %}
+          <img src="{{section.settings.bm_rewards_banner_text_image | img_url:'master'}}"/>
+          {% endif %}
+        </div>
+        {% if section.settings.bm_rewards_banner_text != blank %}
+        <h3>{{section.settings.bm_rewards_banner_text}}</h3>
+        {% endif %}
+      </div>
+      {% if section.settings.bm_rewards_banner_btn_text != blank %}
+      <a class="bm-reward-banner-btn" href="{{section.settings.bm_rewards_banner_btn_url}}">{{section.settings.bm_rewards_banner_btn_text}}</a>
+      {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+.bm-rewards-banner {
+    background-image: url(//cdn.shopify.com/s/files/1/0060/4677/7455/files/reward_banner.png?v=1658827638);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+  
+</style>
+{% schema %}
+    {
+      "name": "Reward Banner",
+      "settings": [
+           {
+              "type": "image_picker",
+              "id": "bm_rewards_banner_bg_img",
+              "label": "Background Image"
+           },
+           {
+            "type": "image_picker",
+            "id": "bm_rewards_banner_bg_moba_img",
+            "label": "Mobile Image"
+           },
+           {
+            "type": "text",
+            "id": "bm_rewards_banner_title",
+            "label": "Title"
+           },
+           {
+            "type": "image_picker",
+            "id": "bm_rewards_banner_text_image",
+            "label": "Text Image"
+           },
+           {
+            "type": "textarea",
+            "id": "bm_rewards_banner_text",
+            "label": "Subtitle"
+           },
+           {
+            "type": "text",
+            "id": "bm_rewards_banner_btn_text",
+            "label": "Button Text"
+           },
+           {
+            "type": "url",
+            "id": "bm_rewards_banner_btn_url",
+            "label": "Button Link"
+           }
+      ]
+    }
+  {% endschema %}

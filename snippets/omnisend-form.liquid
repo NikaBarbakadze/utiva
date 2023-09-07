@@ -1,0 +1,48 @@
+{%- assign newsletter_form_id = 'newsletter-' | append: section_id -%}
+<!-- <form class="omnisend-subscribe-form"> -->
+{% form 'customer', id: newsletter_form_id %}
+  {% if form.posted_successfully? %}
+    <div class="note note--success">
+      {{ 'general.newsletter_form.newsletter_confirmation' | t }}
+    </div>
+  {% endif %}
+
+  {%- unless form.posted_successfully? -%}
+    <label for="Email-{{ section_id }}" class="hidden-label">
+      {{ 'general.newsletter_form.newsletter_email' | t }}
+    </label>
+    <input
+      type="hidden"
+      name="contact[tags]"
+      value="prospect,newsletter">
+    <input
+      type="hidden"
+      name="contact[context]"
+      value="{{ snippet_context }}">
+    <div class="input-new">
+      <div class="input-new__container">
+        <input
+          type="email"
+          onclick="this.value = (this.value == 'Enter your email' ? '' : this.value);"
+          value="{% if customer %}{{ customer.email }}{% endif %}"
+          placeholder="Email"
+          name="contact[email]"
+          id="Email-{{ section.id }}"
+          class="{% if form.errors %} input-new__error {% endif %} input-new__item"
+          autocapitalize="off">
+        <button
+          type="submit"
+          class="input-new__button"
+          name="commit"
+          title="{{ 'general.newsletter_form.submit' | t }}">
+          {% render 'icon', icon: 'arrow-right-24' %}
+        </button>
+      </div>
+    </div>
+    {% if form.errors and form.context == snippet_context %}
+      {{ form.errors | default_errors }}
+    {% endif %}
+
+  {%- endunless -%}
+{% endform %}
+<!-- </form> -->

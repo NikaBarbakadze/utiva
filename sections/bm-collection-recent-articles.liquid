@@ -1,0 +1,64 @@
+<div class="bm-collection-recent-articles">
+  <div class="page-width">
+    <div class="bm-collection-recent-articles-main">
+      {% if section.settings.bm_collection_recent_articles_title != blank %}
+      <h2>{{section.settings.bm_collection_recent_articles_title}}</h2>
+      {% endif %}
+      <div class="bm-collection-recent-articles-slider">
+        {% for block in section.blocks %}
+        <div class="bm-collection-recent-articles-block">
+          <a href="{{block.settings.bm_collection_recent_block_link}}" target="_blank">
+            <div class="bm-collection-recent-block-img">
+              {% if block.settings.bm_collection_recent_block_img != blank %}
+              <img src="{{block.settings.bm_collection_recent_block_img | img_url:"master"}}">
+              {% endif %}
+            </div>
+            {% if block.settings.bm_collection_recent_block_description != blank %}
+            <p>{{block.settings.bm_collection_recent_block_description}}</p>
+            {% endif %}
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Bm Recent Articles",
+    "settings": [
+        {
+          "type": "text",
+          "id": "bm_collection_recent_articles_title",
+          "label": "Heading"
+        }
+       
+	],
+	"blocks": [
+     {
+       "name": "articles",
+       "type": "text",
+       "settings": [		 
+          {
+            "type": "image_picker",
+            "id": "bm_collection_recent_block_img",
+            "label": "Image"
+          },
+          {
+            "type": "textarea",
+            "id": "bm_collection_recent_block_description",
+            "label": "Discription"
+          },
+          {
+            "type": "url",
+            "id": "bm_collection_recent_block_link",
+            "label": "Article Link"
+          }
+       ]
+     }
+   ]
+    
+  }
+{% endschema %}
+

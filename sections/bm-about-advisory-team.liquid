@@ -1,0 +1,152 @@
+<div class="bm-about-advisory-team">
+    <div class="page-width">
+      {% if section.settings.bm_about_advisory_title != blank %}
+        <h2 class="bm-about-advisory-team-title">
+          {{section.settings.bm_about_advisory_title}}
+        </h2>
+        {% endif %}
+      <div class="bm-about-advisory-team-main">
+        
+        <div class="bm-about-advisory-team-slider-dot">
+          <div class="bm-about-advisory-team-slider-dot-right">
+            {% for block in section.blocks %}
+            <div>
+              <div class="bm-about-advisory-team-slider-dot-right-img ">
+                <img src="{{block.settings.bm_about_advisory_slider_main_left_img | img_url: 'master' }}" alt="">
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="bm-about-advisory-team-slider">
+          {% for block in section.blocks %}
+          <div>
+            <div class="bm-about-advisory-team-slider-main">
+              <div class="bm-about-advisory-team-slider-main-right">
+                {% if block.settings.bm_about_advisory_slider_main_right_text != blank %}
+                <p class="bm-about-advisory-team-slider-main-right-text">
+                  {{block.settings.bm_about_advisory_slider_main_right_text}}
+                </p>
+                {% endif %}
+                {% if block.settings.bm_about_advisory_doctor_name != blank %}
+                <h2 class="bm-about-advisory-team-doctor-name">
+                  {{block.settings.bm_about_advisory_doctor_name}}
+                </h2>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+  
+  </div>
+  </div>
+  {% schema %}
+    {
+      "name": "Advisory Team",
+      "settings": [
+           {
+              "type": "text",
+              "id": "bm_about_advisory_title",
+              "label": "Heading"
+           }
+      ],
+      "blocks": [
+       {
+         "name": "Doctor Details",
+         "type": "text",
+         "settings": [
+           {
+              "type": "image_picker",
+              "id": "bm_about_advisory_slider_main_left_img",
+              "label": "Customer Image"
+           },
+           {
+              "type": "textarea",
+              "id": "bm_about_advisory_slider_main_right_text",
+              "label": "Testimonial Text"
+           },
+           {
+              "type": "text",
+              "id": "bm_about_advisory_doctor_name",
+              "label": "Doctor Name"
+           }
+         ]
+       }
+     ]
+    }
+  {% endschema %}
+  
+  <style>
+  
+    .bm-about-advisory-team .slick-prev {
+      top: 150%;
+    }
+    .bm-about-advisory-team .slick-next {
+      top: 150%;
+    }
+    @media only screen and (max-width: 768px) {
+  
+      .bm-about-advisory-team .slick-prev {
+        top: 46%;
+  
+      }
+      .bm-about-advisory-team button.slick-prev.slick-arrow {
+        left: 0;
+      }
+      .bm-about-advisory-team .slick-next {
+        top: 46% !important;
+      }
+      .slick-slider .slick-track, .slick-slider .slick-list {
+        display: flex;
+        align-items: center;
+      }
+  
+    }
+  </style>
+  
+  
+<script>
+ $(document).ready(function(){
+
+  // script start for bm-about-advisory-team section
+  $('.bm-about-advisory-team-slider').slick({
+    dots: false,
+    arrows: false,
+    infinite: true,
+    fade: true,
+    speed: 400,
+    slidesToShow: 1,
+    adaptiveHeight: true
+  });
+
+  // for thumbnails
+  $('.bm-about-advisory-team-slider-dot-right').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: true,
+    centerMode: true,
+    centerPadding: '0px',
+    asNavFor: '.bm-about-advisory-team-slider',
+    dots: true,
+    speed:400,
+    focusOnSelect: true,
+    arrows: true
+  });
+
+  //keeps thumbnails active when changing main image, via mouse/touch drag/swipe
+  $('.bm-about-advisory-team-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+    //remove all active class
+    $('.bm-about-advisory-team-slider-dot-right .slick-slide').removeClass('slick-current');
+    //set active class for current slide
+    $('.bm-about-advisory-team-slider-dot-right .slick-slide:not(.slick-cloned)').eq(currentSlide).addClass('slick-current');  
+  }); 
+
+  // script end for bm-about-advisory-team section
+
+
+ });
+
+
+</script>  

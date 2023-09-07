@@ -1,0 +1,71 @@
+<div class="bm-why-community">
+  <div class="page-width bm-why-community-container">
+    <div class="bm-why-community-main">
+      <div class="bm-why-community-block bm-why-community-block-left">
+        {% if section.settings.bm_utiva_community_block_title !=blank %}
+        <h2 class="bm-why-community-block-title">
+          {{section.settings.bm_utiva_community_block_title}}
+        </h2>
+        {% endif %}
+        {% if section.settings.bm_utiva_community_block_description !=blank %}
+        <p class="bm-why-community-block-description">
+          {{section.settings.bm_utiva_community_block_description}}
+        </p>
+        {% endif %}
+        {% if section.settings.bm_utiva_community_block_button_text !=blank %}
+        <div class="bm-why-community-block-button">
+          <a href="{{section.settings.bm_utiva_community_block_button_link}}" title="">
+            {{section.settings.bm_utiva_community_block_button_text}}
+          </a>
+        </div>
+        {% endif %}
+      </div>
+      <div class="bm-why-community-block bm-why-community-block-right">
+        {% if section.settings.bm_utiva_community_image_right !=blank %}
+        <div class="bm-why-community-image-right">
+          <img loading="lazy" src="{{section.settings.bm_utiva_community_image_right | img_url:'master' }}" alt="">
+        </div>
+        {% endif %}
+        <div class="bm-why-community-image-top">
+          <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0060/4677/7455/files/2_43820719-ec8c-4962-82a3-a723b9403230.png?v=1649310493" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Why Join Community",
+    "settings": [
+    
+    {
+          "type": "text",
+          "id": "bm_utiva_community_block_title",
+          "label": "Title"
+        },
+    {
+          "type": "textarea",
+          "id": "bm_utiva_community_block_description",
+          "label": "Description"
+        },
+    {
+          "type": "text",
+          "id": "bm_utiva_community_block_button_text",
+          "label": "Button"
+        },
+    {
+          "type": "url",
+          "id": "bm_utiva_community_block_button_link",
+          "label": "Button Link"
+        },
+    {
+          "type": "image_picker",
+          "id": "bm_utiva_community_image_right",
+          "label": "Image Right Three"
+        }
+  ]
+  }
+{% endschema %}
+
+

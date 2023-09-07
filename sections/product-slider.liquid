@@ -1,0 +1,234 @@
+{{ 'new-product-slider.css' | asset_url | stylesheet_tag }}
+<script src='{{ 'reviews-count.js' | asset_url }}' defer='defer'></script>
+<script src='{{ 'product-slider-dragg.js' | asset_url }}' defer='defer'></script>
+
+{% style %}
+		#shopify-section-{{ section.id }}{
+			--padding-top: {{ section.settings.paddingTop_desktop }}px;
+			--padding-bottom: {{ section.settings.paddingBottom_desktop }}px;
+	}
+
+
+	@media screen and (max-width: 768px) {
+		#shopify-section-{{ section.id }}{
+			--padding-top: {{ section.settings.paddingTop_mobile }}px;
+			--padding-bottom: {{ section.settings.paddingBottom_mobile }}px;
+		}
+	}
+{% endstyle %}
+
+<div
+	class='new-product-slider new-product-slider--{{ section.id }}'
+	style='
+		padding-top: var(--padding-top);
+		padding-bottom: var(--padding-bottom);
+	'
+>
+	<div class='new-product-slider__content-block'>
+		{% if section.settings.title != blank %}
+			<p class='new-product-slider__content-block--title'>
+				{{ section.settings.title }}
+			</p>
+		{% endif %}
+		{% if section.settings.button_text != blank %}
+			<div class='new-product-slider__btn-desktop'>
+				<a href='{{ section.settings.button_url }}' class='btn-new btn-new--secondary-icon'>
+					{{ section.settings.button_text }}
+					{% render 'icon', icon: 'secondary-btn-icon' %}
+				</a>
+			</div>
+		{% endif %}
+	</div>
+	<ul class='new-product-slider__products-block new-product-slider__products-block--{{ section.id }}'>
+		{% for product in section.settings.collection.products %}
+			<li class='new-product-slider__item'>
+				<a href='{{ product.url }}' class='new-product-slider__item--image'>
+					{% render 'image', image: product.featured_image %}
+					<div class='new-product-slider__item--tag'>
+						{% for tag in product.tags %}
+							{% if tag contains 'Most Popular' %}
+								<div class='element-tag label-new'>
+									{{ tag }}
+								</div>
+							{% endif %}
+						{% endfor %}
+					</div>
+				</a>
+				<div class='new-product-slider__item--text'>
+					{{- product.title | link_to: product.url }}
+					<div class='new-product-slider__item--description'>
+						{{ product.description }}
+					</div>
+				</div>
+				<div class='new-product-slider__item--price-rating'>
+					<p class='body-m'>{{ product.price | money }}</p>
+					<div class='new-product-slider__item--rating'>
+						{% render 'icon' with 'star-20' %}
+						<span
+							class='stamped-product-reviews-badge stamped-main-badge'
+							data-id='{{ product.id }}'
+							data-widget-type='standard'
+							data-product-title='{{ product.title | escape }}'
+							data-product-type='{{ product.type }}'
+							style='display: block;'
+							data-product-sku='{{ product.handle }}'
+						></span>
+					</div>
+				</div>
+			</li>
+		{% endfor %}
+	</ul>
+	{% if section.settings.button_text != blank %}
+		<div class='new-product-slider__btn-mobile'>
+			<a href='{{ section.settings.button_url }}' class='btn-new btn-new--secondary-icon'>
+				{{ section.settings.button_text }}
+				{% render 'icon', icon: 'secondary-btn-icon' %}
+			</a>
+		</div>
+	{% endif %}
+</div>
+
+<script>
+	$(document).ready(function () {
+		$('.new-product-slider__products-block--{{ section.id }}').slick({
+			arrows: false,
+			slidesToScroll: 1,
+			variableWidth: false,
+			lazyLoad: 'progressive',
+			infinite: false,
+			swipeToSlide: true,
+			mobileFirst: true,
+			slidesToShow: 1.37,
+			responsive: [
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 2.2,
+					},
+				},
+				{
+					breakpoint: 650,
+					settings: {
+						slidesToShow: 2.7,
+					},
+				},
+				{
+					breakpoint: 800,
+					settings: {
+						slidesToShow: 3.5,
+					},
+				},
+				{
+					breakpoint: 1024,
+					settings: {
+						slidesToShow: 2.53,
+					},
+				},
+				{
+					breakpoint: 1441,
+					settings: {
+						slidesToShow: 3.5,
+					},
+				},
+				{
+					breakpoint: 2000,
+					settings: {
+						slidesToShow: 4.5,
+					},
+				},
+			],
+		});
+	});
+</script>
+
+{% schema %}
+{
+	"name": "Product slider",
+	"settings": [
+		{
+			"type": "header",
+			"content": "Background settings"
+		},
+		{
+			"type": "range",
+			"id": "paddingTop_mobile",
+			"min": 0,
+			"max": 100,
+			"step": 2,
+			"unit": "px",
+			"label": "Padding top for mobile",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "paddingBottom_mobile",
+			"min": 0,
+			"max": 100,
+			"step": 2,
+			"unit": "px",
+			"label": "Padding bottom for mobile",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "paddingTop_desktop",
+			"min": 0,
+			"max": 200,
+			"step": 2,
+			"unit": "px",
+			"label": "Padding top for desktop",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "paddingBottom_desktop",
+			"min": 0,
+			"max": 200,
+			"step": 2,
+			"unit": "px",
+			"label": "Padding bottom for desktop",
+			"default": 0
+		},
+		{
+			"type": "header",
+			"content": "Title settings"
+		},
+		{
+			"type": "text",
+			"id": "title",
+			"placeholder": "Title",
+			"label": "Section Title"
+		},
+		{
+			"type": "header",
+			"content": "Button settings"
+		},
+		{
+			"type": "text",
+			"id": "button_text",
+			"label": "Button Text",
+			"placeholder": "Text"
+		},
+		{
+			"type": "url",
+			"id": "button_url",
+			"label": "Button link"
+		},
+		{
+			"type": "header",
+			"content": "Collection settings"
+		},
+		{
+			"type": "collection",
+			"id": "collection",
+			"label": "Collection"
+		}
+	],
+
+	"presets": [
+		{
+			"name": "Product slider"
+		}
+	]
+}
+{% endschema %}

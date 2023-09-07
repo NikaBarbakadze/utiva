@@ -1,0 +1,165 @@
+{{ 'bm-new-faqs.css' | asset_url | stylesheet_tag }}
+  <div class="{{ section.settings.Cranberry }} Pdp-faq-main">
+    <div>
+      {% if section.settings.cranberry_heading != blank %}
+      <div class="index-section index-section--faq">
+        <div class="page-width text-left">
+          <div class="grid">
+            <div class="grid__item">
+              <p class="h2">
+                {{ section.settings.cranberry_heading }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+    
+    <div class="bm-faqs-contents Pdp-faq-main-content">
+      <div class="bm-faq-content-left">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when "faq-left" %}
+            <div class="bm-faq-content-block">
+              <div>
+                <div class="page-width">
+                  {% if block.settings.title != blank %}
+                  <button type="button" class="collapsible-trigger collapsible-trigger--inline collapsible--auto-height text-left" aria-controls="FAQ-content-{{ section.id }}-{{forloop.index}}" aria-expanded="false">
+                    {% render 'collapsible-icons-alt', no_circle: true %}
+                    {{ block.settings.title }}
+                  </button>
+                  {% endif %}
+                  {% if block.settings.description != blank %}
+                  <div id="FAQ-content-{{ section.id }}-{{forloop.index}}" class="collapsible-content collapsible-content--all">
+                    <div class="collapsible-content__inner collapsible-content__inner--faq rte">
+                      <p>{{ block.settings.description }}</p>
+                    </div>
+                  </div>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          {% endcase %}
+        {% endfor %}
+      </div>
+      <div class="bm-faq-content-right">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when "faqs-right" %}
+            <div class="bm-faq-content-block">
+              <div>
+                <div class="page-width">
+                  {% if block.settings.title != blank %}
+                  <button type="button" class="collapsible-trigger collapsible-trigger--inline collapsible--auto-height text-left" aria-controls="FAQ-content-{{ section.id }}-{{forloop.index}}" aria-expanded="false">
+                    {% render 'collapsible-icons-alt', no_circle: true %}
+                    {{ block.settings.title }}
+                  </button>
+                  {% endif %}
+                  {% if block.settings.description != blank %}
+                  <div id="FAQ-content-{{ section.id }}-{{forloop.index}}" class="collapsible-content collapsible-content--all">
+                    <div class="collapsible-content__inner collapsible-content__inner--faq rte">
+                      <p>{{ block.settings.description }}</p>
+                    </div>
+                  </div>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          {% endcase %}
+        {% endfor %}
+      </div>
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when "content" %}
+          <div class="bm-faq-form">
+            <div class="bm-faq-form=container">
+              <div class="bm-faq-form-main Pdp-faq-main">
+                {% if block.settings.medical_heading != blank %}
+                <h2 class="bm-faq-form-heading">{{ block.settings.medical_heading }}</h2>
+                {% endif %}
+                {% if block.settings.medical_description != blank %}
+                <p>{{ block.settings.medical_description }}</p>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+  </div>
+
+{% schema %}
+  {
+    "name": "FAQs",
+    "settings": [
+      {
+        "type": "text",
+        "id": "cranberry_heading",
+        "label" : "Product Title"
+      },
+      {
+        "type": "text",
+        "id": "Cranberry",
+        "label" : "Product Custome Class"
+      }
+    ],
+    "blocks": [
+      {
+        "type" : "faq-left",
+        "name": "FAQs Left",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label" : "Title"
+          },
+          {
+            "type": "richtext",
+            "id": "description",
+            "label" : "Description"
+          }
+        ]
+      },
+      {
+        "type" : "faqs-right",
+        "name": "FAQs Right",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label" : "Title"
+          },
+          {
+            "type": "richtext",
+            "id": "description",
+            "label" : "Description"
+          }
+        ]
+      },
+      {
+        "type" : "content",
+        "name": "FAQs Policy",
+        "settings": [
+          {
+            "type": "text",
+            "id": "medical_heading",
+            "label" : "Heading"
+          },
+          {
+            "type": "richtext",
+            "id": "medical_description",
+            "label" : "Description"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "BM FAQs",
+        "category": "BM Sections"
+      }
+    ]
+  }
+{% endschema %}
+

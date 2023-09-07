@@ -1,0 +1,89 @@
+<div class="bm-reward-redeem">
+  <div class="bm-reward-container">
+    <div class="bm-reward-redeem-main">
+      <div class="bm-reward-redeem-top">
+        {% if section.settings.bm_rewards_redeem_title != blank %}
+        <h2>{{section.settings.bm_rewards_redeem_title}}</h2>
+        {% endif %}
+        {% if section.settings.bm_rewards_redeem_description != blank %}
+        <p>{{section.settings.bm_rewards_redeem_description}}</p>
+        {% endif %}
+      </div>
+      <div class="bm-reward-redeem-middle">
+        <div class="bm-reward-redeem-content">
+          <table class="bm-reward-redeem-content-table" style="width:100%">
+             {% for block in section.blocks %}
+            <tr class="bm-reward-redeem-table-row">
+              <th class="bm-reward-redeem-left" >{{block.settings.bm_rewards_redeem_content_left}}</th>
+              <th class="bm-reward-redeem-right">{{block.settings.bm_rewards_redeem_content_right}}</th>
+            </tr>
+            {% endfor %}
+         </table>
+        </div>
+      </div>
+      <div class="bm-reward-redeem-bottom">
+
+         {% if customer.id != null %}
+
+        <div id="stamped-rewards-widget" data-widget-type="rewards-summary" ></div>
+
+        {% else %}
+           {% if section.settings.bm_rewards_redeem_btn_text %}
+        <a class="bm-reward-redeem-btn" href="{{section.settings.bm_rewards_redeem_btn_url}}">
+        {{section.settings.bm_rewards_redeem_btn_text}}
+        </a>
+        {% endif %}
+          
+        {% endif %}
+        
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+    {
+      "name": "Reward Redeem",
+      "settings": [
+           {
+            "type": "text",
+            "id": "bm_rewards_redeem_title",
+            "label": "Title"
+           },
+           {
+            "type": "textarea",
+            "id": "bm_rewards_redeem_description",
+            "label": "Description"
+           },
+           {
+            "type": "text",
+            "id": "bm_rewards_redeem_btn_text",
+            "label": "Button Text"
+           },
+           {
+            "type": "url",
+            "id": "bm_rewards_redeem_btn_url",
+            "label": "Link"
+           }
+      ],
+      "blocks": [
+       {
+         "name": "content",
+         "type": "text",
+         "settings": [
+           {
+            "type": "text",
+            "id": "bm_rewards_redeem_content_left",
+            "label": "Left content"
+           },
+           {
+            "type": "text",
+            "id": "bm_rewards_redeem_content_right",
+            "label": "Right content"
+           }
+         ]
+       }
+     ]
+    }
+  {% endschema %}

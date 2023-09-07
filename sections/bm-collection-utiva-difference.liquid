@@ -1,0 +1,60 @@
+<div class="bm-collection-utiva-difference">
+  <div class="page-width">
+    <div class="bm-collection-utiva-difference-main">
+      {% if section.settings.bm_collection_utiva_difference_title != blank %}
+      <h2 class="bm_collection_utiva--defference-tittle">{{section.settings.bm_collection_utiva_difference_title}}</h2>
+      {% endif %}
+      <div class="bm-collection-utiva-difference-bottom">
+        {% for block in section.blocks %}
+        <div class="bm-collection-utiva-difference-block">
+          <div class="bm-difference-block-img">
+            {% if block.settings.bm_utiva_difference_block_img != blank %}
+            <img src="{{block.settings.bm_utiva_difference_block_img | img_url:"master"}}">
+            {% endif %}
+          </div>
+          {% if block.settings.bm_utiva_difference_block_description != blank %}
+          <h2>{{block.settings.bm_utiva_difference_block_description}}</h2>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+	
+
+{% schema %}
+  {
+    "name": "Bm Utiva Difference",
+    "settings": [
+        {
+          "type": "text",
+          "id": "bm_collection_utiva_difference_title",
+          "label": "Heading"
+        }
+       
+	],
+	"blocks": [
+     {
+       "name": "block",
+       "type": "text",
+       "settings": [
+		 
+          {
+            "type": "image_picker",
+            "id": "bm_utiva_difference_block_img",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "bm_utiva_difference_block_description",
+            "label": "Text"
+          }
+       ]
+     }
+   ]
+    
+  }
+{% endschema %}
+

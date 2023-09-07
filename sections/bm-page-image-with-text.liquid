@@ -1,0 +1,138 @@
+<div class="bm-page-image-with-text">
+  <div class="page-width">
+    <div class="bm-page-image-with-text-main  {% if section.settings.bm_image_display_position == 'right' %}bm-image-right{% endif %} {% if section.settings.bm_align_item == 'center' %}bm-align-item{% endif %}">
+      <div class="bm-page-image-with-text-left">
+        {% if section.settings.bm_contents_text != blank %}
+        <div class="bm-contents-text-top">
+          <strong class="bm-contents-text">{{section.settings.bm_contents_text}}</strong>
+        </div>
+        {% endif %}
+        {% if section.settings.bm_page_right_subtitle != blank %}
+        <h3 class="bm-desktop-hide">{{section.settings.bm_page_right_subtitle}}</h3>
+        {% endif %}
+        {% if section.settings.bm_page_right_title != blank %}
+        <h2 class="bm-desktop-hide">{{section.settings.bm_page_right_title}}</h2>
+        {% endif %}
+        <div class="bm-page-left img">
+          {% if section.settings.bm_page_left_img != blank %}
+            {% if section.settings.bm_img_text_btn_link != blank %}
+            <a href="{{section.settings.bm_img_text_btn_link}}">
+            {% endif %}
+               <img src="{{section.settings.bm_page_left_img | img_url:"master"}}" alt="">
+            {% if section.settings.bm_img_text_btn_link != blank %}
+            </a>
+            {% endif %}
+          {% endif %}
+        </div>
+      </div>
+      <div class="bm-page-image-with-text-right">
+        <div>
+          {% if section.settings.bm_page_right_subtitle != blank %}
+          <h3 class="bm-moba-hide">{{section.settings.bm_page_right_subtitle}}</h3>
+          {% endif %}
+          {% if section.settings.bm_page_right_title != blank %}
+          <h2 class="bm-moba-hide">{{section.settings.bm_page_right_title}}</h2>
+          {% endif %}
+          {% if section.settings.bm_page_right_description != blank %}
+          <p>{{section.settings.bm_page_right_description}}</p>
+          {% endif %}
+        </div>
+        <div>
+          {% if section.settings.bm_img_text_btn_text != blank %}
+          <a href="{{section.settings.bm_img_text_btn_link}}">
+            <div class="bm-page-image-text-btn">
+              {{section.settings.bm_img_text_btn_text}}
+            </div>
+          </a>
+          {% endif %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "101 Image With Text",
+    "settings": [
+        {
+          "type": "text",
+          "id": "bm_contents_text",
+          "label": "Contents Text"
+        },
+        {
+          "type": "select",
+          "id": "bm_image_display_position",
+          "label": "Image Position",
+          "default": "left",
+          "options": [
+              {
+                "value": "left",
+                "label": "Left"
+              },
+              {
+                "value": "right",
+                "label": "Right"
+              }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "bm_align_item",
+          "label": "Item Align",
+          "default": "top",
+          "options": [
+              {
+                "value": "top",
+                "label": "Top"
+              },
+              {
+                "value": "center",
+                "label": "Center"
+              }
+          ]
+        },
+        {
+          "type": "image_picker",
+          "id": "bm_page_left_img",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "bm_page_right_subtitle",
+          "label": "SubTitle"
+        },
+        {
+          "type": "text",
+          "id": "bm_page_right_title",
+          "label": "Title"
+        },
+        {
+          "type": "html",
+          "id": "bm_page_right_description",
+          "label": "Description"
+        },
+        {
+           "type": "text",
+           "id": "bm_img_text_btn_text",
+           "label": "Button Text"
+        },
+        {
+           "type": "url",
+           "id": "bm_img_text_btn_link",
+           "label": "Button Link"
+        }
+       
+	],
+
+    "presets": [
+      {
+        "name": "101 Image With Text",
+        "category": "BM Page Sections"
+      }
+    ]
+    
+  }
+{% endschema %}	

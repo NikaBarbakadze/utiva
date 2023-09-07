@@ -1,0 +1,335 @@
+<section class="page-width">
+  <p class="testimonial-heading">You are not alone.</p>
+  <p class="testimonial-text">Please help build our inspiring collection of stories by sharing your journey of healing and empowerment.</p>
+
+  <div class="testmonial-button-wrapper">
+    <a href="#" class="btn doctor-button">Doctor Testimonials</a>
+    <a href="#" class="btn secondary patient-button">Patient Testimonials</a>
+  </div>
+
+  <div class="doctor-testimonial-warpper testimonial-warpper">
+    <div class="desktop">
+      <div class="testimonial-left">
+        {% for block in section.blocks %}
+          {% if block.type == 'doctor' %}
+            <div class="testimonial-person">
+              <div class="person__image-wrapper">
+                {% if block.settings.image != blank %}
+                  {%- assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+                  <img class="person__image person__image--{{ block.id }} lazyload"
+                    src=""
+                    data-src="{{ img_url }}"
+                    data-aspectratio="{{ block.settings.image.aspect_ratio }}"
+                    data-sizes="auto"
+                    data-parent-fit="cover"
+                    alt="{{ block.settings.image.alt | escape }}">
+                  <noscript>
+                    <img class="person__image person__image--{{ block.id }}"
+                      src="{{ block.settings.image | img_url: '250x' }}"
+                      alt="{{ block.settings.image.alt | escape }}">
+                  </noscript>
+
+                  {% if block.settings.image_mobile != blank %}
+                      {%- assign img_mobile_url = block.settings.image_mobile | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                      <img class="person__image person__image--{{ block.id }} lazyload medium-up--hide"
+                        src=""
+                        data-src="{{ img_mobile_url }}"
+                        data-aspectratio="{{ block.settings.image_mobile.aspect_ratio }}"
+                        data-sizes="auto"
+                        data-parent-fit="cover"
+                        alt="{{ block.settings.image_mobile.alt | escape }}">
+                      <noscript>
+                        <img class="person__image person__image--{{ block.id }} medium-up--hide"
+                          src="{{ block.settings.image_mobile | img_url: '120x' }}"
+                          alt="{{ block.settings.image_mobile.alt | escape }}">
+                      </noscript>
+                    {% endif %}
+                {% else %}
+                  {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                {% endif %}
+              </div>
+              <div class="person__text-wrapper">
+                {% if block.settings.name != blank %}
+                  <p class="name">{{ block.settings.name }}</p>
+                {% endif %}
+                {% if block.settings.description != blank %}
+                  <p class="description">{{ block.settings.description }}</p>
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <div class="testimonial-right">
+        {% for block in section.blocks %}
+          {% if block.type == 'doctor' %}
+            <div class="testimonial-content {% if forloop.first == true %}slick-active{% endif %}">
+            {% if block.settings.heading %}
+              <p class="heading">{{ block.settings.heading }}</p>
+            {% endif %}
+            {% if block.settings.text %}
+              <div class="text">{{ block.settings.text }}</div>
+            {% endif %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="mobile">
+      {% for block in section.blocks %}
+        {% if block.type == 'doctor' %}
+          <div class="mobile-testimonial">
+            <div class="testimonial-person mobile-person">
+              <div class="person__text-wrapper">
+                {% if block.settings.name != blank %}
+                  <p class="name">{{ block.settings.name }}</p>
+                {% endif %}
+                {% if block.settings.description != blank %}
+                  <p class="description">{{ block.settings.description }}</p>
+                {% endif %}
+                <span class="plus-icon">+</span>
+              </div>
+              <div class="person__image-wrapper">
+                {% if block.settings.image_mobile != blank %}
+                  {%- assign img_url = block.settings.image_mobile | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+                  <img class="person__image person__image--{{ block.id }} lazyload"
+                    src=""
+                    data-src="{{ img_url }}"
+                    data-aspectratio="{{ block.settings.image_mobile.aspect_ratio }}"
+                    data-sizes="auto"
+                    data-parent-fit="cover"
+                    alt="{{ block.settings.image_mobile.alt | escape }}">
+                  <noscript>
+                    <img class="person__image person__image--{{ block.id }}"
+                      src="{{ block.settings.image_mobile | img_url: '250x' }}"
+                      alt="{{ block.settings.image_mobile.alt | escape }}">
+                  </noscript>
+
+                {% else %}
+                  {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                {% endif %}
+                {% if block.settings.video_link != blank %}
+                  <a href="{{ block.settings.video_link }}" class="story-video-play" target="_blank"><img src="{{ 'PlayIcon.png' | asset_url }}" width="35" height="35" alt="Play Video"></a>
+                {% endif %}
+              </div>
+            </div>
+            <div class="testimonial-content">
+              {% if block.settings.heading %}
+                <p class="heading">{{ block.settings.heading }}</p>
+              {% endif %}
+              {% if block.settings.text %}
+                <div class="text">{{ block.settings.text }}</div>
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="patient-testimonial-warpper testimonial-warpper hide">
+
+    <div class="desktop">
+      <div class="testimonial-left">
+        {% for block in section.blocks %}
+          {% if block.type == 'patient' %}
+            <div class="testimonial-person">
+              <div class="person__image-wrapper">
+                {% if block.settings.image != blank %}
+                  {%- assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+                  <img class="person__image person__image--{{ block.id }} lazyload"
+                    src=""
+                    data-src="{{ img_url }}"
+                    data-aspectratio="{{ block.settings.image.aspect_ratio }}"
+                    data-sizes="auto"
+                    data-parent-fit="cover"
+                    alt="{{ block.settings.image.alt | escape }}">
+                  <noscript>
+                    <img class="person__image person__image--{{ block.id }}"
+                      src="{{ block.settings.image | img_url: '250x' }}"
+                      alt="{{ block.settings.image.alt | escape }}">
+                  </noscript>
+
+                {% else %}
+                  {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                {% endif %}
+              </div>
+              <div class="person__text-wrapper">
+                {% if block.settings.name != blank %}
+                  <p class="name">{{ block.settings.name }}</p>
+                {% endif %}
+                {% if block.settings.description != blank %}
+                  <p class="description">{{ block.settings.description }}</p>
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <div class="testimonial-right">
+        {% for block in section.blocks %}
+          {% if block.type == 'patient' %}
+            <div class="testimonial-content">
+              {% if block.settings.heading %}
+                <p class="heading">{{ block.settings.heading }}</p>
+              {% endif %}
+              {% if block.settings.text %}
+                <div class="text">{{ block.settings.text }}</div>
+              {% endif %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    
+    <div class="mobile">
+      {% for block in section.blocks %}
+        {% if block.type == 'patient' %}
+          <div class="mobile-testimonial">
+            <div class="testimonial-person mobile-person">
+              <div class="person__text-wrapper">
+                {% if block.settings.name != blank %}
+                  <p class="name">{{ block.settings.name }}</p>
+                {% endif %}
+                {% if block.settings.description != blank %}
+                  <p class="description">{{ block.settings.description }}</p>
+                {% endif %}
+                <span class="plus-icon">+</span>
+              </div>
+              <div class="person__image-wrapper">
+                {% if block.settings.image_mobile != blank %}
+                  {%- assign img_url = block.settings.image_mobile | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+                  <img class="person__image person__image--{{ block.id }} lazyload"
+                    src=""
+                    data-src="{{ img_url }}"
+                    data-aspectratio="{{ block.settings.image_mobile.aspect_ratio }}"
+                    data-sizes="auto"
+                    data-parent-fit="cover"
+                    alt="{{ block.settings.image_mobile.alt | escape }}">
+                  <noscript>
+                    <img class="person__image person__image--{{ block.id }}"
+                      src="{{ block.settings.image_mobile | img_url: '250x' }}"
+                      alt="{{ block.settings.image_mobile.alt | escape }}">
+                  </noscript>
+
+                {% else %}
+                  {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                {% endif %}
+                {% if block.settings.video_link != blank %}
+                  <a href="{{ block.settings.video_link }}" class="story-video-play" target="_blank"><img src="{{ 'PlayIcon.png' | asset_url }}" width="35" height="35" alt="Play Video"></a>
+                {% endif %}
+              </div>
+            </div>
+            <div class="testimonial-content">
+              {% if block.settings.heading %}
+                <p class="heading">{{ block.settings.heading }}</p>
+              {% endif %}
+              {% if block.settings.text %}
+                <div class="text">{{ block.settings.text }}</div>
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Story Testimonials",
+    "class": "story-testimonials",
+    "blocks":[
+      {
+        "type": "doctor",
+        "name": "Doctor Testimonials",
+        "settings":[
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Thumbnail Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_mobile",
+            "label": "Mobile Image"
+          },
+          {
+            "type": "text",
+            "id": "name",
+            "label": "Name"
+          },
+          {
+            "type": "text",
+            "id": "description",
+            "label": "Description"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Testimonial Heading"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Testimonial Text"
+          },
+          {
+            "type": "text",
+            "id": "video_link",
+            "label": "Video Link"
+          }
+        ]
+      },
+      {
+        "type": "patient",
+        "name": "Patient Testimonials",
+        "settings":[
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Thumbnail Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_mobile",
+            "label": "Mobile Image"
+          },
+          {
+            "type": "text",
+            "id": "name",
+            "label": "Name"
+          },
+          {
+            "type": "text",
+            "id": "description",
+            "label": "Description"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Testimonial Heading"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Testimonial Text"
+          },
+          {
+            "type": "text",
+            "id": "video_link",
+            "label": "Video Link"
+          }
+        ]
+      }
+     ]
+    
+  }
+{% endschema %}

@@ -1,0 +1,28 @@
+<div class="bm-about-hero">
+    <div class="bm-about-hero-main">
+        <div class="bm-about-hero-img">
+            {% if section.settings.bm_about_hero_img != blank %}
+            <img src="{{section.settings.bm_about_hero_img | img_url: "master"}}" alt=""/>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{% schema %}
+  {
+    "name": " About Banner",
+    "settings": [
+        {
+          "type": "image_picker",
+          "id": "bm_about_hero_img",
+          "label": "Image"
+        }
+       
+	]
+    
+  }
+{% endschema %}	

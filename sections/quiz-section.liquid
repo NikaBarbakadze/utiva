@@ -1,0 +1,144 @@
+{{ 'quiz-section.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+		#shopify-section-{{ section.id }}{
+			--padding-top: {{ section.settings.paddingTop_desktop }}px;
+			--padding-bottom: {{ section.settings.paddingBottom_desktop }}px;
+	}
+
+
+	@media screen and (max-width: 768px) {
+		#shopify-section-{{ section.id }}{
+			--padding-top: {{ section.settings.paddingTop_mobile }}px;
+			--padding-bottom: {{ section.settings.paddingBottom_mobile }}px;
+		}
+	}
+{% endstyle %}
+
+<div
+	class='quiz-section'
+	style='
+		padding-top: var(--padding-top);
+		padding-bottom: var(--padding-bottom);
+	'
+>
+	<div class='quiz-section__container'>
+		<div
+			class='quiz-section__text'
+			style='background-color: {{ section.settings.background_color}}'
+		>
+			<div class='quiz-section__text-wrapper'>
+				<div class='quiz-section__text-wrapper--title'>
+					{% if section.settings.title != blank %}
+						{{ section.settings.title }}
+					{% endif %}
+				</div>
+				<div class='quiz-section__text-wrapper--description'>
+					{% if section.settings.description != blank %}
+						{{ section.settings.description }}
+					{% endif %}
+				</div>
+			</div>
+			{% if section.settings.btn_text != blank %}
+				<div class='quiz-section__btn'>
+					<a href='{{ section.settings.btn_url }}' class='btn-new btn-new--primary-simple'>
+						{{ section.settings.btn_text }}
+					</a>
+				</div>
+			{% endif %}
+		</div>
+	</div>
+</div>
+
+{% schema %}
+{
+	"name": "Quiz Section",
+	"settings": [
+		{
+			"type": "header",
+			"content": "Background settings"
+		},
+		{
+			"type": "range",
+			"id": "paddingTop_mobile",
+			"min": 0,
+			"max": 100,
+			"step": 2,
+			"unit": "px",
+			"label": "Padding top for mobile",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "paddingBottom_mobile",
+			"min": 0,
+			"max": 100,
+			"step": 2,
+			"unit": "px",
+			"label": "Padding bottom for mobile",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "paddingTop_desktop",
+			"min": 0,
+			"max": 200,
+			"step": 2,
+			"unit": "px",
+			"label": "Padding top for desktop",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "paddingBottom_desktop",
+			"min": 0,
+			"max": 200,
+			"step": 2,
+			"unit": "px",
+			"label": "Padding bottom for desktop",
+			"default": 0
+		},
+		{
+			"type": "header",
+			"content": "Content settings"
+		},
+		{
+			"type": "color",
+			"id": "background_color",
+			"label": "Background color"
+		},
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Title",
+			"default": "Not sure where to start?"
+		},
+		{
+			"type": "richtext",
+			"id": "description",
+			"label": "Description",
+			"default": "<p>Take our quiz to build the right routine for you</p>"
+		},
+		{
+			"type": "header",
+			"content": "Button settings"
+		},
+		{
+			"type": "text",
+			"id": "btn_text",
+			"label": "Text",
+			"default": "Solution finder"
+		},
+		{
+			"type": "url",
+			"id": "btn_url",
+			"label": "URL"
+		}
+	],
+	"presets": [
+		{
+			"name": "Quiz Section"
+		}
+	]
+}
+{% endschema %}

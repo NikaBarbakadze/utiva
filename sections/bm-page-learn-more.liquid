@@ -1,0 +1,89 @@
+<div class="bm-page-learn-more">
+  <div class="page-width">
+    <div class="bm-page-learn-more-main">
+      {% if section.settings.bm_page_learn_title != blank %}
+      <h2 class="bm-page-learn-more-title">{{section.settings.bm_page_learn_title}}</h2>
+      {% endif %}
+      <div class="bm-page-learn-more-content">
+        {% for block in section.blocks %}
+        <div class="bm-page-learn-more-block">
+          <div class="bm-page-learn-content">
+            <div class="bm-page-learn-img">
+              {% if block.settings.bm_learn_img != blank %}
+              <img src="{{block.settings.bm_learn_img | img_url:"master"}}" alt="">
+              {% endif %}
+            </div>
+              {% if block.settings.bm_learn_title != blank %}
+              <h2>{{block.settings.bm_learn_title }}</h2>
+              {% endif %}
+              {% if block.settings.bm_learn_subtitle != blank %}
+              <h3>{{block.settings.bm_learn_subtitle}}</h3>
+              {% endif %}
+          </div>
+          {% if block.settings.bm_learn_btn_text != blank %}
+          <a href="{{block.settings.bm_learn_btn_link}}">
+            <div class="bm-page-learn-btn">
+              {{block.settings.bm_learn_btn_text}}
+            </div>
+          </a>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Page Learn More",
+    "settings": [
+        {
+           "type": "text",
+           "id": "bm_page_learn_title",
+           "label": "Heading"
+        }
+	],
+    "blocks": [
+      {
+        "type": "Text",
+        "name": "Content",
+        "settings": [
+            {
+             "type": "image_picker",
+             "id": "bm_learn_img",
+             "label": "Image"
+          },
+          {
+             "type": "text",
+             "id": "bm_learn_title",
+             "label": "Title"
+          },
+          {
+             "type": "text",
+             "id": "bm_learn_subtitle",
+             "label": "Subtitle"
+          },
+          {
+             "type": "text",
+             "id": "bm_learn_btn_text",
+             "label": "Text"
+          },
+          {
+             "type": "url",
+             "id": "bm_learn_btn_link",
+             "label": "Link"
+          }
+        ]
+      }
+    ],
+      "presets": [
+        {
+          "name": "Page Learn More",
+          "category": "Bm Page Sections"
+        }
+      ]
+    
+  }
+{% endschema %}	

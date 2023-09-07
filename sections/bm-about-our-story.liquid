@@ -1,0 +1,97 @@
+<div class="bm-about-our-story">
+    <div class="bm-about-our-story-main">
+        {% if section.settings.bm_about_our_story_title != blank %}
+        <h2 class="bm-about-our-story-title">{{section.settings.bm_about_our_story_title}}</h2>
+        {% endif %}
+        <div class="bm-our-story-text">
+        {% for block in section.blocks %}
+        <div class="bm-about-our-story-item">
+            <div class="bm-about-our-story-content">
+                <div class="bm-about-our-img" {% if block.settings.bm_about_our_story_position == 'right' %} style="margin-right: auto; margin-left: unset;" {% endif %}>
+                    {% if block.settings.bm_about_our_story_img != blank %}
+                    <img src="{{block.settings.bm_about_our_story_img | img_url: 'master'}}" alt="">
+                    {% endif %}
+                </div>
+                <div class="bm-about-our-text {% if block.settings.bm_about_our_story_content_position == 'right' %}bm-about-our-text-right {% endif %}">
+                    {% if block.settings.bm_about_story_title != blank %}
+                    <h2>{{block.settings.bm_about_story_title}}</h2>
+                    {% endif %}
+                    {% if block.settings.bm_about_our_story_description != blank %}
+                    <p>{{block.settings.bm_about_our_story_description}}</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    </div>
+</div>
+{% schema %}
+  {
+    "name": "Our Story",
+    "settings": [
+        {
+          "type": "text",
+          "id": "bm_about_our_story_title",
+          "label": "Heading"
+        }
+       
+	],
+	"blocks": [
+     {
+       "name": "story",
+       "type": "text",
+       "settings": [
+        {
+            "type": "select",
+            "id": "bm_about_our_story_position",
+            "label": "Image Position",
+            "default": "left",
+            "options": [
+                {
+                "value": "left",
+                "label": "Left"
+                },
+                {
+                "value": "right",
+                "label": "Right"
+                }
+            ]
+        },
+        {
+            "type": "select",
+            "id": "bm_about_our_story_content_position",
+            "label": "Content Position",
+            "default": "left",
+            "options": [
+                {
+                "value": "left",
+                "label": "Left"
+                },
+                {
+                "value": "right",
+                "label": "Right"
+                }
+            ]
+        },
+		{
+         "type": "image_picker",
+         "id": "bm_about_our_story_img",
+         "label": "Text"
+        },
+        {
+         "type": "text",
+         "id": "bm_about_story_title",
+         "label": "Title"
+        },
+        {
+         "type": "textarea",
+         "id": "bm_about_our_story_description",
+         "label": "Description"
+        }
+       ]
+     }
+   ]
+    
+  }
+{% endschema %}	

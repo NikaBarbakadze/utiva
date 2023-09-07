@@ -1,0 +1,135 @@
+{{ 'quality-and-trust.css' | asset_url | stylesheet_tag }}
+{% style %}
+	    #shopify-section-{{ section.id }}{
+	        --padding-top: {{ section.settings.paddingTop_desktop }}px;
+	        --padding-bottom: {{ section.settings.paddingBottom_desktop }}px;
+	}
+
+	@media screen and (max-width: 768px) {
+	    #shopify-section-{{ section.id }}{
+	        --padding-top: {{ section.settings.paddingTop_mobile }}px;
+	        --padding-bottom: {{ section.settings.paddingBottom_mobile }}px;
+	    }
+	}
+{% endstyle %}
+
+<div
+	class='quality-and-trust'
+	style='
+		padding-top: var(--padding-top);
+		padding-bottom: var(--padding-bottom);
+		background-color: {{ section.settings.bg_color }};
+	'
+>
+	{% assign image = section.settings.image | image_url: width: image.width %}
+	{% if image != blank %}
+		<img
+			loading='lazy'
+			width='76'
+			height='76'
+			class='quality-and-trust__img'
+			src='{{ image }}'
+		>
+	{% endif %}
+	<div class='quality-and-trust__content'>
+		{% if section.settings.title != blank %}
+			<h2 class='quality-and-trust__content--title'>{{ section.settings.title }}</h2>
+		{% endif %}
+		{% if image != blank %}
+			<img
+				loading='lazy'
+				width='96'
+				height='96'
+				class='quality-and-trust__img--desktop'
+				src='{{ image }}'
+			>
+		{% endif %}
+		{% if section.settings.description != blank %}
+			<p class='quality-and-trust__content--description'>{{ section.settings.description }}</p>
+		{% endif %}
+	</div>
+</div>
+
+{% schema %}
+{
+	"name": "Quality and trust",
+	"tag": "section",
+	"settings": [
+		{
+			"type": "header",
+			"content": "Background settings"
+		},
+		{
+			"type": "color",
+			"id": "bg_color",
+			"label": "Bacground color"
+		},
+		{
+			"type": "range",
+			"id": "paddingTop_mobile",
+			"min": 0,
+			"max": 100,
+			"step": 2,
+			"unit": "px",
+			"label": "Padding top for mobile",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "paddingBottom_mobile",
+			"min": 0,
+			"max": 100,
+			"step": 2,
+			"unit": "px",
+			"label": "Padding bottom for mobile",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "paddingTop_desktop",
+			"min": 0,
+			"max": 100,
+			"step": 2,
+			"unit": "px",
+			"label": "Padding top for desktop",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "paddingBottom_desktop",
+			"min": 0,
+			"max": 100,
+			"step": 2,
+			"unit": "px",
+			"label": "Padding bottom for desktop",
+			"default": 0
+		},
+		{
+			"type": "header",
+			"content": "Content settigs"
+		},
+		{
+			"type": "image_picker",
+			"label": "Image",
+			"id": "image"
+		},
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Title",
+			"placeholder": "Text"
+		},
+		{
+			"type": "text",
+			"placeholder": "Text",
+			"label": "Description",
+			"id": "description"
+		}
+	],
+	"presets": [
+		{
+			"name": "Quality and trust"
+		}
+	]
+}
+{% endschema %}

@@ -1,0 +1,1 @@
+(()=>{var o=document.querySelectorAll(".new-product-slider__item");o.forEach(e=>{let s=!1;e.addEventListener("mousedown",function(t){s=!0,setTimeout(()=>{e.classList.add("scroll-active")},100)}),e.addEventListener("mouseup",function(t){s=!1,e.classList.remove("scroll-active")})});})();

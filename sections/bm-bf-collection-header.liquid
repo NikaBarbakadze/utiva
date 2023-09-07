@@ -1,0 +1,297 @@
+{% assign display = 'bm-all' %}
+{% if section.settings.display == 'desktop' %}
+  {% assign display = 'bm-desktop-only' %}
+{% elsif section.settings.display == 'mobile' %}
+  {% assign display = 'bm-mobile-only' %}
+{% elsif section.settings.display == 'none' %}
+  {% assign display = 'bm-hidden' %}
+{% endif %}
+
+{% assign style = section.settings.style %}
+
+{% assign title = section.settings.title %}
+{% assign subtitle = section.settings.subtitle %}
+{% assign btn_text = section.settings.btn_text %}
+{% assign btn_link = section.settings.btn_link %}
+{% assign bg_img = section.settings.background %}
+{% assign img = section.settings.img %}
+
+
+<div class="{{display}}  {% if style == 'two' %}bm-style-two{% endif %}" data-section-id="{{ section.id }}">
+  <div class="bm-bf-banner-wrapper">
+    <div class="page-width">
+      <div class="bm-banner-inner">
+        <div class="bm-content">
+          
+          {% if style == 'two' %}
+          	{% if subtitle != '' %}
+              <h3>{{subtitle}}</h3>
+            {% endif %}
+          {% endif %}
+          
+          {% if title != '' %}
+            <h1>{{title}}</h1>
+          {% endif %}
+          
+          {% if style == 'one' %}
+          	{% if subtitle != '' %}
+              <h3>{{subtitle}}</h3>
+            {% endif %}
+          {% endif %}
+          
+		  {% if style == 'one' %}
+            {% if btn_text != '' %}
+              <a href="{{btn_link}}">{{btn_text}}</a>
+            {% endif %}
+          {% endif %}
+          
+          {% if style == 'two' %}
+            {% if btn_text != '' %}
+              <p>{{btn_text}}</p>
+            {% endif %}
+          {% endif %}
+        </div>
+
+        {% if section.settings.img != blank %}
+        <div class="bm-image">
+          <img src="{{img | img_url: 'master'}}" alt="{{section.settings.title}}" />
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  html body .bm-mobile-only {
+    display: none;
+  }
+
+  html body .bm-hidden {
+    display: none;
+  }
+
+  html body .bm-bf-banner-wrapper {
+    {% if bg_img != blank %}
+    background: url({{bg_img | img_url: 'master'}}) no-repeat center center;
+    {% else %}
+    background: #222222;
+    {% endif %}
+    background-size: cover;
+  }
+
+  html body .bm-bf-banner-wrapper .bm-banner-inner {
+    display: flex;
+    flex-direction: row;
+  }
+
+  html body .bm-bf-banner-wrapper .bm-content {
+    padding: 110px 0px;
+    flex-basis: 50%;
+  }
+
+  html body .bm-bf-banner-wrapper .bm-content *{
+    color: #ffffff;
+  }
+
+  html body .bm-bf-banner-wrapper .bm-content h1{
+    font-size: min(5vw, 60px);
+    line-height: 125%;
+  }
+
+  html body .bm-bf-banner-wrapper .bm-content h3 {
+    font-size: min(4vw, 32px);
+    font-weight: 400;
+    line-height: 125%;
+    margin-bottom: 35px;
+    margin-top: 30px;
+  }
+
+  html body .bm-bf-banner-wrapper .bm-content a{
+    background: #da222e;
+    padding: 20px 40px;
+    display: inline-block;
+    border-radius: 16px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  html body .bm-bf-banner-wrapper .bm-content p{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    color: #DA222E;
+    margin-top: 32px;
+  }
+  
+  html body .bm-bf-banner-wrapper .bm-content a:hover{
+    opacity: 0.8;
+  }
+
+  html body .bm-bf-banner-wrapper .bm-image {
+    display: flex;
+    align-items: center;
+    flex-basis: 50%;
+  }
+  
+  html body .bm-style-two .bm-bf-banner-wrapper .bm-content h3 {
+  	margin-bottom: 24px;
+  }
+
+  @media only screen and (max-width: 1300px) {
+    html body .bm-bf-banner-wrapper .page-width {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    html body .bm-bf-banner-wrapper .bm-banner-inner {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    html body .bm-bf-banner-wrapper .bm-content,
+    html body .bm-bf-banner-wrapper .bm-image {
+      width: 100%;
+    }
+    
+    html body .bm-bf-banner-wrapper .bm-image {
+      padding-top: 55px;
+    }
+    
+    html body .bm-bf-banner-wrapper .bm-content {
+      order: 2;
+      padding: 25px 0px 50px 0px;
+    }
+
+    html body .bm-bf-banner-wrapper .bm-content h1{
+      font-size: 10vw;
+    }
+
+    html body .bm-bf-banner-wrapper .bm-content h3{
+      font-size: 6vw;
+      margin-top: 25px;
+    }
+
+    html body .bm-bf-banner-wrapper .bm-content a{
+      padding: 6vw 8vw;
+      font-size: 6vw;
+    }
+    
+    html body .bm-bf-banner-wrapper .bm-content p{
+      font-size: 8.2vw;
+    }
+
+    html body .bm-desktop-only {
+      display: none;
+    }
+
+    html body .bm-mobile-only {
+      display: block;
+    }
+  }
+
+  @media only screen and (min-width: 769px) {
+    html body .bm-mobile-only {
+      display: none;
+    }
+  }
+  
+  {% if section.settings.hide_col_title %}
+    html body #shopify-section-collection-header {
+      display: none;
+    }
+  {% endif %}
+</style>
+
+
+{% schema %}
+  {
+    "name": "Black Friday Banner",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "hide_col_title",
+        "label": "Hide Default Collection Title & Descriptiopn",
+        "default": true
+      },
+      {
+        "type": "select",
+        "id": "display",
+        "label": "Display",
+        "options": [
+          {
+            "value": "all",
+            "label": "All"
+          },
+          {
+            "value": "desktop",
+            "label": "Desktop"
+          },
+          {
+            "value": "mobile",
+            "label": "Mobile"
+          },
+          {
+            "value": "none",
+            "label": "None"
+          }
+        ],
+        "default": "all"
+      },
+	  {
+        "type": "select",
+        "id": "style",
+        "label": "Banner Style",
+        "options": [
+          {
+            "value": "one",
+            "label": "One"
+          },
+          {
+            "value": "two",
+            "label": "Two"
+          }
+        ],
+        "default": "one"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Our Biggest Sale Of The Year"
+      },
+      {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subtitle",
+        "default": "Don't Miss Out"
+      },
+      {
+        "type": "text",
+        "id": "btn_text",
+        "label": "Button Text",
+        "default": "Shop Now"
+      },
+      {
+        "type": "url",
+        "id": "btn_link",
+        "label": "Button link"
+      },
+      {
+        "type": "image_picker",
+        "id": "background",
+        "label": "Background Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Image"
+      }
+	]
+  }
+{% endschema %}

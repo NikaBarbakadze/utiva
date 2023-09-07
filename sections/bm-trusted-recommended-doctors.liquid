@@ -1,0 +1,87 @@
+<div class="bm-trusted-doctors">
+    <div class="bm-trusted-doctors-container">
+        <div class="bm-trusted-doctors-main">
+            {% if section.settings.doctors_title != blank %}
+            <h2>{{ section.settings.doctors_title }}</h2>
+            {% endif %}
+            <div class="bm-trusted-doctors-wrap">
+
+                {% for block in section.blocks %}
+                <div class="bm-trusted-doctors-block">
+                    {% if block.settings.doctors_image != blank %}
+                    <div class="bm-trusted-doctors-block-img">
+                    <img src="{{ block.settings.doctors_image | img_url: 'master' }}" alt="">
+                    </div>
+                    {% endif %}
+                    <div class="bm-trusted-doctor-content">
+                        {% if block.settings.doctors_paragraph != blank %}
+                        <p>{{ block.settings.doctors_paragraph }}</p>
+                        {% endif %}
+                        {% if block.settings.doctors_name != blank %}
+                        <h4>{{ block.settings.doctors_name }}</h4>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function(){
+        $('.bm-trusted-doctors-wrap').slick({
+            dots: false,
+            speed: 500,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: false,
+            responsive: [{
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+                dots: true,
+                slidesToScroll: 1
+              }
+            }]
+        });
+      });
+</script>
+
+{% schema %}
+    {
+      "name": "Trusted Doctors",
+      "settings": [
+        {
+            "type": "text",
+            "id": "doctors_title",
+            "label": "Title"
+        }
+      ],
+        "blocks": [
+          {
+            "name": "Doctors",
+            "type": "text",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "doctors_image",
+                    "label": "Image"
+                },
+                {
+                    "type": "richtext",
+                    "id": "doctors_paragraph",
+                    "label": "Paragraph"
+                },
+                {
+                    "type": "text",
+                    "id": "doctors_name",
+                    "label": "Doctors Name"
+                }
+
+            ]
+         }
+    ]
+    }
+  {% endschema %}

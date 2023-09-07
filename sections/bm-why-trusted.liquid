@@ -1,0 +1,63 @@
+<div class="bm-why-trusted">
+    <div class="bm-why-trusted-container">
+        <div class="bm-why-trusted-main">
+            {% if section.settings.bm_why_trusted_title != blank %}
+            <h2 class="bm-why-trusted-title"> {{section.settings.bm_why_trusted_title}}</h2>
+            {% endif %}
+            <div class="bm-why-trusted-content">
+            {% for block in section.blocks %}
+            <div class="bm-why-trusted-block">
+                <div class="bm-why-trusted-img">
+                    {% if block.settings.bm_why_trusted_img != blank %}
+                    <img src="{{block.settings.bm_why_trusted_img | img_url:"master"}}"/>
+                    {% endif %}
+                </div>
+                {% if block.settings.bm_why_trusted_description != blank %}
+                <p>{{block.settings.bm_why_trusted_description}}</p>
+                {% endif %}
+                {% if block.settings.bm_why_trusted_subtitle != blank %}
+                <h3>{{block.settings.bm_why_trusted_subtitle}}</h3>
+                {% endif %}
+            </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Why Trusted Doctors",
+    "settings": [
+        {
+            "type": "text",
+            "id": "bm_why_trusted_title",
+            "label": "Title"
+         }
+	],
+	"blocks": [
+     {
+       "name": "text",
+       "type": "Text",
+       "settings": [
+		 {
+           "type": "image_picker",
+           "id": "bm_why_trusted_img",
+           "label": "Image"
+         },
+		 {
+            "type": "textarea",
+            "id": "bm_why_trusted_description",
+            "label": "Description"
+         },
+		 {
+            "type": "text",
+            "id": "bm_why_trusted_subtitle",
+            "label": "Subtitle"
+         }
+       ]
+     }
+   ]
+  }
+{% endschema %}

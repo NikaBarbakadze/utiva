@@ -1,0 +1,60 @@
+<div class="bm-about-mission">
+    <div class="bm-about-mission-main">
+        <div class="bm-about-mission-content">
+            {% if section.settings.bm_about_mission_title != blank %}
+            <h2 class="bm-about-mission-title">{{section.settings.bm_about_mission_title}}</h2>
+            {% endif %}
+            {% if section.settings.bm_about_mission_description != blank %}
+            <p class="bm-about-mission-description">{{section.settings.bm_about_mission_description}}</p>
+            {% endif %}
+            <div class="bm-about-mission-img">
+                {% if section.settings.bm_about_mission_img != blank %}
+                <img src="{{section.settings.bm_about_mission_img | img_url:"master" }}"/>
+                {% endif %}
+            </div>
+            {% if section.settings.bm_about_mission_subtitle != blank %}
+            <h2 class="bm-about-mission-subtitle">{{section.settings.bm_about_mission_subtitle}}</h2>
+            {% endif %}
+            {% if section.settings.bm_about_description != blank %}
+            <p class="bm-mission-description">{{section.settings.bm_about_description}}</p>
+            {% endif %}
+
+        </div>
+    </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "About Mission",
+    "settings": [
+       {
+         "type": "text",
+         "id": "bm_about_mission_title",
+         "label": "Title"
+       },
+       {
+         "type": "textarea",
+         "id": "bm_about_mission_description",
+         "label": "Description"
+       },
+       {
+          "type": "image_picker",
+          "id": "bm_about_mission_img",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "bm_about_mission_subtitle",
+          "label": "SubTitle"
+        },
+        {
+          "type": "textarea",
+          "id": "bm_about_description",
+          "label": "Desription"
+        }
+       
+	]
+    
+  }
+{% endschema %}	

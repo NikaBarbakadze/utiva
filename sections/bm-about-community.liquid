@@ -1,0 +1,30 @@
+<div class="bm-about-community">
+    <div class="bm-about-community-main">
+        {% if section.settings.bm_about_community_title != blank %}
+        <h2>{{section.settings.bm_about_community_title}}</h2>
+        {% endif %}
+        {% if section.settings.bm_about_community_description != blank %}
+        <p>{{section.settings.bm_about_community_description}}</p>
+        {% endif %}
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "About Community",
+    "settings": [
+        {
+          "type": "text",
+          "id": "bm_about_community_title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "bm_about_community_description",
+          "label": "Description"
+        }
+       
+	]
+    
+  }
+{% endschema %}	

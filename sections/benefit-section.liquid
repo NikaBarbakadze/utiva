@@ -1,0 +1,174 @@
+{{ 'benefit-section.css' | asset_url | stylesheet_tag }}
+{% liquid
+	assign image_desktop = section.settings.image_desktop | image_url: width: image_desktop.width
+	assign image_mobile = section.settings.image_mobile | image_url: width: image_mobile.width
+%}
+
+{% style %}
+		#shopify-section-{{ section.id }}{
+			--padding-top: {{ section.settings.paddingTop_desktop }}px;
+			--padding-bottom: {{ section.settings.paddingBottom_desktop }}px;
+	}
+
+	.benefit-section{
+			background-image: url({{ image_desktop }});
+			border-radius: 24px;
+		}
+
+	@media screen and (max-width: 768px) {
+		#shopify-section-{{ section.id }}{
+			--padding-top: {{ section.settings.paddingTop_mobile }}px;
+			--padding-bottom: {{ section.settings.paddingBottom_mobile }}px;
+		}
+
+		.benefit-section{
+			background-image: url({{ image_mobile }});
+			border-radius:0;
+		}
+	}
+{% endstyle %}
+<div
+	class='benefit-section__wrapper'
+	style='
+		padding-top: var(--padding-top);
+		padding-bottom: var(--padding-bottom);
+	'
+>
+	<div
+		class='benefit-section'
+	>
+		<div class='benefit-section__container'>
+			<h2 class='benefit-section__title'>{{ section.settings.section_title }}</h2>
+			<ul class='benefit-section__blocks'>
+				{% for block in section.blocks %}
+					<li class='benefit-section__blocks--item'>
+						<h3 class='item__title'>{{ block.settings.title }}</h3>
+						<div class='item__text'>{{ block.settings.benefit_text }}</div>
+					</li>
+				{% endfor %}
+			</ul>
+			{% if section.settings.button_text != blank %}
+				<a
+					href='{{ section.settings.button_url }}'
+					class='benefit-section__btn-link btn-new btn-new--secondary-white'
+				>
+					{{- section.settings.button_text -}}
+				</a>
+			{% endif %}
+		</div>
+	</div>
+</div>
+
+{% schema %}
+{
+	"name": "Benefit Section",
+	"tag": "section",
+	"settings": [
+		{
+			"type": "header",
+			"content": "Background settings"
+		},
+		{
+			"type": "range",
+			"id": "paddingTop_mobile",
+			"min": 0,
+			"max": 100,
+			"step": 2,
+			"unit": "px",
+			"label": "Padding top for mobile",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "paddingBottom_mobile",
+			"min": 0,
+			"max": 100,
+			"step": 2,
+			"unit": "px",
+			"label": "Padding bottom for mobile",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "paddingTop_desktop",
+			"min": 0,
+			"max": 100,
+			"step": 2,
+			"unit": "px",
+			"label": "Padding top for desktop",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "paddingBottom_desktop",
+			"min": 0,
+			"max": 100,
+			"step": 2,
+			"unit": "px",
+			"label": "Padding bottom for desktop",
+			"default": 0
+		},
+		{
+			"type": "image_picker",
+			"id": "image_desktop",
+			"label": "Background image for desktop"
+		},
+		{
+			"type": "image_picker",
+			"id": "image_mobile",
+			"label": "Background image for mobile"
+		},
+		{
+			"type": "header",
+			"content": "Title settings"
+		},
+		{
+			"type": "text",
+			"id": "section_title",
+			"placeholder": "Title",
+			"label": "Section Title"
+		},
+		{
+			"type": "header",
+			"content": "Button settings"
+		},
+
+		{
+			"type": "text",
+			"id": "button_text",
+			"label": "Button Text",
+			"placeholder": "Text"
+		},
+		{
+			"type": "url",
+			"id": "button_url",
+			"label": "Button link"
+		}
+	],
+	"blocks": [
+		{
+			"name": "Benefit item",
+			"limit": 3,
+			"type": "block",
+			"settings": [
+				{
+					"type": "text",
+					"id": "title",
+					"placeholder": "Title",
+					"label": "Benefit Title"
+				},
+				{
+					"type": "richtext",
+					"id": "benefit_text",
+					"label": "Benefit Text"
+				}
+			]
+		}
+	],
+	"presets": [
+		{
+			"name": "Benefit Section"
+		}
+	]
+}
+{% endschema %}

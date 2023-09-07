@@ -1,0 +1,163 @@
+{% if product.metafields.bm_pdp.enable_bm_stronger_together == true %}
+<div class="bm-pdp-addons-product">
+  <div class="page-width">
+    <div class="bm-pdp-addon-container">
+      {% if product.metafields.bm_pdp.bm_stronger_productone_handle != blank %}
+      <h2 class="bm-stronger-together-title">{{ product.metafields.bm_pdp.bm_stronger_together_heading }}</h2>
+      {% endif %}
+      {% assign product1_comp = 0 %}	
+      {% assign product2_comp = 0 %}	
+      {% assign product3_comp = 0 %}
+
+      <div class="bm-stronger-together">
+        {% if product.metafields.bm_pdp.bm_stronger_productone_handle != blank %}
+        <div class="bm-stronger-together-single">
+          {% assign productone = all_products[product.metafields.bm_pdp.bm_stronger_productone_handle] %}
+          {% if productone != blank %}
+          <div class="bm-addon-product-title">
+            {{ productone.title }}
+          </div>
+          <div class="bm-addon-Product-img">
+            <img src="{{ productone.featured_image | img_url:'master' }}" />
+          </div>
+          <div class="bm-addon-product-meta">
+            <div class="bm-product-description">
+              {{product.metafields.bm_pdp.bm_productone_description}}
+            </div>
+            <div class="bm-product__title">
+              <label class="bm-product__title-container">
+                <input type="checkbox" checked="checked" class="bm-product-id-check" data-id="{{ productone.variants.first.id}}" data-regular-price="{{ productone.price | money }}" data-save-price="{{ productone.compare_at_price | minus: productone.price |money }}">
+                <span class="bm-product__title-checkmark"></span>
+              </label>
+            </div>
+          </div>
+          <div class="bm-product-stronger-price">
+            <div class="bm-grid-product__price grid-product__price mb-2 mt-2">
+              <span class="bm-product-stronger-price-main">
+                {{ productone.price  | money }} 
+              </span>
+              {% if productone.first_available_variant.compare_at_price > 0 %}
+              <span class="bm-product-stronger-com-price">
+                {% assign bmproductonesaveamt = productone.first_available_variant.compare_at_price | minus: productone.first_available_variant.price %}
+                {% if bmproductonesaveamt > 0 %}
+                You Save {{ productone.first_available_variant.compare_at_price | minus: productone.first_available_variant.price | money }}
+                {% endif %}
+               </span>
+              {% endif %}
+            </div>
+          </div>
+          <!-- <div class="bm-product-stronger-review">
+            <span class=" stamped-product-reviews-badge" data-id="{{ productone.id }}" data-product-title="{{productone.title}}" data-product-type="{{productone.type}}" style="display:block;" data-product-sku="{{ productone.handle }}"></span>
+          </div> --> 
+          {% endif %}
+        </div>
+        {% endif %}
+        {% if product.metafields.bm_pdp.bm_stronger_producttwo_handle != blank %}
+        <div class="bm-stronger-together-single">
+          {% assign producttwo = all_products[product.metafields.bm_pdp.bm_stronger_producttwo_handle] %}
+          {% if producttwo != blank %}
+          <div class="bm-addon-product-title">
+            {{ producttwo.title }}
+          </div>
+          <div class="bm-addon-Product-img">
+            <img src="{{ producttwo.featured_image | img_url:'master' }}" />
+          </div>
+
+          <div class="bm-addon-product-meta">
+            <div class="bm-product-description">
+              {{product.metafields.bm_pdp.bm_producttwo_description}}
+            </div>
+            <div class="bm-product__title">
+              <label class="bm-product__title-container">
+                <input type="checkbox" class="bm-product-id-check" data-id="{{ producttwo.variants.first.id}}" data-regular-price="{{ producttwo.price | money }}" data-save-price="{{ producttwo.compare_at_price | minus: producttwo.price |money }}">
+                <span class="bm-product__title-checkmark"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="bm-product-stronger-price">
+            <div class="bm-grid-product__price grid-product__price mb-2 mt-2">
+              <span class="bm-product-stronger-price-main">
+                {{ producttwo.price  | money }} 
+              </span>
+              {% if producttwo.first_available_variant.compare_at_price > 0 %}
+              <span class="bm-product-stronger-com-price">
+                {% assign bmproducttwosaveamt = producttwo.first_available_variant.compare_at_price | minus: producttwo.first_available_variant.price %}
+                {% if bmproducttwosaveamt > 0 %}
+                You Save {{ producttwo.first_available_variant.compare_at_price | minus: producttwo.first_available_variant.price | money }}
+                {% endif %}
+              </span>
+              {% endif %}
+            </div>
+          </div>
+          <!-- <div class="bm-product-stronger-review">
+            <span class=" stamped-product-reviews-badge" data-id="{{ producttwo.id }}" data-product-title="{{producttwo.title}}" data-product-type="{{producttwo.type}}" style="display:block;" data-product-sku="{{ producttwo.handle }}"></span>
+          </div> -->
+          {% endif %}
+        </div>
+        {% endif %}
+        {% if product.metafields.bm_pdp.bm_stron_productthree_handle != blank %}
+        <div class="bm-stronger-together-single">
+          {% assign productthree = all_products[product.metafields.bm_pdp.bm_stron_productthree_handle] %}
+          {% if productthree != blank %}
+          <div class="bm-addon-product-title">
+            {{ productthree.title }}
+          </div>
+          <div class="bm-addon-Product-img">
+            <img src="{{ productthree.featured_image | img_url:'master' }}" />
+          </div>
+
+          <div class="bm-addon-product-meta">
+            <div class="bm-product-description">
+              {{product.metafields.bm_pdp.bm_productthree_description}}
+            </div>
+            <div class="bm-product__title">
+              <label class="bm-product__title-container">
+                <input type="checkbox" class="bm-product-id-check" data-id="{{ productthree.variants.first.id}}" data-regular-price="{{ productthree.price | money }}" data-save-price="{{ productthree.compare_at_price | minus: productthree.price |money }}">
+                <span class="bm-product__title-checkmark"></span>
+              </label>
+            </div>
+          </div>
+          <div class="bm-product-stronger-price">
+            <div class="bm-grid-product__price grid-product__price mb-2 mt-2">
+              <span class="bm-product-stronger-price-main">
+                {{ productthree.price  | money }} 
+              </span>
+              {% if productthree.first_available_variant.compare_at_price > 0 %}
+              <span class="bm-product-stronger-com-price">
+                {% assign bmproductthreesaveamt = productthree.first_available_variant.compare_at_price | minus: productthree.first_available_variant.price %}
+                {% if bmproductthreesaveamt > 0 %}
+                You Save {{ productthree.first_available_variant.compare_at_price | minus: productthree.first_available_variant.price | money }}
+                {% endif %}
+              </span>
+              {% endif %}
+            </div>
+          </div>
+          <!-- <div class="bm-product-stronger-review">
+            
+            <span class=" stamped-product-reviews-badge" data-id="{{ productthree.id }}" data-product-title="{{productthree.title}}" data-product-type="{{productthree.type}}" style="display:block;" data-product-sku="{{ productthree.handle }}"></span>
+          </div> -->
+          {% endif %}
+        </div>
+        {% endif %}
+        
+      </div>
+      <div class="bm-stronger-together-total">
+          {% assign bm_total_price = productone.price | money %}    
+          <div class="bm-stronger-price"> 
+            <h2>Total Price:</h2>
+            <h3 class="bm-bundle-price">{{bm_total_price}}</h3>USD 
+          </div>
+          <div class="bm-add-to-cart-wrap">
+            <button class="bm-add-to-cart-desktop btn btn--full add-to-cart">
+              <span>Add selected to cart</span>
+            </button>
+          </div>
+          
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+

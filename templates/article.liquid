@@ -1,0 +1,40 @@
+{% section 'article-template' %}
+
+<style>
+  .article__date {
+    display: none;
+  }
+  
+  img[alt="mobile-banner"],
+  img[alt="desktop-banner"] {
+    max-width: 100% !important;
+    margin: auto !important;
+  }
+  
+  img[alt="mobile-banner"] {
+    display: none !important;
+  }
+  
+  @media only screen and (max-width:768px) {
+    img[alt="mobile-banner"] {
+      display: block !important;
+    }
+  
+    img[alt="desktop-banner"] {
+      display: none !important;
+    }
+  }
+
+  a.banner-image-link {
+    text-decoration: none !important;
+    border-bottom: none !important;
+    padding: 0 !important;
+  }
+</style>
+<script>
+  (function() {
+    document.querySelectorAll('img[alt="desktop-banner"], img[alt="mobile-banner"]').forEach(function(img) {
+      img.closest('a').classList.add('banner-image-link');
+    });
+  })();
+</script>

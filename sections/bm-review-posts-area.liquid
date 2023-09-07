@@ -1,0 +1,104 @@
+<div class="bm-review-posts-area">
+    <div class="bm-review-posts-area-container">
+        <div class="bm-review-posts-area-main">
+            {% if section.settings.review_post_title != blank %}
+            <h2>{{ section.settings.review_post_title }}</h2>
+            {% endif %}
+            <div class="bm-review-posts-area-wrap">
+
+                {% for block in section.blocks %}
+                <div class="bm-review-posts-area-block">
+                    {% if block.settings.review_star_image != blank %}
+                    <img src="{{ block.settings.review_star_image | img_url: 'master' }}" alt="">
+                    {% endif %}
+                    {% if block.settings.review_customer_name != blank %}
+                    <h3>{{ block.settings.review_customer_name }}</h3>
+                    {% endif %}
+                    {% if block.settings.review_description != blank %}
+                    <div>{{ block.settings.review_description }}</div>
+                    {% endif %}
+                    <div class="bm-review-posts-area-content">
+                        <div class="bm-review-posts-image-area">
+                            {% if block.settings.review_product_image != blank %}
+                            <img src="{{ block.settings.review_product_image | img_url: 'master' }}" alt="">
+                            {% endif %}
+                        </div>
+                        <div class="bm-review-posts-brand-area">
+                            <p>Reviewed</p>
+                            {% if block.settings.review_product_brand != blank %}
+                            <h4>{{ block.settings.review_product_brand }}</h4>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        $('.bm-review-posts-area-wrap').slick({
+            dots: true,
+            speed: 500,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: false,
+            responsive: [{
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+                dots: true,
+                slidesToScroll: 1
+              }
+            }]
+        });
+      });
+</script>
+
+{% schema %}
+    {
+      "name": "BM Review Posts",
+      "settings": [
+        {
+            "type": "text",
+            "id": "review_post_title",
+            "label": "Title"
+        }
+      ],
+        "blocks": [
+          {
+            "name": "Review Posts",
+            "type": "text",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "review_star_image",
+                    "label": "Star Image"
+                },
+                {
+                    "type": "text",
+                    "id": "review_customer_name",
+                    "label": "Customer Name"
+                },
+                {
+                    "type": "richtext",
+                    "id": "review_description",
+                    "label": "Description"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "review_product_image",
+                    "label": "Product Image"
+                },
+                {
+                    "type": "text",
+                    "id": "review_product_brand",
+                    "label": "Product Brand Name"
+                }
+            ]
+         }
+    ]
+    }
+  {% endschema %}

@@ -1,0 +1,48 @@
+<div class="bm-rewards-learn-more">
+    <div class="bm-rewards-learn-more-main">
+        <div class="bm-rewards-learn-more-content">
+          <div class="bm-rewards-learn-more-item">
+                {% if section.settings.bm_rewards_learn_description != blank %}
+                <p>{{section.settings.bm_rewards_learn_description}}</p>
+                {% endif %}
+                {% if section.settings.bm_rewards_learn_btn_text != blank %}
+                <a class="bm-rewards-learn-more-btn" href="{{section.settings.bm_rewards_learn_btn_url}}">
+                  {{section.settings.bm_rewards_learn_btn_text}}
+                </a>
+                {% endif %}
+            </div>
+        </div>
+        <div class="bm-rewards-learn-more-img">
+            {% if section.settings.bm_rewards_learn_img != blank %}
+            <img src="{{section.settings.bm_rewards_learn_img |  img_url: 'master'}}" alt="">
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% schema %}
+    {
+      "name": "Learn More",
+      "settings": [
+           {
+              "type": "textarea",
+              "id": "bm_rewards_learn_description",
+              "label": "Description"
+           },
+           {
+            "type": "text",
+            "id": "bm_rewards_learn_btn_text",
+            "label": "Button Text"
+           },
+           {
+            "type": "url",
+            "id": "bm_rewards_learn_btn_url",
+            "label": "Button Link"
+           },
+           {
+            "type": "image_picker",
+            "id": "bm_rewards_learn_img",
+            "label": "Image"
+           }
+      ]
+    }
+  {% endschema %}

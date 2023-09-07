@@ -1,0 +1,107 @@
+<div class="bm-discount-code-help">
+  <div class="bm-discount-code-container">
+    <div class="bm-discount-code-help-main">
+      <div class="bm-discount-help-left">
+        {% if section.settings.bm_discount_help_title != blank %}
+        <h2>{{ section.settings.bm_discount_help_title}}</h2>
+        {% endif %}
+      </div>
+      <div class="bm-discount-help-right">
+        {% if section.settings.bm_discount_help_description != blank %}
+        <p>{{ section.settings.bm_discount_help_description }}</p>
+        {% endif %}
+        <div class="bm-discount-help-right-bottom">
+          <diV class="bm-discount-email">
+            <diV class="bm-discount-email-content">
+              <div class="bm-discount-email-img">
+                {% if section.settings.bm_email_img != blank %}
+                <img src="{{ section.settings.bm_email_img | img_url:"master" }}"/>
+                {% endif %}
+              </div>
+              {% if section.settings.bm_email_text != blank %}
+              <h2 class="bm-discount-email-text">{{ section.settings.bm_email_text }}</h2>
+              {% endif %}
+            </div>
+            {% if section.settings.bm_email_adress != blank %}
+            <a href="{{ section.settings.bm_email_adress_link }}" class="bm-discount-email-adress">
+            {{ section.settings.bm_email_adress }}
+            </a>
+            {% endif %}
+          </diV>
+          <div class="bm-discount-phone">
+            <div class="bm-discount-phone-content">
+              <div class="bm-discount-phone-img">
+                {% if section.settings.bm_phone_img != blank %}
+                <img src="{{ section.settings.bm_phone_img | img_url:"master" }}"/>
+                {% endif %}
+              </div>
+              {% if section.settings.bm_phone_text != blank %}
+              <h2 class="bm-discount-phone-text">
+              {{ section.settings.bm_phone_text }}
+              </h2>
+              {% endif %}
+            </div>
+            {% if section.settings.bm_phone_nmbr != blank %}
+            <h3 class="bm-discount-phone-number">
+            {{ section.settings.bm_phone_nmbr }}
+            </h3>
+            {% endif %}  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Discount Help",
+    "settings": [
+      {
+        "type": "text",
+        "id": "bm_discount_help_title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "bm_discount_help_description",
+        "label": "Description"
+      },
+      {
+        "type": "image_picker",
+        "id": "bm_email_img",
+        "label": "Eamil Img"
+      },
+      {
+        "type": "text",
+        "id": "bm_email_text",
+        "label": "Eamil Text"
+      },
+      {
+        "type": "text",
+        "id": "bm_email_adress",
+        "label": "Eamil Adress"
+      },
+      {
+        "type": "url",
+        "id": "bm_email_adress_link",
+        "label": "Eamil Link"
+      },
+      {
+        "type": "image_picker",
+        "id": "bm_phone_img",
+        "label": "Phone Img"
+      },
+      {
+        "type": "text",
+        "id": "bm_phone_text",
+        "label": "Phone Text"
+      },
+      {
+        "type": "text",
+        "id": "bm_phone_nmbr",
+        "label": "Phone Number"
+      }
+    ]
+  }
+{% endschema %}

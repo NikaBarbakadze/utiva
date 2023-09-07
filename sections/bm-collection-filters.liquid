@@ -1,0 +1,144 @@
+<div class="bm-collection-filters" >
+  <div class="page-width" >
+    <div class="bm-collection-filters-main" >
+      <div class="bm-collection-filters-left">
+        <div class="bm-collection-product-count">
+          <h2>{{collection.all_products_count}} Products</h2>
+        </div>
+        <div class="bm-collection-filters-tag">
+
+        </div>
+        <div class="bm-collection-filters-sort">
+
+          {% if section.settings.collection_sort_enable %}
+          <div class="bm-collection-sorting">
+            {%- assign selected = collection.sort_by | default: collection.default_sort_by -%}
+            <select name="sort_by" onchange="location = this.value;" id="sorting">
+              <option value="placeholder" {% if selected == false %}selected{% endif %}>
+                Sort
+              </option>
+              {% for option in collection.sort_options %}
+              <option value="?sort_by={{ option.value }}" {% if value == selected %}selected{% endif %}>
+                {{ option.name }}
+              </option>
+              {% endfor %}
+            </select>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      <div class="bm-collection-shipping-icon">
+
+        {% for block in section.blocks %}
+
+        {% if block.type == 'icon_text' %}
+        <div class="bm-collection-shipping-icon-block">
+          <div>
+            <img src="{{ block.settings.bm_icon | img_url: '80x' }}" />
+          </div>
+          <h2>{{block.settings.bm_icon_text}}</h2>
+        </div>
+        {% endif %}
+
+        {% endfor %}
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Collection filter",
+    "max_blocks": 15,
+    "settings": [
+      {
+        "type": "select",
+        "id": "filter_type",
+        "label": "Filter mode",
+        "default": "groups",
+        "options": [
+          {
+            "value": "none",
+            "label": "Off"
+          },
+          {
+            "value": "dropdown",
+            "label": "All tag dropdown"
+          },
+          {
+            "value": "groups",
+            "label": "Tag groups"
+          }
+        ],
+        "info": "Add tag groups with the content area below"
+      },
+      {
+        "type": "checkbox",
+        "id": "tags_combine",
+        "label": "Enable tag combinations"
+      },
+      {
+        "type": "checkbox",
+        "id": "collection_sort_enable",
+        "label": "Show sort options"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "tags_group",
+        "name": "Tag group",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Tag Group"
+          },
+          {
+            "type": "textarea",
+            "id": "tag_list",
+            "label": "Tag list (one per line)",
+            "default": "First tag \nSecond tag \nThird tag",
+            "info": "Tags are case sensitive and must match your product tag exactly"
+          }
+        ]
+      },
+      {
+        "type": "color_group",
+        "name": "Color swatches",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Color"
+          },
+          {
+            "type": "textarea",
+            "id": "tag_list",
+            "label": "Swatch list (one per line)",
+            "default": "Burgundy \nHeather grey \nGreen",
+            "info": "Products must be tagged with their color in order to appear here. Tags are case sensitive and must match your product tag exactly. Ex: 'Heather grey'. [Learn how to set up swatches](https://archetypethemes.co/blogs/impulse/how-do-i-set-up-color-swatches)."
+          }
+        ]
+      },
+      {
+        "type": "icon_text",
+        "name": "Icon with text",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "bm_icon",
+            "label": "Icon"
+          },
+          {
+            "type": "text",
+            "id": "bm_icon_text",
+            "label": "Text"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

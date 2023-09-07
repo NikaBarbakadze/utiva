@@ -1,0 +1,106 @@
+{% include 'bm-doctor-popup-video' %}
+<div class="page-width">
+  <div class="bm-doctors-information">
+    <div class="bm-doctors-information-top">
+      {% if section.settings.bm_doctors_information_top_title != blank %}
+      <h2 class="bm-doctors-information-top-title">
+      	{{section.settings.bm_doctors_information_top_title}}
+      </h2>
+      {% endif %}
+      {% if section.settings.bm_doctors_information_top_description != blank %}
+      <p class="bm-doctors-information-top-description">
+      {{section.settings.bm_doctors_information_top_description}}
+      </p>
+      {% endif %}
+      <div class="bm-doctors-information-top-button-wrp" onclick="bmvideopopup();">
+      {% if section.settings.bm_doctors_information_top_button_text != blank %}
+      <h3 class="bm-doctors-information-top-button" >
+      {{section.settings.bm_doctors_information_top_button_text}}
+      </h3>
+      {% endif %}
+      </div>
+    </div>
+    <div class="bm-doctors-information-bottom">
+      {% for block in section.blocks %}
+      <div class="bm-doctors-information-bottom-block">
+        <div>
+        {% if block.settings.bm_doctors_information_bottom_block_img != blank %}
+        <img loading="lazy" src="{{block.settings.bm_doctors_information_bottom_block_img | img_url:'master' }}" alt="">
+        {% endif %}
+        </div>
+        {% if block.settings.bm_doctors_information_bottom_block_title != blank %}
+        <h2>
+        {{block.settings.bm_doctors_information_bottom_block_title}}
+        </h2>
+        {% endif %}
+        {% if block.settings.bm_doctors_information_bottom_block_description != blank %}
+        <p>{{block.settings.bm_doctors_information_bottom_block_description}}</p>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Doctor information",
+	"max_blocks": 4,
+    "settings": [
+        {
+          "type": "text",
+          "id": "bm_doctors_information_top_title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "bm_doctors_information_top_description",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "bm_doctors_information_top_button_text",
+          "label": "Button Text"
+        },
+        {
+          "type": "text",
+          "id": "bm_doctors_information_top_button_link",
+          "label": "Video ID"
+        }
+    ],
+	"blocks": [
+     {
+       "name": "Doctor",
+       "type": "text",
+       "settings": [
+         {
+           "type": "image_picker",
+           "id": "bm_doctors_information_bottom_block_img",
+           "label": "Icon"
+         },
+		 {
+            "type": "text",
+            "id": "bm_doctors_information_bottom_block_title",
+            "label": "Doctor Name"
+         },
+		 {
+            "type": "text",
+            "id": "bm_doctors_information_bottom_block_description",
+            "label": "Doctor designation"
+         }
+       ]
+     }
+   ]
+  }
+{% endschema %}
+
+
+<script>
+  
+    function bmvideopopup(){
+    	var vaideoWrp = document.querySelector('.bm-doctor-popup-video');
+      	vaideoWrp.classList.toggle('active');
+    };
+
+</script>

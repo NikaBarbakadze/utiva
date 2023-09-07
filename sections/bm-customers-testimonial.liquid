@@ -1,0 +1,125 @@
+<div class="bm-customers-testimonial">
+  <div class="page-width">
+    {% if section.settings.bm_customers_testimonial_title != blank %}
+      <h2 class="bm-customers-testimonial-title">
+        {{section.settings.bm_customers_testimonial_title}}
+      </h2>
+      {% endif %}
+    <div class="bm-customers-testimonial-main">
+      
+      <div class="bm-customers-testimonial-slider-dot">
+        <div class="bm-customers-testimonial-slider-dot-right">
+          {% for block in section.blocks %}
+          <div>
+            <div class="bm-customers-testimonial-slider-dot-right-img ">
+              <img 
+                srcset="{{ block.settings.bm_customers_testimonial_slider_main_left_img | img_url: '110x' }} 474w,
+                    {{ block.settings.bm_customers_testimonial_slider_main_left_img | img_url: '200x' }} 768w,
+                    {{ block.settings.bm_customers_testimonial_slider_main_left_img | img_url: '195x' }} 1400w" 
+                src="{{ block.settings.bm_customers_testimonial_slider_main_left_img | img_url: '195x' }}"
+                sizes=""
+                alt="{{ block.settings.bm_customers_testimonial_slider_main_left_img.alt }}" 
+                height="{{ block.settings.bm_customers_testimonial_slider_main_left_img.height }}" 
+                width="{{ block.settings.bm_customers_testimonial_slider_main_left_img.width }}" 
+                loading="lazy">
+              {% comment %} <img loading="lazy" src="{{block.settings.bm_customers_testimonial_slider_main_left_img | img_url: 'master' }}" alt=""> {% endcomment %}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="bm-customers-testimonial-slider">
+        {% for block in section.blocks %}
+        <div>
+          <div class="bm-customers-testimonial-slider-main">
+            <div class="bm-customers-testimonial-slider-main-right">
+              {% if block.settings.bm_customers_testimonial_slider_main_right_text != blank %}
+              <p class="bm-customers-testimonial-slider-main-right-text">
+                {{block.settings.bm_customers_testimonial_slider_main_right_text}}
+              </p>
+              {% endif %}
+              {% if block.settings.bm_customers_testimonial_slider_main_right_img != blank %}
+              <div class="bm-customers-testimonial-slider-main-right-img">
+                <img loading="lazy" src="{{block.settings.bm_customers_testimonial_slider_main_right_img | img_url: 'master' }}" alt="">
+              </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+</div>
+</div>
+{% schema %}
+  {
+    "name": "Customers Testimonial",
+    "settings": [
+		 {
+            "type": "text",
+            "id": "bm_customers_testimonial_title",
+            "label": "Heading"
+         }
+	],
+	"blocks": [
+     {
+       "name": "Testimonial",
+       "type": "Testimonial",
+       "settings": [
+		 {
+            "type": "image_picker",
+            "id": "bm_customers_testimonial_slider_main_left_img",
+            "label": "Customer Image"
+         },
+		 {
+            "type": "textarea",
+            "id": "bm_customers_testimonial_slider_main_right_text",
+            "label": "Testimonial Text"
+         },
+		 {
+            "type": "image_picker",
+            "id": "bm_customers_testimonial_slider_main_right_img",
+            "label": "Review Image"
+         }
+       ]
+     }
+   ],
+    "presets": [
+      {
+        "name": "Customers Testimonial",
+        "category": "BM Sections"
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+
+  .bm-customers-testimonial .slick-prev {
+    top: 150%;
+  }
+  .bm-customers-testimonial .slick-next {
+    top: 150%;
+  }
+  @media only screen and (max-width: 768px) {
+
+    .bm-customers-testimonial .slick-prev {
+      top: 46%;
+
+    }
+    .bm-customers-testimonial button.slick-prev.slick-arrow {
+      left: 0;
+    }
+    .bm-customers-testimonial .slick-next {
+      top: 46% !important;
+    }
+    .slick-slider .slick-track, .slick-slider .slick-list {
+      display: flex;
+      align-items: center;
+    }
+
+  }
+</style>
+
+

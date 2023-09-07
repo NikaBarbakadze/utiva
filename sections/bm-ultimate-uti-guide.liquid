@@ -1,0 +1,383 @@
+<div class="bm-container-ultimate">
+  <div class="bm-ultimate-main-container">
+    <div class="bm-ultimate-main page-width">
+      <div class="bm-ultimate-content">
+        <div class="bm-ultimate-content-heading"><h1>{{ section.settings.bm_ultimate_content_heading }}</h1></div>
+        <div class="bm-ultimate-content-para"><h6>{{ section.settings.bm_ultimate_content_para }}</h6></div>
+        <div class="bm-ultimate-content-feature  bm-ultimate-desktop"><p>{{ section.settings.bm_ultimate_content_feature }}</p>
+          {% assign features = section.settings.bm_ultimate_content_feature_list | newline_to_br | split: '<br />' %}
+          <ul>{% for item in features %}<li>{{ item }}</li>{% endfor %}</ul>
+        </div>
+        <div class="bm-ultimate-content-button">
+          <!-- <a href="#bm-i-want-to-find-main-container-id">
+            {{ section.settings.bm_btn_text }}
+          </a> -->
+          {%- assign newsletter_form_id = 'newsletter-1' -%}
+          <div class="omnisend-subscribe-form bm-uti-form">
+            {% form 'customer', id: newsletter_form_id %}
+            {% if form.posted_successfully? %}
+            <div class="note note--success">
+              {{ 'general.newsletter_form.newsletter_confirmation' | t }}
+            </div>
+            {% endif %}
+            {% if form.errors and form.context == snippet_context %}
+            {{ form.errors | default_errors }}
+            {% endif %}
+
+            {%- unless form.posted_successfully? -%} 
+            <label for="Email-{{ section_id }}" class="hidden-label">
+              {{ 'general.newsletter_form.newsletter_email' | t }}
+            </label>
+            <input type="hidden" name="contact[tags]" value="prospect,newsletter,ebook">
+            <input type="hidden" name="contact[context]" value="{{ snippet_context }}">
+            <div class="newsletter-form-group">
+              <div class="bm-i-want-to-find-input2"> <input type="email" onclick="this.value = (this.value == 'Email' ? '' : this.value);" value="{% if customer %}{{ customer.email }}{% endif %}" placeholder="Enter your email" name="contact[email]" id="Email-{{ section.id }}" class="newsletter-form-group__input omnisend-subscribe-input-email" autocapitalize="off"></div>
+              <button type="submit" class="newsletter-form-group__submit" name="commit" title="{{ 'general.newsletter_form.submit' | t }}">
+                <span>{{ section.settings.bm_uti_hero_btn_text }}</span>
+              </button>
+            </div>
+            {%- endunless -%}
+            {% endform %} 
+          </div>
+        </div>
+        <div class="bm-ultimate-content-feature bm-ultimate-mobile"><p>{{ section.settings.bm_ultimate_content_feature }}</p>
+          {% assign features = section.settings.bm_ultimate_content_feature_list | newline_to_br | split: '<br />' %}
+          <ul>{% for item in features %}<li>{{ item }}</li>{% endfor %}</ul>
+        </div>
+      </div>
+      <div class="img bm-ultimate-cover-pic"> <img src="{{ section.settings.bm_ultimate_cover_pic | img_url: 'master' }}" alt="{{ section.settings.bm_ultimate_cover_pic.alt | escape }}"></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<style>
+
+  html body .bm-container-ultimate {
+    background-color:#fcf5f6;
+    /* border-radius: 0px 0px 150px 150px / 0px 0px 25px 25px; */
+    padding-top: 60px;
+    padding-bottom: 0;
+
+  }
+
+
+  html body .bm-ultimate-main {
+    display:flex;
+    justify-content:space-between;
+    align-items: end;
+  }
+
+  html body .bm-ultimate-content {
+    flex-basis: 50%;
+
+  }
+
+  html body .bm-ultimate-cover-pic {
+    flex-basis: 50%;
+
+  }
+
+  html body .bm-ultimate-cover-pic {
+    max-width:100%;
+    width:100%;
+  }
+
+  html body .bm-ultimate-content-heading {
+    font-family: 'Nunito';
+    color:#da212c;
+  }
+  html body .bm-ultimate-content-heading h1 {
+    font-size:69px;
+    font-weight:bolder;
+  }
+
+  html body .bm-ultimate-content-para {
+    color: #253c51;
+    font-family: "Nunito Sans";
+  }
+
+  html body .bm-ultimate-content-para h6 {
+    font-size: 32px;
+    font-weight:700;
+    padding-left: 5px;
+  }
+
+  html body .bm-ultimate-content-feature {
+    font-family: 'Kometa-Bold';
+    padding-left: 10px;
+  }
+
+  html body .bm-ultimate-content-feature p {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 29px;
+    color: #253C51;
+  }
+
+  html body .bm-ultimate-content-feature ul {
+    margin: 0 0 20px 20px;
+  }
+
+  html body .bm-ultimate-content-button {
+    margin-top:50px;
+    width: auto;
+    text-align:center;
+    scroll-behavior: smooth;
+    transition: 3s;
+  }
+
+  html body .bm-ultimate-content-button a {
+    font-family: 'Nunito';
+    display: inline-block;
+    color: #da212c;
+    font-weight: bolder;
+    border: 3px solid #9dd5d0;
+    font-size: 25.92px;
+    border-radius: 50px;
+    padding: 5px 15px;
+    scroll-behavior: smooth;
+    transition: 3s;
+  }
+  /*styling start for uti hero form */
+  .bm-uti-form .newsletter-form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.bm-uti-form input#Email-bm-ultimate-uti-guide {
+    border: 3px solid #8AD4CB !important;
+    border-radius: 7px !important;
+    color: #253c51;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px !important;
+    line-height: 41px;
+    padding: 3px 10px;
+    margin-bottom: 0 ;
+    }
+    html body .bm-uti-form .bm-i-want-to-find-input2 {
+        margin: 0;
+        margin-right: 15px;
+    }
+    .bm-uti-form button.newsletter-form-group__submit {
+        background: #D3212C !important;
+        border-radius: 7px !important;
+        font-style: normal;
+        font-weight: 800 !important;
+        font-size: 20px !important;
+        line-height: 41px;
+        padding: 5px 15px !important;
+    }
+    .img.bm-ultimate-cover-pic img {
+        display: block;
+    }
+    .bm-uti-form input#Email-bm-ultimate-uti-guide::placeholder {
+        color: #d3212c;
+    }
+  
+/*styling ensd for uti hero form */
+  @media only screen and (min-width:769px){
+    .bm-ultimate-mobile {
+        display: none;
+    }
+  }
+  
+   @media only screen and (min-width:901px) and (max-width:1024px){
+    .bm-uti-form button.newsletter-form-group__submit {
+      font-size: 15px !important;
+      padding: 5px 12px !important;
+    } 
+    .bm-uti-form input#Email-bm-ultimate-uti-guide {
+      font-size: 15px !important;
+    }
+    html body .bm-ultimate-content-heading h1 {
+      font-size: 56px;
+    }
+    html body .bm-ultimate-content-para h6 {
+      font-size: 28px;
+    }
+  }
+  @media only screen and (min-width:769px) and (max-width:900px){
+    .bm-uti-form button.newsletter-form-group__submit {
+      font-size: 15px !important;
+      min-width: 145px;
+    }
+    .bm-uti-form input#Email-bm-ultimate-uti-guide {
+      font-size: 15px !important;
+    }
+    html body .bm-ultimate-content-heading h1 {
+      font-size: 48px;
+    }
+    html body .bm-ultimate-content-para h6 {
+      font-size: 24px;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+
+    html body .bm-container-ultimate {
+      padding: 30px 50px;
+    }
+    html body .bm-ultimate-content-heading h1 br {
+      display: none;
+    }
+    html body .bm-ultimate-main {
+      flex-direction:column;
+    }
+    html body .bm-ultimate-cover-pic {
+      order:1;
+      flex-basis:100%;
+      max-width:100%;
+    }
+    html body .bm-ultimate-content {
+      flex-basis: 100%;
+      order:2;
+      width: 100%;
+    }
+    
+    html body .bm-ultimate-content-button a {
+      padding:5px 10px;
+    }
+    /*styling start for uti hero form */
+    html body .bm-ultimate-main {
+    flex-direction: column-reverse !important;
+    }
+    .bm-uti-form .newsletter-form-group {
+    flex-direction: column;
+    margin-bottom: 0;
+    }
+    html body .bm-uti-form .bm-i-want-to-find-input2 {
+    margin-right: 0px;
+    margin-bottom: 20px;
+    }
+    .bm-uti-form button.newsletter-form-group__submit {
+    margin-bottom: 15px;
+    min-width: 200px;
+    }
+    html body .bm-container-ultimate {
+    padding-top: 30px;
+    padding-bottom: 0;
+    }
+    html body .bm-ultimate-content-heading h1 {
+    font-size: 45px;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 50px;
+    }
+    html body .bm-ultimate-content-para h6 {
+    font-size: 20px;
+    padding-left: 5px;
+    color: #253C51;
+    font-weight: 800;
+    text-align: center;
+    line-height: 25px;
+    }
+    html body .bm-ultimate-content-feature p {
+    font-size: 20px;
+    color: #253C51;
+    margin-bottom: 5px;
+    text-align: center;
+    }
+    html body .bm-ultimate-content-feature ul li {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #253C51;
+    text-align: center;
+    list-style-position: inside;
+    }
+    html body .bm-ultimate-content-button {
+    margin-top: 23px;
+    }
+    .bm-uti-form input#Email-bm-ultimate-uti-guide {
+    text-align: center;
+    padding: 3px 20px;
+   }
+   .img.bm-ultimate-cover-pic img {
+    display: block;
+   }
+   .bm-ultimate-main.page-width {
+    padding: 0 10px !important;
+   }
+
+    html body .bm-ultimate-content-feature {
+      padding-left: 0;
+    }
+    html body .bm-ultimate-content-para h6 {
+      padding-left: 0;
+    }
+    html body .bm-ultimate-content-feature ul {
+      margin: 0 0 20px 0;
+    }
+    .bm-ultimate-desktop {
+        display: none;
+    }
+   
+  /*styling end for uti hero form */
+  }
+
+  
+  @media only screen and (max-width: 580px) {
+
+    /* html body .bm-container-ultimate {
+      padding: 30px 30px;
+    } */
+
+    @media only screen and (max-width: 500px) {
+
+      html body .bm-container-ultimate {
+        padding-top: 30px;
+        padding-bottom: 0;
+      }
+
+    } 
+  }
+
+</style>
+
+
+
+
+{% schema %}
+  {
+    "name": "Utimate Guide",
+    "settings": [
+    {
+        "type": "image_picker",
+        "id": "bm_ultimate_cover_pic",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "bm_ultimate_content_heading",
+        "label": "Heading",
+        "default": "FREE ULTIMATE UTI GUIDE"
+      },
+      {
+        "type": "text",
+        "id": "bm_ultimate_content_para",
+        "label": "Subtitle"
+      },
+    {
+        "type": "text",
+        "id": "bm_ultimate_content_feature",
+        "label": "Feature Text"
+      },
+    {
+        "type": "textarea",
+        "id": "bm_ultimate_content_feature_list",
+        "label": "Feature Text List"
+      },
+      {
+        "type": "text",
+        "id": "bm_uti_hero_btn_text",
+        "label": "Button Text"
+      }
+    ]
+  }
+{% endschema %}
+
+

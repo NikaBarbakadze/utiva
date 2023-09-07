@@ -1,0 +1,86 @@
+<script src='{{ 'reviews-count.js' | asset_url }}' defer='defer'></script>
+<div
+	class='header-desktop__submenu hide-scroll-bar'
+>
+	<div class='header-desktop__submenu--wrapper'>
+		{% for link in parent_link.links %}
+			<div class='header-desktop__submenu--item'>
+				{% liquid
+					assign title = link.title
+					if title == '#'
+						assign title = '&nbsp;'
+					endif
+				%}
+				<a
+					href='{{ link.url }}'
+					class='header-desktop__submenu--link'
+				>
+					{{- link.title -}}
+				</a>
+				<ul class='header-desktop__nested'>
+					{% for child_link in link.links %}
+						<li>
+							<a
+								href='{{ child_link.url }}'
+								class=' header-desktop__nested--link'
+							>
+								{{- child_link.title -}}
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		{% endfor %}
+	</div>
+
+	<ul class='header-product__products-block header-product__products-block--{{ section.id }}'>
+		{% for product in mega_menu_blocks %}
+			{% if product.type == 'product' %}
+				{% if product != blank %}
+					<li class='header-product__item'>
+						<a
+							href='{{ product.settings.product_image.url }}'
+							class='header-product__item--image'
+						>
+							{% render 'image', image: product.settings.product_image.featured_image %}
+							<div class='header-product__item--tag'>
+								{% for tag in product.settings.product_image.tags %}
+									{% if tag contains 'Most Popular' %}
+										<div class='element-tag label-new'>
+											{{ tag }}
+										</div>
+									{% endif %}
+								{% endfor %}
+							</div>
+						</a>
+						<div class='header-product__item--text'>
+							{{-
+								product.settings.product_image.title
+								| link_to: product.settings.product_image.url
+							}}
+							<div class='header-product__item--description'>
+								{{ product.settings.product_image.description }}
+							</div>
+						</div>
+						<div class='header-product__item--price-rating'>
+							<p class='body-m'>{{ product.settings.product_image.price | money }}</p>
+							<div class='header-product__item--rating'>
+								{% render 'icon' with 'star-20' %}
+
+								<span
+									class='stamped-product-reviews-badge stamped-main-badge'
+									data-id='{{ product.settings.product_image.id }}'
+									data-widget-type='standard'
+									data-product-title='{{ product.settings.product_image.title | escape }}'
+									data-product-type='{{ product.settings.product_image.type }}'
+									style='display: block;'
+									data-product-sku='{{ product.settings.product_image.handle }}'
+								></span>
+							</div>
+						</div>
+					</li>
+				{% endif %}
+			{% endif %}
+		{% endfor %}
+	</ul>
+</div>

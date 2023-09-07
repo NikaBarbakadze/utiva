@@ -1,0 +1,80 @@
+<div class="bm-why-ingridients">
+    <div class="bm-why-ingridients-container">
+        <div class="bm-why-ingridients-main">
+            
+            {% for block in section.blocks %}
+            {% case block.type %}
+                {% when "heading" %}
+                <div class="bm-why-ingridients-title">
+                    {% if block.settings.bm_why_ingridients_title != blank %}
+                    <h2>{{block.settings.bm_why_ingridients_title }}</h2>
+                    {% endif %}
+                </div>
+                {% when "image_with_text" %}
+                <div class="bm-why-ingridients-block">
+                    <div class="bm-why-ingridients-block-content">
+                        {% if block.settings.bm_why_ingridients_img != blank %}
+                        <div class="bm-why-ingridients-content-img">
+                            <img src="{{block.settings.bm_why_ingridients_img | img_url:"master"}}" />
+                        </div>
+                        {% endif %}
+                        <div class="bm-why-ingridients-content-bottom">
+                        {% if block.settings.bm_why_ingridients_img_title != blank %}
+                        <h3>{{block.settings.bm_why_ingridients_img_title }}</h3>
+                        {% endif %}
+                        {% if block.settings.bm_why_ingridients_img_description != blank %}
+                        <p>{{block.settings.bm_why_ingridients_img_description }}</p>
+                        {% endif %}
+                        </div>
+                    </div>
+                </div>
+
+            {% endcase %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+{% schema %} 
+  {
+    "name": "Why Ingridients Section",
+    "settings": [
+        
+	],
+	"blocks": [
+     {
+       "name": "Heading",
+       "type": "heading",
+       "settings": [
+            {
+                "type": "text",
+                "id": "bm_why_ingridients_title",
+                "label": "Heading"
+            }
+       ]
+     },
+     {
+       "name": "Image with text",
+       "type": "image_with_text",
+       "settings": [
+         {
+           "type": "image_picker",
+           "id": "bm_why_ingridients_img",
+           "label": "Image"
+         },
+		 {
+            "type": "text",
+            "id": "bm_why_ingridients_img_title",
+            "label": "title"
+         },
+		 {
+            "type": "textarea",
+            "id": "bm_why_ingridients_img_description",
+            "label": "Description"
+         }
+       ]
+     }
+   ]
+  }
+{% endschema %}

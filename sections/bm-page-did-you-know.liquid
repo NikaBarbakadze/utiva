@@ -1,0 +1,73 @@
+<div class="bm-page-did-you-know">
+  <div class="page-width">
+    <div class="bm-page-did-you-know-main">
+      {% if section.settings.bm_contents_text != blank %}
+      <div class="bm-contents-text-top">
+        <strong class="bm-contents-text">{{section.settings.bm_contents_text}}</strong>
+      </div>
+      {% endif %}
+      {% if section.settings.bm_did_you_title != blank %}
+      <h2>{{section.settings.bm_did_you_title}}</h2>
+      {% endif %}
+      <div class="bm-page-did-you-know-content">
+        {% for block in section.blocks %}
+        <div class="bm-page-did-you-know-block">
+          <div class="bm-did-you-know-img">
+            {% if block.settings.bm_did_you_img != blank %}
+            <img src="{{block.settings.bm_did_you_img | img_url:"master"}}" alt="">
+            {% endif %}
+          </div>
+          {% if block.settings.bm_did_you_description != blank %}
+          <p>{{block.settings.bm_did_you_description }}</p>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Page Statistics",
+    "settings": [
+        {
+          "type": "text",
+          "id": "bm_contents_text",
+          "label": "Contents Text"
+        },
+        {
+           "type": "text",
+           "id": "bm_did_you_title",
+           "label": "Title"
+        }
+	],
+  "blocks": [
+    {
+      "type": "block",
+      "name": "Content",
+      "settings": [
+  		{
+           "type": "image_picker",
+           "id": "bm_did_you_img",
+           "label": "Image"
+        },
+        {
+           "type": "textarea",
+           "id": "bm_did_you_description",
+           "label": "Description"
+        }
+      ]
+    }
+  ],
+    "presets": [
+      {
+        "name": "Page Statistics",
+        "category": "BM Page Sections"
+      }
+    ]
+    
+  }
+{% endschema %}	
+

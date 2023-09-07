@@ -1,0 +1,344 @@
+<div class="bm-what-our-community-say-container page-width">
+  <div class="bm-what-out-community-say-heading"><h1>{{ section.settings.bm_what_out_community_say_heading }}</h1></div>
+  <div class="bm-what-our-community-say-main-div">
+
+    <div class="bm-what-our-community-say-main">
+      <div class="bm-what-our-community-say-left">
+        <div class="bm-what-our-community-say-left-img-parent">
+          <div class="bm-what-our-community-say-left-row-img"><img src="{{ section.settings.bm_what_our_community_say_left_row_img | img_url: 'master' }}" alt="{{ section.settings.bm_what_our_community_say_left_row_img.alt | escape }}"></div>
+        </div>
+        <div class="bm-what-our-community-say-left-text-author-parent">
+          <div class="bm-what-our-community-say-left-text">{{ section.settings.bm_what_our_community_say_left_text }}</div>
+          <div class="bm-what-our-community-say-left-author">{{ section.settings.bm_what_our_community_say_left_author }}</div>
+        </div>
+      </div>
+      <div class="bm-what-our-community-say-right">
+        <div class="bm-what-our-community-say-right-text-author-parent">
+          <div class="bm-what-our-community-say-right-text">{{ section.settings.bm_what_our_community_say_right_text }}</div>
+          <div class="bm-what-our-community-say-right-author">{{ section.settings.bm_what_our_community_say_right_author }}</div>
+        </div>
+        <div class="bm-what-our-community-say-right-img-parent">
+          <div class="bm-what-our-community-say-right-row-img"><img src="{{ section.settings.bm_what_our_community_say_right_row_img | img_url: 'master' }}" alt="{{ section.settings.bm_what_our_community_say_right_row_img.alt | escape }}"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="bm-what-out-community-say-footer-para"><p>{{ section.settings.bm_what_out_community_say_footer_para }}</p></div>
+</div>
+
+
+
+
+
+
+<style>
+
+  html body .bm-what-out-community-say-heading {
+    display: block;
+    text-align: center;
+    padding-bottom:40px;
+  }
+
+  html body .bm-what-out-community-say-heading  h1 {
+    font-family: 'Nunito';
+    font-weight: bolder;
+    font-size: 45px;
+    color: #da212c;
+  }
+
+  html body .bm-what-our-community-say-main {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-gap:50px;
+  }
+
+  html body .bm-what-our-community-say-left {
+    border: 3px solid #9dd5d0;
+    border-radius: 50px;
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  html body .bm-what-our-community-say-left-row-img img {
+    width: 100%;
+    max-width:200px;
+    position: absolute;
+    bottom: -1px;
+    left:3px;
+  }
+
+  html body .bm-what-our-community-say-left-text-author-parent {
+    margin-right:35px;
+  }
+
+  .bm-what-our-community-say-left-text {
+
+    margin-bottom: 15px;
+  }
+
+  html body .bm-what-our-community-say-left-text p {
+    font-family: 'Kometa-Book'!important;
+    font-size: 17px;
+    margin-left: 65px;
+
+  }
+
+  html body .bm-what-our-community-say-left-author {
+    font-family: 'Kometa-Bold';
+    font-size: 17px;
+    margin-left: 65px;
+  }
+
+  html body .bm-what-our-community-say-right {
+    border: 3px solid #9dd5d0;
+    border-radius: 50px;
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  html body .bm-what-our-community-say-right-row-img img {
+    width:100%;
+    max-width:200px;
+    position: absolute;
+    bottom: -1px;
+    right: 3px;
+  }
+
+  html body .bm-what-our-community-say-left-img-parent {
+    width: 100%;
+  }
+
+  html body .bm-what-our-community-say-right-text-author-parent {
+    padding:10px;
+  }
+
+  html body .bm-what-our-community-say-right-text {
+
+    margin-bottom: 5px;
+  }
+
+  html body .bm-what-our-community-say-right-text p {
+    font-family: 'Kometa-Book'!important;
+    font-size: 17px;
+    padding-left: 50px;
+    margin-right: 175px;
+  }
+
+  html body .bm-what-our-community-say-right-author {
+    font-family: 'Kometa-Bold';
+    font-size: 17px;
+    padding-left: 50px;
+  }
+
+  html body .bm-what-out-community-say-footer-para {
+    display:block;
+    text-align:center;
+    padding-bottom:25px;
+  }
+
+  html body .bm-what-out-community-say-footer-para p {
+    font-family: 'Kometa-Book'!important;
+    font-size: 17.35px;
+    padding-top:30px;
+    display: block;
+    margin: auto;
+    text-align: center;
+    max-width: 800px;
+  }
+
+
+
+  @media only screen and (max-width: 968px) {
+
+    html body .bm-what-our-community-say-left-text-author-parent {
+      margin-bottom: 150px;
+      padding: 10px;
+      margin-left: 0px;
+      margin-right:0px !important;
+    }
+
+    html body .bm-what-our-community-say-right-text p {
+      padding-left: 20px;
+    }
+
+    html body .bm-what-our-community-say-right-author {
+      padding-left: 20px;
+    }
+
+    html body .bm-what-our-community-say-right-text-author-parent {
+      padding: 10px;
+      margin-bottom: 130px;
+    }
+
+    html body .bm-what-our-community-say-right-text-author-parent p {
+      margin-right:0;
+    }
+
+  }
+
+
+
+
+
+  @media only screen and (max-width: 768px) {
+
+    html body .bm-what-our-community-say-main {
+      grid-template-columns:1fr;
+      grid-gap:50px;
+    }
+
+
+    html body .bm-what-our-community-say-left {
+      display: flex;
+      flex-direction:column;
+
+    }
+
+    html body .bm-what-our-community-say-left-img-parent {
+      width: 100%;
+    }
+
+    html body .bm-what-our-community-say-right-img-parent {
+      width: 100%;
+
+    }
+
+    html body .bm-what-our-community-say-left-row-img img {
+      max-width: 200px;
+      width: 100%;
+    }
+
+    html body .bm-what-our-community-say-left-text-author-parent {
+      margin:35px;
+    }
+
+    html body .bm-what-our-community-say-left-text {
+      margin-left:50px;
+    }
+
+    html body .bm-what-our-community-say-left-text p {
+      font-size:17px;
+      padding-left:50px;
+    }
+
+    html body .bm-what-our-community-say-left-author {
+      font-size:17px;
+      margin-left: 50px;
+      padding-left: 115px;
+
+    }
+
+    html body .bm-what-our-community-say-right {
+      display: flex;
+      flex-direction:column;
+    }
+
+    html body .bm-what-our-community-say-right-row-img img {
+      max-width: 200px;
+      width: 100%;
+    }
+
+    html body .bm-what-our-community-say-right-text-author-parent {
+      margin:35px;
+    }
+
+    html body .bm-what-our-community-say-right-text {
+      margin-right:50px;
+    }
+
+    html body .bm-what-our-community-say-right-text p {
+      font-size:17px;
+      padding-right:50px;
+    }
+
+    html body .bm-what-our-community-say-right-author {
+      font-size:17px;
+      padding-left:20px;
+    }
+
+    html body .bm-what-out-community-say-footer-para p {
+      font-size:17px;
+      text-align:center;
+    }
+
+  }
+
+  @media (max-width: 359px) {
+    html body .bm-what-our-community-say-main > div {
+      max-width: 300px;
+      margin: auto;
+    }
+
+    html body .bm-what-our-community-say-left-text p {
+      padding-left:0;
+    }
+
+    html body .bm-what-our-community-say-left-author {
+      padding-left:65px;
+    }
+
+    html body .bm-what-our-community-say-right-text p {
+      padding-right:100px;
+    }
+  }
+
+</style>
+
+
+
+
+
+{% schema %}
+  {
+    "name": "Here's What Our Community",
+    "settings": [
+      {
+        "type": "text",
+        "id": "bm_what_out_community_say_heading",
+        "label": "Text"
+      },
+	  {
+        "type": "image_picker",
+        "id": "bm_what_our_community_say_left_row_img",
+        "label": "Image"
+      },
+	  {
+        "type": "richtext",
+        "id": "bm_what_our_community_say_left_text",
+        "label": "Comment Text"
+      },
+      {
+        "type": "text",
+        "id": "bm_what_our_community_say_left_author",
+        "label": "Author Name"
+      },
+	  {
+        "type": "image_picker",
+        "id": "bm_what_our_community_say_right_row_img",
+        "label": "Image"
+      },
+      {
+        "type": "richtext",
+        "id": "bm_what_our_community_say_right_text",
+        "label": "Comment Text"
+      },
+	  {
+        "type": "text",
+        "id": "bm_what_our_community_say_right_author",
+        "label": "Author Name"
+      },
+	  {
+        "type": "richtext",
+        "id": "bm_what_out_community_say_footer_para",
+        "label": "Footer Paragraph"
+      }
+    ]
+  }
+{% endschema %}
+

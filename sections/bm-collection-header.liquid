@@ -1,0 +1,70 @@
+<div class="bm-collection-header">
+  
+  <div class="bm-collection-header-main">
+    <div class="bm-collection-header-top">
+      {% if section.settings.bm_collection_header_title != blank %}
+      <h2>{{section.settings.bm_collection_header_title}}</h2>
+      {% endif %}
+    </div>
+
+    <div class="bm-collection-header-menu">
+        {% for block in section.blocks %}
+        <div class="bm-collection-header-menu-block">
+          <div>
+          {% if block.settings.bm_collection_header_menu_text != blank %}
+          <a class="{% if forloop.first %}bm-no-border {% endif %}"  href="{{block.settings.bm_collection_header_menu_url}}">
+            {{block.settings.bm_collection_header_menu_text}}
+          </a>
+          {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+    </div>
+
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Bm Collection Header",
+    "settings": [
+        {
+          "type": "text",
+          "id": "bm_collection_header_title",
+          "label": "Heading"
+        }
+       
+	],
+	"blocks": [
+     {
+       "name": "Menu",
+       "type": "link",
+       "settings": [
+		 
+		 {
+            "type": "text",
+            "id": "bm_collection_header_menu_text",
+            "label": "Text"
+         },
+		{
+            "type": "url",
+            "id": "bm_collection_header_menu_url",
+            "label": "Link"
+         }
+       ]
+     }
+   ]
+    
+  }
+{% endschema %}
+
+
+<!-- <script>
+        
+   $(function() {
+    $('.bm-collection-header-menu-block a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
+});
+  
+  
+</script> -->

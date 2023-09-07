@@ -1,0 +1,187 @@
+<div class="bm-popular-solutions-product">
+  <div class="page-width">
+    <div class="bm-popular-solutions-product-main">
+      {% if section.settings.bm_popular_solutions_product_title != blank %}
+      <h2 class="bm-popular-solutions-product-title">
+        {{section.settings.bm_popular_solutions_product_title}}
+      </h2>
+      {% endif %}
+      <div class="bm-popular-solutions-product-slider">
+        {% for block in section.blocks %}
+        <div> 
+          <form method="post" action="/cart/add">
+            {% assign product = all_products[block.settings.bm_popular_solutions_product_handle] %}
+            <div class="bm-popular-solutions-product-slider-main">
+              <div class="bm-popular-solutions-product-slider-main-left">
+                {% if block.settings.bm_popular_solutions_product_slider_main_left_title != blank %}
+                <a href="{{product.url}}">
+                  <h2 class="bm-popular-solutions-product-slider-main-left-title">
+                    {{block.settings.bm_popular_solutions_product_slider_main_left_title}}
+                  </h2>
+                </a>
+                {% endif %}
+                {% if block.settings.bm_popular_solutions_product_slider_main_left_text != blank %}
+                <p class="bm-popular-solutions-product-slider-main-left-text">
+                  {{block.settings.bm_popular_solutions_product_slider_main_left_text}}
+                </p>
+                {% endif %}
+                <div class="bm-popular-solutions-product-left-icon">
+                  {% if block.settings.bm_popular_solutions_product_left_icon_one_img != blank %}
+                  <div class="bm-popular-solutions-product-left-icon-img">
+                    <img 
+                      srcset="{{ block.settings.bm_popular_solutions_product_left_icon_one_img | img_url: '45x' }} 474w,
+                          {{ block.settings.bm_popular_solutions_product_left_icon_one_img | img_url: '90x' }} 768w, 
+                          {{ block.settings.bm_popular_solutions_product_left_icon_one_img | img_url: '50x' }} 900w" 
+                      src="{{ block.settings.bm_popular_solutions_product_left_icon_one_img | img_url: '60x' }}"
+                      sizes=""
+                      alt="{{ block.settings.bm_popular_solutions_product_left_icon_one_img.alt }}" 
+                      height="{{ block.settings.bm_popular_solutions_product_left_icon_one_img.height }}" 
+                      width="{{ block.settings.bm_popular_solutions_product_left_icon_one_img.width }}" 
+                      loading="lazy">
+                    {% comment %} <img loading="lazy" src="{{block.settings.bm_popular_solutions_product_left_icon_one_img | img_url: 'master' }}" alt=""> {% endcomment %}
+                  </div>
+                  {% endif %}
+                  {% if block.settings.bm_popular_solutions_product_left_icon_one_text != blank %}
+                  <p class="bm-popular-solutions-product-left-icon-text">
+                    {{block.settings.bm_popular_solutions_product_left_icon_one_text}}
+                  </p>
+                  {% endif %}
+                </div>
+                <div class="bm-no-margin bm-popular-solutions-product-left-icon">
+                  {% if block.settings.bm_popular_solutions_product_left_icon_two_img != blank %}
+                  <div class="bm-popular-solutions-product-left-icon-img">
+                    <img 
+                      srcset="{{ block.settings.bm_popular_solutions_product_left_icon_two_img | img_url: '45x' }} 474w,
+                          {{ block.settings.bm_popular_solutions_product_left_icon_two_img | img_url: '90x' }} 768w, 
+                          {{ block.settings.bm_popular_solutions_product_left_icon_two_img | img_url: '50x' }} 900w" 
+                      src="{{ block.settings.bm_popular_solutions_product_left_icon_two_img | img_url: '60x' }}"
+                      sizes=""
+                      alt="{{ block.settings.bm_popular_solutions_product_left_icon_two_img.alt }}" 
+                      height="{{ block.settings.bm_popular_solutions_product_left_icon_two_img.height }}" 
+                      width="{{ block.settings.bm_popular_solutions_product_left_icon_two_img.width }}" 
+                      loading="lazy">
+                    {% comment %} <img loading="lazy" src="{{block.settings.bm_popular_solutions_product_left_icon_two_img | img_url: 'master' }}" alt=""> {% endcomment %}
+                  </div>
+                  {% endif %}
+                  {% if block.settings.bm_popular_solutions_product_left_icon_two_text != blank %}
+                  <p class="bm-popular-solutions-product-left-icon-text">
+                    {{block.settings.bm_popular_solutions_product_left_icon_two_text}}
+                  </p>
+                  {% endif %}
+                </div>
+              </div>
+              <div class="bm-popular-solutions-product-slider-main-right">
+                {% if block.settings.bm_popular_solutions_product_slider_main_right_image != blank %}
+                <div class="bm-popular-solutions-product-slider-main-right-image">
+                  <a href="{{product.url}}">
+                    <img 
+                      srcset="{{ block.settings.bm_popular_solutions_product_slider_main_right_image | img_url: '350x' }} 474w,
+                          {{ block.settings.bm_popular_solutions_product_slider_main_right_image | img_url: '585x' }} 768w,
+                          {{ block.settings.bm_popular_solutions_product_slider_main_right_image | img_url: '275x' }} 850w,
+                          {{ block.settings.bm_popular_solutions_product_slider_main_right_image | img_url: '300x' }} 1400w" 
+                      src="{{ block.settings.bm_popular_solutions_product_slider_main_right_image | img_url: 'master' }}"
+                      sizes=""
+                      alt="{{ block.settings.bm_popular_solutions_product_slider_main_right_image.alt }}" 
+                      height="{{ block.settings.bm_popular_solutions_product_slider_main_right_image.height }}" 
+                      width="{{ block.settings.bm_popular_solutions_product_slider_main_right_image.width }}" 
+                      loading="lazy">
+                    {% comment %} <img loading="lazy" src="{{block.settings.bm_popular_solutions_product_slider_main_right_image | img_url: 'master' }}" alt=""> {% endcomment %}
+                  </a>
+                </div>
+                {% endif %}
+              </div>
+            </div>
+              <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+              <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
+              <input type="submit" value="Add to cart" class="bm-popular-solutions-product-atc" />
+          </form>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Popular Solutions Product",
+    "settings": [
+		 {
+            "type": "text",
+            "id": "bm_popular_solutions_product_title",
+            "label": "Heading"
+         }
+	],
+	"blocks": [
+     {
+       "name": "Product",
+       "type": "Testimonial",
+       "settings": [
+		  {
+            "type": "text",
+            "id": "bm_popular_solutions_product_handle",
+            "label": "Product handle"
+         },
+		 {
+            "type": "text",
+            "id": "bm_popular_solutions_product_slider_main_left_title",
+            "label": "Product Name"
+         },
+		 {
+            "type": "textarea",
+            "id": "bm_popular_solutions_product_slider_main_left_text",
+            "label": "Product Description"
+         },
+		 { 
+            "type": "header",
+            "content": "Product Short description one"
+         },
+		 {
+            "type": "image_picker",
+            "id": "bm_popular_solutions_product_left_icon_one_img",
+            "label": "Icon"
+         },
+		 {
+            "type": "textarea",
+            "id": "bm_popular_solutions_product_left_icon_one_text",
+            "label": "Description"
+         },
+		 { 
+            "type": "header",
+            "content": "Product Short description two"
+         },
+		 {
+            "type": "image_picker",
+            "id": "bm_popular_solutions_product_left_icon_two_img",
+            "label": "Icon"
+         },
+		 {
+            "type": "textarea",
+            "id": "bm_popular_solutions_product_left_icon_two_text",
+            "label": "Description"
+         },
+		 {
+            "type": "image_picker",
+            "id": "bm_popular_solutions_product_slider_main_right_image",
+            "label": "Product Image"
+         }
+       ]
+     }
+   ],
+    "presets": [
+      {
+        "name": "Popular Solutions Product",
+        "category": "BM Sections"
+      }
+    ]
+  }
+{% endschema %}
+
+<style> 
+.bm-popular-solutions-product .slick-next {
+  top: 38%;
+}
+  .bm-popular-solutions-product .slick-prev{
+  top: 38%;
+}
+</style>

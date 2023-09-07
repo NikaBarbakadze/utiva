@@ -1,0 +1,63 @@
+<div class="bm-why-product">
+    <div class="bm-why-product-container">
+        <div class="bm-why-product-main">
+            {% for block in section.blocks %}
+            <div class="bm-why-product-content">
+                {% if block.settings.bm_why_product_title != blank %}
+                <h2>{{block.settings.bm_why_product_title }}</h2>
+                {% endif %}
+                <div class="bm-why-product-content-bottom">
+                <div class="bm-why-product-content-img">
+                    {% if block.settings.bm_why_product_img != blank %}
+                    <img src="{{block.settings.bm_why_product_img | img_url:"master"}}"/>
+                    {% endif %}
+                </div>
+                {% if block.settings.bm_why_product_btn_text != blank %}
+                <a class="bm-why-product-btn" href="{{block.settings.bm_why_product_btn_link }}">
+                    {{block.settings.bm_why_product_btn_text }}
+                </a>
+                {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+{% schema %} 
+  {
+    "name": "Why Product Section",
+    "settings": [
+        
+	],
+	"blocks": [
+     {
+       "name": "Text",
+       "type": "text",
+       "settings": [
+            {
+                "type": "text",
+                "id": "bm_why_product_title",
+                "label": "Title"
+            },
+            {
+                "type": "image_picker",
+                "id": "bm_why_product_img",
+                "label": "Image"
+            },
+            {
+                "type": "text",
+                "id": "bm_why_product_btn_text",
+                "label": "Button Text"
+            },
+            {
+                "type": "url",
+                "id": "bm_why_product_btn_link",
+                "label": "Button Link"
+            }
+       ]
+     }
+   ]
+  }
+{% endschema %}

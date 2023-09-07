@@ -1,0 +1,133 @@
+{% if section.settings.bm_information_bar_top == false %}
+<div class="bm-information-bar-top">
+  <div class="page-width" style="background: {{section.settings.bm_information_bar_color}};">
+    <div class="bm-information-bar">
+      {% for block in section.blocks %}
+      <div class="bm-information-bar-block">
+        {% if block.settings.bm_information_block_icon != blank %}
+        <div class="bm-information-block-icon">
+          <img src="{{block.settings.bm_information_block_icon | img_url:'master' }}" />
+        </div>
+        {% endif %}
+        {% if block.settings.bm_information_block_title != blank %}
+        <div class="bm-information-block-text">
+          {{block.settings.bm_information_block_title}}
+          {% if block.settings.bm_information_block_title_span != blank %}
+          <span>{{block.settings.bm_information_block_title_span}}</span>
+          {% endif %}
+        </div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Information Bar",
+	"max_blocks": 3,
+    "settings": [
+         {
+            "type": "checkbox",
+            "id": "bm_information_bar_top",
+            "label": "Hide this section",
+            "default": false
+         },
+		 {
+            "type": "color",
+            "id": "bm_information_bar_color",
+            "label": "Background Color"
+         }
+      
+    ],
+	"blocks": [
+     {
+       "name": "Block",
+       "type": "text",
+       "settings": [
+         {
+           "type": "image_picker",
+           "id": "bm_information_block_icon",
+           "label": "Icon"
+         },
+		 {
+            "type": "text",
+            "id": "bm_information_block_title",
+            "label": "Text"
+         },
+		 {
+            "type": "text",
+            "id": "bm_information_block_title_span",
+            "label": "Span Text"
+         }
+       ]
+     }
+   ]
+  }
+{% endschema %}
+
+<style>
+
+  #shopify-section-bm-information-bar-top .bm-information-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 5px 0;
+  }
+  .bm-information-bar-top-mobile {
+    display: none;
+  }
+
+  .bm-information-bar-block {
+    flex: 33.3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+  }
+  .bm-information-bar-block:last-child {
+    margin-right: 0;
+  }
+  .bm-information-block-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    margin-bottom: 7px;
+  }
+  .bm-information-block-icon img {
+    width: 100%;
+    height: auto;
+  }
+  .bm-information-block-text {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  @media only screen and (max-width: 768px) {
+    div#shopify-section-bm-information-bar-top .bm-information-bar-top {
+      display: none;
+    }
+    .bm-information-bar-top {
+      margin-bottom: 40px;
+    }
+    .bm-information-bar-top-mobile {
+      display: block;
+    }
+    .bm-information-bar-block:last-child {
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+  }
+  @media only screen and (max-width: 480px) {
+    .bm-information-block-text {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+</style>

@@ -1,0 +1,259 @@
+<div class="bm-cart-add-on">
+  <h2 class="bm-cart-add-on-title">
+    Popular Add-Ons
+  </h2>
+  <div class="bm-cart-add-on-main">
+    <div class="bm-cart-add-on-main-block " style="display:none"> 
+      <form method="post" action="/cart/add">
+        {% assign productone = all_products[section.settings.bm_cart_addon_product_handlenone] %}
+        
+        <input type="hidden" name="id" value="{{ productnnone.variants.first.id }}" />
+        <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
+        <!--<input type="submit" value="Add to cart" class="bm-cart-add-on-atc" />-->
+        <button type="button" class="bm-cart-add-on-atc">Add to cart</button>
+      </form>
+    </div>
+    {% if section.settings.bm_enable_addon_product_one == true %}	
+    {% if section.settings.bm_cart_addon_product_handleone !=blank %}
+    <div class="bm-cart-add-on-main-block bm-cart-one-add-no-display"> 
+      <form method="post" action="/cart/add">
+        {% assign productone = all_products[section.settings.bm_cart_addon_product_handleone] %}
+        <div class="bm-cart-add-on-main-block-img">
+         {% if section.settings.bm_cart_addon_product_imageone %}
+          <img src="{{ section.settings.bm_cart_addon_product_imageone | img_url: '282x320' }}" />
+          {% else %}
+          <img src="{{ productone.featured_image | img_url: '282x320' }}" />
+          {% endif %}
+        </div>
+        <div class="bm-cart-add-on-main-block-name">
+          {{productone.title}}
+        </div>
+        <div class="bm-cart-add-on-main-block-price">
+          {{productone.price | money}}
+        </div>
+        <input type="hidden" name="id" value="{{ productone.variants.first.id }}" />
+        <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
+        <!--<input type="submit" value="Add to cart" class="bm-cart-add-on-atc" />-->
+        <button type="button" class="bm-cart-add-on-atc" {% unless productone.available %} disabled="disabled"{% endunless %}>
+          {% if productone.available %}
+          Add to cart
+          {% else %}
+          Coming Soon
+          {% endif %}
+        </button>
+      </form>
+    </div>
+    {% endif %}	
+    {% endif %}	
+    {% if section.settings.bm_enable_addon_product_two == true %}	
+    {% if section.settings.bm_cart_addon_product_handletwo !=blank %}
+    <div class="bm-cart-add-on-main-block bm-cart-two-add-no-display"> 
+      <form method="post" action="/cart/add">
+        {% assign producttwo = all_products[section.settings.bm_cart_addon_product_handletwo] %}
+        <div class="bm-cart-add-on-main-block-img">
+         {% if section.settings.bm_cart_addon_product_imagetwo %}
+          <img src="{{ section.settings.bm_cart_addon_product_imagetwo | img_url: '282x320' }}" />
+          {% else %}
+          <img src="{{ producttwo.featured_image | img_url: '282x320' }}" />
+          {% endif %}
+        </div>
+        <div class="bm-cart-add-on-main-block-name">
+          {{producttwo.title}}
+        </div>
+        <div class="bm-cart-add-on-main-block-price">
+          {{producttwo.price | money}}
+        </div>
+        <input type="hidden" name="id" value="{{ producttwo.variants.first.id }}" />
+        <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
+        <!--<input type="submit" value="Add to cart" class="bm-cart-add-on-atc" />-->
+        <button type="button" class="bm-cart-add-on-atc" {% unless producttwo.available %} disabled="disabled"{% endunless %}>
+          {% if producttwo.available %}
+          Add to cart
+          {% else %}
+          Coming Soon
+          {% endif %}
+        </button>
+      </form>
+    </div>
+    {% endif %}	
+    {% endif %}	
+    {% if section.settings.bm_enable_addon_product_three == true %}	
+    {% if section.settings.bm_cart_addon_product_handlethree !=blank %}
+    <div class="bm-cart-add-on-main-block bm-cart-three-add-no-display "> 
+      <form method="post" action="/cart/add">
+        {% assign productthree = all_products[section.settings.bm_cart_addon_product_handlethree] %}
+        <div class="bm-cart-add-on-main-block-img">
+         {% if section.settings.bm_cart_addon_product_imagethree %}
+          <img src="{{ section.settings.bm_cart_addon_product_imagethree | img_url: '282x320' }}" />
+          {% else %}
+          <img src="{{ productthree.featured_image | img_url: '282x320' }}" />
+          {% endif %}
+        </div>
+        <div class="bm-cart-add-on-main-block-name">
+          {{productthree.title}}
+        </div>
+        <div class="bm-cart-add-on-main-block-price">
+          {{productthree.price | money}}
+        </div>
+        <input type="hidden" name="id" value="{{ productthree.variants.first.id }}" />
+        <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
+        <!--<input type="submit" value="Add to cart" class="bm-cart-add-on-atc" />-->
+        <button type="button" class="bm-cart-add-on-atc" {% unless productthree.available %} disabled="disabled"{% endunless %}>
+          {% if productthree.available %}
+          Add to cart
+          {% else %}
+          Coming Soon
+          {% endif %}
+        </button>
+      </form>
+    </div>
+    {% endif %}	
+    {% endif %}	
+    {% if section.settings.bm_enable_addon_product_four == true %}	
+    {% if section.settings.bm_cart_addon_product_handlefour != blank %}
+    <div class="bm-cart-add-on-main-block bm-cart-four-add-no-display "> 
+      <form method="post" action="/cart/add">
+        {% assign productfour = all_products[section.settings.bm_cart_addon_product_handlefour] %}
+        <div class="bm-cart-add-on-main-block-img">
+         {% if section.settings.bm_cart_addon_product_imagefour %}
+          <img src="{{ section.settings.bm_cart_addon_product_imagefour | img_url: '282x320' }}" />
+          {% else %}
+          <img src="{{ productfour.featured_image | img_url: '282x320' }}" />
+          {% endif %}
+        </div>
+        <div class="bm-cart-add-on-main-block-name">
+          {{productfour.title}}
+        </div>
+        <div class="bm-cart-add-on-main-block-price">
+          {{productfour.price | money}}
+        </div>
+        <input type="hidden" name="id" value="{{ productfour.variants.first.id }}" />
+        <input type="hidden" min="1" type="number" id="quantity" name="quantity" value="1"/>
+        <!--<input type="submit" value="Add to cart" class="bm-cart-add-on-atc" />-->
+        <button type="button" class="bm-cart-add-on-atc" {% unless productfour.available %} disabled="disabled"{% endunless %}>
+          {% if productfour.available %}
+          Add to cart
+          {% else %}
+          Coming Soon
+          {% endif %}
+        </button>
+      </form>
+    </div>
+    {% endif %}	
+    {% endif %}
+  </div>
+</div>
+{% for item in cart.items %}
+<style>
+  {% if item.product.handle == productone.handle %}
+  .bm-cart-one-add-no-display{
+    display:none;
+  }
+  {% endif %}
+  {% if item.product.handle == producttwo.handle %}
+  .bm-cart-two-add-no-display{
+    display:none;
+  }
+  {% endif%}
+  {% if item.product.handle == productthree.handle %}
+  .bm-cart-three-add-no-display{
+    display:none;
+  }
+  {% endif%}
+  {% if item.product.handle == productfour.handle %}
+  .bm-cart-four-add-no-display{
+    display:none;
+  }
+  {% endif%}
+</style>
+{% endfor %}
+{% schema %}
+  {
+    "name": "Popular Add-Ons",
+    "settings": [
+		{
+			"type": "header",
+			"content": "Product One"
+		},
+		{
+            "type": "checkbox",
+            "id": "bm_enable_addon_product_one",
+            "label": "Enable Product One"
+         },
+		{
+            "type": "product",
+            "id": "bm_cart_addon_product_handleone",
+            "label": "Product handle"
+         },
+		 {
+            "type": "image_picker",
+            "id": "bm_cart_addon_product_imageone",
+            "label": "Product Image"
+         },
+		 {
+			"type": "header",
+			"content": "Product Two"
+		},
+		{
+            "type": "checkbox",
+            "id": "bm_enable_addon_product_two",
+            "label": "Enable Product Two"
+         },
+		{
+            "type": "product",
+            "id": "bm_cart_addon_product_handletwo",
+            "label": "Product handle"
+         },
+		 {
+            "type": "image_picker",
+            "id": "bm_cart_addon_product_imagetwo",
+            "label": "Product Image"
+         },
+		 {
+			"type": "header",
+			"content": "Product Three"
+		},
+		{
+            "type": "checkbox",
+            "id": "bm_enable_addon_product_three",
+            "label": "Enable Product Three"
+         },
+		{
+            "type": "product",
+            "id": "bm_cart_addon_product_handlethree",
+            "label": "Product handle"
+         },
+		 {
+            "type": "image_picker",
+            "id": "bm_cart_addon_product_imagethree",
+            "label": "Product Image"
+         },
+		 {
+			"type": "header",
+			"content": "Product Four"
+		},
+		{
+            "type": "checkbox",
+            "id": "bm_enable_addon_product_four",
+            "label": "Enable Product Four"
+         },
+		{
+            "type": "product",
+            "id": "bm_cart_addon_product_handlefour",
+            "label": "Product handle"
+         },
+		 {
+            "type": "image_picker",
+            "id": "bm_cart_addon_product_imagefour",
+            "label": "Product Image"
+         }
+
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

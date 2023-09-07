@@ -1,0 +1,85 @@
+<div class="bm-doctors-information-new">
+  <div class="page-width">
+    <div class="bm-doctors-information-main">
+      {% if section.settings.bm_doctors_information_title != blank %}
+      <h2 class="bm-doctors-information-title">
+        {{section.settings.bm_doctors_information_title}}
+      </h2>
+      {% endif %}
+      <div class="bm-doctors-information-slider">
+        {% for block in section.blocks %}
+        <div> 
+
+          <div class="bm-doctors-information-slider-main">
+            <div class="bm-doctors-information-slider-main-content">
+              <div class="bm-doctors-information-slider-main-img">
+                {% if block.settings.bm_doctors_information_slider_main_img != blank %}
+                <div class="bm-doctors-information-slider-img">
+                  <img loading="lazy" src="{{block.settings.bm_doctors_information_slider_main_img | img_url: 'master' }}" alt="">
+                </div>
+                {% endif %}
+                {% if block.settings.bm_doctors_information_slider_main_title != blank %}
+                <h2 class="bm-doctors-information-slider-main-name bm-doctors-information-slider-main-name-moba">
+                  {{block.settings.bm_doctors_information_slider_main_title}}
+                </h2>
+                {% endif %}
+              </div>
+              <div class="bm-doctors-information-slider-contentarea">
+                {% if block.settings.bm_doctors_information_slider_main_text != blank %}
+                <p class="bm-doctors-information-slider-main-text">
+                  {{block.settings.bm_doctors_information_slider_main_text}}
+                </p>
+                {% endif %}
+
+                {% if block.settings.bm_doctors_information_slider_main_title != blank %}
+                <h2 class="bm-doctors-information-slider-main-name bm-doctors-information-slider-main-name-desktop">
+                  {{block.settings.bm_doctors_information_slider_main_title}}
+                </h2>
+                {% endif %}
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Doctors Information",
+    "settings": [
+      {
+        "type": "text",
+        "id": "bm_doctors_information_title",
+        "label": "Heading"
+      }
+	],
+	"blocks": [
+     {
+       "name": "information",
+       "type": "information",
+       "settings": [
+		 { 
+            "type": "image_picker",
+            "id": "bm_doctors_information_slider_main_img",
+            "label": "Doctor Image"
+         },
+		 {
+            "type": "textarea",
+            "id": "bm_doctors_information_slider_main_text",
+            "label": "information Text"
+         },
+		 {
+            "type": "text",
+            "id": "bm_doctors_information_slider_main_title",
+            "label": "Doctor name"
+         }
+       ]
+     }
+   ]
+  }
+{% endschema %}
+

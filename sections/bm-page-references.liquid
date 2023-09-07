@@ -1,0 +1,67 @@
+<div class="bm-page-references">
+  <div class="page-width">
+    <div class="bm-page-references-main">
+      <div class="bm-page-references-acordian">
+        <div class="bm-page-references-content">
+          {% if section.settings.bm_reference_accordian_title != blank  %}
+          <h2 class="bm-references-acordian-title">{{section.settings.bm_reference_accordian_title}}</h2>
+          {% endif %}
+          <div class="bm-references-acordian-description">
+            {% for block in section.blocks %}
+            <div class="bm-references-content">
+              {% if block.settings.bm_reference_accordian_description != blank  %}
+              <p>{{block.settings.bm_reference_accordian_description}}</p>
+              {% endif %}
+              {% if block.settings.bm_reference_text != blank  %}
+              <a href="{{block.settings.bm_reference_link}}" target="_blank">{{block.settings.bm_reference_text}}</a>
+              {% endif %}
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Page References",
+  "settings": [
+      {
+        "type": "text",
+        "id": "bm_reference_accordian_title",
+        "label": "Title"
+      }
+   ],
+   "blocks": [
+       {
+        "name": "content",
+        "type": "content",
+          "settings": [
+            {
+              "type": "textarea",
+              "id": "bm_reference_accordian_description",
+              "label": "Description"
+            },
+            {
+              "type": "text",
+              "id": "bm_reference_text",
+              "label": "Button Text"
+            },
+			{
+              "type": "url",
+              "id": "bm_reference_link",
+              "label": "Button Link"
+            }
+          ]
+        }
+    ],
+    "presets": [
+      {
+        "name": "Page References",
+        "category": "Bm Page Sections"
+      }
+    ]
+}
+{% endschema %}

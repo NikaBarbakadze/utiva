@@ -1,0 +1,78 @@
+<div class="bm-why-UTI-guide">
+	<div class="page-width bm-why-UTI-guide-container">
+		<div class="bm-why-UTI-guide-main">
+          {% for block in section.blocks %}
+			<div class="bm-why-UTI-guide-main-block">
+              {% if block.settings.bm_UTI_guide_main_block_image != blank %}
+				<div class="bm-why-UTI-guide-main-block-image">
+					<img loading="lazy" src="{{block.settings.bm_UTI_guide_main_block_image | img_url:'master' }}" alt="">
+				</div>
+              {% endif %}
+              {% if block.settings.bm_UTI_guide_main_block_title != blank %}
+				<h2 class="bm-why-UTI-guide-main-block-title">
+              		{{block.settings.bm_UTI_guide_main_block_title}}
+                </h2>
+              {% endif %}
+              {% if block.settings.bm_UTI_guide_main_block_description != blank %}
+				<p class="bm-why-UTI-guide-main-block-description">
+              	    {{block.settings.bm_UTI_guide_main_block_description}}
+              	</p>
+              {% endif %}
+              {% if block.settings.bm_UTI_guide_main_block_button_text != blank %}
+				<div class="bm-why-UTI-guide-main-block-button">
+					<a href="{{block.settings.bm_UTI_guide_main_block_button_link}}" title="">
+                  		{{block.settings.bm_UTI_guide_main_block_button_text}}
+                  	</a>
+				</div>
+              {% endif %}
+			</div>
+          {% endfor %}
+		</div>
+	</div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Why UTI Guide",
+    "settings": [
+
+	],
+	"blocks": [
+     {
+       "name": "UTI Guide Details",
+       "type": "Details",
+       "settings": [
+		 {
+           "type": "image_picker",
+           "id": "bm_UTI_guide_main_block_image",
+           "label": "Image",
+			"info": "Image size : 268x302px"
+         },
+		 {
+            "type": "text",
+            "id": "bm_UTI_guide_main_block_title",
+            "label": "Title"
+         },
+		 {
+            "type": "textarea",
+            "id": "bm_UTI_guide_main_block_description",
+            "label": "Designation"
+         },
+		 {
+            "type": "text",
+            "id": "bm_UTI_guide_main_block_button_text",
+            "label": "Button text"
+         },
+		 {
+            "type": "url",
+            "id": "bm_UTI_guide_main_block_button_link",
+            "label": "Button Link"
+         }
+       ]
+     }
+   ]
+  }
+{% endschema %}
+
+

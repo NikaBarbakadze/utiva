@@ -1,0 +1,40 @@
+<div class="bm-referal-container-hero">
+   <div class="main-container-referal-hero">
+       <div class="bm-hero-left">
+        <div class=bm-left-hero-referal>
+           <div class="bm-referal-heading"><h3>{{ section.settings.bm_referal_heading }}</h3></div>
+           <div class="bm-referal-para"><p>{{ section.settings.bm_referal_para }}</p></div>
+        </div>
+       </div>
+      <div class="bm-hero-right">
+         <div class="bm-referal-hero-image"><img src="{{section.settings.bm_referal_image | img_url:'master' }}" /></div>
+      </div>  
+  </div>
+</div>
+
+
+
+
+{% schema %}
+
+  {
+    "name": "Bm Referal Friend",
+    "settings": [
+      {
+        "type": "text",
+        "id": "bm_referal_heading",
+        "label": "Heading"
+      },
+      {
+        "type": "richtext",
+        "id": "bm_referal_para",
+        "label": "Paragraph"
+      },
+      {
+        "type": "image_picker",
+        "id": "bm_referal_image",
+        "label": "Image"
+      }
+    ]
+  }
+{% endschema %}

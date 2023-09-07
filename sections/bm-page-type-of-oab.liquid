@@ -1,0 +1,96 @@
+<div class="bm-page-type-of-oab">
+  <div class="page-width">
+    <div class="bm-page-type-of-oab-main">
+      {% if section.settings.bm_contents_text != blank %}
+      <div class="bm-contents-text-top">
+        <strong class="bm-contents-text">{{section.settings.bm_contents_text}}</strong>
+      </div>
+      {% endif %}
+      {% if section.settings.bm_type_of_oab_title != blank %}
+      <h2 class="bm-page-type-of-oab-title">{{section.settings.bm_type_of_oab_title}}</h2>
+      {% endif %}
+      <div class="bm-page-type-of-oab-content" style="max-width:{{section.settings.bm_type_of_oab_width}}px;" >
+        {% for block in section.blocks %}
+        <div class="bm-page-type-of-oab-block" style="justify-content:{{section.settings.bm_type_of_oab_position}};">
+          {% if block.settings.bm_type_oab_title != blank %}
+          <h2>{{block.settings.bm_type_oab_title }}</h2>
+          {% endif %}
+          {% if block.settings.bm_type_oab_description != blank %}
+          <p>{{block.settings.bm_type_oab_description}}</p>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Page Type",
+    "settings": [
+        {
+          "type": "text",
+          "id": "bm_contents_text",
+          "label": "Contents Text"
+        },
+        {
+           "type": "text",
+           "id": "bm_type_of_oab_title",
+           "label": "Heading"
+        },
+        {
+            "type": "range",
+            "id": "bm_type_of_oab_width",
+            "min":  450,
+            "max":  700,
+            "step":  10,
+            "unit": "px",
+            "label": "Container Max Width",
+            "default":  680
+        },
+        {
+          "type": "select",
+          "id": "bm_type_of_oab_position",
+          "label": "Item position",
+          "default": "left",
+          "options": [
+              {
+                "value": "left",
+                "label": "Left"
+              },
+              {
+                "value": "right",
+                "label": "Right"
+              }
+          ]
+        }
+	],
+  "blocks": [
+    {
+      "type": "block",
+      "name": "Content",
+      "settings": [
+  		{
+           "type": "text",
+           "id": "bm_type_oab_title",
+           "label": "Title"
+        },
+        {
+           "type": "textarea",
+           "id": "bm_type_oab_description",
+           "label": "Description"
+        }
+      ]
+    }
+  ],
+    "presets": [
+      {
+        "name": "Page Type",
+        "category": "Bm Page Sections"
+      }
+    ]
+    
+  }
+{% endschema %}	

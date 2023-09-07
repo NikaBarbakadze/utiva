@@ -1,0 +1,201 @@
+<div class="bm-helping-people">
+  <div class="page-width">
+    {% if section.settings.bm_helping_people_main_title != blank %}
+    <h2 class="bm-helping-people-main-title">
+      {{section.settings.bm_helping_people_main_title}}
+    </h2>
+    {% endif %}
+
+    <div class="bm-helping-people-top">
+      {% if section.settings.bm_helping_menu_one_text != blank %}
+      <div class="bm-health-block">
+        <a  class="bm-health-block-hover-one" href="{{section.settings.bm_helping_menu_one_link}}">
+          <div class="bm-health-block-item">
+            {{section.settings.bm_helping_menu_one_text}}
+          </div>
+        </a>
+      </div>
+      {% endif %}
+
+      {% if section.settings.bm_helping_menu_two_text != blank %}
+      <div class="bm-health-block ">
+        <a class="bm-health-block-hover-two" href="{{section.settings.bm_helping_menu_two_link}}">
+          <div class="bm-health-block-item">
+            {{section.settings.bm_helping_menu_two_text}}
+          </div>
+        </a>
+      </div>
+      {% endif %}
+      {% if section.settings.bm_helping_menu_three_text != blank %}
+      <div class="bm-health-block ">
+        <a class="bm-health-block-hover-three" href="{{section.settings.bm_helping_menu_three_link}}">
+          <div class="bm-health-block-item">
+            {{section.settings.bm_helping_menu_three_text}}
+          </div>
+        </a>
+      </div>
+      {% endif %}
+      {% if section.settings.bm_helping_menu_four_text != blank %}
+      <div class="bm-health-block ">
+        <a  class="bm-health-block-hover-four" {% if section.settings.bm_helping_menu_four_link != blank %}href="{{section.settings.bm_helping_menu_four_link}}"{% endif %}>
+          <div class="bm-health-block-item">
+            {{section.settings.bm_helping_menu_four_text}}
+            {% if section.settings.bm_helping_subtitle != blank %}
+            <p class="bm-helping-people-subtitle">{{section.settings.bm_helping_subtitle}}</p>
+            {% endif %}
+          </div>
+        </a>
+      </div>
+      {% endif %}
+    </div>
+
+
+    <div class="bm-helping-people-middle">
+      <div class="bm-helping-middle-img">
+        {% if section.settings.bm_helping_middle_img != blank %}
+        <img 
+          srcset="{{ section.settings.bm_helping_middle_img | img_url: '415x' }} 474w,
+              {{ section.settings.bm_helping_middle_img | img_url: '770x' }} 768w,
+              {{ section.settings.bm_helping_middle_img | img_url: '380x' }} 900w,
+              {{ section.settings.bm_helping_middle_img | img_url: '510xx' }} 1200" 
+          src="{{ section.settings.bm_helping_middle_img | img_url: '550x' }}"
+          sizes=""
+          alt="{{ section.settings.bm_helping_middle_img.alt }}" 
+          height="{{ section.settings.bm_helping_middle_img.height }}" 
+          width="{{ section.settings.bm_helping_middle_img.width }}" 
+          loading="lazy">
+        {% comment %} <img loading="lazy" src="{{section.settings.bm_helping_middle_img |img_url:'master'}}" alt=""/> {% endcomment %}
+        {% endif %}
+      </div>
+      {% if section.settings.bm_helping_middle_pragraph != blank %}
+      <p>{{section.settings.bm_helping_middle_pragraph}}</p>
+      {% endif %}
+    </div>
+
+
+
+    <div class="bm-helping-people-main">
+      {% for block in section.blocks %}
+      <div class="bm-helping-people-main-block">
+        <div class="bm-helping-people-main-left">
+          {% if block.settings.bm_helping_people_block_image != blank %}
+          <div class="bm-helping-people-main-block-image">
+            <img loading="lazy" src="{{block.settings.bm_helping_people_block_image | img_url:'80x' }}" alt="">
+          </div>
+          {% endif %}
+        </div>
+        {% if block.settings.bm_helping_people_block_title != blank %}
+        <p class="bm-helping-people-main-block-title">
+          {{block.settings.bm_helping_people_block_title}}
+        </p>
+        {% endif %}
+        {% if block.settings.bm_helping_people_block_description != blank %}
+        <p class="bm-helping-people-main-block-description">
+          {{block.settings.bm_helping_people_block_description}}
+        </p>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+</div>
+
+{% schema %}
+  {
+    "name": "Helping People",
+    "settings": [
+        {
+          "type": "text",
+          "id": "bm_helping_people_main_title",
+          "label": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "bm_helping_menu_one_text",
+          "label": "One Text"
+        },
+        {
+          "type": "url",
+          "id": "bm_helping_menu_one_link",
+          "label": "Link"
+        },
+        {
+          "type": "text",
+          "id": "bm_helping_menu_two_text",
+          "label": "Two Text"
+        },
+        {
+          "type": "url",
+          "id": "bm_helping_menu_two_link",
+          "label": "Link"
+        },
+        {
+          "type": "text",
+          "id": "bm_helping_menu_three_text",
+          "label": "Three Text"
+        },
+        {
+          "type": "url",
+          "id": "bm_helping_menu_three_link",
+          "label": "Link"
+        },
+        {
+          "type": "text",
+          "id": "bm_helping_menu_four_text",
+          "label": "Four Text"
+        },
+        {
+          "type": "url",
+          "id": "bm_helping_menu_four_link",
+          "label": "Link"
+        },
+        {
+          "type": "text",
+          "id": "bm_helping_subtitle",
+          "label": "Subtitle"
+        },
+        {
+          "type": "image_picker",
+          "id": "bm_helping_middle_img",
+          "label": "Image"
+        },
+        {
+          "type": "textarea",
+          "id": "bm_helping_middle_pragraph",
+          "label": "Description"
+        }
+	
+	],
+	"blocks": [
+     {
+       "name": "Details",
+       "type": "Details",
+       "settings": [
+		 {
+            "type": "image_picker",
+            "id": "bm_helping_people_block_image",
+            "label": "Image"
+         },
+		 {
+            "type": "text",
+            "id": "bm_helping_people_block_title",
+            "label": "Title"
+         },
+		 {
+            "type": "textarea",
+            "id": "bm_helping_people_block_description",
+            "label": "Description"
+         }
+       ]
+     }
+   ],
+    "presets": [
+      {
+        "name": "Helping People",
+        "category": "BM Sections"
+      }
+    ]
+  }
+{% endschema %}
+

@@ -1,0 +1,55 @@
+<div class="bm-collection-feature-image">
+  <div class="page-width">
+    <div class="bm-collection-feature-image-main">
+      <div class="bm-collection-header-quiz">
+        {% if section.settings.bm_collection_quiz_header != blank %}
+        <h2>{{section.settings.bm_collection_quiz_header}}</h2>
+        {% endif %}
+        <div class="bm-collection-header-quiz-btn">
+          {% if section.settings.bm_collection_quiz_btn_text != blank %}
+          <a href="{{section.settings.bm_collection_quiz_btn_url}}">
+            {{section.settings.bm_collection_quiz_btn_text}}
+          </a>
+          {% endif %}
+        </div>
+      </div>
+      <div class="bm-collection-feature-image-bottom">
+        
+        <div class="bm-bottom-feature-image">
+          <img src="{{collection.featured_image | img_url:"master"}}" alt=""/>
+        </div>
+
+        <div class="bm-bottom-feature-image-content">
+         {{collection.description}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Bm Feature Image",
+    "settings": [
+
+        {
+          "type": "text",
+          "id": "bm_collection_quiz_header",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "bm_collection_quiz_btn_text",
+          "label": "Button text"
+        },
+        {
+          "type": "url",
+          "id": "bm_collection_quiz_btn_url",
+          "label": "Link"
+        }
+
+  	]
+  }
+{% endschema %}
+

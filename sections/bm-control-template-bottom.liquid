@@ -1,0 +1,48 @@
+{% include 'bm-product-bottom-template',
+  section_id: product.id,
+
+  product_shipping_callout: '',
+  product_image_size: 'medium',
+  product_image_type: 'slider',
+  product_zoom_enable: true,
+  variant_type: 'button',
+  variant_labels_enable: false,
+  sku_enable: false,
+  quantity_enable: true,
+  inventory_enable: false,
+  inventory_threshold: 10,
+  inventory_transfers_enable: false,
+  enable_payment_button: section.settings.enable_payment_button,
+  social_enable: false,
+  video_looping: true,
+  video_style: 'muted'
+%}
+
+{% schema %}
+  {
+    "name": "Product Bottom",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "bm_hide_product_bottom_Thums",
+        "label": "Hide Image Thumbnail",
+        "default": true
+      },
+	  {
+        "type": "checkbox",
+        "id": "bm_enable_product_reviews",
+        "label": "Enable Product Reviews",
+        "default": true
+      },
+	  {
+        "type": "checkbox",
+        "id": "enable_payment_button",
+        "label": "Show dynamic checkout button",
+        "info": "Lets customers check out directly using a familiar payment method. [Learn more](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "default": true
+      }
+    ]
+  }
+{% endschema %}
+
+

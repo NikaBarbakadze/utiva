@@ -1,0 +1,65 @@
+<div class="bm-why-we-created-main-container">
+  <div class="bm-why-we-created-main page-width">
+    <div class="bm-why-we-created-heading"><h1>{{ section.settings.bm_why_we_created_heading }}</h1></div>
+    <div class="bm-why-we-created-paragraph">{{ section.settings.bm_why_we_created_paragraph }}</div>
+  </div>
+</div>
+
+
+
+
+<style>
+  
+  html body .bm-why-we-created-heading {
+    display: block;
+    text-align: center;
+    padding-bottom:20px;
+  }
+  
+  html body .bm-why-we-created-heading h1 {
+    font-family:'Nunito';
+    font-weight:bolder;
+    font-size:45px;
+    color:#d9202c;
+  }
+  
+  html body .bm-why-we-created-paragraph {
+    font-family: 'Kometa-Book';
+    font-size:17.35px;
+    display: block;
+    text-align: center;
+    margin:auto;
+    max-width:800px;
+    padding-bottom:25px;
+  }
+  
+  @media only screen and (max-width: 768px){
+    html body .page-width {
+      padding: 10px 10px !important;
+
+    }
+  }
+
+</style>
+
+
+
+
+{% schema %}
+  {
+    "name": "Why We Created",
+    "settings": [
+      {
+        "type": "text",
+        "id": "bm_why_we_created_heading",
+        "label": "Heading"
+      },
+      {
+        "type": "richtext",
+        "id": "bm_why_we_created_paragraph",
+        "label": "Paragraph"
+      }
+    ]
+  }
+{% endschema %}
+

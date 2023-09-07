@@ -1,0 +1,122 @@
+<div class="bm-page-hero">
+  <div class="page-width bm-mobile-page-width">
+    <div class="bm-page-hero-main">
+      <div class="bm-page-hero-left">
+        <div class="bm-right-mobile-bg"> 
+          <img src="{{section.settings.bm_page_hero_moba_bg_img | img_url: "master"}}" alt="">
+        </div>
+        {% if section.settings.bm_page_left_title != blank %}
+        <h2>{{section.settings.bm_page_left_title}}</h2>
+        {% endif %}
+      </div>
+      <div class="bm-page-hero-right">
+        <div class="bm-page-hero-right-content">
+          <div class="bm-right-content-top">
+            {% if section.settings.bm_page_right_title != blank %}
+            <h2>{{section.settings.bm_page_right_title}}</h2>
+            {% endif %}
+            {% for block in section.blocks %}
+            <div class="bm-right-top-content">
+              <p>{{block.settings.bm_right_top_content}}</p>
+            </div>
+            {% endfor %}
+          </div>
+          {% if section.settings.bm_enable_social_share == true %}
+          <div class="bm-right-content-bottom">
+            {% if section.settings.bm_page_bottom_title != blank %}
+            <h2>{{section.settings.bm_page_bottom_title}}</h2>
+            {% endif %}
+            <div class="bm_page_bottom-item">
+              <a href="https://www.facebook.com/sharer.php?u=https://www.utivahealth.com{{page.url}}" target="_blank">
+                <img src="https://cdn.shopify.com/s/files/1/0152/2181/7444/files/fb.png?v=1656327844" alt="">
+              </a>
+            </div>
+            <div class="bm_page_bottom-item">
+              <a href="https://twitter.com/share?text={{page.title}}&url=https://www.utivahealth.com{{page.url}}" target="_blank">
+                <img src="https://cdn.shopify.com/s/files/1/0152/2181/7444/files/twitter.png?v=1656328057" alt="">
+              </a>
+            </div>
+            <div class="bm_page_bottom-item">
+              <a href="mailto:?body=https://www.utivahealth.com{{page.url}}">
+                <img src="https://cdn.shopify.com/s/files/1/0152/2181/7444/files/mail.png?v=1656328120" alt="">
+              </a>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+	
+.bm-page-hero {
+    background-image: url({{section.settings.bm_page_hero_bg_img | img_url: "master"}});
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+</style>
+
+{% schema %}
+  {
+    "name": "Page Hero",
+    "settings": [
+        {
+          "type": "image_picker",
+          "id": "bm_page_hero_bg_img",
+          "label": "Desktop Background Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "bm_page_hero_moba_bg_img",
+          "label": "Mobile Background Image"
+        },
+        {
+          "type": "text",
+          "id": "bm_page_left_title",
+          "label": "Hero Title"
+        },
+        {
+          "type": "text",
+          "id": "bm_page_right_title",
+          "label": "Contents Title"
+        },
+        {
+          "type": "checkbox",
+          "id": "bm_enable_social_share",
+          "label": "Enable Social share",
+		  "default": true
+        },
+        {
+          "type": "text",
+          "id": "bm_page_bottom_title",
+          "label": "Share Title"
+        }
+       
+	],
+	"blocks": [
+     {
+       "name": "content",
+       "type": "text",
+       "settings": [
+		 
+		     {
+            "type": "text",
+            "id": "bm_right_top_content",
+            "label": "Text"
+         }
+       ]
+     }
+   ],
+    "presets": [
+      {
+        "name": "Page Hero",
+        "category": "BM Page Sections"
+      }
+    ]
+    
+  }
+{% endschema %}	

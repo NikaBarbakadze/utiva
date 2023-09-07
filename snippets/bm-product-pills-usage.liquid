@@ -1,0 +1,112 @@
+<div class="bm-product-pills-usage">
+  <div class="bm-product-pills-usage-top">
+    <h2 class="bm-product-pills-usage-title">{{product.metafields.bm_pdp.cranberry_pac_usage_title_one}}
+    </h2>
+    {% assign bm_pills_usage_block_content = product.metafields.bm_pdp.cranb_usage_description_two | split: '***' %}
+    {% for item in bm_pills_usage_block_content %}
+      <div class="bm-product-pills-usage-block bm-product-pills-usage-block-top">
+        <div class="bm-product-pills-usage-block-details">
+          {% assign bm_pills_usage_block_details = item | split: '###' %}
+          <h2 class="bm-product-pills-usage-block-title">{{bm_pills_usage_block_details.first}}
+          </h2>
+          <p class="bm-product-pills-usage-block-description">
+            {{bm_pills_usage_block_details.last}}
+          </p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  <div class="bm-product-pills-usage-bottom">
+    {% assign bm_pills_usage_block_content_bottom = product.metafields.bm_pdp.cranb_usage_description_bottom | split: '***' %}
+    {% for item in bm_pills_usage_block_content_bottom %}
+      <div class="bm-product-pills-usage-block">
+        <div class="bm-product-pills-usage-block-details">
+          {% assign bm_pills_usage_block_bottom_details = item | split: '###' %}
+          <h2 class="bm-product-pills-usage-title">{{bm_pills_usage_block_bottom_details.first}}
+          </h2>
+          <p class="bm-product-pills-usage-block-description bm-product-pills-usage-block-description-bottom">
+            {{bm_pills_usage_block_bottom_details.last}}
+          </p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+
+
+<style>
+  .bm-product-pills-usage {
+    padding: 50px 40px 0;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  .bm-product-pills-usage-block {
+    margin-bottom: 15px;
+  }
+  .bm-product-pills-usage-top {
+    margin-bottom: 15px;
+  }
+  .bm-product-pills-usage-block.bm-product-pills-usage-block-top {
+    margin-left: 30px;
+  }
+  .bm-product-pills-usage-block {
+    display: block !important;
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: left;
+    margin-left: 0 !important;
+    }
+  h2.bm-product-pills-usage-title {
+    font-family: 'Nunito';
+    font-style: normal;
+    letter-spacing: 0.02em;
+    margin-bottom: 5px;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 22px;
+    color: #253C51;
+    text-align: left;
+  }
+  .bm-product-pills-usage-bottom h2.bm-product-pills-usage-title {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 38px;
+    letter-spacing: 0.02em;
+    color: #253C51;
+    margin-bottom: 0;
+  }
+  .bm-product-pills-usage-bottom .bm-product-pills-usage-block {
+    margin-bottom: 20px;
+  }
+  .bm-product-pills-usage-block-description-bottom {
+    margin-left: 30px;
+  }
+
+  h2.bm-product-pills-usage-block-title {
+        font-family: 'Nunito';
+    font-style: normal;
+    font-weight: bold;
+    margin: 0 0 5px;
+    font-size: 20px;
+    line-height: 22px;
+    color: #253C51;
+    margin-top: 20px;
+  }
+  p.bm-product-pills-usage-block-description {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #253C51;
+    margin-left: 0;
+  }
+  @media only screen and (max-width: 1024px) {
+    .bm-product-pills-usage {
+      max-width: 768px;
+    }
+  }
+</style>

@@ -1,0 +1,51 @@
+{{ 'header-mobile.css' | asset_url | stylesheet_tag }}
+{{ 'header-mobile.js' | asset_url | script_tag }}
+
+<div class='header-mob'>
+	<div class='header-mob__info'>
+		<button class='data-menu-button' id='menuButton'>
+			<div class='menu-btn__icon-burger--open'>
+				{% render 'icon', icon: 'burger-32' %}
+			</div>
+
+			<div class='menu-btn__icon-burger--close'>
+				{% render 'icon', icon: 'close-32' %}
+			</div>
+		</button>
+		<div class='header-mob__info--logo'>
+			<a href='{{ shop.url }}'>
+				{% if logo != blank %}
+					{{
+						logo
+						| image_url: width: logo.width
+						| image_tag:
+							loading: 'lazy',
+							width: logo.width,
+							height: logo.height,
+							sizes: '10vw',
+							class: 'header-mob__info--logo-img',
+							widths: '200'
+					}}
+
+				{% else %}
+					<a href='{{ shop.url }}'> {{ shop.name }}</a>
+				{% endif %}
+			</a>
+		</div>
+
+		<div class='header-mob__info--icons'>
+			{% render 'icon', icon: 'account-32' %}
+			{% render 'icon', icon: 'cart-32' %}
+		</div>
+
+		{% render 'header-mob-drawer',
+			logo: logo,
+			menu: mob_menu,
+			mega_menu_blocks: mega_menu_blocks,
+			toggle: toggle,
+			toggle_url: toggle_url,
+			toggle_text_before: toggle_text_before,
+			toggle_text_after: toggle_text_after
+		%}
+	</div>
+</div>

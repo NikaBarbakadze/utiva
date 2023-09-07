@@ -1,0 +1,134 @@
+<div class="bm-start-sharing-container">
+  <div class="bm-start-sharing-main-container">
+      <div class="bm-start-sharing-heading">{{ section.settings.bm_start_sharing_heading_text }}</div>
+      <div class="bm-start-sharing-main-block">
+
+          {% if section.settings.bm_start_sms_text != blank %}
+          <a class="bm-start-sharing-link" href="sms:?&body={{ section.settings.bm_start_sharing_img_sms_url }}" target="_blank">
+            <div class="bm-start-sharing-block" style="background-color:{{ section.settings.bm_sms_color }}"> 
+               <div class="bm-start-sharing-icon">
+                 <img src="{{ section.settings.bm_start_sharing_sms_img | img_url:'master' }}">
+               </div>
+               <div class="bm-start-sharing-text">
+                 <p>{{ section.settings.bm_start_sms_text }}</p>
+               </div>
+            </div>
+          </a>
+          {% endif %}
+          {% for block in section.blocks %}
+            <a {% if block.settings.bm_start_sharing_img_text_url != blank %} href="{{ block.settings.bm_start_sharing_img_text_url }}"{% endif %} class="bm-start-sharing-link" {% if block.settings.bm_start_sharing_link_text != blank %}onclick="bmCopyLink(); return false;"{% endif %}>
+              {% if block.settings.bm_start_sharing_text != blank %} 
+              <div class="bm-start-sharing-block" style="background-color:{{ block.settings.bm_block_color }}"> 
+                     <div class="bm-start-sharing-icon"><img src="{{ block.settings.bm_start_sharing_icon_img | img_url:'master' }}" /></div>
+                     <div class="bm-start-sharing-text"><p>{{ block.settings.bm_start_sharing_text }}</p></div>
+              </div>
+            {% endif %}
+            </a>
+
+             {% if block.settings.bm_start_sharing_link_text != blank %}
+              <input type="text" class="bm-start-sharing-input" value="{{ block.settings.bm_start_sharing_link_text }}" id="myInput">
+              <script>
+                function bmCopyLink() {
+                {% comment %} e.preventDefault(); {% endcomment %}
+                
+                /* Get the text field */
+                var copyText = document.getElementById("myInput");
+                
+                /* Select the text field */
+                copyText.select();
+                copyText.setSelectionRange(0, 99999); /* For mobile devices */
+                
+                 /* Copy the text inside the text field */
+                navigator.clipboard.writeText(copyText.value);
+                
+                /* Alert the copied text */
+                {% comment %} alert("Copied the text: " + copyText.value); {% endcomment %}
+                }
+              </script>
+             {% endif %}
+          {% endfor %}
+
+        
+      </div>
+  </div>
+</div>
+
+
+
+
+<!-- <script>
+$(document).ready(function() {
+  $('.bm-start-sharing-main-block > a:first-child').click(function() {
+    $('#PureChatWidget .purechat-collapsed-image').click();
+  });
+});
+</script> -->
+
+
+{% schema %}  
+    {
+        "name": "Bm Start Sharing",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "bm_start_sharing_heading_text",
+            "label": "Heading"
+          },
+          {
+            "type": "color",
+            "id": "bm_sms_color",
+            "label": "Background Color",
+            "default": "#000000"
+          },
+          {
+            "type": "text",
+            "id": "bm_start_sharing_img_sms_url",
+            "label": "Sms Text"
+          },
+          {
+            "type": "image_picker",
+            "id": "bm_start_sharing_sms_img",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "bm_start_sms_text",
+            "label": "Paragraph"
+          }
+        ],
+        "blocks": [
+            {
+              "name": "Blocks",
+              "type": "Blocks",
+              "settings": [
+                {
+                    "type": "color",
+                    "id": "bm_block_color",
+                    "label": "Background Color",
+                    "default": "#000000"
+                },
+                {
+                    "type": "url",
+                    "id": "bm_start_sharing_img_text_url",
+                    "label": "Link"
+                },
+                {
+                  "type": "image_picker",
+                  "id": "bm_start_sharing_icon_img",
+                  "label": "Image"
+                },
+                {
+                    "type": "text",
+                    "id": "bm_start_sharing_text",
+                    "label": "Paragraph"
+                }, 
+                {
+                  "type": "text",
+                  "id": "bm_start_sharing_link_text",
+                  "label": "Copy Text"
+                }
+              ]
+            }
+          ]
+    }
+{% endschema %} 

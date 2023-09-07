@@ -1,0 +1,103 @@
+{% assign mobile_image = section.settings.desk_image %}
+{% if section.settings.mob_image != blank %}
+{% assign mobile_image = section.settings.mob_image %}
+{% endif %}
+
+<div class="bm-hero-container" data-section-id="{{ section.id }}" data-section-type="hero-animated" data-interval="1000">
+  <a href="{{ section.settings.link}}">
+    {% if section.settings.desk_image != blank %}
+    {% comment %} <img data-style="gif" class="hero__image small--hide lazyload" loading="lazy" src="{{ section.settings.desk_image | img_url: 'master' }}" alt="{{ section.settings.desk_image.alt | escape }}"> {% endcomment %}
+    <img 
+      srcset="{{ section.settings.desk_image | img_url: '320x' }} 474w,
+              {{ section.settings.desk_image | img_url: '768x' }} 768w,
+              {{ section.settings.desk_image | img_url: '1000x' }} 1000w,
+              {{ section.settings.desk_image | img_url: '1400x' }} 1400w, 
+              {{ section.settings.desk_image | img_url: 'master' }} 1600w" 
+      src="{{ section.settings.desk_image | img_url: 'master' }}"
+      sizes=""
+      alt="{{ section.settings.desk_image.alt }}" 
+      height="{{ section.settings.desk_image.height }}" 
+      width="{{ section.settings.desk_image.width }}" 
+      loading="lazy"
+      class="hero__image small--hide lazyload">
+
+    <img 
+      srcset="{{ mobile_image | img_url: '474x' }} 474w,
+              {{ mobile_image | img_url: '768x' }} 768w,
+              {{ mobile_image | img_url: 'master' }} 1600w" 
+      src="{{ mobile_image | img_url: 'master' }}"
+      sizes=""
+      alt="{{ mobile_image.alt }}" 
+      height="{{ mobile_image.height }}" 
+      width="{{ mobile_image.width }}" 
+      
+      class="hero__image medium-up--hide lazyload">
+    {% comment %} <img data-style="gif" class="hero__image medium-up--hide lazyload" loading="lazy" src="{{ mobile_image | img_url: 'master' }}" alt="{{ mobile_image.alt | escape }}"> {% endcomment %}
+    {% else %}
+    {{ 'lifestyle-1' | placeholder_svg_tag }}
+    {% endif %}
+
+    <div class="bm-hero-content-top">
+      {% if section.settings.bm_hero_content_top_title%}
+      <h2 class="bm-hero-content-top-title">
+        {{section.settings.bm_hero_content_top_title}}
+      </h2>
+      {% endif %}
+      {% if section.settings.bm_hero_content_top_description%}
+      <p class="bm-hero-content-top-description">
+        {{section.settings.bm_hero_content_top_description}}
+      </p>
+      {% endif %}
+
+      {% if section.settings.bm_hero_content_button != blank %}
+      <div class="bm-hero-content-button">{{section.settings.bm_hero_content_button}}</div>
+      {% endif %}
+    </div>
+  </a>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Hero Banner",
+    "class": "index-section--hero",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "desk_image",
+        "label": "Desktop Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "mob_image",
+        "label": "Mobile image"
+      },
+      {
+        "type": "text",
+        "id": "bm_hero_content_top_title",
+        "label": "Banner Title"
+      },
+      {
+        "type": "textarea",
+        "id": "bm_hero_content_top_description",
+        "label": "Banner Description"
+      },
+      {
+        "type": "text",
+        "id": "bm_hero_content_button",
+        "label": "Button text"
+      },
+      {
+        "type": "url",
+        "id": "link",
+        "label": "Button Link"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Hero Banner",
+        "category": "BM Sections"
+      }
+    ]
+  }
+{% endschema %}

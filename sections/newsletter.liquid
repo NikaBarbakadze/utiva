@@ -1,0 +1,170 @@
+<div style="background: #ececec; width=100%; clear: both; padding-bottom: 172px; padding-top: 50px;" class="newsletter-utiva">
+<div style="background: #88d0cc" class="class="index-section{% if section.settings.alt %} index-section--alt{% endif %}" newsletter-section newsletter-{{ section.id }}" data-aos>
+  <div class="page-width text-center">
+    <div style="width: 100%">
+    <div class="newsletter-content">
+    {% if section.settings.title != blank %}
+      <div class="h2 appear-delay">{{ section.settings.title }}</div>
+    {% endif %}
+
+    {% if section.settings.text != blank %}
+      <div class="rte rte--block appear-delay-1">
+        {{ section.settings.text }}
+      </div>
+    {% endif %}
+
+    <div class="appear-delay-2">
+      {% include 'omnisend-form', section_id: section.id, snippet_context: 'section' %}
+    </div>
+  </div>
+    <div class="newslettter-image">
+    <div class="grid {% unless section.blocks.size == 5 %}grid--uniform{% endunless %} text-{{ section.settings.align_text }}">
+      {%- assign grid_item_width = 'medium-up--one-fifth' -%}
+      {% case section.blocks.size %}
+        {% when 1 %}
+          {%- assign grid_item_width = 'medium-up--one-half' -%}
+        {% when 2 %}
+          {%- assign grid_item_width = 'medium-up--one-half' -%}
+        {% when 4 %}
+          {%- assign grid_item_width = 'medium-up--one-quarter' -%}
+      	{% when 6 %}
+          {%- assign grid_item_width = 'medium-up--one-sixth' -%}
+      {% endcase %}
+      {% for block in section.blocks %}
+        {% if section.blocks.size == 5 and forloop.index < 6 %}
+          {%- assign column_width = 'medium-up--one-fifth' -%}
+        {% else %}
+          {%- assign column_width = grid_item_width -%}
+        {% endif %}
+        <div
+          {{ block.shopify_attributes }}
+          data-aos
+          class="grid__item grid-column {{ column_width }} appear-delay-{{ forloop.index }}">
+          {% if block.settings.enable_image %}
+            {% if block.settings.button_link != blank %}
+              <a href="{{ block.settings.button_link }}">
+            {% endif %}
+            {% if block.settings.image != blank %}
+              <div style="max-width: {{ block.settings.image_width }}px;{% if section.settings.align_text == 'center' %} margin: 0 auto;{% endif %}">
+                <div class="text-spacing" style="height: 0; padding-bottom: {{ 100 | divided_by: block.settings.image.aspect_ratio }}%;">
+                  {%- assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                  <img class="lazyload"
+                      data-src="{{ img_url }}"
+                      data-widths="[180, 360, 540, 750, 900, 1080]"
+                      data-aspectratio="{{ block.settings.image.aspect_ratio }}"
+                      data-sizes="auto"
+                      alt="{{ block.settings.image.alt }}">
+                </div>
+              </div>
+            {% else %}
+              <div class="image-wrap text-spacing">{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}</div>
+            {% endif %}
+            {% if block.settings.button_link != blank %}
+              </a>
+            {% endif %}
+          {% endif %}
+          {% if block.settings.title != blank %}
+            <div class="h2">{{ block.settings.title }}</div>
+          {% endif %}
+          {% if block.settings.text != blank %}
+            <div class="rte-setting text-spacing">{{ block.settings.text }}</div>
+          {% endif %}
+          {% if block.settings.button_label != blank %}
+            <a href="{{ block.settings.button_link }}" class="btn btn--tertiary btn--small">
+              {{ block.settings.button_label }}
+            </a>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+{% schema %}
+  {
+    "name": "Newsletter",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Customers who subscribe will have their email address added to the 'accepts marketing' [customer list](/admin/customers?query=&accepts_marketing=1)."
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Sign up and save"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text",
+        "default": "<p>Let customers know about the key benefits of joining your newsletter.</p>"
+      },
+		{
+        "type": "checkbox",
+        "id": "alt",
+        "label": "Use alternate section color"
+      }
+    ],
+"blocks": [
+      {
+        "type": "text_block",
+        "name": "Column",
+        "settings": [
+          {
+            "type": "checkbox",
+            "id": "enable_image",
+            "label": "Show image",
+            "default": true
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "range",
+            "id": "image_width",
+            "label": "Image width",
+            "default": 650,
+            "min": 60,
+            "max": 650,
+            "step": 10,
+            "unit": "px"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Example title"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text",
+            "default": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.</p>"
+          },
+          {
+            "type": "text",
+            "id": "button_label",
+            "label": "Button label"
+          },
+          {
+            "type": "url",
+            "id": "button_link",
+            "label": "Link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Newsletter",
+        "category": "Promotional"
+      }
+    ]
+  }
+
+{% endschema %}
