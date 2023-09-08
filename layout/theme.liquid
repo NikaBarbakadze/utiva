@@ -977,7 +977,7 @@
 			}
 		</style>
 
-		<script>
+		<script defer>
 			document.addEventListener(
 				'stack-discounts-verify',
 				function (e) {
@@ -992,14 +992,14 @@
 		{% if template.name == 'cart' %}
 			{% include 'bm-discount-25' %}
 		{% endif %}
-		<script>
+		<script defer>
 			window.stamped_force_jquery = true;
 		</script>
 
 		{% comment %} TODO: add - to scripts snippet {% endcomment %}
 		<!-- Stamped - Begin script -->
 		<script
-			async
+			defer
 			type='text/javascript'
 			id='stamped-script-widget'
 			data-api-key='pubkey-ss4sZ69ubnGt9a7u6JTWIH24CX2g9V'
@@ -1007,13 +1007,13 @@
 		></script>
 		<!-- Stamped - End script -->
 		{% if template == 'index' %}
-			<script src='{{ 'bm-homepage.js' | asset_url }}'></script>
+			<script defer src='{{ 'bm-homepage.js' | asset_url }}'></script>
 		{% endif %}
 		{% if template.suffix == 'bm-new' %}
-			<script src='{{ 'bm-category-page.js' | asset_url }}'></script>
+			<script defer src='{{ 'bm-category-page.js' | asset_url }}'></script>
 		{% endif %}
 		{% if template.suffix contains 'bm-101' %}
-			<script src='{{ 'bm-101-page.js' | asset_url }}'></script>
+			<script  defer src='{{ 'bm-101-page.js' | asset_url }}'></script>
 		{% endif %}
 		{% render 'bm-checkout-flow' %}
 
