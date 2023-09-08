@@ -16,28 +16,12 @@
 		</script>
 		<!-- End Google Tag Manager -->
 
-		{% render 'pagefly-head' %}
 		<meta
 			name='ahrefs-site-verification'
 			content='e8a5c5de9155e44c16f7c5a5e29f77f0aec903b7adc0f4350a7996680cc11e38'
 		>
 		<meta name='facebook-domain-verification' content='w3q8fzfz444iyo8fy5gm265iez39ls'>
 		<meta name='google-site-verification' content='W66xxzoKlDL90i9m8Kq9jNVQ4YVkdsZ_c9eQoC_NDCY'>
-
-		<link
-			rel='preload'
-			as='image'
-			href='https://www.utivahealth.com/collections/utiva-collection'
-			imagesrcset='https://cdn.shopify.com/s/files/1/0152/2181/7444/files/Utiva-LifestyleHeroBannerUSA_1512x.jpg?v=1624954488'
-			imagesizes='lazyautosizes'
-		>
-
-		<link
-			rel='preload'
-			as='image'
-			href='https://www.utivahealth.com/collections/utiva-collection'
-			imagesrcset='https://cdn.shopify.com/s/files/1/0152/2181/7444/files/Utiva-LifestyleProductsMobileUSA_900x.jpg?v=1624954519'
-		>
 
 		{% comment %}{% render 'sizechartsrelentless' %} {% endcomment %}
 
@@ -49,11 +33,6 @@
 			<meta name='robots' content='noindex,nofollow'>
 		{% endif %}
 
-		<script
-			src='https://code.jquery.com/jquery-3.6.0.min.js'
-			integrity='sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4='
-			crossorigin='anonymous'
-		></script>
 		{%- if settings.favicon -%}
 			<link
 				rel='shortcut icon'
@@ -140,10 +119,6 @@
 		{%- endif -%}
 		{% render 'minmaxify-head' %}
 
-		{% if template != 'index' %}
-			{% render 'pagefly-header' %}
-		{% endif %}
-
 		{% comment %} {% render 'shogun-head' %} {% endcomment %}
 
 		<!-- Cozy Country Redirect Speedup Script -->
@@ -158,6 +133,12 @@
 		<link rel='canonical' href='{{ canonical_url }}'>
 
 		{{ 'index.css' | asset_url | stylesheet_tag }}
+
+		<script
+			src='https://code.jquery.com/jquery-3.6.0.min.js'
+			integrity='sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4='
+			crossorigin='anonymous'
+		></script>
 
 		{% if template == 'index' %}
 			<link
