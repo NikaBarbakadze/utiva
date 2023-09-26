@@ -171,7 +171,7 @@
                     {%- endform -%}
                   </noscript>
 
-                  <localization-form class="no-js-hidden">
+                  {% comment %} <localization-form class="no-js-hidden">
                     {%- form 'localization', id: 'HeaderCountryMobileForm', class: 'localization-form' -%}
                       <div>
                         <h2 class="visually-hidden" id="HeaderCountryMobileLabel">
@@ -180,7 +180,7 @@
                         {%- render 'country-localization', localPosition: 'HeaderCountryMobile' -%}
                       </div>
                     {%- endform -%}
-                  </localization-form>
+                  </localization-form> {% endcomment %}
                 {% endif %}
 
                 {%- if localization.available_languages and localization.available_languages.size > 1 -%}
