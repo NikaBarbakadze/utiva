@@ -30,13 +30,43 @@
     },
     "benefit-section": {
       "type": "benefit-section",
+      "blocks": {
+        "79c131ea-9ec2-4d51-8d94-67485e4f24ba": {
+          "type": "block",
+          "settings": {
+            "title": "Potent + Clean ingredients",
+            "benefit_text": "<p>because you should never have to worry about what's going into your body<\/p>"
+          }
+        },
+        "8b889716-e4e3-4329-ac44-c2248bcb357b": {
+          "type": "block",
+          "settings": {
+            "title": "Trusted & Recommended",
+            "benefit_text": "<p>by over 10,000 doctors. Our reputation was built through our commitment to the highest standards.<\/p>"
+          }
+        },
+        "41760973-2f5c-4f6b-84e5-343a1934050e": {
+          "type": "block",
+          "settings": {
+            "title": "Support beyond supplements",
+            "benefit_text": "<p>the key to success is having the right tools and support to get there<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "79c131ea-9ec2-4d51-8d94-67485e4f24ba",
+        "8b889716-e4e3-4329-ac44-c2248bcb357b",
+        "41760973-2f5c-4f6b-84e5-343a1934050e"
+      ],
       "settings": {
         "paddingTop_mobile": 0,
-        "paddingBottom_mobile": 0,
+        "paddingBottom_mobile": 40,
         "paddingTop_desktop": 0,
         "paddingBottom_desktop": 0,
-        "section_title": "",
-        "button_text": "",
+        "image_desktop": "shopify:\/\/shop_images\/img_b45346fd-172c-48bd-ad91-87c3777dd95f.png",
+        "image_mobile": "shopify:\/\/shop_images\/img_30fd0547-77f9-4bba-af3a-b4de25b69c0a.jpg",
+        "section_title": "Why you will love us",
+        "button_text": "Read more about us",
         "button_url": ""
       }
     }
