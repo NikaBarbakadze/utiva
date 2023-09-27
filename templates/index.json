@@ -373,14 +373,52 @@
     },
     "healthy-habits": {
       "type": "healthy-habits",
+      "blocks": {
+        "3cfe134b-b0a7-43fd-a797-d84c816a0c49": {
+          "type": "habit",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/other.svg",
+            "text": "Cancel, switch or pause at any time"
+          }
+        },
+        "b773e944-8404-4df8-833e-072aaacb0160": {
+          "type": "habit",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/other_beb76b32-ed84-46cf-b48f-e218f66bc23a.svg",
+            "text": "Save 25% on every order"
+          }
+        },
+        "715537d0-7bdd-4bda-903f-f108429e7c7e": {
+          "type": "habit",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/other_27bb0ca7-b3ef-4bf8-bf66-cdd203b5bb55.svg",
+            "text": "Earn redeemable points"
+          }
+        },
+        "352c0e39-05b2-4c35-ab90-a8ffb88a6450": {
+          "type": "habit",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/other_52ad9236-2661-43c4-b51a-f5f6b234b355.svg",
+            "text": "Access to other perks and promotions"
+          }
+        }
+      },
+      "block_order": [
+        "3cfe134b-b0a7-43fd-a797-d84c816a0c49",
+        "b773e944-8404-4df8-833e-072aaacb0160",
+        "715537d0-7bdd-4bda-903f-f108429e7c7e",
+        "352c0e39-05b2-4c35-ab90-a8ffb88a6450"
+      ],
       "settings": {
         "paddingTop_mobile": 0,
         "paddingBottom_mobile": 0,
         "paddingTop_desktop": 0,
-        "paddingBottom_desktop": 0,
-        "title": "",
-        "subtext": "",
-        "button_text": "",
+        "paddingBottom_desktop": 100,
+        "image_desktop": "shopify:\/\/shop_images\/img_b4929707-a00f-410b-b93d-30e45f721157.png",
+        "image_mobile": "shopify:\/\/shop_images\/Group_48.png",
+        "title": "Healthy habits, delivered",
+        "subtext": "A subscription plan on your terms",
+        "button_text": "Learn more about subscriptions",
         "button_url": ""
       }
     },
