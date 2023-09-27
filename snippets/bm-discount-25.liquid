@@ -1,0 +1,41 @@
+<script>
+  (function () {
+
+    function waitForElement(selector, trigger, delayInterval, delayTimeout) {
+      var interval = setInterval(function () {
+        if (
+          document &&
+          document.querySelector(selector) &&
+          document.querySelectorAll(selector).length > 0
+        ) {
+          clearInterval(interval);
+          trigger();
+        }
+      }, delayInterval);
+      setTimeout(function () {
+        clearInterval(interval);
+      }, delayTimeout);
+    }
+
+    function init() {
+      console.log('>> init');
+
+      if (document.querySelector('input#coupons_stacker_input')) {
+        document.querySelector('input#coupons_stacker_input').value = 'DISCOUNT25';
+      }
+
+      if (document.querySelector('button#coupons_stacker_add_button')) {
+        document.querySelector('button#coupons_stacker_add_button').click();
+      }
+    }
+
+    if (window.location.href.indexOf('/cart') > -1) {
+      var acquisitionSource = localStorage.getItem('acquisitionSource');
+
+      if (acquisitionSource && acquisitionSource.indexOf('omniform1.com') > -1) {
+        waitForElement('button#coupons_stacker_add_button', init, 50, 15000);
+      }
+    }
+
+  })();
+</script>

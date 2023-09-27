@@ -1,0 +1,287 @@
+<style >
+  .bm-cart-add-on-main-block>form {
+    display: none;
+  }
+
+  html body .bm-cart-add-on-main-block>form:nth-child(1) {
+    display: block;
+  }
+
+  html body .bm-header-free-shipping-left h2 {
+    font-size: 24px;
+  }
+
+  html body .bm-Continue-shopping-wrapper a {
+    font-size: 18px;
+  }
+
+  html body .bm-header-free-shipping-left {
+    width: 22%;
+  }
+
+  html body .bm-header-free-shipping-left~div {
+    width: 78%;
+  }
+
+  html body .bm-header-free-shipping-right.bm-add.bm-hide,
+  html body .bm-header-free-shipping-activated.bm-add.bm-hide,
+  html body .bm-header-free-shipping-right:not(.bm-add),
+  html body .bm-header-free-shipping-activated:not(.bm-add) {
+    opacity: 0;
+    display: none;
+  }
+
+  html body .bm-header-free-shipping-right.bm-add,
+  html body .bm-header-free-shipping-activated.bm-add {
+    display: block;
+    opacity: 1;
+  }
+
+  html body .bm-cart-add-on-main .bm-cart-add-on-main-block {
+    padding-bottom: 92px;
+    position: relative;
+  }
+
+  html body .bm-cart-add-on-main .bm-cart-add-on-main-block form {
+    min-height: 170px;
+    height: 100%;
+  }
+  html body .bm-cart-add-on-main .bm-cart-add-on-main-block .bm-cart-add-on-atc,
+  html body .bm-cart-add-on-main .bm-cart-add-on-main-block input[value="Add to cart"] {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    white-space: nowrap;
+  }
+
+  html body .bm-cart-add-on-main .bm-cart-add-on-main-block .bm-cart-add-on-main-block-price {
+    position: absolute;
+    bottom: 64px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  html body .bm-free-shipping-icon-left span,
+  html body .bm-free-shipping-icon-activated span {
+    padding: 0;
+  }
+
+  html body .bm-header-free-shipping-right.bm-add {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media screen and (max-width:768px) {
+    html body .bm-header-free-shipping-left,
+    html body .bm-header-free-shipping-left~div {
+      width: 100% !important;
+    }
+    html body .bm-cart-add-on-main .bm-cart-add-on-main-block form {
+      min-height: 162px;
+    }
+  }
+
+  @media screen and (min-width:1200px) {
+    html body .bm-free-shipping-icon-left h2 br,
+    html body .bm-free-shipping-icon-activated h2 br {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width:720px) and (max-width:768px) {
+    html body .bm-free-shipping-icon-left h2 br,
+    html body .bm-free-shipping-icon-activated h2 br {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width:460px) {
+    html body .bm-free-shipping-icon-left h2 br,
+    html body .bm-free-shipping-icon-activated h2 br {
+      display: none;
+    }
+  }
+</style>
+<script >
+  (function () {
+    var debug = 0;
+    var variation_name = "Utiva checkout flow from GrowthHit design";
+
+    if (window.location.href.indexOf('qa-debug') > -1 || localStorage.getItem('qa_debug')) {
+      debug = 1;
+      localStorage.setItem('qa_debug', true);
+      console.log('>> ' + variation_name);
+    }
+
+    try {
+      function waitForElement(selector, trigger, delayInterval, delayTimeout) {
+        var interval = setInterval(function () {
+          if (
+            document &&
+            document.querySelector(selector) &&
+            document.querySelectorAll(selector).length > 0
+          ) {
+            clearInterval(interval);
+            trigger();
+          }
+        }, delayInterval);
+        setTimeout(function () {
+          clearInterval(interval);
+        }, delayTimeout);
+      }
+      
+      function waitForjQuery(trigger, delayInterval, delayTimeout) {
+        var intervalForjQuery = setInterval(function() {
+          if (typeof window.jQuery != 'undefined') {
+            clearInterval(intervalForjQuery);
+            trigger();
+          }
+        }, delayInterval);
+        var timeoutForjQuery = setTimeout(function() {
+          clearInterval(intervalForjQuery);
+        }, delayTimeout);
+      }
+
+      function debugMessage(message) {
+        if (debug) {
+          console.log(message);
+        }
+      }
+
+      var BmSuccess = '' +
+          '  <div class="bm-header-free-shipping-activated bm-add">' +
+          '      <div class="bm-free-shipping-icon-activated">' +
+          '          <img src="https://cdn.shopify.com/s/files/1/0060/4677/7455/files/Truck_Icon-01_1.png?v=1647236954">' +
+          '          <h2>Free Shipping Activated! <br><span>You’ve qualified for</span> FREE SHIPPING!' +
+          '          </h2>' +
+          '      </div>' +
+          '  </div>';
+
+      var BmRemain = '' +
+          '  <div class="bm-header-free-shipping-right bm-add">' +
+          '      <div class="bm-free-shipping-icon-left">' +
+          '          <img src="https://cdn.shopify.com/s/files/1/0060/4677/7455/files/Truck_Icon-01_1.png?v=1647236954">' +
+          '          <h2>Wait! Don’t pay for shipping... <br><span>You are $2.03 away from free shipping</span>' +
+          '          </h2>' +
+          '      </div>' +
+          '      <div class="bm-free-shipping-icon-right">' +
+          '          <a href="#" class="js-no-transition"><img src="https://cdn.shopify.com/s/files/1/0060/4677/7455/files/Arrow_12.png?v=1647234700"></a>' +
+          '      </div>' +
+          '  </div>';
+
+      //function init
+      function init() {
+        debugMessage('>> init Utiva checkout flow step-2');
+
+
+
+
+        var bmCartValue = document.querySelector('header a[href="/cart"] span.cart-link__count').innerHTML;
+        var bmCartVal = parseInt(bmCartValue);
+
+        var bmItemCountString;
+        if (bmCartVal == 0) {
+          bmItemCountString = 'Your Cart (<span>0 item</span>)';
+          document.querySelector('#CartPage .bm-header-free-shipping-left h2').innerHTML = bmItemCountString;
+          document.querySelector('#CartPage .bm-header-free-shipping').innerHTML = '';
+        }
+        else if (bmCartVal > 1) {
+          bmItemCountString = 'Your Cart (<span>' + bmCartVal + ' items</span>)';
+          document.querySelector('#CartPage .bm-header-free-shipping-left h2').innerHTML = bmItemCountString;
+        } else {
+          bmItemCountString = 'Your Cart (<span>1 item</span>)';
+          document.querySelector('#CartPage .bm-header-free-shipping-left h2').innerHTML = bmItemCountString;
+        }
+
+        waitForElement('#stack-discounts-subtotal-value', function () {
+
+          var bmPrice = document.querySelector('#stack-discounts-subtotal-value').innerHTML;
+          var bmTotalPrice;
+          var bmCurrency;
+
+          if (bmPrice.indexOf('$') > -1) {
+            bmTotalPrice = parseFloat(bmPrice.split('$')[1]);
+            bmCurrency = '$'+bmTotalPrice+'';
+            // console.log(">> bmtotal $", bmTotalPrice, bmPrice);
+          }
+          if (bmPrice.indexOf('CAD') > -1) {
+            bmTotalPrice = parseFloat(bmPrice.split('CAD')[1]);
+            bmCurrency = 'CAD '+bmTotalPrice +'';
+            // console.log(">> bmtotal CAD", bmTotalPrice, bmPrice);
+          }
+
+          if (bmTotalPrice < 25) {
+            var bmRemainPrice = (25 - bmTotalPrice).toFixed(2);
+            console.log(">> remain", bmRemainPrice);
+            var bmShippingText = 'You are ' + bmRemainPrice + ' away from free shipping';
+
+            if (!document.querySelector('.bm-header-free-shipping-right.bm-add')) {
+              document.querySelector('.bm-header-free-shipping-left').insertAdjacentHTML('afterend', BmRemain);
+            }
+            document.querySelector('.bm-header-free-shipping-right.bm-add h2 span').innerHTML = bmShippingText;
+            document.querySelector('.bm-header-free-shipping-right.bm-add').classList.remove('bm-hide');
+
+            if (document.querySelector('.bm-header-free-shipping-activated.bm-add')) {
+              document.querySelector('.bm-header-free-shipping-activated.bm-add').classList.add('bm-hide');
+            }
+          }
+
+          else {
+            if (document.querySelector('.bm-header-free-shipping-right.bm-add')) {
+              document.querySelector('.bm-header-free-shipping-right.bm-add').classList.add('bm-hide');
+            }
+
+            if (!document.querySelector('.bm-header-free-shipping-activated.bm-add')) {
+              document.querySelector('.bm-header-free-shipping-left').insertAdjacentHTML('afterend', BmSuccess);
+            }
+            document.querySelector('.bm-header-free-shipping-activated.bm-add').classList.remove('bm-hide');
+          }
+
+        }, 50, 20000);
+      }
+
+      //helper function to init
+      waitForElement('header a[href="/cart"] span.cart-link__count', init, 50, 20000);
+
+      var bmSend = XMLHttpRequest.prototype.send;
+      XMLHttpRequest.prototype.send = function () {
+        this.addEventListener('load', function () {
+          if (this.responseURL.indexOf('/cart.js') > -1) {
+            console.log(">> cart.js");
+            waitForElement('header a[href="/cart"] span.cart-link__count', init, 50, 20000);
+          }
+        });
+        return bmSend.apply(this, arguments);
+      };
+      
+      waitForjQuery(function() {
+        var $ = window.jQuery;
+        
+        $('.bm-cart-add-on-atc').click(function() {
+          var id = $(this).siblings('input[name="id"]').val();
+          $.post('/cart/add.js', {
+            items: [{
+              id: id,
+              quantity: 1
+            }]
+          }).done(function( data ) {
+            window.location.reload()
+          });
+        });
+        
+        $(document).ready(function() {
+          if (!$('.bm-cart-add-on-main-block:visible').length) {
+            $('.bm-cart-add-on').hide();
+          }
+        });
+        
+      }, 50, 10000);
+
+
+    } catch (e) {
+      if (debug) console.log(e, "error in Test" + variation_name);
+    }
+  })();
+</script>

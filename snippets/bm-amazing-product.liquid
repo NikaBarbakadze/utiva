@@ -1,0 +1,211 @@
+{% if product.metafields.bm_bdp.enable_amazing_product_section == true %}
+  <div class="page-width bm-product-template-width">
+    <div class="bm-amazing-product-wrap">
+      <div class="bm-amazing-product">
+        <div class="bm-amazing-product-content">
+          {% if product.metafields.bm_pdp.amazing_product_review_title != blank %}
+            <h2 class="bm-amazing-product-title">
+              {{ product.metafields.bm_pdp.amazing_product_review_title}}
+            </h2>
+          {% endif %}
+          {% if product.metafields.bm_pdp.amazing_product_description != blank %}
+            <p class="bm-amazing-product-description">
+              {{ product.metafields.bm_pdp.amazing_product_description}}
+            </p>
+          {% endif %}
+          {% if product.metafields.bm_pdp.amazing_product_reviewers_name != blank %}
+            <h3 class="bm-amazing-product-description">
+              {{product.metafields.bm_pdp.amazing_product_reviewers_name}}
+            </h3>
+          {% endif %}
+          {% if product.metafields.bm_pdp.amazing_product_reviewe_text != blank %}
+            <div class="bm-amazing-product-review-button">
+
+              {{product.metafields.bm_pdp.amazing_product_reviewe_text}}
+
+            </div>
+          {% endif %}
+        </div>
+        <div class="bm-amazing-product-image">
+          <div class="bm-amazing-product-image-bottom">
+            {% if product.metafields.bm_pdp.amaz_product_review_imagetwo != blank %}
+              <div class="bm-amazing-product-image-bottom-one">
+                <img src="{{product.metafields.bm_pdp.amaz_product_review_imagetwo | img_url:'master'}}" alt="">
+              </div>
+            {% endif %}
+            {% if product.metafields.bm_pdp.amaz_product_review_imagethree != blank %}
+              <div class="bm-amazing-product-image-bottom-two">
+                <img src="{{product.metafields.bm_pdp.amaz_product_review_imagethree | img_url:'master'}}" alt="">
+              </div>
+            {% endif %}
+          </div>
+          {% if product.metafields.bm_pdp.amaz_product_review_imagemain != blank %}
+            <div class="bm-amazing-product-image-top">
+<!--               <img src="{{product.metafields.bm_pdp.amaz_product_review_imageone | img_url:'master'}}" alt=""> -->
+              <img src="{{product.metafields.bm_pdp.amaz_product_review_imagemain | img_url:'master'}}" alt="">
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .bm-amazing-product-wrap {
+      margin: 0 auto;
+      background: #F9F9F9;
+      border-radius: 15px;
+    }
+    .bm-amazing-product {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+      max-width: 1120px;
+      padding: 70px 20px;
+      margin: 0 auto;
+    }
+    .bm-amazing-product-content {
+      margin-right: 40px;
+      max-width: 379px;
+    }
+    .bm-amazing-product-image {
+      padding-left: 20px;
+      display: flex;
+    }
+    .bm-amazing-product-review-icon {
+      width: 128px;
+      margin: 0 auto 24px;
+    }
+    .bm-amazing-product-review-icon img {
+      width: 100%;
+      height: 100%;
+    }
+    h2.bm-amazing-product-title {
+      font-family: 'Nunito';
+      font-style: normal;
+      text-align: center;
+      letter-spacing: 0.02em;
+      margin: 0 0 20px;
+      font-weight: 800;
+      font-size: 32px;
+      line-height: 26px;
+      color: #253C51;
+    }
+    p.bm-amazing-product-description {
+      font-family: 'Nunito';
+      font-style: normal;
+      text-align: center;
+      margin: 0 0 20px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 22px;
+      color: #253C51;
+    }
+    h3.bm-amazing-product-description {
+      font-family: Nunito;
+      font-style: normal;
+      text-align: center;
+      margin: 0 0 30px;
+      font-weight: 800;
+      font-size: 16px;
+      line-height: 22px;
+      color: #253C51;
+    }
+    .bm-amazing-product-review-button {
+      width: 225px;
+      height: 51px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      margin: 0 auto;
+      font-family: 'Nunito';
+      font-style: normal;
+      letter-spacing: -0.02em;
+      cursor: pointer;
+      background: #D3212C;
+      border-radius: 5px;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 26px;
+      color: #FFFFFF;
+    }
+    .bm-amazing-product-image img {
+      border-radius: 12px;
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .bm-amazing-product-image-top {
+      width: 65%;
+      border-radius: 12px;
+    }
+    .bm-amazing-product-image-bottom {
+      width: 34%;
+      margin-right: 16px;
+    }
+    .bm-amazing-product-image-bottom-one {
+      width: 100%;
+      border-radius: 12px;
+    }
+    .bm-amazing-product-image-bottom-two {
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 20px;
+    }
+    @media only screen and (min-width: 769px) and(max-width: 1300px) {
+      .bm-amazing-product {
+        margin: 0 40px;
+      }
+      .bm-amazing-product-image {
+        padding: 0;
+      }
+    }
+    @media only screen and (max-width: 769px) {
+
+      .bm-amazing-product {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        padding: 20px;
+      }
+      .bm-amazing-product-content {
+        width: 100%;
+        padding: 16px;
+        margin: 0;
+        max-width: 100%;
+      }
+      .bm-amazing-product-image {
+        width: 100%;
+        background: #fff;
+        padding-left: 0;
+      }
+      .bm-amazing-product-review-icon {
+        margin-bottom: 16px;
+      }
+      h2.bm-amazing-product-title {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 28px;
+        margin: 16px 0;
+      }
+      p.bm-amazing-product-description {
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 28px;
+        margin: 16px 0;
+      }
+      h3.bm-amazing-product-description {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+        margin: 16px 0 24px;
+      }
+    }
+  </style>
+
+{% endif %}

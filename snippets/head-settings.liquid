@@ -1,0 +1,17 @@
+{% comment %}
+	Passes global shopify settings to CSS custom properties and
+	Theme global object.
+
+	Usage:
+	{%- render 'head-settings' -%}
+{% endcomment %}
+
+{%- style -%}
+	{% comment %} Theme custom properties {% endcomment %}
+	   :root {
+	    --announcement-bar-height: 0px;
+		--header-height: 0px;
+		--header-full-height: calc(var(--announcement-bar-height) + var(--header-height));
+
+	   }
+{%- endstyle -%}

@@ -1,0 +1,156 @@
+{% if product.metafields.bm_pdp.enable_why_section == true %}
+  <div class="bm-why-utiva-area">
+    <div class="page-width bm-product-template-width">
+      <div class="bm-why-utiva-container">
+        <p class="h2 bm-why-utiva-cranberry-title bm-desktop-hide">
+          {{product.metafields.bm_pdp.why_section_title-main}}
+        </p>
+        <div class="bm-why-utiva-content">
+          <div class="bm-why-utiva-wrapper">
+            {% if product.metafields.bm_pdp.why_section_image != blank %}
+              <div class='bm-why-utiva-img'>
+                <img src="{{ product.metafields.bm_pdp.why_section_image | img_url: 'master' }}"/>
+              </div>
+            {% endif %}
+          </div>
+          <div class="bm-why-utiva-details">
+            <p class="h2 bm-why-utiva-cranberry-title bm-mobile-hide">
+              {{product.metafields.bm_pdp.why_section_title-main}}
+            </p>
+            {% assign bm_why_utiva_content = product.metafields.bm_pdp.why_section_description | split: '***' %}
+            {% for item in bm_why_utiva_content %}
+              <div class="bm-why-utiva-details-block">
+                <div class="bm-why-utiva-details-block-icon"></div>
+                <div class="bm-why-utiva-details-block-details">
+                  <p class="bm-why-utiva-details-block-description">
+                    {{item}}
+                  </p>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .bm-why-utiva-area {
+      margin: 40px 0 0;
+    }
+    .bm-why-utiva-container {
+      margin: 0 auto;
+      background: #F9F9F9;
+      border-radius: 15px;
+    }
+    .bm-why-utiva-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 0;
+      max-width: 940px;
+      margin: 0 auto;
+    }
+    .bm-why-utiva-wrapper {
+      width: 50%;
+      margin-right: 40px;
+      text-align: center;
+    }
+    .bm-why-utiva-details {
+      width: 50%;
+    }
+    .bm-why-utiva-details-block {
+      display: flex;
+      padding-right: 40px;
+      margin-bottom: 24px;
+    }
+    .bm-why-utiva-details-block:last-child {
+      margin-bottom: 0;
+    }
+    .bm-why-utiva-details-block-icon {
+      margin-right: 35px;
+      position: relative;
+    }
+    h2.bm-why-utiva-details-block-title {
+      font-family: 'Nunito';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0.02em;
+      color: #253C51;
+    }
+    p.h2.bm-why-utiva-cranberry-title {
+      font-family: 'Nunito';
+    font-style: normal;
+    letter-spacing: 0.02em;
+    margin: 0 0 25px;
+    font-weight: 800;
+    font-size: 32px;
+    color: #253C51;
+    line-height: 40px;
+    }
+    p.bm-why-utiva-details-block-description {
+      font-family: 'Nunito';
+      font-style: normal;
+      letter-spacing: 0.02em;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 22px;
+      color: #253C51;
+    }
+    
+    .bm-why-utiva-details-block-icon:after {
+      background: url('https://cdn.shopify.com/s/files/1/0060/4677/7455/files/Vector_1_cd07513d-ea52-4ace-ad71-85b7fec08860.png?v=1664546727') no-repeat;
+      content: "";
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 3px;
+      left: 0;
+      background-size: 100%;
+    }
+    .bm-why-utiva-wrapper iframe {
+      width: 100%;
+    }
+    @media only screen and (max-width: 768px) {
+      p.h2.bm-why-utiva-cranberry-title {
+        text-align: center;
+        padding-top: 15px;
+      }
+      .bm-why-utiva-area {
+        margin: 10px 0 0;
+        padding: 32px 0;
+      }
+      .bm-why-utiva-content {
+        padding: 0;
+        display: block;
+      }
+      .bm-why-utiva-wrapper {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 24px;
+      }
+      .bm-why-utiva-details {
+        width: 100%;
+      }
+      .bm-why-utiva-details-block-details:last-child {
+        margin-bottom: 0;
+      }
+      .bm-why-utiva-content-area {
+        margin: 40px 0 0;
+      }
+      .bm-why-utiva-details-block {
+        margin-bottom: 24px;
+        padding-right: 0;
+      }
+      .bm-why-utiva-details-block:last-child {
+        margin-bottom: 0;
+      }
+      .bm-why-utiva-container {
+          padding: 20px;
+      }
+    }
+  </style>
+
+{% endif %} 

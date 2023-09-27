@@ -1,0 +1,40 @@
+
+  <div class="bm-product-pills-ingred">
+    <div class="bm-product-pills-ingred-block">
+      <h2 class="bm-product-pills-ingred-block-title">
+      	{{product.metafields.bm_pdp.cranberry_ingredients_title}}
+      </h2>
+      <p class="bm-product-pills-ingred-block-description">
+      	{{product.metafields.bm_pdp.cranberry_ingredient_descrip | newline_to_br}}
+      </p>
+    </div>
+    <div class="bm-product-pills-ingred-block">
+      <div class="bm-product-ingred-Supplement Supplement-title">
+        <h2>{{product.metafields.bm_pdp.cranberry_supplement_title}}</h2>
+      </div>
+      <div class="bm-product-ingred-Supplement Supplement-size">
+        {% assign Supplementsize = product.metafields.bm_pdp.cranberry_supplement_size_text | split: '***' %}
+        {% for item in Supplementsize %}
+        <h3>{{item}}</h3>
+        {% endfor %}
+      </div>
+      <div class="bm-product-ingred-Supplement Supplement-amount">
+        {% assign Supplementamount = product.metafields.bm_pdp.cranberry_supp_amount_text | split: '***' %}
+        {% for item in Supplementamount %}
+        <div>{{item}}</div>
+        {% endfor %}
+      </div>
+      <div class="bm-product-ingred-Supplement Supplement-content">
+        <div>
+          <p>{{product.metafields.bm_pdp.cranberry_supple_content_text | newline_to_br }}</p>
+        </div>
+        <div>†</div>
+      </div>
+      <div class="bm-product-ingred-Supplement Supplement-details">
+        <p>{{product.metafields.bm_pdp.cranberry_supple_details_text}}</p>
+      </div>
+      
+    </div>
+  </div>
+
+

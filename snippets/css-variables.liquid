@@ -1,0 +1,80 @@
+{% comment %}
+------------------------------------------------------------------------------
+Snippet: CSS variables
+- Helper snippet to declare CSS custom properties using both Liquid settings
+and CSS predefined values, based on UI-kit.
+------------------------------------------------------------------------------
+
+Usage:
+{%- render 'css-variables' -%}
+{% endcomment %}
+
+<style > :root
+{
+  /**
+     * Breakpoints.
+     */
+  --breakpoint-xs: 375px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+
+  /**
+     * Fonts.
+     */
+  --font-family-heading: 'GeneralSans';
+  --font-family-body: 'GeneralSans';
+
+  /**
+     * Font-size.
+     */
+  --font-size-xss: 11px;
+  --font-size-xs: 12px;
+  --font-size-2xs: 14px;
+  --font-size-s: 16px;
+  --font-size-m: 18px;
+  --font-size-l: 20px;
+  --font-size-2l: 22px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 28px;
+  --font-size-xxl: 32px;
+  --font-size-2xxl: 36px;
+  --font-size-3xxl: 40px;
+  --font-size-4xxl: 48px;
+  --font-size-5xxl: 56px;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+
+
+  /**
+     * Colors.
+     */
+  --color-white: rgba(255, 255, 255, 1); /* #FFFFFF */
+  --color-white-80: rgb(255, 255, 255, 0.8); /* #FFFFFF */
+  --color-white-60: rgb(255, 255, 255, 0.6); /* #FFFFFF */
+  --color-white-40: rgb(255, 255, 255, 0.4); /* #FFFFFF */
+  --color-white-20: rgb(255, 255, 255, 0.2); /* #FFFFFF */
+  --color-white-10: rgb(255, 255, 255, 0.1); /* #FFFFFF */
+
+
+  --color-black: rgb(28, 28, 28); /* #1C1C1C */
+  --color-black-80: rgb(28, 28, 28, 0.8); /* #1C1C1C */
+  --color-black-60: rgb(28, 28, 28, 0.6); /* #1C1C1C */
+  --color-black-40: rgb(28, 28, 28, 0.4); /* #1C1C1C */
+  --color-black-20: rgb(28, 28, 28, 0.2); /* #1C1C1C */
+  --color-black-12: rgb(28, 28, 28, 0.12); /* #1C1C1C */
+
+
+  --primary-color-red: rgb(195, 54, 53); /* #C33635 */
+  --primary-color-red-hover: rgb(165, 35, 34); /* #A52322 */
+  --primary-color-red-disabled: rgb(225, 154, 154); /* #E19A9A */
+
+  --beige: rgb(159, 132, 110); /* #9F846E */
+  --beige-bg: rgb(206, 179, 158); /* #CEB39E */
+
+  --grey: rgb(242, 242, 240); /* #F2F2F0 */
+  --grey-hover: rgb(234, 234, 232); /* #EAEAE8 */
+  --grey-bg: rgb(252, 252, 250); /* #FCFCFA */
+
+}
+</style>

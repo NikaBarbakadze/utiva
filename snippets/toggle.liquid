@@ -1,0 +1,21 @@
+<div class='header-mob__toggle-track'>
+	<span class='header-mob__toggle-track--before'>
+		{{- toggle_text_before -}}
+	</span>
+	{% comment %} <a href='{{toggle_url}}'> {% endcomment %}
+	<label class='toggle' for='header-mob__toggle'>
+		<input
+			type='checkbox'
+			class='toggle__input'
+			id='header-mob__toggle'
+			checked
+		>
+		<span class='toggle-track'>
+			<span class='toggle-indicator'></span>
+		</span>
+	</label>
+	{% comment %} </a> {% endcomment %}
+	<span class='header-mob__toggle-track--after'>
+		{{- toggle_text_after -}}
+	</span>
+</div>

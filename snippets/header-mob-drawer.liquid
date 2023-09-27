@@ -1,0 +1,120 @@
+<script src='{{ 'toggle.js' | asset_url }}' defer='defer'></script>
+<script src='{{ 'accordion.js' | asset_url }}' defer='defer'></script>
+
+<div class='mobile-menu' data-menu>
+	<div class='mobile-menu__drawer'>
+		<button class='data-menu-button' id='menuButton'>
+			<div class='menu-btn--close'>
+				{% render 'icon', icon: 'close-32' %}
+			</div>
+		</button>
+
+		{% comment %} TOGGLE {% endcomment %}
+		{% if toggle != blank %}
+			<div
+				class='mobile-menu__toggle'
+			>
+				<span class='mobile-menu__toggle--before'>
+					{{- toggle_text_before -}}
+				</span>
+				{% comment %} <a href='{{ toggle_url }}'> {% endcomment %}
+
+				<label class='toggle' for='mobile-menu__toggle'>
+					<input
+						type='checkbox'
+						class='toggle__input'
+
+						id='mobile-menu__toggle'
+						checked
+					>
+					<span class='toggle-track'>
+						<span class='toggle-indicator'></span>
+					</span>
+				</label>
+				{% comment %} </a> {% endcomment %}
+
+				<span class='mobile-menu__toggle--after'>
+					{{- toggle_text_after -}}
+				</span>
+			</div>
+		{% endif %}
+
+		<div class='mobile-menu__icons'>
+			{% render 'icon', icon: 'account-32' %}
+			{% render 'icon', icon: 'cart-32' %}
+		</div>
+	</div>
+
+	<ul class='mobile-menu__open'>
+		<li class='input-new'>
+			<form class='mobile-menu__open--input' action='{{ routes.search_url }}'>
+				<div class='input-new__container '>
+					<input
+						type='text'
+						class='input-new__item'
+						placeholder='Search...'
+						required=''
+					>
+					<button class='input-new__button' type='submit'>
+						{% render 'icon', icon: 'magnifier-24' %}
+					</button>
+				</div>
+			</form>
+		</li>
+		{% for link in section.settings.mob_menu.links %}
+			<li class='mobile-menu__open--li accordion-wrapper'>
+				<div class='mobile-menu__open--item accordion-wrapper__button'>
+					<a href='{{ link_url }}' class='mobile-menu__open--title'>{{ link.title }}</a>
+					{% if link.links.size > 0 %}
+						<div class='plusminus accordion-wrapper__plusminus'></div>
+					{% endif %}
+				</div>
+
+				{% liquid
+					if link.links.size > 0
+						render 'header-mob-mega-menu', parent_link: link, mega_menu_blocks: mega_menu_blocks
+					endif
+				%}
+			</li>
+		{% endfor %}
+
+		{% for block in mega_menu_blocks %}
+			{% liquid
+				assign title = block.settings.menu_item_title
+				assign link_title = block.settings.link_title
+				assign image = block.settings.image
+
+				assign url = block.settings.url
+			%}
+
+			{% if image != blank %}
+				<li class='mega-menu__block'>
+					<a href='{{ url }}' class='mega-menu__block--link'>
+						<div class='mega-menu__block--wrap'>
+							{% if image != blank %}
+								{{
+									image
+									| image_url: width: 327
+									| image_tag:
+										loading: 'lazy',
+										width: image.width,
+										height: image.height,
+										class: 'mega-menu__block--img',
+										widths: '327, 400, 600, 800'
+								}}
+							{% endif %}
+
+							<div class='mega-menu__block--wrap-links'>
+								<span class='mega-menu__block--title'>{{ title }}</span>
+								<span class='mega-menu__block--url'>
+									{{- link_title }}
+									{% render 'icon', icon: 'arrow-right-20' %}
+								</span>
+							</div>
+						</div>
+					</a>
+				</li>
+			{% endif %}
+		{% endfor %}
+	</ul>
+</div>

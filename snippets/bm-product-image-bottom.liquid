@@ -1,0 +1,12 @@
+<div class="bm-product-image-bottom">
+  {% assign imgbottomfeture = product.metafields.bm_pdp.image_bottom_feature | split:'***' %}
+  {% for item in imgbottomfeture %}
+  <div class="bm-product-image-bottom-block">
+    {% assign imgbottomfetureitem = item | split:'###' %}
+    <div>
+      <img src="{{imgbottomfetureitem.first}}" alt="">
+    </div>
+    <h2>{{imgbottomfetureitem.last}}</h2>
+  </div>
+  {% endfor %}
+</div>

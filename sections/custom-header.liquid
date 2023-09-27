@@ -1,0 +1,175 @@
+<script defer src="{{ 'header-height.js' | asset_url }}"></script>
+
+<style>
+	header#shopify-section-header {
+		top: var(--announcement-bar-height);
+	}
+
+	@font-face {
+		font-family: 'GeneralSans';
+		font-weight: 400;
+		font-style: normal;
+		font-display: swap;
+		src: url('{{ "GeneralSans-Regular.woff2" | asset_url }}') format('woff2');
+	}
+
+	@font-face {
+		font-family: 'GeneralSans';
+		font-weight: 500;
+		font-style: normal;
+		font-display: swap;
+		src: url('{{ "GeneralSans-Medium.woff2" | asset_url }}') format('woff2');
+	}
+</style>
+
+<div
+	id='shopify-section-header'
+	style='
+		background-color: {{ section.settings.bg_color }};
+		{% if section.settings.bg_transparent == true %}
+			background-color: transparent !important;
+			position: absolute;
+			top: var(--announcement-bar-height);
+			left: 0;
+			width: 100%;
+			z-index: 444;
+		{% endif %}
+	'
+>
+	{% liquid
+		assign logo = section.settings.header_logo
+		assign header_logo_desk = section.settings.header_logo_desk
+
+		assign toggle = section.settings.toggle
+		assign toggle_url = section.settings.toggle_url
+		assign toggle_text_before = section.settings.toggle_text_before
+		assign toggle_text_after = section.settings.toggle_text_after
+
+		assign mob_menu = section.settings.mob_menu
+		assign bg_transparent = section.settings.bg_transparent
+
+		assign mega_menu_blocks = section.blocks
+
+		render 'header-mobile', logo: logo, bg_transparent: bg_transparent, menu: mob_menu, mega_menu_blocks: mega_menu_blocks, toggle: toggle, toggle_url: toggle_url, toggle_text_before: toggle_text_before, toggle_text_after: toggle_text_after
+		render 'header-desktop', logo: logo, header_logo_desk: header_logo_desk, bg_transparent: bg_transparent, mob_menu: mob_menu, mega_menu_blocks: mega_menu_blocks, toggle: toggle, toggle_url: toggle_url, toggle_text_before: toggle_text_before, toggle_text_after: toggle_text_after
+	%}
+</div>
+
+{% comment %} 	"class": "sticky-header", {% endcomment %}
+{% schema %}
+{
+	"name": "Header",
+	"settings": [
+		{
+			"type": "header",
+			"content": "Header logo"
+		},
+		{
+			"type": "image_picker",
+			"id": "header_logo",
+			"label": "Logo"
+		},
+		{
+			"type": "image_picker",
+			"id": "header_logo_desk",
+			"label": "Mega-menu logo"
+		},
+		{
+			"type": "header",
+			"content": "Background"
+		},
+		{
+			"type": "color",
+			"id": "bg_color",
+			"label": "Background color for header",
+			"default": "#fff"
+		},
+		{
+			"type": "checkbox",
+			"id": "bg_transparent",
+			"label": "Transparent",
+			"default": false
+		},
+
+		{
+			"type": "header",
+			"content": "Toggle"
+		},
+
+		{
+			"type": "checkbox",
+			"id": "toggle",
+			"label": "Toggle active",
+			"default": false
+		},
+
+		{
+			"type": "url",
+			"id": "toggle_url",
+			"label": "URL for toggle"
+		},
+		{
+			"type": "text",
+			"id": "toggle_text_before",
+			"label": "Toggle for EN",
+			"default": "EN"
+		},
+		{
+			"type": "text",
+			"id": "toggle_text_after",
+			"label": "Toggle for FR",
+			"default": "Fr"
+		},
+		{
+			"type": "header",
+			"content": "Header mobile content"
+		},
+		{
+			"type": "link_list",
+			"id": "mob_menu",
+			"label": "Mobile menu"
+		}
+	],
+	"blocks": [
+		{
+			"type": "maga_menu",
+			"name": "Mega menu",
+			"settings": [
+				{
+					"type": "text",
+					"id": "menu_item_title",
+					"label": "Menu item name"
+				},
+				{
+					"type": "text",
+					"id": "link_title",
+					"label": "Link title"
+				},
+				{
+					"type": "image_picker",
+					"id": "image",
+					"label": "Link image"
+				},
+
+				{
+					"type": "url",
+					"id": "url",
+					"label": "Link URL"
+				}
+			]
+		},
+		{
+			"type": "product",
+			"name": "Choose product",
+			"limit": 2,
+			"settings": [
+				{
+					"type": "product",
+					"id": "product_image",
+					"label": "Product"
+				}
+			]
+		}
+	]
+}
+{% endschema %}
