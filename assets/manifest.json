@@ -1,1 +1,14 @@
-{"name":"ESbuild Starter","short_name":"Starter","description":"A Shopify theme environment from scratch ⚙️, with Online Store 2.0 features. Built with performance ⚡️ and best practices in mind..","background_color":"#ffffff","theme_color":"#ffffff","start_url":"https:\/\/mgroupweb.com","display":"standalone","related_applications":[{"platform":"web"}]}
+{
+  "name": "ESbuild Starter",
+  "short_name": "Starter",
+  "description": "A Shopify theme environment from scratch ⚙️, with Online Store 2.0 features. Built with performance ⚡️ and best practices in mind..",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "start_url": "https:\/\/mgroupweb.com",
+  "display": "standalone",
+  "related_applications": [
+    {
+      "platform": "web"
+    }
+  ]
+}
