@@ -69,11 +69,77 @@
         "button_text": "Read more about us",
         "button_url": ""
       }
+    },
+    "product-slider": {
+      "type": "product-slider",
+      "settings": {
+      }
+    },
+    "quiz-section": {
+      "type": "quiz-section",
+      "settings": {
+      }
+    },
+    "quality-and-trust": {
+      "type": "quality-and-trust",
+      "settings": {
+      }
+    },
+    "targeted-solutions": {
+      "type": "targeted-solutions",
+      "settings": {
+      }
+    },
+    "money-back-garantee": {
+      "type": "money-back-garantee",
+      "settings": {
+      }
+    },
+    "logos-slider": {
+      "type": "logos-slider",
+      "settings": {
+      }
+    },
+    "customer-testimonials": {
+      "type": "customer-testimonials",
+      "settings": {
+      }
+    },
+    "save-from-10": {
+      "type": "save-from-10",
+      "settings": {
+      }
+    },
+    "new-trusted-recommended-doctors": {
+      "type": "new-trusted-recommended-doctors",
+      "settings": {
+      }
+    },
+    "healthy-habits": {
+      "type": "healthy-habits",
+      "settings": {
+      }
+    },
+    "utiva-for-good": {
+      "type": "utiva-for-good",
+      "settings": {
+      }
     }
   },
   "order": [
     "main-banner",
     "section-text",
-    "benefit-section"
+    "benefit-section",
+    "product-slider",
+    "quiz-section",
+    "quality-and-trust",
+    "targeted-solutions",
+    "money-back-garantee",
+    "logos-slider",
+    "customer-testimonials",
+    "save-from-10",
+    "new-trusted-recommended-doctors",
+    "healthy-habits",
+    "utiva-for-good"
   ]
 }
