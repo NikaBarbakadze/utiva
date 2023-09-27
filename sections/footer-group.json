@@ -72,9 +72,27 @@
         "newsletter_title": "<p>Join our newsletter<br\/>for access to promotions<\/p>",
         "footer_menu": "footer-new-navigation"
       }
+    },
+    "promo-banner": {
+      "type": "sticky-promo-banner",
+      "settings": {
+      }
+    },
+    "popup": {
+      "type": "newsletter-popup",
+      "settings": {
+      }
+    },
+    "social": {
+      "type": "social",
+      "settings": {
+      }
     }
   },
   "order": [
-    "footer"
+    "footer",
+    "promo-banner",
+    "popup",
+    "social"
   ]
 }
