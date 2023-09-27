@@ -235,15 +235,15 @@
     "customer-testimonials": {
       "type": "customer-testimonials",
       "settings": {
-        "paddingTop_mobile": 0,
-        "paddingBottom_mobile": 0,
+        "paddingTop_mobile": 24,
+        "paddingBottom_mobile": 48,
         "paddingTop_desktop": 0,
-        "paddingBottom_desktop": 0,
-        "title": "Title",
-        "subtitle": "Subtitle",
-        "reviews_label": "Reviews label",
-        "desc": "<p> Description<\/p>",
-        "button_text": ""
+        "paddingBottom_desktop": 100,
+        "title": "What are our customers saying?",
+        "subtitle": "Real Customers. Real Reviews.",
+        "reviews_label": "4.8 out of 5 stars from 653 reviews",
+        "desc": "<p>We are helping over 50,000 customers proactively manage their pelvic health! See what some of them have to say.<\/p>",
+        "button_text": "See all"
       }
     },
     "save-from-10": {
