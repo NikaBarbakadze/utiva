@@ -168,21 +168,67 @@
       "type": "money-back-garantee",
       "settings": {
         "paddingTop_mobile": 0,
-        "paddingBottom_mobile": 0,
+        "paddingBottom_mobile": 40,
         "paddingTop_desktop": 0,
         "paddingBottom_desktop": 0,
-        "bg_color": "",
-        "title": "",
-        "description": ""
+        "bg_color": "#c33635",
+        "title": "Money back guarantee",
+        "description": "<p>At Utiva, we aim to empower everyone to take their pelvic health into their own hands.<\/p><p>However, if your Utiva purchase is not quite the fit for your journey, we offer a <a href=\"#\"><strong>30-day<\/strong><\/a> money back guarantee.<\/p>"
       }
     },
     "logos-slider": {
       "type": "logos-slider",
+      "blocks": {
+        "21f7963c-d2c8-4a72-bcb3-139fd799ea31": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_2.svg"
+          }
+        },
+        "4099333a-c1bf-4e70-ae8d-edf669a64acd": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_3.svg"
+          }
+        },
+        "21f0ee3a-0aa7-46a6-9e51-0354b9f0df05": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_4.svg"
+          }
+        },
+        "49588abc-fc87-448e-84e5-b91f3ac9fc7e": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_5.svg"
+          }
+        },
+        "98ec1aaf-de64-4823-aa34-c8095e4f08bd": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_6.svg"
+          }
+        },
+        "95054113-78f7-417f-a145-e8b13cfd8b80": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle.svg"
+          }
+        }
+      },
+      "block_order": [
+        "21f7963c-d2c8-4a72-bcb3-139fd799ea31",
+        "4099333a-c1bf-4e70-ae8d-edf669a64acd",
+        "21f0ee3a-0aa7-46a6-9e51-0354b9f0df05",
+        "49588abc-fc87-448e-84e5-b91f3ac9fc7e",
+        "98ec1aaf-de64-4823-aa34-c8095e4f08bd",
+        "95054113-78f7-417f-a145-e8b13cfd8b80"
+      ],
       "settings": {
         "paddingTop_mobile": 0,
-        "paddingBottom_mobile": 0,
-        "paddingTop_desktop": 0,
-        "paddingBottom_desktop": 0,
+        "paddingBottom_mobile": 40,
+        "paddingTop_desktop": 80,
+        "paddingBottom_desktop": 96,
         "title": "As seen on"
       }
     },
