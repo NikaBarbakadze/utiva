@@ -34,8 +34,12 @@
 		</div>
 
 		<div class='header-mob__info--icons flex gap-1'>
-			{% render 'icon', icon: 'account-32' %}
+			<a href="/account">
+				{% render 'icon', icon: 'account-32' %}
+			</a>
+			<a href="javascipt:void()" onclick="document.querySelector('#cart-icon-bubble').click();">
 			{% render 'icon', icon: 'cart-32' %}
+			</a>
 		</div>
 
 		{% render 'header-mob-drawer',

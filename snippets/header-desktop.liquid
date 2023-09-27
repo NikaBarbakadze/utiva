@@ -161,7 +161,7 @@
 		</nav>
 
 		<div class='header-desktop__logo'>
-			<a href='{{ shop.url }}'>
+			<a href='/'>
 				{% if logo and header_logo_desk != blank %}
 					{{
 						logo
@@ -188,7 +188,7 @@
 					}}
 
 				{% else %}
-					<a href='{{ shop.url }}'> {{ shop.name }}</a>
+					<a href='/'> {{ shop.name }}</a>
 				{% endif %}
 			</a>
 		</div>
@@ -218,10 +218,10 @@
 				</span>
 			</div>
 
-			<a href='' class='header-desktop__icons--hover'> {% render 'icon', icon: 'account-32' %}</a>
+			<a href='/account' class='header-desktop__icons--hover'> {% render 'icon', icon: 'account-32' %}</a>
 
-			<a href='' class='header-desktop__icons--hover'> {% render 'icon', icon: 'magnifier-32' %}</a>
-			<a href='' class='header-desktop__icons--hover'> {% render 'icon', icon: 'cart-32' %}</a>
+			<a href='/search' class='header-desktop__icons--hover'> {% render 'icon', icon: 'magnifier-32' %}</a>
+			<a href='javascript:void()' class='header-desktop__icons--hover' id="cart-icon-bubble"> {% render 'icon', icon: 'cart-32' %}</a>
 		</div>
 	</div>
 </div>

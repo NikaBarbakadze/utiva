@@ -1243,7 +1243,7 @@ button.shopify-payment-button__button--unbranded {
   font: inherit;
   font-size: 1.5rem;
   text-decoration: none;
-  color: rgb(var(--color-button-text));
+  color: #000;
   transition: box-shadow var(--duration-short) ease;
   -webkit-appearance: none;
   appearance: none;
