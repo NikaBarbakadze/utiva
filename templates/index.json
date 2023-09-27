@@ -313,14 +313,62 @@
     },
     "new-trusted-recommended-doctors": {
       "type": "new-trusted-recommended-doctors",
+      "blocks": {
+        "2d42196f-364c-4153-9050-fe3a46837cdf": {
+          "type": "text",
+          "settings": {
+            "doctors_image": "shopify:\/\/shop_images\/ceccacad3c7ff53f3aa2f2a65265e78b.png",
+            "title": "Managing urinary tract health can be complex",
+            "description": "<p>About 3 years ago I started getting UTIs. I went from having a UTI here and there to having Chronic UTIs. Ever since I started taking Utiva a couple of months ago, I haven’t had any infections and my bladder health feels more secure and protected. I am so thankful for this... <\/p>",
+            "doctors_name": "Dr. Colleen McDermott",
+            "position": "Urogynecologist"
+          }
+        },
+        "d78cbc73-7151-4116-8433-c6f957683800": {
+          "type": "text",
+          "settings": {
+            "doctors_image": "shopify:\/\/shop_images\/image_512_010d3567-2f73-4e35-b834-1212963b6695.png",
+            "title": "Overuse of antibiotics is a concern",
+            "description": "<p>I always consider natural options to help manage urinary tract health in my patients. Utiva is a great, clean cranberry product which has been very effective in many of my patients.<\/p>",
+            "doctors_name": "Dr. Colleen McDermott",
+            "position": "Urogynecologist"
+          }
+        },
+        "21fb4f97-5504-4a87-a0aa-12fb6b2fe3dc": {
+          "type": "text",
+          "settings": {
+            "doctors_image": "shopify:\/\/shop_images\/image_513_6caf6acb-6b77-4bd4-8686-aaf7e4ad985d.png",
+            "title": "My own experience using Utiva has been great",
+            "description": "<p>I heard about Utiva through one of the attending physicians who is training me in my fellowship, Dr. Fiona Lindo. She had come across Utiva at a medical conference and saw that the price of Utiva was...<\/p>",
+            "doctors_name": "Dr. Emily Rutledge",
+            "position": "Urogynecologist"
+          }
+        },
+        "c647f522-e133-46a8-83ca-7cecce112a9c": {
+          "type": "text",
+          "settings": {
+            "doctors_image": "shopify:\/\/shop_images\/image_514.png",
+            "title": "Managing urinary tract health can be complex",
+            "description": "<p>About 3 years ago I started getting UTIs. I went from having a UTI here and there to having Chronic UTIs. Ever since I started taking Utiva a couple of months ago, I haven’t had any infections and my bladder health feels more secure and protected. I am so thankful for this... <\/p>",
+            "doctors_name": "Dr. Colleen McDermott",
+            "position": "Urogynecologist"
+          }
+        }
+      },
+      "block_order": [
+        "2d42196f-364c-4153-9050-fe3a46837cdf",
+        "d78cbc73-7151-4116-8433-c6f957683800",
+        "21fb4f97-5504-4a87-a0aa-12fb6b2fe3dc",
+        "c647f522-e133-46a8-83ca-7cecce112a9c"
+      ],
       "settings": {
         "paddingTop_mobile": 0,
-        "paddingBottom_mobile": 0,
-        "paddingTop_desktop": 0,
-        "paddingBottom_desktop": 0,
-        "title": "",
-        "button_text": "",
-        "button_url": ""
+        "paddingBottom_mobile": 48,
+        "paddingTop_desktop": 120,
+        "paddingBottom_desktop": 120,
+        "title": "Trusted and recommended by over 10,000 doctors",
+        "button_text": "See all",
+        "button_url": "shopify:\/\/pages\/about-us"
       }
     },
     "healthy-habits": {
