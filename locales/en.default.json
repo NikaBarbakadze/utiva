@@ -10,6 +10,7 @@
       "admin_link_html": "Are you the store owner? <a href=\"\/admin\" class=\"link underlined-link\">Log in here<\/a>",
       "powered_by_shopify_html": "This shop will be powered by {{ shopify }}"
     },
+    "newsletter_form": { "newsletter_email": "Enter your email", "newsletter_confirmation": "Thanks for subscribing", "submit": "Subscribe" },
     "social": {
       "alt_text": {
         "share_on_facebook": "Share on Facebook",

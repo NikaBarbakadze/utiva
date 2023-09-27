@@ -1,0 +1,234 @@
+{{ 'footer-new.css' | asset_url | stylesheet_tag }}
+<script src='{{ 'accordion.js' | asset_url }}' defer='defer'></script>
+
+<style>
+	@font-face {
+		font-family: 'GeneralSans';
+		font-weight: 400;
+		font-style: normal;
+		font-display: swap;
+		src: url('{{ "GeneralSans-Regular.woff2" | asset_url }}') format('woff2');
+	}
+
+	@font-face {
+		font-family: 'GeneralSans';
+		font-weight: 500;
+		font-style: normal;
+		font-display: swap;
+		src: url('{{ "GeneralSans-Medium.woff2" | asset_url }}') format('woff2');
+	}
+</style>
+
+<footer
+	class='footer-new'
+	style='background-color: {{ section.settings.background_color }};'
+	data-section-id='{{ section.id }}'
+	data-section-type='footer-section'
+>
+	<div class='footer-new__container'>
+		{% comment %} Subscribe form {% endcomment %}
+		<div class='footer-new__subscribe'>
+			{% unless page.handle contains 'rewards' %}
+				{% if section.settings.show_newsletter %}
+					<div class='footer-new__subscribe--container' data-aos>
+						{% if section.settings.newsletter_title != blank %}
+							<div class='footer-new__subscribe--title'>
+								{{ section.settings.newsletter_title }}
+							</div>
+						{% endif %}
+						<div class='footer-new__subscribe--form'>
+							{% render 'omnisend-form', section_id: section.id, snippet_context: 'section' %}
+						</div>
+					</div>
+				{% endif %}
+			{% endunless %}
+		</div>
+		{% comment %} Navigation and additional links {% endcomment %}
+		<div class='footer-new__links-list'>
+			<div class='footer-new__navigation'>
+				{% for link in section.settings.footer_menu.links -%}
+					<div class='footer-new__navigation--links accordion-wrapper'>
+						<div class='footer-new__navigation--links-button accordion-wrapper__button'>
+							<div class='footer-new__navigation--links-title'>
+								{{ link.title }}
+							</div>
+							<div class='plusminus accordion-wrapper__plusminus'></div>
+						</div>
+						<div class='footer-new__navigation--child-links accordion-wrapper__content'>
+							{% for child_link in link.links %}
+								<a href='{{ child_link.url }}'>
+									{{ child_link.title }}
+								</a>
+							{% endfor %}
+						</div>
+					</div>
+				{%- endfor %}
+			</div>
+			<div class='footer-new__additional-links'>
+				{% for block in section.blocks %}
+					{% if block.type == 'additional_links' %}
+						<a
+							href='{{ block.settings.additional_url }}'
+							class='btn-new btn-new--new-link footer-new__additional-links--btn'
+						>
+							{{- block.settings.title -}}
+							{% if block.settings.icon_checkbox == true %}
+								{% render 'icon', icon: 'arrow-up-24' %}
+							{% endif %}
+						</a>
+					{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+		{% comment %} Social media {% endcomment %}
+		<div class='footer-new__social-block'>
+			{% for block in section.blocks %}
+				{% if block.type == 'social_media' %}
+					{% if block.settings.social_icon != blank %}
+						<a class='footer-new__social-block--icon' href='{{ block.settings.social_link }}'>
+							{{ block.settings.social_icon }}
+						</a>
+					{% endif %}
+				{% endif %}
+			{% endfor %}
+		</div>
+		{% comment %} Copyright and privacy links {% endcomment %}
+		<div class='footer-new__pravicy-block'>
+			<div class='footer-new__pravicy-block--container'>
+				{% for block in section.blocks %}
+					{% if block.type == 'privacy_links' %}
+						<div class='footer-new__pravicy-block--navigation'>
+							<div class='footer-new__pravicy-block--date'>
+								<p class='body-xs'>
+									&copy; {{ 'now' | date: '%Y' }}
+									{{ shop.name | link_to: routes.root_url -}}
+								</p>
+							</div>
+							<div class='footer-new__pravicy-block--navigation-links'>
+								{% for link in block.settings.privacy_menu.links -%}
+									<a
+										class='footer-new__pravicy-block--navigation-link body-xs'
+										href='{{ link.url }}'
+									>
+										{{ link.title }}
+									</a>
+								{%- endfor %}
+							</div>
+						</div>
+						{% if block.settings.message != blank %}
+							<div class='footer-new__pravicy-block--message'>{{ block.settings.message }}</div>
+						{% endif %}
+					{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</footer>
+
+{% schema %}
+{
+	"name": "Footer",
+	"settings": [
+		{
+			"type": "header",
+			"content": "Background settings"
+		},
+		{
+			"type": "color",
+			"id": "background_color",
+			"label": "Background color"
+		},
+		{
+			"type": "header",
+			"content": "Newsletter settings"
+		},
+		{
+			"type": "checkbox",
+			"id": "show_newsletter",
+			"label": "Show newsletter signup",
+			"info": "Customers who subscribe will have their email address added to the 'accepts marketing' [customer list](/admin/customers?query=&accepts_marketing=1).",
+			"default": true
+		},
+		{
+			"type": "richtext",
+			"id": "newsletter_title",
+			"label": "Newsletter heading",
+			"default": "<p>Sign up and save</p>"
+		},
+		{
+			"type": "header",
+			"content": "Footer navigation"
+		},
+		{
+			"type": "link_list",
+			"id": "footer_menu",
+			"label": "Footer menu"
+		}
+	],
+	"blocks": [
+		{
+			"type": "social_media",
+			"name": "Social media",
+			"settings": [
+				{
+					"type": "textarea",
+					"id": "social_icon",
+					"label": "Social icon"
+				},
+				{
+					"type": "url",
+					"id": "social_link",
+					"label": "URL"
+				}
+			]
+		},
+		{
+			"type": "additional_links",
+			"name": "Additional link",
+			"settings": [
+				{
+					"type": "header",
+					"content": "Link settings"
+				},
+				{
+					"type": "text",
+					"id": "title",
+					"label": "Text"
+				},
+				{
+					"type": "url",
+					"id": "additional_url",
+					"label": "URL"
+				},
+				{
+					"type": "header",
+					"content": "Icon settings"
+				},
+				{
+					"type": "checkbox",
+					"id": "icon_checkbox",
+					"label": "Show icon",
+					"default": true
+				}
+			]
+		},
+		{
+			"type": "privacy_links",
+			"name": "Privacy link",
+			"limit": 1,
+			"settings": [
+				{
+					"type": "link_list",
+					"id": "privacy_menu",
+					"label": "Privacy menu"
+				},
+				{
+					"type": "richtext",
+					"id": "message",
+					"label": "Text"
+				}
+			]
+		}
+	]
+}
+{% endschema %}
