@@ -24,7 +24,7 @@
         "paddingBottom_mobile": 40,
         "paddingTop_desktop": 60,
         "paddingBottom_desktop": 50,
-        "bg_color": "#FCFCFA",
+        "bg_color": "#fcfcfa",
         "rich_text": "<p>At Utiva we specialize in solutions for common, yet often stigmatized and under-treated <strong>pelvic health<\/strong> concerns of women.<a href=\"\/policies\/refund-policy\" title=\"Refund Policy\"><em> UTIs, Overactive Bladder, Yeast Infections, Gut Health <\/em><\/a>We are committed to developing clinically effective solutions that address root causes and are as natural as the issues themselves.<\/p>"
       }
     },
@@ -73,56 +73,141 @@
     "product-slider": {
       "type": "product-slider",
       "settings": {
+        "paddingTop_mobile": 0,
+        "paddingBottom_mobile": 40,
+        "paddingTop_desktop": 120,
+        "paddingBottom_desktop": 80,
+        "title": "Our most popular solutions",
+        "button_text": "Shop all",
+        "button_url": "",
+        "collection": "best-sellers"
       }
     },
     "quiz-section": {
       "type": "quiz-section",
       "settings": {
+        "paddingTop_mobile": 0,
+        "paddingBottom_mobile": 0,
+        "paddingTop_desktop": 0,
+        "paddingBottom_desktop": 0,
+        "background_color": "",
+        "title": "Not sure where to start?",
+        "description": "<p>Take our quiz to build the right routine for you<\/p>",
+        "btn_text": "Solution finder",
+        "btn_url": ""
       }
     },
     "quality-and-trust": {
       "type": "quality-and-trust",
       "settings": {
+        "bg_color": "",
+        "paddingTop_mobile": 0,
+        "paddingBottom_mobile": 0,
+        "paddingTop_desktop": 0,
+        "paddingBottom_desktop": 0,
+        "title": "",
+        "description": ""
       }
     },
     "targeted-solutions": {
       "type": "targeted-solutions",
       "settings": {
+        "paddingTop_mobile": 0,
+        "paddingBottom_mobile": 0,
+        "paddingTop_desktop": 0,
+        "paddingBottom_desktop": 0,
+        "bg_color": "",
+        "title": "",
+        "description": "",
+        "button_text": "",
+        "button_url": ""
       }
     },
     "money-back-garantee": {
       "type": "money-back-garantee",
       "settings": {
+        "paddingTop_mobile": 0,
+        "paddingBottom_mobile": 0,
+        "paddingTop_desktop": 0,
+        "paddingBottom_desktop": 0,
+        "bg_color": "",
+        "title": "",
+        "description": ""
       }
     },
     "logos-slider": {
       "type": "logos-slider",
       "settings": {
+        "paddingTop_mobile": 0,
+        "paddingBottom_mobile": 0,
+        "paddingTop_desktop": 0,
+        "paddingBottom_desktop": 0,
+        "title": "As seen on"
       }
     },
     "customer-testimonials": {
       "type": "customer-testimonials",
       "settings": {
+        "paddingTop_mobile": 0,
+        "paddingBottom_mobile": 0,
+        "paddingTop_desktop": 0,
+        "paddingBottom_desktop": 0,
+        "title": "Title",
+        "subtitle": "Subtitle",
+        "reviews_label": "Reviews label",
+        "desc": "<p> Description<\/p>",
+        "button_text": ""
       }
     },
     "save-from-10": {
       "type": "save-from-10",
       "settings": {
+        "paddingTop_mobile": 0,
+        "paddingBottom_mobile": 0,
+        "paddingTop_desktop": 0,
+        "paddingBottom_desktop": 0,
+        "bg_color": "#91D5D0",
+        "title": "",
+        "button_text": "",
+        "button_link": ""
       }
     },
     "new-trusted-recommended-doctors": {
       "type": "new-trusted-recommended-doctors",
       "settings": {
+        "paddingTop_mobile": 0,
+        "paddingBottom_mobile": 0,
+        "paddingTop_desktop": 0,
+        "paddingBottom_desktop": 0,
+        "title": "",
+        "button_text": "",
+        "button_url": ""
       }
     },
     "healthy-habits": {
       "type": "healthy-habits",
       "settings": {
+        "paddingTop_mobile": 0,
+        "paddingBottom_mobile": 0,
+        "paddingTop_desktop": 0,
+        "paddingBottom_desktop": 0,
+        "title": "",
+        "subtext": "",
+        "button_text": "",
+        "button_url": ""
       }
     },
     "utiva-for-good": {
       "type": "utiva-for-good",
       "settings": {
+        "paddingTop_mobile": 0,
+        "paddingBottom_mobile": 0,
+        "paddingTop_desktop": 0,
+        "paddingBottom_desktop": 0,
+        "background_color": "",
+        "title": "Utiva for good",
+        "title_color": "#C33635",
+        "description": "<p>Description<\/p>"
       }
     }
   },
