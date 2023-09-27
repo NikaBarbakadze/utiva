@@ -16,9 +16,21 @@
         "btn_text": "Shop all",
         "btn_url": ""
       }
+    },
+    "section-text": {
+      "type": "section-text",
+      "settings": {
+      }
+    },
+    "benefit-section": {
+      "type": "benefit-section",
+      "settings": {
+      }
     }
   },
   "order": [
-    "main-banner"
+    "main-banner",
+    "section-text",
+    "benefit-section"
   ]
 }
