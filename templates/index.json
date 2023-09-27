@@ -112,15 +112,55 @@
     },
     "targeted-solutions": {
       "type": "targeted-solutions",
+      "blocks": {
+        "c85e708b-ab70-40c4-89b3-355579adc277": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_487.jpg",
+            "title": "UTI",
+            "url": ""
+          }
+        },
+        "704da8a6-8c7c-432f-9b89-6c915b991e12": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_491.jpg",
+            "title": "Overactive bladder",
+            "url": ""
+          }
+        },
+        "a15fa326-c734-4e1e-9fdc-4dedb62dfed7": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_492.jpg",
+            "title": "Vaginal wellness",
+            "url": ""
+          }
+        },
+        "4a4714b8-fdbe-45d7-aae7-55e6e38b60ec": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle.jpg",
+            "title": "Gut health",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "c85e708b-ab70-40c4-89b3-355579adc277",
+        "704da8a6-8c7c-432f-9b89-6c915b991e12",
+        "a15fa326-c734-4e1e-9fdc-4dedb62dfed7",
+        "4a4714b8-fdbe-45d7-aae7-55e6e38b60ec"
+      ],
       "settings": {
         "paddingTop_mobile": 0,
         "paddingBottom_mobile": 0,
         "paddingTop_desktop": 0,
         "paddingBottom_desktop": 0,
-        "bg_color": "",
-        "title": "",
-        "description": "",
-        "button_text": "",
+        "bg_color": "#ede5dd",
+        "title": "Shop by targeted solutions",
+        "description": "For UTIs, overactive bladder, vaginal wellness and gut",
+        "button_text": "Shop all",
         "button_url": ""
       }
     },
