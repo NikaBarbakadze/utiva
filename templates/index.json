@@ -20,11 +20,24 @@
     "section-text": {
       "type": "section-text",
       "settings": {
+        "paddingTop_mobile": 40,
+        "paddingBottom_mobile": 40,
+        "paddingTop_desktop": 60,
+        "paddingBottom_desktop": 50,
+        "bg_color": "#FCFCFA",
+        "rich_text": "<p>At Utiva we specialize in solutions for common, yet often stigmatized and under-treated <strong>pelvic health<\/strong> concerns of women.<a href=\"\/policies\/refund-policy\" title=\"Refund Policy\"><em> UTIs, Overactive Bladder, Yeast Infections, Gut Health <\/em><\/a>We are committed to developing clinically effective solutions that address root causes and are as natural as the issues themselves.<\/p>"
       }
     },
     "benefit-section": {
       "type": "benefit-section",
       "settings": {
+        "paddingTop_mobile": 0,
+        "paddingBottom_mobile": 0,
+        "paddingTop_desktop": 0,
+        "paddingBottom_desktop": 0,
+        "section_title": "",
+        "button_text": "",
+        "button_url": ""
       }
     }
   },
