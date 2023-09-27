@@ -85,11 +85,11 @@
       "type": "newsletter-popup",
       "settings": {
         "mode": "disabled",
-        "popup_seconds": 5,
+        "popup_seconds": 2,
         "popup_days": 30,
-        "popup_title": "Sign up and save",
-        "popup_text": "<p>Entice customers to sign up for your mailing list with discounts or exclusive offers.<\/p>",
-        "enable_newsletter": true,
+        "popup_title": "Choose your Country",
+        "popup_text": "<p><a href=\"http:\/\/utivahealth.com\" title=\"http:\/\/utivahealth.com\">US<\/a><br\/><a href=\"http:\/\/utivahealth.ca\" title=\"http:\/\/utivahealth.ca\">CANADA<\/a><\/p>",
+        "enable_newsletter": false,
         "button_label": "",
         "button_link": ""
       }
