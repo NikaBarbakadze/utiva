@@ -101,12 +101,13 @@
       "type": "quality-and-trust",
       "settings": {
         "bg_color": "",
-        "paddingTop_mobile": 0,
-        "paddingBottom_mobile": 0,
+        "paddingTop_mobile": 64,
+        "paddingBottom_mobile": 64,
         "paddingTop_desktop": 0,
-        "paddingBottom_desktop": 0,
-        "title": "",
-        "description": ""
+        "paddingBottom_desktop": 96,
+        "image": "shopify:\/\/shop_images\/Frame_9fb43be8-92a2-4c53-9864-7402bd40a5d9.svg",
+        "title": "Quality and trust — that is the Utiva promise",
+        "description": "Our #1 goal is to help our customers lead happier, healthier, more natural lives."
       }
     },
     "targeted-solutions": {
