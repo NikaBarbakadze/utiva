@@ -1,0 +1,83 @@
+<section class="page-width">
+  <p class="heading">{{ section.settings.heading }}</p>
+
+<!--     <div class="points-wrapper">
+    {% for block in section.blocks %}
+      <div class="points-block">
+        {%- assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+        <img class="lazyload"
+            data-src="{{ img_url }}"
+            data-widths="[180, 360, 540, 750, 900, 1080]"
+            data-aspectratio="{{ block.settings.image.aspect_ratio }}"
+            data-sizes="auto"
+            alt="{{ block.settings.image.alt }}">
+        <p class="point-heading">{{ block.settings.heading }}</p>
+        <p class="points">{{ block.settings.points }}</p>
+      </div>
+    {% endfor %}
+  </div> -->
+  
+<div id="stamped-rewards-widget" data-widget-type="rewards-earnings-v2" data-label-title="EARN POINTS"></div>
+
+<style>
+  .facebook_link a {
+  	background: #fff;
+    color: #000;
+    padding: 8px 10px;
+    border-radius: 18px;
+    font-size: 16px;
+  }
+  </style>
+    
+ {% if customer %}
+<script>
+  $( document ).ready(function() { 
+    setTimeout(function() {
+      $('.stamped-rewards-widget-item[data-campaign-id="22848"] .stamped-rewards-widget-item-inner').append('<div class="facebook_link"><a target="_blank" href="https://www.facebook.com/groups/youtiva/" onclick="StampedFn.rewardsCreateActivity({campaignId: 22848});">Visit Our Group</a></div>');
+      $('.stamped-rewards-widget-item[data-campaign-id="22849"] .stamped-rewards-widget-item-inner.stamped-rewards-widget-item-inner').append('<div class="facebook_link"><a target="_blank" href="https://www.utivahealth.ca/pages/uti-tracker-app" onclick="StampedFn.rewardsCreateActivity({campaignId: 22849});">Download Now</a></div>');
+     
+    }, 3000);
+    
+  });
+</script>
+  {% endif %}
+  
+
+</section>
+{% schema %}
+  {
+    "name": "Rewards Points",
+    "class": "rewards-points",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      }
+    ],
+    "blocks":[
+      {
+        "type": "points",
+        "name": "Rewards Points",
+        "settings":[
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+          },
+          {
+            "type": "text",
+            "id": "points",
+            "label": "Points"
+          }
+        ]
+       }
+     ]
+  }
+{% endschema %}
+

@@ -48,7 +48,7 @@
         "bg_transparent": false,
         "toggle": true,
         "toggle_url": "",
-        "toggle_text_before": "EN",
+        "toggle_text_before": "En",
         "toggle_text_after": "Fr",
         "mob_menu": "mob-menu"
       }

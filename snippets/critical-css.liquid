@@ -20,12 +20,6 @@
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
     text-rendering: optimizeSpeed;
-    font-family: {{ settings.type_base_font_family.family }}, {{ settings.type_base_font_family.fallback_families }};
-    font-size: {{ settings.type_base_size | times: 0.85 }}px;
-    font-weight: {{ settings.type_base_font_family.weight }};
-    font-style: {{ settings.type_base_font_family.style }};
-    letter-spacing: {{ settings.type_base_spacing | default: "50" | divided_by: 1000.00 }}em;
-    line-height: {{ settings.type_base_line_height | default: 1.4 }};
   }
 
   @media only screen and (min-width: 769px) {

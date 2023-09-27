@@ -236,6 +236,13 @@
       }
     {% endstyle %}
 
+    {%- render 'css-variables' -%}
+
+    {{ 'index.css' | asset_url | stylesheet_tag }}
+
+    {% render 'critical-css' %}
+		{% render 'load-css' %}
+
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'custom-styles.css' | asset_url | stylesheet_tag }}
 

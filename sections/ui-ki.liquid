@@ -1,0 +1,325 @@
+{{ 'ui-kit.css' | asset_url | stylesheet_tag }}
+
+<div class="ui-kit">
+  <h2 class="ui-kit__section-title">Typography</h2>
+  <div class="ui-kit__typography" style="padding: 32px 32px 120px; display: flex; gap: 80px;">
+    <div class="ui-kit__headings">
+      <h4 class="ui-kit__section" style="color: var(--primary-color-red);">Headings style</h4>
+      <h1>Headline / XL</h1>
+      <h2>Headline / L</h2>
+      <h3>Headline / M</h3>
+      <h4>Headline / S</h4>
+      <h5>Headline / XS</h5>
+    </div>
+    <div class="ui-kit__body">
+      <h4 class="ui-kit__section" style="color: var(--primary-color-red);">Body style</h4>
+      <p class="body-xl">Headline / XL</p>
+      <p class="body-m">Headline / M</p>
+      <p class="body-s">Headline / S</p>
+      <p class="body-xs">Headline / XS</p>
+      <p class="label-new">LABEL</p>
+    </div>
+  </div>
+  <h2 class="ui-kit__section-title">Buttons style</h2>
+  <div class="ui-kit__buttons">
+    <div class="ui-kit__buttons--block">
+      <h4>Primary buttons style (icon)</h4>
+      <div class="button">
+        <a href="#" class="btn-new btn-new--primary">Click here
+          {% render 'icon', icon: 'primary-btn-icon' %}
+        </a>
+      </div>
+
+      <div class="button">
+        <a
+          href="#"
+          class="btn-new btn-new--primary"
+          disabled>
+          Click here
+          {% render 'icon', icon: 'primary-btn-icon' %}
+        </a>
+      </div>
+    </div>
+    <div class="ui-kit__buttons--block">
+      <h4>Primary buttons style</h4>
+      <div class="button">
+        <a href="#" class="btn-new btn-new--primary-simple">Placeholder
+        </a>
+      </div>
+
+      <div class="button">
+        <a
+          href="#"
+          class="btn-new btn-new--primary-simple"
+          disabled>
+          Placeholder
+        </a>
+      </div>
+    </div>
+    <div class="ui-kit__buttons--block">
+      <h4>Primary buttons style row</h4>
+      <div class="button">
+        <a href="#" class="btn-new btn-new--primary-row">Placeholder
+        <p>Placeholder</p>
+        </a>
+      </div>
+
+      <div class="button">
+        <a
+          href="#"
+          class="btn-new btn-new--primary-row"
+          disabled>
+          Placeholder
+          <p>Placeholder</p>
+        </a>
+      </div>
+    </div>
+    <div class="ui-kit__buttons--block">
+      <h4>Secondary buttons style</h4>
+      <div class="button">
+        <a href="#" class="btn-new btn-new--secondary">Click here
+        </a>
+      </div>
+
+      <div class="button">
+        <a
+          href="#"
+          class="btn-new btn-new--secondary"
+          disabled>
+          Click here
+        </a>
+      </div>
+    </div>
+    <div class="ui-kit__buttons--block">
+      <h4>Secondary with icon</h4>
+      <div class="button">
+        <a href="#" class="btn-new btn-new--secondary-icon">Click here
+          {% render 'icon', icon: 'secondary-btn-icon' %}
+        </a>
+      </div>
+
+      <div class="button">
+        <a
+          href="#"
+          class="btn-new btn-new--secondary-icon"
+          disabled>
+          Click here
+          {% render 'icon', icon: 'secondary-btn-icon' %}
+        </a>
+      </div>
+    </div>
+    <div class="ui-kit__buttons--block">
+      <h4>Secondary button white style</h4>
+      <div class="button" style="background-color: black; padding: 16px;">
+        <a href="#" class="btn-new btn-new--secondary-white">Click here
+        </a>
+      </div>
+
+      <div class="button" style="background-color: black; padding: 16px;">
+        <a
+          href="#"
+          class="btn-new btn-new--secondary-white"
+          disabled>
+          Click here
+        </a>
+      </div>
+    </div>
+    <div class="ui-kit__buttons--block">
+      <h4>Secondary button fill style</h4>
+      <div class="button" style="background-color: black; padding: 16px;">
+        <a href="#" class="btn-new btn-new--secondary-fill">Click here
+        </a>
+      </div>
+
+      <div class="button" style="background-color: black; padding: 16px;">
+        <a
+          href="#"
+          class="btn-new btn-new--secondary-fill"
+          disabled>
+          Click here
+        </a>
+      </div>
+    </div>
+    <div class="ui-kit__buttons--block">
+      <h4>Secondary small</h4>
+      <div class="button">
+        <a href="#" class="btn-new btn-new--secondary-small">Click here
+        </a>
+      </div>
+
+      <div class="button">
+        <a
+          href="#"
+          class="btn-new btn-new--secondary-small"
+          disabled>
+          Click here
+        </a>
+      </div>
+    </div>
+    <div class="ui-kit__buttons--block">
+      <h4>Circle arrow button</h4>
+      <div class="button">
+        <a href="#" class="btn-new btn-new--arrow">
+          {% render 'icon', icon: 'arrow-right-32' %}
+        </a>
+      </div>
+      <div class="button">
+        <a
+          href="#"
+          class="btn-new btn-new--arrow"
+          disabled>
+          {% render 'icon', icon: 'arrow-right-32' %}
+        </a>
+      </div>
+      <div class="button">
+        <a href="#" class="btn-new btn-new--arrow">
+          {% render 'icon', icon: 'arrow-left-32' %}
+        </a>
+      </div>
+
+      <div class="button">
+        <a
+          href="#"
+          class="btn-new btn-new--arrow"
+          disabled>
+          {% render 'icon', icon: 'arrow-left-32' %}
+        </a>
+      </div>
+    </div>
+    <div class="ui-kit__buttons--block">
+      <h4>Simple arrow button</h4>
+      <div class="button">
+        <a href="#" class="btn-new btn-new--arrow-simple">
+          {% render 'icon', icon: 'arrow-right-32' %}
+        </a>
+      </div>
+      <div class="button">
+        <a
+          href="#"
+          class="btn-new btn-new--arrow-simple"
+          disabled>
+          {% render 'icon', icon: 'arrow-right-32' %}
+        </a>
+      </div>
+      <div class="button">
+        <a href="#" class="btn-new btn-new--arrow-simple">
+          {% render 'icon', icon: 'arrow-left-32' %}
+        </a>
+      </div>
+
+      <div class="button">
+        <a
+          href="#"
+          class="btn-new btn-new--arrow-simple"
+          disabled>
+          {% render 'icon', icon: 'arrow-left-32' %}
+        </a>
+      </div>
+    </div>
+    <div class="ui-kit__buttons--block">
+      <h4>Simple arrow button small</h4>
+      <div class="button">
+        <a href="#" class="btn-new btn-new--arrow-simple-small">
+          {% render 'icon', icon: 'arrow-right-24' %}
+        </a>
+      </div>
+      <div class="button">
+        <a
+          href="#"
+          class="btn-new btn-new--arrow-simple-small"
+          disabled>
+          {% render 'icon', icon: 'arrow-right-24' %}
+        </a>
+      </div>
+      <div class="button">
+        <a href="#" class="btn-new btn-new--arrow-simple-small">
+          {% render 'icon', icon: 'arrow-left-24' %}
+        </a>
+      </div>
+
+      <div class="button">
+        <a
+          href="#"
+          class="btn-new btn-new--arrow-simple-small"
+          disabled>
+          {% render 'icon', icon: 'arrow-left-24' %}
+        </a>
+      </div>
+    </div>
+    <div class="ui-kit__buttons--block">
+      <h4>Link style</h4>
+      <div class="button">
+        <a href="#" class="btn-new btn-new--link-18">
+          Some Link
+        </a>
+      </div>
+      <div class="button">
+        <a href="#" class="btn-new btn-new--link-16">
+          Some Link
+        </a>
+      </div>
+    </div>
+    <div class="ui-kit__buttons--block">
+      <h4>Tertiary link</h4>
+      <div class="button">
+        <a href="#" class="btn-new btn-new--tertiary">
+          Placeholder
+        </a>
+      </div>
+      <div class="button">
+        <a href="#" class="btn-new btn-new--tertiary">
+          Placeholder
+        </a>
+      </div>
+    </div>
+  </div>
+  <h2 class="ui-kit__section-title">Elements</h2>
+  <div class="ui-kit__elements">
+    <div class="element-tag label-new">
+      placeholder
+    </div>
+    <label class="toggle" for="yourId">
+      <input
+        type="checkbox"
+        class="toggle__input"
+        id="yourId" />
+      <span class="toggle-track">
+        <span class="toggle-indicator"></span>
+      </span>
+    </label>
+  </div>
+  <h2 class="ui-kit__section-title">Input</h2>
+  <div class="ui-kit__inputs" style="padding: 32px 32px 120px;">
+    <div class="input-new">
+      <div class="input-new__container">
+        <input
+          type="text"
+          class="input-new__item"
+          placeholder="Enter email"
+          required="">
+        <button class="input-new__button" type="submit">
+          {% render 'icon', icon: 'magnifier-24' %}
+        </button>
+      </div>
+      <div class="input-new__error-message">
+        Error message
+      </div>
+    </div>
+
+
+  </div>
+
+</div>
+
+{% schema %}
+  {
+    "name": "UI Kit",
+    "tag": "section",
+    "settings": [],
+    "presets": [
+      {
+        "name": "UI Kit"
+      }
+    ]
+  }
+{% endschema %}

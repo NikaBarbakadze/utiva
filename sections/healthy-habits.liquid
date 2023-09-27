@@ -1,0 +1,178 @@
+{{ 'healthy-habits.css' | asset_url | stylesheet_tag }}
+{% liquid
+	assign image_desktop = section.settings.image_desktop | image_url: width: image_desktop.width
+	assign image_mobile = section.settings.image_mobile | image_url: width: image_mobile.width
+%}
+{% style %}
+	    #shopify-section-{{ section.id }}{
+	        --padding-top: {{ section.settings.paddingTop_desktop }}px;
+	        --padding-bottom: {{ section.settings.paddingBottom_desktop }}px;
+	}
+	       .healthy-habits{
+	           background-image: url({{ image_desktop }});
+			border-radius: 24px;
+	       }
+
+	@media screen and (max-width: 768px) {
+	    #shopify-section-{{ section.id }}{
+	        --padding-top: {{ section.settings.paddingTop_mobile }}px;
+	        --padding-bottom: {{ section.settings.paddingBottom_mobile }}px;
+	    }
+	       .healthy-habits{
+	        background-image: url({{ image_mobile }});
+			border-radius:0;
+	       }
+	}
+{% endstyle %}
+
+<div
+	class='healthy-habits'
+	style='
+		margin-top: var(--padding-top);
+		margin-bottom: var(--padding-bottom);
+	'
+>
+	<div class='healthy-habits__top'>
+		<h2 class='healthy-habits__top--title'>{{ section.settings.title }}</h2>
+		<p class='healthy-habits__top--subtext'>{{ section.settings.subtext }}</p>
+	</div>
+	<ul class='healthy-habits__list'>
+		{% for block in section.blocks %}
+			{% assign img = block.settings.image | image_url: width: img.width %}
+			<li class='healthy-habits__list--item'>
+				<div class='healthy-habits__list--item--img'>
+					{% render 'image', image: img %}
+				</div>
+				<p class='healthy-habits__list--item--text'>{{ block.settings.text }}</p>
+			</li>
+		{% endfor %}
+	</ul>
+	{% if section.settings.button_text != blank %}
+		<a
+			href='{{ section.settings.button_url }}'
+			class='btn-new btn-new--secondary-white healthy-habits__btn--link'
+		>
+			{{- section.settings.button_text -}}
+		</a>
+	{% endif %}
+</div>
+
+{% schema %}
+{
+	"name": "Healthy habits",
+	"tag": "section",
+	"settings": [
+		{
+			"type": "header",
+			"content": "Background settings"
+		},
+
+		{
+			"type": "range",
+			"id": "paddingTop_mobile",
+			"min": 0,
+			"max": 100,
+			"step": 2,
+			"unit": "px",
+			"label": "Padding top for mobile",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "paddingBottom_mobile",
+			"min": 0,
+			"max": 100,
+			"step": 2,
+			"unit": "px",
+			"label": "Padding bottom for mobile",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "paddingTop_desktop",
+			"min": 0,
+			"max": 100,
+			"step": 2,
+			"unit": "px",
+			"label": "Padding top for desktop",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "paddingBottom_desktop",
+			"min": 0,
+			"max": 100,
+			"step": 2,
+			"unit": "px",
+			"label": "Padding bottom for desktop",
+			"default": 0
+		},
+		{
+			"type": "image_picker",
+			"id": "image_desktop",
+			"label": "Background image for desktop"
+		},
+		{
+			"type": "image_picker",
+			"id": "image_mobile",
+			"label": "Background image for mobile"
+		},
+		{
+			"type": "header",
+			"content": "Content settings"
+		},
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Title",
+			"placeholder": "Text"
+		},
+		{
+			"type": "text",
+			"id": "subtext",
+			"label": "Description",
+			"placeholder": "Text"
+		},
+		{
+			"type": "header",
+			"content": "Button settings"
+		},
+		{
+			"type": "text",
+			"id": "button_text",
+			"label": "Button Text",
+			"placeholder": "Text"
+		},
+		{
+			"type": "url",
+			"id": "button_url",
+			"label": "Button link"
+		}
+	],
+	"blocks": [
+		{
+			"name": "Habit",
+			"limit": 4,
+			"type": "habit",
+			"settings": [
+				{
+					"type": "image_picker",
+					"id": "image",
+					"label": "icon"
+				},
+				{
+					"type": "text",
+					"id": "text",
+					"placeholder": "Text",
+					"label": "Text"
+				}
+			]
+		}
+	],
+	"presets": [
+		{
+			"name": "Healthy habits"
+		}
+	]
+}
+{% endschema %}

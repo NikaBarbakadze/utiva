@@ -1,0 +1,180 @@
+{{ 'logos-slider.css' | asset_url | stylesheet_tag }}
+{% style %}
+	#shopify-section-{{ section.id }}{
+	--padding-top: {{ section.settings.paddingTop_desktop }}px;
+	--padding-bottom: {{ section.settings.paddingBottom_desktop }}px;
+	}
+
+	@media screen and (max-width: 768px) {
+	#shopify-section-{{ section.id }}{
+	--padding-top: {{ section.settings.paddingTop_mobile }}px;
+	--padding-bottom: {{ section.settings.paddingBottom_mobile }}px;
+	}
+	}
+{% endstyle %}
+<div
+	class='logos-slider__wrapper'
+	style='
+		padding-top: var(--padding-top);
+		padding-bottom: var(--padding-bottom);
+	'
+>
+	<h2 class='logos-slider__title'>{{ section.settings.title }}</h2>
+	{% assign blocksSize = section.blocks | size %}
+	<div
+		class='logos-slider logos-slider__{{ section.id }} {%  if blocksSize <= 5 %} logos-slider__less-five {% endif %} '
+	>
+		{% for block in section.blocks %}
+			{% liquid
+				assign image = block.settings.image
+				assign logo = image | image_url: width: logo.width
+			%}
+			<img src='{{ logo }}' height='40' class='logos-slider__item'>
+		{% endfor %}
+	</div>
+</div>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		const slick = $('.logos-slider__{{ section.id }}');
+
+		if ({{ section.blocks | size }})
+		{
+			if ( window.innerWidth < 767) return;
+			if ({{ section.blocks | size }} <= 5) return;
+			slick.slick(
+				{
+					arrows: false,
+					slidesToShow: 1,
+					variableWidth: true,
+					lazyLoad: "progressive",
+					swipeToSlide: true,
+					mobileFirst: true,
+					centerMode: true,
+					infinite: true,
+					initialSlide: Math.floor(+'{{ section.blocks | size }}' / 2),
+					responsive: [
+						{
+							breakpoint: 768,
+							settings: {
+								slidesToShow: 3,
+							}
+						},
+						{
+							breakpoint: 500
+						}
+					],
+				}
+			);
+
+
+
+			let blocked = false;
+			let blockTimeout = null;
+			slick.on('wheel', (function(e) {
+				e.preventDefault();
+
+				clearTimeout(blockTimeout);
+	  			blockTimeout = setTimeout(function(){
+	      			blocked = false;
+	  			}, 20);
+				  if(!blocked){
+					console.log(e.originalEvent);
+
+				if (e.originalEvent.deltaX > 0) {
+					$(this).slick('slickNext');
+				} else if(e.originalEvent.deltaX < 0){
+					$(this).slick('slickPrev');
+				}else if (e.originalEvent.deltaY > 0) {
+					$(this).slick('slickNext');
+				} else {
+					$(this).slick('slickPrev');
+				}
+				blocked = true;
+				}
+
+			}));
+
+		}
+
+	}
+		)
+</script>
+
+{% schema %}
+{
+	"name": "Logos slider",
+	"tag": "section",
+	"settings": [
+		{
+			"type": "header",
+			"content": "Background settings"
+		},
+		{
+			"type": "range",
+			"id": "paddingTop_mobile",
+			"min": 0,
+			"max": 100,
+			"step": 2,
+			"unit": "px",
+			"label": "Padding top for mobile",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "paddingBottom_mobile",
+			"min": 0,
+			"max": 100,
+			"step": 2,
+			"unit": "px",
+			"label": "Padding bottom for mobile",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "paddingTop_desktop",
+			"min": 0,
+			"max": 100,
+			"step": 2,
+			"unit": "px",
+			"label": "Padding top for desktop",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "paddingBottom_desktop",
+			"min": 0,
+			"max": 100,
+			"step": 2,
+			"unit": "px",
+			"label": "Padding bottom for desktop",
+			"default": 0
+		},
+		{
+			"type": "text",
+			"placeholder": "Text",
+			"id": "title",
+			"default": "As seen on",
+			"label": "Title"
+		}
+	],
+	"blocks": [
+		{
+			"name": "logo",
+			"type": "logo",
+			"settings": [
+				{
+					"type": "image_picker",
+					"id": "image",
+					"label": "Logo"
+				}
+			]
+		}
+	],
+	"presets": [
+		{
+			"name": "Logos slider"
+		}
+	]
+}
+{% endschema %}

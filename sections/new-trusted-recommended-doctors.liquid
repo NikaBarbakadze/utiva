@@ -1,0 +1,238 @@
+{{ 'new-trusted-doctors.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+		#shopify-section-{{ section.id }}{
+			--padding-top: {{ section.settings.paddingTop_desktop }}px;
+			--padding-bottom: {{ section.settings.paddingBottom_desktop }}px;
+	}
+
+
+	@media screen and (max-width: 768px) {
+		#shopify-section-{{ section.id }}{
+			--padding-top: {{ section.settings.paddingTop_mobile }}px;
+			--padding-bottom: {{ section.settings.paddingBottom_mobile }}px;
+		}
+	}
+{% endstyle %}
+
+<div
+	class='new-trusted-doctors'
+	style='
+		padding-top: var(--padding-top);
+		padding-bottom: var(--padding-bottom);
+	'
+>
+	<div class='new-trusted-doctors__container'>
+		<div class='new-trusted-doctors__section-content'>
+			{% if section.settings.title != blank %}
+				<p class='new-trusted-doctors__section-content--title'>
+					{{ section.settings.title }}
+				</p>
+			{% endif %}
+			{% if section.settings.button_text != blank %}
+				<div class='new-trusted-doctors__btn-desktop'>
+					<a href='{{ section.settings.button_url }}' class='btn-new btn-new--secondary'>
+						{{ section.settings.button_text }}
+					</a>
+				</div>
+			{% endif %}
+		</div>
+
+		<div class='new-trusted-doctors__doctors-block new-trusted-doctors__doctors-block--{{ section.id }}'>
+			{% for block in section.blocks %}
+				<div class='new-trusted-doctors__doctors-block--wrapper'>
+					{% if block.settings.doctors_image != blank %}
+						<div class='new-trusted-doctors__doctors-block--img'>
+							{% render 'image', image: block.settings.doctors_image %}
+						</div>
+					{% endif %}
+					<div class='new-trusted-doctors__doctors-block--text'>
+						{% if block.settings.title != blank %}
+							<div class='new-trusted-doctors__doctors-block--title'>
+								{{ block.settings.title }}
+							</div>
+						{% endif %}
+						{% if block.settings.description != blank %}
+							<div class='new-trusted-doctors__doctors-block--description'>
+								{{ block.settings.description }}
+							</div>
+						{% endif %}
+						<div class='new-trusted-doctors__doctors-block--doctors-info'>
+							{% if block.settings.doctors_name != blank %}
+								<div class='new-trusted-doctors__doctors-block--name'>
+									{{ block.settings.doctors_name }}
+								</div>
+							{% endif %}
+							{% if block.settings.position != blank %}
+								<div class='new-trusted-doctors__doctors-block--position'>
+									{{ block.settings.position }}
+								</div>
+							{% endif %}
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+		{% if section.settings.button_text != blank %}
+			<div class='new-trusted-doctors__btn-mobile'>
+				<a href='{{ section.settings.button_url }}' class='btn-new btn-new--secondary'>
+					{{ section.settings.button_text }}
+				</a>
+			</div>
+		{% endif %}
+	</div>
+</div>
+
+<script>
+	$(document).ready(function () {
+		$('.new-trusted-doctors__doctors-block--{{ section.id }}').slick({
+			arrows: false,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			variableWidth: false,
+			lazyLoad: 'progressive',
+			infinite: false,
+			swipeToSlide: true,
+			mobileFirst: true,
+			slidesToShow: 1.08,
+			responsive: [
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 1.5,
+					},
+				},
+				{
+					breakpoint: 650,
+					settings: {
+						slidesToShow: 2.5,
+					},
+				},
+				{
+					breakpoint: 1024,
+					settings: {
+						arrows: true,
+						prevArrow:
+							"<button type='button' class='slick-prev pull-left btn-new btn-new--arrow'><svg xmlns='http://www.w3.org/2000/svg' width='32'height='32' viewBox='0 0 32 32' fill='none'> <path d='M5.3335 15.9999H28.0002M5.3335 15.9999L12.0002 9.33325M5.3335 15.9999L12.0002 22.6666' stroke='#1C1C1C' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/> </svg></button>",
+						nextArrow:
+							"<button type='button' class='slick-next pull-right btn-new btn-new--arrow'><svg xmlns='http://www.w3.org/2000/svg' width='32'height='32' viewBox='0 0 32 32' fill='none'> <path d='M26.6667 15.9999H4M26.6667 15.9999L20 22.6666M26.6667 15.9999L20 9.33325' stroke='#1C1C1C' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/> </svg></button>",
+						slidesToShow: 3.17,
+					},
+				},
+			],
+		});
+	});
+</script>
+
+{% schema %}
+{
+	"name": "Trusted Doctors (new)",
+	"settings": [
+		{
+			"type": "header",
+			"content": "Background settings"
+		},
+		{
+			"type": "range",
+			"id": "paddingTop_mobile",
+			"min": 0,
+			"max": 100,
+			"step": 2,
+			"unit": "px",
+			"label": "Padding top for mobile",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "paddingBottom_mobile",
+			"min": 0,
+			"max": 100,
+			"step": 2,
+			"unit": "px",
+			"label": "Padding bottom for mobile",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "paddingTop_desktop",
+			"min": 0,
+			"max": 200,
+			"step": 2,
+			"unit": "px",
+			"label": "Padding top for desktop",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "paddingBottom_desktop",
+			"min": 0,
+			"max": 200,
+			"step": 2,
+			"unit": "px",
+			"label": "Padding bottom for desktop",
+			"default": 0
+		},
+		{
+			"type": "header",
+			"content": "Section settings"
+		},
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Title"
+		},
+		{
+			"type": "header",
+			"content": "Button settings"
+		},
+		{
+			"type": "text",
+			"id": "button_text",
+			"label": "Button Text"
+		},
+		{
+			"type": "url",
+			"id": "button_url",
+			"label": "Button link"
+		}
+	],
+	"blocks": [
+		{
+			"name": "Doctors",
+			"type": "text",
+			"settings": [
+				{
+					"type": "image_picker",
+					"id": "doctors_image",
+					"label": "Image"
+				},
+				{
+					"type": "text",
+					"id": "title",
+					"label": "Title"
+				},
+				{
+					"type": "richtext",
+					"id": "description",
+					"label": "Description"
+				},
+				{
+					"type": "text",
+					"id": "doctors_name",
+					"label": "Doctors Name"
+				},
+				{
+					"type": "text",
+					"id": "position",
+					"label": "Position"
+				}
+			]
+		}
+	],
+	"presets": [
+		{
+			"name": "Trusted and Recommended"
+		}
+	]
+}
+{% endschema %}
