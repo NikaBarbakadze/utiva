@@ -16,7 +16,6 @@
 
   {%- style -%}
     .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
       padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     }
 
@@ -61,7 +60,7 @@
     >
   {%- endif -%}
 
-  <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid_dawn grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
+  <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid_dawn grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %} md:flex-nowrap">
     <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
       <media-gallery
         id="MediaGallery-{{ section.id }}"
@@ -79,7 +78,7 @@
           </a>
           <ul
             id="Slider-Gallery-{{ section.id }}"
-            class="product__media-list contains-media grid_dawn grid--peek list-unstyled slider slider--mobile"
+            class="product__media-list contains-media grid_dawn grid--peek list-unstyled slider slider--mobile max-h-[36rem] overflow-y-hidden md:max-h-[unset] md:overflow-y-auto"
             role="list"
           >
             {%- liquid
@@ -185,7 +184,7 @@
           >
             <button
               type="button"
-              class="slider-button slider-button--prev{% if media_count <= 3 %} small-hide{% endif %}{% if media_count <= 4 %} medium-hide large-up-hide{% endif %}"
+              class="slider-button hidden md:!block slider-button--prev{% if media_count <= 3 %} small-hide{% endif %}{% if media_count <= 4 %} medium-hide large-up-hide{% endif %}"
               name="previous"
               aria-label="{{ 'general.slider.previous_slide' | t }}"
               aria-controls="GalleryThumbnails-{{ section.id }}"
@@ -195,7 +194,7 @@
             </button>
             <ul
               id="Slider-Thumbnails-{{ section.id }}"
-              class="thumbnail-list list-unstyled slider slider--mobile{% if section.settings.gallery_layout == 'thumbnail_slider' %} slider--tablet-up{% endif %}"
+              class="thumbnail-list list-unstyled slider slider--mobile{% if section.settings.gallery_layout == 'thumbnail_slider' %} slider--tablet-up{% endif %} !p-3"
             >
               {%- if featured_media != null -%}
                 {%- liquid
@@ -261,7 +260,7 @@
                   -%}
                   <li
                     id="Slide-Thumbnails-{{ section.id }}-{{ forloop.index }}"
-                    class="thumbnail-list__item slider__slide{% if section.settings.hide_variants and variant_images contains media.src %} thumbnail-list_item--variant{% endif %}"
+                    class="thumbnail-list__item !w-[6.4rem] !h-[6.4rem] slider__slide{% if section.settings.hide_variants and variant_images contains media.src %} thumbnail-list_item--variant{% endif %}"
                     data-target="{{ section.id }}-{{ media.id }}"
                     data-media-position="{{ media_index }}"
                   >
@@ -275,7 +274,7 @@
                       </span>
                     {%- endif -%}
                     <button
-                      class="thumbnail global-media-settings global-media-settings--no-shadow {% if media.preview_image.aspect_ratio > 1 %}thumbnail--wide{% else %}thumbnail--narrow{% endif %}"
+                      class="thumbnail !w-[6.4rem] !h-[6.4rem] !rounded-lg global-media-settings global-media-settings--no-shadow {% if media.preview_image.aspect_ratio > 1 %}thumbnail--wide{% else %}thumbnail--narrow{% endif %}"
                       aria-label="{%- if media.media_type == 'image' -%}{{ 'products.product.media.load_image' | t: index: media_index }}{%- elsif media.media_type == 'model' -%}{{ 'products.product.media.load_model' | t: index: media_index }}{%- elsif media.media_type == 'video' or media.media_type == 'external_video' -%}{{ 'products.product.media.load_video' | t: index: media_index }}{%- endif -%}"
                       {% if media == product.selected_or_first_available_variant.featured_media or product.selected_or_first_available_variant.featured_media == null and forloop.index == 1 %}
                         aria-current="true"
@@ -307,7 +306,7 @@
             </ul>
             <button
               type="button"
-              class="slider-button slider-button--next{% if media_count <= 3 %} small-hide{% endif %}{% if media_count <= 4 %} medium-hide large-up-hide{% endif %}"
+              class="slider-button hidden md:!block slider-button--next{% if media_count <= 3 %} small-hide{% endif %}{% if media_count <= 4 %} medium-hide large-up-hide{% endif %}"
               name="next"
               aria-label="{{ 'general.slider.next_slide' | t }}"
               aria-controls="GalleryThumbnails-{{ section.id }}"
@@ -340,8 +339,8 @@
                 {{- block.settings.text -}}
               </p>
             {%- when 'title' -%}
-              <div class="product__title" {{ block.shopify_attributes }}>
-                <h1>{{ product.title | escape }}</h1>
+              <div class="product__title mt-5 !mb-4 md:mt-0" {{ block.shopify_attributes }}>
+                <h1 class="text-[2.8rem] leading-[3.64rem] font-medium -tracking-[0.056rem]">{{ product.title | escape }}</h1>
                 <a href="{{ product.url }}" class="product__title">
                   <h2 class="h1">
                     {{ product.title | escape }}
@@ -675,7 +674,7 @@
             {%- when 'variant_picker' -%}
               {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
             {%- when 'buy_buttons' -%}
-              {%- render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true -%}
+              {%- render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: false -%}
             {%- when 'rating' -%}
               {%- if product.metafields.reviews.rating.value != blank -%}
                 {% liquid

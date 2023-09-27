@@ -588,6 +588,22 @@ video {
   isolation: isolate;
 }
 
+.mt-8 {
+  margin-top: 32px;
+}
+
+.mt-5 {
+  margin-top: 20px;
+}
+
+.mb-4 {
+  margin-bottom: 16px;
+}
+
+.\!mb-4 {
+  margin-bottom: 16px !important;
+}
+
 .block {
   display: block;
 }
@@ -616,6 +632,18 @@ video {
   display: none;
 }
 
+.\!h-\[6\.4rem\] {
+  height: 6.4rem !important;
+}
+
+.max-h-\[36rem\] {
+  max-height: 36rem;
+}
+
+.\!w-\[6\.4rem\] {
+  width: 6.4rem !important;
+}
+
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -624,30 +652,40 @@ video {
   flex-wrap: wrap;
 }
 
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.bg-slate-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(51 65 85 / var(--tw-bg-opacity));
+.\!rounded-lg {
+  border-radius: 8px !important;
 }
 
-.bg-slate-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
+.\!p-3 {
+  padding: 12px !important;
 }
 
-.bg-slate-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+.\!py-3 {
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
 }
 
 .text-xl {
   font-size: 20px;
   line-height: 28px;
+}
+
+.text-\[2\.8rem\] {
+  font-size: 2.8rem;
+}
+
+.font-medium {
+  font-weight: 500;
 }
 
 .uppercase {
@@ -660,6 +698,14 @@ video {
 
 .italic {
   font-style: italic;
+}
+
+.leading-\[3\.64rem\] {
+  line-height: 3.64rem;
+}
+
+.-tracking-\[0\.056rem\] {
+  letter-spacing: -0.056rem;
 }
 
 .shadow {
@@ -685,4 +731,26 @@ video {
 
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+@media (min-width: 768px) {
+  .md\:mt-0 {
+    margin-top: 0px;
+  }
+
+  .md\:\!block {
+    display: block !important;
+  }
+
+  .md\:max-h-\[unset\] {
+    max-height: unset;
+  }
+
+  .md\:flex-nowrap {
+    flex-wrap: nowrap;
+  }
+
+  .md\:overflow-y-auto {
+    overflow-y: auto;
+  }
 }
