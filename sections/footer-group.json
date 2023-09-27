@@ -97,8 +97,8 @@
     "social": {
       "type": "social",
       "settings": {
-        "enable_home": true,
-        "enable_product": true,
+        "enable_home": false,
+        "enable_product": false,
         "enable_collection": false,
         "title": "On social",
         "description": "<p>Send us yours <a href=\"https:\/\/instagram.com\/youraccount\/\">@youraccount<\/a><\/p>"
