@@ -424,15 +424,38 @@
     },
     "utiva-for-good": {
       "type": "utiva-for-good",
+      "blocks": {
+        "6a12d4ce-9cda-445e-aaaf-de02f015d306": {
+          "type": "info",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/Rectangle_a55f3f62-ecb8-4345-bda2-fcb855a44e8c.png",
+            "description": "<p>Eradicating preventable<br\/>maternal deaths<\/p>"
+          }
+        },
+        "f942f25a-e50b-47e4-b3b5-fd392145a7e2": {
+          "type": "info",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/Rectangle-1.svg",
+            "description": "<p>Providing equitable access<br\/>to hygiene products<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "6a12d4ce-9cda-445e-aaaf-de02f015d306",
+        "f942f25a-e50b-47e4-b3b5-fd392145a7e2"
+      ],
       "settings": {
         "paddingTop_mobile": 0,
         "paddingBottom_mobile": 0,
         "paddingTop_desktop": 0,
         "paddingBottom_desktop": 0,
-        "background_color": "",
+        "background_color": "#f7f4f0",
+        "image_desktop": "shopify:\/\/shop_images\/img_bced0035-4d15-4342-98fe-e69bfe8aa07b.png",
+        "image_mobile": "shopify:\/\/shop_images\/image_519.png",
+        "icon": "shopify:\/\/shop_images\/charity.svg",
         "title": "Utiva for good",
         "title_color": "#C33635",
-        "description": "<p>Description<\/p>"
+        "description": "<p>As part of our advocacy for better health, for every purchase made we donate a portion of our proceeds to:<\/p>"
       }
     }
   },
