@@ -1,0 +1,20 @@
+{
+  "sections": {
+    "5b56eb08-1c10-482e-b930-c32791665c2e": {
+      "type": "main-banner",
+      "settings": {
+        "background_color": "",
+        "label_text": "Voted #1 brand in UTI prevention†",
+        "label_background_color": "",
+        "label_text_color": "",
+        "title": "Clinically Effective. Always Natural.",
+        "description": "<p>Addressing women's pelvic health conditions with science-backed solutions that work.<\/p>",
+        "btn_text": "Shop all",
+        "btn_url": ""
+      }
+    }
+  },
+  "order": [
+    "5b56eb08-1c10-482e-b930-c32791665c2e"
+  ]
+}
