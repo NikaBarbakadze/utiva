@@ -1,0 +1,71 @@
+{
+  "sections": {
+    "main": {
+      "type": "bm-page-hero",
+      "blocks": {
+        "d627f8e6-4c58-4d86-bd57-c7f994806c0c": {
+          "type": "text",
+          "settings": {
+            "bm_right_top_content": "What is OAB?"
+          }
+        },
+        "a8b4f155-fc11-4a53-96f7-b464a9b61cdf": {
+          "type": "text",
+          "settings": {
+            "bm_right_top_content": "Symptoms"
+          }
+        },
+        "ce1ba9ce-ebf4-45d3-8782-50ebecb954fc": {
+          "type": "text",
+          "settings": {
+            "bm_right_top_content": "Who can get it?"
+          }
+        },
+        "252ca89a-f67f-406a-9f78-d2ca3bf396ee": {
+          "type": "text",
+          "settings": {
+            "bm_right_top_content": "Statistics"
+          }
+        },
+        "06587d27-253e-4b46-9aae-2d2051e7baf0": {
+          "type": "text",
+          "settings": {
+            "bm_right_top_content": "Causes"
+          }
+        },
+        "5d6c865d-5d80-4758-9a6a-df248db4508e": {
+          "type": "text",
+          "settings": {
+            "bm_right_top_content": "Types"
+          }
+        },
+        "43dea980-9849-496b-97f6-c961ea6924ab": {
+          "type": "text",
+          "settings": {
+            "bm_right_top_content": "How to manage"
+          }
+        }
+      },
+      "block_order": [
+        "d627f8e6-4c58-4d86-bd57-c7f994806c0c",
+        "a8b4f155-fc11-4a53-96f7-b464a9b61cdf",
+        "ce1ba9ce-ebf4-45d3-8782-50ebecb954fc",
+        "252ca89a-f67f-406a-9f78-d2ca3bf396ee",
+        "06587d27-253e-4b46-9aae-2d2051e7baf0",
+        "5d6c865d-5d80-4758-9a6a-df248db4508e",
+        "43dea980-9849-496b-97f6-c961ea6924ab"
+      ],
+      "settings": {
+        "bm_page_hero_bg_img": "shopify:\/\/shop_images\/desktop_uti_1_1_1.png",
+        "bm_page_hero_moba_bg_img": "shopify:\/\/shop_images\/mobile_uti_1_1_1.png",
+        "bm_page_left_title": "Overactive Bladder (OAB) 101",
+        "bm_page_right_title": "CONTENTS",
+        "bm_enable_social_share": true,
+        "bm_page_bottom_title": "Share"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
