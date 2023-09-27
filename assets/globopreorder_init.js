@@ -1,1 +1,0 @@
-var GPOInstalled = true;
