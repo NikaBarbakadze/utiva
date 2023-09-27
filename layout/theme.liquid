@@ -275,6 +275,141 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
+
+    <script
+			src='https://code.jquery.com/jquery-3.6.0.min.js'
+			integrity='sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4='
+			crossorigin='anonymous'
+		></script>
+
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+		<style>
+			/* Slick arrow */
+			.slick-prev,
+			.slick-next {
+				top: 50%;
+			}
+			.product__main-photos .slick-dots {
+				padding: 0;
+			}
+			.slick-next:before {
+				background: url('https://cdn.shopify.com/s/files/1/0060/4677/7455/files/arrow_2.png?v=1642673474')
+					no-repeat;
+				content: '';
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				background-size: 100%;
+				transform: rotate(270deg);
+				top: 0;
+				right: 0;
+			}
+			.slick-prev:before {
+				background: url('https://cdn.shopify.com/s/files/1/0060/4677/7455/files/arrow_2.png?v=1642673474')
+					no-repeat;
+				content: '';
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				background-size: 100%;
+				transform: rotate(90deg);
+				top: 0;
+				left: 0;
+			}
+			@media only screen and (min-width: 769px) {
+				button.slick-next.slick-arrow {
+					display: none !important;
+					z-index: 1;
+				}
+				button.slick-prev.slick-arrow {
+					display: none !important;
+					z-index: 1;
+				}
+				.product__main-photos-wrapper:hover .slick-next {
+					display: block !important;
+				}
+				.product__main-photos-wrapper:hover .slick-prev {
+					display: block !important;
+				}
+			}
+
+			/* announcement bar */
+			.announcement__text span {
+				font-size: 18px;
+				font-family: 'Nunito';
+				padding-top: 6px;
+				font-weight: 700;
+				letter-spacing: 0.2em;
+				text-transform: uppercase;
+				transition: opacity 0.75s ease;
+				text-align: center;
+			}
+			.announcement__text {
+				font-weight: 700;
+			}
+			@media only screen and (min-width: 769px) {
+				.bm-mobile-product-info {
+					opacity: 0 !important;
+				}
+
+				.announcement__text {
+					font-size: 18px;
+					font-family: 'Nunito';
+					padding-top: 6px;
+				}
+			}
+			@media only screen and (max-width: 768px) {
+				.announcement__text span {
+					font-family: 'Nunito';
+					font-weight: 700;
+					font-size: 12px;
+					letter-spacing: 0.2em;
+					text-transform: uppercase;
+					display: block;
+					transition: opacity 0.75s ease;
+					text-align: center;
+					padding-top: 0;
+				}
+				a.soundest-form-without-image-open {
+					display: none;
+				}
+				.announcement {
+					position: fixed;
+					width: 100%;
+					top: 0;
+				}
+				/* menu-bar-adjustment-start */
+				html body.template-product .site-nav__thumb-button.js-toggle-slide-nav {
+					border: 2px solid transparent !important;
+					border-radius: 35px !important;
+					color: #fff !important;
+					background: #db222d;
+					transition: background 0.15s ease;
+					box-shadow: none !important;
+				}
+
+				html body.template-product .site-nav__thumb-button.is-active {
+					border-top-right-radius: 0 !important;
+					border-top-left-radius: 0 !important;
+				}
+
+				html body.template-product li.slide-nav__item.border-bottom {
+					border-bottom: medium none !important;
+				}
+				/* menu-bar-adjustment-end */
+			}
+			@media only screen and (max-width: 480px) {
+				.announcement .announcement__text {
+					padding-top: 7px;
+				}
+			}
+			.right_top_menu {
+				display: none;
+			}
+		</style>
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">

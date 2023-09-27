@@ -78,7 +78,7 @@
 			</div>
 
 			<div class='customer-feedback__btn desktop'>
-				<div class='button'>
+				<div class='cs-button'>
 					{% if button_text != blank %}
 						<a href='#' class='btn-new btn-new--secondary'>{{ button_text }} </a>
 					{% endif %}
@@ -96,7 +96,7 @@
 								<div>
 									{% if block.settings.review_rating != blank %}
 										<div class='customer-feedback__block--review_rating'>
-											<div class='button'>
+											<div class='cs-button'>
 												<a href='#' class='btn-new btn-new--secondary-small'>
 													{% render 'icon', icon: 'star-20' %}
 													{{- block.settings.review_rating }}
@@ -176,7 +176,7 @@
 										{% endif %}
 										{% if block.settings.user_rating != blank %}
 											<div class='customer-feedback__block--review_rating review-rating'>
-												<div class='button'>
+												<div class='cs-button'>
 													<a href='#' class='btn-new btn-new--secondary-small'>
 														{% render 'icon', icon: 'star-20' %}
 														{{- block.settings.user_rating }}
@@ -194,7 +194,7 @@
 		</div>
 
 		<div class='customer-feedback__btn mobile'>
-			<div class='button'>
+			<div class='cs-button'>
 				{% if button_text != blank %}
 					<a href='#' class='btn-new btn-new--secondary'>{{ button_text }} </a>
 				{% endif %}
