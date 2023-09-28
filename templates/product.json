@@ -20,12 +20,32 @@
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true
           }
+        },
+        "fb7838f8-4d79-4815-a28f-67d1a48c0d77": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Rewards",
+            "icon": "none",
+            "content": "<p>Content<\/p>",
+            "page": ""
+          }
+        },
+        "b1f7433f-cb10-4111-a6fa-9f3c8aaecad9": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "FAQ",
+            "icon": "none",
+            "content": "<p>Faq content<\/p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
         "title",
         "variant_picker",
-        "buy_buttons"
+        "buy_buttons",
+        "fb7838f8-4d79-4815-a28f-67d1a48c0d77",
+        "b1f7433f-cb10-4111-a6fa-9f3c8aaecad9"
       ],
       "settings": {
         "enable_sticky_info": true,

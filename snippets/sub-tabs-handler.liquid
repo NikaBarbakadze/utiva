@@ -1,0 +1,34 @@
+<!-- @prettify-ignore -->
+<script defer>
+    window.addEventListener("DOMContentLoaded", function() {
+        const tabs = document.querySelectorAll(".subs_wrapper .otp_div, .subs_wrapper .sub_div");
+        tabs.forEach(tab => tab.addEventListener("click", function() {
+            let prevActiveTab = [...tabs].find(e => e.classList.contains("active"));
+            if (prevActiveTab !== undefined) {
+                prevActiveTab.classList.remove("active");
+            }
+
+            this.classList.add("active");
+
+            if (this.classList.contains("sub_div")) {
+                document.querySelector(".product-form__buttons .product-form__submit").removeAttribute("disabled");
+                
+                let selectedSellingPlan = document.querySelector(".product_selling_plans_wrapper.active .product_selling_plan.active");
+                selectedSellingPlan = selectedSellingPlan.dataset.sellingPlan;
+                document.querySelector(".product-variant-sp").value = selectedSellingPlan;
+            } else if (this.classList.contains("otp_div")) {
+                document.querySelector(".product-form__buttons .product-form__submit").removeAttribute("disabled");
+            }
+        }));
+
+        const sellingPlanWrappers = document.querySelectorAll(".product_selling_plans_wrapper.active .product_selling_plan");
+        sellingPlanWrappers.forEach(spWrapper => {
+            spWrapper.addEventListener("click", () => {
+                sellingPlanWrappers.forEach(e => e.classList.remove("active"));
+
+                spWrapper.classList.add("active");
+                document.querySelector(".product-variant-sp").value = spWrapper.dataset.sellingPlan;
+            });
+        });
+    });
+</script>

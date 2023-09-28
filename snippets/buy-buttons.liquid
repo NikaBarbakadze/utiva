@@ -58,6 +58,12 @@
           disabled
           class="product-variant-id"
         >
+        <input
+          type="hidden"
+          name="selling_plan"
+          value=""
+          class="product-variant-sp"
+        >
 
         {%- if gift_card_recipient_feature_active -%}
           {%- render 'gift-card-recipient-form', product: product, form: form, section: section -%}
@@ -77,17 +83,11 @@
             id="ProductSubmitButton-{{ section_id }}"
             type="submit"
             name="add"
-            class="product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
-            {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
-              disabled
-            {% endif %}
+            class="product-form__submit !bg-[#C33635] !py-[1.7rem] !mb-4 !px-8 !rounded-[8rem] button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
+            disabled
           >
-            <span>
-              {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
-                {{ 'products.product.sold_out' | t }}
-              {%- else -%}
-                {{ 'products.product.add_to_cart' | t }}
-              {%- endif -%}
+            <span class="text-base font-medium text-white">
+              {{ 'products.product.add_to_cart' | t }}
             </span>
             <div class="loading-overlay__spinner hidden">
               <svg
@@ -101,9 +101,6 @@
               </svg>
             </div>
           </button>
-          {%- if show_dynamic_checkout -%}
-            {{ form | payment_button }}
-          {%- endif -%}
         </div>
       {%- endform -%}
     </product-form>

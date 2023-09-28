@@ -211,12 +211,12 @@
                 -%}
                 <li
                   id="Slide-Thumbnails-{{ section.id }}-0"
-                  class="thumbnail-list__item slider__slide{% if section.settings.hide_variants and variant_images contains featured_media.src %} thumbnail-list_item--variant{% endif %}"
+                  class="thumbnail-list__item !w-[6.4rem] !h-[6.4rem] slider__slide{% if section.settings.hide_variants and variant_images contains featured_media.src %} thumbnail-list_item--variant{% endif %}"
                   data-target="{{ section.id }}-{{ featured_media.id }}"
                   data-media-position="{{ media_index }}"
                 >
                   <button
-                    class="thumbnail global-media-settings global-media-settings--no-shadow {% if featured_media.preview_image.aspect_ratio > 1 %}thumbnail--wide{% else %}thumbnail--narrow{% endif %}"
+                    class="thumbnail !w-[6.4rem] !h-[6.4rem] !rounded-lg global-media-settings global-media-settings--no-shadow {% if featured_media.preview_image.aspect_ratio > 1 %}thumbnail--wide{% else %}thumbnail--narrow{% endif %}"
                     aria-label="{%- if featured_media.media_type == 'image' -%}{{ 'products.product.media.load_image' | t: index: media_index }}{%- elsif featured_media.media_type == 'model' -%}{{ 'products.product.media.load_model' | t: index: media_index }}{%- elsif featured_media.media_type == 'video' or featured_media.media_type == 'external_video' -%}{{ 'products.product.media.load_video' | t: index: media_index }}{%- endif -%}"
                     aria-current="true"
                     aria-controls="GalleryViewer-{{ section.id }}"
@@ -339,13 +339,24 @@
                 {{- block.settings.text -}}
               </p>
             {%- when 'title' -%}
-              <div class="product__title mt-5 !mb-4 md:mt-0" {{ block.shopify_attributes }}>
-                <h1 class="text-[2.8rem] leading-[3.64rem] font-medium -tracking-[0.056rem]">{{ product.title | escape }}</h1>
+              <div class="product__title mt-5 !mb-[1.6rem] md:mt-0" {{ block.shopify_attributes }}>
+                <h1 class="text-[2.8rem] leading-[3.64rem] font-medium -tracking-[0.056rem] md:text-4xl md:mb-4 md:leading-[4.32rem] md:-tracking-[0.072rem]">{{ product.title | escape }}</h1>
                 <a href="{{ product.url }}" class="product__title">
                   <h2 class="h1">
                     {{ product.title | escape }}
                   </h2>
                 </a>
+              </div>
+              <div class="flex items-center justify-start gap-x-2 mb-6 md:mb-8">
+                {% if product.metafields.custom.rating %} 
+                  <div class="flex items-center justify-center gap-x-1 rounded-[4rem] border border-[#C33635] py-0.5 pl-1.5 pr-2.5">
+                    {% render 'icon-star' %}
+                    <span class="text-[#1C1C1C] text-sm font-medium leading-[1.96rem]">{{ product.metafields.custom.rating.value }}</span>
+                  </div>
+                {% endif %}
+                {% if product.metafields.custom.reviews_count %} 
+                  <p class="text-[#1C1C1C] text-sm font-medium leading-[1.96rem]">Based on {{ product.metafields.custom.reviews_count.value }} reviews</p>
+                {% endif %}
               </div>
             {%- when 'price' -%}
               <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
@@ -441,16 +452,16 @@
             {%- when 'custom_liquid' -%}
               {{ block.settings.custom_liquid }}
             {%- when 'collapsible_tab' -%}
-              <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
+              <div class="product__accordion !border-none accordion quick-add-hidden" {{ block.shopify_attributes }}>
                 <details id="Details-{{ block.id }}-{{ section.id }}">
                   <summary>
                     <div class="summary__title">
                       {% render 'icon-accordion', icon: block.settings.icon %}
-                      <h2 class="h4 accordion__title inline-richtext">
+                      <h2 class="accordion__title inline-richtext text-2xl -tracking-[0.024rem] font-normal text-[#1C1C1C]">
                         {{ block.settings.heading | default: block.settings.page.title }}
                       </h2>
                     </div>
-                    {% render 'icon-caret' %}
+                    {% render 'icon-accordion-plus' %}
                   </summary>
                   <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
                     {{ block.settings.content }}
@@ -673,8 +684,65 @@
 
             {%- when 'variant_picker' -%}
               {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+              <div class="subs_wrapper w-full flex flex-col gap-y-3 pb-6">
+                <div class="sub_div cursor-pointer w-full flex flex-col gap-y-6 py-3.5 px-5 rounded-xl border border-[#1c1c1c1f] relative">
+                  <div class="absolute right-[3.7%] md:right-[3%] -top-[20%] py-0.5 px-2 bg-[#C33635] rounded-[4rem] flex items-center justify-center gap-x-0.5">
+                    <span class="text-xs font-medium text-white">Save 25%</span>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <p class="text-base font-medium text-[#1C1C1C]">Subscribe & Save</p>
+                    <span class="text-xl font-medium text-[#1C1C1C]">{{ product.selected_or_first_available_variant.price | times: 0.75 | money }}</span>
+                  </div>
+                  <div class="sub_data hidden">
+                    <div class="flex flex-col gap-y-3">
+                      <p class="text-base font-medium text-[#1C1C1C]">Delivery every</p>
+                      {% assign index = 1 %}
+                      {% for variant in product.variants %}
+                        {% if variant.id == product.selected_variant.id %} 
+                          {% assign index = forloop.index %}
+                        {% endif %}
+                      {% endfor %}
+                      {% for selling_plan_group in product.selling_plan_groups %}
+                        {% assign forloop_index = forloop.index | minus: 1 %}
+                        <div data-variant-id="{{ product.variants[forloop_index].id }}" class="product_selling_plans_wrapper items-center justify-between gap-x-3 {% if forloop.index == index %} hidden active {% else %} hidden {% endif %}">
+                          {% for selling_plan in selling_plan_group.selling_plans %}
+                            <div data-selling-plan="{{ selling_plan.id }}" class="{% if forloop.first %}active {% endif %}product_selling_plan border-[#1c1c1c1f] text-center text-sm font-medium text-[#1C1C1C] border rounded-lg py-2.5 px-4 w-1/3">
+                              {{ selling_plan.name 
+                              | replace: 'Deliver Every', '' 
+                              | replace: 'Deliver every', '' 
+                              | replace: 'Delivery Every', ''
+                              | replace: 'Delivery every', ''
+                              | replace: 'days', 'Days' }}
+                            </div>
+                          {% endfor %}
+                        </div>
+                      {% endfor %}
+                    </div>
+                  </div>
+                </div>
+                <div class="otp_div cursor-pointer w-full flex flex-col gap-y-6 py-3.5 px-5 rounded-xl border border-[#1c1c1c1f]">
+                  <div class="flex items-center justify-between">
+                    <p class="text-base font-medium text-[#1C1C1C]">One time purchase</p>
+                    <span class="text-xl font-medium text-[#1C1C1C]">{{ product.selected_or_first_available_variant.price | money }}</span>
+                  </div>
+                  <div class="otp_data items-start justify-start gap-x-2 hidden">
+                    <div class="w-6 h-6">
+                      {% render 'icon-shop' %}
+                    </div>
+                    <p class="text-sm font-medium text-[#1C1C1C]">Consistency is key to success and you're 4x more likely to succeed if you subscribe.</p>
+                  </div>
+                </div>
+              </div>
             {%- when 'buy_buttons' -%}
               {%- render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: false -%}
+              <div class="flex flex-col gap-y-2 mb-6 md:flex-col-reverse">
+                <a href="" class="text-center block font-medium text-sm text-[#1c1c1ccc] underline md:no-underline md:text-xs md:text-[#1c1c1c99]">1 Utiva Reward for every $1 spent</a>
+                <div class="flex items-center justify-center">
+                  <p class="text-xs font-normal text-[#1c1c1c99] md:text-[#1c1c1ccc] md:text-sm">Free shipping over $25</p>
+                  {% render 'icon-dot' %}
+                  <p class="text-xs font-normal text-[#1c1c1c99] md:text-[#1c1c1ccc] md:text-sm">100% money back guarantee</p>
+                </div>
+              </div>
             {%- when 'rating' -%}
               {%- if product.metafields.reviews.rating.value != blank -%}
                 {% liquid
@@ -1192,6 +1260,8 @@
     }
   </script>
 </section>
+
+{% render 'sub-tabs-handler' %}
 
 {% schema %}
 {
@@ -2525,6 +2595,26 @@
     }
   ],
   "settings": [
+    {
+      "type": "richtext",
+      "id": "overview",
+      "label": "Overview"
+    },
+    {
+      "type": "richtext",
+      "id": "details",
+      "label": "Ingredients"
+    },
+    {
+      "type": "richtext",
+      "id": "ingredients",
+      "label": "Ingredients"
+    },
+    {
+      "type": "richtext",
+      "id": "how_to_use",
+      "label": "How to use"
+    },
     {
       "type": "checkbox",
       "id": "enable_sticky_info",

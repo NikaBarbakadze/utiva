@@ -958,7 +958,7 @@ class VariantSelects extends HTMLElement {
     this.addEventListener('change', this.onVariantChange);
   }
 
-  onVariantChange() {
+  onVariantChange(event) {
     this.updateOptions();
     this.updateMasterId();
     this.toggleAddButton(true, '', false);
@@ -975,6 +975,8 @@ class VariantSelects extends HTMLElement {
       this.updateVariantInput();
       this.renderProductInfo();
       this.updateShareUrl();
+      this.updatePriceContainers(event.target);
+      this.updateSellingPlanContainers();
     }
   }
 
@@ -1016,6 +1018,59 @@ class VariantSelects extends HTMLElement {
     const shareButton = document.getElementById(`Share-${this.dataset.section}`);
     if (!shareButton || !shareButton.updateUrl) return;
     shareButton.updateUrl(`${window.shopUrl}${this.dataset.url}?variant=${this.currentVariant.id}`);
+  }
+
+  updatePriceContainers(node) {
+    const otpPrice = node.dataset.price;
+    if (!otpPrice) return;
+
+    let subscriptionPrice = otpPrice.match(/\$([\d.]+)/);
+    if (subscriptionPrice.length > 0) {
+      subscriptionPrice = Number(subscriptionPrice[1]) * 0.75;
+      subscriptionPrice = `$${(Math.round(subscriptionPrice * 100) / 100).toFixed(2)}`;
+    } else return;
+
+    const subDiv = document.querySelector(".sub_div");
+    const otpDiv = document.querySelector(".otp_div");
+
+    subDiv.querySelector("span").textContent = subscriptionPrice;
+    otpDiv.querySelector("span").textContent = otpPrice;
+  }
+
+  updateSellingPlanContainers() {
+    const targetVariantId = this.currentVariant.id;
+    if (!targetVariantId) return;
+
+    const sellingPlansWrapper = document.querySelectorAll(".product_selling_plans_wrapper");
+    sellingPlansWrapper.forEach(wrapper => {
+      const wrapperVariantId = wrapper.dataset.variantId;
+      if (wrapperVariantId) {
+        if (wrapperVariantId === targetVariantId+"") {
+          sellingPlansWrapper.forEach(e => e.classList.remove("active"));
+          wrapper.classList.add("active");
+        }
+      } else return;
+    });
+
+    const tabs = document.querySelectorAll(".subs_wrapper .otp_div, .subs_wrapper .sub_div");
+    const activeTab = [...tabs].find(tab => tab.classList.contains("active"));
+
+    if (activeTab && activeTab.classList.contains("sub_div")) {
+      let selectedSellingPlan = document.querySelector(".product_selling_plans_wrapper.active .product_selling_plan.active");
+      selectedSellingPlan = selectedSellingPlan.dataset.sellingPlan;
+
+      document.querySelector(".product-variant-sp").value = selectedSellingPlan;
+    }
+
+    const sellingPlanWrappers = document.querySelectorAll(".product_selling_plans_wrapper.active .product_selling_plan");
+    sellingPlanWrappers.forEach(spWrapper => {
+        spWrapper.addEventListener("click", () => {
+            sellingPlanWrappers.forEach(e => e.classList.remove("active"));
+
+            spWrapper.classList.add("active");
+            document.querySelector(".product-variant-sp").value = spWrapper.dataset.sellingPlan;
+        });
+    });
   }
 
   updateVariantInput() {
@@ -1157,7 +1212,10 @@ class VariantSelects extends HTMLElement {
     const addButtonText = productForm.querySelector('[name="add"] > span');
     if (!addButton) return;
 
-    if (disable) {
+    const tabs = document.querySelectorAll(".subs_wrapper .otp_div, .subs_wrapper .sub_div");
+    const activeTab = [...tabs].find(tab => tab.classList.contains("active"));
+
+    if (!activeTab && disable) {
       addButton.setAttribute('disabled', 'disabled');
       if (text) addButtonText.textContent = text;
     } else {

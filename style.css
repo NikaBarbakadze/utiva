@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.sub_div.active,
+.otp_div.active {
+    background-color: #F2F2F0 !important;
+}
+
+.otp_div.active .otp_data {
+    display: flex !important;
+}
+
+.sub_div.active .sub_data {
+    display: block !important;
+}
+
+.product_selling_plan.active {
+    background: #1c1c1c99 !important;
+    color: #FFF !important;
+    border: none !important;
+}
+
+.product_selling_plans_wrapper.active {
+    display: flex !important;
+}
