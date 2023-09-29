@@ -16,7 +16,7 @@
 
   {%- style -%}
     .section-{{ section.id }}-padding {
-      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+      padding-bottom: 28px;
     }
 
     @media screen and (min-width: 750px) {
@@ -339,7 +339,7 @@
                 {{- block.settings.text -}}
               </p>
             {%- when 'title' -%}
-              <div class="product__title mt-5 !mb-[1.6rem] md:mt-0" {{ block.shopify_attributes }}>
+              <div class="product__title mt-8 !mb-[1.6rem] md:mt-0" {{ block.shopify_attributes }}>
                 <h1 class="text-[2.8rem] leading-[3.64rem] font-medium -tracking-[0.056rem] md:text-4xl md:mb-4 md:leading-[4.32rem] md:-tracking-[0.072rem]">{{ product.title | escape }}</h1>
                 <a href="{{ product.url }}" class="product__title">
                   <h2 class="h1">
