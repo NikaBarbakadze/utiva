@@ -93,22 +93,11 @@
         "button_label": "",
         "button_link": ""
       }
-    },
-    "social": {
-      "type": "social",
-      "settings": {
-        "enable_home": false,
-        "enable_product": false,
-        "enable_collection": false,
-        "title": "On social",
-        "description": "<p>Send us yours <a href=\"https:\/\/instagram.com\/youraccount\/\">@youraccount<\/a><\/p>"
-      }
     }
   },
   "order": [
     "footer",
     "promo-banner",
-    "popup",
-    "social"
+    "popup"
   ]
 }
