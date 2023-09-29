@@ -5,8 +5,7 @@
       "blocks": {
         "title": {
           "type": "title",
-          "settings": {
-          }
+          "settings": {}
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -38,6 +37,20 @@
             "content": "<p>Faq content<\/p>",
             "page": ""
           }
+        },
+        "fabc9b8d-a2fb-4676-b4b8-6c61b934edcb": {
+          "type": "how_to_use",
+          "settings": {
+            "content": "<p><strong>Recommended Dose:<br\/><\/strong>Adults take 2 capsules twice a day.<br\/><br\/><strong>Cautions:<br\/><\/strong>Consult a healthcare practitioner prior to use if you are pregnant or breastfeeding, if you have urinary tract anomalies, interstitial cystitis, diabetes or are taking hormone therapy\/contraception, if you have fever, painful urination (dysuria), spasms or blood in urine, or if symptoms persist or worsen.<\/p>"
+          }
+        },
+        "f19b88f5-dade-44b0-bb2a-6a0c5e2f7504": {
+          "type": "ingredients",
+          "settings": {
+            "content": "<p>Utiva provides a pure source of D-Mannose that has shown benefits in maintaining a healthy urinary tract by helping stop bacteria from sticking.*<br\/><br\/>Non-Medicinal Ingredients: Microcrystalline cellulose, magnesium stearate, hypromellose.<br\/><br\/>* These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.<\/p>",
+            "serving_size": "2 capsules",
+            "amount_per_capsule": "% Daily Value"
+          }
         }
       },
       "block_order": [
@@ -45,7 +58,9 @@
         "variant_picker",
         "buy_buttons",
         "fb7838f8-4d79-4815-a28f-67d1a48c0d77",
-        "b1f7433f-cb10-4111-a6fa-9f3c8aaecad9"
+        "b1f7433f-cb10-4111-a6fa-9f3c8aaecad9",
+        "fabc9b8d-a2fb-4676-b4b8-6c61b934edcb",
+        "f19b88f5-dade-44b0-bb2a-6a0c5e2f7504"
       ],
       "settings": {
         "enable_sticky_info": true,

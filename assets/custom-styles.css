@@ -1005,6 +1005,10 @@ video {
   font-weight: 400;
 }
 
+.\!font-normal {
+  font-weight: 400 !important;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -1175,6 +1179,10 @@ video {
   .md\:text-xs {
     font-size: 12px;
     line-height: 16px;
+  }
+
+  .md\:font-medium {
+    font-weight: 500;
   }
 
   .md\:leading-\[4\.32rem\] {

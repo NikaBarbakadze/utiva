@@ -457,7 +457,7 @@
                   <summary>
                     <div class="summary__title">
                       {% render 'icon-accordion', icon: block.settings.icon %}
-                      <h2 class="accordion__title inline-richtext text-2xl -tracking-[0.024rem] font-normal text-[#1C1C1C]">
+                      <h2 class="accordion__title inline-richtext text-2xl -tracking-[0.024rem] !font-normal text-[#1C1C1C]">
                         {{ block.settings.heading | default: block.settings.page.title }}
                       </h2>
                     </div>
@@ -738,9 +738,9 @@
               <div class="flex flex-col gap-y-2 mb-6 md:flex-col-reverse">
                 <a href="" class="text-center block font-medium text-sm text-[#1c1c1ccc] underline md:no-underline md:text-xs md:text-[#1c1c1c99]">1 Utiva Reward for every $1 spent</a>
                 <div class="flex items-center justify-center">
-                  <p class="text-xs font-normal text-[#1c1c1c99] md:text-[#1c1c1ccc] md:text-sm">Free shipping over $25</p>
+                  <p class="text-xs font-normal text-[#1c1c1c99] md:text-[#1c1c1ccc] md:text-sm md:font-medium">Free shipping over $25</p>
                   {% render 'icon-dot' %}
-                  <p class="text-xs font-normal text-[#1c1c1c99] md:text-[#1c1c1ccc] md:text-sm">100% money back guarantee</p>
+                  <p class="text-xs font-normal text-[#1c1c1c99] md:text-[#1c1c1ccc] md:text-sm md:font-medium">100% money back guarantee</p>
                 </div>
               </div>
             {%- when 'rating' -%}
@@ -1271,6 +1271,37 @@
   "blocks": [
     {
       "type": "@app"
+    },
+    {
+      "type": "how_to_use",
+      "limit": 1,
+      "name": "How to use",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        }
+      ]
+    }, {
+      "type": "ingredients",
+      "name": "Ingredients",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        }, {
+          "type": "text",
+          "id": "serving_size",
+          "label": "Serving size"
+        }, {
+          "type": "text",
+          "id": "amount_per_capsule",
+          "label": "Amount per capsule"
+        }
+      ]
     },
     {
       "type": "text",
@@ -2595,26 +2626,6 @@
     }
   ],
   "settings": [
-    {
-      "type": "richtext",
-      "id": "overview",
-      "label": "Overview"
-    },
-    {
-      "type": "richtext",
-      "id": "details",
-      "label": "Ingredients"
-    },
-    {
-      "type": "richtext",
-      "id": "ingredients",
-      "label": "Ingredients"
-    },
-    {
-      "type": "richtext",
-      "id": "how_to_use",
-      "label": "How to use"
-    },
     {
       "type": "checkbox",
       "id": "enable_sticky_info",
