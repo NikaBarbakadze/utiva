@@ -24,3 +24,28 @@
 .product_selling_plans_wrapper.active {
     display: flex !important;
 }
+
+.product_data_tabs_wrapper::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.product_data_tab.active {
+    color: #1c1c1c;
+    border-bottom: 1px solid #1c1c1c;
+}
+
+.how_to_use p, .ingredients_richtext p {
+    color: #1c1c1c;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.6px;
+    letter-spacing: 0.14px;
+}
+
+.how_to_use strong, .ingredients_richtext strong {
+    color: #1c1c1c;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25.2px;
+    margin-bottom: 8px;
+}

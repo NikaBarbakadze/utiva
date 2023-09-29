@@ -5,7 +5,8 @@
       "blocks": {
         "title": {
           "type": "title",
-          "settings": {}
+          "settings": {
+          }
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -51,6 +52,24 @@
             "serving_size": "2 capsules",
             "amount_per_capsule": "% Daily Value"
           }
+        },
+        "b7ccdb59-cf33-4beb-8b81-89948cdeb79d": {
+          "type": "details",
+          "settings": {
+            "text": "D-Mannose is trusted by healthcare practitioners as an effective option to help stop infections before they start.*"
+          }
+        },
+        "75979a0d-f879-4b7d-bdc7-f30048bf4b8f": {
+          "type": "details",
+          "settings": {
+            "text": "100% Natural. Utiva sources raw materials from local sources that are GMP certified to ensure high performance and stability.*"
+          }
+        },
+        "936f3ed6-6157-4dc8-96bd-b7818e0155d4": {
+          "type": "details",
+          "settings": {
+            "text": "Minimal amount of fillers, no artificial ingredients and all products are gluten, wheat, and dairy-free, and never tested on animals.*"
+          }
         }
       },
       "block_order": [
@@ -60,7 +79,10 @@
         "fb7838f8-4d79-4815-a28f-67d1a48c0d77",
         "b1f7433f-cb10-4111-a6fa-9f3c8aaecad9",
         "fabc9b8d-a2fb-4676-b4b8-6c61b934edcb",
-        "f19b88f5-dade-44b0-bb2a-6a0c5e2f7504"
+        "f19b88f5-dade-44b0-bb2a-6a0c5e2f7504",
+        "b7ccdb59-cf33-4beb-8b81-89948cdeb79d",
+        "75979a0d-f879-4b7d-bdc7-f30048bf4b8f",
+        "936f3ed6-6157-4dc8-96bd-b7818e0155d4"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -131,7 +153,8 @@
         "4aaf08c0-9c6f-461e-9a3c-1db3726230b1",
         "69810fe6-c4e0-40e9-aa3f-46e84588cb1b"
       ],
-      "settings": {}
+      "settings": {
+      }
     },
     "proven-effectiveness": {
       "type": "proven-effectiveness",

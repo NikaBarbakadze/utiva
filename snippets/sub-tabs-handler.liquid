@@ -30,5 +30,18 @@
                 document.querySelector(".product-variant-sp").value = spWrapper.dataset.sellingPlan;
             });
         });
+
+        const productTabs = document.querySelector(".product_data_tabs_wrapper");
+        const productDataWrappers = document.querySelectorAll(".product_data_wrapper > div");
+
+        productTabs.querySelectorAll(".product_data_tab").forEach((e, i, arr) => {
+            e.addEventListener("click", () => {
+                arr.forEach(x => x.classList.remove("active"));
+                productDataWrappers.forEach(x => x.classList.add("hidden"));
+
+                e.classList.add("active");
+                productDataWrappers[i].classList.remove("hidden");
+            });
+        });
     });
 </script>
