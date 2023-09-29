@@ -1,0 +1,33 @@
+<div class="page-width grid grid-cols-2 justify-between gap-y-8 gap-x-4 py-10 md:flex md:items-center md:gap-x-10 md:px-[9rem]">
+  {% for block in section.blocks %}
+    <div class="flex flex-col items-center justify-start gap-y-3 md:w-1/6">
+      <img src="{{ block.settings.icon | img_url: 'master' }}" alt="{{ block.settings.text }} visualization">
+      <p class="text-xs font-medium text-[#1C1C1C] text-center">{{ block.settings.text }}</p>
+    </div>
+  {% endfor %}
+</div>
+
+{% schema %}
+  {
+    "name": "Properties",
+    "tag": "section",
+    "blocks": [
+      {
+        "limit": 6,
+        "name": "Property",
+        "type": "properties",
+        "settings": [
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Text"
+          }, {
+            "type": "image_picker",
+            "id": "icon",
+            "label": "Icon"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
