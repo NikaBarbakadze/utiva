@@ -50,7 +50,10 @@
           "settings": {
             "content": "<p>Utiva provides a pure source of D-Mannose that has shown benefits in maintaining a healthy urinary tract by helping stop bacteria from sticking.*<br\/><br\/>Non-Medicinal Ingredients: Microcrystalline cellulose, magnesium stearate, hypromellose.<br\/><br\/>* These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.<\/p>",
             "serving_size": "2 capsules",
-            "amount_per_capsule": "% Daily Value"
+            "servings_per_container": "60",
+            "amount_per_capsule": "% Daily Value",
+            "text_1": "D-Mannose - 1g",
+            "text_2": "Daily Value not established"
           }
         },
         "b7ccdb59-cf33-4beb-8b81-89948cdeb79d": {
@@ -164,7 +167,7 @@
         "text_2": "<p>* Based on a survey of over 500 participants<\/p>",
         "percentage": 96,
         "image": "shopify:\/\/shop_images\/graph.png",
-        "image_md": "shopify:\/\/shop_images\/graphmd.png"
+        "image_md": "shopify:\/\/shop_images\/graph_93396d58-8d63-406d-a9c7-41e1a2c8ca30.png"
       }
     },
     "customer-testimonials": {
