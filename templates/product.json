@@ -21,24 +21,6 @@
             "show_gift_card_recipient": true
           }
         },
-        "fb7838f8-4d79-4815-a28f-67d1a48c0d77": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Rewards",
-            "icon": "none",
-            "content": "<p>Content<\/p>",
-            "page": ""
-          }
-        },
-        "b1f7433f-cb10-4111-a6fa-9f3c8aaecad9": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "FAQ",
-            "icon": "none",
-            "content": "<p>Faq content<\/p>",
-            "page": ""
-          }
-        },
         "fabc9b8d-a2fb-4676-b4b8-6c61b934edcb": {
           "type": "how_to_use",
           "settings": {
@@ -73,19 +55,48 @@
           "settings": {
             "text": "Minimal amount of fillers, no artificial ingredients and all products are gluten, wheat, and dairy-free, and never tested on animals.*"
           }
+        },
+        "fee7d2e2-995a-4aaa-b676-2e200ac32199": {
+          "type": "rewards",
+          "settings": {
+            "content": "Earn free reward points with every purchase when you have an account on this website. Reward points will be credited after the product has been shipped and can be used towards your next purchase. Terms and conditions apply see details here."
+          }
+        },
+        "e664f82a-ccda-470a-9292-c515ce4156d3": {
+          "type": "faq",
+          "settings": {
+            "question": "How does D-Mannose work?",
+            "answer": "<p>D-Mannose is a form of sugar that may prevent UTIs by stopping bacteria from attaching to the bladder lining. It is believed that D-Mannose attaches itself to the E.coli strain, which accounts for over 70% of all UTI-causing bacteria. There have been clinical studies to show that D-Mannose is effective along with feedback from doctors and consumers that D-Mannose helps to prevent UTIs. Even though evidence is limited, and it is not in UTI prevention guidelines, it can certainly help those facing chronic and\/or trigger associated UTIs.<\/p>"
+          }
+        },
+        "c7669eea-7be9-4606-a4c6-3675340b4477": {
+          "type": "faq",
+          "settings": {
+            "question": "What’s the difference between D-Mannose and Cranberry PACs?",
+            "answer": "<p>D-Mannose is a form of sugar that may prevent UTIs by stopping bacteria from attaching to the bladder lining. It is believed that D-Mannose attaches itself to the E.coli strain, which accounts for over 70% of all UTI-causing bacteria. There have been clinical studies to show that D-Mannose is effective along with feedback from doctors and consumers that D-Mannose helps to prevent UTIs. Even though evidence is limited, and it is not in UTI prevention guidelines, it can certainly help those facing chronic and\/or trigger associated UTIs.<\/p>"
+          }
+        },
+        "d7ea66d5-e4ee-4cc1-8ef9-60874c792c2e": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I take D-Mannose and Utiva Cranberry PACs at the same time?",
+            "answer": "<p>No<\/p>"
+          }
         }
       },
       "block_order": [
         "title",
         "variant_picker",
         "buy_buttons",
-        "fb7838f8-4d79-4815-a28f-67d1a48c0d77",
-        "b1f7433f-cb10-4111-a6fa-9f3c8aaecad9",
         "fabc9b8d-a2fb-4676-b4b8-6c61b934edcb",
         "f19b88f5-dade-44b0-bb2a-6a0c5e2f7504",
         "b7ccdb59-cf33-4beb-8b81-89948cdeb79d",
         "75979a0d-f879-4b7d-bdc7-f30048bf4b8f",
-        "936f3ed6-6157-4dc8-96bd-b7818e0155d4"
+        "936f3ed6-6157-4dc8-96bd-b7818e0155d4",
+        "fee7d2e2-995a-4aaa-b676-2e200ac32199",
+        "e664f82a-ccda-470a-9292-c515ce4156d3",
+        "c7669eea-7be9-4606-a4c6-3675340b4477",
+        "d7ea66d5-e4ee-4cc1-8ef9-60874c792c2e"
       ],
       "settings": {
         "enable_sticky_info": true,

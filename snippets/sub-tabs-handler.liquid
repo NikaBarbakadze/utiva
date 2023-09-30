@@ -43,5 +43,18 @@
                 productDataWrappers[i].classList.remove("hidden");
             });
         });
+
+        const rewardsAccordion = document.querySelector(".custom_accordion_rewards");
+        if (rewardsAccordion) {
+            rewardsAccordion.querySelector(".accordion_title_wrapper").addEventListener("click", () => rewardsAccordion.classList.toggle("active"));
+        }
+
+        const faqsAccordion = document.querySelector(".custom_accordion_faqs");
+        if (faqsAccordion) {
+            faqsAccordion.querySelector(".accordion_title_wrapper").addEventListener("click", () => faqsAccordion.classList.toggle("active"));
+            faqsAccordion.querySelectorAll(".accordion_title_wrapper_inner").forEach(e => {
+                e.addEventListener("click", () => e.closest(".accordion_content_wrapper_inner").classList.toggle("active"))
+            });
+        }
     });
 </script>

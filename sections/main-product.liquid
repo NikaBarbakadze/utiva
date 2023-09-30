@@ -368,7 +368,7 @@
               </div>
               <div class="product_data_wrapper mb-10">
                 <div>
-                  <p class="text-[#1c1c1c] text-base font-normal">{{ product.metafields.custom.overview.value }}</p>
+                  <p class="text-[#1c1c1c] text-base font-normal md:text-lg">{{ product.metafields.custom.overview.value }}</p>
                 </div>
                 <div class="hidden">
                   <div class="flex flex-col gap-y-6">
@@ -378,7 +378,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0" width="32" height="32" viewBox="0 0 32 32" fill="none">
                           <path d="M11.3333 16L14.8333 19.5L20.6667 13.6667M30 16C30 23.732 23.732 30 16 30C8.26802 30 2 23.732 2 16C2 8.26802 8.26802 2 16 2C23.732 2 30 8.26802 30 16Z" stroke="#C33635" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                        <p class="text-base font-normal text-[#1c1c1c]">{{ detail.settings.text }}</p>
+                        <p class="text-base font-normal text-[#1c1c1c] md:text-lg">{{ detail.settings.text }}</p>
                       </div>
                     {% endfor %}
                   </div>
@@ -387,29 +387,29 @@
                   <div class="ingredients">
                     {% assign ingredients_block = section.blocks | where: 'type', 'ingredients' %}
                     {% for block in ingredients_block %}
-                      <div class="ingredients_richtext mb-6 md:mb-8">
+                      <div class="ingredients_richtext mb-8">
                         {{ block.settings.content }}
                       </div>
-                      <div class="p-4 md:py-6 md:px-5 rounded-[16px] border border-[#1c1c1c]">
+                      <div class="py-6 px-5 rounded-[16px] border border-[#1c1c1c]">
                         <p class="pb-4 border-b border-[#1c1c1ccc] text-2xl font-medium -tracking-[0.48px] text-[#1c1c1c]">Supplement Facts</p>
                         <div class="py-4 border-b-2 border-[#1c1c1ccc]">
                           <div class="flex items-center justify-between">
-                            <p class="text-sm md:text-base font-medium text-[#1c1c1c] -tracking-[0.32px]">Serving Size:</p>
-                            <p class="text-sm md:text-base font-normal text-[#1c1c1c]">{{ block.settings.serving_size }}</p>
+                            <p class="text-base font-medium text-[#1c1c1c]  md:-tracking-[0.32px]">Serving Size:</p>
+                            <p class="text-base font-normal text-[#1c1c1c]">{{ block.settings.serving_size }}</p>
                           </div>
                           <div class="flex items-center justify-between">
-                            <p class="text-sm md:text-base font-medium text-[#1c1c1c] -tracking-[0.32px]">Servings Per Container:</p>
-                            <p class="text-sm md:text-base font-normal text-[#1c1c1c]">{{ block.settings.servings_per_container }}</p>
+                            <p class="text-base font-medium text-[#1c1c1c]  md:-tracking-[0.32px]">Servings Per Container:</p>
+                            <p class="text-base font-normal text-[#1c1c1c]">{{ block.settings.servings_per_container }}</p>
                           </div>
                         </div>
                         <div class="flex items-center justify-between py-4 border-b border-[#1c1c1ccc]">
-                          <p class="text-sm md:text-base font-medium text-[#1c1c1c] -tracking-[0.32px]">Amount Per Capsule:</p>
-                          <p class="text-sm md:text-base font-normal text-[#1c1c1c]">{{ block.settings.amount_per_capsule }}</p>
+                          <p class="text-base font-medium text-[#1c1c1c]  md:-tracking-[0.32px]">Amount Per Capsule:</p>
+                          <p class="text-base font-normal text-[#1c1c1c]">{{ block.settings.amount_per_capsule }}</p>
                         </div>
                         <div class="py-4 border-b border-[#1c1c1ccc]">
-                          <p class="text-sm md:text-base font-normal text-[#1c1c1c]">{{ block.settings.text_1 }}</p>
+                          <p class="text-base font-normal text-[#1c1c1c]">{{ block.settings.text_1 }}</p>
                         </div>
-                        <p class="pt-4 text-sm md:text-base font-normal text-[#1c1c1c]">{{ block.settings.text_2 }}</p>
+                        <p class="pt-4 text-base font-normal text-[#1c1c1c]">{{ block.settings.text_2 }}</p>
                       </div>
                     {% endfor %}
                   </div>
@@ -808,6 +808,45 @@
                   <p class="text-xs font-normal text-[#1c1c1c99] md:text-[#1c1c1ccc] md:text-sm md:font-medium">100% money back guarantee</p>
                 </div>
               </div>
+              {% assign rewards_block = section.blocks | where: 'type', 'rewards' %}
+              {% if rewards_block %}
+                <div class="custom_accordion_rewards py-5 md:py-7 cursor-pointer md:mt-[2.8rem]">
+                  <div class="accordion_title_wrapper flex items-center justify-between">
+                    <p class="text-2xl text-[#1c1c1c] font-normal -tracking-[0.24px] md:text-[2.8rem] md:leading-[3.92rem] md:-tracking-[0.28px]">Rewards</p>
+                    <div class="open">{% render 'icon-accordion-plus' %}</div>
+                    <div class="close">{% render 'icon-accordion-minus' %}</div>
+                  </div>
+                  <div class="custom_accordion_content mb-8">
+                    {% for block in rewards_block %} 
+                      <p class="text-base font-normal text-[#1c1c1c] md:text-lg">{{ block.settings.content }}</p>
+                    {% endfor %}
+                  </div>
+                </div>
+              {% endif %}
+              {% assign faq_blocks = section.blocks | where: 'type', 'faq' %}
+              {% if faq_blocks %} 
+                <div class="custom_accordion_faqs border-t border-[#1c1c1c1f] py-5 md:py-7 cursor-pointer">
+                  <div class="accordion_title_wrapper flex items-center justify-between">
+                    <p class="text-2xl text-[#1c1c1c] font-normal -tracking-[0.24px] md:text-[2.8rem] md:leading-[3.92rem] md:-tracking-[0.28px]">FAQ</p>
+                    <div class="open">{% render 'icon-accordion-plus' %}</div>
+                    <div class="close">{% render 'icon-accordion-minus' %}</div>
+                  </div>
+                  <div class="custom_accordion_content_wrapper">
+                    {% for block in faq_blocks %} 
+                      <div class="accordion_content_wrapper_inner{% if forloop.first %} pb-5 md:pb-6 {% elsif forloop.last %} pt-5 md:pt-6 {% else %} py-5 md:py-6 {% endif %}{% unless forloop.first %} border-t border-[#1c1c1c1f]{% endunless %}">
+                        <div class="accordion_title_wrapper_inner flex items-start justify-between">
+                          <p class="text-xl text-[#1c1c1c] font-medium md:-tracking-[0.22px] md:text-[2.2rem] md:leading-[3.08rem]">{{ block.settings.question }}</p>
+                          <div class="shrink-0 open w-[2.4rem] h-[2.4rem]">{% render 'icon-accordion-plus' %}</div>
+                          <div class="shrink-0 close w-[2.4rem] h-[2.4rem]">{% render 'icon-accordion-minus' %}</div>
+                        </div>
+                        <div class="custom_accordion_content">
+                          {{ block.settings.answer }}
+                        </div>
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              {% endif %}
             {%- when 'rating' -%}
               {%- if product.metafields.reviews.rating.value != blank -%}
                 {% liquid
@@ -1336,6 +1375,33 @@
   "blocks": [
     {
       "type": "@app"
+    },
+    {
+      "limit": 1,
+      "name": "Rewards",
+      "type": "rewards",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "content",
+          "label": "Content"
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "name": "FAQ",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question"
+        }, {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
     },
     {
       "type": "details",
