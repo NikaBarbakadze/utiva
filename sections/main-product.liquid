@@ -21,7 +21,7 @@
 
     @media screen and (min-width: 750px) {
       .section-{{ section.id }}-padding {
-        padding-top: 80px;
+        padding-top: 0px;
         padding-bottom: 64px;
       }
     }
@@ -59,6 +59,20 @@
       onload="this.media='all'"
     >
   {%- endif -%}
+
+  <div class="mb-7 mt-8 font-normal hidden lg:!block">
+    <ul class="flex gap-1 text-[#a2a2a1]">
+      <li>
+        <a href="/collections/all">Shop all</a>
+      </li>
+      <div>
+        /
+      </div>
+      <li>
+        <a href="{{ product.collections[0].url }}">{{ product.tags[2] }}</a>
+      </li>
+    </ul>
+  </div>
 
   <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid_dawn grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %} !gap-x-[13rem] justify-center md:flex-nowrap">
     <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">

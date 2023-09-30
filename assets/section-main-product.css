@@ -159,7 +159,7 @@
   flex: 0 0 100%;
   padding: 0;
   padding: 0 0 2.4rem 0;
-  max-width: 44rem;
+  /* max-width: 44rem; */
   min-width: fit-content;
   border: none;
 }
@@ -443,9 +443,9 @@ a.product__text {
   margin: 0 auto 1.2rem auto;
 }
 
-.product-form__buttons {
+/* .product-form__buttons {
   max-width: 44rem;
-}
+} */
 
 .product--no-media .product__info-container>modal-opener {
   display: block;
