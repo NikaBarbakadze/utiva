@@ -245,6 +245,13 @@
         "button_text": "See all"
       }
     },
+    "how-to-use": {
+      "type": "how-to-use",
+      "settings": {
+        "title": "How to use",
+        "video": "shopify:\/\/files\/videos\/pill_infographic.mp4"
+      }
+    },
     "new-trusted-recommended-doctors": {
       "type": "new-trusted-recommended-doctors",
       "blocks": {
@@ -324,6 +331,7 @@
     "properties",
     "proven-effectiveness",
     "customer-testimonials",
+    "how-to-use",
     "new-trusted-recommended-doctors",
     "product-slider"
   ]
