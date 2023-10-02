@@ -1250,7 +1250,7 @@ button.shopify-payment-button__button--unbranded {
   /* background-color: rgba(var(--color-button), var(--alpha-button-background)); */
 }
 
-.button:before,
+/* .button:before,
 .shopify-challenge__button:before,
 .customer button:before,
 .shopify-payment-button__button--unbranded:before,
@@ -1280,7 +1280,7 @@ button.shopify-payment-button__button--unbranded {
   left: var(--buttons-border-width);
   z-index: 1;
   border-radius: var(--buttons-radius);
-}
+} */
 
 .button:not([disabled]):hover::after,
 .shopify-challenge__button:hover::after,
@@ -1879,13 +1879,13 @@ input[type='checkbox'] {
 .quantity {
   color: rgba(var(--color-foreground));
   position: relative;
-  width: calc(14rem / var(--font-body-scale) + var(--inputs-border-width) * 2);
+  width: calc(11rem / var(--font-body-scale) + var(--inputs-border-width) * 2);
   display: flex;
   border-radius: var(--inputs-radius);
   min-height: calc((var(--inputs-border-width) * 2) + 4.5rem);
 }
 
-.quantity:after {
+/* .quantity:after {
   pointer-events: none;
   content: '';
   position: absolute;
@@ -1898,9 +1898,9 @@ input[type='checkbox'] {
   box-shadow: 0 0 0 var(--inputs-border-width) rgba(var(--color-foreground), var(--inputs-border-opacity));
   transition: box-shadow var(--duration-short) ease;
   z-index: 1;
-}
+} */
 
-.quantity:before {
+/* .quantity:before {
   background: rgb(var(--color-background));
   pointer-events: none;
   content: '';
@@ -1913,6 +1913,12 @@ input[type='checkbox'] {
   box-shadow: var(--inputs-shadow-horizontal-offset) var(--inputs-shadow-vertical-offset)
     var(--inputs-shadow-blur-radius) rgba(var(--color-shadow), var(--inputs-shadow-opacity));
   z-index: -1;
+} */
+
+.quantity{
+  border: 1px solid #777777;
+  border-radius: 999px;
+  min-height: 32px !important;
 }
 
 .quantity__input {
@@ -1923,7 +1929,7 @@ input[type='checkbox'] {
   text-align: center;
   background-color: transparent;
   border: 0;
-  padding: 0 0.5rem;
+  padding: 0rem;
   width: 100%;
   flex-grow: 1;
   -webkit-appearance: none;

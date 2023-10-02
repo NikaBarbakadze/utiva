@@ -59,7 +59,7 @@
         </div>
       {%- endif -%}
       <div class="drawer__header">
-        <h2 class="drawer__heading">{{ 'sections.cart.title' | t }}</h2>
+        <h2 class="drawer__heading text-2xl !mb-0 font-medium">Cart</h2>
         <button
           class="drawer__close"
           type="button"
@@ -84,7 +84,7 @@
             {%- if cart != empty -%}
               <div class="drawer__cart-items-wrapper">
                 <table class="cart-items" role="table">
-                  <thead role="rowgroup">
+                  <thead role="rowgroup" class="hidden">
                     <tr role="row">
                       <th id="CartDrawer-ColumnProductImage" role="columnheader">
                         <span class="visually-hidden">{{ 'sections.cart.headings.image' | t }}</span>
@@ -119,7 +119,7 @@
                             {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
                             <a href="{{ item.url }}" class="cart-item__link" tabindex="-1" aria-hidden="true"> </a>
                             <img
-                              class="cart-item__image"
+                              class="cart-item__image aspect-square object-cover object-center"
                               src="{{ item.image | image_url: width: 300 }}"
                               alt="{{ item.image.alt | escape }}"
                               loading="lazy"
@@ -134,11 +134,11 @@
                             <p class="caption-with-letter-spacing light">{{ item.product.vendor }}</p>
                           {%- endif -%}
 
-                          <a href="{{ item.url }}" class="cart-item__name h4 break">
+                          <a href="{{ item.url }}" class="cart-item__name h4 break !text-base">
                             {{- item.product.title | escape -}}
                           </a>
 
-                          {%- if item.original_price != item.final_price -%}
+                          {% comment %} {%- if item.original_price != item.final_price -%}
                             <div class="cart-item__discounted-prices">
                               <span class="visually-hidden">
                                 {{ 'products.product.price.regular_price' | t }}
@@ -157,7 +157,7 @@
                             <div class="product-option">
                               {{ item.original_price | money }}
                             </div>
-                          {%- endif -%}
+                          {%- endif -%} {% endcomment %}
 
                           {%- if item.product.has_only_default_variant == false
                             or item.properties.size != 0
@@ -336,11 +336,11 @@
                               >
                                 <button
                                   type="button"
-                                  class="button button--tertiary cart-remove-button"
+                                  class="button button--tertiary cart-remove-button border-b border-solid border-[#777777] font-normal text-xs pb-0"
                                   aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}"
                                   data-variant-id="{{ item.variant.id }}"
                                 >
-                                  {% render 'icon-remove' %}
+                                  Remove
                                 </button>
                               </cart-remove-button>
                             </div>
@@ -535,7 +535,7 @@
               disabled
             {% endif %}
           >
-            {{ 'sections.cart.checkout' | t }}
+            Checkout
           </button>
         </div>
       </div>
