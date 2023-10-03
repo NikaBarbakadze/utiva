@@ -77,6 +77,26 @@
           class=" is-empty"
         {% endif %}
       >
+        <div class="lg:pb-4">
+          {% liquid
+            assign threshold = 50
+            assign current_value = cart.total_price | money_without_currency
+            assign percentage = current_value | times: 100 | divided_by: threshold 
+            assign remaining_amount = threshold | minus: current_value | times: 100
+          %}
+
+          <p class="text-sm text-[#1C1C1C] pt-3 lg:pt-6 pb-3 font-normal">
+            {% if remaining_amount > 0 %}
+              Spend <b class="font-medium">{{ remaining_amount | money }}</b> more to get free shipping!
+            {% else %}
+              You got <b class="font-medium">free shipping!</b>
+            {% endif %}
+          </p>
+          <div class="relative w-full h-1 rounded bg-[#e4e4e4]">
+            <div class="absolute h-1 rounded bg-[#1C1C1C]" style="width: {% if percentage < 100 %}{{ percentage }}{% else %}100{% endif %}%;">
+            </div>
+          </div>
+        </div>
         <form
           action="{{ routes.cart_url }}"
           id="CartDrawer-Form"
@@ -285,7 +305,7 @@
                           endif
                         -%}
                         <td
-                          class="cart-item__quantity {% if has_qty_rules or has_vol_pricing %} cart-item__quantity--info{% endif %}"
+                          class="cart-item__quantity {% if has_qty_rules or has_vol_pricing %} cart-item__quantity--info{% endif %} mt-3 lg:mt-0"
                           role="cell"
                           headers="CartDrawer-ColumnQuantity"
                         >

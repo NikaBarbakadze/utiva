@@ -1,7 +1,7 @@
 {{ 'header-mobile.css' | asset_url | stylesheet_tag }}
 {{ 'header-mobile.js' | asset_url | script_tag }}
 
-<div class='header-mob'>
+<div class='header-mob {% if template.name == "product" %} hovered-perma {% endif %}'>
 	<div class='header-mob__info'>
 		<button class='data-menu-button' id='menuButton'>
 			<div class='menu-btn__icon-burger--open'>
@@ -15,6 +15,9 @@
 		<div class='header-mob__info--logo'>
 			<a href='{{ shop.url }}'>
 				{% if logo != blank %}
+					{% if template.name == "product" %}
+						<img src="//utiva-usa.myshopify.com/cdn/shop/files/logo_color.png?v=1689865437&amp;width=223" alt="" srcset="//utiva-usa.myshopify.com/cdn/shop/files/logo_color.png?v=1689865437&amp;width=200 200w" width="223" height="144" loading="lazy" sizes="10vw" class="header-desktop__logo--img logo-2 !max-w-none !max-h-none !w-[76px] !block">
+					{% else %}
 					{{
 						logo
 						| image_url: width: logo.width
@@ -26,7 +29,7 @@
 							class: 'header-mob__info--logo-img',
 							widths: '200'
 					}}
-
+					{% endif %}
 				{% else %}
 					<a href='{{ shop.url }}'> {{ shop.name }}</a>
 				{% endif %}

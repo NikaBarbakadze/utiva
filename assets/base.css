@@ -3739,3 +3739,11 @@ input, textarea, select, .faux-select {
 .slick-arrow svg{
   margin: 0 auto;
 }
+
+.header-mob.hovered-perma{
+  background-color: #fff;
+}
+
+.header-mob.hovered-perma svg path{
+  stroke: black;
+}
