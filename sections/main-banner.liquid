@@ -8,188 +8,184 @@
 %}
 
 <style>
-	.main-banner__container--image {
-		background-image: url({{ img_mobile }});
-		width: 100%;
-		background-repeat: no-repeat;
-		background-size: cover;
-		height: 60%;
-		background-position: top;
-	}
+  .main-banner__container--image {
+    background-image: url('{{ img_mobile }}');
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60%;
+    background-position: top;
+  }
 
-	.main-banner__container--blur-image {
-		background-image: url({{ img_mobile_blur }});
-		width: 100%;
-		background-repeat: no-repeat;
-		background-size: cover;
-		height: 100%;
-	}
+  {% if template.suffix == "about-us" %}
+    .main-banner__content {
+      max-width: 610px !important;
+    }
+    @media screen and (max-width: 770px) {
+      .main-banner__container--bottom {
+        height: 30%;
+      }
+      .main-banner {
+        height: 410px;
+      }
+      .main-banner__container--image {
+        height: 70%;
+      }
+    }
+  {% endif %}
 
-	@media screen and (min-width: 480px) {
-		.main-banner__container--image {
-			background-size: cover;
-			background-position: center;
-		}
-	}
+  .main-banner__container--blur-image {
+    background-image: url('{{ img_mobile_blur }}');
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+  }
 
-	@media screen and (min-width: 1024px) {
-		.main-banner__container--image {
-			width: 50%;
-			background-image: url({{ img_desktop }});
-			height: 100%;
-			background-size: cover;
-		}
+  @media screen and (min-width: 480px) {
+    .main-banner__container--image {
+      background-size: cover;
+      background-position: center;
+    }
+  }
 
-		.main-banner__container--blur-image {
-			background-image: url({{ img_desktop_blur }});
-		}
-	}
+  @media screen and (min-width: 1024px) {
+    .main-banner__container--image {
+      width: 50%;
+      background-image: url('{{ img_desktop }}');
+      height: 100%;
+      background-size: cover;
+    }
 
-	@media screen and (min-width: 1439px) {
-		.main-banner__container--image {
+    .main-banner__container--blur-image {
+      background-image: url('{{ img_desktop_blur }}');
+    }
+  }
 
-			background-size: cover;
-			background-position: top;
-		}
-	}
+  @media screen and (min-width: 1439px) {
+    .main-banner__container--image {
+
+      background-size: cover;
+      background-position: top;
+    }
+  }
 </style>
 
-<div
-	class='main-banner main-banner--{{ section.id }}'
->
-	<div class='main-banner__container'>
-		<div
-			class='main-banner__container--image'
-			style='background-color: {{ section.settings.background_color }}'
-		>
-			{% if section.settings.label_text != blank %}
-				<div
-					class='body-s mobile'
-					style='background-color: {{ section.settings.label_background_color }}; color: {{ section.settings.label_text_color }}'
-				>
-					{{ section.settings.label_text }}
-				</div>
-			{% endif %}
-		</div>
-		<div class='main-banner__container--bottom'>
-			<div class='main-banner__container--blur-image'>
-				<div class='main-banner__container--blur'></div>
-			</div>
-			<div class='main-banner__content'>
-				{% if section.settings.label_text != blank %}
-					<div
-						class='body-s desktop'
-						style='background-color: {{ section.settings.label_background_color }}; color: {{ section.settings.label_text_color }}'
-					>
-						{{ section.settings.label_text }}
-					</div>
-				{% endif %}
-				{% if section.settings.title != blank %}
-					<h1 class='main-banner__content--title'>{{ section.settings.title }}</h1>
-				{% endif %}
-				{% if section.settings.description != blank %}
-					{{ section.settings.description }}
-				{% endif %}
-				{% if section.settings.btn_text != blank %}
-					<a href='{{ section.settings.btn_url }}' class='btn-new btn-new--primary'>
-						{{ section.settings.btn_text }}
-						{% render 'icon', icon: 'primary-btn-icon' %}
-					</a>
-				{% endif %}
-			</div>
-		</div>
-	</div>
+<div class='main-banner main-banner--{{ section.id }}'>
+  <div class='main-banner__container'>
+    <div class='main-banner__container--image' style='background-color: {{ section.settings.background_color }}'>
+      {% if section.settings.label_text != blank %}
+        <div class='body-s mobile' style='background-color: {{ section.settings.label_background_color }}; color: {{ section.settings.label_text_color }}'>
+          {{ section.settings.label_text }}
+        </div>
+      {% endif %}
+    </div>
+    <div class='main-banner__container--bottom'>
+      <div class='main-banner__container--blur-image'>
+        {% unless template.suffix == "about-us" %}
+          <div class='main-banner__container--blur'></div>
+        {% endunless %}
+      </div>
+      <div class='main-banner__content'>
+        {% if section.settings.label_text != blank %}
+          <div class='body-s desktop' style='background-color: {{ section.settings.label_background_color }}; color: {{ section.settings.label_text_color }}'>
+            {{ section.settings.label_text }}
+          </div>
+        {% endif %}
+        {% if section.settings.title != blank %}
+          <h1 class='main-banner__content--title'>{{ section.settings.title }}</h1>
+        {% endif %}
+        {% if section.settings.description != blank %}
+          {{ section.settings.description }}
+        {% endif %}
+        {% if section.settings.btn_text != blank %}
+          <a href='{{ section.settings.btn_url }}' class='btn-new btn-new--primary'>
+            {{ section.settings.btn_text }}
+            {% render 'icon', icon: 'primary-btn-icon' %}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
 </div>
 
 {% schema %}
-{
-	"name": "Main Banner",
-	"settings": [
-		{
-			"type": "header",
-			"content": "Background settings"
-		},
-		{
-			"type": "image_picker",
-			"id": "img_desktop",
-			"label": "Image (Desktop)"
-		},
-		{
-			"type": "image_picker",
-			"id": "img_desktop_blur",
-			"label": "Blur Image (Desktop)"
-		},
-		{
-			"type": "image_picker",
-			"id": "img_mobile",
-			"label": "Image (Mobile)"
-		},
-		{
-			"type": "image_picker",
-			"id": "img_mobile_blur",
-			"label": "Image Blur (Mobile)"
-		},
-		{
-			"type": "color",
-			"id": "background_color",
-			"label": "Background color"
-		},
-		{
-			"type": "header",
-			"content": "Label settings"
-		},
-		{
-			"type": "text",
-			"id": "label_text",
-			"label": "Label text",
-			"default": "Voted #1 brand in UTI prevention†"
-		},
-		{
-			"type": "color",
-			"id": "label_background_color",
-			"label": "Background color"
-		},
-		{
-			"type": "color",
-			"id": "label_text_color",
-			"label": "Text color"
-		},
-		{
-			"type": "header",
-			"content": "Content settings"
-		},
-		{
-			"type": "text",
-			"id": "title",
-			"label": "Title",
-			"default": "Clinically Effective. Always Natural."
-		},
-		{
-			"type": "richtext",
-			"id": "description",
-			"label": "Description",
-			"default": "<p>Addressing women's pelvic health conditions with science-backed solutions that work.</p>"
-		},
-		{
-			"type": "header",
-			"content": "Button settings"
-		},
-		{
-			"type": "text",
-			"id": "btn_text",
-			"label": "Text",
-			"default": "Shop all"
-		},
-		{
-			"type": "url",
-			"id": "btn_url",
-			"label": "URL"
-		}
-	],
-	"presets": [
-		{
-			"name": "Main banner"
-		}
-	]
-}
+  {
+    "name": "Main Banner",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Background settings"
+      },
+      {
+        "type": "image_picker",
+        "id": "img_desktop",
+        "label": "Image (Desktop)"
+      },
+      {
+        "type": "image_picker",
+        "id": "img_desktop_blur",
+        "label": "Blur Image (Desktop)"
+      },
+      {
+        "type": "image_picker",
+        "id": "img_mobile",
+        "label": "Image (Mobile)"
+      }, {
+        "type": "image_picker",
+        "id": "img_mobile_blur",
+        "label": "Image Blur (Mobile)"
+      }, {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background color"
+      }, {
+        "type": "header",
+        "content": "Label settings"
+      }, {
+        "type": "text",
+        "id": "label_text",
+        "label": "Label text",
+        "default": "Voted #1 brand in UTI prevention†"
+      }, {
+        "type": "color",
+        "id": "label_background_color",
+        "label": "Background color"
+      }, {
+        "type": "color",
+        "id": "label_text_color",
+        "label": "Text color"
+      }, {
+        "type": "header",
+        "content": "Content settings"
+      }, {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Clinically Effective. Always Natural."
+      }, {
+        "type": "richtext",
+        "id": "description",
+        "label": "Description",
+        "default": "<p>Addressing women's pelvic health conditions with science-backed solutions that work.</p>"
+      }, {
+        "type": "header",
+        "content": "Button settings"
+      }, {
+        "type": "text",
+        "id": "btn_text",
+        "label": "Text",
+        "default": "Shop all"
+      }, {
+        "type": "url",
+        "id": "btn_url",
+        "label": "URL"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Main banner"
+      }
+    ]
+  }
 {% endschema %}
