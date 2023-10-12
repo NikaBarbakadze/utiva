@@ -1,6 +1,6 @@
-<div class="custom-blog-card">
+<div class="custom-blog-card {% if index > 5 %} hidden {% endif %}">
     <div class="relative">
-        <img src="{{ article.image | img_url: "700x" }}" alt="">
+        <img src="{{ article.image | img_url: "700x" }}" loading="lazy" alt="">
         <div class="absolute top-3 left-1">
             {% for tag in article.tags %}
                 <span class="text-white uppercase px-2.5 py-2 rounded-[30px] backdrop-blur-[20px] text-xs ml-2" style="background: rgba(0, 0, 0, 0.4)">

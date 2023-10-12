@@ -781,6 +781,18 @@ video {
   margin-bottom: 10px;
 }
 
+.mt-14 {
+  margin-top: 56px;
+}
+
+.mb-5 {
+  margin-bottom: 20px;
+}
+
+.mt-12 {
+  margin-top: 48px;
+}
+
 .\!block {
   display: block !important;
 }
@@ -886,6 +898,10 @@ video {
   width: max-content;
 }
 
+.min-w-\[180px\] {
+  min-width: 180px;
+}
+
 .\!max-w-none {
   max-width: none !important;
 }
@@ -914,6 +930,10 @@ video {
   flex-basis: 75%;
 }
 
+.basis-1\/2 {
+  flex-basis: 50%;
+}
+
 .-translate-x-1\/2 {
   --tw-translate-x: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -937,6 +957,10 @@ video {
 
 .flex-col {
   flex-direction: column;
+}
+
+.flex-col-reverse {
+  flex-direction: column-reverse;
 }
 
 .flex-wrap {
@@ -989,6 +1013,10 @@ video {
 
 .gap-8 {
   gap: 32px;
+}
+
+.gap-1\.5 {
+  gap: 6px;
 }
 
 .\!gap-x-\[13rem\] {
@@ -1188,6 +1216,11 @@ video {
 .border-\[\#cbd8d7\] {
   --tw-border-opacity: 1;
   border-color: rgb(203 216 215 / var(--tw-border-opacity));
+}
+
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
 .\!bg-\[\#C33635\] {
@@ -1421,6 +1454,10 @@ video {
   padding-top: 32px;
 }
 
+.pr-20 {
+  padding-right: 80px;
+}
+
 .text-left {
   text-align: left;
 }
@@ -1494,6 +1531,11 @@ video {
 .text-xs {
   font-size: 12px;
   line-height: 16px;
+}
+
+.text-5xl {
+  font-size: 48px;
+  line-height: 1;
 }
 
 .\!font-normal {
@@ -2100,6 +2142,11 @@ video {
     margin-bottom: 0px;
   }
 
+  .lg\:my-20 {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+
   .lg\:mb-10 {
     margin-bottom: 40px;
   }
@@ -2126,6 +2173,10 @@ video {
 
   .lg\:\!block {
     display: block !important;
+  }
+
+  .lg\:w-auto {
+    width: auto;
   }
 
   .lg\:basis-\[30\%\] {
@@ -2176,6 +2227,11 @@ video {
     padding: 32px;
   }
 
+  .lg\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   .lg\:pb-4 {
     padding-bottom: 16px;
   }
@@ -2198,6 +2254,10 @@ video {
 
   .lg\:pt-0 {
     padding-top: 0px;
+  }
+
+  .lg\:pr-20 {
+    padding-right: 80px;
   }
 
   .lg\:text-4xl {
