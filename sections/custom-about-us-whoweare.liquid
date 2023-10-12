@@ -1,0 +1,127 @@
+<style>
+  .custom-rich p {
+    color: #1c1c1ccc;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22.4px;
+    margin: 12px 0;
+  }
+  .custom-rich p:first-child {
+    margin-top: 0;
+  }
+  .custom-rich p:last-child {
+    margin-bottom: 0;
+  }
+  @media screen and (min-width: 770px) {
+    .custom-rich p {
+      font-size: 20px;
+      line-height: 28px;
+      margin: 16px 0;
+    }
+  }
+  .whoweare-bar {
+    background-color: {{ section.settings.bar_color }}
+    ;
+  }
+</style>
+
+<div class="bg-[#FCFCFA]">
+  <div class="py-10 md:py-20">
+    <div class="page-width px-6 flex flex-col mb-10 md:flex-row md:justify-between md:mb-14">
+      <h2 class="text-[3.2rem] text-[#1c1c1c] font-medium leading-[3.84rem] mb-3 -tracking-[0.064rem] md:text-5xl md:leading-[5.28rem] md:-tracking-[0.096rem] md:w-[30%] md:mb-0">{{ section.settings.title1 }}</h2>
+      <div class="custom-rich md:w-[70%]">{{ section.settings.content1 }}</div>
+    </div>
+    <div class="whoweare-bar w-full p-6 flex items-center justify-center md:p-8">
+      <span class="text-white text-base font-medium leading-[2.24rem] md:text-2xl md:leading-[2.88rem] md:-tracking-[0.048rem]">{{ section.settings.bar_text }}</span>
+    </div>
+  </div>
+  <div class="pt-2 pb-[6rem] md:pt-10 md:pb-[10rem]">
+    <div class="page-width px-6 flex flex-col mb-8 md:mb-14 md:flex-row md:justify-between">
+      <h2 class="text-[3.2rem] text-[#1c1c1c] font-medium leading-[3.84rem] mb-3 -tracking-[0.064rem] md:text-5xl md:leading-[5.28rem] md:-tracking-[0.096rem] md:w-[30%] md:mb-0">{{ section.settings.title2 }}</h2>
+      <div class="custom-rich md:w-[70%]">{{ section.settings.content2 }}</div>
+    </div>
+    <div class="page-width px-6 flex flex-col gap-y-4 md:flex-row md:gap-x-6">
+      {% for block in section.blocks %}
+        <div class="bg-white rounded-[1.6rem] p-8 flex flex-col gap-y-6 md:w-1/4">
+          <img
+            class="w-[6rem] aspect-square"
+            src="{{ block.settings.icon | img_url: 'master' }}"
+            alt="{{ block.settings.title }}">
+          <div class="flex flex-col gap-y-2">
+            <p class="text-xl text-[#1c1c1c] font-medium leading-[2.4rem]">{{ block.settings.title }}</p>
+            <p class="text-base font-normal leading-[2.24rem] text-[#1c1c1ccc]">{{ block.settings.content }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Under hero section",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Who we are"
+      },
+      {
+        "type": "text",
+        "id": "title1",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "content1",
+        "label": "Content"
+      },
+      {
+        "type": "header",
+        "content": "Bar"
+      }, {
+        "type": "color",
+        "id": "bar_color",
+        "label": "Bar Color"
+      }, {
+        "type": "inline_richtext",
+        "id": "bar_text",
+        "label": "Bar text"
+      }, {
+        "type": "header",
+        "content": "What we do"
+      }, {
+        "type": "text",
+        "id": "title2",
+        "label": "Title"
+      }, {
+        "type": "richtext",
+        "id": "content2",
+        "label": "Content"
+      }
+    ],
+    "blocks": [
+      {
+        "limit": 4,
+        "type": "properties",
+        "name": "Property",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "icon",
+            "label": "Icon"
+          }, {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          }, {
+            "type": "text",
+            "id": "content",
+            "label": "Content"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
