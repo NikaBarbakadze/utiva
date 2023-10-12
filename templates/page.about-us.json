@@ -1,14 +1,76 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
+    "main-banner": {
+      "type": "main-banner",
       "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
+        "img_desktop": "shopify:\/\/shop_images\/image_7_27505e71-384f-4a4e-a04e-6aad584be348.png",
+        "img_desktop_blur": "shopify:\/\/shop_images\/blur.webp",
+        "img_mobile": "shopify:\/\/shop_images\/image_8_2x_a923059e-11f1-48f4-9d6e-6edc849958a0.webp",
+        "img_mobile_blur": "shopify:\/\/shop_images\/blur_1.webp",
+        "background_color": "#b9a18f",
+        "label_text": "Voted #1 brand in UTI prevention†",
+        "label_background_color": "#ffffff",
+        "label_text_color": "#1c1c1c",
+        "title": "Inspired by nature, backed by science.",
+        "description": "",
+        "btn_text": "",
+        "btn_url": ""
+      }
+    },
+    "who-we-are": {
+      "type": "custom-about-us-whoweare",
+      "blocks": {
+        "dfeabab0-bd7c-4fe8-8b83-4f9348dac937": {
+          "type": "properties",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Frame_138.svg",
+            "title": "Extensive research",
+            "content": "for ingredients that have demonstrated clear effectiveness in clinical trial"
+          }
+        },
+        "f4ba4b7a-edfd-4a35-b278-cac11051942c": {
+          "type": "properties",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Frame_137.svg",
+            "title": "Rigorous sourcing",
+            "content": "local and high quality ingredients to ensure consistency"
+          }
+        },
+        "c397a9a0-b9ce-4ee7-a651-4ef56c1fa87c": {
+          "type": "properties",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Frame_139.svg",
+            "title": "Clean labels",
+            "content": "we actively work to minimize all fillers to ensure you are only taking what you truly need"
+          }
+        },
+        "19f6d1f1-7f1a-45ef-adeb-084f187e8428": {
+          "type": "properties",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Frame_136.svg",
+            "title": "Best practice manufacturing",
+            "content": "made in FDA and GMP certified facilities to ensure dose precision, in every capsule"
+          }
+        }
+      },
+      "block_order": [
+        "dfeabab0-bd7c-4fe8-8b83-4f9348dac937",
+        "f4ba4b7a-edfd-4a35-b278-cac11051942c",
+        "c397a9a0-b9ce-4ee7-a651-4ef56c1fa87c",
+        "19f6d1f1-7f1a-45ef-adeb-084f187e8428"
+      ],
+      "settings": {
+        "title1": "Who we are",
+        "content1": "<p>Our journey started with a profound commitment to UTI prevention. We quickly realized that there were numerous unmet needs in the area of pelvic health, for women of all ages and stages of life.<\/p><p>With so much misinformation out there, we saw the need to create a company that offers both high-quality supplements and an educational platform to our customers so that they can make informed decisions.<\/p><p>Every product and service we provide is designed to help women naturally manage this very important area of health, and we are here to help you get back to living your best life, naturally.<\/p><p>What we believe is “An ounce of prevention is worth a pound of cure” (Benjamin Franklin).<\/p>",
+        "bar_color": "#c33635",
+        "bar_text": "Today, Utiva is a leader in all things pelvic health and it is our only area of focus.",
+        "title2": "What we do",
+        "content2": "<p>We apply the rigor of science and technology to the genius of nature, so that we can develop products that actually work. We’re commited to:<\/p>"
       }
     }
   },
   "order": [
-    "main"
+    "main-banner",
+    "who-we-are"
   ]
 }
