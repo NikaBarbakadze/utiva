@@ -123,7 +123,7 @@
 {{ 'header-hover.js' | asset_url | script_tag }}
 {{ 'header-desktop.css' | asset_url | stylesheet_tag }}
 
-<div class='header-desktop {% if template.name == "product" %} hovered-perma {% endif %}'>
+<div class='header-desktop {% if template.name != "index" %} hovered-perma {% endif %}'>
 	<div class='header-desktop__info'>
 		<nav
 			class='header-desktop__nav'

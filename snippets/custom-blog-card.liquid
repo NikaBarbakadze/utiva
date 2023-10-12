@@ -1,0 +1,38 @@
+<div class="custom-blog-card">
+    <div class="relative">
+        <img src="{{ article.image | img_url: "700x" }}" alt="">
+        <div class="absolute top-3 left-1">
+            {% for tag in article.tags %}
+                <span class="text-white uppercase px-2.5 py-2 rounded-[30px] backdrop-blur-[20px] text-xs ml-2" style="background: rgba(0, 0, 0, 0.4)">
+                    {{ tag }}
+                </span>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="flex gap-2 items-center my-2 text-[#777777] text-sm lg:text-base font-normal">
+        <span>
+            {{ article.published_at | date: "%B %d, %Y" }}
+        </span>
+
+        <svg width="3" height="20" viewBox="0 0 3 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="Frame">
+            <rect id="Rectangle 1761" y="9" width="3" height="3" rx="1.5" fill="#1C1C1C" fill-opacity="0.4"/>
+            </g>
+        </svg>
+            
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="icn">
+            <path id="Vector" d="M7.79604 5.10038V8.45932L10.4364 10.0691M5.51318 1.99639C8.82878 0.622769 12.6297 2.19788 14.0033 5.51348C15.3769 8.82908 13.8018 12.63 10.4862 14.0036C7.17062 15.3772 3.3697 13.8021 1.99608 10.4865C0.623188 7.17092 2.19758 3.37 5.51318 1.99639Z" stroke="#1C1C1C" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+        </svg>
+
+        <span>
+            {% assign reading_time = article.content | strip_html | split: ' ' | size | times: 1.0 | divided_by: 250 | ceil %}
+            {{ reading_time }} min read
+        </span>
+    </div>
+    <div class="flex flex-col gap-2">
+        <h2 class="text-2xl text-[#1C1C1C]">{{ article.title }}</h2>
+        <p class="text-sm text-[#1C1C1C] font-normal">{{ article.excerpt_or_content | strip_html }}</p>
+    </div>
+</div>

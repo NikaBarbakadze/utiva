@@ -1,0 +1,104 @@
+{% liquid
+    
+    assign blog_tags = "Vaginal Health,UTIs,Overactive Bladder,Gut Health,Conditions 101,Video" | split: ","
+
+%}
+
+<style>
+    .custom-blog-tag.active{
+        opacity: 1;
+        border-bottom: 1px solid #1C1C1C;
+    }
+
+    @media screen and (max-width: 992px){
+        #tags-wrapper{
+            overflow-x: scroll;
+            width: 100%;
+            max-width: 100vw;
+            overflow-y: visible;
+            flex-wrap: nowrap!important;
+            scroll-snap-type: x var(--tw-scroll-snap-strictness)!important;
+            --tw-scroll-snap-strictness: mandatory !important;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            scrollbar-width: none;
+            justify-content: flex-start !important;
+        }
+
+        #tags-wrapper::-webkit-scrollbar {
+            display: none;
+        }
+    }
+</style>
+
+<div class="wrapper">
+    <div class="mt-10 lg:mt-20 border-b border-solid border-[#e1e1df]">
+        <h1 class="text-4xl lg:text-[5.6rem] text-[#1C1C1C] mb-6 lg:mb-10 text-center">Learning Center</h1>
+        <div class="flex justify-center items-center gap-6" id="tags-wrapper">
+            <div class="p-3 lg:p-5 text-[#1C1C1C] opacity-60 cursor-pointer whitespace-nowrap custom-blog-tag active ml-[15px] lg:ml-0">
+                All
+            </div>
+            {% for tag in blog_tags %}
+                <div class="p-3 lg:p-5 text-[#1C1C1C] opacity-60 cursor-pointer whitespace-nowrap custom-blog-tag {% if forloop.last %} mr-[15px] lg:mr-0{% endif %}">
+                    {{ tag }}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="page-width my-9 lg:my-14">
+        {% render "custom-large-blog-card", article: blogs.resources.articles[0] %}
+        
+        <div id="must-reads" class="my-14">
+            <div class="pb-3 lg:pb-5 border-b border-[#e1e1df] border-solid">
+                <h2 class="text-2xl lg:text-4xl text-[#1C1C1C]">Must reads</h2>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 my-6 lg:my-10">
+                {% for article in blogs.resources.articles offset: 1 limit: 3 %}
+                    {% render "custom-blog-card", article: article %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="flex gap-4 pt-8">
+            <div class="basis-2/3">
+                <div class="pb-3 lg:pb-5 border-b border-[#e1e1df] border-solid">
+                    <h2 class="text-2xl lg:text-4xl text-[#1C1C1C]">Recent posts</h2>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 my-6 lg:my-10">
+                    {% for article in blogs.resources.articles offset: 4 limit: 6 %}
+                        {% render "custom-blog-card", article: article %}
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="basis-1/3 pl-11">
+                <div class="pb-3 lg:pb-5 border-b border-[#e1e1df] border-solid">
+                    <h2 class="text-2xl lg:text-4xl text-[#1C1C1C]">Our best sellers</h2>
+                </div>
+                <div class="my-6 lg:my-10 flex flex-col gap-10">
+                    {% for product in collections.all.products limit: 3 %}
+                    <a href="{{ product.url }}" class="flex gap-4">
+                        <div class="basis-1/4">
+                            <img class="rounded-[12px] max-h-[104px] aspect-square object-cover" src="{{ product.featured_image | img_url: "200x"}}" alt="">
+                        </div>
+                        <div class="flex flex-col gap-2 basis-3/4">
+                            <h3 class="text-base text-[#1C1C1C]">{{ product.title }}</h3>
+                            <p class="text-sm text-[#1C1C1C] font-normal">{% if product.description != blank %}{{ product.description | strip_html | truncatewords: 10, '...' }}{% else %}{{ product.metafields.bm_pdp.bm_short_description_details | strip_html | truncatewords: 10, '...' }}{% endif %}</p>
+                        </div>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Main Blogs",
+  "class": "custom-main-blogs",
+  "tag": "section",
+  "settings": [
+    
+  ]
+}
+{% endschema %}

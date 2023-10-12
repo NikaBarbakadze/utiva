@@ -1,5 +1,5 @@
 {{ 'sticky-promo-banner.css' | asset_url | stylesheet_tag }}
-{% if section.settings.text != blank %}
+{% if section.settings.text != blank and template.name == "product" %}
 	<div
 		class='sticky-promo-banner'
 		style='
