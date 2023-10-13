@@ -47,30 +47,41 @@
 <div class="wrapper">
     <div class="mt-10 lg:mt-20 border-b border-solid border-[#e1e1df]">
         <h1 class="text-4xl lg:text-[5.6rem] text-[#1C1C1C] mb-6 lg:mb-10 text-center">Learning Center</h1>
-        <div class="flex justify-center items-center gap-6" id="tags-wrapper">
-            <div class="p-3 lg:p-5 text-[#1C1C1C] opacity-60 cursor-pointer whitespace-nowrap custom-blog-tag active ml-[15px] lg:ml-0">
-                All
+        {% if blog.tags.size > 0 %}
+            <div class="flex justify-center items-center gap-6" id="tags-wrapper">
+                <a href="{{ blog.url }}" class="block p-3 lg:p-5 text-[#1C1C1C] opacity-60 cursor-pointer whitespace-nowrap custom-blog-tag {% if request.path == blog.url or request.path == "/pages/blogs" %} active {% endif %}  ml-[15px] lg:ml-0">
+                    All
+                </a>
+                {% for tag in blog.all_tags %}
+                    {% assign lowerTag = tag | handleize %}
+                    {% assign tag_url = blog.url | append: '/tagged/' | append: lowerTag %}
+                    <a href="{{ blog.url }}/tagged/{{ tag | handleize }}" class="block p-3 lg:p-5 text-[#1C1C1C] opacity-60 cursor-pointer {% if request.path == tag_url %} active {% endif %} whitespace-nowrap custom-blog-tag {% if forloop.last %} mr-[15px] lg:mr-0{% endif %}">
+                        {{ tag }}
+                    </a>
+                {% endfor %}
             </div>
-            {% for tag in blog_tags %}
-                <div class="p-3 lg:p-5 text-[#1C1C1C] opacity-60 cursor-pointer whitespace-nowrap custom-blog-tag {% if forloop.last %} mr-[15px] lg:mr-0{% endif %}">
-                    {{ tag }}
-                </div>
-            {% endfor %}
-        </div>
+        {% endif %}
+        
     </div>
     <div class="page-width my-9 lg:my-14">
-        {% render "custom-large-blog-card", article: blogs.resources.articles[0] %}
+        {% render "custom-large-blog-card", article: blog.articles[0] %}
+
+        {% unless blog.articles.size < 2 %}
         
         <div id="must-reads" class="my-14">
             <div class="pb-3 lg:pb-5 border-b border-[#e1e1df] border-solid">
                 <h2 class="text-2xl lg:text-4xl text-[#1C1C1C]">Must reads</h2>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 my-6 lg:my-10">
-                {% for article in blogs.resources.articles offset: 1 limit: 3 %}
+                {% for article in blog.articles offset: 1 limit: 3 %}
                     {% render "custom-blog-card", article: article %}
                 {% endfor %}
             </div>
         </div>
+
+        {% endunless %}
+
+        {% unless blog.articles.size < 4 %}
 
         <div class="flex flex-col lg:flex-row gap-4 pt-4 lg:pt-8">
             <div class="basis-2/3">
@@ -78,7 +89,7 @@
                     <h2 class="text-2xl lg:text-4xl text-[#1C1C1C]">Recent posts</h2>
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 gap-y-[56px] my-6 lg:my-10">
-                    {% for article in blogs.resources.articles offset: 4 %}
+                    {% for article in blog.articles offset: 4 %}
                         {% if forloop.index == 3 %}
                             <div class="rounded-[24px] bg-[#E3F2F0] p-6 lg:p-8 flex flex-col gap-6 items-start justify-between">
                                 <div class="flex gap-4">
@@ -131,6 +142,8 @@
                 </div>
             </div>
         </div>
+
+        {% endunless %}
     </div>
 
     <div class="page-width">
@@ -149,6 +162,7 @@
     </div>
 </div>
 
+{% unless blog.articles.size < 4 %}
 <script defer>
     // Initialize an offset variable to start from the 6th card (index 5)
     let offset = 5;
@@ -200,6 +214,7 @@
     }
     });
 </script>
+{% endunless %}
 
 {% schema %}
 {

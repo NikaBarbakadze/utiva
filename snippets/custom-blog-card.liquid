@@ -1,4 +1,4 @@
-<div class="custom-blog-card {% if index > 5 %} hidden {% endif %}">
+<a href="{{ article.url }}" class="custom-blog-card {% if index > 5 %} hidden {% endif %}">
     <div class="relative">
         <img src="{{ article.image | img_url: "700x" }}" loading="lazy" alt="">
         <div class="absolute top-3 left-1">
@@ -35,4 +35,4 @@
         <h2 class="text-2xl text-[#1C1C1C]">{{ article.title }}</h2>
         <p class="text-sm text-[#1C1C1C] font-normal">{{ article.excerpt_or_content | strip_html }}</p>
     </div>
-</div>
+</a>
