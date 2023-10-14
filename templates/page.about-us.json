@@ -67,10 +67,97 @@
         "title2": "What we do",
         "content2": "<p>We apply the rigor of science and technology to the genius of nature, so that we can develop products that actually work. We’re commited to:<\/p>"
       }
+    },
+    "custom-about-us-values": {
+      "type": "custom-about-us-values",
+      "blocks": {
+        "e1745733-44ea-430d-b338-44dbcd98eae1": {
+          "type": "group",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Frame_136_8ac6c317-d577-4a5e-acb7-465e8c767144.svg",
+            "title": "Powered by nature",
+            "content": "We are a mission-driven company with big dreams of bringing clinically effective natural solutions to health and wellness in order to create a better balance within modern medicine."
+          }
+        },
+        "adf5c1b5-1844-473c-b45f-6eedba425ab7": {
+          "type": "group",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Frame_136-1.svg",
+            "title": "Lead with science",
+            "content": "We make evidence-based decisions for every product we bring to market. This means rigorous review of clinical data and vetting processes with doctors and experts."
+          }
+        },
+        "e9f5b0ea-f829-46a8-ab42-f64df8b54a5b": {
+          "type": "group",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Frame_137_4e033a9d-e276-4380-8971-947767eff4d9.svg",
+            "title": "Education",
+            "content": "We believe that education = better choices which lead to better health outcomes. We are committed to providing you with accurate information so that you can make informed decisions for your health."
+          }
+        },
+        "690abac5-1a55-4b8c-8c8d-186ea96868b1": {
+          "type": "group",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Frame_140.svg",
+            "title": "Customers first",
+            "content": "We are fully committed to successful outcomes for each and every one of our customers - it's our mantra and every Utiva team member is empowered to always do what is right for our customers."
+          }
+        },
+        "2e5fc820-0825-4045-bd74-0bbf31b766c3": {
+          "type": "group2",
+          "settings": {
+            "title": "2019",
+            "content": "The year we set out to make UTIs prevention an accessible reality"
+          }
+        },
+        "0e931e9d-3069-4abd-b4e8-3f002c96f5e3": {
+          "type": "group2",
+          "settings": {
+            "title": "50,000+",
+            "content": "Customers we are helping take back control of their wellness"
+          }
+        },
+        "e53b5aa4-ec9b-479c-a21f-4fc12392e61f": {
+          "type": "group2",
+          "settings": {
+            "title": "10,000+",
+            "content": "The number of healthcare professionals that trust UTIVA for their patients"
+          }
+        }
+      },
+      "block_order": [
+        "e1745733-44ea-430d-b338-44dbcd98eae1",
+        "adf5c1b5-1844-473c-b45f-6eedba425ab7",
+        "e9f5b0ea-f829-46a8-ab42-f64df8b54a5b",
+        "690abac5-1a55-4b8c-8c8d-186ea96868b1",
+        "2e5fc820-0825-4045-bd74-0bbf31b766c3",
+        "0e931e9d-3069-4abd-b4e8-3f002c96f5e3",
+        "e53b5aa4-ec9b-479c-a21f-4fc12392e61f"
+      ],
+      "settings": {
+        "title": "The values that guide us"
+      }
+    },
+    "utiva-for-good": {
+      "type": "utiva-for-good",
+      "settings": {
+        "paddingTop_mobile": 48,
+        "paddingBottom_mobile": 60,
+        "paddingTop_desktop": 100,
+        "paddingBottom_desktop": 80,
+        "background_color": "#fcfcfa",
+        "image_desktop": "shopify:\/\/shop_images\/img_bced0035-4d15-4342-98fe-e69bfe8aa07b.png",
+        "image_mobile": "shopify:\/\/shop_images\/image_519.png",
+        "title": "Giving Back",
+        "title_color": "#1c1c1c",
+        "description": "<p>As part of our advocacy for better health, Utiva donates a portion of proceeds to a group of charitable organizations, including Saving Mothers and Essentials First.<\/p><p>These organizations promote education and awareness about reproductive and sexual health, as well as preventable diseases in both adults and children through access to hygienic products.<\/p>"
+      }
     }
   },
   "order": [
     "main-banner",
-    "who-we-are"
+    "who-we-are",
+    "custom-about-us-values",
+    "utiva-for-good"
   ]
 }

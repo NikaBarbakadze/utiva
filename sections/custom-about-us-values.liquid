@@ -1,0 +1,82 @@
+<div class="py-12 bg-[#FCFCFA] md:py-20">
+  <div class="page-width px-6">
+    <h2 class="text-[#1c1c1c] mb-8 text-[3.2rem] leading-[3.84rem] -tracking-[0.064rem] font-medium md:mb-14 md:-tracking-[0.022rem] md:text-center">{{ section.settings.title }}</h2>
+    <div class="grid grid-cols-1 gap-y-4 md:grid-cols-2 md:gap-6">
+      {% assign propertyBlocks = section.blocks | where: 'type', 'group' %}
+      {% for block in propertyBlocks %}
+        <div class="p-8 rounded-[1.6rem] bg-white flex flex-col gap-y-8 md:p-10">
+          <img
+            class="w-[6rem] h-[6rem]"
+            src="{{ block.settings.icon | img_url: 'master' }}"
+            alt="{{ block.settings.title }}">
+          <div class="flex flex-col gap-y-2">
+            <h3 class="text-xl font-medium text-[#1c1c1c] leading-[2.4rem] md:text-[2.2rem] md:leading-[2.24rem]">{{ block.settings.title }}</h3>
+            <p class="text-[#1c1c1ccc] text-base font-normal leading-[2.24rem]">{{ block.settings.content }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<div class="w-full bg-[#C33635]">
+  <div class="page-width py-10 px-6 md:py-16">
+    {% assign contentBlocks = section.blocks | where: 'type', 'group2' %}
+    <div class="flex flex-col gap-y-8 md:flex-row md:items-start md:justify-center md:gap-x-14">
+      {% for block in contentBlocks %}
+        <div class="flex flex-col gap-y-2 md:max-w-[37rem]">
+          <h4 class="text-2xl -tracking-[0.048rem] font-medium text-white md:text-[3.6rem] md:leading-[4.32rem] md:-tracking-[0.072rem]">{{ block.settings.title }}</h4>
+          <p class="text-base font-normal leading-[2.24rem] text-[#ffffffcc] md:text-xl md:leading-[2.8rem]">{{ block.settings.content }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Values",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "text",
+        "label": "Section Title",
+        "id": "title"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "group",
+        "name": "Content Blocks",
+        "settings": [
+          {
+            "type": "image_picker",
+            "label": "Icon",
+            "id": "icon"
+          }, {
+            "type": "text",
+            "label": "Title",
+            "id": "title"
+          }, {
+            "type": "textarea",
+            "label": "Content",
+            "id": "content"
+          }
+        ]
+      }, {
+        "type": "group2",
+        "name": "Red background content",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          }, {
+            "type": "textarea",
+            "id": "content",
+            "label": "Content"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
