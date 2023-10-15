@@ -1,11 +1,101 @@
+<style>
+  .shippingQuestionWrapper .opened {
+    display: none;
+  }
+  .shippingQuestionWrapper .answer {
+    display: none;
+  }
+  .shippingQuestionWrapper.active .closed {
+    display: none;
+  }
+  .shippingQuestionWrapper.active .opened {
+    display: block;
+  }
+  .shippingQuestionWrapper.active .answer {
+    display: block;
+  }
+  .subQuestionWrapper .opened {
+    display: none;
+  }
+  .subQuestionWrapper .answer {
+    display: none;
+  }
+  .subQuestionWrapper.active .closed {
+    display: none;
+  }
+  .subQuestionWrapper.active .opened {
+    display: block;
+  }
+  .subQuestionWrapper.active .answer {
+    display: block;
+  }
+</style>
+
 <div class="py-12 bg-[#FCFCFA] px-6 md:py-[10.4rem]">
-  <div class="page-width">
+  <div class="page-width px-0">
     <div class="flex flex-col gap-y-4 mb-12 md:gap-y-5 md:mb-[12rem]">
       <h2 class="text-[#1c1c1c] text-[3.2rem] font-medium leading-[3.84rem] -tracking-[0.064rem] md:text-center md:text-[4.8rem] md:leading-[5.28rem] md:-tracking-[0.096rem]">{{ section.settings.title }}</h2>
-      <p class="text-base font-normal leading-[2.24rem] text-[#1c1c1ccc] md:text-2xl md:leading-[3.36rem] md:-tracking-[0.024rem]">{{ section.settings.subtitle }}</p>
+      <p class="text-base font-normal leading-[2.24rem] text-[#1c1c1ccc] md:text-2xl md:leading-[3.36rem] md:text-center md:max-w-[60.5rem] md:mx-auto md:-tracking-[0.024rem]">{{ section.settings.subtitle }}</p>
     </div>
+    <div class="flex flex-col gap-y-[6.4rem] md:gap-y-[10.4rem]">
+      <div class="flex flex-col gap-y-8 md:flex-row md:justify-between md:gap-x-6">
+        <h3 class="text-2xl font-medium text-[#1c1c1c] md:text-[2.8rem] md:leading-[3.92rem] md:-tracking-[0.028rem]">Shipping & Return policy</h3>
+        <div class="flex flex-col md:w-[72rem]">
+          {% assign shippingQuestions = section.blocks | where: 'type', 'shipping' %}
+          {% for block in shippingQuestions %}
+            <div class="shippingQuestionWrapper {% unless forloop.first %} border-t border-[#1c1c1c1f] py-5 {% else %} pb-5 {% endunless %} flex flex-col gap-y-4">
+              <div class="shippingQuestionWrapperHeader cursor-pointer flex items-center justify-between gap-x-4">
+                <p class="text-[#1C1C1C] text-xl font-normal md:text-2xl md:leading-[3.36rem] md:-tracking-[0.024rem]">{{ block.settings.question }}</p>
+                <div class="closed">
+                  {% render 'faq-plus' %}
+                </div>
+                <div class="opened">
+                  {% render 'faq-minus' %}
+                </div>
+              </div>
+              <div class="answer">
+                <p class="text-base text-[#1c1c1ccc] leading-[2.24rem] md:text-lg">{{ block.settings.answer }}</p>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="flex flex-col gap-y-8 md:flex-row md:justify-between md:gap-x-6">
+        <h3 class="text-2xl font-medium text-[#1c1c1c] md:text-[2.8rem] md:leading-[3.92rem] md:-tracking-[0.028rem]">Subscribe & Save</h3>
+        <div class="flex flex-col md:w-[72rem]">
+          {% assign subQuestions = section.blocks | where: 'type', 'sub' %}
+          {% for block in subQuestions %}
+            <div class="subQuestionWrapper {% unless forloop.first %} border-t border-[#1c1c1c1f] py-5 md:py-8 {% else %} pb-5 md:pb-8 {% endunless %} flex flex-col gap-y-4">
+              <div class="subQuestionWrapperHeader cursor-pointer flex items-center justify-between gap-x-4">
+                <p class="text-[#1C1C1C] text-xl font-normal md:text-2xl md:leading-[3.36rem] md:-tracking-[0.024rem]">{{ block.settings.question }}</p>
+                <div class="closed">
+                  {% render 'faq-plus' %}
+                </div>
+                <div class="opened">
+                  {% render 'faq-minus' %}
+                </div>
+              </div>
+              <div class="answer">
+                <p class="text-base text-[#1c1c1ccc] leading-[2.24rem] md:text-lg">{{ block.settings.answer }}</p>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
+
+<script>
+  const questions = document.querySelectorAll(".shippingQuestionWrapperHeader, .subQuestionWrapperHeader");
+  questions.forEach((question, i) => {
+    question.addEventListener("click", () => {
+      questions.forEach(e => e.parentNode.classList.remove("active"));
+      question.parentNode.classList.add("active");
+    });
+  });
+</script>
 
 {% schema %}
   {
@@ -22,6 +112,36 @@
         "label": "Subtitle"
       }
     ],
-    "blocks": []
+    "blocks": [
+      {
+        "name": "Shipping Question",
+        "type": "shipping",
+        "settings": [
+          {
+            "type": "text",
+            "id": "question",
+            "label": "Question"
+          }, {
+            "type": "inline_richtext",
+            "id": "answer",
+            "label": "Answer"
+          }
+        ]
+      }, {
+        "name": "Subscription Question",
+        "type": "sub",
+        "settings": [
+          {
+            "type": "text",
+            "id": "question",
+            "label": "Question"
+          }, {
+            "type": "inline_richtext",
+            "id": "answer",
+            "label": "Answer"
+          }
+        ]
+      }
+    ]
   }
 {% endschema %}
