@@ -1,0 +1,27 @@
+<div class="py-12 bg-[#FCFCFA] px-6 md:py-[10.4rem]">
+  <div class="page-width">
+    <div class="flex flex-col gap-y-4 mb-12 md:gap-y-5 md:mb-[12rem]">
+      <h2 class="text-[#1c1c1c] text-[3.2rem] font-medium leading-[3.84rem] -tracking-[0.064rem] md:text-center md:text-[4.8rem] md:leading-[5.28rem] md:-tracking-[0.096rem]">{{ section.settings.title }}</h2>
+      <p class="text-base font-normal leading-[2.24rem] text-[#1c1c1ccc] md:text-2xl md:leading-[3.36rem] md:-tracking-[0.024rem]">{{ section.settings.subtitle }}</p>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "FAQ",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      }, {
+        "type": "textarea",
+        "id": "subtitle",
+        "label": "Subtitle"
+      }
+    ],
+    "blocks": []
+  }
+{% endschema %}
