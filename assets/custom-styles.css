@@ -1068,6 +1068,10 @@ video {
        column-gap: 24px;
 }
 
+.gap-y-10 {
+  row-gap: 40px;
+}
+
 .gap-y-2 {
   row-gap: 8px;
 }
@@ -1136,6 +1140,10 @@ video {
 
 .rounded-\[16px\] {
   border-radius: 16px;
+}
+
+.rounded-\[2\.4rem\] {
+  border-radius: 2.4rem;
 }
 
 .rounded-\[24px\] {
@@ -1253,6 +1261,10 @@ video {
 .bg-\[\#FCFCFA\] {
   --tw-bg-opacity: 1;
   background-color: rgb(252 252 250 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#ceb39e1f\] {
+  background-color: #ceb39e1f;
 }
 
 .bg-\[\#e4e4e4\] {
@@ -1614,6 +1626,10 @@ video {
   letter-spacing: -0.024rem;
 }
 
+.-tracking-\[0\.048rem\] {
+  letter-spacing: -0.048rem;
+}
+
 .-tracking-\[0\.056rem\] {
   letter-spacing: -0.056rem;
 }
@@ -1648,10 +1664,6 @@ video {
 
 .-tracking-\[8\.5px\] {
   letter-spacing: -8.5px;
-}
-
-.-tracking-\[0\.048rem\] {
-  letter-spacing: -0.048rem;
 }
 
 .text-\[\#1C1C1C\] {
@@ -1692,6 +1704,10 @@ video {
   color: rgb(203 216 215 / var(--tw-text-opacity));
 }
 
+.text-\[\#ffffffcc\] {
+  color: #ffffffcc;
+}
+
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -1700,10 +1716,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-\[\#ffffffcc\] {
-  color: #ffffffcc;
 }
 
 .underline {
@@ -1949,6 +1961,10 @@ video {
     margin-top: 2.8rem;
   }
 
+  .md\:mb-20 {
+    margin-bottom: 80px;
+  }
+
   .md\:\!block {
     display: block !important;
   }
@@ -2005,12 +2021,16 @@ video {
     width: 100%;
   }
 
-  .md\:max-w-\[37rem\] {
-    max-width: 37rem;
+  .md\:w-1\/2 {
+    width: 50%;
   }
 
-  .md\:grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+  .md\:w-\[42rem\] {
+    width: 42rem;
+  }
+
+  .md\:max-w-\[37rem\] {
+    max-width: 37rem;
   }
 
   .md\:grid-cols-2 {
@@ -2054,14 +2074,19 @@ video {
          column-gap: 40px;
   }
 
+  .md\:gap-x-14 {
+    -moz-column-gap: 56px;
+         column-gap: 56px;
+  }
+
   .md\:gap-x-6 {
     -moz-column-gap: 24px;
          column-gap: 24px;
   }
 
-  .md\:gap-x-14 {
-    -moz-column-gap: 56px;
-         column-gap: 56px;
+  .md\:gap-x-\[8\.8rem\] {
+    -moz-column-gap: 8.8rem;
+         column-gap: 8.8rem;
   }
 
   .md\:overflow-hidden {
@@ -2072,12 +2097,12 @@ video {
     overflow-y: auto;
   }
 
-  .md\:p-8 {
-    padding: 32px;
-  }
-
   .md\:p-10 {
     padding: 40px;
+  }
+
+  .md\:p-8 {
+    padding: 32px;
   }
 
   .md\:px-0 {
@@ -2088,6 +2113,11 @@ video {
   .md\:px-\[9\.6rem\] {
     padding-left: 9.6rem;
     padding-right: 9.6rem;
+  }
+
+  .md\:py-16 {
+    padding-top: 64px;
+    padding-bottom: 64px;
   }
 
   .md\:py-20 {
@@ -2105,11 +2135,6 @@ video {
     padding-bottom: 28px;
   }
 
-  .md\:py-16 {
-    padding-top: 64px;
-    padding-bottom: 64px;
-  }
-
   .md\:pb-6 {
     padding-bottom: 24px;
   }
@@ -2124,6 +2149,10 @@ video {
 
   .md\:pt-6 {
     padding-top: 24px;
+  }
+
+  .md\:pt-20 {
+    padding-top: 80px;
   }
 
   .md\:text-center {
@@ -2153,6 +2182,10 @@ video {
     font-size: 2.8rem;
   }
 
+  .md\:text-\[3\.6rem\] {
+    font-size: 3.6rem;
+  }
+
   .md\:text-lg {
     font-size: 18px;
     line-height: 28px;
@@ -2163,18 +2196,19 @@ video {
     line-height: 20px;
   }
 
+  .md\:text-xl {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
   .md\:text-xs {
     font-size: 12px;
     line-height: 16px;
   }
 
-  .md\:text-\[3\.6rem\] {
-    font-size: 3.6rem;
-  }
-
-  .md\:text-xl {
-    font-size: 20px;
-    line-height: 28px;
+  .md\:text-base {
+    font-size: 16px;
+    line-height: 24px;
   }
 
   .md\:font-medium {
@@ -2185,8 +2219,16 @@ video {
     line-height: 52.8px !important;
   }
 
+  .md\:leading-\[2\.24rem\] {
+    line-height: 2.24rem;
+  }
+
   .md\:leading-\[2\.88rem\] {
     line-height: 2.88rem;
+  }
+
+  .md\:leading-\[2\.8rem\] {
+    line-height: 2.8rem;
   }
 
   .md\:leading-\[3\.08rem\] {
@@ -2205,12 +2247,12 @@ video {
     line-height: 5.28rem;
   }
 
-  .md\:leading-\[2\.24rem\] {
-    line-height: 2.24rem;
+  .md\:leading-\[2\.52rem\] {
+    line-height: 2.52rem;
   }
 
-  .md\:leading-\[2\.8rem\] {
-    line-height: 2.8rem;
+  .md\:-tracking-\[0\.022rem\] {
+    letter-spacing: -0.022rem;
   }
 
   .md\:-tracking-\[0\.048rem\] {
@@ -2239,10 +2281,6 @@ video {
 
   .md\:-tracking-\[0\.96px\] {
     letter-spacing: -0.96px;
-  }
-
-  .md\:-tracking-\[0\.022rem\] {
-    letter-spacing: -0.022rem;
   }
 
   .md\:text-\[\#1c1c1c99\] {

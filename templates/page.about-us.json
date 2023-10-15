@@ -68,6 +68,36 @@
         "content2": "<p>We apply the rigor of science and technology to the genius of nature, so that we can develop products that actually work. We’re commited to:<\/p>"
       }
     },
+    "custom-about-us-testimonials": {
+      "type": "custom-about-us-testimonials",
+      "blocks": {
+        "6eabfaab-01b1-447a-a9d1-37f7999769e3": {
+          "type": "testimonial",
+          "settings": {
+            "avatar": "shopify:\/\/shop_images\/rectangle_1.webp",
+            "quote": "I still remember hearing the difficult news that my grandma passed away at the young age of 51. With UTIs being a taboo subject, inconvenient access to care and her own ignorance, she neglected her UTI symptoms. As a result, she lost one of her kidneys and had severe complications since.",
+            "name": "Faraz",
+            "profession": "Co-founder"
+          }
+        },
+        "ba4547ed-c2fb-4584-bfc0-88e825ad7782": {
+          "type": "testimonial",
+          "settings": {
+            "avatar": "shopify:\/\/shop_images\/image_2.webp",
+            "quote": "I was on the other side of the world while my wife was hospitalized. Before she left for her trip, she was prescribed antibiotics to treat a UTI. Little did we know, she was resistant to that antibiotic and the infection ended up traveling to her kidneys - all while I was unable to be there and help her.",
+            "name": "Derek",
+            "profession": "Co-founder"
+          }
+        }
+      },
+      "block_order": [
+        "6eabfaab-01b1-447a-a9d1-37f7999769e3",
+        "ba4547ed-c2fb-4584-bfc0-88e825ad7782"
+      ],
+      "settings": {
+        "title": "UTIs hit close to home in a real way"
+      }
+    },
     "custom-about-us-values": {
       "type": "custom-about-us-values",
       "blocks": {
@@ -157,6 +187,7 @@
   "order": [
     "main-banner",
     "who-we-are",
+    "custom-about-us-testimonials",
     "custom-about-us-values",
     "utiva-for-good"
   ]
