@@ -1162,6 +1162,10 @@ video {
   border-radius: 6rem;
 }
 
+.rounded-\[8rem\] {
+  border-radius: 8rem;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
@@ -1937,6 +1941,10 @@ video {
     margin-bottom: 56px;
   }
 
+  .md\:mb-20 {
+    margin-bottom: 80px;
+  }
+
   .md\:mb-3 {
     margin-bottom: 12px;
   }
@@ -1961,12 +1969,16 @@ video {
     margin-top: 2.8rem;
   }
 
-  .md\:mb-20 {
-    margin-bottom: 80px;
+  .md\:mb-10 {
+    margin-bottom: 40px;
   }
 
   .md\:\!block {
     display: block !important;
+  }
+
+  .md\:block {
+    display: block;
   }
 
   .md\:\!flex {
@@ -2005,6 +2017,10 @@ video {
     width: 40rem;
   }
 
+  .md\:w-\[42rem\] {
+    width: 42rem;
+  }
+
   .md\:w-\[65rem\] {
     width: 65rem;
   }
@@ -2021,12 +2037,13 @@ video {
     width: 100%;
   }
 
-  .md\:w-1\/2 {
-    width: 50%;
+  .md\:w-fit {
+    width: -moz-fit-content;
+    width: fit-content;
   }
 
-  .md\:w-\[42rem\] {
-    width: 42rem;
+  .md\:w-\[19rem\] {
+    width: 19rem;
   }
 
   .md\:max-w-\[37rem\] {
@@ -2055,6 +2072,10 @@ video {
 
   .md\:items-center {
     align-items: center;
+  }
+
+  .md\:justify-start {
+    justify-content: flex-start;
   }
 
   .md\:justify-center {
@@ -2135,6 +2156,11 @@ video {
     padding-bottom: 28px;
   }
 
+  .md\:px-8 {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
   .md\:pb-6 {
     padding-bottom: 24px;
   }
@@ -2147,12 +2173,12 @@ video {
     padding-top: 40px;
   }
 
-  .md\:pt-6 {
-    padding-top: 24px;
-  }
-
   .md\:pt-20 {
     padding-top: 80px;
+  }
+
+  .md\:pt-6 {
+    padding-top: 24px;
   }
 
   .md\:text-center {
@@ -2186,6 +2212,11 @@ video {
     font-size: 3.6rem;
   }
 
+  .md\:text-base {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
   .md\:text-lg {
     font-size: 18px;
     line-height: 28px;
@@ -2206,11 +2237,6 @@ video {
     line-height: 16px;
   }
 
-  .md\:text-base {
-    font-size: 16px;
-    line-height: 24px;
-  }
-
   .md\:font-medium {
     font-weight: 500;
   }
@@ -2221,6 +2247,10 @@ video {
 
   .md\:leading-\[2\.24rem\] {
     line-height: 2.24rem;
+  }
+
+  .md\:leading-\[2\.52rem\] {
+    line-height: 2.52rem;
   }
 
   .md\:leading-\[2\.88rem\] {
@@ -2245,10 +2275,6 @@ video {
 
   .md\:leading-\[5\.28rem\] {
     line-height: 5.28rem;
-  }
-
-  .md\:leading-\[2\.52rem\] {
-    line-height: 2.52rem;
   }
 
   .md\:-tracking-\[0\.022rem\] {

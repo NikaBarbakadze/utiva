@@ -182,6 +182,135 @@
         "title_color": "#1c1c1c",
         "description": "<p>As part of our advocacy for better health, Utiva donates a portion of proceeds to a group of charitable organizations, including Saving Mothers and Essentials First.<\/p><p>These organizations promote education and awareness about reproductive and sexual health, as well as preventable diseases in both adults and children through access to hygienic products.<\/p>"
       }
+    },
+    "custom-about-us-blogs": {
+      "type": "custom-about-us-blogs",
+      "blocks": {
+        "0a369073-5837-4aad-b709-c6e2dfe5d4be": {
+          "type": "blogs",
+          "settings": {
+            "articles": "resources\/the-link-between-dementia-and-utis-spotting-the-signs-and-preventing-infection"
+          }
+        },
+        "d76d70f7-e6a5-42b4-a255-6311611e5e9b": {
+          "type": "blogs",
+          "settings": {
+            "articles": "resources\/if-you-get-a-uti-does-that-mean-you-will-have-another-one"
+          }
+        }
+      },
+      "block_order": [
+        "0a369073-5837-4aad-b709-c6e2dfe5d4be",
+        "d76d70f7-e6a5-42b4-a255-6311611e5e9b"
+      ],
+      "settings": {
+        "title": "Learning center",
+        "subtitle": "Your go-to resource for pelvic health education.",
+        "cta_url": "shopify:\/\/blogs\/news"
+      }
+    },
+    "custom-about-us-media": {
+      "type": "custom-about-us-media",
+      "blocks": {
+        "34a2ad9e-2783-4d27-999e-1224116bbd43": {
+          "type": "blogs",
+          "settings": {
+            "articles": "resources\/how-much-cranberry-juice-or-dried-cranberries-will-give-you-36mg-of-pacs"
+          }
+        },
+        "a3cc83f6-b6ec-432f-9b2e-c285dbfd8f66": {
+          "type": "blogs",
+          "settings": {
+            "articles": "resources\/pelvic-health-issues-in-women-navigating-challenges-at-every-age"
+          }
+        },
+        "fa8f1e5d-8a51-4675-85d2-2d4f35432c75": {
+          "type": "blogs",
+          "settings": {
+            "articles": "resources\/biofilms-the-not-so-secret-cause-of-chronic-utis"
+          }
+        },
+        "38162815-fadd-49b8-91e8-f5db591558c0": {
+          "type": "blogs",
+          "settings": {
+            "articles": "resources\/is-it-possible-for-a-uti-to-go-away-without-the-use-of-antibiotics"
+          }
+        }
+      },
+      "block_order": [
+        "34a2ad9e-2783-4d27-999e-1224116bbd43",
+        "a3cc83f6-b6ec-432f-9b2e-c285dbfd8f66",
+        "fa8f1e5d-8a51-4675-85d2-2d4f35432c75",
+        "38162815-fadd-49b8-91e8-f5db591558c0"
+      ],
+      "settings": {
+        "title": "Media",
+        "subtitle": "See us in the press:",
+        "cta_url": "shopify:\/\/blogs\/news"
+      }
+    },     "customer-testimonials": {
+      "type": "customer-testimonials",
+      "blocks": {
+        "1dc78747-aa0c-422c-a6cf-2bb9914b1002": {
+          "type": "video",
+          "settings": {
+            "user_video": "shopify:\/\/files\/videos\/video-test.mp4",
+            "user_name": "Elaine Li",
+            "user_rating": "5.0",
+            "user_img": "shopify:\/\/shop_images\/women.png"
+          }
+        },
+        "d828798e-4427-40b8-af6f-08a2f30910e7": {
+          "type": "text",
+          "settings": {
+            "review_rating": "4.9",
+            "name": "Alaina Mills",
+            "title": "I am so thankful for this product!",
+            "description": "<p>About 3 years ago I started getting UTIs. I went from having a UTI here and there to having Chronic UTIs. Ever since I started taking Utiva a couple of months ago, I haven’t had any infections and my bladder health feels more secure and protected. I am so thankful for this product, and I am definitely going to stay on it for the rest of my life.<\/p>",
+            "reviewed_product": "D-Mannose Supplement",
+            "image": "shopify:\/\/shop_images\/img_c9f2edca-78d9-4b3b-8e4e-8cf454c765ba.png"
+          }
+        },
+        "01289a4a-ee13-4333-ab3b-7eb70af78d3a": {
+          "type": "text",
+          "settings": {
+            "review_rating": "5.0",
+            "name": "Nannette",
+            "title": "I recommend this product",
+            "description": "<p>I started these pills on the advice of my urologist and they certainly have helped. I found out that they could be purchased directly from the company and have been so pleased. Customer service is excellent with all the updated emails regarding notification of upcoming orders, shipment and potential date of delivery of the product. Would not buy these pills anywhere else. Excellent<\/p>",
+            "reviewed_product": "CranberryPACS",
+            "image": "shopify:\/\/shop_images\/img_a741b112-53bf-44c6-971d-cccfc64b4be0.png"
+          }
+        },
+        "8d53c16d-870f-4a90-963c-831c0115bc15": {
+          "type": "text",
+          "settings": {
+            "review_rating": "4.8",
+            "name": "Alaina Mills",
+            "title": "I am so thankful for this product!",
+            "description": "<p>I started these pills on the advice of my urologist and they certainly have helped. I found out that they could be purchased directly from the company and have been so pleased. Customer service is excellent with all the updated emails regarding notification of upcoming orders, shipment and potential date of delivery of the product. Would not buy these pills anywhere else. Excellent<\/p>",
+            "reviewed_product": "D-Mannose Supplement",
+            "image": "shopify:\/\/shop_images\/img_c9f2edca-78d9-4b3b-8e4e-8cf454c765ba.png"
+          }
+        }
+      },
+      "block_order": [
+        "1dc78747-aa0c-422c-a6cf-2bb9914b1002",
+        "d828798e-4427-40b8-af6f-08a2f30910e7",
+        "01289a4a-ee13-4333-ab3b-7eb70af78d3a",
+        "8d53c16d-870f-4a90-963c-831c0115bc15"
+      ],
+      "settings": {
+        "paddingTop_mobile": 40,
+        "paddingBottom_mobile": 40,
+        "paddingTop_desktop": 100,
+        "paddingBottom_desktop": 80,
+        "title": "What are our customers saying?",
+        "subtitle": "Real Customers. Real Reviews.",
+        "reviews_label": "4.8 out of 5 stars from 653 reviews",
+        "desc": "<p>We are helping over 50,000 customers proactively manage their pelvic health! See what some of them have to say.<\/p>",
+        "button_text": "See all"
+      }
     }
   },
   "order": [
@@ -189,6 +318,9 @@
     "who-we-are",
     "custom-about-us-testimonials",
     "custom-about-us-values",
-    "utiva-for-good"
+    "utiva-for-good",
+    "custom-about-us-blogs",
+    "customer-testimonials",
+    "custom-about-us-media"
   ]
 }

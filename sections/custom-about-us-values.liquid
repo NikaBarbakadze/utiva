@@ -1,6 +1,6 @@
 <div class="py-12 bg-[#FCFCFA] md:py-20">
   <div class="page-width px-6">
-    <h2 class="text-[#1c1c1c] mb-8 text-[3.2rem] leading-[3.84rem] -tracking-[0.064rem] font-medium md:mb-14 md:-tracking-[0.022rem] md:text-center">{{ section.settings.title }}</h2>
+    <h2 class="text-[#1c1c1c] mb-8 text-[3.2rem] leading-[3.84rem] -tracking-[0.064rem] font-medium md:mb-14 md:-tracking-[0.022rem] md:text-center md:text-5xl md:leading-[5.28rem]">{{ section.settings.title }}</h2>
     <div class="grid grid-cols-1 gap-y-4 md:grid-cols-2 md:gap-6">
       {% assign propertyBlocks = section.blocks | where: 'type', 'group' %}
       {% for block in propertyBlocks %}
