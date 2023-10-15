@@ -38,11 +38,17 @@
         "title": "Get in touch",
         "subtitle": "Feel free to reach out to us, fill out our form, give us a call or send us an email. <strong>Our team will respond by email within 24  hours of your submission.<\/strong>"
       }
-    }, "faq": {
-      "type": "custom-contact-faq"
+    },
+    "faq": {
+      "type": "custom-contact-faq",
+      "settings": {
+        "title": "Get the info you're looking for right now",
+        "subtitle": "There is a good chance your question has been answered before, see the topics below for helpful information."
+      }
     }
   },
   "order": [
-    "form", "faq"
+    "form",
+    "faq"
   ]
 }
