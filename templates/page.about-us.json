@@ -168,19 +168,29 @@
         "title": "The values that guide us"
       }
     },
-    "utiva-for-good": {
-      "type": "utiva-for-good",
+    "custom-about-us-giving-back": {
+      "type": "custom-about-us-giving-back",
+      "blocks": {
+        "a1d8c11d-a12d-4300-8b37-c921d1da4abe": {
+          "type": "pars",
+          "settings": {
+            "text": "As part of our advocacy for better health, Utiva donates a portion of proceeds to a group of charitable organizations, including Saving Mothers and Essentials First."
+          }
+        },
+        "d9841ea4-84ba-43ab-aaf9-26375836a47e": {
+          "type": "pars",
+          "settings": {
+            "text": "These organizations promote education and awareness about reproductive and sexual health, as well as preventable diseases in both adults and children through access to hygienic products."
+          }
+        }
+      },
+      "block_order": [
+        "a1d8c11d-a12d-4300-8b37-c921d1da4abe",
+        "d9841ea4-84ba-43ab-aaf9-26375836a47e"
+      ],
       "settings": {
-        "paddingTop_mobile": 48,
-        "paddingBottom_mobile": 60,
-        "paddingTop_desktop": 100,
-        "paddingBottom_desktop": 80,
-        "background_color": "#fcfcfa",
-        "image_desktop": "shopify:\/\/shop_images\/img_bced0035-4d15-4342-98fe-e69bfe8aa07b.png",
-        "image_mobile": "shopify:\/\/shop_images\/image_519.png",
         "title": "Giving Back",
-        "title_color": "#1c1c1c",
-        "description": "<p>As part of our advocacy for better health, Utiva donates a portion of proceeds to a group of charitable organizations, including Saving Mothers and Essentials First.<\/p><p>These organizations promote education and awareness about reproductive and sexual health, as well as preventable diseases in both adults and children through access to hygienic products.<\/p>"
+        "image": "shopify:\/\/shop_images\/image.webp"
       }
     },
     "custom-about-us-blogs": {
@@ -209,46 +219,7 @@
         "cta_url": "shopify:\/\/blogs\/news"
       }
     },
-    "custom-about-us-media": {
-      "type": "custom-about-us-media",
-      "blocks": {
-        "34a2ad9e-2783-4d27-999e-1224116bbd43": {
-          "type": "blogs",
-          "settings": {
-            "articles": "resources\/how-much-cranberry-juice-or-dried-cranberries-will-give-you-36mg-of-pacs"
-          }
-        },
-        "a3cc83f6-b6ec-432f-9b2e-c285dbfd8f66": {
-          "type": "blogs",
-          "settings": {
-            "articles": "resources\/pelvic-health-issues-in-women-navigating-challenges-at-every-age"
-          }
-        },
-        "fa8f1e5d-8a51-4675-85d2-2d4f35432c75": {
-          "type": "blogs",
-          "settings": {
-            "articles": "resources\/biofilms-the-not-so-secret-cause-of-chronic-utis"
-          }
-        },
-        "38162815-fadd-49b8-91e8-f5db591558c0": {
-          "type": "blogs",
-          "settings": {
-            "articles": "resources\/is-it-possible-for-a-uti-to-go-away-without-the-use-of-antibiotics"
-          }
-        }
-      },
-      "block_order": [
-        "34a2ad9e-2783-4d27-999e-1224116bbd43",
-        "a3cc83f6-b6ec-432f-9b2e-c285dbfd8f66",
-        "fa8f1e5d-8a51-4675-85d2-2d4f35432c75",
-        "38162815-fadd-49b8-91e8-f5db591558c0"
-      ],
-      "settings": {
-        "title": "Media",
-        "subtitle": "See us in the press:",
-        "cta_url": "shopify:\/\/blogs\/news"
-      }
-    },     "customer-testimonials": {
+    "customer-testimonials": {
       "type": "customer-testimonials",
       "blocks": {
         "1dc78747-aa0c-422c-a6cf-2bb9914b1002": {
@@ -311,6 +282,46 @@
         "desc": "<p>We are helping over 50,000 customers proactively manage their pelvic health! See what some of them have to say.<\/p>",
         "button_text": "See all"
       }
+    },
+    "custom-about-us-media": {
+      "type": "custom-about-us-media",
+      "blocks": {
+        "34a2ad9e-2783-4d27-999e-1224116bbd43": {
+          "type": "blogs",
+          "settings": {
+            "articles": "resources\/how-much-cranberry-juice-or-dried-cranberries-will-give-you-36mg-of-pacs"
+          }
+        },
+        "a3cc83f6-b6ec-432f-9b2e-c285dbfd8f66": {
+          "type": "blogs",
+          "settings": {
+            "articles": "resources\/pelvic-health-issues-in-women-navigating-challenges-at-every-age"
+          }
+        },
+        "fa8f1e5d-8a51-4675-85d2-2d4f35432c75": {
+          "type": "blogs",
+          "settings": {
+            "articles": "resources\/biofilms-the-not-so-secret-cause-of-chronic-utis"
+          }
+        },
+        "38162815-fadd-49b8-91e8-f5db591558c0": {
+          "type": "blogs",
+          "settings": {
+            "articles": "resources\/is-it-possible-for-a-uti-to-go-away-without-the-use-of-antibiotics"
+          }
+        }
+      },
+      "block_order": [
+        "34a2ad9e-2783-4d27-999e-1224116bbd43",
+        "a3cc83f6-b6ec-432f-9b2e-c285dbfd8f66",
+        "fa8f1e5d-8a51-4675-85d2-2d4f35432c75",
+        "38162815-fadd-49b8-91e8-f5db591558c0"
+      ],
+      "settings": {
+        "title": "Media",
+        "subtitle": "See us in the press:",
+        "cta_url": "shopify:\/\/blogs\/news"
+      }
     }
   },
   "order": [
@@ -318,7 +329,7 @@
     "who-we-are",
     "custom-about-us-testimonials",
     "custom-about-us-values",
-    "utiva-for-good",
+    "custom-about-us-giving-back",
     "custom-about-us-blogs",
     "customer-testimonials",
     "custom-about-us-media"
