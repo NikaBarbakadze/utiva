@@ -207,11 +207,18 @@
           "settings": {
             "articles": "resources\/if-you-get-a-uti-does-that-mean-you-will-have-another-one"
           }
+        },
+        "85103e00-403b-418c-8e2b-7c8d0f5bfc10": {
+          "type": "blogs",
+          "settings": {
+            "articles": "resources\/3-incredible-health-benefits-of-d-mannose"
+          }
         }
       },
       "block_order": [
         "0a369073-5837-4aad-b709-c6e2dfe5d4be",
-        "d76d70f7-e6a5-42b4-a255-6311611e5e9b"
+        "d76d70f7-e6a5-42b4-a255-6311611e5e9b",
+        "85103e00-403b-418c-8e2b-7c8d0f5bfc10"
       ],
       "settings": {
         "title": "Learning center",
