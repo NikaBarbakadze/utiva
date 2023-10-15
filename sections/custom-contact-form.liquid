@@ -1,0 +1,252 @@
+<style>
+  .contact_block_rich {
+    color: #1c1c1ccc;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.6px;
+  }
+  form.contact-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+  form.contact-form .form-field-wrapper {
+    position: relative;
+    height: 5.6rem;
+  }
+  form.contact-form .form-field-wrapper label {
+    display: none;
+  }
+  form.contact-form .form-field-wrapper::placeholder {
+    color: #1c1c1c99;
+    opacity: 1 !important;
+    font-weight: 400;
+  }
+  form.contact-form .form-field-wrapper input,
+  textarea,
+  select {
+    height: 100%;
+    width: 100%;
+    border-bottom: 0.12rem solid #1c1c1c1f !important;
+    color: #1c1c1c99;
+
+    font-family: General Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+  }
+  form.contact-form .form-field-wrapper input,
+  textarea {
+    padding-left: 0.4rem;
+  }
+  form.contact-form .submit {
+    margin-top: 1.2rem;
+  }
+  form.contact-form .submit input {
+    padding: 1.6rem 0;
+    width: 100%;
+    border-radius: 8rem;
+    background-color: #C33635;
+
+    color: #FFF;
+    text-align: center;
+    font-family: General Sans;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2.24rem;
+    border: none !important;
+    cursor: pointer;
+  }
+  form.contact-form .submit input:disabled {
+    pointer-events: none;
+    cursor: none;
+    background-color: #E19A9A;
+    color: #ffffffcc;
+  }
+  @media screen and (min-width: 770px) {
+    .contact_block_rich {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22.4px;
+    }
+    .form.contact-form .submit input {
+      max-width: 20rem;
+    }
+    form.contact-form .form-field-wrapper {
+      height: 7.2rem;
+    }
+    form.contact-form .form-field-wrapper input,
+    textarea,
+    select {
+      font-size: 2.4rem;
+      letter-spacing: -0.024rem;
+      line-height: 3.36rem;
+    }
+  }
+</style>
+
+<div class="bg-[#CEB39E] pt-4 pb-8 px-2 md:py-12">
+  <div class="page-width flex flex-col gap-y-10 bg-white rounded-[2.4rem] pt-8 pb-6 px-5 md:py-12 md:px-14 md:flex-row md:items-stretch md:gap-x-20">
+    <div class="flex flex-col gap-y-10 w-full md:justify-between">
+      <div>
+        <h1 class="text-[#C33635] text-[3.2rem] font-medium leading-[3.84rem] -tracking-[0.064rem] mb-3 md:text-[5.6rem] md:leading-[6.16rem] md:-tracking-[0.112rem] md:mb-5">{{ section.settings.title }}</h1>
+        <p class="text-base font-normal leading-[2.24rem] text-[#1c1c1c] md:text-lg md:leading-[2.52rem]">{{ section.settings.subtitle }}</p>
+      </div>
+      <div class="grid grid-cols-2 gap-x-4 gap-y-6 md:gap-y-10 md:gap-x-0">
+        {% for block in section.blocks %}
+          <div class="flex flex-col gap-y-1">
+            <p class="text-base font-medium leading-[2.24rem] text-[#1c1c1c]">{{ block.type | replace: '_', ' ' | capitalize }}:</p>
+            <div class="contact_block_rich">
+              {{ block.settings.content }}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="w-full">
+      {% form 'contact' %}
+        {{ form.errors | default_errors }}
+
+        <div class="form-field-wrapper department">
+          <select name="department" id="department">
+            <option
+              value="Department"
+              selected
+              disabled>Department</option>
+            <option value="Department">Department2</option>
+            <option value="Department">Department3</option>
+          </select>
+        </div>
+
+        <div class="form-field-wrapper first-name">
+          <label for="first-name">Name</label>
+          <input
+            type="text"
+            name="contact[first_name]"
+            id="first-name"
+            required="required"
+            placeholder="Name" />
+        </div>
+
+        <div class="form-field-wrapper email">
+          <label for="email">E-mail</label>
+          <input
+            type="email"
+            name="contact[email]"
+            id="email"
+            required="required"
+            placeholder="E-mail" />
+        </div>
+
+        <div class="form-field-wrapper message">
+          <label for="message">Message</label>
+          <textarea
+            name="contact[body]"
+            id="message"
+            required="required"
+            placeholder="Message"></textarea>
+        </div>
+
+        <div class="submit">
+          <input
+            type="submit"
+            value="Send"
+            disabled />
+        </div>
+      {% endform %}
+    </div>
+  </div>
+</div>
+
+<script>
+  const submitForm = document.getElementById("contact_form");
+  const formFields = submitForm.querySelectorAll(".form-field-wrapper input, .form-field-wrapper textarea");
+
+  const department = submitForm.querySelector(".form-field-wrapper select");
+
+  formFields.forEach(field => field.addEventListener("input", () => {
+    const emptyFields = [... formFields].filter(e => e.value === "");
+
+    if (emptyFields.length === 0 && department.selectedIndex !== 0) {
+      submitForm.querySelector(".submit input").removeAttribute("disabled");
+    } else {
+      submitForm.querySelector(".submit input").setAttribute("disabled", true);
+    }
+  }));
+
+  department.addEventListener("change", () => {
+    const emptyFields = [... formFields].filter(e => e.value === "");
+
+    if (emptyFields.length === 0 && department.selectedIndex !== 0) {
+      submitForm.querySelector(".submit input").removeAttribute("disabled");
+    } else {
+      submitForm.querySelector(".submit input").setAttribute("disabled", true);
+    }
+  });
+</script>
+
+{% schema %}
+  {
+    "name": "Contact Form",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      }, {
+        "type": "inline_richtext",
+        "id": "subtitle",
+        "label": "Subtitle"
+      }
+    ],
+    "blocks": [
+      {
+        "limit": 1,
+        "name": "Address",
+        "type": "address",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content"
+          }
+        ]
+      }, {
+        "limit": 1,
+        "name": "Hours of Operation",
+        "type": "hours_of_operation",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content"
+          }
+        ]
+      }, {
+        "limit": 1,
+        "name": "E-mail",
+        "type": "email",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content"
+          }
+        ]
+      }, {
+        "limit": 1,
+        "name": "Phone",
+        "type": "phone",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
