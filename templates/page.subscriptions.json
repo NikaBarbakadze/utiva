@@ -1,0 +1,289 @@
+{
+    "sections": {
+      "main-banner": {
+        "type": "custom-subscriptions-banner",
+        "blocks": {
+          "a3f20fed-673e-4c02-9ebb-37bca577d236": {
+            "type": "list_items",
+            "settings": {
+              "item_icon": "<svg width=\"28\" height=\"28\" viewbox=\"0 0 28 28\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\"><path d=\"M22.554 7.92517C20.6512 5.25 17.5327 3.5 14 3.5C8.2005 3.5 3.5 8.2005 3.5 14C3.5 14.6288 3.56533 15.2413 3.6715 15.8387M5.16133 22.8597V20.0748H7.9485M5.446 20.0748C7.34883 22.75 10.4673 24.5 14 24.5C19.7995 24.5 24.5 19.7995 24.5 14C24.5 13.3712 24.4347 12.7587 24.3285 12.1613M22.8387 5.14033V7.92517H20.0515M14 11.8323C14.3127 11.48 14.8528 11.0833 15.6765 11.0833C17.1162 11.0833 18.0833 12.3865 18.0833 13.601C18.0833 16.1397 14.8073 18.0833 14 18.0833C13.1927 18.0833 9.91667 16.1385 9.91667 13.601C9.91667 12.3877 10.8827 11.0833 12.3235 11.0833C13.1472 11.0833 13.6873 11.48 14 11.8323Z\" stroke=\"white\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg>",
+              "item_text": "Subscribe to a healthier you"
+            }
+          },
+          "3347adc0-6f75-4dd2-9a46-9d20fceda850": {
+            "type": "list_items",
+            "settings": {
+              "item_icon": "<svg width=\"28\" height=\"28\" viewbox=\"0 0 28 28\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\"><path d=\"M10.5 17.5L17.5 10.5\" stroke=\"white\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><path d=\"M10.7905 10.5C10.6295 10.5 10.4989 10.6306 10.5 10.7916C10.5 10.9526 10.6307 11.0833 10.7917 11.0833C10.9527 11.0833 11.0834 10.9526 11.0834 10.7916C11.0834 10.6306 10.9527 10.5 10.7905 10.5\" stroke=\"white\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><path d=\"M17.2072 16.9167C17.0462 16.9167 16.9155 17.0473 16.9167 17.2083C16.9167 17.3693 17.0473 17.5 17.2083 17.5C17.3693 17.5 17.5 17.3693 17.5 17.2083C17.5 17.0473 17.3693 16.9167 17.2072 16.9167\" stroke=\"white\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><path d=\"M14 24.5C8.20167 24.5 3.5 19.7995 3.5 14C3.5 8.20167 8.20167 3.5 14 3.5C19.7995 3.5 24.5 8.20167 24.5 14C24.5 19.7995 19.7995 24.5 14 24.5\" stroke=\"white\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg>",
+              "item_text": "25% discount for life"
+            }
+          },
+          "3c7ac6e6-cbc7-4a20-8575-d1db03ed28e8": {
+            "type": "list_items",
+            "settings": {
+              "item_icon": "<svg width=\"28\" height=\"28\" viewbox=\"0 0 28 28\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\"><path d=\"M11.8611 5.44427H16.1389C16.7292 5.44427 17.2083 5.92339 17.2083 6.51372V17.2082H3.30554M6.51388 21.9308H4.37499C3.78465 21.9308 3.30554 21.4517 3.30554 20.8614V15.0693M17.2083 8.65261H21.8315C22.2689 8.65261 22.6625 8.9189 22.824 9.32529L24.5415 13.618C24.642 13.8704 24.6944 14.1399 24.6944 14.4116V20.7726C24.6944 21.363 24.2153 21.8421 23.625 21.8421H21.6668M18.2777 21.9352H9.90393M24.6944 16.1387H20.4167V11.8609H23.8389M3.30573 5.44432H8.65295M3.30554 8.65261H6.51388M4.37499 11.8609H3.30554M21.1693 20.7331C21.8313 21.3951 21.8313 22.4677 21.1693 23.1286C20.5073 23.7906 19.4346 23.7906 18.7737 23.1286C18.1117 22.4667 18.1117 21.394 18.7737 20.7331C19.4357 20.0711 20.5084 20.0711 21.1693 20.7331ZM9.40552 20.7331C10.0675 21.3951 10.0675 22.4677 9.40552 23.1286C8.74353 23.7906 7.67088 23.7906 7.00996 23.1286C6.34905 22.4667 6.34798 21.394 7.00996 20.7331C7.67195 20.0722 8.74353 20.0711 9.40552 20.7331Z\" stroke=\"white\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg>",
+              "item_text": "Free shipping on orders over $25\/$50"
+            }
+          }
+        },
+        "block_order": [
+          "a3f20fed-673e-4c02-9ebb-37bca577d236",
+          "3347adc0-6f75-4dd2-9a46-9d20fceda850",
+          "3c7ac6e6-cbc7-4a20-8575-d1db03ed28e8"
+        ],
+        "settings": {
+          "img_desktop": "shopify:\/\/shop_images\/img_0fc686c7-3fea-493c-8efb-16602d2b258f.png",
+          "img_desktop_blur": "shopify:\/\/shop_images\/img_0fc686c7-3fea-493c-8efb-16602d2b258f.png",
+          "img_mobile": "shopify:\/\/shop_images\/img_0fc686c7-3fea-493c-8efb-16602d2b258f.png",
+          "img_mobile_blur": "shopify:\/\/shop_images\/img_0fc686c7-3fea-493c-8efb-16602d2b258f.png",
+          "background_color": "#b9a18f",
+          "label_background_color": "#ffffff",
+          "label_text_color": "#1c1c1c",
+          "title": "Healthy habits, delivered.",
+          "description": "<p>With Utiva’s subscribe & save program, you never have to worry about running out of your Utiva!<\/p>"
+        }
+      },
+      "who-we-are": {
+        "type": "custom-subscription-benefits",
+        "blocks": {
+          "dfeabab0-bd7c-4fe8-8b83-4f9348dac937": {
+            "type": "properties",
+            "settings": {
+              "icon": "shopify:\/\/shop_images\/Frame_138.svg",
+              "title": "25% off + free shipping",
+              "content": "Consistency is key to lasting results, which is why we offer 25% off all subscription orders. Your best deal starts here"
+            }
+          },
+          "f4ba4b7a-edfd-4a35-b278-cac11051942c": {
+            "type": "properties",
+            "settings": {
+              "icon": "shopify:\/\/shop_images\/Frame_137.svg",
+              "title": "A plan that is flexible",
+              "content": "Skip, pause, cancel, modify - it's up to you. There is no commitment or strings attached. Edit directly in your account, you can even text us! XXX-XXX-XXXX"
+            }
+          },
+          "c397a9a0-b9ce-4ee7-a651-4ef56c1fa87c": {
+            "type": "properties",
+            "settings": {
+              "icon": "shopify:\/\/shop_images\/Frame_139.svg",
+              "title": "Earn more Rewards points as a subscriber",
+              "content": "Subscribers earn more points, and can unlock VIP tiers for even greater savings that can be redeemed! Learn more about our rewards program"
+            }
+          },
+          "19f6d1f1-7f1a-45ef-adeb-084f187e8428": {
+            "type": "properties",
+            "settings": {
+              "icon": "shopify:\/\/shop_images\/Frame_136.svg",
+              "title": "Extra Perks",
+              "content": "You’ll have an access to extra sales and promotions"
+            }
+          }
+        },
+        "block_order": [
+          "dfeabab0-bd7c-4fe8-8b83-4f9348dac937",
+          "f4ba4b7a-edfd-4a35-b278-cac11051942c",
+          "c397a9a0-b9ce-4ee7-a651-4ef56c1fa87c",
+          "19f6d1f1-7f1a-45ef-adeb-084f187e8428"
+        ],
+        "settings": {
+          "title1": "Benefits of being a subscriber",
+          "content1": "<p>Our journey started with a profound commitment to UTI prevention. We quickly realized that there were numerous unmet needs in the area of pelvic health, for women of all ages and stages of life.<\/p><p>With so much misinformation out there, we saw the need to create a company that offers both high-quality supplements and an educational platform to our customers so that they can make informed decisions.<\/p><p>Every product and service we provide is designed to help women naturally manage this very important area of health, and we are here to help you get back to living your best life, naturally.<\/p><p>What we believe is “An ounce of prevention is worth a pound of cure” (Benjamin Franklin).<\/p>",
+          "bar_color": "#c33635",
+          "bar_text": "Today, Utiva is a leader in all things pelvic health and it is our only area of focus.",
+          "title2": "Benefits of being a subscriber",
+          "content2": "<p>We apply the rigor of science and technology to the genius of nature, so that we can develop products that actually work. We’re commited to:<\/p>"
+        }
+      },
+      "targeted-solutions": {
+        "type": "targeted-solutions",
+        "blocks": {
+          "c85e708b-ab70-40c4-89b3-355579adc277": {
+            "type": "card",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/image_487.jpg",
+              "title": "UTI",
+              "url": ""
+            }
+          },
+          "704da8a6-8c7c-432f-9b89-6c915b991e12": {
+            "type": "card",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/image_491.jpg",
+              "title": "Overactive bladder",
+              "url": ""
+            }
+          },
+          "a15fa326-c734-4e1e-9fdc-4dedb62dfed7": {
+            "type": "card",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/image_492.jpg",
+              "title": "Vaginal wellness",
+              "url": ""
+            }
+          },
+          "4a4714b8-fdbe-45d7-aae7-55e6e38b60ec": {
+            "type": "card",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rectangle.jpg",
+              "title": "Gut health",
+              "url": ""
+            }
+          }
+        },
+        "block_order": [
+          "c85e708b-ab70-40c4-89b3-355579adc277",
+          "704da8a6-8c7c-432f-9b89-6c915b991e12",
+          "a15fa326-c734-4e1e-9fdc-4dedb62dfed7",
+          "4a4714b8-fdbe-45d7-aae7-55e6e38b60ec"
+        ],
+        "settings": {
+          "paddingTop_mobile": 0,
+          "paddingBottom_mobile": 0,
+          "paddingTop_desktop": 0,
+          "paddingBottom_desktop": 0,
+          "bg_color": "#ede5dd",
+          "title": "Shop by targeted solutions",
+          "description": "For UTIs, overactive bladder, vaginal wellness and gut",
+          "button_text": "Shop all",
+          "button_url": ""
+        }
+      },
+      "customer-testimonials": {
+        "type": "customer-testimonials",
+        "blocks": {
+          "1dc78747-aa0c-422c-a6cf-2bb9914b1002": {
+            "type": "video",
+            "settings": {
+              "user_video": "shopify:\/\/files\/videos\/video-test.mp4",
+              "user_name": "Elaine Li",
+              "user_rating": "5.0",
+              "user_img": "shopify:\/\/shop_images\/women.png"
+            }
+          },
+          "d828798e-4427-40b8-af6f-08a2f30910e7": {
+            "type": "text",
+            "settings": {
+              "review_rating": "4.9",
+              "name": "Alaina Mills",
+              "title": "I am so thankful for this product!",
+              "description": "<p>About 3 years ago I started getting UTIs. I went from having a UTI here and there to having Chronic UTIs. Ever since I started taking Utiva a couple of months ago, I haven’t had any infections and my bladder health feels more secure and protected. I am so thankful for this product, and I am definitely going to stay on it for the rest of my life.<\/p>",
+              "reviewed_product": "D-Mannose Supplement",
+              "image": "shopify:\/\/shop_images\/img_c9f2edca-78d9-4b3b-8e4e-8cf454c765ba.png"
+            }
+          },
+          "01289a4a-ee13-4333-ab3b-7eb70af78d3a": {
+            "type": "text",
+            "settings": {
+              "review_rating": "5.0",
+              "name": "Nannette",
+              "title": "I recommend this product",
+              "description": "<p>I started these pills on the advice of my urologist and they certainly have helped. I found out that they could be purchased directly from the company and have been so pleased. Customer service is excellent with all the updated emails regarding notification of upcoming orders, shipment and potential date of delivery of the product. Would not buy these pills anywhere else. Excellent<\/p>",
+              "reviewed_product": "CranberryPACS",
+              "image": "shopify:\/\/shop_images\/img_a741b112-53bf-44c6-971d-cccfc64b4be0.png"
+            }
+          },
+          "8d53c16d-870f-4a90-963c-831c0115bc15": {
+            "type": "text",
+            "settings": {
+              "review_rating": "4.8",
+              "name": "Alaina Mills",
+              "title": "I am so thankful for this product!",
+              "description": "<p>I started these pills on the advice of my urologist and they certainly have helped. I found out that they could be purchased directly from the company and have been so pleased. Customer service is excellent with all the updated emails regarding notification of upcoming orders, shipment and potential date of delivery of the product. Would not buy these pills anywhere else. Excellent<\/p>",
+              "reviewed_product": "D-Mannose Supplement",
+              "image": "shopify:\/\/shop_images\/img_c9f2edca-78d9-4b3b-8e4e-8cf454c765ba.png"
+            }
+          }
+        },
+        "block_order": [
+          "1dc78747-aa0c-422c-a6cf-2bb9914b1002",
+          "d828798e-4427-40b8-af6f-08a2f30910e7",
+          "01289a4a-ee13-4333-ab3b-7eb70af78d3a",
+          "8d53c16d-870f-4a90-963c-831c0115bc15"
+        ],
+        "settings": {
+          "paddingTop_mobile": 24,
+          "paddingBottom_mobile": 48,
+          "paddingTop_desktop": 0,
+          "paddingBottom_desktop": 100,
+          "title": "What are our customers saying?",
+          "subtitle": "Real Customers. Real Reviews.",
+          "reviews_label": "4.8 out of 5 stars from 653 reviews",
+          "desc": "<p>We are helping over 50,000 customers proactively manage their pelvic health! See what some of them have to say.<\/p>",
+          "button_text": "See all"
+        }
+      },
+      "faq": {
+        "type": "custom-faqs-section",
+        "blocks": {
+          "55ddcc3a-d818-4a57-8689-d4bf4d114a4d": {
+            "type": "shipping",
+            "settings": {
+              "question": "How long will my order take?",
+              "answer": "All orders are processed every night and our carriers make every effort to deliver within 2-6 business days. We provide tracking information with all orders so you can continue to monitor your shipment. Please contact us directly if you have any special instructions or if your shipment is past due so we can help you out right away."
+            }
+          },
+          "00cbbc6f-38a6-4f48-969e-b5607c1495a5": {
+            "type": "shipping",
+            "settings": {
+              "question": "How long will my order take?",
+              "answer": "All orders are processed every night and our carriers make every effort to deliver within 2-6 business days. We provide tracking information with all orders so you can continue to monitor your shipment. Please contact us directly if you have any special instructions or if your shipment is past due so we can help you out right away."
+            }
+          },
+          "42626bb6-5f18-452c-8f53-42595b6e7e3c": {
+            "type": "shipping",
+            "settings": {
+              "question": "How long will my order take?",
+              "answer": "All orders are processed every night and our carriers make every effort to deliver within 2-6 business days. We provide tracking information with all orders so you can continue to monitor your shipment. Please contact us directly if you have any special instructions or if your shipment is past due so we can help you out right away."
+            }
+          },
+          "770e403f-1338-4e57-987a-20943a3fd0fa": {
+            "type": "sub",
+            "settings": {
+              "question": "How can I update my order, delivery address once the order is submitted?",
+              "answer": "All orders are processed every night and our carriers make every effort to deliver within 2-6 business days. We provide tracking information with all orders so you can continue to monitor your shipment. Please contact us directly if you have any special instructions or if your shipment is past due so we can help you out right away."
+            }
+          },
+          "adb62344-7fe5-413f-817c-206d6067e4a3": {
+            "type": "sub",
+            "settings": {
+              "question": "How can I update my order, delivery address once the order is submitted?",
+              "answer": "All orders are processed every night and our carriers make every effort to deliver within 2-6 business days. We provide tracking information with all orders so you can continue to monitor your shipment. Please contact us directly if you have any special instructions or if your shipment is past due so we can help you out right away."
+            }
+          }
+        },
+        "block_order": [
+          "55ddcc3a-d818-4a57-8689-d4bf4d114a4d",
+          "00cbbc6f-38a6-4f48-969e-b5607c1495a5",
+          "42626bb6-5f18-452c-8f53-42595b6e7e3c",
+          "770e403f-1338-4e57-987a-20943a3fd0fa",
+          "adb62344-7fe5-413f-817c-206d6067e4a3"
+        ],
+        "settings": {
+          "title": "Have subscription questions?",
+          "subtitle": "See our FAQ or reach out to us at hello@utivahealth.com"
+        }
+      },
+      "save-from-10": {
+        "type": "save-from-10",
+        "settings": {
+          "paddingTop_mobile": 8,
+          "paddingBottom_mobile": 40,
+          "paddingTop_desktop": 20,
+          "paddingBottom_desktop": 0,
+          "image_desktop": "shopify:\/\/shop_images\/img_d494f8ce-076e-4da2-830f-55d642a8a0b5.png",
+          "image_mobile": "shopify:\/\/shop_images\/img_efefb323-1150-4203-9f09-44d634c52469.png",
+          "bg_color": "#91D5D0",
+          "title": "Subscribe to a healthier you",
+          "button_text": "Subscribe & get 25 % off",
+          "button_link": ""
+        }
+      }
+    },
+    "order": [
+      "main-banner",
+      "who-we-are",
+      "targeted-solutions",
+      "customer-testimonials",
+      "faq",
+      "save-from-10"
+    ]
+  }

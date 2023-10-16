@@ -22,7 +22,7 @@
 {% endstyle %}
 
 <div
-	class='save-from-10'
+	class='save-from-10 {% if template.suffix == "subscriptions" %} !mb-0 lg:!mb-auto{% endif %}' 
 	style='
 		background-color: {{ section.settings.bg_color }};
 		margin-top: var(--padding-top);

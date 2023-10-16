@@ -46,7 +46,7 @@
 		padding-bottom: var(--padding-bottom);
 	'
 >
-	<div class='customer-feedback__container'>
+	<div class='customer-feedback__container {% if template.suffix == "subscriptions" %} pt-5 lg:pt-20 {% endif %}'>
 		<div class='customer-feedback__section-content'>
 			<div class='customer-feedback__title-wrap'>
 				{% if title != blank %}

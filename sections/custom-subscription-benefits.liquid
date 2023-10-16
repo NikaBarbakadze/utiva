@@ -1,0 +1,89 @@
+<style>
+    .custom-rich p {
+      color: #1c1c1ccc;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22.4px;
+      margin: 12px 0;
+    }
+    .custom-rich p:first-child {
+      margin-top: 0;
+    }
+    .custom-rich p:last-child {
+      margin-bottom: 0;
+    }
+    @media screen and (min-width: 770px) {
+      .custom-rich p {
+        font-size: 20px;
+        line-height: 28px;
+        margin: 16px 0;
+      }
+    }
+    .whoweare-bar {
+      background-color: {{ section.settings.bar_color }}
+      ;
+    }
+  </style>
+  
+  <div class="bg-[#FCFCFA]">
+    <div class="pt-[6rem] pb-[6rem] md:pt-[10rem] md:pb-[10rem]">
+      <div class="page-width px-6 flex flex-col mb-8 md:mb-14 md:flex-row md:justify-center">
+        <h2 class="text-[3.2rem] text-[#1c1c1c] font-medium leading-[3.84rem] mb-3 -tracking-[0.064rem] md:text-5xl md:leading-[5.28rem] md:-tracking-[0.096rem] md:mb-0 text-center">{{ section.settings.title2 }}</h2>
+      </div>
+      <div class="page-width px-6 flex flex-col gap-y-4 md:flex-row md:gap-x-6">
+        {% for block in section.blocks %}
+          <div class="bg-white rounded-[1.6rem] p-8 flex flex-col gap-y-6 md:w-1/4">
+            <img
+              class="w-[6rem] aspect-square"
+              src="{{ block.settings.icon | img_url: 'master' }}"
+              alt="{{ block.settings.title }}">
+            <div class="flex flex-col gap-y-2">
+              <p class="text-xl text-[#1c1c1c] font-medium leading-[2.4rem]">{{ block.settings.title }}</p>
+              <p class="text-base font-normal leading-[2.24rem] text-[#1c1c1ccc]">{{ block.settings.content }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  
+  {% schema %}
+    {
+      "name": "Under hero section",
+      "tag": "section",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title2",
+          "label": "Title"
+        }, {
+          "type": "richtext",
+          "id": "content2",
+          "label": "Content"
+        }
+      ],
+      "blocks": [
+        {
+          "limit": 4,
+          "type": "properties",
+          "name": "Property",
+          "settings": [
+            {
+              "type": "image_picker",
+              "id": "icon",
+              "label": "Icon"
+            }, {
+              "type": "text",
+              "id": "title",
+              "label": "Title"
+            }, {
+              "type": "text",
+              "id": "content",
+              "label": "Content"
+            }
+          ]
+        }
+      ]
+    }
+  {% endschema %}
