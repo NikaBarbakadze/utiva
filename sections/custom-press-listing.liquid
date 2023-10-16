@@ -1,0 +1,218 @@
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/css/tabby-ui.min.css">
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/js/tabby.polyfills.min.js" defer></script>
+
+<style>
+    main{
+        background: #FCFCFA;
+    }
+    .custom-press-listing p a{
+        color: #C33635;
+        font-weight: 500;
+        text-decoration: underline;
+    }
+
+    .section-banner-product input {
+        color: #FFFFFF !important;
+        border-color: #ffffff !important;
+    }
+
+    .section-banner-product input::placeholder {
+        color: #FFFFFF !important;
+    }
+
+    .section-banner-product .input-new__button path {
+        stroke: #FFFFFF !important;
+    }
+    [data-tabs] li a{
+        color: #1C1C1C;
+        opacity: 0.6;
+    }
+    [hidden] {
+        display: none;
+    }
+    [role=tab][aria-selected=true]{
+        border: none;
+        border-bottom: 1px solid #1C1C1C;
+        color: #1C1C1C;
+        opacity: 1;
+    }
+    [role=tab]:hover:not([aria-selected=true]){
+        border-color: transparent;
+    }
+</style>
+
+<div class="page-width">
+    <div class="my-10 lg:my-20 flex flex-col gap-4 lg:gap-5">
+        <h1 class="text-[32px] lg:text-[56px] text-[#1C1C1C]">{{ section.settings.title }}</h1>
+        <p class="text-base lg:text-xl font-normal">{{ section.settings.paragraph | escape }} <a href="mailto:{{ section.settings.email_address }}">{{ section.settings.email_address }}</a></p>
+    </div>
+    <div>
+        <ul class="flex gap-6 border-b border-solid border-[#e1e1df]" data-tabs>
+            <li><a class="p-5 block" data-tabby-default href="#media">In the media</a></li>
+            <li><a class="p-5 block" href="#press">Press releases</a></li>
+        </ul>
+        <div id="media" class="flex flex-col gap-6 my-10">
+            {% assign media_blocks = section.blocks | where: "type", "media_items" %}
+            {% for block in media_blocks %}
+                <a href="{{ block.settings.url }}" target="_blank" class="flex gap-6 items-center">
+                    <figure>
+                        <img class="w-full max-w-[200px]" src="{{ block.settings.image | img_url: "master" }}" alt="{{ block.settings.alt_text }}">
+                    </figure>
+                    <div class="flex flex-col gap-2 max-w-[700px]">
+                        <span class="text-sm text-[#767675] font-normal">{{ block.settings.date }}</span>
+                        <h3 class="text-xl lg:text-[22px] text-[#1C1C1C]">{{ block.settings.title }}</h3>
+                        <span class="text-sm underline font-normal text-[#494948]">{{ block.settings.source }}</span>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+        <div id="press" class="flex flex-col gap-6 my-10">
+            {% assign press_blocks = section.blocks | where: "type", "press_items" %}
+            {% for block in press_blocks %}
+                <a href="{{ block.settings.url }}" target="_blank" class="flex gap-6 items-center">
+                    <figure>
+                        <img class="w-full max-w-[200px]" src="{{ block.settings.image | img_url: "master" }}" alt="{{ block.settings.alt_text }}">
+                    </figure>
+                    <div class="flex flex-col gap-2 max-w-[700px]">
+                        <span class="text-sm text-[#767675] font-normal">{{ block.settings.date }}</span>
+                        <h3 class="text-xl lg:text-[22px] text-[#1C1C1C]">{{ block.settings.title }}</h3>
+                        <span class="text-sm underline font-normal text-[#494948]">{{ block.settings.source }}</span>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="page-width">
+    <div class="rounded-[24px] flex flex-col-reverse lg:flex-row gap-1.5 items-center my-6 lg:my-20 " style="background: linear-gradient(264deg, #0777A3 -4.31%, #1FA9B8 53.39%, #52B7AF 104.58%);">
+        <div class="basis-1/2">
+            <img src="https://cdn.shopify.com/s/files/1/0152/2181/7444/files/Rectangle_bd03a3e4-a72a-4e22-a365-608b0010c366.png?v=1697135471" alt="">
+        </div>
+        <div class="lg:pr-20 basis-1/2 px-6 mt-8 lg:px-0 lg:pt-0">
+            <h3 class="lg:text-5xl text-white font-medium mb-5 text-2xl">Want more useful info?</h3>
+            <p class="text-xl text-white font-normal">Subscribe and get interesting articles for yourself.</p>
+            <div class="flex flex-col gap-8 w-full section-banner-product mt-12">
+                {% render 'omnisend-form', section_id: section.id, snippet_context: 'section' %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<script defer>
+    document.addEventListener('DOMContentLoaded', ()=>{
+        const tabs = new Tabby('[data-tabs]');
+    });
+</script>
+
+{% schema %}
+{
+  "name": "Custom Press Listing",
+  "class": "custom-press-listing",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "In the Press"
+    },
+    {
+      "type": "text",
+      "id": "paragraph",
+      "label": "Paragraph",
+      "default": "If you’re a member of the media and would like to talk, please get in touch by sending an email to"
+    },
+    {
+      "type": "text",
+      "id": "email_address",
+      "label": "Email Address",
+      "default": "hello@utivahealth.com"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Media Items",
+      "type": "media_items",
+      "settings": [
+        {
+          "type": "text",
+          "id": "date",
+          "label": "Date",
+          "default": "Apr 26, 2023"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Media Title"
+        },
+        {
+          "type": "text",
+          "id": "url",
+          "label": "URL",
+          "default": "#"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "source",
+          "label": "Source",
+          "default": "utiva.com"
+        },
+        {
+          "type": "text",
+          "id": "alt_text",
+          "label": "Alt Text",
+          "default": "Image Alt Text"
+        }
+      ]
+    },
+    {
+      "name": "Press Items",
+      "type": "press_items",
+      "settings": [
+        {
+          "type": "text",
+          "id": "date",
+          "label": "Date",
+          "default": "Apr 26, 2023"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Press Title"
+        },
+        {
+          "type": "text",
+          "id": "url",
+          "label": "URL",
+          "default": "#"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "source",
+          "label": "Source",
+          "default": "utiva.com"
+        },
+        {
+          "type": "text",
+          "id": "alt_text",
+          "label": "Alt Text",
+          "default": "Image Alt Text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

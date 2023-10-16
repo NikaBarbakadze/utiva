@@ -1,0 +1,67 @@
+{
+  "sections": {
+    "main": {
+      "type": "custom-press-listing",
+      "blocks": {
+        "47283d27-3b4e-4244-99bd-0007442772fe": {
+          "type": "media_items",
+          "settings": {
+            "date": "Apr 26, 2023",
+            "title": "Utiva Health Raises Awareness for Common Women's Health Issues with Educational Campaign",
+            "url": "#",
+            "image": "shopify:\/\/shop_images\/img_3f5c063b-b03c-4ef4-adab-4c16c6d92a23.png",
+            "source": "utiva.com",
+            "alt_text": "Image Alt Text"
+          }
+        },
+        "17ba72c3-62e0-4084-bcc8-0830c7ca9e76": {
+          "type": "media_items",
+          "settings": {
+            "date": "Feb 26, 2023",
+            "title": "Awareness for Common Women's Health Issues with Educational Campaign",
+            "url": "#",
+            "image": "shopify:\/\/shop_images\/img_3f5c063b-b03c-4ef4-adab-4c16c6d92a23.png",
+            "source": "utiva.com",
+            "alt_text": "Image Alt Text"
+          }
+        },
+        "105b0b99-a618-4a93-a194-114ed162d217": {
+          "type": "press_items",
+          "settings": {
+            "date": "Apr 16, 2023",
+            "title": "Utiva Health Celebrates National Women's Health Week with Special Promotions and Discounts",
+            "url": "#",
+            "image": "shopify:\/\/shop_images\/img_3f5c063b-b03c-4ef4-adab-4c16c6d92a23.png",
+            "source": "utiva.com",
+            "alt_text": "Image Alt Text"
+          }
+        },
+        "ab4d3073-cd53-4f21-aeaf-eb791d563dc3": {
+          "type": "press_items",
+          "settings": {
+            "date": "Apr 13, 2023",
+            "title": "Health Celebrates National Women's Health Week with Special Promotions and Discounts",
+            "url": "#",
+            "image": "shopify:\/\/shop_images\/img_3f5c063b-b03c-4ef4-adab-4c16c6d92a23.png",
+            "source": "utiva.com",
+            "alt_text": "Image Alt Text"
+          }
+        }
+      },
+      "block_order": [
+        "47283d27-3b4e-4244-99bd-0007442772fe",
+        "17ba72c3-62e0-4084-bcc8-0830c7ca9e76",
+        "105b0b99-a618-4a93-a194-114ed162d217",
+        "ab4d3073-cd53-4f21-aeaf-eb791d563dc3"
+      ],
+      "settings": {
+        "title": "In the Press",
+        "paragraph": "If you’re a member of the media and would like to talk, please get in touch by sending an email to",
+        "email_address": "hello@utivahealth.com"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
