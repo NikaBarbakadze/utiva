@@ -23,6 +23,9 @@
     .section-banner-product .input-new__button path {
         stroke: #FFFFFF !important;
     }
+    [role=tab]{
+        border: none;
+    }
     [data-tabs] li a{
         color: #1C1C1C;
         opacity: 0.6;
@@ -35,10 +38,13 @@
         border-bottom: 1px solid #1C1C1C;
         color: #1C1C1C;
         opacity: 1;
+        background: transparent !important;
     }
     [role=tab]:hover:not([aria-selected=true]){
         border-color: transparent;
+        border: none !important;
     }
+
 </style>
 
 <div class="page-width">
@@ -54,9 +60,9 @@
         <div id="media" class="flex flex-col gap-6 my-10">
             {% assign media_blocks = section.blocks | where: "type", "media_items" %}
             {% for block in media_blocks %}
-                <a href="{{ block.settings.url }}" target="_blank" class="flex gap-6 items-center">
+                <a href="{{ block.settings.url }}" target="_blank" class="flex flex-col lg:flex-row gap-9 lg:gap-6 items-center">
                     <figure>
-                        <img class="w-full max-w-[200px]" src="{{ block.settings.image | img_url: "master" }}" alt="{{ block.settings.alt_text }}">
+                        <img class="w-full lg:max-w-[200px]" src="{{ block.settings.image | img_url: "master" }}" alt="{{ block.settings.alt_text }}">
                     </figure>
                     <div class="flex flex-col gap-2 max-w-[700px]">
                         <span class="text-sm text-[#767675] font-normal">{{ block.settings.date }}</span>
@@ -69,9 +75,9 @@
         <div id="press" class="flex flex-col gap-6 my-10">
             {% assign press_blocks = section.blocks | where: "type", "press_items" %}
             {% for block in press_blocks %}
-                <a href="{{ block.settings.url }}" target="_blank" class="flex gap-6 items-center">
+                <a href="{{ block.settings.url }}" target="_blank" class="flex flex-col lg:flex-row gap-9 lg:gap-6 items-center">
                     <figure>
-                        <img class="w-full max-w-[200px]" src="{{ block.settings.image | img_url: "master" }}" alt="{{ block.settings.alt_text }}">
+                        <img class="w-full lg:max-w-[200px]" src="{{ block.settings.image | img_url: "master" }}" alt="{{ block.settings.alt_text }}">
                     </figure>
                     <div class="flex flex-col gap-2 max-w-[700px]">
                         <span class="text-sm text-[#767675] font-normal">{{ block.settings.date }}</span>

@@ -1080,6 +1080,10 @@ video {
   gap: 32px;
 }
 
+.gap-9 {
+  gap: 36px;
+}
+
 .\!gap-x-\[13rem\] {
   -moz-column-gap: 13rem !important;
        column-gap: 13rem !important;
@@ -2611,6 +2615,10 @@ video {
 
   .lg\:max-w-none {
     max-width: none;
+  }
+
+  .lg\:max-w-\[200px\] {
+    max-width: 200px;
   }
 
   .lg\:basis-1\/3 {
