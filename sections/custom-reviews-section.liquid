@@ -1,0 +1,405 @@
+<script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+
+<style>
+      .embla__viewport {
+        overflow: hidden;
+      }
+      .embla__container {
+        backface-visibility: hidden;
+        display: flex;
+        touch-action: pan-y;
+        margin-left: calc(var(--slide-spacing) * -1);
+      }
+      .embla__slide {
+        flex: 0 0 var(--slide-size);
+        min-width: 0;
+        padding-left: var(--slide-spacing);
+        position: relative;
+      }
+      .embla__slide__img {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+      .embla__slide__number {
+        width: 4.6rem;
+        height: 4.6rem;
+        z-index: 1;
+        position: absolute;
+        top: 0.6rem;
+        right: 0.6rem;
+        border-radius: 50%;
+        background-color: rgba(var(--background-site-rgb-value), 0.85);
+        line-height: 4.6rem;
+        font-weight: 900;
+        text-align: center;
+        pointer-events: none;
+      }
+      .embla__slide__number > span {
+        color: var(--brand-primary);
+        background-image: linear-gradient(
+          45deg,
+          var(--brand-primary),
+          var(--brand-secondary)
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 1.6rem;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+      .embla-thumbs {
+        --thumbs-slide-spacing: 0.8rem;
+        --thumbs-slide-height: 9rem;
+      }
+      .embla-thumbs__viewport {
+        overflow: hidden;
+      }
+      .embla-thumbs__container {
+        display: flex;
+        flex-direction: row;
+        margin-left: calc(var(--thumbs-slide-spacing) * -1);
+      }
+      .embla-thumbs__slide {
+        flex: 0 0 18%;
+        min-width: 0;
+        padding-left: var(--thumbs-slide-spacing);
+        position: relative;
+      }
+      @media (min-width: 576px) {
+        .embla-thumbs__slide {
+          flex: 0 0 13%;
+        }
+      }
+      .embla-thumbs__slide__button {
+        -webkit-appearance: none;
+        background-color: transparent;
+        touch-action: manipulation;
+        display: block;
+        text-decoration: none;
+        cursor: pointer;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        opacity: 0.2;
+        transition: opacity 0.2s;
+      }
+      .embla-thumbs__slide--selected .embla-thumbs__slide__button {
+        opacity: 1;
+      }
+      .embla-thumbs__slide__img {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+      .embla-thumbs__slide__number {
+        width: 3rem;
+        height: 3rem;
+        z-index: 1;
+        position: absolute;
+        top: 0.3rem;
+        right: 0.3rem;
+        border-radius: 50%;
+        background-color: rgba(var(--background-site-rgb-value), 0.85);
+        line-height: 3rem;
+        font-weight: 900;
+        text-align: center;
+        pointer-events: none;
+      }
+      .embla-thumbs__slide__number > span {
+        color: var(--brand-primary);
+        background-image: linear-gradient(
+          45deg,
+          var(--brand-primary),
+          var(--brand-secondary)
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 1.4rem;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      
+    .embla {
+        overflow: hidden;
+      }
+      .embla__container {
+        display: flex;
+      }
+      .embla__slide {
+        flex: 0 0 100%;
+        min-width: 0;
+      }
+      
+    .blur-part{
+        background: url('https://cdn.shopify.com/s/files/1/0152/2181/7444/files/blur.png?v=1697532866');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .embla-thumbs{
+        position: absolute;
+    }
+
+    .targeted-solutions{
+        background-color: #FFF !important;
+    }
+</style>
+
+<div class="flex flex-col-reverse lg:flex-row items-stretch">
+    <div class="basis-1/2 blur-part">
+        <div class="bg-white p-8 lg:rounded-[24px] flex flex-col gap-6 text-center lg:m-24">
+            <div class="mb-2 lg:mb-6">
+                <svg class="mx-auto" width="41" height="28" viewBox="0 0 41 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.636469 17.536C0.636469 9.92 6.34847 0.943998 17.7725 0.671993V4.888C10.9725 5.432 6.21247 10.056 5.80447 15.768C6.89247 15.224 7.98047 15.088 9.06847 15.088C12.7405 15.088 15.4605 17.808 15.4605 21.208C15.4605 25.152 12.4685 27.6 8.66047 27.6C3.08447 27.6 0.636469 22.976 0.636469 17.536ZM23.7565 17.536C23.7565 9.92 29.4685 0.943998 40.8925 0.671993V4.888C33.9565 5.432 29.3325 10.056 28.9245 15.768C30.0125 15.224 31.1005 15.088 32.1885 15.088C35.8605 15.088 38.5805 17.808 38.5805 21.208C38.5805 25.152 35.5885 27.6 31.7805 27.6C26.0685 27.6 23.7565 22.976 23.7565 17.536Z" fill="#C33635"/>
+                </svg>    
+            </div>
+            <div class="flex flex-col">
+                <h5 class="mb-3 text-[28px] text-[#1C1C1C]">An episode gone bad</h5>
+                <p class="mb-7 text-base text-[#1C1C1C] font-normal">Utiva is a product that delivers on its promises - and as the old saying goes, an ounce of prevention is worth a pound of cure. This has been a good investment in my personal health.</p>
+                <div class="flex flex-col gap-2">
+                    <span class="text-[#1C1C1C] text-sm">Elaine Li</span>
+                    <div class="py-0.5 pl-1.5 pr-2.5 self-center border border-solid border-[#C33635] flex justify-center gap-1 rounded-full items-center">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="Interface, Essential/Star">
+                            <path id="Path" fill-rule="evenodd" clip-rule="evenodd" d="M7.99998 2.29999L9.7731 5.92054L13.7392 6.50473L10.8696 9.32119L11.5468 13.3L7.99998 11.4205L4.45313 13.3L5.13036 9.32119L2.26074 6.50473L6.22625 5.92054L7.99998 2.29999Z" fill="#C33635" stroke="#C33635" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                        </svg>
+                        <span class="text-[#1C1C1C] text-sm inline-block">5.0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="basis-1/2">
+        <div class="embla relative flex h-full min-h-[400px] lg:min-h-0">
+            <div class="embla__viewport">
+              <div class="embla__container h-full">
+                {% for block in section.blocks %}
+                    <div class="embla__slide">
+                        <img
+                          class="embla__slide__img max-h-[550px]"
+                          src="{{ block.settings.slide_image | img_url: 'master' }}"
+                          alt="Slide Image"
+                        />
+                    </div>
+                {% endfor %}
+              </div>
+            </div>
+            <div class="embla-thumbs bottom-[20px] w-full">
+                <div class="embla-thumbs__viewport">
+                  <div class="embla-thumbs__container justify-center">
+                    {% for block in section.blocks %}
+                    <div class="embla-thumbs__slide embla-thumbs__slide--selected">
+                      <button class="embla-thumbs__slide__button" type="button">
+                        <img
+                          class="embla-thumbs__slide__img aspect-square rounded-[10px] max-w-[80px]"
+                          src="{{ block.settings.slide_image | img_url: '100x100' }}"
+                          alt="Slide Thumbnail"
+                        />
+                      </button>
+                    </div>
+                    {% endfor %}
+                  </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>
+<div class="bg-[#C33635]">
+    <div class="page-width py-10 flex flex-col lg:flex-row">
+        <div class="basis-1/2">
+          <div class="max-w-[500px]">
+            <h3 class="text-4xl text-white font-medium mb-5">{{ section.settings.heading_text }}</h3>
+          </div>
+        </div>
+        <div class="basis-1/2 flex flex-col">
+          <p class="text-white text-lg font-normal">{{ section.settings.paragraph_text_1 }}</p>
+          <p class="text-white text-lg font-normal mt-2">{{ section.settings.paragraph_text_2 }}</p>
+          <button class="text-[#1C1C1C] font-medium px-8 py-4 bg-white my-6 rounded-full">{{ section.settings.button_text }}</button>
+          <a href="{{ section.settings.link_url }}" class="text-white text-base font-normal underline">{{ section.settings.link_text }}</a>
+        </div>
+    </div>
+</div>
+
+
+<script defer>
+    document.addEventListener("DOMContentLoaded", ()=>{
+        const OPTIONS = {}
+        const OPTIONS_THUMBS = {
+          containScroll: 'keepSnaps',
+          dragFree: true
+        }
+        
+        const viewportNodeMainCarousel = document.querySelector('.embla__viewport')
+        const viewportNodeThumbCarousel = document.querySelector('.embla-thumbs__viewport')
+        
+        const emblaApiMain = EmblaCarousel(viewportNodeMainCarousel, OPTIONS)
+        const emblaApiThumb = EmblaCarousel(viewportNodeThumbCarousel, OPTIONS_THUMBS)
+        
+        function addThumbBtnsClickHandlers(emblaApiMain, emblaApiThumb) {
+          const slidesThumbs = emblaApiThumb.slideNodes()
+          
+          const scrollToIndex = slidesThumbs.map(
+            (_, index) => () => emblaApiMain.scrollTo(index)
+          )
+          
+          slidesThumbs.forEach((slideNode, index) => {
+            slideNode.addEventListener('click', scrollToIndex[index], false)
+          })
+          
+          return () => {
+            slidesThumbs.forEach((slideNode, index) => {
+              slideNode.removeEventListener('click', scrollToIndex[index], false)
+            })
+          }
+        }
+        
+        function addToggleThumbBtnsActive(emblaApiMain, emblaApiThumb) {
+          const slidesThumbs = emblaApiThumb.slideNodes()
+        
+          const toggleThumbBtnsState = () => {
+            emblaApiThumb.scrollTo(emblaApiMain.selectedScrollSnap())
+            const previous = emblaApiMain.previousScrollSnap()
+            const selected = emblaApiMain.selectedScrollSnap()
+            slidesThumbs[previous].classList.remove('embla-thumbs__slide--selected')
+            slidesThumbs[selected].classList.add('embla-thumbs__slide--selected')
+          }
+        
+          emblaApiMain.on('select', toggleThumbBtnsState)
+          emblaApiThumb.on('init', toggleThumbBtnsState)
+        
+          return () => {
+            const selected = emblaApiMain.selectedScrollSnap()
+            slidesThumbs[selected].classList.remove('embla-thumbs__slide--selected')
+          }
+        }
+        
+        const removeThumbBtnsClickHandlers = addThumbBtnsClickHandlers(
+          emblaApiMain,
+          emblaApiThumb
+        )
+        
+        const removeToggleThumbBtnsActive = addToggleThumbBtnsActive(
+          emblaApiMain,
+          emblaApiThumb
+        )
+        
+        emblaApiMain
+          .on('destroy', removeThumbBtnsClickHandlers)
+          .on('destroy', removeToggleThumbBtnsActive)
+        
+        emblaApiThumb
+          .on('destroy', removeThumbBtnsClickHandlers)
+          .on('destroy', removeToggleThumbBtnsActive)
+        
+    })
+</script>
+
+{% schema %}
+{
+  "name": "Custom Reviews Section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#C33635"
+    },
+    {
+      "type": "text",
+      "id": "heading_text",
+      "label": "Heading Text",
+      "default": "Your story is powerful, and it can bring hope to others"
+    },
+    {
+      "type": "text",
+      "id": "paragraph_text_1",
+      "label": "First Paragraph",
+      "default": "Please help build our inspiring collection of stories by sharing your journey of healing and empowerment."
+    },
+    {
+      "type": "text",
+      "id": "paragraph_text_2",
+      "label": "Second Paragraph",
+      "default": "Tell us about your story and how Utiva has help change your life for the better."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Submit your story using Video Vocal"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Learn More URL"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Learn More Text",
+      "default": "Learn more about our customer ambassador program"
+    },
+    {
+      "type": "text",
+      "id": "testimonial_title",
+      "label": "Testimonial Title",
+      "default": "An episode gone bad"
+    },
+    {
+      "type": "text",
+      "id": "testimonial_paragraph",
+      "label": "Testimonial Paragraph",
+      "default": "Utiva is a product that delivers on its promises - and as the old saying goes, an ounce of prevention is worth a pound of cure. This has been a good investment in my personal health."
+    },
+    {
+      "type": "text",
+      "id": "testimonial_author",
+      "label": "Testimonial Author",
+      "default": "Elaine Li"
+    },
+    {
+      "type": "text",
+      "id": "testimonial_rating",
+      "label": "Testimonial Rating",
+      "default": "5.0"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slider_item",
+      "name": "Slide",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "slide_image",
+          "label": "Slide Image"
+        },
+        {
+          "type": "video",
+          "id": "slide_video",
+          "label": "Slide Video"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
