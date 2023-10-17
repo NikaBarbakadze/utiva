@@ -1,4 +1,10 @@
 <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+<script src="
+    https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js
+    "></script>
+    <link href="
+    https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css
+    " rel="stylesheet">
 
 <style>
       .embla__viewport {
@@ -159,6 +165,25 @@
     .targeted-solutions{
         background-color: #FFF !important;
     }
+
+    .custom-play-button{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 64px;
+        height: 64px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease-in-out;
+        background-image: url("data:image/svg+xml, %3Csvg class='' width='64' height='64' viewBox='0 0 64 64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_b_2956_7954)'%3E%3Crect width='64' height='64' rx='32' fill='%23F2F2F0' fill-opacity='0.4'/%3E%3Cpath d='M25.333 23.6633C25.333 22.081 27.0835 21.1253 28.4145 21.981L41.3827 30.3176C42.6073 31.1049 42.6073 32.8951 41.3827 33.6824L28.4145 42.019C27.0835 42.8747 25.333 41.919 25.333 40.3367V23.6633Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_b_2956_7954' x='-16' y='-16' width='96' height='96' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeGaussianBlur in='BackgroundImageFix' stdDeviation='8'/%3E%3CfeComposite in2='SourceAlpha' operator='in' result='effect1_backgroundBlur_2956_7954'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_backgroundBlur_2956_7954' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
 </style>
 
 <div class="flex flex-col-reverse lg:flex-row items-stretch">
@@ -191,7 +216,10 @@
             <div class="embla__viewport">
               <div class="embla__container h-full">
                 {% for block in section.blocks %}
-                    <div class="embla__slide">
+                    <div class="embla__slide relative">
+                        <button class="custom-play-button" onclick="customPlayButton('{{ block.settings.slide_video.sources[1].url }}')">
+                        </button>
+    
                         <img
                           class="embla__slide__img max-h-[550px]"
                           src="{{ block.settings.slide_image | img_url: 'master' }}"
@@ -209,7 +237,7 @@
                       <button class="embla-thumbs__slide__button" type="button">
                         <img
                           class="embla-thumbs__slide__img aspect-square rounded-[10px] max-w-[80px]"
-                          src="{{ block.settings.slide_image | img_url: '100x100' }}"
+                          src="{{ block.settings.slide_image | img_url: '200x200' }}"
                           alt="Slide Thumbnail"
                         />
                       </button>
@@ -239,6 +267,15 @@
 
 
 <script defer>
+    console.log("hello")
+    const customPlayButton = (videosrc) => {
+        const instance = basicLightbox.create(`
+            <video controls>
+                <source src="${videosrc}" type="video/mp4">
+            </video>
+        `).show();
+    }
+
     document.addEventListener("DOMContentLoaded", ()=>{
         const OPTIONS = {}
         const OPTIONS_THUMBS = {
