@@ -1,177 +1,177 @@
 {
-    "sections": {
-      "main": {
-        "type": "custom-reviews-section",
-        "blocks": {
-          "ab95943c-adcc-4a44-b1a5-2b56242abb0d": {
-            "type": "slider_item",
-            "settings": {
-              "slide_image": "shopify:\/\/shop_images\/65f515b3c7d2e5dd496289e87fb3a92f_1.webp",
-              "slide_video": "shopify:\/\/files\/videos\/video-test.mp4"
-            }
-          },
-          "9fe66a13-aefc-497a-937a-b75a95789f4e": {
-            "type": "slider_item",
-            "settings": {
-              "slide_image": "shopify:\/\/shop_images\/img_0fc686c7-3fea-493c-8efb-16602d2b258f.png",
-              "slide_video": "shopify:\/\/files\/videos\/pill_infographic.mp4"
-            }
-          },
-          "9dba51e4-4350-472e-a76d-4d665b6a73e3": {
-            "type": "slider_item",
-            "settings": {
-              "slide_image": "shopify:\/\/shop_images\/66123b80-1748-43f2-b161-6e75eaf892af-64fa5a3341bfc.webp",
-              "slide_video": "shopify:\/\/files\/videos\/video-test.mp4"
-            }
+  "sections": {
+    "main": {
+      "type": "custom-reviews-section",
+      "blocks": {
+        "ab95943c-adcc-4a44-b1a5-2b56242abb0d": {
+          "type": "slider_item",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/65f515b3c7d2e5dd496289e87fb3a92f_1.webp",
+            "slide_video": "shopify:\/\/files\/videos\/video-test.mp4"
           }
         },
-        "block_order": [
-          "ab95943c-adcc-4a44-b1a5-2b56242abb0d",
-          "9fe66a13-aefc-497a-937a-b75a95789f4e",
-          "9dba51e4-4350-472e-a76d-4d665b6a73e3"
-        ],
-        "settings": {
-          "background_color": "#c33635",
-          "heading_text": "Your story is powerful, and it can bring hope to others",
-          "paragraph_text_1": "Please help build our inspiring collection of stories by sharing your journey of healing and empowerment.",
-          "paragraph_text_2": "Tell us about your story and how Utiva has help change your life for the better.",
-          "button_text": "Submit your story using Video Vocal",
-          "link_url": "",
-          "link_text": "Learn more about our customer ambassador program",
-          "testimonial_title": "An episode gone bad",
-          "testimonial_paragraph": "Utiva is a product that delivers on its promises - and as the old saying goes, an ounce of prevention is worth a pound of cure. This has been a good investment in my personal health.",
-          "testimonial_author": "Elaine Li",
-          "testimonial_rating": "5.0"
-        }
-      },
-      "52477871-ab3c-4c68-9dc6-67258c36ea7a": {
-        "type": "custom-liquid",
-        "settings": {
-          "custom_liquid": "<script src=\"https:\/\/cdn-widgetsrepository.yotpo.com\/v1\/loader\/NQCtvc7XR9VM319BAkqg8t2SzNJ3lJ4frdAN8UbZ\" async><\/script>",
-          "color_scheme": "",
-          "padding_top": 40,
-          "padding_bottom": 52
-        }
-      },
-      "new-trusted-recommended-doctors": {
-        "type": "new-trusted-recommended-doctors",
-        "blocks": {
-          "2d42196f-364c-4153-9050-fe3a46837cdf": {
-            "type": "text",
-            "settings": {
-              "doctors_image": "shopify:\/\/shop_images\/ceccacad3c7ff53f3aa2f2a65265e78b.png",
-              "title": "Managing urinary tract health can be complex",
-              "description": "<p>About 3 years ago I started getting UTIs. I went from having a UTI here and there to having Chronic UTIs. Ever since I started taking Utiva a couple of months ago, I haven’t had any infections and my bladder health feels more secure and protected. I am so thankful for this... <\/p>",
-              "doctors_name": "Dr. Colleen McDermott",
-              "position": "Urogynecologist"
-            }
-          },
-          "d78cbc73-7151-4116-8433-c6f957683800": {
-            "type": "text",
-            "settings": {
-              "doctors_image": "shopify:\/\/shop_images\/image_512_010d3567-2f73-4e35-b834-1212963b6695.png",
-              "title": "Overuse of antibiotics is a concern",
-              "description": "<p>I always consider natural options to help manage urinary tract health in my patients. Utiva is a great, clean cranberry product which has been very effective in many of my patients.<\/p>",
-              "doctors_name": "Dr. Colleen McDermott",
-              "position": "Urogynecologist"
-            }
-          },
-          "21fb4f97-5504-4a87-a0aa-12fb6b2fe3dc": {
-            "type": "text",
-            "settings": {
-              "doctors_image": "shopify:\/\/shop_images\/image_513_6caf6acb-6b77-4bd4-8686-aaf7e4ad985d.png",
-              "title": "My own experience using Utiva has been great",
-              "description": "<p>I heard about Utiva through one of the attending physicians who is training me in my fellowship, Dr. Fiona Lindo. She had come across Utiva at a medical conference and saw that the price of Utiva was...<\/p>",
-              "doctors_name": "Dr. Emily Rutledge",
-              "position": "Urogynecologist"
-            }
-          },
-          "c647f522-e133-46a8-83ca-7cecce112a9c": {
-            "type": "text",
-            "settings": {
-              "doctors_image": "shopify:\/\/shop_images\/image_514.png",
-              "title": "Managing urinary tract health can be complex",
-              "description": "<p>About 3 years ago I started getting UTIs. I went from having a UTI here and there to having Chronic UTIs. Ever since I started taking Utiva a couple of months ago, I haven’t had any infections and my bladder health feels more secure and protected. I am so thankful for this... <\/p>",
-              "doctors_name": "Dr. Colleen McDermott",
-              "position": "Urogynecologist"
-            }
+        "9fe66a13-aefc-497a-937a-b75a95789f4e": {
+          "type": "slider_item",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/img_0fc686c7-3fea-493c-8efb-16602d2b258f.png",
+            "slide_video": "shopify:\/\/files\/videos\/pill_infographic.mp4"
           }
         },
-        "block_order": [
-          "2d42196f-364c-4153-9050-fe3a46837cdf",
-          "d78cbc73-7151-4116-8433-c6f957683800",
-          "21fb4f97-5504-4a87-a0aa-12fb6b2fe3dc",
-          "c647f522-e133-46a8-83ca-7cecce112a9c"
-        ],
-        "settings": {
-          "paddingTop_mobile": 0,
-          "paddingBottom_mobile": 48,
-          "paddingTop_desktop": 120,
-          "paddingBottom_desktop": 120,
-          "title": "Trusted and recommended by over 10,000 doctors",
-          "button_text": "See all",
-          "button_url": "shopify:\/\/pages\/about-us"
+        "9dba51e4-4350-472e-a76d-4d665b6a73e3": {
+          "type": "slider_item",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/66123b80-1748-43f2-b161-6e75eaf892af-64fa5a3341bfc.webp",
+            "slide_video": "shopify:\/\/files\/videos\/video-test.mp4"
+          }
         }
       },
-      "targeted-solutions": {
-        "type": "targeted-solutions",
-        "blocks": {
-          "c85e708b-ab70-40c4-89b3-355579adc277": {
-            "type": "card",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/image_487.jpg",
-              "title": "UTI",
-              "url": ""
-            }
-          },
-          "704da8a6-8c7c-432f-9b89-6c915b991e12": {
-            "type": "card",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/image_491.jpg",
-              "title": "Overactive bladder",
-              "url": ""
-            }
-          },
-          "a15fa326-c734-4e1e-9fdc-4dedb62dfed7": {
-            "type": "card",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/image_492.jpg",
-              "title": "Vaginal wellness",
-              "url": ""
-            }
-          },
-          "4a4714b8-fdbe-45d7-aae7-55e6e38b60ec": {
-            "type": "card",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Rectangle.jpg",
-              "title": "Gut health",
-              "url": ""
-            }
-          }
-        },
-        "block_order": [
-          "c85e708b-ab70-40c4-89b3-355579adc277",
-          "704da8a6-8c7c-432f-9b89-6c915b991e12",
-          "a15fa326-c734-4e1e-9fdc-4dedb62dfed7",
-          "4a4714b8-fdbe-45d7-aae7-55e6e38b60ec"
-        ],
-        "settings": {
-          "paddingTop_mobile": 0,
-          "paddingBottom_mobile": 0,
-          "paddingTop_desktop": 0,
-          "paddingBottom_desktop": 0,
-          "bg_color": "#ede5dd",
-          "title": "Shop by targeted solutions",
-          "description": "For UTIs, overactive bladder, vaginal wellness and gut",
-          "button_text": "Shop all",
-          "button_url": ""
-        }
+      "block_order": [
+        "ab95943c-adcc-4a44-b1a5-2b56242abb0d",
+        "9fe66a13-aefc-497a-937a-b75a95789f4e",
+        "9dba51e4-4350-472e-a76d-4d665b6a73e3"
+      ],
+      "settings": {
+        "background_color": "#c33635",
+        "heading_text": "Your story is powerful, and it can bring hope to others",
+        "paragraph_text_1": "Please help build our inspiring collection of stories by sharing your journey of healing and empowerment.",
+        "paragraph_text_2": "Tell us about your story and how Utiva has help change your life for the better.",
+        "button_text": "Submit your story using Video Vocal",
+        "link_url": "",
+        "link_text": "Learn more about our customer ambassador program",
+        "testimonial_title": "An episode gone bad",
+        "testimonial_paragraph": "Utiva is a product that delivers on its promises - and as the old saying goes, an ounce of prevention is worth a pound of cure. This has been a good investment in my personal health.",
+        "testimonial_author": "Elaine Li",
+        "testimonial_rating": "5.0"
       }
     },
-    "order": [
-      "main",
-      "52477871-ab3c-4c68-9dc6-67258c36ea7a",
-      "new-trusted-recommended-doctors",
-      "targeted-solutions"
-    ]
-  }
+    "52477871-ab3c-4c68-9dc6-67258c36ea7a": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<script src=\"https:\/\/cdn-widgetsrepository.yotpo.com\/v1\/loader\/NQCtvc7XR9VM319BAkqg8t2SzNJ3lJ4frdAN8UbZ\" async><\/script>\n\n{% assign product = all_products[\"cranberry-pacs\"] %}\n\n<div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"434875\" data-yotpo-product-id=\"{{product.id}}\" data-yotpo-name=\"{{ product.title | escape }}\" data-yotpo-url=\"{{ shop.url }}{{ product.url }}\" data-yotpo-image-url=\"{{ product.featured_image | product_img_url: \"large\" | prepend: \"https:\" | replace: '?', '%3F' | replace: '&','%26'}}\" data-yotpo-price=\"{{ product.price | divided_by: 100.00 }}\" data-yotpo-currency=\"{{ shop.currency }}\" data-yotpo-description=\"{{ product.description | escape }}\"><\/div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "new-trusted-recommended-doctors": {
+      "type": "new-trusted-recommended-doctors",
+      "blocks": {
+        "2d42196f-364c-4153-9050-fe3a46837cdf": {
+          "type": "text",
+          "settings": {
+            "doctors_image": "shopify:\/\/shop_images\/ceccacad3c7ff53f3aa2f2a65265e78b.png",
+            "title": "Managing urinary tract health can be complex",
+            "description": "<p>About 3 years ago I started getting UTIs. I went from having a UTI here and there to having Chronic UTIs. Ever since I started taking Utiva a couple of months ago, I haven’t had any infections and my bladder health feels more secure and protected. I am so thankful for this... <\/p>",
+            "doctors_name": "Dr. Colleen McDermott",
+            "position": "Urogynecologist"
+          }
+        },
+        "d78cbc73-7151-4116-8433-c6f957683800": {
+          "type": "text",
+          "settings": {
+            "doctors_image": "shopify:\/\/shop_images\/image_512_010d3567-2f73-4e35-b834-1212963b6695.png",
+            "title": "Overuse of antibiotics is a concern",
+            "description": "<p>I always consider natural options to help manage urinary tract health in my patients. Utiva is a great, clean cranberry product which has been very effective in many of my patients.<\/p>",
+            "doctors_name": "Dr. Colleen McDermott",
+            "position": "Urogynecologist"
+          }
+        },
+        "21fb4f97-5504-4a87-a0aa-12fb6b2fe3dc": {
+          "type": "text",
+          "settings": {
+            "doctors_image": "shopify:\/\/shop_images\/image_513_6caf6acb-6b77-4bd4-8686-aaf7e4ad985d.png",
+            "title": "My own experience using Utiva has been great",
+            "description": "<p>I heard about Utiva through one of the attending physicians who is training me in my fellowship, Dr. Fiona Lindo. She had come across Utiva at a medical conference and saw that the price of Utiva was...<\/p>",
+            "doctors_name": "Dr. Emily Rutledge",
+            "position": "Urogynecologist"
+          }
+        },
+        "c647f522-e133-46a8-83ca-7cecce112a9c": {
+          "type": "text",
+          "settings": {
+            "doctors_image": "shopify:\/\/shop_images\/image_514.png",
+            "title": "Managing urinary tract health can be complex",
+            "description": "<p>About 3 years ago I started getting UTIs. I went from having a UTI here and there to having Chronic UTIs. Ever since I started taking Utiva a couple of months ago, I haven’t had any infections and my bladder health feels more secure and protected. I am so thankful for this... <\/p>",
+            "doctors_name": "Dr. Colleen McDermott",
+            "position": "Urogynecologist"
+          }
+        }
+      },
+      "block_order": [
+        "2d42196f-364c-4153-9050-fe3a46837cdf",
+        "d78cbc73-7151-4116-8433-c6f957683800",
+        "21fb4f97-5504-4a87-a0aa-12fb6b2fe3dc",
+        "c647f522-e133-46a8-83ca-7cecce112a9c"
+      ],
+      "settings": {
+        "paddingTop_mobile": 0,
+        "paddingBottom_mobile": 48,
+        "paddingTop_desktop": 120,
+        "paddingBottom_desktop": 120,
+        "title": "Trusted and recommended by over 10,000 doctors",
+        "button_text": "See all",
+        "button_url": "shopify:\/\/pages\/about-us"
+      }
+    },
+    "targeted-solutions": {
+      "type": "targeted-solutions",
+      "blocks": {
+        "c85e708b-ab70-40c4-89b3-355579adc277": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_487.jpg",
+            "title": "UTI",
+            "url": ""
+          }
+        },
+        "704da8a6-8c7c-432f-9b89-6c915b991e12": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_491.jpg",
+            "title": "Overactive bladder",
+            "url": ""
+          }
+        },
+        "a15fa326-c734-4e1e-9fdc-4dedb62dfed7": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_492.jpg",
+            "title": "Vaginal wellness",
+            "url": ""
+          }
+        },
+        "4a4714b8-fdbe-45d7-aae7-55e6e38b60ec": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle.jpg",
+            "title": "Gut health",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "c85e708b-ab70-40c4-89b3-355579adc277",
+        "704da8a6-8c7c-432f-9b89-6c915b991e12",
+        "a15fa326-c734-4e1e-9fdc-4dedb62dfed7",
+        "4a4714b8-fdbe-45d7-aae7-55e6e38b60ec"
+      ],
+      "settings": {
+        "paddingTop_mobile": 0,
+        "paddingBottom_mobile": 0,
+        "paddingTop_desktop": 0,
+        "paddingBottom_desktop": 0,
+        "bg_color": "#ede5dd",
+        "title": "Shop by targeted solutions",
+        "description": "For UTIs, overactive bladder, vaginal wellness and gut",
+        "button_text": "Shop all",
+        "button_url": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "52477871-ab3c-4c68-9dc6-67258c36ea7a",
+    "new-trusted-recommended-doctors",
+    "targeted-solutions"
+  ]
+}
