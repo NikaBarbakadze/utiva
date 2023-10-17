@@ -353,13 +353,24 @@
             "doctors_name": "Dr. Colleen McDermott",
             "position": "Urogynecologist"
           }
+        },
+        "1491bd30-5d14-42ae-9b77-f0f3bbebf57d": {
+          "type": "text",
+          "settings": {
+            "doctors_image": "shopify:\/\/shop_images\/dr-chughtai-c.jpg",
+            "title": "Based on my clinical research with OAB patients",
+            "description": "<p> I believe the proprietary blend of cranberry in Utiva Bladder Health is safe and has efficacy comparable to other common medications for OAB. It helps in treating symptoms of OAB by reducing urinary urgency episodes and frequency.<\/p>",
+            "doctors_name": "Dr. Bilal Chughtai",
+            "position": "Urologist"
+          }
         }
       },
       "block_order": [
         "2d42196f-364c-4153-9050-fe3a46837cdf",
         "d78cbc73-7151-4116-8433-c6f957683800",
         "21fb4f97-5504-4a87-a0aa-12fb6b2fe3dc",
-        "c647f522-e133-46a8-83ca-7cecce112a9c"
+        "c647f522-e133-46a8-83ca-7cecce112a9c",
+        "1491bd30-5d14-42ae-9b77-f0f3bbebf57d"
       ],
       "settings": {
         "paddingTop_mobile": 0,
