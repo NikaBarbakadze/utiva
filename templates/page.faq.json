@@ -1,0 +1,41 @@
+{
+    "sections": {
+      "main": {
+        "type": "custom-faq-questions",
+        "blocks": {
+          "1d7a96ca-8071-48bb-835c-db8d563f8877": {
+            "type": "shipping",
+            "settings": {
+              "question": "How long will my order take?",
+              "answer": "All orders are processed every night and our carriers make every effort to deliver within 2-6 business days. We provide tracking information with all orders so you can continue to monitor your shipment. Please contact us directly if you have any special instructions or if your shipment is past due so we can help you out right away.",
+              "video": "shopify:\/\/files\/videos\/pill_infographic.mp4"
+            }
+          },
+          "a5c92546-140a-4222-902c-ae5d03ff8871": {
+            "type": "shipping",
+            "settings": {
+              "question": "How long will my order take?",
+              "answer": "All orders are processed every night and our carriers make every effort to deliver within 2-6 business days. We provide tracking information with all orders so you can continue to monitor your shipment. Please contact us directly if you have any special instructions or if your shipment is past due so we can help you out right away."
+            }
+          },
+          "37762c6c-3618-4473-a094-d5803445df5e": {
+            "type": "shipping",
+            "settings": {
+              "question": "How long will my order take?",
+              "answer": "All orders are processed every night and our carriers make every effort to deliver within 2-6 business days. We provide tracking information with all orders so you can continue to monitor your shipment. Please contact us directly if you have any special instructions or if your shipment is past due so we can help you out right away."
+            }
+          }
+        },
+        "block_order": [
+          "1d7a96ca-8071-48bb-835c-db8d563f8877",
+          "a5c92546-140a-4222-902c-ae5d03ff8871",
+          "37762c6c-3618-4473-a094-d5803445df5e"
+        ],
+        "settings": {
+        }
+      }
+    },
+    "order": [
+      "main"
+    ]
+  }

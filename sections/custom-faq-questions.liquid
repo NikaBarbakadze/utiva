@@ -1,0 +1,168 @@
+<!-- @prettify-ignore -->
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/css/tabby-ui.min.css">
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/js/tabby.polyfills.min.js" defer></script>
+
+<style>
+  .questionWrapper .opened {
+    display: none;
+  }
+  .questionWrapper .answer {
+    display: none;
+  }
+  .questionWrapper.active .closed {
+    display: none;
+  }
+  .questionWrapper.active .opened {
+    display: block;
+  }
+  .questionWrapper.active .answer {
+    display: block;
+  }
+
+  [role=tab] {
+    border: none;
+  }
+  [data-tabs] li a {
+    color: #1C1C1C;
+    opacity: 0.6;
+  }
+  [hidden] {
+    display: none;
+  }
+  [role=tablist] {
+    border-bottom: none !important;
+  }
+  [role=tab][aria-selected=true] {
+    border-bottom: 1px solid #1C1C1C;
+    color: #1C1C1C;
+    opacity: 1;
+    background: transparent !important;
+  }
+  [role=tab]:hover:not([aria-selected=true]) {
+    border-color: transparent;
+    border: none !important;
+  }
+
+  @media screen and (min-width: 770px) {}
+</style>
+
+
+<div class="page-width px-6 pt-10 md:pt-20">
+  <h1 class="text-[3.2rem] text-[#1c1c1c] text-center font-medium leading-[3.84rem] -tracking-[0.064rem] mb-6 md:mb-10 md:text-[5.6rem] md:leading-[6.16rem] md:-tracking-[0.112rem]">FAQ</h1>
+  <ul class="flex items-center gap-x-4 min-w-max !mb-10 md:!mb-14" data-tabs>
+    <li><a data-tabby-default href="#shipping">Shipping & Returns</a></li>
+    <li><a href="#prods">Products</a></li>
+  </ul>
+  <div id="shipping" class="flex flex-col gap-y-8 pb-6 md:flex-row md:justify-between md:gap-x-6 md:pb-0">
+    <h3 class="text-2xl font-medium text-[#1c1c1c] md:text-[2.8rem] md:leading-[3.92rem] md:-tracking-[0.028rem]">Shipping & Return policy</h3>
+    <div class="flex flex-col md:w-[72rem]">
+      {% assign shippingQuestions = section.blocks | where: 'type', 'shipping' %}
+      {% for block in shippingQuestions %}
+        <div class="questionWrapper {% unless forloop.first %} border-t border-[#1c1c1c1f] py-5 {% else %} pb-5 {% endunless %} flex flex-col gap-y-4">
+          <div class="questionWrapperHeader cursor-pointer flex items-center justify-between gap-x-4">
+            <p class="text-[#1C1C1C] text-xl font-normal md:text-2xl md:leading-[3.36rem] md:-tracking-[0.024rem]">{{ block.settings.question }}</p>
+            <div class="closed">
+              {% render 'faq-plus' %}
+            </div>
+            <div class="opened">
+              {% render 'faq-minus' %}
+            </div>
+          </div>
+          <div class="answer">
+            {% if block.settings.video %}
+                <div class="rounded-[1.6rem] overflow-hidden relative">
+                    <div class="fade z-10 absolute top-0 left-0 bottom-0 right-0 bg-[#1c1c1c38] flex items-center justify-center">
+                    <div class="playbutton p-4 rounded-[6rem] backdrop-blur-[8px] bg-[#f2f2f066]">
+                        <svg
+                        class="pointer-events-none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 32 32"
+                        fill="none">
+                        <path d="M9.33301 7.66333C9.33301 6.081 11.0835 5.12532 12.4145 5.98097L25.3827 14.3176C26.6073 15.1049 26.6073 16.8951 25.3827 17.6824L12.4145 26.019C11.0835 26.8747 9.33301 25.919 9.33301 24.3367V7.66333Z" fill="white" />
+                        </svg>
+                    </div>
+                    </div>
+                    <video class="section_video object-cover w-full h-full" poster="{{ block.settings.video.preview_image.src | img_url: '800x800' }}">
+                    <source src="{{ block.settings.video.sources[1].url }}">
+                    </video>
+                </div>
+            {% endif %}
+            <p class="text-base text-[#1c1c1ccc] leading-[2.24rem] md:text-lg">{{ block.settings.answer }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div id="prods" class="flex flex-col gap-y-8 pb-6 md:flex-row md:justify-between md:gap-x-6 md:pb-0">
+    </div>
+  </div>
+</div>
+
+<script defer>
+  const questions = document.querySelectorAll(".questionWrapperHeader");
+  questions.forEach((question, i) => {
+    question.addEventListener("click", () => {
+      questions.forEach(e => e.parentNode.classList.remove("active"));
+      question.parentNode.classList.add("active");
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const tabs = new Tabby('[data-tabs]');
+  });
+</script>
+
+{% schema %}
+  {
+    "name": "Questions",
+    "tag": "section",
+    "blocks": [
+      {
+        "name": "Shipping & Returns",
+        "type": "shipping",
+        "settings": [
+          {
+            "type": "text",
+            "id": "question",
+            "label": "Question"
+          }, {
+            "type": "inline_richtext",
+            "id": "answer",
+            "label": "Answer"
+          }, {
+            "type": "video",
+            "id": "video",
+            "label": "Video (If present)"
+          }
+        ]
+      }, {
+        "name": "Products",
+        "type": "products",
+        "settings": [
+          {
+            "type": "text",
+            "id": "question",
+            "label": "Question"
+          }, {
+            "type": "inline_richtext",
+            "id": "answer",
+            "label": "Answer"
+          }, {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+          }, {
+            "type": "video",
+            "id": "video",
+            "label": "Video (If present)"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
