@@ -6,19 +6,22 @@
         "ab95943c-adcc-4a44-b1a5-2b56242abb0d": {
           "type": "slider_item",
           "settings": {
-            "slide_image": "shopify:\/\/shop_images\/65f515b3c7d2e5dd496289e87fb3a92f_1.webp"
+            "slide_image": "shopify:\/\/shop_images\/65f515b3c7d2e5dd496289e87fb3a92f_1.webp",
+            "slide_video": "shopify:\/\/files\/videos\/video-test.mp4"
           }
         },
         "9fe66a13-aefc-497a-937a-b75a95789f4e": {
           "type": "slider_item",
           "settings": {
-            "slide_image": "shopify:\/\/shop_images\/img_0fc686c7-3fea-493c-8efb-16602d2b258f.png"
+            "slide_image": "shopify:\/\/shop_images\/img_0fc686c7-3fea-493c-8efb-16602d2b258f.png",
+            "slide_video": "shopify:\/\/files\/videos\/pill_infographic.mp4"
           }
         },
         "9dba51e4-4350-472e-a76d-4d665b6a73e3": {
           "type": "slider_item",
           "settings": {
-            "slide_image": "shopify:\/\/shop_images\/66123b80-1748-43f2-b161-6e75eaf892af-64fa5a3341bfc.webp"
+            "slide_image": "shopify:\/\/shop_images\/66123b80-1748-43f2-b161-6e75eaf892af-64fa5a3341bfc.webp",
+            "slide_video": "shopify:\/\/files\/videos\/video-test.mp4"
           }
         }
       },
@@ -44,7 +47,7 @@
     "52477871-ab3c-4c68-9dc6-67258c36ea7a": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<script src=\"https:\/\/cdn-widgetsrepository.yotpo.com\/v1\/loader\/NQCtvc7XR9VM319BAkqg8t2SzNJ3lJ4frdAN8UbZ\" async><\/script>",
+        "custom_liquid": "<script src=\"https:\/\/cdn-widgetsrepository.yotpo.com\/v1\/loader\/NQCtvc7XR9VM319BAkqg8t2SzNJ3lJ4frdAN8UbZ\" async><\/script>\n\n{% assign product = all_products[\"cranberry-pacs\"] %}\n\n<div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"434875\" data-yotpo-product-id=\"{{product.id}}\" data-yotpo-name=\"{{ product.title | escape }}\" data-yotpo-url=\"{{ shop.url }}{{ product.url }}\" data-yotpo-image-url=\"{{ product.featured_image | product_img_url: \"large\" | prepend: \"https:\" | replace: '?', '%3F' | replace: '&','%26'}}\" data-yotpo-price=\"{{ product.price | divided_by: 100.00 }}\" data-yotpo-currency=\"{{ shop.currency }}\" data-yotpo-description=\"{{ product.description | escape }}\"><\/div>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
