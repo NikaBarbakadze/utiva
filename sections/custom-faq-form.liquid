@@ -1,10 +1,4 @@
 <style>
-  .contact_block_rich {
-    color: #1c1c1ccc;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 19.6px;
-  }
   form.contact-form {
     display: flex;
     flex-direction: column;
@@ -71,9 +65,6 @@
       font-weight: 400;
       line-height: 22.4px;
     }
-    form.contact-form .submit input {
-      max-width: 20rem;
-    }
     form.contact-form .form-field-wrapper {
       height: 7.2rem;
     }
@@ -101,41 +92,15 @@
   }
 </style>
 
-<div class="bg-[#CEB39E] pt-4 pb-8 px-2 md:py-12">
-  <div class="page-width flex flex-col gap-y-10 bg-white rounded-[2.4rem] pt-8 pb-6 px-5 md:py-12 md:px-14 md:flex-row md:items-stretch md:gap-x-20">
-    <div class="flex flex-col gap-y-10 w-full md:justify-between">
-      <div>
-        <h1 class="text-[#C33635] text-[3.2rem] font-medium leading-[3.84rem] -tracking-[0.064rem] mb-3 md:text-[5.6rem] md:leading-[6.16rem] md:-tracking-[0.112rem] md:mb-5">{{ section.settings.title }}</h1>
-        <p class="text-base font-normal leading-[2.24rem] text-[#1c1c1c] md:text-lg md:leading-[2.52rem]">{{ section.settings.subtitle }}</p>
-      </div>
-      <div class="grid grid-cols-2 gap-x-4 gap-y-6 md:gap-y-10 md:gap-x-0">
-        {% for block in section.blocks %}
-          <div class="flex flex-col gap-y-1">
-            <p class="text-base font-medium leading-[2.24rem] text-[#1c1c1c]">{{ block.type | replace: '_', ' ' | capitalize }}:</p>
-            <div class="contact_block_rich">
-              {{ block.settings.content }}
-            </div>
-          </div>
-        {% endfor %}
-      </div>
+<div class="pt-2.5 pb-10 px-2 md:px-6 md:pt-[13.2rem] md:pb-[10rem]">
+  <div class="page-width rounded-[2rem] bg-[#C33635] flex justify-center p-5 pt-8 flex-col gap-y-8 md:flex-row md:gap-x-24 md:pl-14 md:p-12">
+    <div class="flex flex-col gap-y-3 w-full md:gap-y-5">
+      <h2 class="text-white text-[3.2rem] -tracking-[.064rem] leading-[3.84rem] font-medium md:text-5xl md:leading-[5.28rem] md:-tracking-[.096rem] md:font-medium">{{ section.settings.title }}</h2>
+      <p class="text-[#ffffffcc] text-base leading-[2.24rem] font-normal md:text-xl md:leading-[2.8rem]">{{ section.settings.subtitle }}</p>
     </div>
-    <div class="w-full">
+    <div class="p-5 rounded-[1.6rem] bg-white w-full md:p-[3rem]">
       {% form 'contact' %}
         {{ form.errors | default_errors }}
-
-        <div class="form-field-wrapper department">
-          <select
-            name="department"
-            id="department"
-            class="font-['GeneralSans']">
-            <option
-              value="Department"
-              selected
-              disabled>Department</option>
-            <option value="Department">Department2</option>
-            <option value="Department">Department3</option>
-          </select>
-        </div>
 
         <div class="form-field-wrapper first-name">
           <label for="first-name" class="font-['GeneralSans']">Name</label>
@@ -185,89 +150,32 @@
   const submitForm = document.getElementById("contact_form");
   const formFields = submitForm.querySelectorAll(".form-field-wrapper input, .form-field-wrapper textarea");
 
-  const department = submitForm.querySelector(".form-field-wrapper select");
-
   formFields.forEach(field => field.addEventListener("input", () => {
     const emptyFields = [... formFields].filter(e => e.value === "");
 
-    if (emptyFields.length === 0 && department.selectedIndex !== 0) {
+    if (emptyFields.length === 0) {
       submitForm.querySelector(".submit input").removeAttribute("disabled");
     } else {
       submitForm.querySelector(".submit input").setAttribute("disabled", true);
     }
   }));
-
-  department.addEventListener("change", () => {
-    const emptyFields = [... formFields].filter(e => e.value === "");
-
-    if (emptyFields.length === 0 && department.selectedIndex !== 0) {
-      submitForm.querySelector(".submit input").removeAttribute("disabled");
-    } else {
-      submitForm.querySelector(".submit input").setAttribute("disabled", true);
-    }
-  });
 </script>
 
 {% schema %}
   {
-    "name": "Contact Form",
+    "name": "Form",
     "tag": "section",
     "settings": [
       {
         "type": "text",
         "id": "title",
-        "label": "Title"
+        "label": "Title",
+        "default": "Didn’t find what you’re looking for?"
       }, {
         "type": "inline_richtext",
         "id": "subtitle",
-        "label": "Subtitle"
-      }
-    ],
-    "blocks": [
-      {
-        "limit": 1,
-        "name": "Address",
-        "type": "address",
-        "settings": [
-          {
-            "type": "richtext",
-            "id": "content",
-            "label": "Content"
-          }
-        ]
-      }, {
-        "limit": 1,
-        "name": "Hours of Operation",
-        "type": "hours_of_operation",
-        "settings": [
-          {
-            "type": "richtext",
-            "id": "content",
-            "label": "Content"
-          }
-        ]
-      }, {
-        "limit": 1,
-        "name": "E-mail",
-        "type": "email",
-        "settings": [
-          {
-            "type": "richtext",
-            "id": "content",
-            "label": "Content"
-          }
-        ]
-      }, {
-        "limit": 1,
-        "name": "Phone",
-        "type": "phone",
-        "settings": [
-          {
-            "type": "richtext",
-            "id": "content",
-            "label": "Content"
-          }
-        ]
+        "label": "Subtitle",
+        "default": "Ask a question. Our team will respond by email within 24  hours of your submission."
       }
     ]
   }
