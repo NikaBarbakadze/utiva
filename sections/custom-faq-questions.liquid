@@ -1,0 +1,426 @@
+<!-- @prettify-ignore -->
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/css/tabby-ui.min.css">
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/js/tabby.polyfills.min.js" defer></script>
+
+<style>
+  .questionWrapper .opened {
+    display: none;
+  }
+  .questionWrapper .answer {
+    display: none;
+  }
+  .questionWrapper.active .closed {
+    display: none;
+  }
+  .questionWrapper.active .opened {
+    display: block;
+  }
+  .questionWrapper.active .answer {
+    display: block;
+  }
+
+  [role=tab] {
+    border: none;
+  }
+  [data-tabs] li a {
+    color: #1C1C1C;
+    opacity: 0.6;
+  }
+  [hidden] {
+    display: none;
+  }
+  [role=tablist] {
+    border-bottom: none !important;
+  }
+  [role=tab][aria-selected=true] {
+    border-bottom: 1px solid #1C1C1C;
+    color: #1C1C1C;
+    opacity: 1;
+    background: transparent !important;
+  }
+  [role=tab]:hover:not([aria-selected=true]) {
+    border-color: transparent;
+    border: none !important;
+  }
+
+  @media screen and (min-width: 770px) {
+    [role=tablist] {
+      border-bottom: 1px solid #1c1c1c1f !important;
+    }
+    [role=tab][aria-selected=true] {
+      border: none;
+      border-bottom: 1px solid #1C1C1C !important;
+    }
+    [data-tabs] li a {
+      padding: 20px;
+      width: 188px;
+      font-size: 18px;
+      line-height: 25.2px;
+      text-align: center;
+    }
+  }
+  @media screen and (max-width: 768px){
+    .faq-slider::-webkit-scrollbar, .product_tab_slider::-webkit-scrollbar {
+      -webkit-appearance: none;
+    }
+  }
+  .product_tab_slide.active {
+    background-color: #1C1C1C !important;
+    color: #FFF !important;
+  }
+</style>
+
+{%- style -%} 
+  {%- assign productQuestions = section.blocks | where: 'type', 'products' -%}
+  {%- for block in productQuestions -%}
+    {%- unless previous == block.settings.product.title -%}
+      .productQuestionHandle-{{ block.settings.product.handle }}:first-of-type {
+        border: none !important;
+        padding: 0 !important;
+        padding-bottom: 20px !important;
+      }
+      .productQuestionHandle-{{ block.settings.product.handle }} {
+        border-top-width: 1px;
+        border-color: #1c1c1c1f;
+        padding: 20px 0;
+      }
+    {%- endunless -%}
+    {%- assign previous = block.settings.product.title -%}
+  {%- endfor -%}
+{%- endstyle -%}
+
+
+<div class="pt-10 md:pt-20">
+  <h1 class="page-width px-6 text-[3.2rem] text-[#1c1c1c] text-center font-medium leading-[3.84rem] -tracking-[0.064rem] mb-6 md:mb-10 md:text-[5.6rem] md:leading-[6.16rem] md:-tracking-[0.112rem]">FAQ</h1>
+  <div class="!px-6 overflow-x-scroll faq-slider md:overflow-x-visible">
+    <ul class="flex items-center gap-x-4 min-w-max md:gap-x-6 md:max-w-[135rem] md:!mx-auto md:border-b md:border-[#1c1c1c1f] md:justify-center" data-tabs>
+      <li><a data-tabby-default href="#shipping">Shipping & Returns</a></li>
+      <li><a href="#prods">Products</a></li>
+      <li><a href="#hsaForm">HSA Medical Form</a></li>
+      <li><a href="#rewards">Rewards</a></li>
+      <li><a href="#subscriptions">Subscriptions</a></li>
+    </ul>
+  </div>
+  <div id="shipping" class="page-width px-6 flex flex-col gap-y-8 pb-6 mt-4 md:mt-14 md:flex-row md:justify-between md:gap-x-6 md:pb-0">
+    <h3 class="text-2xl font-medium text-[#1c1c1c] md:text-[2.8rem] md:leading-[3.92rem] md:-tracking-[0.028rem]">Shipping & Return policy</h3>
+    <div class="flex flex-col md:w-[72rem]">
+      {% assign shippingQuestions = section.blocks | where: 'type', 'shipping' %}
+      {% for block in shippingQuestions %}
+        <div class="questionWrapper {% unless forloop.first %} border-t border-[#1c1c1c1f] py-5 {% else %} pb-5 {% endunless %} flex flex-col gap-y-4">
+          <div class="questionWrapperHeader cursor-pointer flex items-center justify-between gap-x-4">
+            <p class="text-[#1C1C1C] text-xl font-normal md:text-2xl md:leading-[3.36rem] md:-tracking-[0.024rem]">{{ block.settings.question }}</p>
+            <div class="closed">
+              {% render 'faq-plus' %}
+            </div>
+            <div class="opened">
+              {% render 'faq-minus' %}
+            </div>
+          </div>
+          <div class="answer">
+            {% if block.settings.video %}
+                <div class="rounded-[1.6rem] overflow-hidden relative">
+                    <div class="fade z-10 absolute top-0 left-0 bottom-0 right-0 bg-[#1c1c1c38] flex items-center justify-center">
+                    <div class="playbutton p-4 rounded-[6rem] backdrop-blur-[8px] bg-[#f2f2f066]">
+                        <svg
+                        class="pointer-events-none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 32 32"
+                        fill="none">
+                        <path d="M9.33301 7.66333C9.33301 6.081 11.0835 5.12532 12.4145 5.98097L25.3827 14.3176C26.6073 15.1049 26.6073 16.8951 25.3827 17.6824L12.4145 26.019C11.0835 26.8747 9.33301 25.919 9.33301 24.3367V7.66333Z" fill="white" />
+                        </svg>
+                    </div>
+                    </div>
+                    <video class="section_video object-cover w-full h-full" poster="{{ block.settings.video.preview_image.src | img_url: '800x800' }}">
+                    <source src="{{ block.settings.video.sources[1].url }}">
+                    </video>
+                </div>
+            {% endif %}
+            <p class="text-base text-[#1c1c1ccc] leading-[2.24rem] md:text-lg">{{ block.settings.answer }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div id="prods" class="mt-2.5 md:mt-10">
+    {% assign productQuestions = section.blocks | where: 'type', 'products' %}
+    <div class="overflow-x-scroll product_tab_slider w-full px-6 md:overflow-x-hidden md:max-w-[135rem] md:mx-auto">
+      <div class="flex items-center gap-x-4 w-max md:justify-center md:w-auto">
+        {% for block in productQuestions %}
+          {% unless previous == block.settings.product.title %}
+            <div data-product="{{ block.settings.product.handle }}" class="product_tab_slide py-1.5 px-3 rounded-[4rem] text-sm font-medium leading-[19.6px] text-[#1c1c1c] border border-[#1c1c1c1f] md:py-[.9rem] md:px-4 md:text-base md:-tracking-[.032rem] md:leading-[2.24rem] md:cursor-pointer {% if forloop.first %}active{% endif %}">{{ block.settings.product.title }}</div>
+          {% endunless %}
+          {% assign previous = block.settings.product.title %}
+        {% endfor %}
+      </div>
+    </div>
+    <div class="page-width px-6 flex flex-col gap-y-8 pb-6 mt-4 md:mt-[8.8rem] md:flex-row md:justify-between md:gap-x-6 md:pb-0">
+      <h3 id="displayedProductFaqTitle" class="text-2xl font-medium text-[#1c1c1c] md:text-[2.8rem] md:leading-[3.92rem] md:-tracking-[0.028rem]"></h3>
+      <div class="flex flex-col md:w-[72rem]">
+        {% for block in productQuestions %} 
+          <div data-product="{{ block.settings.product.handle }}" class="hidden questionWrapper productQuestionWrapper productQuestionHandle-{{ block.settings.product.handle }} flex flex-col gap-y-4">
+            <div class="questionWrapperHeader cursor-pointer flex items-center justify-between gap-x-4">
+              <p class="text-[#1C1C1C] text-xl font-normal md:text-2xl md:leading-[3.36rem] md:-tracking-[0.024rem]">{{ block.settings.question }}</p>
+              <div class="closed">
+                {% render 'faq-plus' %}
+              </div>
+              <div class="opened">
+                {% render 'faq-minus' %}
+              </div>
+            </div>
+            <div class="answer">
+              {% if block.settings.video %}
+                  <div class="rounded-[1.6rem] overflow-hidden relative">
+                      <div class="fade z-10 absolute top-0 left-0 bottom-0 right-0 bg-[#1c1c1c38] flex items-center justify-center">
+                      <div class="playbutton p-4 rounded-[6rem] backdrop-blur-[8px] bg-[#f2f2f066]">
+                          <svg
+                          class="pointer-events-none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="32"
+                          height="32"
+                          viewBox="0 0 32 32"
+                          fill="none">
+                          <path d="M9.33301 7.66333C9.33301 6.081 11.0835 5.12532 12.4145 5.98097L25.3827 14.3176C26.6073 15.1049 26.6073 16.8951 25.3827 17.6824L12.4145 26.019C11.0835 26.8747 9.33301 25.919 9.33301 24.3367V7.66333Z" fill="white" />
+                          </svg>
+                      </div>
+                      </div>
+                      <video class="section_video object-cover w-full h-full" poster="{{ block.settings.video.preview_image.src | img_url: '800x800' }}">
+                      <source src="{{ block.settings.video.sources[1].url }}">
+                      </video>
+                  </div>
+              {% endif %}
+              <p class="text-base text-[#1c1c1ccc] leading-[2.24rem] md:text-lg">{{ block.settings.answer }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div id="hsaForm" class="page-width px-6 flex flex-col gap-y-6 pb-6 mt-4 md:mt-14 md:flex-row md:justify-between md:gap-x-6 md:pb-0">
+    <h3 class="text-2xl font-medium text-[#1c1c1c] md:text-[2.8rem] md:leading-[3.92rem] md:-tracking-[0.028rem]">HSA/FSA Medical Form</h3>
+    <div class="hsaFormWrapper flex flex-col gap-y-2 md:gap-y-4 md:w-[72rem]">
+      {% assign hsaTextBlocks = section.blocks | where: 'type', 'hsas' %}
+      {% for block in hsaTextBlocks %} 
+        <p class="text-base text-[#1c1c1ccc] font-normal leading-[2.24rem] md:text-xl md:leading-[2.8rem]">{{ block.settings.hsa_rich }}</p>
+      {% endfor %}
+      <a href="#" class="flex items-center w-full justify-center py-4 px-8 rounded-[8rem] border border-[#C33635] mt-4 md:w-fit">
+        <span class="text-[#C33635] text-base leading-[2.24rem] font-medium text-center">Download form</span>
+      </a>
+    </div>
+  </div>
+  <div id="rewards" class="page-width px-6 flex flex-col gap-y-8 pb-6 mt-4 md:mt-14 md:flex-row md:justify-between md:gap-x-6 md:pb-0">
+    <h3 class="text-2xl font-medium text-[#1c1c1c] md:text-[2.8rem] md:leading-[3.92rem] md:-tracking-[0.028rem]">Rewards & Referrals</h3>
+    <div class="flex flex-col md:w-[72rem]">
+      {% assign rewardQuestions = section.blocks | where: 'type', 'rewards' %}
+      {% for block in rewardQuestions %}
+        <div class="questionWrapper {% unless forloop.first %} border-t border-[#1c1c1c1f] py-5 {% else %} pb-5 {% endunless %} flex flex-col gap-y-4">
+          <div class="questionWrapperHeader cursor-pointer flex items-center justify-between gap-x-4">
+            <p class="text-[#1C1C1C] text-xl font-normal md:text-2xl md:leading-[3.36rem] md:-tracking-[0.024rem]">{{ block.settings.question }}</p>
+            <div class="closed">
+              {% render 'faq-plus' %}
+            </div>
+            <div class="opened">
+              {% render 'faq-minus' %}
+            </div>
+          </div>
+          <div class="answer">
+            {% if block.settings.video %}
+                <div class="rounded-[1.6rem] overflow-hidden relative">
+                    <div class="fade z-10 absolute top-0 left-0 bottom-0 right-0 bg-[#1c1c1c38] flex items-center justify-center">
+                    <div class="playbutton p-4 rounded-[6rem] backdrop-blur-[8px] bg-[#f2f2f066]">
+                        <svg
+                        class="pointer-events-none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 32 32"
+                        fill="none">
+                        <path d="M9.33301 7.66333C9.33301 6.081 11.0835 5.12532 12.4145 5.98097L25.3827 14.3176C26.6073 15.1049 26.6073 16.8951 25.3827 17.6824L12.4145 26.019C11.0835 26.8747 9.33301 25.919 9.33301 24.3367V7.66333Z" fill="white" />
+                        </svg>
+                    </div>
+                    </div>
+                    <video class="section_video object-cover w-full h-full" poster="{{ block.settings.video.preview_image.src | img_url: '800x800' }}">
+                    <source src="{{ block.settings.video.sources[1].url }}">
+                    </video>
+                </div>
+            {% endif %}
+            <p class="text-base text-[#1c1c1ccc] leading-[2.24rem] md:text-lg">{{ block.settings.answer }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div id="subscriptions" class="page-width px-6 flex flex-col gap-y-8 pb-6 mt-4 md:mt-14 md:flex-row md:justify-between md:gap-x-6 md:pb-0">
+    <h3 class="text-2xl font-medium text-[#1c1c1c] md:text-[2.8rem] md:leading-[3.92rem] md:-tracking-[0.028rem]">Subscribe & Save</h3>
+    <div class="flex flex-col md:w-[72rem]">
+      {% assign subscriptionQuestions = section.blocks | where: 'type', 'subscriptions' %}
+      {% for block in subscriptionQuestions %}
+        <div class="questionWrapper {% unless forloop.first %} border-t border-[#1c1c1c1f] py-5 {% else %} pb-5 {% endunless %} flex flex-col gap-y-4">
+          <div class="questionWrapperHeader cursor-pointer flex items-center justify-between gap-x-4">
+            <p class="text-[#1C1C1C] text-xl font-normal md:text-2xl md:leading-[3.36rem] md:-tracking-[0.024rem]">{{ block.settings.question }}</p>
+            <div class="closed">
+              {% render 'faq-plus' %}
+            </div>
+            <div class="opened">
+              {% render 'faq-minus' %}
+            </div>
+          </div>
+          <div class="answer">
+            {% if block.settings.video %}
+                <div class="rounded-[1.6rem] overflow-hidden relative">
+                    <div class="fade z-10 absolute top-0 left-0 bottom-0 right-0 bg-[#1c1c1c38] flex items-center justify-center">
+                    <div class="playbutton p-4 rounded-[6rem] backdrop-blur-[8px] bg-[#f2f2f066]">
+                        <svg
+                        class="pointer-events-none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 32 32"
+                        fill="none">
+                        <path d="M9.33301 7.66333C9.33301 6.081 11.0835 5.12532 12.4145 5.98097L25.3827 14.3176C26.6073 15.1049 26.6073 16.8951 25.3827 17.6824L12.4145 26.019C11.0835 26.8747 9.33301 25.919 9.33301 24.3367V7.66333Z" fill="white" />
+                        </svg>
+                    </div>
+                    </div>
+                    <video class="section_video object-cover w-full h-full" poster="{{ block.settings.video.preview_image.src | img_url: '800x800' }}">
+                    <source src="{{ block.settings.video.sources[1].url }}">
+                    </video>
+                </div>
+            {% endif %}
+            <p class="text-base text-[#1c1c1ccc] leading-[2.24rem] md:text-lg">{{ block.settings.answer }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script defer>
+  const questions = document.querySelectorAll(".questionWrapperHeader");
+  questions.forEach((question, i) => {
+    question.addEventListener("click", () => {
+      questions.forEach(e => e.parentNode.classList.remove("active"));
+      question.parentNode.classList.add("active");
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const tabs = new Tabby('[data-tabs]');
+
+    document.getElementById("displayedProductFaqTitle").innerText = document.querySelector(".product_tab_slide.active").innerText;
+    const initialProductTab = document.querySelector(".product_tab_slide.active").dataset.product;
+    const productQuestions = document.querySelectorAll(".questionWrapper.productQuestionWrapper");
+    productQuestions.forEach(e => e.dataset.product === initialProductTab && e.classList.remove("hidden"));
+
+    const tabSlides = document.querySelectorAll(".product_tab_slide");
+    tabSlides.forEach(tab => {
+      tab.addEventListener("click", () => {
+        tabSlides.forEach(e => e.classList.remove("active"));
+        tab.classList.add("active");
+  
+        productQuestions.forEach(e => e.classList.add("hidden"));
+        productQuestions.forEach(e => e.dataset.product === tab.dataset.product && e.classList.remove("hidden"));
+      });
+    });
+  });
+
+</script>
+
+{% schema %}
+  {
+    "name": "Questions",
+    "tag": "section",
+    "blocks": [
+      {
+        "name": "Shipping & Returns",
+        "type": "shipping",
+        "settings": [
+          {
+            "type": "text",
+            "id": "question",
+            "label": "Question"
+          }, {
+            "type": "inline_richtext",
+            "id": "answer",
+            "label": "Answer"
+          }, {
+            "type": "video",
+            "id": "video",
+            "label": "Video (If present)"
+          }
+        ]
+      }, {
+        "name": "Products",
+        "type": "products",
+        "settings": [
+          {
+            "type": "text",
+            "id": "question",
+            "label": "Question"
+          }, {
+            "type": "inline_richtext",
+            "id": "answer",
+            "label": "Answer"
+          }, {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+          }, {
+            "type": "video",
+            "id": "video",
+            "label": "Video (If present)"
+          }
+        ]
+      }, {
+        "name": "HSA Text",
+        "type": "hsas",
+        "settings": [
+          {
+            "type": "inline_richtext",
+            "id": "hsa_rich",
+            "label": "HSA Content"
+          }
+        ]
+      }, {
+        "name": "Rewards",
+        "type": "rewards",
+        "settings": [
+          {
+            "type": "text",
+            "id": "question",
+            "label": "Question"
+          }, {
+            "type": "inline_richtext",
+            "id": "answer",
+            "label": "Answer"
+          }, {
+            "type": "video",
+            "id": "video",
+            "label": "Video (If present)"
+          }
+        ]
+      }, {
+        "name": "Subscriptions",
+        "type": "subscriptions",
+        "settings": [
+          {
+            "type": "text",
+            "id": "question",
+            "label": "Question"
+          }, {
+            "type": "inline_richtext",
+            "id": "answer",
+            "label": "Answer"
+          }, {
+            "type": "video",
+            "id": "video",
+            "label": "Video (If present)"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

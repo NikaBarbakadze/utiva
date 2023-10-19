@@ -1,0 +1,109 @@
+{
+  "sections": {
+    "main": {
+      "type": "custom-faq-questions",
+      "blocks": {
+        "1d7a96ca-8071-48bb-835c-db8d563f8877": {
+          "type": "shipping",
+          "settings": {
+            "question": "How long will my order take?",
+            "answer": "All orders are processed every night and our carriers make every effort to deliver within 2-6 business days. We provide tracking information with all orders so you can continue to monitor your shipment. Please contact us directly if you have any special instructions or if your shipment is past due so we can help you out right away.",
+            "video": "shopify:\/\/files\/videos\/pill_infographic.mp4"
+          }
+        },
+        "a5c92546-140a-4222-902c-ae5d03ff8871": {
+          "type": "shipping",
+          "settings": {
+            "question": "How long will my order take?",
+            "answer": "All orders are processed every night and our carriers make every effort to deliver within 2-6 business days. We provide tracking information with all orders so you can continue to monitor your shipment. Please contact us directly if you have any special instructions or if your shipment is past due so we can help you out right away."
+          }
+        },
+        "37762c6c-3618-4473-a094-d5803445df5e": {
+          "type": "shipping",
+          "settings": {
+            "question": "How long will my order take?",
+            "answer": "All orders are processed every night and our carriers make every effort to deliver within 2-6 business days. We provide tracking information with all orders so you can continue to monitor your shipment. Please contact us directly if you have any special instructions or if your shipment is past due so we can help you out right away."
+          }
+        },
+        "c2130a80-aad9-41d8-82e5-869bf4fb054e": {
+          "type": "products",
+          "settings": {
+            "question": "Test1",
+            "answer": "Test1",
+            "product": "bladder-health"
+          }
+        },
+        "890978e3-e5ad-40d7-82b0-1943094c7109": {
+          "type": "products",
+          "settings": {
+            "question": "Test2",
+            "answer": "Test2",
+            "product": "bladder-health"
+          }
+        },
+        "9d0e26ca-27b1-4f28-899a-d25de5cccddf": {
+          "type": "products",
+          "settings": {
+            "question": "Test3",
+            "answer": "Test3",
+            "product": "cranberry-pacs"
+          }
+        },
+        "d1919bcc-a022-4811-9f28-5578f385c28b": {
+          "type": "hsas",
+          "settings": {
+            "hsa_rich": "In the USA, dietary supplements can be paid for from your HSA (Health Savings Account) or FSA (Flexible Spending Account) when certain criteria is met."
+          }
+        },
+        "f10f490c-7fa3-435d-87c4-abc4d1bfd39d": {
+          "type": "hsas",
+          "settings": {
+            "hsa_rich": "A healthcare provider is required to fill out a form that specifies what is being recommended, what condition is it helping with and for how long it should be taken. This form can be downloaded for your healthcare provider to fill out."
+          }
+        },
+        "02298bb2-daed-4632-a465-6d7e7bd2b5c6": {
+          "type": "rewards",
+          "settings": {
+            "question": "Reward Question",
+            "answer": "Reward Answer"
+          }
+        },
+        "14abaef0-fb82-408b-9019-e70ff388ef8d": {
+          "type": "rewards",
+          "settings": {
+            "question": "Reward Question",
+            "answer": "Reward Answer"
+          }
+        },
+        "61328f58-9eb4-49d3-9f19-3473a328f569": {
+          "type": "subscriptions",
+          "settings": {
+            "question": "Sub Question",
+            "answer": "Sub Answer"
+          }
+        }
+      },
+      "block_order": [
+        "1d7a96ca-8071-48bb-835c-db8d563f8877",
+        "a5c92546-140a-4222-902c-ae5d03ff8871",
+        "37762c6c-3618-4473-a094-d5803445df5e",
+        "c2130a80-aad9-41d8-82e5-869bf4fb054e",
+        "890978e3-e5ad-40d7-82b0-1943094c7109",
+        "9d0e26ca-27b1-4f28-899a-d25de5cccddf",
+        "d1919bcc-a022-4811-9f28-5578f385c28b",
+        "f10f490c-7fa3-435d-87c4-abc4d1bfd39d",
+        "02298bb2-daed-4632-a465-6d7e7bd2b5c6",
+        "14abaef0-fb82-408b-9019-e70ff388ef8d",
+        "61328f58-9eb4-49d3-9f19-3473a328f569"
+      ],
+      "settings": {
+      }
+    }, "form": {
+      "type": "custom-faq-form"
+    }
+  },
+  "order": [
+    "main",
+    "form"
+  ]
+}
