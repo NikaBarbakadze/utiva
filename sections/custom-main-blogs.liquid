@@ -160,6 +160,44 @@
             </div>
         </div>
     </div>
+    
+    {% unless blog.articles.size < 7 and request.path != blog.url %}
+    <div class="page-width pt-5 lg:pt-0 pb-12">
+        <div class="pb-3 lg:pb-5 border-b border-[#e1e1df] border-solid">
+            <h2 class="text-2xl lg:text-4xl text-[#1C1C1C]">Latest videos</h2>
+        </div>
+        <div class="flex flex-col lg:flex-row gap-6 mt-5 lg:mt-10">
+            {% assign check = 1 %}
+            {%- for video in blog.articles -%}
+                {% if video.tags contains "video" and check < 3 %}
+                {% assign check = check | plus: 1 %}
+                <a href="{{ video.url }}" class="flex-1 block">
+                    <div class="relative">
+                        <img class="rounded-[10px]" src="{{ video.image | img_url: "700x" }}" loading="lazy" alt="">
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g filter="url(#filter0_b_2590_8239)">
+                                <rect width="56" height="56" rx="28" fill="#1C1C1C" fill-opacity="0.4"/>
+                                <path d="M22.1665 20.797C22.1665 19.3729 23.7419 18.5128 24.9399 19.2829L36.1445 26.4859C37.2467 27.1944 37.2467 28.8056 36.1445 29.5141L24.9399 36.7171C23.7419 37.4872 22.1665 36.6271 22.1665 35.203V20.797Z" fill="white"/>
+                                </g>
+                                <defs>
+                                <filter id="filter0_b_2590_8239" x="-40" y="-40" width="136" height="136" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feGaussianBlur in="BackgroundImageFix" stdDeviation="20"/>
+                                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_2590_8239"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_2590_8239" result="shape"/>
+                                </filter>
+                                </defs>
+                            </svg>                                
+                        </div>
+                    </div>
+                    <h2 class="text-[22px] text-[#1C1C1C] mt-4">{{ video.title }}</h3>
+                </a>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>    
+    {% endunless %}
 </div>
 
 {% unless blog.articles.size < 4 %}
