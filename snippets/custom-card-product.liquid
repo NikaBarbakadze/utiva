@@ -1,0 +1,37 @@
+<a href="{{ product.url }}" class="flex flex-col gap-3 h-full custom-product-card" data-variant-id="{{ product.variants[0].id }}"> <!-- Ensure this takes full height -->
+    <figure class="relative">
+        <div class="bg-[#C33635] text-white px-6 py-4 rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden absolute min-w-[200px] custom-product-card-atc cursor-pointer z-[3]">Add to Cart</div>
+        <img class="rounded-[16px] lg:aspect-auto aspect-square object-cover object-center" src="{{ product.featured_image | img_url: 'master' }}" alt="" loading="lazy">
+    </figure>
+    <div class="flex flex-col justify-between flex-grow"> <!-- Flex container grows with the content -->
+        <div>
+            <h6 class="text-[#1C1C1C] text-base font-medium mb-2">{{ product.title }}</h6>
+            <p class="text-[#1C1C1C] text-sm font-normal opacity-60">{{ product.metafields.bm_pdp.bm_short_description_title }}</p>
+        </div>
+        <div class="flex justify-between mt-5"> <!-- This element will move to the bottom of the remaining space -->
+            <div class="flex gap-2 items-center">
+                <span class="text-[#1C1C1C] text-base block">{{ product.price | money }}</span>
+                {% if product.compare_at_price > product.price %}
+                    <span class="text-[#C33635] text-base block">{{ product.compare_at_price | money }}</span>
+                    
+                    {% assign discount_amount = product.compare_at_price | minus: product.price %}
+                    {% assign discount_percentage = discount_amount | times: 100 | divided_by: product.compare_at_price %}
+                    
+                    <div class="bg-[#C33635] px-2 py-[3px] text-white rounded-full text-xs">{{ discount_percentage | round: 0 }}% off</div>
+                {% endif %}
+                
+            </div>
+            <figure class="flex gap-1">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="star">
+                    <g id="Vector">
+                    <path d="M9.99011 2.5L9.49183 3.63402L7.70489 7.63746L3.34063 8.10137L2.10352 8.23883L3.03135 9.06357L6.27877 12.0017L5.36812 16.2973L5.11039 17.5L6.19286 16.8814L9.99011 14.6821L13.7874 16.8814L14.8698 17.5L14.6121 16.2973L13.7015 12.0017L16.9489 9.06357L17.8767 8.23883L16.6396 8.10137L12.2753 7.63746L10.4884 3.63402L9.99011 2.5ZM9.99011 5.19759L11.399 8.37629L11.5365 8.66839L11.8458 8.70275L15.2994 9.06357L12.7221 11.3832L12.4815 11.6065L12.5503 11.9158L13.2719 15.3007L10.265 13.5825L9.99011 13.4107L9.7152 13.5825L6.70833 15.3007L7.42998 11.9158L7.4987 11.6065L7.25815 11.3832L4.68084 9.06357L8.13444 8.70275L8.44372 8.66839L8.58118 8.37629L9.99011 5.19759Z" fill="#1C1C1C"/>
+                    <path d="M9.99011 5.19759L11.399 8.37629L11.5365 8.66839L11.8458 8.70275L15.2994 9.06357L12.7221 11.3832L12.4815 11.6065L12.5503 11.9158L13.2719 15.3007L10.265 13.5825L9.99011 13.4107L9.7152 13.5825L6.70833 15.3007L7.42998 11.9158L7.4987 11.6065L7.25815 11.3832L4.68084 9.06357L8.13444 8.70275L8.44372 8.66839L8.58118 8.37629L9.99011 5.19759Z" fill="#1C1C1C"/>
+                    </g>
+                    </g>
+                </svg>
+                <span> {% if  product.metafields.custom.rating != blank %} {{ product.metafields.custom.rating }} {% else %} 5.0 {% endif %}</span>
+            </figure>
+        </div>
+    </div>
+</a>
