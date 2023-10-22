@@ -1,0 +1,53 @@
+<div class="w-full bg-[#C33635]">
+  <div class="page-width py-[6rem] px-6 flex flex-col gap-y-8 md:gap-y-14 md:py-20">
+    <h2 class="text-[3.2rem] leading-[3.84rem] -tracking-[0.064rem] font-medium text-white md:text-[4.8rem] md:leading-[5.28rem] md:-tracking-[0.096rem] md:text-center">{{ section.settings.title }}</h2>
+    <div class="flex flex-col gap-y-8 md:flex-row md:items-start md:justify-between md:gap-x-4">
+      {% for block in section.blocks %}
+        <div class="flex flex-col gap-y-4 md:max-w-[35rem]">
+          <div class="rounded-[1.6rem] p-4 py-10 bg-white relative">
+            <div class="w-[4rem] h-[4rem] rounded-full bg-[#C33635] flex items-center justify-center absolute left-5 top-5">
+              <span class="text-white text-xl leading-[1.6rem] font-normal">{{ forloop.index }}</span>
+            </div>
+            <img
+              class="w-full h-full mx-auto md:w-[29rem] md:h-[21rem] md:object-cover"
+              src="{{ block.settings.image | img_url: 'master' }}"
+              alt="visualization">
+          </div>
+          <p class="text-[#ffffffcc] text-base font-normal leading-[2.24rem] md:text-center md:text-lg md:leading-[2.7rem]">{{ block.settings.desc }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "How they work",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "How they work"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "How they work",
+        "type": "htw",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }, {
+            "type": "inline_richtext",
+            "id": "desc",
+            "label": "Description"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
