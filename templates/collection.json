@@ -1,15 +1,64 @@
 {
   "sections": {
     "banner": {
-      "type": "main-collection-banner",
+      "type": "custom-collection-banner",
       "settings": {
-        "show_collection_description": true,
-        "show_collection_image": false,
-        "color_scheme": "background-1"
       }
     },
     "product-grid": {
       "type": "main-collection-product-grid",
+      "blocks": {
+        "9607954f-f62b-41cb-b437-ae097f449cde": {
+          "type": "navigation_link",
+          "settings": {
+            "title": "All Products",
+            "url": "shopify:\/\/collections\/collections-page-shop-all"
+          }
+        },
+        "d35787d9-ddb8-4cbf-8a7c-8d57cf9bae08": {
+          "type": "navigation_link",
+          "settings": {
+            "title": "Urinary Tract Health",
+            "url": "shopify:\/\/collections\/collections-page-uti"
+          }
+        },
+        "22fde590-a43f-4f09-b089-51c27da06093": {
+          "type": "navigation_link",
+          "settings": {
+            "title": "Bladder",
+            "url": "shopify:\/\/collections\/collections-page-bladder-health"
+          }
+        },
+        "6ff33767-4138-4237-b8c9-c53788b89e30": {
+          "type": "navigation_link",
+          "settings": {
+            "title": "Gut",
+            "url": "shopify:\/\/collections\/collections-page-gut-health"
+          }
+        },
+        "2100fe9a-af78-4788-8dde-6523210045a4": {
+          "type": "navigation_link",
+          "settings": {
+            "title": "Prostate",
+            "url": "shopify:\/\/collections\/collections-page-prostate-health"
+          }
+        },
+        "2329f94e-d3b1-4c89-9a66-adc181516900": {
+          "type": "navigation_link",
+          "settings": {
+            "title": "Bundles",
+            "url": "shopify:\/\/collections\/collections-page-bundles"
+          }
+        }
+      },
+      "block_order": [
+        "9607954f-f62b-41cb-b437-ae097f449cde",
+        "d35787d9-ddb8-4cbf-8a7c-8d57cf9bae08",
+        "22fde590-a43f-4f09-b089-51c27da06093",
+        "6ff33767-4138-4237-b8c9-c53788b89e30",
+        "2100fe9a-af78-4788-8dde-6523210045a4",
+        "2329f94e-d3b1-4c89-9a66-adc181516900"
+      ],
       "settings": {
         "products_per_page": 16,
         "columns_desktop": 4,
@@ -19,17 +68,104 @@
         "show_vendor": false,
         "show_rating": false,
         "enable_quick_add": false,
-        "enable_filtering": true,
+        "enable_filtering": false,
         "filter_type": "horizontal",
         "enable_sorting": true,
-        "columns_mobile": "2",
+        "columns_mobile": "1",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "properties": {
+      "type": "product-properties",
+      "blocks": {
+        "2d42701e-c492-45b4-829a-332aa966405d": {
+          "type": "properties",
+          "settings": {
+            "text": "Antibiotic-Free",
+            "icon": "shopify:\/\/shop_images\/icn.svg"
+          }
+        },
+        "90cc3b85-c0d9-40d2-b5eb-0d16a2c62699": {
+          "type": "properties",
+          "settings": {
+            "text": "Vegan & Halal",
+            "icon": "shopify:\/\/shop_images\/icn-1.svg"
+          }
+        },
+        "f2b50b29-3ef7-45bc-b32d-90d2cc294230": {
+          "type": "properties",
+          "settings": {
+            "text": "Trusted quality",
+            "icon": "shopify:\/\/shop_images\/icn-2.svg"
+          }
+        },
+        "e3fcab3d-f912-4889-80cf-5b7fb62d5a5e": {
+          "type": "properties",
+          "settings": {
+            "text": "Less fillers",
+            "icon": "shopify:\/\/shop_images\/icn-3.svg"
+          }
+        },
+        "4aaf08c0-9c6f-461e-9a3c-1db3726230b1": {
+          "type": "properties",
+          "settings": {
+            "text": "Gluten-Free",
+            "icon": "shopify:\/\/shop_images\/icn-4.svg"
+          }
+        },
+        "69810fe6-c4e0-40e9-aa3f-46e84588cb1b": {
+          "type": "properties",
+          "settings": {
+            "text": "Locally made",
+            "icon": "shopify:\/\/shop_images\/icn-5.svg"
+          }
+        }
+      },
+      "block_order": [
+        "2d42701e-c492-45b4-829a-332aa966405d",
+        "90cc3b85-c0d9-40d2-b5eb-0d16a2c62699",
+        "f2b50b29-3ef7-45bc-b32d-90d2cc294230",
+        "e3fcab3d-f912-4889-80cf-5b7fb62d5a5e",
+        "4aaf08c0-9c6f-461e-9a3c-1db3726230b1",
+        "69810fe6-c4e0-40e9-aa3f-46e84588cb1b"
+      ],
+      "settings": {
+      }
+    },
+    "quiz-section": {
+      "type": "quiz-section",
+      "settings": {
+        "paddingTop_mobile": 0,
+        "paddingBottom_mobile": 0,
+        "paddingTop_desktop": 0,
+        "paddingBottom_desktop": 96,
+        "background_color": "#ede5dd",
+        "title": "Not sure where to start?",
+        "description": "<p>Take our UTI quiz to find the right solution<\/p>",
+        "btn_text": "Solution finder",
+        "btn_url": ""
+      }
+    },
+    "product-slider": {
+      "type": "product-slider",
+      "settings": {
+        "paddingTop_mobile": 0,
+        "paddingBottom_mobile": 40,
+        "paddingTop_desktop": 120,
+        "paddingBottom_desktop": 80,
+        "title": "Our most popular solutions",
+        "button_text": "Shop all",
+        "button_url": "",
+        "collection": "best-sellers"
       }
     }
   },
   "order": [
     "banner",
-    "product-grid"
+    "product-grid",
+    "properties",
+    "quiz-section",
+    "product-slider"
   ]
 }
