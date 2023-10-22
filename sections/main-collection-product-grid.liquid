@@ -15,17 +15,153 @@
 
 {%- style -%}
   .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-top: 20px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
+      padding-top: 40px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  main{
+    background-color: #FCFCFA;
+  }
+  @media screen and (min-width: 990px){
+.grid--4-col-desktop .grid__item {
+    width: calc(25% - 24px * 3 / 4);
+    max-width: calc(25% - 24px * 3 / 4);
+}}
+
+.custom-product-card:hover .custom-product-card-atc{
+  display: block !important;
+  text-align: center;
+}
+.quiz-section{
+  padding-bottom: 5rem !important;
+}
+.custom-product-properties{
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+@media screen and (min-width: 750px) {
+  .quiz-section{
+  padding-bottom: 0 !important;
+}
+}
 {%- endstyle -%}
+
+<script defer>
+  window.addEventListener("DOMContentLoaded", ()=>{
+// Function to calculate the width of a text string
+function getTextWidth(text, font) {
+const canvas = document.createElement("canvas");
+const context = canvas.getContext("2d");
+context.font = font;
+return context.measureText(text).width;
+}
+
+// Adjust select element width
+function adjustSelectWidth(selectElement) {
+// Reset the width to auto before measuring text width
+selectElement.style.width = 'auto';
+
+const selectedOption = selectElement.options[selectElement.selectedIndex];
+const fontStyle = window.getComputedStyle(selectElement).font;
+const textWidth = getTextWidth(selectedOption.text, fontStyle);
+selectElement.style.width = `${textWidth + 30}px`; // Add some padding
+}
+
+// Identify the select element
+const selectElement = document.getElementById("SortBy");
+
+// Initial width adjustment
+adjustSelectWidth(selectElement);
+
+// Adjust width whenever the value changes
+selectElement.addEventListener("change", function () {
+adjustSelectWidth(this); // Use 'this' to refer to the selectElement inside the event listener
+});
+
+
+})
+
+// script.js
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Get the button and the dropdown menu elements
+  var dropdownButton = document.getElementById('dropdownDefaultButton');
+  var dropdownMenu = document.getElementById('dropdown');
+
+  // Function to toggle the display of the dropdown menu
+  function toggleDropdown(event) {
+    dropdownMenu.classList.toggle('hidden');
+    event.stopPropagation(); // Prevent this event from bubbling up to the document
+  }
+
+  // Attach the click event handler to the button
+  dropdownButton.addEventListener('click', toggleDropdown);
+
+  // Function to check if the clicked area is outside of the dropdown and hide the dropdown if so
+  function hideDropdown(event) {
+    if (!dropdownMenu.contains(event.target) && !event.target.isEqualNode(dropdownButton)) {
+      dropdownMenu.classList.add('hidden');
+    }
+  }
+
+  // Attach the click event handler to the document
+  document.addEventListener('click', hideDropdown);
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.custom-product-card-atc').forEach((item) => {
+    item.addEventListener('click', (event) => {
+      event.preventDefault();  // Prevents the default action (navigation or form submission)
+      event.stopPropagation(); // Prevents the event from bubbling up the DOM tree
+
+      const variantId = item.closest('.custom-product-card').dataset.variantId;
+
+      const object = {
+        items: [
+          {
+            id: variantId, 
+            quantity: 1
+          }
+        ],
+        sections: ["cart-drawer"]
+      }
+
+      fetch('/cart/add.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(object)
+      }).then((response)=>{
+        return response.json();
+      }).then((json)=>{
+        console.log(json);
+        const cartForm = new DOMParser().parseFromString(json.sections['cart-drawer'], 'text/html').querySelector('#CartDrawer .drawer__inner').innerHTML;
+
+        document.querySelector('#CartDrawer .drawer__inner ').innerHTML = cartForm;
+
+        if(document.querySelector('cart-drawer').classList.contains('is-empty')){
+            document.querySelector('cart-drawer').classList.remove('is-empty');
+            document.querySelector('cart-drawer-items').classList.remove('is-empty');
+            document.querySelector('#CartDrawer-Checkout').disabled = false;
+        }
+
+        document.querySelector('cart-drawer').open()
+      });
+
+    }, false); // The third parameter 'false' indicates the event is handled in the bubbling phase not in the capturing phase
+  });
+});
+
+
+</script>
 
 <div class="section-{{ section.id }}-padding">
   {%- paginate collection.products by section.settings.products_per_page -%}
@@ -112,7 +248,7 @@
           data-id="{{ section.id }}"
         >
           {%
-            render 'facets',
+            render 'custom-facets',
             results: collection,
             enable_filtering: section.settings.enable_filtering,
             enable_sorting: section.settings.enable_sorting,
@@ -152,7 +288,7 @@
               data-id="{{ section.id }}"
               class="
                 grid_dawn product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down
-                grid--{{ section.settings.columns_desktop }}-col-desktop
+                grid--{{ section.settings.columns_desktop }}-col-desktop gap-x-6 gap-y-10
               "
             >
               {%- for product in collection.products -%}
@@ -168,16 +304,8 @@
                   {% endif %}
                 >
                   {%
-                    render 'card-product',
-                    card_product: product,
-                    media_aspect_ratio: section.settings.image_ratio,
-                    image_shape: section.settings.image_shape,
-                    show_secondary_image: section.settings.show_secondary_image,
-                    show_vendor: section.settings.show_vendor,
-                    show_rating: section.settings.show_rating,
-                    lazy_load: lazy_load,
-                    show_quick_add: section.settings.enable_quick_add,
-                    section_id: section.id
+                    render 'custom-card-product',
+                    product: product,
                   %}
                 </li>
               {%- endfor -%}
@@ -390,6 +518,25 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "navigation_link",
+      "name": "Navigation Link",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Link"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "URL"
+        }
+      ]
     }
   ]
 }
