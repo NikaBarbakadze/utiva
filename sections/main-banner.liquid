@@ -34,6 +34,23 @@
     }
   {% endif %}
 
+  {% if template.suffix == "why-pacs" %}
+    @media screen and (min-width: 770px) {
+      .main-banner {
+        height: 600px !important;
+      }
+    }
+    @media screen and (max-width: 770px) {
+      .main-banner__container--image {
+        background-position: center;
+        height: 45%;
+      }
+      .main-banner__content {
+        top: 60%;
+      }
+    }
+  {% endif %}
+
   .main-banner__container--blur-image {
     background-image: url('{{ img_mobile_blur }}');
     width: 100%;

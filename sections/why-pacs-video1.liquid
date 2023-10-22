@@ -1,0 +1,81 @@
+<div class="bg-[#FCFCFA]">
+  <div class="page-width px-6 py-[6rem] pb-12 flex flex-col gap-y-8 md:pt-[12rem] md:pb-[8.8rem] md:flex-row md:justify-between">
+    <div class="flex flex-col gap-y-6 md:gap-y-10 md:w-[40rem]">
+      <h2 class="text-[3.2rem] leading-[3.84rem] -tracking-[0.064rem] text-[#1c1c1c] font-medium md:text-5xl md:leading-[5.28rem] md:-tracking-[0.096rem]">{{ section.settings.title }}</h2>
+      <div class="flex flex-col gap-y-3">
+        <div class="py-1 pl-2 pr-3 bg-[#C33635] border border-[#C33635] rounded-[4rem] text-base font-medium text-white w-fit leading-[2.24rem] md:text-xl">
+          {{ section.settings.mg }}
+        </div>
+        <p class="text-[#1c1c1ccc] text-base font-normal leading-[2.24rem] md:text-xl">{{ section.settings.subtext }}</p>
+      </div>
+    </div>
+    <div class="rounded-[1.6rem] overflow-hidden h-[20rem] relative md:w-[72rem] md:h-[40rem]">
+      <div class="fade z-10 absolute top-0 left-0 bottom-0 right-0 bg-[#1c1c1c38] flex items-center justify-center">
+        <div class="playbutton p-4 rounded-[6rem] backdrop-blur-[8px] bg-[#f2f2f066]">
+          <svg
+            class="pointer-events-none"
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none">
+            <path d="M9.33301 7.66333C9.33301 6.081 11.0835 5.12532 12.4145 5.98097L25.3827 14.3176C26.6073 15.1049 26.6073 16.8951 25.3827 17.6824L12.4145 26.019C11.0835 26.8747 9.33301 25.919 9.33301 24.3367V7.66333Z" fill="white" />
+          </svg>
+        </div>
+      </div>
+      <video class="section_video object-cover w-full h-full" poster="{{ section.settings.video.preview_image.src | img_url: '800x800' }}">
+        <source src="{{ section.settings.video.sources[1].url }}">
+      </video>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelector(".fade .playbutton").addEventListener("click", (e) => {
+      e.target.classList.add("hidden");
+      e
+        .target
+        .closest(".fade")
+        .classList
+        .add("hidden");
+
+      document.querySelector(".section_video").play();
+    });
+
+    document.querySelector(".section_video").addEventListener("click", (e) => {
+      e.target.pause();
+      document.querySelector(".fade").classList.remove("hidden");
+      document.querySelector(".fade .playbutton").classList.remove("hidden");
+    });
+  });
+</script>
+
+{% schema %}
+  {
+    "name": "Video section",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Not all cranberry supplements are created equal"
+      }, {
+        "type": "inline_richtext",
+        "id": "subtext",
+        "label": "Subtext",
+        "default": "This is the exact, clinically proven dose needed to be effective in preventing bacteria from sticking to the bladder. And the precise amount that is meticulously extracted and contained in every single Utiva Cranberry PACs capsule."
+      }, {
+        "type": "text",
+        "id": "mg",
+        "label": "mg Text",
+        "default": "36mg of PACs"
+      }, {
+        "type": "video",
+        "id": "video",
+        "label": "Video"
+      }
+    ]
+  }
+{% endschema %}

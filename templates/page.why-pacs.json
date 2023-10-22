@@ -1,14 +1,346 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
+    "main-banner": {
+      "type": "main-banner",
       "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
+        "img_desktop": "shopify:\/\/shop_images\/img.webp",
+        "img_desktop_blur": "shopify:\/\/shop_images\/blur_ef647a05-1e22-48e3-b5e0-557374619fe1.webp",
+        "img_mobile": "shopify:\/\/shop_images\/fade.webp",
+        "img_mobile_blur": "shopify:\/\/shop_images\/fade.webp",
+        "background_color": "#b9a18f",
+        "label_text": "",
+        "label_background_color": "#ffffff",
+        "label_text_color": "#1c1c1c",
+        "title": "Sophisticated science, simple product",
+        "description": "<p>You’ve probably tried it all for UTI prevention. Wiped front to back, swapped out your underwear to cotton and drank ALL the cranberry juice. How are Utiva Cranberry PACs different? It’s surprisingly simple.<\/p>",
+        "btn_text": "Discover",
+        "btn_url": ""
+      }
+    },
+    "carousel": {
+      "type": "why-pacs-carousel",
+      "settings": {
+        "show_slider": true,
+        "carousel_text": "discover",
+        "title": "Revolutionize your UTI prevention game plan",
+        "subtitle": "The active ingredient – proanthocyanidins or PACs for short, make all the difference. Taken once daily, this molecule which is found in cranberries and when dosed at is clinically proven to help prevent UTIs.",
+        "word": "Proanthocyanidins",
+        "pro": "[Prow·an·thow·sai·a·nuh·dnz]",
+        "subtext": "or PACs for short, are the active molecules found in cranberries that fight UTI-causing bacteria"
+      }
+    },
+    "why-pacs-how-they-work": {
+      "type": "why-pacs-how-they-work",
+      "blocks": {
+        "c71b85d2-ec4d-44c8-8386-2ffac8e3c719": {
+          "type": "htw",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/group_49_1.webp",
+            "desc": "UTI causing bacteria have arms with hand-like suction cups that allow them to stick to your bladder wall, which causes an infection. PACs work by blocking these hands."
+          }
+        },
+        "5cbf89f4-5b61-4e98-b722-29299c63defb": {
+          "type": "htw",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/how_pacs_work_02_1.webp",
+            "desc": "Flushing out Bacteria - without the ability to attach to the bladder or urinary tract walls, the bacteria is flushed away when you urinate. "
+          }
+        },
+        "5c0d4148-b0f4-4985-9a09-0600022dc8fb": {
+          "type": "htw",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/how_pacs_work_04_1.webp",
+            "desc": "Taking 1 Utiva Cranberry PACs daily ensures you have enough PACs in your bladder to keep blocking the bacteria that cause UTIs."
+          }
+        }
+      },
+      "block_order": [
+        "c71b85d2-ec4d-44c8-8386-2ffac8e3c719",
+        "5cbf89f4-5b61-4e98-b722-29299c63defb",
+        "5c0d4148-b0f4-4985-9a09-0600022dc8fb"
+      ],
+      "settings": {
+        "title": "How they work"
+      }
+    },
+    "why-pacs-video1": {
+      "type": "why-pacs-video1",
+      "settings": {
+        "title": "Not all cranberry supplements are created equal",
+        "subtext": "This is the exact, clinically proven dose needed to be effective in preventing bacteria from sticking to the bladder. And the precise amount that is meticulously extracted and contained in every single Utiva Cranberry PACs capsule.",
+        "mg": "36mg of PACs",
+        "video": "shopify:\/\/files\/videos\/pill_infographic.mp4"
+      }
+    },
+    "measurements": {
+      "type": "why-pacs-measurements",
+      "blocks": {
+        "8e7cc9dd-5a2a-4c87-a1d5-4544fb467b56": {
+          "type": "asterisks",
+          "settings": {
+            "content": "The lower the value, the better the anti-abhesion activity VS bacteria"
+          }
+        },
+        "865cacbc-c8e8-41e2-9d14-04447597b2a8": {
+          "type": "asterisks",
+          "settings": {
+            "content": "Ranking from Rutgers University anti-adhesion activity test"
+          }
+        },
+        "e29aa825-3433-4aac-863f-9036a416dd24": {
+          "type": "asterisks",
+          "settings": {
+            "content": "Completed Jan 10, 2020"
+          }
+        }
+      },
+      "block_order": [
+        "8e7cc9dd-5a2a-4c87-a1d5-4544fb467b56",
+        "865cacbc-c8e8-41e2-9d14-04447597b2a8",
+        "e29aa825-3433-4aac-863f-9036a416dd24"
+      ],
+      "settings": {
+        "title": "The Measurement Matters",
+        "subtext": "We use the most accurate, standard of measurement, called DMAC\/A2 to ensure that every capsule contains the necessary 36 mg of soluble PACS measured in the most precise method possible. Other less reliable standards of measurement can leave you short.",
+        "desktop_subtitle": "Utiva Cranberry PACs vs. other cranberry supplements",
+        "mobile_image": "shopify:\/\/shop_images\/group_19.webp",
+        "desktop_image": "shopify:\/\/shop_images\/stats.webp"
+      }
+    },
+    "product": {
+      "type": "why-pacs-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "fabc9b8d-a2fb-4676-b4b8-6c61b934edcb": {
+          "type": "how_to_use",
+          "settings": {
+            "content": "<p><strong>Recommended Dose:<br\/><\/strong>Adults take 2 capsules twice a day.<br\/><br\/><strong>Cautions:<br\/><\/strong>Consult a healthcare practitioner prior to use if you are pregnant or breastfeeding, if you have urinary tract anomalies, interstitial cystitis, diabetes or are taking hormone therapy\/contraception, if you have fever, painful urination (dysuria), spasms or blood in urine, or if symptoms persist or worsen.<\/p>"
+          }
+        },
+        "f19b88f5-dade-44b0-bb2a-6a0c5e2f7504": {
+          "type": "ingredients",
+          "settings": {
+            "content": "<p>Utiva provides a pure source of D-Mannose that has shown benefits in maintaining a healthy urinary tract by helping stop bacteria from sticking.*<br\/><br\/>Non-Medicinal Ingredients: Microcrystalline cellulose, magnesium stearate, hypromellose.<br\/><br\/>* These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.<\/p>",
+            "serving_size": "2 capsules",
+            "servings_per_container": "60",
+            "amount_per_capsule": "% Daily Value",
+            "text_1": "D-Mannose - 1g",
+            "text_2": "Daily Value not established"
+          }
+        },
+        "b7ccdb59-cf33-4beb-8b81-89948cdeb79d": {
+          "type": "details",
+          "settings": {
+            "text": "D-Mannose is trusted by healthcare practitioners as an effective option to help stop infections before they start.*"
+          }
+        },
+        "75979a0d-f879-4b7d-bdc7-f30048bf4b8f": {
+          "type": "details",
+          "settings": {
+            "text": "100% Natural. Utiva sources raw materials from local sources that are GMP certified to ensure high performance and stability.*"
+          }
+        },
+        "936f3ed6-6157-4dc8-96bd-b7818e0155d4": {
+          "type": "details",
+          "settings": {
+            "text": "Minimal amount of fillers, no artificial ingredients and all products are gluten, wheat, and dairy-free, and never tested on animals.*"
+          }
+        },
+        "fee7d2e2-995a-4aaa-b676-2e200ac32199": {
+          "type": "rewards",
+          "settings": {
+            "content": "Earn free reward points with every purchase when you have an account on this website. Reward points will be credited after the product has been shipped and can be used towards your next purchase. Terms and conditions apply see details here."
+          }
+        },
+        "e664f82a-ccda-470a-9292-c515ce4156d3": {
+          "type": "faq",
+          "settings": {
+            "question": "How does D-Mannose work?",
+            "answer": "<p>D-Mannose is a form of sugar that may prevent UTIs by stopping bacteria from attaching to the bladder lining. It is believed that D-Mannose attaches itself to the E.coli strain, which accounts for over 70% of all UTI-causing bacteria. There have been clinical studies to show that D-Mannose is effective along with feedback from doctors and consumers that D-Mannose helps to prevent UTIs. Even though evidence is limited, and it is not in UTI prevention guidelines, it can certainly help those facing chronic and\/or trigger associated UTIs.<\/p>"
+          }
+        },
+        "c7669eea-7be9-4606-a4c6-3675340b4477": {
+          "type": "faq",
+          "settings": {
+            "question": "What’s the difference between D-Mannose and Cranberry PACs?",
+            "answer": "<p>D-Mannose is a form of sugar that may prevent UTIs by stopping bacteria from attaching to the bladder lining. It is believed that D-Mannose attaches itself to the E.coli strain, which accounts for over 70% of all UTI-causing bacteria. There have been clinical studies to show that D-Mannose is effective along with feedback from doctors and consumers that D-Mannose helps to prevent UTIs. Even though evidence is limited, and it is not in UTI prevention guidelines, it can certainly help those facing chronic and\/or trigger associated UTIs.<\/p>"
+          }
+        },
+        "d7ea66d5-e4ee-4cc1-8ef9-60874c792c2e": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I take D-Mannose and Utiva Cranberry PACs at the same time?",
+            "answer": "<p>No<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "variant_picker",
+        "buy_buttons",
+        "fabc9b8d-a2fb-4676-b4b8-6c61b934edcb",
+        "f19b88f5-dade-44b0-bb2a-6a0c5e2f7504",
+        "b7ccdb59-cf33-4beb-8b81-89948cdeb79d",
+        "75979a0d-f879-4b7d-bdc7-f30048bf4b8f",
+        "936f3ed6-6157-4dc8-96bd-b7818e0155d4",
+        "fee7d2e2-995a-4aaa-b676-2e200ac32199",
+        "e664f82a-ccda-470a-9292-c515ce4156d3",
+        "c7669eea-7be9-4606-a4c6-3675340b4477",
+        "d7ea66d5-e4ee-4cc1-8ef9-60874c792c2e"
+      ],
+      "settings": {
+        "product": "cranberry-pacs",
+        "custom_title": "Get your Cranberry PACs Supplement",
+        "enable_sticky_info": true,
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "show",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "why-pacs-two-images": {
+      "type": "why-pacs-two-images",
+      "settings": {
+        "title": "Powerful concentrate = tiny format",
+        "text": "Our smallest pill size thanks to a powerful extract and concentration process of high-quality soluble PACs.",
+        "img1": "shopify:\/\/shop_images\/9x.webp",
+        "img2": "shopify:\/\/shop_images\/pills.webp"
+      }
+    },
+    "why-pacs-leaving-out": {
+      "type": "why-pacs-leaving-out",
+      "blocks": {
+        "1105133a-e2ca-4a82-9a17-ccec54ae9d72": {
+          "type": "property",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Group_47.svg",
+            "content": "No unnecessary fillers - a clean ingredient supplement, delivering just what you need, and nothing you don’t."
+          }
+        },
+        "9ea25345-2683-4f86-b655-8f43fc2b8788": {
+          "type": "property",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/icn_72e51bac-f4ed-42d9-a35b-8ce6df2c6d8c.svg",
+            "content": "Virtually no oxalates—ideal for those prone to kidney stones"
+          }
+        },
+        "5724557b-9b8d-4c91-bcc3-36221d7519fa": {
+          "type": "property",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Union.svg",
+            "content": "No vitamin K—making it safe to take with most medications, including blood thinners."
+          }
+        },
+        "037cb87d-bbad-4289-a89d-ea1e7964f48f": {
+          "type": "property",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Group_48.svg",
+            "content": "Minimal sugar—only 2 grams per capsule making it a safer option for diabetics."
+          }
+        }
+      },
+      "block_order": [
+        "1105133a-e2ca-4a82-9a17-ccec54ae9d72",
+        "9ea25345-2683-4f86-b655-8f43fc2b8788",
+        "5724557b-9b8d-4c91-bcc3-36221d7519fa",
+        "037cb87d-bbad-4289-a89d-ea1e7964f48f"
+      ],
+      "settings": {
+        "title": "And what we leave out is just as important",
+        "img": "shopify:\/\/shop_images\/image_1038.webp"
+      }
+    },
+    "why-pacs-benefits-beyond": {
+      "type": "why-pacs-benefits-beyond",
+      "blocks": {
+        "a3d5b91c-92e0-49c4-befd-a358df643c4c": {
+          "type": "text",
+          "settings": {
+            "content": "Cranberries are a powerhouse of antioxidants"
+          }
+        },
+        "1054d6a2-aa1f-4585-97b3-437c72ed3c96": {
+          "type": "text",
+          "settings": {
+            "content": "Antioxidants are compounds found in many plant-based foods that can help protect your cells from damage caused by free radicals"
+          }
+        },
+        "792d7b2b-39c1-4886-a5b6-dc5160452c87": {
+          "type": "text",
+          "settings": {
+            "content": "By providing protection against free radicals, antioxidants are thought to help fight the signs of aging while helping to prevent the onset of disease"
+          }
+        }
+      },
+      "block_order": [
+        "a3d5b91c-92e0-49c4-befd-a358df643c4c",
+        "1054d6a2-aa1f-4585-97b3-437c72ed3c96",
+        "792d7b2b-39c1-4886-a5b6-dc5160452c87"
+      ],
+      "settings": {
+        "bg": "shopify:\/\/shop_images\/rectangle.webp",
+        "bg_desktop": "shopify:\/\/shop_images\/rectangle_1_3a81b8d8-69ea-4bbc-a199-a9706eb5bbc1.webp",
+        "title": "Benefits beyond UTI Prevention",
+        "cta_text": "Shop now",
+        "cta_url": ""
+      }
+    },
+    "why-pacs-recommended": {
+      "type": "why-pacs-recommended",
+      "settings": {
+        "title": "Recommended by over 10,000 doctors",
+        "video": "shopify:\/\/files\/videos\/pill_infographic.mp4",
+        "content": "I recommend 36mg of PACs. Antibiotics have a lot of risk, particularly when we talk about bacterial resistance.",
+        "name": "Dr. Colleen McDermott",
+        "profession": "Urogynecologist, Mount Sinai Hospital"
+      }
+    },
+    "why-pacs-reviews": {
+      "type": "why-pacs-reviews",
+      "settings": {
+        "img": "shopify:\/\/shop_images\/rectangle_11.webp",
+        "title": "What are customers saying about Utiva?",
+        "subtitle": "Real Customers. Real Reviews.",
+        "cta_text": "Shop now",
+        "cta_url": ""
       }
     }
   },
   "order": [
-    "main"
+    "main-banner",
+    "carousel",
+    "why-pacs-how-they-work",
+    "why-pacs-video1",
+    "measurements",
+    "product",
+    "why-pacs-two-images",
+    "why-pacs-leaving-out",
+    "why-pacs-benefits-beyond",
+    "why-pacs-recommended",
+    "why-pacs-reviews"
   ]
 }

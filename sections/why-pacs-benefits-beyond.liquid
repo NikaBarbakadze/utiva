@@ -1,0 +1,66 @@
+<div class="relative py-8 px-6 md:py-14 md:px-16 md:max-w-[135rem] md:mx-auto">
+  <img
+    class="absolute inset-0 md:hidden"
+    src="{{ section.settings.bg | img_url: 'master' }}"
+    alt="wallpaper">
+  <img
+    class="absolute inset-0 w-full h-full hidden md:!block md:rounded-[2.4rem]"
+    src="{{ section.settings.bg_desktop | img_url: 'master' }}"
+    alt="wallpaper">
+  <div class="relative z-10 p-6 bg-white rounded-[1.6rem] md:p-12 md:rounded-[2.4rem] md:max-w-[135rem] md:mx-auto">
+    <h2 class="text-[3.2rem] mb-8 leading-[3.84rem] -tracking-[0.064rem] text-[#1c1c1c] md:text-[4rem] md:leading-[4.8rem] md:-tracking-[0.04rem] md:mb-10">{{ section.settings.title }}</h2>
+    <div class="flex flex-col gap-y-8 mb-8 md:flex-row md:gap-x-14 md:items-start md:mb-12">
+      {% for block in section.blocks %}
+        <p class="text-base text-[#1C1C1CCC] font-normal w-full">{{ block.settings.content }}</p>
+      {% endfor %}
+    </div>
+    <a href="{{ section.settings.cta_url }}" class="block py-3.5 px-8 text-[#C33635] text-base font-medium text-center rounded-[8rem] border border-[#C33635] md:w-fit">{{ section.settings.cta_text }}</a>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Benefits Beyond",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "bg",
+        "label": "Background image"
+      },
+      {
+        "type": "image_picker",
+        "id": "bg_desktop",
+        "label": "Background image desktop"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Benefits beyond UTI Prevention"
+      },
+      {
+        "type": "text",
+        "id": "cta_text",
+        "label": "CTA Text",
+        "default": "Shop now"
+      }, {
+        "type": "url",
+        "id": "cta_url",
+        "label": "CTA URL"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Text",
+        "type": "text",
+        "settings": [
+          {
+            "type": "inline_richtext",
+            "id": "content",
+            "label": "Content"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
