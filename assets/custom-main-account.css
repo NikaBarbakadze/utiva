@@ -1,0 +1,132 @@
+.custom-main-account ul[role=tablist] {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+.custom-main-account ul[role=tablist] a {
+  color: #1c1c1c;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 33.6px;
+  letter-spacing: -0.24px;
+}
+.custom-main-account ul[role=tablist] a[aria-selected=true] {
+  color: #c33635;
+}
+.custom-main-account ul[role=tablist] a button {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.custom-main-account .information_box {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  row-gap: 32px;
+  border-radius: 16px;
+  border: 1px solid rgba(28, 28, 28, 0.1215686275);
+  width: 630px;
+}
+.custom-main-account .information_box .information_header {
+  display: flex;
+  justify-content: space-between;
+}
+.custom-main-account .information_box .information_header span {
+  color: #1c1c1c;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 30.8px;
+  letter-spacing: -0.22px;
+}
+.custom-main-account .information_box .information_header button {
+  padding: 6px 16px;
+  border-radius: 80px;
+  border: 1px solid #c33635;
+  color: #c33635;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 19.6px;
+}
+.custom-main-account .information_box .information_header .information_save {
+  display: none;
+  background-color: #c33635;
+  color: #fff;
+}
+.custom-main-account .information_box .customer_data {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+}
+.custom-main-account .information_box .customer_data span {
+  color: rgba(28, 28, 28, 0.8);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22.4px;
+}
+.custom-main-account .information_box .customer_editform {
+  display: none;
+}
+.custom-main-account .information_box .customer_editform .form_input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.custom-main-account .information_box .customer_editform .form_input label {
+  margin-bottom: 2px;
+  color: rgba(28, 28, 28, 0.8);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 19.6px;
+}
+.custom-main-account .information_box .customer_editform .form_input label span {
+  color: #C33635;
+}
+.custom-main-account .information_box .customer_editform .form_input input {
+  color: #1c1c1c;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22.4px;
+  padding: 16px 8px;
+  border-bottom: 1.2px solid rgba(28, 28, 28, 0.1215686275);
+}
+.custom-main-account .information_box .customer_editform .form_input input:focus {
+  border-bottom: 1.2px solid rgba(28, 28, 28, 0.8);
+}
+.custom-main-account .information_box .customer_editform .form_input select {
+  color: #1c1c1c;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22.4px;
+  padding: 16px 8px;
+  border: none;
+}
+.custom-main-account .information_box .customer_editform .form_input .pass_hide,
+.custom-main-account .information_box .customer_editform .form_input .pass_show {
+  cursor: pointer;
+}
+.custom-main-account .information_box .customer_editform .form_input .pass_hide {
+  display: none;
+}
+.custom-main-account .information_box .customer_editform .form_input .password_showing .pass_show {
+  display: none;
+}
+.custom-main-account .information_box .customer_editform .form_input .password_showing .pass_hide {
+  display: block;
+}
+.custom-main-account .information_box.user_editing .information_header button {
+  display: none;
+}
+.custom-main-account .information_box.user_editing .information_header .information_save {
+  display: block !important;
+}
+.custom-main-account .information_box.user_editing .customer_data {
+  display: none;
+}
+.custom-main-account .information_box.user_editing .customer_editform {
+  display: flex;
+}/*# sourceMappingURL=custom-main-account.css.map */
