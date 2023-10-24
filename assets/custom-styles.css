@@ -747,8 +747,16 @@ video {
   margin-bottom: 0px !important;
 }
 
+.\!mb-10 {
+  margin-bottom: 40px !important;
+}
+
 .\!mb-4 {
   margin-bottom: 16px !important;
+}
+
+.\!mb-6 {
+  margin-bottom: 24px !important;
 }
 
 .\!mb-\[1\.6rem\] {
@@ -1001,6 +1009,10 @@ video {
 
 .min-h-\[70px\] {
   min-height: 70px;
+}
+
+.min-h-\[83rem\] {
+  min-height: 83rem;
 }
 
 .\!w-\[6\.4rem\] {
@@ -1557,6 +1569,11 @@ video {
   background-color: rgb(195 54 53 / var(--tw-bg-opacity)) !important;
 }
 
+.bg-\[\#08B16F\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(8 177 111 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#1C1C1C\] {
   --tw-bg-opacity: 1;
   background-color: rgb(28 28 28 / var(--tw-bg-opacity));
@@ -1809,6 +1826,11 @@ video {
   padding-bottom: 32px;
 }
 
+.py-\[10\.25px\] {
+  padding-top: 10.25px;
+  padding-bottom: 10.25px;
+}
+
 .py-\[14px\] {
   padding-top: 14px;
   padding-bottom: 14px;
@@ -1967,6 +1989,10 @@ video {
   line-height: 40px;
 }
 
+.text-\[11px\] {
+  font-size: 11px;
+}
+
 .text-\[16rem\] {
   font-size: 16rem;
 }
@@ -2064,6 +2090,10 @@ video {
   font-style: italic;
 }
 
+.leading-\[0\.55px\] {
+  line-height: 0.55px;
+}
+
 .leading-\[1\.6rem\] {
   line-height: 1.6rem;
 }
@@ -2096,6 +2126,10 @@ video {
   line-height: 2.88rem;
 }
 
+.leading-\[22\.4px\] {
+  line-height: 22.4px;
+}
+
 .leading-\[3\.08rem\] {
   line-height: 3.08rem;
 }
@@ -2106,6 +2140,10 @@ video {
 
 .leading-\[3\.84rem\] {
   line-height: 3.84rem;
+}
+
+.leading-\[30\.8px\] {
+  line-height: 30.8px;
 }
 
 .leading-\[33rem\] {
@@ -2122,10 +2160,6 @@ video {
 
 .leading-\[9\.68rem\] {
   line-height: 9.68rem;
-}
-
-.leading-\[1\.68rem\] {
-  line-height: 1.68rem;
 }
 
 .-tracking-\[\.04rem\] {
@@ -2148,12 +2182,20 @@ video {
   letter-spacing: -0.048rem;
 }
 
+.-tracking-\[0\.04rem\] {
+  letter-spacing: -0.04rem;
+}
+
 .-tracking-\[0\.056rem\] {
   letter-spacing: -0.056rem;
 }
 
 .-tracking-\[0\.064rem\] {
   letter-spacing: -0.064rem;
+}
+
+.-tracking-\[0\.22px\] {
+  letter-spacing: -0.22px;
 }
 
 .-tracking-\[0\.24px\] {
@@ -2182,6 +2224,10 @@ video {
 
 .-tracking-\[8\.5px\] {
   letter-spacing: -8.5px;
+}
+
+.tracking-\[0\.55px\] {
+  letter-spacing: 0.55px;
 }
 
 .text-\[\#1C1C1CCC\] {
@@ -2261,10 +2307,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-\[\#1C1C1C99\] {
-  color: #1C1C1C99;
 }
 
 .underline {

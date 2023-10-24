@@ -5,18 +5,25 @@
 
 <section class="custom-main-account">
     <div class="flex items-stretch justify-start gap-x-6">
-        <div class="sidebar flex flex-col px-24 py-12 bg-[#F2F2F0] border-r border-[#1C1C1C1F]">
-            <ul data-tabs>
-                <li>
-                    <a data-tabby-default href="#profile">Profile</a>
-                </li>
-                <li>
-                    <a href="#orders">Order history</a>
-                </li>
-                <li>
-                    {% render 'loop-subscriptions', type: 'customer-portal-link'%}
-                </li>
-            </ul>
+        <div class="sidebar min-h-[83rem] flex flex-col justify-between px-24 py-12 bg-[#F2F2F0] border-r border-[#1C1C1C1F]">
+           <div>
+              <ul data-tabs>
+                  <li>
+                      <a data-tabby-default href="#profile">Profile</a>
+                  </li>
+                  <li>
+                      <a href="#orders">Order history</a>
+                  </li>
+              </ul>
+              <div class="loop-custom-url">{% render 'loop-subscriptions', type: 'customer-portal-link'%}</div>
+           </div>
+           <div>
+              <p class="text-base text-[#1c1c1c] font-normal leading-[22.4px]">Have questions? Visit our</p>
+              <a href="/pages/faq" class="text-[#C33635] block text-base leading-[22.4px] underline mb-8">FAQ page</a>
+              <a class="text-[#C33635] text-base block w-full text-center font-medium leading-[22.4px] py-4 px-8 rounded-[8rem] border border-[#C33635]" href="{{ routes.account_logout_url }}">
+                Log out
+              </a>
+           </div>
         </div>
         <div id="profile" class="p-12">
             <h1 class="text-[4rem] font-medium leading-[4.8rem] -tracking-[.04rem] text-[#1c1c1c] mb-10" >Hello, {{ customer.first_name }}</h1>
@@ -24,7 +31,7 @@
                 <div class="information_box">
                     <div class="information_header">
                         <span>Personal information</span>
-                        <button data-edit="personal">Edit</button>
+                        <button class="hidden" data-edit="personal">Edit</button>
                         <button class="information_save">Save</button>
                     </div>
                     <div class="customer_data">
@@ -46,34 +53,6 @@
                             <label for="email">Email</label>
                             <input type="email" id="email" value="{{ customer.email }}">
                         </div>
-                    </div>
-                </div>
-                <div class="information_box">
-                    <div class="information_header">
-                        <span>Password</span>
-                        <button data-edit="password">Edit</button>
-                        <button class="information_save">Save</button>
-                    </div>
-                    <div class="customer_editform flex-col gap-y-5">
-                        <div class="flex justify-between gap-x-10">
-                            <div class="form_input">
-                                <label for="current_pass">Current password</label>
-                                <div class="relative">
-                                    <input type="password" class="w-full" id="current_pass">
-                                    <div class="pass_hide absolute right-0 top-1/2 -translate-y-1/2">{% render 'password-shown' %}</div>
-                                    <div class="pass_show absolute right-0 top-1/2 -translate-y-1/2">{% render 'password-hidden' %}</div>
-                                </div>
-                            </div>
-                            <div class="form_input">
-                                <label for="new_pass">New password</label>
-                                <div class="relative">
-                                    <input type="password" class="w-full" id="new_pass">
-                                    <div class="pass_hide absolute right-0 top-1/2 -translate-y-1/2">{% render 'password-shown' %}</div>
-                                    <div class="pass_show absolute right-0 top-1/2 -translate-y-1/2">{% render 'password-hidden' %}</div>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="text-[#1C1C1C99] text-xs font-normal leading-[1.68rem]">Set a password of at least 8 characters with letters and numbers.<br/> Your new password must be different from previous used passwords</p>
                     </div>
                 </div>
                 <div class="information_box">
@@ -177,7 +156,66 @@
                 </div>
             </div>
         </div>
-        <div id="orders" class="py-12">orders</div>
+        <div id="orders" class="p-12">
+          <h2 class="text-[4rem] font-medium leading-[4.8rem] -tracking-[.04rem] text-[#1c1c1c] mb-10">Order history</h2>
+          <div class="order-table-wrapper">
+            <table role="table" class="order-history">
+              <caption class="visually-hidden">
+                {{ 'customer.orders.title' | t }}
+              </caption>
+              <thead role="rowgroup">
+                <tr role="row">
+                  <th id="ColumnOrder" scope="col" role="columnheader">{{ 'customer.orders.order_number' | t }}</th>
+                  <th id="ColumnDate" scope="col" role="columnheader">{{ 'customer.orders.date' | t }}</th>
+                  <th id="ColumnPayment" scope="col" role="columnheader">{{ 'customer.orders.payment_status' | t }}</th>
+                  <th id="ColumnFulfillment" scope="col" role="columnheader">
+                    {{ 'customer.orders.fulfillment_status' | t }}
+                  </th>
+                  <th id="ColumnTotal" scope="col" role="columnheader">{{ 'customer.orders.total' | t }}</th>
+                </tr>
+              </thead>
+              <tbody role="rowgroup">
+                {%- for order in customer.orders -%}
+                  <tr role="row">
+                    <td
+                      id="RowOrder"
+                      role="cell"
+                      headers="ColumnOrder"
+                      data-label="{{ 'customer.orders.order_number' | t }}"
+                    >
+                      <a
+                        href="{{ order.customer_url }}"
+                        aria-label="{{ 'customer.orders.order_number_link' | t: number: order.name }}"
+                      >
+                        {{ order.name }}
+                      </a>
+                    </td>
+                    <td headers="RowOrder ColumnDate" role="cell" data-label="{{ 'customer.orders.date' | t }}">
+                      {{ order.created_at | time_tag: format: 'date' }}
+                    </td>
+                    <td
+                      headers="RowOrder ColumnPayment"
+                      role="cell"
+                      data-label="{{ 'customer.orders.payment_status' | t }}"
+                    >
+                      {{ order.financial_status_label }}
+                    </td>
+                    <td
+                      headers="RowOrder ColumnFulfillment"
+                      role="cell"
+                      data-label="{{ 'customer.orders.fulfillment_status' | t }}"
+                    >
+                      {{ order.fulfillment_status_label }}
+                    </td>
+                    <td headers="RowOrder ColumnTotal" role="cell" data-label="{{ 'customer.orders.total' | t }}">
+                      {{ order.total_net_amount | money_with_currency }}
+                    </td>
+                  </tr>
+                {%- endfor -%}
+              </tbody>
+            </table>
+          </div>
+        </div>
     </div>
     {%- paginate customer.addresses by 5 -%}
         <div class="hidden customer addresses section-{{ section.id }}-padding" data-customer-addresses>
@@ -563,49 +601,49 @@
 
 <script defer>
     document.addEventListener('DOMContentLoaded', ()=> {
-        const tabs = new Tabby('[data-tabs]');
+      const tabs = new Tabby('[data-tabs]');
 
-        const infoBoxes = document.querySelectorAll(".information_box");
-        infoBoxes.forEach(box => {
-            const editBtn = box.querySelector(".information_header button");
-            const saveBtn = box.querySelector(".information_header .information_save");
-            
-            editBtn.addEventListener("click", () => {
-                const { edit } = editBtn.dataset;
-                box.classList.add("user_editing");
+      const infoBoxes = document.querySelectorAll(".information_box");
+      infoBoxes.forEach(box => {
+        const editBtn = box.querySelector(".information_header button");
+        const saveBtn = box.querySelector(".information_header .information_save");
+        
+        editBtn.addEventListener("click", () => {
+            const { edit } = editBtn.dataset;
+            box.classList.add("user_editing");
 
-                if (edit === "personal") {
-                    saveBtn.addEventListener("click", () => {
-                        box.classList.remove("user_editing");
-                    });
-                } else if (edit === "password") {
-                    const currentPasswordInputs = box.querySelectorAll('input[type="password"]');
+            if (edit === "personal") {
+                saveBtn.addEventListener("click", () => {
+                    box.classList.remove("user_editing");
+                });
+            } else if (edit === "password") {
+                const currentPasswordInputs = box.querySelectorAll('input[type="password"]');
 
-                    currentPasswordInputs.forEach(passwordInput => {
-                        const showPasswordIcon = passwordInput.parentNode.querySelector(".pass_show");
-                        const hidePasswordIcon = passwordInput.parentNode.querySelector(".pass_hide");
+                currentPasswordInputs.forEach(passwordInput => {
+                    const showPasswordIcon = passwordInput.parentNode.querySelector(".pass_show");
+                    const hidePasswordIcon = passwordInput.parentNode.querySelector(".pass_hide");
 
-                        showPasswordIcon.addEventListener("click", () => {
-                            passwordInput.setAttribute("type", "text");
-                            passwordInput.parentNode.classList.add("password_showing");
+                    showPasswordIcon.addEventListener("click", () => {
+                        passwordInput.setAttribute("type", "text");
+                        passwordInput.parentNode.classList.add("password_showing");
 
-                            hidePasswordIcon.addEventListener("click", () => {
-                                passwordInput.setAttribute("type", "password");
-                                passwordInput.parentNode.classList.remove("password_showing");
-                            });
+                        hidePasswordIcon.addEventListener("click", () => {
+                            passwordInput.setAttribute("type", "password");
+                            passwordInput.parentNode.classList.remove("password_showing");
                         });
                     });
+                });
 
-                    saveBtn.addEventListener("click", () => {
-                        box.classList.remove("user_editing");
-                    });
-                } else if (edit === "address") {
-                    saveBtn.addEventListener("click", () => {
-                        box.querySelector(".address_update").click();
-                    });
-                }
-            });
+                saveBtn.addEventListener("click", () => {
+                    box.classList.remove("user_editing");
+                });
+            } else if (edit === "address") {
+                saveBtn.addEventListener("click", () => {
+                    box.querySelector(".address_update").click();
+                });
+            }
         });
+      });
     });
     window.addEventListener('load', () => {
         typeof CustomerAddresses !== 'undefined' && new CustomerAddresses();
