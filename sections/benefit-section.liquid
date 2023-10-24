@@ -59,6 +59,21 @@
 	</div>
 </div>
 
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+		let targetElement = document.querySelector('.benefit-section__title');
+		
+		// Ensure the element exists and contains the word 'love'
+		if (targetElement && targetElement.textContent.includes('love')) {
+			// Here we replace 'o' in 'love' with an image
+			let newText = targetElement.innerHTML.replace(/(l)(o)(ve)/g, '$1<img src="https://cdn.shopify.com/s/files/1/0060/4677/7455/files/Vector_1696eaf4-02d9-4b32-bb4c-da0601101342.svg?v=1698134606" alt="o" class="letter-replacement">$3');
+			
+			// Update the HTML of the target element
+			targetElement.innerHTML = newText;
+		}
+	});
+</script>
+
 {% schema %}
 {
 	"name": "Benefit Section",
