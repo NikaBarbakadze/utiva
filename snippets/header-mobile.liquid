@@ -15,21 +15,7 @@
 		<div class='header-mob__info--logo'>
 			<a href='{{ shop.url }}'>
 				{% if logo != blank %}
-					{% if template.name == "product" %}
 						<img src="//utiva-usa.myshopify.com/cdn/shop/files/logo_color.png?v=1689865437&amp;width=223" alt="" srcset="//utiva-usa.myshopify.com/cdn/shop/files/logo_color.png?v=1689865437&amp;width=200 200w" width="223" height="144" loading="lazy" sizes="10vw" class="header-desktop__logo--img logo-2 !max-w-none !max-h-none !w-[76px] !block">
-					{% else %}
-					{{
-						logo
-						| image_url: width: logo.width
-						| image_tag:
-							loading: 'lazy',
-							width: logo.width,
-							height: logo.height,
-							sizes: '10vw',
-							class: 'header-mob__info--logo-img',
-							widths: '200'
-					}}
-					{% endif %}
 				{% else %}
 					<a href='{{ shop.url }}'> {{ shop.name }}</a>
 				{% endif %}
