@@ -130,8 +130,8 @@
         "paddingBottom_mobile": 40,
         "paddingTop_desktop": 0,
         "paddingBottom_desktop": 0,
-        "image_desktop": "shopify:\/\/shop_images\/img_ecdb18de-453f-4880-bac8-6b5d782da42d.png",
-        "image_mobile": "shopify:\/\/shop_images\/img_30fd0547-77f9-4bba-af3a-b4de25b69c0a.jpg",
+        "image_desktop": "shopify:\/\/shop_images\/img_ba8d3392-108d-4bc8-8e8d-608f7e5e069c.png",
+        "image_mobile": "shopify:\/\/shop_images\/img_ba8d3392-108d-4bc8-8e8d-608f7e5e069c.png",
         "section_title": "Why you will love us",
         "button_text": "Read more about us",
         "button_url": ""
@@ -357,7 +357,6 @@
         "1491bd30-5d14-42ae-9b77-f0f3bbebf57d": {
           "type": "text",
           "settings": {
-            "doctors_image": "shopify:\/\/shop_images\/dr-chughtai-c_1.png",
             "title": "Based on my clinical research",
             "description": "<p> I believe the proprietary blend of cranberry in Utiva Bladder Health is safe and has efficacy comparable to other common medications for OAB. It helps in treating symptoms of OAB by reducing urinary urgency episodes and frequency.<\/p>",
             "doctors_name": "Dr. Bilal Chughtai",
@@ -388,7 +387,7 @@
         "3cfe134b-b0a7-43fd-a797-d84c816a0c49": {
           "type": "habit",
           "settings": {
-            "image": "shopify:\/\/shop_images\/other_da34058d-bd6b-4b11-9f97-6695c4f45e33.svg",
+            "image": "shopify:\/\/shop_images\/other_355b318e-3a63-4d02-8aaf-f32dcaae6c3b.svg",
             "text": "Cancel, switch or pause at any time"
           }
         },
@@ -426,7 +425,7 @@
         "paddingTop_desktop": 0,
         "paddingBottom_desktop": 100,
         "image_desktop": "shopify:\/\/shop_images\/advantages.png",
-        "image_mobile": "shopify:\/\/shop_images\/Group_48.png",
+        "image_mobile": "shopify:\/\/shop_images\/advantages.png",
         "title": "Healthy habits, delivered",
         "subtext": "A subscription plan on your terms",
         "button_text": "Learn more about subscriptions",
