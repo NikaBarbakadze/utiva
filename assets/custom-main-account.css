@@ -13,9 +13,17 @@
 .custom-main-account ul[role=tablist] a[aria-selected=true] {
   color: #c33635;
 }
-.custom-main-account ul[role=tablist] a button {
+.custom-main-account .loop-custom-url {
+  margin-top: 24px;
+}
+.custom-main-account .loop-custom-url button {
   padding: 0 !important;
   margin: 0 !important;
+  color: #1c1c1c;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 33.6px;
+  letter-spacing: -0.24px;
 }
 .custom-main-account .information_box {
   display: flex;
@@ -82,7 +90,7 @@
   line-height: 19.6px;
 }
 .custom-main-account .information_box .customer_editform .form_input label span {
-  color: #C33635;
+  color: #c33635;
 }
 .custom-main-account .information_box .customer_editform .form_input input {
   color: #1c1c1c;
@@ -129,4 +137,44 @@
 }
 .custom-main-account .information_box.user_editing .customer_editform {
   display: flex;
+}
+
+#orders .order-table-wrapper {
+  border: 1px solid rgba(28, 28, 28, 0.1215686275);
+  border-radius: 8px;
+}
+#orders .order-table-wrapper table thead tr th {
+  color: #1c1c1c;
+  text-align: left;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22.4px;
+  letter-spacing: -0.32px;
+  padding: 13px 16px;
+  border: 1px solid rgba(28, 28, 28, 0.1215686275);
+  border-top: none;
+}
+#orders .order-table-wrapper table thead tr th:first-child {
+  border-left: none;
+}
+#orders .order-table-wrapper table thead tr th:last-child {
+  border-right: none;
+}
+#orders .order-table-wrapper table tbody tr td {
+  color: #1c1c1c;
+  font-family: General Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22.4px;
+  padding: 13px 16px;
+  border: 1px solid rgba(28, 28, 28, 0.1215686275);
+  border-top: none;
+}
+#orders .order-table-wrapper table tbody tr td:first-child {
+  border-left: none;
+}
+#orders .order-table-wrapper table tbody tr td:last-child {
+  border-right: none;
 }/*# sourceMappingURL=custom-main-account.css.map */
