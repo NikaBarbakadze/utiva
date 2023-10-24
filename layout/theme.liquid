@@ -234,6 +234,15 @@
           font-size: 1.6rem;
         }
       }
+
+      .fixed-sidebar {
+        transform: translateY(0) !important;
+        transition: transform 0.3s ease-in-out;
+      }
+      .fixed-sidebar.collapsed {
+        transform: translateY(100%) !important;
+      }
+ 
     {% endstyle %}
 
     {%- render 'css-variables' -%}
@@ -426,6 +435,62 @@
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>
+
+    {% if template.name == "product" %}
+      <div class="lg:bg-[#fcfcfa] fixed bottom-[48px] w-full z-10 fixed-sidebar collapsed" id="fixedSidebar">
+        <div class="page-width flex items-center justify-between py-2">
+          <div class="items-center gap-3 hidden lg:!flex">
+            <figure>
+              <img class="max-w-[50px] rounded-[8px] aspect-square object-cover object-center" src="{{ product.featured_image | img_url: "200x" }}" alt="{{ product.title }}">
+            </figure>
+            <h3 class="text-lg text-[#1C1C1C] font-medium">{{ product.title }}</h3>
+          </div>
+          <button class="bg-[#C33635] px-8 py-4 font-medium lg:py-2 text-white rounded-full text-base lg:text-sm w-full lg:w-auto custom-fixed-atc">Add to cart</button>
+        </div>
+      </div>
+      <script defer>
+        document.addEventListener('DOMContentLoaded', ()=>{
+          document.querySelector('.custom-fixed-atc').addEventListener('click', ()=>{
+            document.querySelector('.product-form__submit').click();
+          });
+        });
+
+// After the DOM content is fully loaded
+window.addEventListener('DOMContentLoaded', () => {
+  // Selecting the required elements
+  const mainAddToCartBtn = document.querySelector('.product-form__submit');
+  const fixedSidebar = document.getElementById('fixedSidebar');
+
+  // If elements are not found in the DOM, the function will exit.
+  if (!mainAddToCartBtn || !fixedSidebar) {
+      console.warn("Required DOM elements are missing!");
+      return;
+  }
+
+  // Listening for the scroll event
+  window.addEventListener("scroll", function() {
+      // Getting the bounding rectangle of the button
+      const rect = mainAddToCartBtn.getBoundingClientRect();
+      
+      // Getting the vertical position (scroll position) of the current scroll
+      const scrollPosition = window.scrollY || window.pageYOffset;
+
+      // Defining the endpoint (you might need to adjust this value based on your needs)
+      const endpoint = 1200; // for example, the scroll position where the fixed sidebar should change state
+
+      // When the top of the button is out of view and we've scrolled past our endpoint
+      if (rect.top < 0 && scrollPosition > endpoint) {
+          // Show the sidebar if the conditions are met
+          fixedSidebar.classList.remove('collapsed');
+      } else {
+          // Otherwise, collapse the sidebar
+          fixedSidebar.classList.add('collapsed');
+      }
+  });
+});
+
+      </script>
+    {% endif %}
 
     {% sections 'footer-group' %}
 

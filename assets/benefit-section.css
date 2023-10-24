@@ -1,1 +1,118 @@
-.benefit-section{display:flex;justify-content:center;width:100%;padding:40px 24px;background-repeat:no-repeat;background-position:center;background-size:cover}.benefit-section__container{display:flex;flex-direction:column;gap:40px;max-width:1248px}.benefit-section__title{margin:0;font-family:var(--font-family-heading);font-size:var(--font-size-xxl);font-weight:500;line-height:35.2px;color:var(--color-white);letter-spacing:-.01em}.benefit-section__blocks{display:flex;flex-direction:column;gap:40px;padding:0;margin:0;list-style-type:none}.benefit-section__blocks--item{display:flex;flex-direction:column;gap:10px;margin:0}.benefit-section__blocks--item .item__title{margin:0;font-family:var(--font-family-heading);font-size:var(--font-size-2l);font-weight:500;line-height:30.8px;color:var(--color-white);letter-spacing:-.01em}.benefit-section__blocks--item .item__text{margin:0;font-family:var(--font-family-body);font-size:var(--font-size-s);font-weight:400;line-height:22.4px;color:var(--color-white-80)}.benefit-section__btn-link{display:block;width:100%;text-align:center}@media screen and (min-width: 768px){.benefit-section__wrapper{padding:0 24px}.benefit-section__btn-link{width:-moz-fit-content;width:fit-content;margin:0 auto}}@media screen and (min-width: 1024px){.benefit-section{padding:64px}.benefit-section__title{font-size:var(--font-size-3xxl);line-height:48px}.benefit-section__blocks{flex-direction:row;gap:56px;justify-content:space-between}.benefit-section__blocks--item{max-width:336px}.benefit-section__btn-link{width:-moz-fit-content;width:fit-content;margin:0}}@media screen and (min-width: 1024px){.benefit-section__wrapper{padding:0 96px}}
+.benefit-section{
+    display:flex;
+    justify-content:center;
+    width:100%;
+    padding:40px 24px;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover
+}
+.benefit-section__container{
+    display:flex;
+    flex-direction:column;
+    gap:40px;
+    max-width:1248px;
+    background-color: white;
+    border-radius: 24px;
+    padding: 24px;
+}
+.benefit-section__title{
+    margin:0;
+    font-family:var(--font-family-heading);
+    font-size:var(--font-size-xxl);
+    font-weight:500;
+    line-height:35.2px;
+    color: #1c1c1c;
+    letter-spacing:-.01em;
+
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.benefit-section__blocks{
+    display:flex;
+    flex-direction:column;
+    gap:40px;
+    padding:0;
+    margin:0;
+    list-style-type:none
+}
+.benefit-section__blocks--item{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin:0
+}
+.benefit-section__blocks--item .item__title{
+    margin:0;
+    font-family:var(--font-family-heading);
+    font-size:var(--font-size-2l);
+    font-weight:500;
+    line-height:30.8px;
+    color: #1c1c1c;
+    letter-spacing:-.01em
+}
+.benefit-section__blocks--item .item__text{
+    margin:0;
+    font-family:var(--font-family-body);
+    font-size:var(--font-size-s);
+    font-weight:400;
+    line-height:22.4px;
+    color: #1c1c1c;
+    opacity: .8;
+}
+.benefit-section__blocks--item .item__text{
+    font-weight: 400;
+}
+.benefit-section__btn-link{
+    display:block;
+    width:100%;
+    text-align:center;
+    color: #C33635;
+    border: 1px solid #C33635;
+}
+.benefit-section__btn-link:hover{
+    color: #C33635;
+    border: 1px solid #C33635;
+}
+@media screen and (min-width: 768px){
+    .benefit-section__wrapper{
+        padding:0 24px
+    }
+    .benefit-section__btn-link{
+        width:-moz-fit-content;
+        width:fit-content;
+        margin:0 auto
+    }
+}
+@media screen and (min-width: 1024px){
+    .benefit-section__container{
+        padding: 48px;
+    }
+    .benefit-section{
+        padding:40px;
+    }
+    .benefit-section__title{
+        font-size:var(--font-size-3xxl);
+        line-height:48px
+    }
+    .benefit-section__blocks{
+        flex-direction:row;
+        gap:56px;
+        justify-content:space-between
+    }
+    .benefit-section__blocks--item{
+        max-width:336px
+    }
+    .benefit-section__btn-link{
+        width:-moz-fit-content;
+        width:fit-content;
+        margin:0
+    }
+}
+@media screen and (min-width: 1024px){
+    .benefit-section__wrapper{
+        padding:0 96px
+    }
+}
+ 

@@ -32,29 +32,31 @@
 		margin-bottom: var(--padding-bottom);
 	'
 >
-	<div class='healthy-habits__top'>
-		<h2 class='healthy-habits__top--title'>{{ section.settings.title }}</h2>
-		<p class='healthy-habits__top--subtext'>{{ section.settings.subtext }}</p>
+	<div class="healthy-habits__container">
+		<div class='healthy-habits__top'>
+			<h2 class='healthy-habits__top--title'>{{ section.settings.title }}</h2>
+			<p class='healthy-habits__top--subtext'>{{ section.settings.subtext }}</p>
+		</div>
+		<ul class='healthy-habits__list'>
+			{% for block in section.blocks %}
+				{% assign img = block.settings.image | image_url: width: img.width %}
+				<li class='healthy-habits__list--item'>
+					<div class='healthy-habits__list--item--img'>
+						{% render 'image', image: img %}
+					</div>
+					<p class='healthy-habits__list--item--text'>{{ block.settings.text }}</p>
+				</li>
+			{% endfor %}
+		</ul>
+		{% if section.settings.button_text != blank %}
+			<a
+				href='{{ section.settings.button_url }}'
+				class='btn-new btn-new--secondary-white healthy-habits__btn--link'
+			>
+				{{- section.settings.button_text -}}
+			</a>
+		{% endif %}
 	</div>
-	<ul class='healthy-habits__list'>
-		{% for block in section.blocks %}
-			{% assign img = block.settings.image | image_url: width: img.width %}
-			<li class='healthy-habits__list--item'>
-				<div class='healthy-habits__list--item--img'>
-					{% render 'image', image: img %}
-				</div>
-				<p class='healthy-habits__list--item--text'>{{ block.settings.text }}</p>
-			</li>
-		{% endfor %}
-	</ul>
-	{% if section.settings.button_text != blank %}
-		<a
-			href='{{ section.settings.button_url }}'
-			class='btn-new btn-new--secondary-white healthy-habits__btn--link'
-		>
-			{{- section.settings.button_text -}}
-		</a>
-	{% endif %}
 </div>
 
 {% schema %}

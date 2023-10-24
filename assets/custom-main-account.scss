@@ -1,0 +1,146 @@
+.custom-main-account {
+  ul[role="tablist"] {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    a {
+      color: #1c1c1c;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 33.6px;
+      letter-spacing: -0.24px;
+      &[aria-selected="true"] {
+        color: #c33635;
+      }
+      button {
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+    }
+  }
+  .information_box {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    row-gap: 32px;
+
+    border-radius: 16px;
+    border: 1px solid #1c1c1c1f;
+
+    width: 630px;
+    .information_header {
+      display: flex;
+      justify-content: space-between;
+      span {
+        color: #1c1c1c;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 30.8px;
+        letter-spacing: -0.22px;
+      }
+      button {
+        padding: 6px 16px;
+        border-radius: 80px;
+        border: 1px solid #c33635;
+        color: #c33635;
+
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 19.6px;
+      }
+      .information_save {
+        display: none;
+        background-color: #c33635;
+        color: #fff;
+      }
+    }
+    .customer_data {
+      display: flex;
+      flex-direction: column;
+      row-gap: 4px;
+      span {
+        color: #1c1c1ccc;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22.4px;
+      }
+    }
+    .customer_editform {
+      display: none;
+      .form_input {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        label {
+          margin-bottom: 2px;
+          color: #1c1c1ccc;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 19.6px;
+          span {
+            color: #C33635;
+          }
+        }
+        input {
+          color: #1c1c1c;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 22.4px;
+
+          padding: 16px 8px;
+          border-bottom: 1.2px solid #1c1c1c1f;
+          &:focus {
+            border-bottom: 1.2px solid #1c1c1ccc;
+          }
+        }
+        select {
+          color: #1c1c1c;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 22.4px;
+
+          padding: 16px 8px;
+          border: none;
+        }
+        .pass_hide,
+        .pass_show {
+          cursor: pointer;
+        }
+        .pass_hide {
+          display: none;
+        }
+        .password_showing {
+          .pass_show {
+            display: none;
+          }
+          .pass_hide {
+            display: block;
+          }
+        }
+      }
+    }
+
+    &.user_editing {
+      .information_header {
+        button {
+          display: none;
+        }
+        .information_save {
+          display: block !important;
+        }
+      }
+      .customer_data {
+        display: none;
+      }
+      .customer_editform {
+        display: flex;
+      }
+    }
+  }
+}

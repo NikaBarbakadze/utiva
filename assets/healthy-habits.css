@@ -1,1 +1,135 @@
-.healthy-habits{background-repeat:no-repeat;background-size:cover;background-position:center;padding:40px 24px;display:flex;flex-direction:column;gap:40px}.healthy-habits__top{display:flex;flex-direction:column;gap:12px}.healthy-habits__top--title{font-family:var(--font-family-heading);font-weight:500;font-size:var(--font-size-xxl);line-height:38.4px;letter-spacing:-.02em;color:var(--color-white)}.healthy-habits__top--subtext{font-family:var(--font-family-body);font-weight:400;font-size:var(--font-size-s);line-height:22.4px;color:var(--color-white-80)}.healthy-habits__list{margin:0;padding:0;list-style-type:none;display:flex;flex-direction:column;gap:24px}.healthy-habits__list--item{display:flex;gap:12px;margin:0}.healthy-habits__list--item--img picture img{max-height:28px;max-width:28px;min-height:28px;min-width:28px}.healthy-habits__list--item--text{font-family:var(--font-family-body);font-weight:400;font-size:var(--font-size-l);line-height:28px;color:var(--color-white)}.healthy-habits__btn--link{justify-content:center;width:100%}@media screen and (min-width: 500px){.healthy-habits__btn--link{width:-moz-fit-content;width:fit-content;margin:0 auto}}@media screen and (min-width: 768px){.healthy-habits{margin:0 24px;gap:56px}.healthy-habits__top{text-align:center}.healthy-habits__top--title{font-size:var(--font-size-3xxl);font-weight:500;line-height:48px;letter-spacing:-.01em}.healthy-habits__top--subtext{font-weight:400;font-size:var(--font-size-m);line-height:25.2px}.healthy-habits__list{display:flex;flex-direction:row;justify-content:center;gap:24px}.healthy-habits__list--item{max-width:254px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:12px}.healthy-habits__list--item--img picture img{min-width:48px;min-height:48px;max-width:48px;max-height:48px}.healthy-habits__list--item--text{text-align:center;max-width:90%}}@media screen and (min-width: 1024px){.healthy-habits{padding:64px 80px;margin:0 96px}.healthy-habits__list--item--text{font-size:var(--font-size-2l)}}
+.healthy-habits{
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    padding:40px 24px;
+}
+.healthy-habits__top{
+    display:flex;
+    flex-direction:column;
+    gap:12px
+}
+.healthy-habits__container{
+    background: #fff;
+    border-radius: 24px;
+    padding: 24px;
+    display:flex;
+    flex-direction:column;
+    gap:40px;
+}
+.healthy-habits__top--title{
+    font-family:var(--font-family-heading);
+    font-weight:500;
+    font-size:var(--font-size-xxl);
+    line-height:38.4px;
+    letter-spacing:-.02em;
+    color:#1C1C1C;
+}
+.healthy-habits__top--subtext{
+    font-family:var(--font-family-body);
+    font-weight:400;
+    font-size:var(--font-size-s);
+    line-height:22.4px;
+    color:#1C1C1C;
+    opacity: 0.8;
+}
+.healthy-habits__list{
+    margin:0;
+    padding:0;
+    list-style-type:none;
+    display:flex;
+    flex-direction:column;
+    gap:24px
+}
+.healthy-habits__list--item{
+    display:flex;
+    gap:12px;
+    margin:0
+}
+.healthy-habits__list--item--img picture img{
+    max-height:28px;
+    max-width:28px;
+    min-height:28px;
+    min-width:28px
+}
+.healthy-habits__list--item--text{
+    font-family:var(--font-family-body);
+    font-weight:400;
+    font-size:var(--font-size-l);
+    line-height:28px;
+    color:#1C1C1C;
+}
+.healthy-habits__btn--link{
+    justify-content:center;
+    width:100%;
+    color: #C33635;
+    border: 1px solid #C33635;
+}
+.healthy-habits__btn--link:hover{
+    color: #C33635;
+    border: 1px solid #C33635;
+}
+@media screen and (min-width: 500px){
+    .healthy-habits__btn--link{
+        width:-moz-fit-content;
+        width:fit-content;
+        margin:0 auto
+    }
+}
+@media screen and (min-width: 768px){
+    .healthy-habits__container{
+        padding: 48px;
+    }
+    .healthy-habits{
+        margin:0 24px;
+        gap:56px
+    }
+    .healthy-habits__top{
+        text-align:center
+    }
+    .healthy-habits__top--title{
+        font-size:var(--font-size-3xxl);
+        font-weight:500;
+        line-height:48px;
+        letter-spacing:-.01em
+    }
+    .healthy-habits__top--subtext{
+        font-weight:400;
+        font-size:var(--font-size-m);
+        line-height:25.2px
+    }
+    .healthy-habits__list{
+        display:flex;
+        flex-direction:row;
+        justify-content:center;
+        gap:24px
+    }
+    .healthy-habits__list--item{
+        max-width:254px;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:flex-start;
+        gap:12px
+    }
+    .healthy-habits__list--item--img picture img{
+        min-width:48px;
+        min-height:48px;
+        max-width:48px;
+        max-height:48px
+    }
+    .healthy-habits__list--item--text{
+        text-align:center;
+        max-width:90%
+    }
+}
+@media screen and (min-width: 1024px){
+    .healthy-habits{
+        padding:40px;
+        margin:0 96px
+    }
+    .healthy-habits__list--item--text{
+        font-size:var(--font-size-2l)
+    }
+}
+ 

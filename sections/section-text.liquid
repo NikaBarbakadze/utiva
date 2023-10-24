@@ -41,6 +41,29 @@
 			`{{ section.settings.rich_text }}`,
 		);
 	});
+
+	document.addEventListener('DOMContentLoaded', function () {
+		// Select the anchor tag containing the issues
+		var aTag = document.querySelector('.definition__desktop.desktop__show a');
+
+		// Get text and split it into an array
+		var issues = aTag.textContent.split(', ');
+
+		// Create a new unordered list element
+		var newList = document.createElement('ul');
+
+		// Loop through the issues and create a list item for each one, then append to the list
+		issues.forEach(function (issue) {
+			var newItem = document.createElement('li');
+			newItem.textContent = issue;
+			newList.appendChild(newItem);
+		});
+
+		// Replace the text content of the anchor tag with the new bulleted list
+		aTag.textContent = '';
+		aTag.appendChild(newList);
+	});
+
 </script>
 
 {% schema %}
