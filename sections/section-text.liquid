@@ -41,6 +41,44 @@
 			`{{ section.settings.rich_text }}`,
 		);
 	});
+
+	document.addEventListener('DOMContentLoaded', function () {
+		// Select all anchor tags within elements with certain classes
+		var anchorTags = document.querySelectorAll('.definition__desktop.desktop__show a, .definition.show-definition a');
+	  
+		// Function to create a list from a comma-separated string
+		function createListFromString(text) {
+		  // Split the string into an array
+		  var items = text.split(', ');
+	  
+		  // Create an unordered list element
+		  var list = document.createElement('ul');
+	  
+		  // Loop through the items and create a list item for each one, then append to the list
+		  items.forEach(function (item) {
+			var listItem = document.createElement('li');
+			listItem.textContent = item;
+			list.appendChild(listItem);
+		  });
+	  
+		  return list;
+		}
+	  
+		// Loop through each selected anchor tag
+		anchorTags.forEach(function (aTag) {
+		  // Get the text from the anchor tag
+		  var text = aTag.textContent;
+	  
+		  // Create a list from the text
+		  var newList = createListFromString(text);
+	  
+		  // Clear the original text content and append the new list
+		  aTag.textContent = '';
+		  aTag.appendChild(newList);
+		});
+	  });
+	  
+	  
 </script>
 
 {% schema %}
