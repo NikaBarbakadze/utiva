@@ -56,17 +56,17 @@
                   </div>
                 </div>
                 <div class="answer">
-                  <p class="text-base text-[#1c1c1ccc] leading-[2.24rem] md:text-lg">{{ block.settings.answer }}</p>
+                  <p class="text-base text-[#1c1c1ccc] leading-[2.24rem] md:text-lg font-normal">{{ block.settings.answer }}</p>
                 </div>
               </div>
             {% endfor %}
           </div>
         </div>
       </div>
-      <div class='targeted-solutions__btn mt-8 lg:!mt-16'>
+      <div class='targeted-solutions__btn mt-8 lg:!mt-16 !px-0 lg:px-6'>
         <a
             href='/pages/faq'
-            class='btn-new btn-new--primary targeted-solutions__btn-link'
+            class='btn-new btn-new--primary targeted-solutions__btn-link !w-full lg:!w-auto'
         >
             Explore more FAQ
             {% render 'icon', icon: 'primary-btn-icon' %}
