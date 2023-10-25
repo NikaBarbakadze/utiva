@@ -153,6 +153,18 @@
           "inject_modules_loader": true,
           "inject_sdk_loader": false
         }
+      },
+      "10008203421340698720": {
+        "type": "shopify:\/\/apps\/g-translate\/blocks\/dropdown\/408a74ac-f92d-43cf-a1b1-a044341e66bd",
+        "disabled": false,
+        "settings": {
+          "horizontal_position": "left",
+          "vertical_position": "bottom",
+          "select_language_label": "Select Language",
+          "native_language_names": true,
+          "wrapper_selector": "",
+          "custom_css": ""
+        }
       }
     },
     "color_schemes": {
