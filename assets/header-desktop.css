@@ -39,7 +39,7 @@
     margin-right:0
 }
 .header-desktop.hovered .header-desktop__icons--toggle-track .header-desktop__icons--toggle-track--before, .header-desktop.hovered-perma .header-desktop__icons--toggle-track .header-desktop__icons--toggle-track--before{
-    color:var(--color-black-60)
+    color:var(--color-black)
 }
 .header-desktop.hovered .header-desktop__icons--toggle-track .header-desktop__icons--toggle-track--after,
 .header-desktop.hovered-perma .header-desktop__icons--toggle-track .header-desktop__icons--toggle-track--after{

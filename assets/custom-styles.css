@@ -887,6 +887,14 @@ video {
   margin-top: 32px;
 }
 
+.\!mb-10 {
+  margin-bottom: 40px !important;
+}
+
+.\!mb-6 {
+  margin-bottom: 24px !important;
+}
+
 .\!block {
   display: block !important;
 }
@@ -1643,6 +1651,11 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#08B16F\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(8 177 111 / var(--tw-bg-opacity));
+}
+
 .object-contain {
   -o-object-fit: contain;
      object-fit: contain;
@@ -1844,6 +1857,11 @@ video {
 .py-\[6rem\] {
   padding-top: 6rem;
   padding-bottom: 6rem;
+}
+
+.py-\[10\.25px\] {
+  padding-top: 10.25px;
+  padding-bottom: 10.25px;
 }
 
 .\!pl-6 {
@@ -2062,6 +2080,10 @@ video {
   line-height: 16px;
 }
 
+.text-\[11px\] {
+  font-size: 11px;
+}
+
 .\!font-normal {
   font-weight: 400 !important;
 }
@@ -2162,6 +2184,18 @@ video {
   line-height: 9.68rem;
 }
 
+.leading-\[0\.55px\] {
+  line-height: 0.55px;
+}
+
+.leading-\[22\.4px\] {
+  line-height: 22.4px;
+}
+
+.leading-\[30\.8px\] {
+  line-height: 30.8px;
+}
+
 .-tracking-\[\.04rem\] {
   letter-spacing: -.04rem;
 }
@@ -2226,8 +2260,20 @@ video {
   letter-spacing: -8.5px;
 }
 
+.-tracking-\[0\.04rem\] {
+  letter-spacing: -0.04rem;
+}
+
+.-tracking-\[0\.22px\] {
+  letter-spacing: -0.22px;
+}
+
 .tracking-\[0\.55px\] {
   letter-spacing: 0.55px;
+}
+
+.text-\[\#1C1C1C99\] {
+  color: #1C1C1C99;
 }
 
 .text-\[\#1C1C1CCC\] {
