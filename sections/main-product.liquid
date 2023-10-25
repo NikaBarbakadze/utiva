@@ -382,57 +382,73 @@
               </div>
               <div class="product_data_wrapper mb-10">
                 <div>
-                  <p class="text-[#1c1c1c] text-base font-normal md:text-lg">{{ product.metafields.custom.overview.value }}</p>
+                  <p class="text-[#1c1c1c] text-base font-normal md:text-lg">{{ product.metafields.bm_pdp.bm_short_description_title }}</p>
                 </div>
                 <div class="hidden">
-                  <div class="flex flex-col gap-y-6">
-                    {% assign detail_blocks = section.blocks | where: 'type', 'details' %}
+                  <div class="flex flex-col gap-y-6 mt-2">
+                    {% assign detail_blocks = product.metafields.bm_pdp.bm_short_description_details | split: '***' %}
                     {% for detail in detail_blocks %} 
+                    {% assign itemcontent = detail | split: '###' %}
                       <div class="flex items-start justify-start gap-x-3">
                         <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0" width="32" height="32" viewBox="0 0 32 32" fill="none">
                           <path d="M11.3333 16L14.8333 19.5L20.6667 13.6667M30 16C30 23.732 23.732 30 16 30C8.26802 30 2 23.732 2 16C2 8.26802 8.26802 2 16 2C23.732 2 30 8.26802 30 16Z" stroke="#C33635" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                        <p class="text-base font-normal text-[#1c1c1c] md:text-lg">{{ detail.settings.text }}</p>
+                        <p class="text-base font-normal text-[#1c1c1c] md:text-lg"><span class="font-medium">{{itemcontent.first}}</span><br>{{itemcontent.last}}</p>
                       </div>
                     {% endfor %}
                   </div>
                 </div>
                 <div class="hidden">
                   <div class="ingredients">
-                    {% assign ingredients_block = section.blocks | where: 'type', 'ingredients' %}
-                    {% for block in ingredients_block %}
                       <div class="ingredients_richtext mb-8">
-                        {{ block.settings.content }}
+                        {{product.metafields.bm_pdp.cranberry_ingredients_title}}
+                        <br>
+                        {{product.metafields.bm_pdp.cranberry_ingredient_descrip | newline_to_br}}
                       </div>
                       <div class="py-6 px-5 rounded-[16px] border border-[#1c1c1c]">
                         <p class="pb-4 border-b border-[#1c1c1ccc] text-2xl font-medium -tracking-[0.48px] text-[#1c1c1c]">Supplement Facts</p>
                         <div class="py-4 border-b-2 border-[#1c1c1ccc]">
-                          <div class="flex items-center justify-between">
-                            <p class="text-base font-medium text-[#1c1c1c]  md:-tracking-[0.32px]">Serving Size:</p>
-                            <p class="text-base font-normal text-[#1c1c1c]">{{ block.settings.serving_size }}</p>
-                          </div>
-                          <div class="flex items-center justify-between">
-                            <p class="text-base font-medium text-[#1c1c1c]  md:-tracking-[0.32px]">Servings Per Container:</p>
-                            <p class="text-base font-normal text-[#1c1c1c]">{{ block.settings.servings_per_container }}</p>
-                          </div>
+                          {% if product.metafields.bm_pdp.cranberry_supplement_size_text != blank %}
+                          {% assign Supplementsize = product.metafields.bm_pdp.cranberry_supplement_size_text | split: '***' %}
+                            {% for item in Supplementsize %}
+                              <div class="flex items-center justify-between">
+                                <p class="text-base font-normal text-[#1c1c1c]">{{ item }}</p>
+                              </div>
+                            {% endfor%}
+                          {% endif %}
                         </div>
                         <div class="flex items-center justify-between py-4 border-b border-[#1c1c1ccc]">
-                          <p class="text-base font-medium text-[#1c1c1c]  md:-tracking-[0.32px]">Amount Per Capsule:</p>
-                          <p class="text-base font-normal text-[#1c1c1c]">{{ block.settings.amount_per_capsule }}</p>
+                          {% if product.metafields.bm_pdp.cranberry_supplement_size_text != blank %}
+                            {% assign Supplementsize = product.metafields.bm_pdp.cranberry_supp_amount_text | split: '***' %}
+                              {% for item in Supplementsize %}
+                                <div class="flex items-center justify-between">
+                                  <p class="text-base font-normal text-[#1c1c1c]">{{ item }}</p>
+                                </div>
+                              {% endfor%}
+                            {% endif %}
                         </div>
                         <div class="py-4 border-b border-[#1c1c1ccc]">
-                          <p class="text-base font-normal text-[#1c1c1c]">{{ block.settings.text_1 }}</p>
+                          <p class="text-base font-normal text-[#1c1c1c]">{{ product.metafields.bm_pdp.cranberry_supple_content_text }}</p>
                         </div>
-                        <p class="pt-4 text-base font-normal text-[#1c1c1c]">{{ block.settings.text_2 }}</p>
+                        <p class="pt-4 text-base font-normal text-[#1c1c1c]">{{ product.metafields.bm_pdp.cranberry_supple_details_text }}</p>
                       </div>
-                    {% endfor %}
                   </div>
                 </div>
                 <div class="hidden">
                   <div class="how_to_use">
-                    {% assign howtouse_block = section.blocks | where: 'type', 'how_to_use' %}
-                    {% for block in howtouse_block %} 
-                      {{ block.settings.content }}
+                    {% assign howtouse_block = product.metafields.bm_pdp.cranb_usage_description_two | split: '***' %}
+                    {% for item in howtouse_block %} 
+                      {% assign howto = item | split: '###' %}
+                      <span class="font-bold">{{ howto.first }}</span>
+                      <p>{{ howto.last }}</p>
+                      <br>
+                    {% endfor %}
+                    {% assign howtouse_block = product.metafields.bm_pdp.cranb_usage_description_bottom | split: '***' %}
+                    {% for item in howtouse_block %} 
+                      {% assign howto = item | split: '###' %}
+                      <span class="font-bold">{{ howto.first }}</span>
+                      <p>{{ howto.last }}</p>
+                      <br>
                     {% endfor %}
                   </div>
                 </div>
@@ -1414,63 +1430,6 @@
           "type": "richtext",
           "id": "answer",
           "label": "Answer"
-        }
-      ]
-    },
-    {
-      "type": "details",
-      "name": "Detail",
-      "settings": [
-        {
-          "type": "textarea",
-          "id": "text",
-          "label": "Text"
-        }
-      ]
-    },
-    {
-      "type": "how_to_use",
-      "limit": 1,
-      "name": "How to use",
-      "settings": [
-        {
-          "type": "richtext",
-          "id": "content",
-          "label": "Content"
-        }
-      ]
-    }, {
-      "type": "ingredients",
-      "name": "Ingredients",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "richtext",
-          "id": "content",
-          "label": "Content"
-        }, {
-          "type": "text",
-          "id": "serving_size",
-          "label": "Serving size"
-        }, {
-          "type": "text",
-          "id": "servings_per_container",
-          "label": "Servings per container",
-          "default": "60"
-        }, {
-          "type": "text",
-          "id": "amount_per_capsule",
-          "label": "Amount per capsule"
-        }, {
-          "type": "text",
-          "id": "text_1",
-          "label": "Custom text 1",
-          "default": "D-Mannose - 1g"
-        }, {
-          "type": "text",
-          "id": "text_2",
-          "label": "Custom text 2",
-          "default": "Daily Value not established"
         }
       ]
     },
