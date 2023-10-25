@@ -10,7 +10,7 @@
         </div>
     </div>
     <div class="flex gap-2 items-center my-2 text-[#777777] text-sm lg:text-base font-normal">
-        <span>
+        <span class="text-sm">
             {{ article.published_at | date: "%B %d, %Y" }}
         </span>
 
@@ -26,13 +26,13 @@
             </g>
         </svg>
 
-        <span>
+        <span class="text-sm">
             {% assign reading_time = article.content | strip_html | split: ' ' | size | times: 1.0 | divided_by: 250 | ceil %}
             {{ reading_time }} min read
         </span>
     </div>
     <div class="flex flex-col gap-2">
         <h2 class="text-2xl text-[#1C1C1C]">{{ article.title }}</h2>
-        <p class="text-sm text-[#1C1C1C] font-normal">{{ article.excerpt_or_content | strip_html }}</p>
+        <p class="text-sm text-[#767675] font-normal">{{ article.excerpt_or_content | strip_html }}</p>
     </div>
 </a>
