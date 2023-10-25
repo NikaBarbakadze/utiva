@@ -19,7 +19,7 @@
           "type": "navigation_link",
           "settings": {
             "title": "Urinary Tract Health",
-            "url": "shopify:\/\/collections\/collections-page-uti"
+            "url": "shopify:\/\/collections\/collections-page-utis"
           }
         },
         "22fde590-a43f-4f09-b089-51c27da06093": {
@@ -36,13 +36,6 @@
             "url": "shopify:\/\/collections\/collections-page-gut-health"
           }
         },
-        "2100fe9a-af78-4788-8dde-6523210045a4": {
-          "type": "navigation_link",
-          "settings": {
-            "title": "Prostate",
-            "url": "shopify:\/\/collections\/collections-page-prostate-health"
-          }
-        },
         "2329f94e-d3b1-4c89-9a66-adc181516900": {
           "type": "navigation_link",
           "settings": {
@@ -56,7 +49,6 @@
         "d35787d9-ddb8-4cbf-8a7c-8d57cf9bae08",
         "22fde590-a43f-4f09-b089-51c27da06093",
         "6ff33767-4138-4237-b8c9-c53788b89e30",
-        "2100fe9a-af78-4788-8dde-6523210045a4",
         "2329f94e-d3b1-4c89-9a66-adc181516900"
       ],
       "settings": {
