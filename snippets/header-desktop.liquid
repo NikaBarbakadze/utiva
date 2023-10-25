@@ -206,7 +206,9 @@
 						type='checkbox'
 						class='toggle__input'
 						id='header-desk__toggle'
-						checked
+						{% if request.host contains "fr." %}
+							checked
+						{% endif %}
 					>
 					<span class='toggle-track'>
 						<span class='toggle-indicator'></span>
@@ -217,6 +219,7 @@
 					{{- toggle_text_after -}}
 				</span>
 			</div>
+			
 
 			<a href='/account' class='header-desktop__icons--hover'> {% render 'icon', icon: 'account-32' %}</a>
 
