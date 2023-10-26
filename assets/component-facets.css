@@ -105,6 +105,8 @@
   min-height: auto;
   transition: none;
   color: black;
+  font-weight: 500;
+  font-family: 'GeneralSans';
 }
 
 .facet-filters option{

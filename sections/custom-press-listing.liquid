@@ -66,7 +66,7 @@
                     </figure>
                     <div class="flex flex-col gap-2 max-w-[700px]">
                         <span class="text-sm text-[#767675] font-normal">{{ block.settings.date }}</span>
-                        <h3 class="text-xl lg:text-[22px] text-[#1C1C1C]">{{ block.settings.title }}</h3>
+                        <h3 class="text-xl lg:text-[22px] text-[#1C1C1C] font-medium">{{ block.settings.title }}</h3>
                         <span class="text-sm underline font-normal text-[#494948]">{{ block.settings.source }}</span>
                     </div>
                 </a>
@@ -81,7 +81,7 @@
                     </figure>
                     <div class="flex flex-col gap-2 max-w-[700px]">
                         <span class="text-sm text-[#767675] font-normal">{{ block.settings.date }}</span>
-                        <h3 class="text-xl lg:text-[22px] text-[#1C1C1C]">{{ block.settings.title }}</h3>
+                        <h3 class="text-xl lg:text-[22px] text-[#1C1C1C] font-medium">{{ block.settings.title }}</h3>
                         <span class="text-sm underline font-normal text-[#494948]">{{ block.settings.source }}</span>
                     </div>
                 </a>
@@ -96,9 +96,9 @@
             <img src="https://cdn.shopify.com/s/files/1/0152/2181/7444/files/Rectangle_bd03a3e4-a72a-4e22-a365-608b0010c366.png?v=1697135471" alt="">
         </div>
         <div class="lg:pr-20 basis-1/2 px-6 mt-8 lg:px-0 lg:pt-0">
-            <h3 class="lg:text-5xl text-white font-medium mb-5 text-2xl">Want more useful info?</h3>
+            <h3 class="lg:text-5xl text-white font-medium mb-3 lg:mb-5 text-2xl">Want more useful info?</h3>
             <p class="text-xl text-white font-normal">Subscribe and get interesting articles for yourself.</p>
-            <div class="flex flex-col gap-8 w-full section-banner-product mt-12">
+            <div class="flex flex-col gap-8 w-full section-banner-product mt-8 lg:mt-12">
                 {% render 'omnisend-form', section_id: section.id, snippet_context: 'section' %}
             </div>
         </div>

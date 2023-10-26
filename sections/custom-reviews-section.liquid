@@ -94,12 +94,19 @@
         padding: 0;
         margin: 0;
         width: 100%;
-        opacity: 0.2;
+        opacity: 0.6;
         transition: opacity 0.2s;
       }
       .embla-thumbs__slide--selected .embla-thumbs__slide__button {
         opacity: 1;
+
       }
+
+      .embla-thumbs__slide--selected img{
+        outline: 1px solid white;
+        outline-offset: 3px;
+      }
+
       .embla-thumbs__slide__img {
         display: block;
         height: 100%;
@@ -231,9 +238,9 @@
             </div>
             <div class="embla-thumbs bottom-[20px] w-full">
                 <div class="embla-thumbs__viewport">
-                  <div class="embla-thumbs__container justify-center">
+                  <div class="embla-thumbs__container justify-center py-2">
                     {% for block in section.blocks %}
-                    <div class="embla-thumbs__slide embla-thumbs__slide--selected">
+                    <div class="embla-thumbs__slide {% if forloop.first %} embla-thumbs__slide--selected {% endif %}">
                       <button class="embla-thumbs__slide__button" type="button">
                         <img
                           class="embla-thumbs__slide__img aspect-square rounded-[10px] max-w-[80px]"
@@ -259,7 +266,7 @@
         <div class="basis-1/2 flex flex-col">
           <p class="text-white text-lg font-normal">{{ section.settings.paragraph_text_1 }}</p>
           <p class="text-white text-lg font-normal mt-2">{{ section.settings.paragraph_text_2 }}</p>
-          <button class="text-[#1C1C1C] font-medium px-8 py-4 bg-white my-6 rounded-full">{{ section.settings.button_text }}</button>
+          <button class="text-[#1C1C1C] font-medium px-8 py-4 bg-white my-6 rounded-full max-w-[330px]">{{ section.settings.button_text }}</button>
           <a href="{{ section.settings.link_url }}" class="text-white text-base font-normal underline">{{ section.settings.link_text }}</a>
         </div>
     </div>
