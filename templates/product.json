@@ -8,6 +8,12 @@
           "settings": {
           }
         },
+        "7b3002bd-f077-4640-a35e-e141a08e932b": {
+          "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -163,6 +169,7 @@
       },
       "block_order": [
         "title",
+        "7b3002bd-f077-4640-a35e-e141a08e932b",
         "variant_picker",
         "buy_buttons",
         "fee7d2e2-995a-4aaa-b676-2e200ac32199",
@@ -265,8 +272,8 @@
         "text_1": "<p>96% of patients taking Utiva Cranberry PACs for 6+ months had a significant decrease in UTIs.*<br\/>How it works?<\/p>",
         "text_2": "<p>* Based on a survey of over 500 participants<\/p>",
         "percentage": 96,
-        "image": "shopify:\/\/shop_images\/graph.svg?v=1696073803",
-        "image_md": "shopify:\/\/shop_images\/graph.svg?v=1696073803"
+        "image": "shopify:\/\/shop_images\/graph.svg",
+        "image_md": "shopify:\/\/shop_images\/graph.svg"
       }
     },
     "customer-testimonials": {
