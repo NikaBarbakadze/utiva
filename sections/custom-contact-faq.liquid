@@ -66,7 +66,7 @@
           {% assign subQuestions = section.blocks | where: 'type', 'sub' %}
           {% for block in subQuestions %}
             <div class="subQuestionWrapper {% unless forloop.first %} border-t border-[#1c1c1c1f] py-5 md:py-8 {% else %} pb-5 md:pb-8 {% endunless %} flex flex-col gap-y-4">
-              <div class="subQuestionWrapperHeader cursor-pointer flex items-center justify-between gap-x-4">
+              <div class="subQuestionWrapperHeader cursor-pointer flex items-start justify-between gap-x-4">
                 <p class="text-[#1C1C1C] text-xl font-normal md:text-2xl md:leading-[3.36rem] md:-tracking-[0.024rem]">{{ block.settings.question }}</p>
                 <div class="closed">
                   {% render 'faq-plus' %}

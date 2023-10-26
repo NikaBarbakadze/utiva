@@ -983,6 +983,10 @@ video {
   height: 1px;
 }
 
+.h-\[44\.5rem\] {
+  height: 44.5rem;
+}
+
 .\!max-h-none {
   max-height: none !important;
 }
@@ -1714,6 +1718,11 @@ video {
   padding-right: 0px;
 }
 
+.px-12 {
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
 .px-14 {
   padding-left: 56px;
   padding-right: 56px;
@@ -2175,6 +2184,10 @@ video {
   line-height: 4.8rem;
 }
 
+.leading-\[4rem\] {
+  line-height: 4rem;
+}
+
 .leading-\[9\.68rem\] {
   line-height: 9.68rem;
 }
@@ -2193,6 +2206,10 @@ video {
 
 .-tracking-\[0\.024rem\] {
   letter-spacing: -0.024rem;
+}
+
+.-tracking-\[0\.028rem\] {
+  letter-spacing: -0.028rem;
 }
 
 .-tracking-\[0\.048rem\] {

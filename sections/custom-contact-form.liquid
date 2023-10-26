@@ -1,5 +1,5 @@
 <style>
-  .contact_block_rich {
+  .contact_block_rich p {
     color: #1c1c1ccc;
     font-size: 14px;
     font-weight: 400;
@@ -66,7 +66,7 @@
     color: #ffffffcc;
   }
   @media screen and (min-width: 770px) {
-    .contact_block_rich {
+    .contact_block_rich p {
       font-size: 16px;
       font-weight: 400;
       line-height: 22.4px;
@@ -99,7 +99,50 @@
     opacity: 1 !important;
     color: #1c1c1c99 !important;
   }
+
+  .email span,
+  .first-name span,
+  .message span {
+    display: none;
+  }
+
+  .email.error span,
+  .first-name.error span,
+  .message.error span {
+    display: block;
+  }
+  .form-field-wrapper.email.error input,
+  .form-field-wrapper.first-name.error input,
+  .form-field-wrapper.message.error textarea {
+    border-bottom: 0.12rem solid #C33635 !important;
+  }
+
+  p strong {
+    font-weight: medium !important;
+  }
 </style>
+
+<template id="success">
+  <div class="px-4 flex flex-col gap-y-10 h-[44.5rem] items-center justify-center rounded-[2rem] bg-[#F2F2F0]">
+    <div class="flex flex-col gap-y-6 items-center">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="41"
+        height="41"
+        viewBox="0 0 41 41"
+        fill="none">
+        <path d="M20.5 25.774L14.6187 33.3813L9.44064 29.5457L15.3219 22.322L6.5 19.5092L8.35388 13.564L17.4315 16.6325L17.0479 7.61877H23.9521L23.5685 16.6325L32.6461 13.564L34.5 19.5092L25.6781 22.322L31.5594 29.5457L26.3813 33.3813L20.5 25.774Z" fill="#C33635" />
+      </svg>
+      <div class="flex flex-col gap-y-3">
+        <h3 class="text-center text-[2.8rem] leading-[4rem] -tracking-[0.028rem] text-[#1c1c1c]">Thanks for contacting us!</h3>
+        <p class="text-base font-normal leading-[2.24rem] text-center text-[#1C1C1CCC]">We will get back to you
+          <span class="font-medium text-[#1c1c1c]">within 1-2 business days.</span>
+        </p>
+      </div>
+    </div>
+    <a href="/pages/contact-us" class="py-4 px-12 bg-[#C33635] rounded-[8rem] text-white text-base font-medium leading-[2.24rem]">Send another message</a>
+  </div>
+</template>
 
 <div class="bg-[#CEB39E] pt-4 pb-8 px-2 md:py-12">
   <div class="page-width flex flex-col gap-y-10 bg-white rounded-[2.4rem] pt-8 pb-6 px-5 md:py-12 md:px-14 md:flex-row md:items-stretch md:gap-x-20">
@@ -119,7 +162,7 @@
         {% endfor %}
       </div>
     </div>
-    <div class="w-full">
+    <div class="w-full contact-form-wrapper">
       {% form 'contact' %}
         {{ form.errors | default_errors }}
 
@@ -132,8 +175,11 @@
               value="Department"
               selected
               disabled>Department</option>
-            <option value="Department">Department2</option>
-            <option value="Department">Department3</option>
+            <option value="Department">Customer service</option>
+            <option value="Department">Press</option>
+            <option value="Department">Marketing/ Partnerships</option>
+            <option value="Department">Retail/ Wholesale</option>
+            <option value="Department">Healthcare Professional Requests</option>
           </select>
         </div>
 
@@ -146,6 +192,7 @@
             class="font-['GeneralSans']"
             required="required"
             placeholder="Name" />
+          <span class="text-sm font-normal leading-[19.6px] text-[#C33635] ml-1">Please, check if first name is valid</span>
         </div>
 
         <div class="form-field-wrapper email">
@@ -157,6 +204,7 @@
             id="email"
             required="required"
             placeholder="E-mail" />
+          <span class="text-sm font-normal leading-[19.6px] text-[#C33635] ml-1">Please, check the e-mail is valid</span>
         </div>
 
         <div class="form-field-wrapper message">
@@ -167,6 +215,7 @@
             class="font-['GeneralSans']"
             required="required"
             placeholder="Message"></textarea>
+          <span class="text-sm font-normal leading-[19.6px] text-[#C33635] ml-1">Please, check if message is valid</span>
         </div>
 
         <div class="submit">
@@ -176,6 +225,12 @@
             value="Send"
             disabled />
         </div>
+
+        {% if form.posted_successfully? %}
+          <script>
+            document.querySelector(".contact-form-wrapper").innerHTML = document.querySelector("template#success").innerHTML;
+          </script>
+        {% endif %}
       {% endform %}
     </div>
   </div>
@@ -204,6 +259,40 @@
       submitForm.querySelector(".submit input").removeAttribute("disabled");
     } else {
       submitForm.querySelector(".submit input").setAttribute("disabled", true);
+    }
+  });
+
+  submitForm.querySelector(".submit input").addEventListener("click", (e) => {
+    e.preventDefault();
+
+    formFields.forEach(field => field.addEventListener("change", () => field.parentElement.classList.remove("error")));
+
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    const emailInput = formFields[1];
+    if (emailRegex.test(emailInput.value)) {
+      emailInput.parentElement.classList.remove("error");
+    } else {
+      emailInput.parentElement.classList.add("error");
+    };
+
+    const nameInput = formFields[0];
+    if (nameInput.value.length > 2) {
+      nameInput.parentElement.classList.remove("error");
+    } else {
+      nameInput.parentElement.classList.add("error");
+    }
+
+    const messageInput = formFields[2];
+    if (messageInput.value.split(" ").length > 2) {
+      messageInput.parentElement.classList.remove("error");
+    } else {
+      messageInput.parentElement.classList.add("error");
+    }
+
+    const invalidInputs = [... formFields].filter(field => field.parentElement.classList.contains("error"));
+    if (invalidInputs.length === 0) {
+      document.querySelector("form#contact_form").submit();
     }
   });
 </script>
