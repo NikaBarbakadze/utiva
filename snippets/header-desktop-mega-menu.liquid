@@ -2,9 +2,9 @@
 <div
 	class='header-desktop__submenu hide-scroll-bar'
 >
-	<div class='header-desktop__submenu--wrapper'>
+	<div class='header-desktop__submenu--wrapper basis-1/4'>
 		{% for link in parent_link.links %}
-			<div class='header-desktop__submenu--item'>
+			<div class='header-desktop__submenu--item {% if link.links.size < 1 %} menu-empty {% endif %}' data-index="{{ forloop.index }}">
 				{% liquid
 					assign title = link.title
 					if title == '#'
@@ -13,74 +13,128 @@
 				%}
 				<a
 					href='{{ link.url }}'
-					class='header-desktop__submenu--link'
+					class='header-desktop__submenu--link flex items-center justify-between pr-10'
 				>
-					{{- link.title -}}
+					<span>{{- link.title -}}</span>
+					{% if link.links.size > 0 %}
+					<svg class="-mb-2" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<g id="Interface, Essential/Arrow, Right">
+						<path id="Path" d="M7.505 3.5L16.5 12.527L7.5 21.5" stroke="#1C1C1C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</g>
+					</svg>
+					{% endif %}
 				</a>
-				<ul class='header-desktop__nested'>
+			</div>
+		{% endfor %}
+	</div>
+
+	<div class='basis-3/4 border-l !pl-10 border-solid border-[#e1e1df] items-center header-product__products-block header-product__products-block--header-main header-product__products-block--{{ section.id }}'>
+		<div class="basis-[40%] flex items-start">
+			{% assign check = 1 %}
+			{% for link in parent_link.links %}
+				<ul class="child-menu pt-12 hidden flex-col gap-5 {% if link.links.size > 0 and check < 2 %} !flex {% endif %}" data-index="{{ forloop.index }}">  
+				{% if link.links.size > 0 %}
+					{% assign check = check | plus: 1 %}
+				{% endif %}
 					{% for child_link in link.links %}
 						<li>
 							<a
 								href='{{ child_link.url }}'
-								class=' header-desktop__nested--link'
+								class=' header-desktop__nested--link !text-2xl'
 							>
 								{{- child_link.title -}}
 							</a>
 						</li>
 					{% endfor %}
 				</ul>
-			</div>
-		{% endfor %}
-	</div>
-
-	<ul class='header-product__products-block header-product__products-block--header-main header-product__products-block--{{ section.id }}'>
-		{% for product in mega_menu_blocks %}
-			{% if product.type == 'product' %}
-				{% if product != blank %}
-					<li class='header-product__item'>
-						<a
-							href='{{ product.settings.product_image.url }}'
-							class='header-product__item--image'
-						>
-							{% render 'image', image: product.settings.product_image.featured_image %}
-							<div class='header-product__item--tag'>
-								{% for tag in product.settings.product_image.tags %}
-									{% if tag contains 'Most Popular' %}
-										<div class='element-tag label-new'>
-											{{ tag }}
-										</div>
-									{% endif %}
-								{% endfor %}
+			{% endfor %}
+		</div>
+		<ul class="basis-[60%]">
+			{% for block in mega_menu_blocks %}
+				{% liquid
+					assign title = block.settings.menu_item_title
+					assign link_title = block.settings.link_title
+					assign image = block.settings.image
+	
+					assign url = block.settings.url
+				%}
+	
+				{% if image != blank %}
+					<li class='mega-menu__block'>
+						<a href='{{ url }}' class='mega-menu__block--link'>
+							<div class='mega-menu__block--wrap'>
+								{% if image != blank %}
+									{{
+										image
+										| image_url: width: 800
+										| image_tag:
+											loading: 'lazy',
+											width: image.width,
+											height: image.height,
+											class: 'mega-menu__block--img w-full',
+											widths: '800'
+									}}
+								{% endif %}
+	
+								<div class='mega-menu__block--wrap-links'>
+									<span class='mega-menu__block--title'>{{ title }}</span>
+									<span class='mega-menu__block--url'>
+										{{- link_title }}
+										{% render 'icon', icon: 'arrow-right-20' %}
+									</span>
+								</div>
 							</div>
 						</a>
-						<div class='header-product__item--text'>
-							{{-
-								product.settings.product_image.title
-								| link_to: product.settings.product_image.url
-							}}
-							<div class='header-product__item--description'>
-								{{ product.settings.product_image.description }}
-							</div>
-						</div>
-						<div class='header-product__item--price-rating'>
-							<p class='body-m'>{{ product.settings.product_image.price | money }}</p>
-							<div class='header-product__item--rating'>
-								{% render 'icon' with 'star-20' %}
-
-								<span
-									class='stamped-product-reviews-badge stamped-main-badge'
-									data-id='{{ product.settings.product_image.id }}'
-									data-widget-type='standard'
-									data-product-title='{{ product.settings.product_image.title | escape }}'
-									data-product-type='{{ product.settings.product_image.type }}'
-									style='display: block;'
-									data-product-sku='{{ product.settings.product_image.handle }}'
-								></span>
-							</div>
-						</div>
 					</li>
 				{% endif %}
-			{% endif %}
-		{% endfor %}
-	</ul>
+			{% endfor %}
+		</ul>
+	</div>
 </div>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+		// Get all submenu items and child menus.
+		var submenuItems = document.querySelectorAll('.header-desktop__submenu--item:not(.menu-empty');
+		var childMenus = document.querySelectorAll('.child-menu');
+	
+		// Function to hide all child menus.
+		function hideAllChildMenus() {
+			childMenus.forEach(function(menu) {
+				menu.classList.add('hidden'); // This class should apply display: none in your CSS.
+				menu.classList.remove('!flex');
+			});
+		}
+	
+		// Function to show a specific child menu.
+		function showChildMenu(index) {
+			// First, hide all menus.
+			hideAllChildMenus();
+	
+			// Show the correct child menu.
+			var targetMenu = document.querySelector('.child-menu[data-index="' + index + '"]');
+			if (targetMenu) {
+				targetMenu.classList.remove('hidden');
+				targetMenu.classList.add('!flex'); // This class should apply display: flex in your CSS.
+			}
+		}
+	
+		// Attach hover event listeners to each submenu item.
+		submenuItems.forEach(function(item, index) {
+			item.addEventListener('mouseover', function() {
+				showChildMenu(item.getAttribute('data-index'));
+			});
+		});
+	
+		// Optional: If you want to hide all child menus when the mouse leaves the submenu area,
+		// you need to add a mouseout event listener to the whole submenu.
+		// If you don't add this, the last shown child menu will stay visible, as you described.
+		/*
+		var submenuArea = document.querySelector('.header-desktop__submenu');
+		submenuArea.addEventListener('mouseleave', function() {
+			hideAllChildMenus();
+		});
+		*/
+	});
+	</script>
+	

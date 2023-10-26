@@ -98,7 +98,7 @@
 .header-desktop__nav--item:hover .header-desktop__overlay{
     display:block
 }
-.header-desktop__nav--item:hover .header-desktop__submenu{
+.header-desktop__nav--item:hover .header-desktop__submenu, .header-desktop__submenu{
     position:absolute;
     top:100%;
     left:0;
@@ -106,7 +106,7 @@
     display:flex;
     justify-content:space-between;
     width:100%;
-    padding:20px 40px;
+    padding:0px 40px 0px 40px;
     background-color:var(--grey-bg);
     overflow-x:hidden;
     overflow-y:scroll;

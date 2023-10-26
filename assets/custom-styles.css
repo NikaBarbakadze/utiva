@@ -887,6 +887,30 @@ video {
   margin-top: 32px;
 }
 
+.-mt-0 {
+  margin-top: -0px;
+}
+
+.-mt-0\.5 {
+  margin-top: -2px;
+}
+
+.-mb-0 {
+  margin-bottom: -0px;
+}
+
+.-mb-0\.5 {
+  margin-bottom: -2px;
+}
+
+.-mb-1 {
+  margin-bottom: -4px;
+}
+
+.-mb-2 {
+  margin-bottom: -8px;
+}
+
 .\!block {
   display: block !important;
 }
@@ -1178,6 +1202,22 @@ video {
   flex-basis: 400px;
 }
 
+.basis-1\/5 {
+  flex-basis: 20%;
+}
+
+.basis-4\/5 {
+  flex-basis: 80%;
+}
+
+.basis-\[40\%\] {
+  flex-basis: 40%;
+}
+
+.basis-\[60\%\] {
+  flex-basis: 60%;
+}
+
 .-translate-x-1\/2 {
   --tw-translate-x: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1290,6 +1330,10 @@ video {
 
 .gap-9 {
   gap: 36px;
+}
+
+.gap-5 {
+  gap: 20px;
 }
 
 .\!gap-x-\[13rem\] {
@@ -1523,6 +1567,10 @@ video {
   border-top-width: 1px;
 }
 
+.border-l {
+  border-left-width: 1px;
+}
+
 .border-solid {
   border-style: solid;
 }
@@ -1718,11 +1766,6 @@ video {
   padding-right: 0px;
 }
 
-.px-12 {
-  padding-left: 48px;
-  padding-right: 48px;
-}
-
 .px-14 {
   padding-left: 56px;
   padding-right: 56px;
@@ -1868,6 +1911,11 @@ video {
   padding-right: 0px !important;
 }
 
+.px-12 {
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
 .\!pl-6 {
   padding-left: 24px !important;
 }
@@ -1980,6 +2028,18 @@ video {
   padding-top: 6rem;
 }
 
+.pl-10 {
+  padding-left: 40px;
+}
+
+.\!pl-10 {
+  padding-left: 40px !important;
+}
+
+.pr-10 {
+  padding-right: 40px;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2084,6 +2144,11 @@ video {
   line-height: 16px;
 }
 
+.\!text-2xl {
+  font-size: 24px !important;
+  line-height: 32px !important;
+}
+
 .\!font-normal {
   font-weight: 400 !important;
 }
@@ -2184,12 +2249,12 @@ video {
   line-height: 4.8rem;
 }
 
-.leading-\[4rem\] {
-  line-height: 4rem;
-}
-
 .leading-\[9\.68rem\] {
   line-height: 9.68rem;
+}
+
+.leading-\[4rem\] {
+  line-height: 4rem;
 }
 
 .-tracking-\[\.04rem\] {
@@ -2206,10 +2271,6 @@ video {
 
 .-tracking-\[0\.024rem\] {
   letter-spacing: -0.024rem;
-}
-
-.-tracking-\[0\.028rem\] {
-  letter-spacing: -0.028rem;
 }
 
 .-tracking-\[0\.048rem\] {
@@ -2266,6 +2327,10 @@ video {
 
 .tracking-normal {
   letter-spacing: 0em;
+}
+
+.-tracking-\[0\.028rem\] {
+  letter-spacing: -0.028rem;
 }
 
 .text-\[\#1C1C1CCC\] {
