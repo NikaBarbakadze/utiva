@@ -1315,6 +1315,8 @@
   {%- endif -%}
 
   <script>
+    document.querySelector(".otp_div").addEventListener("click", () => document.querySelector(".product-variant-sp").value = "");
+    
     document.addEventListener('DOMContentLoaded', function () {
       function isIE() {
         const ua = window.navigator.userAgent;

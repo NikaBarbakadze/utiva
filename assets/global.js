@@ -1060,6 +1060,8 @@ class VariantSelects extends HTMLElement {
       selectedSellingPlan = selectedSellingPlan.dataset.sellingPlan;
 
       document.querySelector(".product-variant-sp").value = selectedSellingPlan;
+    } else {
+      document.querySelector(".product-variant-sp").value = "";
     }
 
     const sellingPlanWrappers = document.querySelectorAll(".product_selling_plans_wrapper.active .product_selling_plan");
