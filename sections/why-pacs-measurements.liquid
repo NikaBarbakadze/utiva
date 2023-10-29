@@ -1,5 +1,5 @@
 <div class="bg-[#FCFCFA]">
-  <div class="page-width px-6">
+  <div class="page-width px-6 md:pt-[8.8rem] md:pb-[8rem]">
     <div class="pt-6 pb-8 flex flex-col gap-y-6 md:flex-row md:items-start md:justify-between md:p-0 md:pb-10">
       <h2 class="text-[3.2rem] fozt-medium leading-[3.84rem] -tracking-[0.064rem] text-[#1c1c1c] md:text-[4.8rem] md:leading-[5.28rem] md:-tracking-[0.096rem] md:max-w-[50rem]">{{ section.settings.title }}</h2>
       <p class="text-base font-normal leading-[2.24rem] text-[#1c1c1c] md:text-xl md:max-w-[61rem]">{{ section.settings.subtext }}</p>
@@ -7,12 +7,15 @@
     <div class="py-12 px-14 rounded-[2.4rem] bg-white hidden md:!block">
       <h3 class="text-[2.2rem] leading-[3.08rem] -tracking-[0.022rem] text-[#1c1c1c] mb-14">{{ section.settings.desktop_subtitle }}</h3>
       <div class="flex items-start justify-between">
-        <img src="{{ section.settings.desktop_image | img_url: 'master' }}" alt="stats">
+        <img
+          src="{{ section.settings.desktop_image | img_url: '1000x1000' }}"
+          class="md:max-w-[66rem]"
+          alt="stats">
         <div class="flex flex-col gap-y-3 max-w-[40rem]">
           {% for block in section.blocks %}
             <div class="flex items-start justify-start gap-x-2">
               <div class="shrink-0">{% render 'custom-icon-asterisk' %}</div>
-              <p class="text-lg text-[#1C1C1CCC]">{{ block.settings.content }}</p>
+              <p class="text-lg font-normal text-[#1C1C1CCC]">{{ block.settings.content }}</p>
             </div>
           {% endfor %}
         </div>

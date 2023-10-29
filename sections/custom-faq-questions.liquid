@@ -33,7 +33,7 @@
     display: none;
   }
   [role=tablist] {
-    border-bottom: none !important;
+    border-bottom: 1px solid #1c1c1c1f !important;
   }
   [role=tab][aria-selected=true] {
     border-bottom: 1px solid #1C1C1C;
@@ -48,7 +48,7 @@
 
   @media screen and (min-width: 770px) {
     [role=tablist] {
-      border-bottom: 1px solid #1c1c1c1f !important;
+      border-bottom: none !important;
     }
     [role=tab][aria-selected=true] {
       border: none;
@@ -95,7 +95,7 @@
 
 <div class="pt-10 md:pt-20">
   <h1 class="page-width px-6 text-[3.2rem] text-[#1c1c1c] text-center font-medium leading-[3.84rem] -tracking-[0.064rem] mb-6 md:mb-10 md:text-[5.6rem] md:leading-[6.16rem] md:-tracking-[0.112rem]">FAQ</h1>
-  <div class="!px-6 overflow-x-scroll faq-slider md:overflow-x-visible">
+  <div class="!px-6 overflow-x-scroll faq-slider md:overflow-x-visible md:border-b md:border-[#1c1c1c1f]">
     <ul class="flex items-center gap-x-4 min-w-max md:gap-x-6 md:max-w-[135rem] md:!mx-auto md:border-b md:border-[#1c1c1c1f] md:justify-center" data-tabs>
       <li><a data-tabby-default href="#shipping">Shipping & Returns</a></li>
       <li><a href="#prods">Products</a></li>
@@ -320,7 +320,8 @@
       tab.addEventListener("click", () => {
         tabSlides.forEach(e => e.classList.remove("active"));
         tab.classList.add("active");
-  
+
+        document.getElementById("displayedProductFaqTitle").innerText = document.querySelector(".product_tab_slide.active").innerText;
         productQuestions.forEach(e => e.classList.add("hidden"));
         productQuestions.forEach(e => e.dataset.product === tab.dataset.product && e.classList.remove("hidden"));
       });
