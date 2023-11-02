@@ -3733,3 +3733,7 @@ input, textarea, select, .faux-select {
   color: white;
   border:none;
 }
+
+.sub_div.active .custom-badge {
+  top: -4% !important;
+}
