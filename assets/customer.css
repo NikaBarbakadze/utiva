@@ -343,6 +343,13 @@
   margin-top: 0;
 }
 
+.customer button{
+  font-size: var(--font-size-s);
+  color: var(--color-white);
+  background-color: var(--primary-color-red);
+  border-radius: 80px;
+}
+
 #recover,
 #recover + div {
   display: none;
