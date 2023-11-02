@@ -223,7 +223,7 @@
       "settings": {
         "title": "Learning center",
         "subtitle": "Your go-to resource for pelvic health education.",
-        "cta_url": "shopify:\/\/blogs\/news"
+        "cta_url": "shopify:\/\/blogs\/resources"
       }
     },
     "customer-testimonials": {
@@ -327,7 +327,7 @@
       "settings": {
         "title": "Media",
         "subtitle": "See us in the press:",
-        "cta_url": "shopify:\/\/blogs\/news"
+        "cta_url": "shopify:\/\/blogs\/resources"
       }
     }
   },
