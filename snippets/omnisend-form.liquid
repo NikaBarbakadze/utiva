@@ -2,7 +2,7 @@
 <!-- <form class="omnisend-subscribe-form"> -->
 {% form 'customer', id: newsletter_form_id %}
   {% if form.posted_successfully? %}
-    <div class="note note--success">
+    <div class="note note--success text-lg">
       {{ 'general.newsletter_form.newsletter_confirmation' | t }}
     </div>
   {% endif %}
