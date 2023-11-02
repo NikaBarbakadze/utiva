@@ -362,14 +362,14 @@
                 </a>
               </div>
               <div class="flex items-center justify-start gap-x-2 mb-6 md:mb-8">
-                {% if product.metafields.custom.rating %} 
+                {% if product.metafields.stamped.reviews_average %} 
                   <div class="flex items-center justify-center gap-x-1 rounded-[4rem] border border-[#C33635] py-0.5 pl-1.5 pr-2.5">
                     {% render 'icon-star' %}
-                    <span class="text-[#1C1C1C] text-sm font-medium leading-[1.96rem]">{{ product.metafields.custom.rating.value }}</span>
+                    <span class="text-[#1C1C1C] text-sm font-medium leading-[1.96rem]">{{ product.metafields.stamped.reviews_average | round: 1 }}</span>
                   </div>
                 {% endif %}
-                {% if product.metafields.custom.reviews_count %} 
-                  <p class="text-[#1C1C1C] text-sm font-medium leading-[1.96rem]">Based on {{ product.metafields.custom.reviews_count.value }} reviews</p>
+                {% if product.metafields.stamped.reviews_count %} 
+                  <p class="text-[#1C1C1C] text-sm font-medium leading-[1.96rem]">Based on {{ product.metafields.stamped.reviews_count }} reviews</p>
                 {% endif %}
               </div>
               <div class="product_data_tabs_wrapper overflow-x-scroll">
