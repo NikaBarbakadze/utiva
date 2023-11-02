@@ -88,7 +88,7 @@
   }
 </style>
 
-<div class='main-banner main-banner--{{ section.id }}'>
+<div class='main-banner main-banner--{{ section.id }} {{ template.suffix }}-banner'>
   <div class='main-banner__container'>
     <div class='main-banner__container--image' style='background-color: {{ section.settings.background_color }}'>
       {% if section.settings.label_text != blank %}

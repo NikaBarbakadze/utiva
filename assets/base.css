@@ -3737,3 +3737,7 @@ input, textarea, select, .faux-select {
 .sub_div.active .custom-badge {
   top: -4% !important;
 }
+
+.why-pacs-banner a svg{
+  rotate: 90deg;
+}
