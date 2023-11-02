@@ -351,14 +351,14 @@
                 </a>
               </div>
               <div class="flex items-center justify-start gap-x-2 mb-6 md:mb-8">
-                {% if product.metafields.custom.rating %} 
+                {% if product.metafields.stamped.reviews_average %} 
                   <div class="flex items-center justify-center gap-x-1 rounded-[4rem] border border-[#C33635] py-0.5 pl-1.5 pr-2.5">
                     {% render 'icon-star' %}
-                    <span class="text-[#1C1C1C] text-sm font-medium leading-[1.96rem]">{{ product.metafields.custom.rating.value }}</span>
+                    <span class="text-[#1C1C1C] text-sm font-medium leading-[1.96rem]">{{ product.metafields.stamped.reviews_average | round: 1 }}</span>
                   </div>
                 {% endif %}
-                {% if product.metafields.custom.reviews_count %} 
-                  <p class="text-[#1C1C1C] text-sm font-medium leading-[1.96rem]">Based on {{ product.metafields.custom.reviews_count.value }} reviews</p>
+                {% if product.metafields.stamped.reviews_count %} 
+                  <p class="text-[#1C1C1C] text-sm font-medium leading-[1.96rem]">Based on {{ product.metafields.stamped.reviews_count }} reviews</p>
                 {% endif %}
               </div>
               <div class="product_data_tabs_wrapper overflow-x-scroll">
@@ -754,7 +754,7 @@
               {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
               <div class="subs_wrapper w-full flex flex-col gap-y-3 pb-6">
                 <div class="sub_div cursor-pointer w-full flex flex-col gap-y-6 py-3.5 px-5 rounded-xl border border-[#1c1c1c1f] relative">
-                  <div class="absolute right-[3.7%] md:right-[3%] -top-[20%] py-0.5 px-2 bg-[#C33635] rounded-[4rem] flex items-center justify-center gap-x-0.5">
+                  <div class="absolute right-[3.7%] md:right-[3%] -top-[20%] py-0.5 px-2 bg-[#C33635] rounded-[4rem] flex items-center justify-center gap-x-0.5 custom-badge">
                     <span class="text-xs font-medium text-white">Save 25%</span>
                   </div>
                   <div class="flex items-center justify-between">
@@ -785,6 +785,35 @@
                           {% endfor %}
                         </div>
                       {% endfor %}
+                    </div>
+                    <div class="flex flex-col gap-3 mt-4">
+                      <p class="text-sm font-medium text-[#1C1C1C] flex items-center gap-2">
+                        <svg class="min-w-[25px]" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M14 15V9M10 15V9M21 12C21 16.971 16.971 21 12 21C7.029 21 3 16.971 3 12C3 7.029 7.029 3 12 3C16.971 3 21 7.029 21 12Z" stroke="#1C1C1C" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>  
+                        <span>Consistency is key to success and you're 4x more likely to succeed if you subscribe.</span>
+                      </p>
+                      <p class="text-sm font-medium text-[#1C1C1C] flex items-center gap-2">
+                        <svg class="min-w-[25px]" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M16.5 10.65L12.8513 11.8623C12.2986 12.0459 11.7014 12.0459 11.1487 11.8623L7.5 10.65M9.46364 15.6H14.5364C15.6208 15.6 16.5 14.7208 16.5 13.6364V10.3636C16.5 9.27915 15.6208 8.4 14.5364 8.4H9.46364C8.37915 8.4 7.5 9.27915 7.5 10.3636V13.6364C7.5 14.7208 8.37915 15.6 9.46364 15.6ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#1C1C1C" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                        
+                        <span>Cancel anytime - no commitment</span>
+                      </p>
+                      <p class="text-sm font-medium text-[#1C1C1C] flex items-center gap-2">
+                        <svg class="min-w-[25px]" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12 10.5V16M15.25 16H8.75C8.19772 16 7.75 15.5523 7.75 15V11.5C7.75 10.9477 8.19772 10.5 8.75 10.5H15.25C15.8023 10.5 16.25 10.9477 16.25 11.5V15C16.25 15.5523 15.8023 16 15.25 16ZM12.069 10.5C13.0007 10.5041 13.8997 10.1571 14.587 9.528C15.1431 8.94037 15.1431 8.02063 14.587 7.433C14.3254 7.15624 13.9613 6.99941 13.5805 6.99941C13.1997 6.99941 12.8356 7.15624 12.574 7.433C11.723 8.32 12.069 10.5 12.069 10.5ZM11.931 10.5C10.9993 10.5041 10.1003 10.1571 9.413 9.528C8.85692 8.94037 8.85692 8.02063 9.413 7.433C9.67447 7.15597 10.0386 6.99895 10.4195 6.99895C10.8004 6.99895 11.1645 7.15597 11.426 7.433C12.277 8.32 11.931 10.5 11.931 10.5ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#1C1C1C" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                        
+                        <span>No surprises, we email you 3 days before each renewal</span>
+                      </p>
+                      <p class="text-sm font-medium text-[#1C1C1C] flex items-center gap-2">
+                        <svg class="min-w-[25px]" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M9 15L15 9" stroke="#1C1C1C" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M9.249 9C9.111 9 8.999 9.112 9 9.25C9 9.388 9.112 9.5 9.25 9.5C9.388 9.5 9.5 9.388 9.5 9.25C9.5 9.112 9.388 9 9.249 9" stroke="#1C1C1C" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M14.749 14.5C14.611 14.5 14.499 14.612 14.5 14.75C14.5 14.888 14.612 15 14.75 15C14.888 15 15 14.888 15 14.75C15 14.612 14.888 14.5 14.749 14.5" stroke="#1C1C1C" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M12 21C7.03 21 3 16.971 3 12C3 7.03 7.03 3 12 3C16.971 3 21 7.03 21 12C21 16.971 16.971 21 12 21" stroke="#1C1C1C" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                        
+                        <span>Free mystery gifts</span>
+                      </p>
                     </div>
                   </div>
                 </div>
