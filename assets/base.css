@@ -3741,3 +3741,11 @@ input, textarea, select, .faux-select {
 .why-pacs-banner a svg{
   rotate: 90deg;
 }
+
+.subs_wrapper > div.active svg.custom-radio-svg{
+  fill: #C33635 !important;
+}
+
+.subs_wrapper > div:not(.active) svg.custom-radio-svg{
+  opacity: 0.8;
+}

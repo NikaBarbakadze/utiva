@@ -61,7 +61,7 @@
         <input
           type="hidden"
           name="selling_plan"
-          value=""
+          value="{{ product.selected_or_first_available_variant.selling_plan_allocations[0].selling_plan.id }}"
           class="product-variant-sp"
         >
 
@@ -84,7 +84,6 @@
             type="submit"
             name="add"
             class="product-form__submit !bg-[#C33635] !py-[1.7rem] !mb-4 !px-8 !rounded-[8rem] button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
-            disabled
           >
             <span class="text-base font-medium text-white">
               {{ 'products.product.add_to_cart' | t }}
