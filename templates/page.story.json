@@ -166,12 +166,36 @@
         "button_text": "Shop all",
         "button_url": "shopify:\/\/collections\/collections-page-shop-all"
       }
+    },
+    "16992696376eeea02e": {
+      "type": "apps",
+      "blocks": {
+        "fa1e0f71-e1f5-4bca-a27b-afb34f6e6858": {
+          "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/main-widget\/a103faaf-2125-4b0e-89fa-de5149736723",
+          "settings": {
+            "animation": true,
+            "tags_exclude": "",
+            "tags_include": "",
+            "search": "",
+            "linkify": true,
+            "use_metafields": false,
+            "sku_tagtype": "sku"
+          }
+        }
+      },
+      "block_order": [
+        "fa1e0f71-e1f5-4bca-a27b-afb34f6e6858"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "main",
     "52477871-ab3c-4c68-9dc6-67258c36ea7a",
     "new-trusted-recommended-doctors",
-    "targeted-solutions"
+    "targeted-solutions",
+    "16992696376eeea02e"
   ]
 }
