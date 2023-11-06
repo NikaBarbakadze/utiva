@@ -79,7 +79,7 @@
         "title": "Shop by targeted solutions",
         "description": "For UTIs, overactive bladder, vaginal wellness and gut",
         "button_text": "Shop all",
-        "button_url": ""
+        "button_url": "shopify:\/\/collections\/collections-page-shop-all"
       }
     },
     "quality-and-trust": {
@@ -134,7 +134,7 @@
         "image_mobile": "shopify:\/\/shop_images\/img_ba8d3392-108d-4bc8-8e8d-608f7e5e069c.png",
         "section_title": "Why you will love us",
         "button_text": "Read more about us",
-        "button_url": ""
+        "button_url": "shopify:\/\/pages\/about-us"
       }
     },
     "product-slider": {
@@ -146,7 +146,7 @@
         "paddingBottom_desktop": 80,
         "title": "Our most popular solutions",
         "button_text": "Shop all",
-        "button_url": "",
+        "button_url": "shopify:\/\/collections\/collections-page-shop-all",
         "collection": "best-sellers"
       }
     },
