@@ -132,7 +132,7 @@
         "paddingBottom_desktop": 0,
         "image_desktop": "shopify:\/\/shop_images\/img_ba8d3392-108d-4bc8-8e8d-608f7e5e069c.png",
         "image_mobile": "shopify:\/\/shop_images\/img_ba8d3392-108d-4bc8-8e8d-608f7e5e069c.png",
-        "section_title": "Why you will love us",
+        "section_title": "Why you will  ❤️ love us",
         "button_text": "Read more about us",
         "button_url": "shopify:\/\/pages\/about-us"
       }
@@ -154,7 +154,7 @@
       "type": "quiz-section",
       "settings": {
         "paddingTop_mobile": 0,
-        "paddingBottom_mobile": 0,
+        "paddingBottom_mobile": 40,
         "paddingTop_desktop": 0,
         "paddingBottom_desktop": 64,
         "background_color": "#ede5dd",
@@ -167,10 +167,10 @@
     "money-back-garantee": {
       "type": "money-back-garantee",
       "settings": {
-        "paddingTop_mobile": 0,
-        "paddingBottom_mobile": 40,
-        "paddingTop_desktop": 0,
-        "paddingBottom_desktop": 0,
+        "paddingTop_mobile": 20,
+        "paddingBottom_mobile": 20,
+        "paddingTop_desktop": 40,
+        "paddingBottom_desktop": 40,
         "bg_color": "#c33635",
         "title": "Money back guarantee",
         "description": "<p>At Utiva, we aim to empower everyone to take their pelvic health into their own hands.<\/p><p>However, if your Utiva purchase is not quite the fit for your journey, we offer a <a href=\"#\"><strong>30-day<\/strong><\/a> money back guarantee.<\/p>"
