@@ -533,7 +533,7 @@
       };
     </script>
 
-    		<!-- Stamped - Begin script -->
+    <!-- Stamped - Begin script -->
 		<script
 			async
 			type='text/javascript'
@@ -542,6 +542,18 @@
 			src='https://cdn1.stamped.io/files/widget.min.js'
 		></script>
 		<!-- Stamped - End script -->
+
+    <style>
+      body, p, .paragraph{
+        font-family: var(--font-family-body);
+        font-size: var(--font-size-s);
+        font-style: normal;
+        font-weight: var(--font-weight-medium);
+        line-height: 1.4;
+        margin: 0;
+        letter-spacing: 0;
+      }
+    </style>
 
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
