@@ -138,17 +138,21 @@
     </div>
 </div>
 
+{% assign blog = blogs['resources'].articles | where: "tags", article.tags[0] %}
+
+{% if blog != blank %}
 <div id="must-reads" class="my-14 page-width">
     <div class="pb-3 lg:pb-5 border-b border-[#e1e1df] border-solid">
         <h2 class="text-2xl lg:text-4xl text-[#1C1C1C]">Related articles</h2>
     </div>
-    {% assign blog = blogs['resources'].articles | where: "tags", article.tags[0] %}
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 my-6 lg:my-10">
         {% for article in blog offset: 1 limit: 3 %}
             {% render "custom-blog-card", article: article %}
         {% endfor %}
     </div>
 </div>
+
+{% endif %}
 
 <script defer>
     document.addEventListener('DOMContentLoaded', function () {
