@@ -1904,6 +1904,11 @@ video {
   padding-bottom: 6rem;
 }
 
+.py-9 {
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+
 .\!pb-0 {
   padding-bottom: 0px !important;
 }
@@ -2723,6 +2728,10 @@ video {
 
   .md\:h-\[46rem\] {
     height: 46rem;
+  }
+
+  .md\:h-\[22rem\] {
+    height: 22rem;
   }
 
   .md\:max-h-\[unset\] {
