@@ -18,13 +18,6 @@
             "answer": "All orders are processed every night and our carriers make every effort to deliver within 2-6 business days. We provide tracking information with all orders so you can continue to monitor your shipment. Please contact us directly if you have any special instructions or if your shipment is past due so we can help you out right away."
           }
         },
-        "37762c6c-3618-4473-a094-d5803445df5e": {
-          "type": "shipping",
-          "settings": {
-            "question": "How long will my order take?",
-            "answer": "All orders are processed every night and our carriers make every effort to deliver within 2-6 business days. We provide tracking information with all orders so you can continue to monitor your shipment. Please contact us directly if you have any special instructions or if your shipment is past due so we can help you out right away."
-          }
-        },
         "c2130a80-aad9-41d8-82e5-869bf4fb054e": {
           "type": "products",
           "settings": {
@@ -86,7 +79,6 @@
       "block_order": [
         "1d7a96ca-8071-48bb-835c-db8d563f8877",
         "a5c92546-140a-4222-902c-ae5d03ff8871",
-        "37762c6c-3618-4473-a094-d5803445df5e",
         "c2130a80-aad9-41d8-82e5-869bf4fb054e",
         "890978e3-e5ad-40d7-82b0-1943094c7109",
         "9d0e26ca-27b1-4f28-899a-d25de5cccddf",
@@ -98,8 +90,13 @@
       ],
       "settings": {
       }
-    }, "form": {
-      "type": "custom-faq-form"
+    },
+    "form": {
+      "type": "custom-faq-form",
+      "settings": {
+        "title": "Didn’t find what you’re looking for?",
+        "subtitle": "Ask a question. Our team will respond by email within 24  hours of your submission."
+      }
     }
   },
   "order": [
