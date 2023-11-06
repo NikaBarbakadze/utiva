@@ -44,13 +44,27 @@
         "testimonial_rating": "5.0"
       }
     },
-    "52477871-ab3c-4c68-9dc6-67258c36ea7a": {
-      "type": "custom-liquid",
+    "16992696376eeea02e": {
+      "type": "apps",
+      "blocks": {
+        "fa1e0f71-e1f5-4bca-a27b-afb34f6e6858": {
+          "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/main-widget\/a103faaf-2125-4b0e-89fa-de5149736723",
+          "settings": {
+            "animation": true,
+            "tags_exclude": "",
+            "tags_include": "",
+            "search": "",
+            "linkify": true,
+            "use_metafields": false,
+            "sku_tagtype": "sku"
+          }
+        }
+      },
+      "block_order": [
+        "fa1e0f71-e1f5-4bca-a27b-afb34f6e6858"
+      ],
       "settings": {
-        "custom_liquid": "<script src=\"https:\/\/cdn-widgetsrepository.yotpo.com\/v1\/loader\/NQCtvc7XR9VM319BAkqg8t2SzNJ3lJ4frdAN8UbZ\" async><\/script>\n\n{% assign product = all_products[\"cranberry-pacs\"] %}\n\n<div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"434875\" data-yotpo-product-id=\"{{product.id}}\" data-yotpo-name=\"{{ product.title | escape }}\" data-yotpo-url=\"{{ shop.url }}{{ product.url }}\" data-yotpo-image-url=\"{{ product.featured_image | product_img_url: \"large\" | prepend: \"https:\" | replace: '?', '%3F' | replace: '&','%26'}}\" data-yotpo-price=\"{{ product.price | divided_by: 100.00 }}\" data-yotpo-currency=\"{{ shop.currency }}\" data-yotpo-description=\"{{ product.description | escape }}\"><\/div>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "include_margins": true
       }
     },
     "new-trusted-recommended-doctors": {
@@ -166,36 +180,12 @@
         "button_text": "Shop all",
         "button_url": "shopify:\/\/collections\/collections-page-shop-all"
       }
-    },
-    "16992696376eeea02e": {
-      "type": "apps",
-      "blocks": {
-        "fa1e0f71-e1f5-4bca-a27b-afb34f6e6858": {
-          "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/main-widget\/a103faaf-2125-4b0e-89fa-de5149736723",
-          "settings": {
-            "animation": true,
-            "tags_exclude": "",
-            "tags_include": "",
-            "search": "",
-            "linkify": true,
-            "use_metafields": false,
-            "sku_tagtype": "sku"
-          }
-        }
-      },
-      "block_order": [
-        "fa1e0f71-e1f5-4bca-a27b-afb34f6e6858"
-      ],
-      "settings": {
-        "include_margins": true
-      }
     }
   },
   "order": [
     "main",
-    "52477871-ab3c-4c68-9dc6-67258c36ea7a",
+    "16992696376eeea02e",
     "new-trusted-recommended-doctors",
-    "targeted-solutions",
-    "16992696376eeea02e"
+    "targeted-solutions"
   ]
 }
