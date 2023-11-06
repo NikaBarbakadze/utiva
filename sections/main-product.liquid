@@ -1,6 +1,6 @@
 <section
   id="MainProduct-{{ section.id }}"
-  class="mx-auto overflow-hidden md:px-[9.6rem] section-{{ section.id }}-padding"
+  class="mx-auto overflow-hidden lg:overflow-visible md:px-[9.6rem] section-{{ section.id }}-padding"
   data-section="{{ section.id }}"
 >
   {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
@@ -76,7 +76,7 @@
 
   <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid_dawn grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %} !gap-x-[13rem] justify-center md:flex-nowrap">
     <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
-      <div class="sticky top-0">
+      <div class="sticky top-[1rem]">
       <media-gallery
         id="MediaGallery-{{ section.id }}"
         role="region"

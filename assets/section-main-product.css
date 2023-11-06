@@ -1058,6 +1058,7 @@ a.product__text {
     flex: 1;
     scroll-padding-left: 0.5rem;
     padding-bottom: 0 !important;
+    margin-left: 20px;
   }
 
   .thumbnail-list__item.slider__slide {

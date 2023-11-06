@@ -700,6 +700,10 @@ video {
   top: 8px;
 }
 
+.top-\[1rem\] {
+  top: 1rem;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -3565,6 +3569,14 @@ video {
 
   .lg\:gap-6 {
     gap: 24px;
+  }
+
+  .lg\:overflow-auto {
+    overflow: auto;
+  }
+
+  .lg\:overflow-visible {
+    overflow: visible;
   }
 
   .lg\:rounded-\[24px\] {
