@@ -44,7 +44,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/image_491.jpg",
             "title": "Overactive bladder",
-            "url": ""
+            "url": "shopify:\/\/collections\/collections-page-bladder-health"
           }
         },
         "a15fa326-c734-4e1e-9fdc-4dedb62dfed7": {
@@ -52,7 +52,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/image_492.jpg",
             "title": "Vaginal wellness",
-            "url": ""
+            "url": "shopify:\/\/collections\/collections-page-bundles"
           }
         },
         "4a4714b8-fdbe-45d7-aae7-55e6e38b60ec": {
@@ -60,7 +60,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Rectangle.jpg",
             "title": "Gut health",
-            "url": ""
+            "url": "shopify:\/\/collections\/collections-page-gut-health"
           }
         }
       },
