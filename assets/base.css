@@ -3749,8 +3749,3 @@ input, textarea, select, .faux-select {
 .subs_wrapper > div:not(.active) svg.custom-radio-svg{
   opacity: 0.8;
 }
-
-.product__media-wrapper .slider-mobile-gutter {
-  position: sticky;
-  top: 0;
-}

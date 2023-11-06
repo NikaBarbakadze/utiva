@@ -15,7 +15,20 @@
   </div>
   <div class="flex flex-col gap-y-8 mb-6 md:flex-row md:justify-start md:gap-x-6 md:mb-0">
     {% for block in section.blocks %}
-      {% render "custom-blog-card", article: block.settings.articles %}
+      <a href="{{ block.settings.url }}" class="custom-blog-card">
+        <div class="relative">
+            <img src="{{ block.settings.image | img_url: "700x" }}" loading="lazy" alt="">
+        </div>
+        <div class="flex gap-2 items-center my-2 text-[#777777] text-sm lg:text-base font-normal">
+            <span class="text-sm">
+                {{ block.settings.date }}
+            </span>
+        </div>
+        <div class="flex flex-col gap-2">
+            <h2 class="text-[22px] font-medium text-[#1C1C1C]">{{ block.settings.title }}</h2>
+            <p class="text-sm text-[#767675] font-normal underline">{{ block.settings.domain }}</p>
+        </div>
+    </a>
     {% endfor %}
   </div>
   <a href="{{ section.settings.cta_url }}" class="block md:hidden font-medium py-4 w-full border border-[#C33635] rounded-[8rem] text-base leading-[2.24rem] text-center text-[#C33635]">See all</a>
@@ -42,13 +55,33 @@
     ],
     "blocks": [
       {
-        "name": "Blog",
-        "type": "blogs",
+        "name": "press",
+        "type": "press",
         "settings": [
           {
-            "type": "article",
-            "id": "articles",
-            "label": "Article"
+            "type": "image_picker",
+            "id": "image",
+            "label": "Press Image"
+          },
+          {
+            "type": "text",
+            "id": "date",
+            "label": "Press Date"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Press Title"
+          },
+          {
+            "type": "url",
+            "id": "url",
+            "label": "Press URL"
+          },
+          {
+            "type": "text",
+            "id": "domain",
+            "label": "Press Domain"
           }
         ]
       }

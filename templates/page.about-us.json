@@ -293,36 +293,52 @@
     "custom-about-us-media": {
       "type": "custom-about-us-media",
       "blocks": {
-        "34a2ad9e-2783-4d27-999e-1224116bbd43": {
-          "type": "blogs",
+        "103fa728-ec00-487f-bb04-d29861771364": {
+          "type": "press",
           "settings": {
-            "articles": "resources\/how-much-cranberry-juice-or-dried-cranberries-will-give-you-36mg-of-pacs"
+            "image": "shopify:\/\/shop_images\/img_f8846806-d7b3-4894-a47d-5dcf7a89660a.png",
+            "date": "Apr 26, 2023",
+            "title": "Utiva Health Raises Awareness for Common Women's Health Issues with Educational Campaign",
+            "url": "https:\/\/www.google.com\/",
+            "domain": "utiva.com"
           }
         },
-        "a3cc83f6-b6ec-432f-9b2e-c285dbfd8f66": {
-          "type": "blogs",
+        "c3799fff-382c-4ef4-b41e-675623906f1a": {
+          "type": "press",
           "settings": {
-            "articles": "resources\/pelvic-health-issues-in-women-navigating-challenges-at-every-age"
+            "image": "shopify:\/\/shop_images\/img-2.png",
+            "date": "Apr 26, 2023",
+            "title": "Utiva Health Celebrates National Women's Health Week with Special Promotions and Discounts",
+            "url": "https:\/\/www.google.com\/",
+            "domain": "utiva.com"
           }
         },
-        "fa8f1e5d-8a51-4675-85d2-2d4f35432c75": {
-          "type": "blogs",
+        "0a9b9f33-1a9d-4f23-8ded-638385f018b5": {
+          "type": "press",
           "settings": {
-            "articles": "resources\/biofilms-the-not-so-secret-cause-of-chronic-utis"
+            "image": "shopify:\/\/shop_images\/img-1.png",
+            "date": "Apr 26, 2023",
+            "title": "Utiva Health Partners with Leading Gynecologists to Develop Innovative Solutions for Women's Health",
+            "url": "https:\/\/www.google.com\/",
+            "domain": "utiva.com"
           }
         },
-        "38162815-fadd-49b8-91e8-f5db591558c0": {
-          "type": "blogs",
+        "40d85c7a-e787-4d94-a11a-1983b742d177": {
+          "type": "press",
           "settings": {
-            "articles": "resources\/is-it-possible-for-a-uti-to-go-away-without-the-use-of-antibiotics"
+            "image": "shopify:\/\/shop_images\/img-3.png",
+            "date": "Apr 26, 2023",
+            "title": "Utiva Health Donates Portion of Sales to Support Women's Health Research and Advocacy",
+            "url": "https:\/\/www.google.com\/",
+            "domain": "utiva.com"
           }
         }
       },
       "block_order": [
-        "34a2ad9e-2783-4d27-999e-1224116bbd43",
-        "a3cc83f6-b6ec-432f-9b2e-c285dbfd8f66",
-        "fa8f1e5d-8a51-4675-85d2-2d4f35432c75",
-        "38162815-fadd-49b8-91e8-f5db591558c0"
+        "103fa728-ec00-487f-bb04-d29861771364",
+        "c3799fff-382c-4ef4-b41e-675623906f1a",
+        "0a9b9f33-1a9d-4f23-8ded-638385f018b5",
+        "40d85c7a-e787-4d94-a11a-1983b742d177"
       ],
       "settings": {
         "title": "Media",
