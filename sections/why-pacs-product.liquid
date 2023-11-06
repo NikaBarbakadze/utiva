@@ -371,57 +371,73 @@
               </div>
               <div class="product_data_wrapper mb-10">
                 <div>
-                  <p class="text-[#1c1c1c] text-base font-normal md:text-lg">{{ product.metafields.custom.overview.value }}</p>
+                  <p class="text-[#1c1c1c] text-base font-normal md:text-lg">{{ product.metafields.bm_pdp.bm_short_description_title }}</p>
                 </div>
                 <div class="hidden">
-                  <div class="flex flex-col gap-y-6">
-                    {% assign detail_blocks = section.blocks | where: 'type', 'details' %}
+                  <div class="flex flex-col gap-y-6 mt-2">
+                    {% assign detail_blocks = product.metafields.bm_pdp.bm_short_description_details | split: '***' %}
                     {% for detail in detail_blocks %} 
+                    {% assign itemcontent = detail | split: '###' %}
                       <div class="flex items-start justify-start gap-x-3">
                         <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0" width="32" height="32" viewBox="0 0 32 32" fill="none">
                           <path d="M11.3333 16L14.8333 19.5L20.6667 13.6667M30 16C30 23.732 23.732 30 16 30C8.26802 30 2 23.732 2 16C2 8.26802 8.26802 2 16 2C23.732 2 30 8.26802 30 16Z" stroke="#C33635" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                        <p class="text-base font-normal text-[#1c1c1c] md:text-lg">{{ detail.settings.text }}</p>
+                        <p class="text-base font-normal text-[#1c1c1c] md:text-lg"><span class="font-medium">{{itemcontent.first}}</span><br>{{itemcontent.last}}</p>
                       </div>
                     {% endfor %}
                   </div>
                 </div>
                 <div class="hidden">
                   <div class="ingredients">
-                    {% assign ingredients_block = section.blocks | where: 'type', 'ingredients' %}
-                    {% for block in ingredients_block %}
                       <div class="ingredients_richtext mb-8">
-                        {{ block.settings.content }}
+                        {{product.metafields.bm_pdp.cranberry_ingredients_title}}
+                        <br>
+                        {{product.metafields.bm_pdp.cranberry_ingredient_descrip | newline_to_br}}
                       </div>
                       <div class="py-6 px-5 rounded-[16px] border border-[#1c1c1c]">
                         <p class="pb-4 border-b border-[#1c1c1ccc] text-2xl font-medium -tracking-[0.48px] text-[#1c1c1c]">Supplement Facts</p>
                         <div class="py-4 border-b-2 border-[#1c1c1ccc]">
-                          <div class="flex items-center justify-between">
-                            <p class="text-base font-medium text-[#1c1c1c]  md:-tracking-[0.32px]">Serving Size:</p>
-                            <p class="text-base font-normal text-[#1c1c1c]">{{ block.settings.serving_size }}</p>
-                          </div>
-                          <div class="flex items-center justify-between">
-                            <p class="text-base font-medium text-[#1c1c1c]  md:-tracking-[0.32px]">Servings Per Container:</p>
-                            <p class="text-base font-normal text-[#1c1c1c]">{{ block.settings.servings_per_container }}</p>
-                          </div>
+                          {% if product.metafields.bm_pdp.cranberry_supplement_size_text != blank %}
+                          {% assign Supplementsize = product.metafields.bm_pdp.cranberry_supplement_size_text | split: '***' %}
+                            {% for item in Supplementsize %}
+                              <div class="flex items-center justify-between">
+                                <p class="text-base font-normal text-[#1c1c1c]">{{ item }}</p>
+                              </div>
+                            {% endfor%}
+                          {% endif %}
                         </div>
                         <div class="flex items-center justify-between py-4 border-b border-[#1c1c1ccc]">
-                          <p class="text-base font-medium text-[#1c1c1c]  md:-tracking-[0.32px]">Amount Per Capsule:</p>
-                          <p class="text-base font-normal text-[#1c1c1c]">{{ block.settings.amount_per_capsule }}</p>
+                          {% if product.metafields.bm_pdp.cranberry_supplement_size_text != blank %}
+                            {% assign Supplementsize = product.metafields.bm_pdp.cranberry_supp_amount_text | split: '***' %}
+                              {% for item in Supplementsize %}
+                                <div class="flex items-center justify-between">
+                                  <p class="text-base font-normal text-[#1c1c1c]">{{ item }}</p>
+                                </div>
+                              {% endfor%}
+                            {% endif %}
                         </div>
                         <div class="py-4 border-b border-[#1c1c1ccc]">
-                          <p class="text-base font-normal text-[#1c1c1c]">{{ block.settings.text_1 }}</p>
+                          <p class="text-base font-normal text-[#1c1c1c]">{{ product.metafields.bm_pdp.cranberry_supple_content_text }}</p>
                         </div>
-                        <p class="pt-4 text-base font-normal text-[#1c1c1c]">{{ block.settings.text_2 }}</p>
+                        <p class="pt-4 text-base font-normal text-[#1c1c1c]">{{ product.metafields.bm_pdp.cranberry_supple_details_text }}</p>
                       </div>
-                    {% endfor %}
                   </div>
                 </div>
                 <div class="hidden">
                   <div class="how_to_use">
-                    {% assign howtouse_block = section.blocks | where: 'type', 'how_to_use' %}
-                    {% for block in howtouse_block %} 
-                      {{ block.settings.content }}
+                    {% assign howtouse_block = product.metafields.bm_pdp.cranb_usage_description_two | split: '***' %}
+                    {% for item in howtouse_block %} 
+                      {% assign howto = item | split: '###' %}
+                      <span class="font-bold">{{ howto.first }}</span>
+                      <p>{{ howto.last }}</p>
+                      <br>
+                    {% endfor %}
+                    {% assign howtouse_block = product.metafields.bm_pdp.cranb_usage_description_bottom | split: '***' %}
+                    {% for item in howtouse_block %} 
+                      {% assign howto = item | split: '###' %}
+                      <span class="font-bold">{{ howto.first }}</span>
+                      <p>{{ howto.last }}</p>
+                      <br>
                     {% endfor %}
                   </div>
                 </div>
@@ -750,86 +766,102 @@
                 share_link: share_url
               %}
 
-            {%- when 'variant_picker' -%}
-              {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
-              <div class="subs_wrapper w-full flex flex-col gap-y-3 pb-6">
-                <div class="sub_div cursor-pointer w-full flex flex-col gap-y-6 py-3.5 px-5 rounded-xl border border-[#1c1c1c1f] relative">
-                  <div class="absolute right-[3.7%] md:right-[3%] -top-[20%] py-0.5 px-2 bg-[#C33635] rounded-[4rem] flex items-center justify-center gap-x-0.5 custom-badge">
-                    <span class="text-xs font-medium text-white">Save 25%</span>
-                  </div>
-                  <div class="flex items-center justify-between">
-                    <p class="text-base font-medium text-[#1C1C1C]">Subscribe & Save</p>
-                    <span class="text-xl font-medium text-[#1C1C1C]">{{ product.selected_or_first_available_variant.price | times: 0.75 | money }}</span>
-                  </div>
-                  <div class="sub_data hidden">
-                    <div class="flex flex-col gap-y-3">
-                      <p class="text-base font-medium text-[#1C1C1C]">Delivery every</p>
-                      {% assign index = 1 %}
-                      {% for variant in product.variants %}
-                        {% if variant.id == product.selected_variant.id %} 
-                          {% assign index = forloop.index %}
-                        {% endif %}
-                      {% endfor %}
-                      {% for selling_plan_group in product.selling_plan_groups %}
-                        {% assign forloop_index = forloop.index | minus: 1 %}
-                        <div data-variant-id="{{ product.variants[forloop_index].id }}" class="product_selling_plans_wrapper items-center justify-between gap-x-3 {% if forloop.index == index %} hidden active {% else %} hidden {% endif %}">
-                          {% for selling_plan in selling_plan_group.selling_plans %}
-                            <div data-selling-plan="{{ selling_plan.id }}" class="{% if forloop.first %}active {% endif %}product_selling_plan border-[#1c1c1c1f] text-center text-sm font-medium text-[#1C1C1C] border rounded-lg py-2.5 px-4 w-1/3">
-                              {{ selling_plan.name 
-                              | replace: 'Deliver Every', '' 
-                              | replace: 'Deliver every', '' 
-                              | replace: 'Delivery Every', ''
-                              | replace: 'Delivery every', ''
-                              | replace: 'days', 'Days' }}
-                            </div>
-                          {% endfor %}
-                        </div>
-                      {% endfor %}
+              {%- when 'variant_picker' -%}
+                {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+                <div class="subs_wrapper w-full flex flex-col gap-y-3 pb-6">
+                  <div class="sub_div cursor-pointer w-full flex flex-col gap-y-6 py-3.5 px-5 rounded-xl border border-[#1c1c1c1f] relative active">
+                    <div class="absolute right-[3.7%] md:right-[3%] -top-[20%] py-0.5 px-2 bg-[#C33635] rounded-[4rem] flex items-center justify-center gap-x-0.5 custom-badge">
+                      <span class="text-xs font-medium text-white">Save 25%</span>
                     </div>
-                    <div class="flex flex-col gap-3 mt-4">
-                      <p class="text-sm font-medium text-[#1C1C1C] flex items-center gap-2">
-                        <svg class="min-w-[25px]" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M14 15V9M10 15V9M21 12C21 16.971 16.971 21 12 21C7.029 21 3 16.971 3 12C3 7.029 7.029 3 12 3C16.971 3 21 7.029 21 12Z" stroke="#1C1C1C" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>  
-                        <span>Consistency is key to success and you're 4x more likely to succeed if you subscribe.</span>
-                      </p>
-                      <p class="text-sm font-medium text-[#1C1C1C] flex items-center gap-2">
-                        <svg class="min-w-[25px]" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M16.5 10.65L12.8513 11.8623C12.2986 12.0459 11.7014 12.0459 11.1487 11.8623L7.5 10.65M9.46364 15.6H14.5364C15.6208 15.6 16.5 14.7208 16.5 13.6364V10.3636C16.5 9.27915 15.6208 8.4 14.5364 8.4H9.46364C8.37915 8.4 7.5 9.27915 7.5 10.3636V13.6364C7.5 14.7208 8.37915 15.6 9.46364 15.6ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#1C1C1C" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>                        
-                        <span>Cancel anytime - no commitment</span>
-                      </p>
-                      <p class="text-sm font-medium text-[#1C1C1C] flex items-center gap-2">
-                        <svg class="min-w-[25px]" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M12 10.5V16M15.25 16H8.75C8.19772 16 7.75 15.5523 7.75 15V11.5C7.75 10.9477 8.19772 10.5 8.75 10.5H15.25C15.8023 10.5 16.25 10.9477 16.25 11.5V15C16.25 15.5523 15.8023 16 15.25 16ZM12.069 10.5C13.0007 10.5041 13.8997 10.1571 14.587 9.528C15.1431 8.94037 15.1431 8.02063 14.587 7.433C14.3254 7.15624 13.9613 6.99941 13.5805 6.99941C13.1997 6.99941 12.8356 7.15624 12.574 7.433C11.723 8.32 12.069 10.5 12.069 10.5ZM11.931 10.5C10.9993 10.5041 10.1003 10.1571 9.413 9.528C8.85692 8.94037 8.85692 8.02063 9.413 7.433C9.67447 7.15597 10.0386 6.99895 10.4195 6.99895C10.8004 6.99895 11.1645 7.15597 11.426 7.433C12.277 8.32 11.931 10.5 11.931 10.5ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#1C1C1C" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>                        
-                        <span>No surprises, we email you 3 days before each renewal</span>
-                      </p>
-                      <p class="text-sm font-medium text-[#1C1C1C] flex items-center gap-2">
-                        <svg class="min-w-[25px]" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M9 15L15 9" stroke="#1C1C1C" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M9.249 9C9.111 9 8.999 9.112 9 9.25C9 9.388 9.112 9.5 9.25 9.5C9.388 9.5 9.5 9.388 9.5 9.25C9.5 9.112 9.388 9 9.249 9" stroke="#1C1C1C" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M14.749 14.5C14.611 14.5 14.499 14.612 14.5 14.75C14.5 14.888 14.612 15 14.75 15C14.888 15 15 14.888 15 14.75C15 14.612 14.888 14.5 14.749 14.5" stroke="#1C1C1C" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M12 21C7.03 21 3 16.971 3 12C3 7.03 7.03 3 12 3C16.971 3 21 7.03 21 12C21 16.971 16.971 21 12 21" stroke="#1C1C1C" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>                        
-                        <span>Free mystery gifts</span>
-                      </p>
+                    <div class="flex items-center justify-between">
+                      <div class="flex items-center gap-2">
+                        <svg class="custom-radio-svg" width="24" height="24" fill="#1C1C1C" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <path fill="none" d="M0 0h24v24H0z"/>
+                                <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm0-3a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/>
+                            </g>
+                        </svg>
+                        <p class="text-base font-medium text-[#1C1C1C]">Subscribe & Save</p>
+                      </div>
+                      <span class="text-xl font-medium text-[#1C1C1C]">{{ product.selected_or_first_available_variant.price | times: 0.75 | money }}</span>
+                    </div>
+                    <div class="sub_data hidden">
+                      <div class="flex flex-col gap-y-3">
+                        <p class="text-base font-medium text-[#1C1C1C]">Delivery every</p>
+                        {% assign index = 1 %}
+                        {% for variant in product.variants %}
+                          {% if variant.id == product.selected_variant.id %} 
+                            {% assign index = forloop.index %}
+                          {% endif %}
+                        {% endfor %}
+                        {% for selling_plan_group in product.selling_plan_groups %}
+                          {% assign forloop_index = forloop.index | minus: 1 %}
+                          <div data-variant-id="{{ product.variants[forloop_index].id }}" class="product_selling_plans_wrapper items-center justify-between gap-x-3 {% if forloop.index == index %} hidden active {% else %} hidden {% endif %}">
+                            {% for selling_plan in selling_plan_group.selling_plans %}
+                              <div data-selling-plan="{{ selling_plan.id }}" class="{% if forloop.first %}active {% endif %}product_selling_plan border-[#1c1c1c1f] text-center text-sm font-medium text-[#1C1C1C] border rounded-lg py-2.5 px-4 w-1/3">
+                                {{ selling_plan.name 
+                                | replace: 'Deliver Every', '' 
+                                | replace: 'Deliver every', '' 
+                                | replace: 'Delivery Every', ''
+                                | replace: 'Delivery every', ''
+                                | replace: 'days', 'Days' }}
+                              </div>
+                            {% endfor %}
+                          </div>
+                        {% endfor %}
+                      </div>
+                      <div class="flex flex-col gap-3 mt-4">
+                        <p class="text-sm font-medium text-[#1C1C1C] flex items-center gap-2">
+                          <svg class="min-w-[25px]" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14 15V9M10 15V9M21 12C21 16.971 16.971 21 12 21C7.029 21 3 16.971 3 12C3 7.029 7.029 3 12 3C16.971 3 21 7.029 21 12Z" stroke="#1C1C1C" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>  
+                          <span>Consistency is key to success and you're 4x more likely to succeed if you subscribe.</span>
+                        </p>
+                        <p class="text-sm font-medium text-[#1C1C1C] flex items-center gap-2">
+                          <svg class="min-w-[25px]" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.5 10.65L12.8513 11.8623C12.2986 12.0459 11.7014 12.0459 11.1487 11.8623L7.5 10.65M9.46364 15.6H14.5364C15.6208 15.6 16.5 14.7208 16.5 13.6364V10.3636C16.5 9.27915 15.6208 8.4 14.5364 8.4H9.46364C8.37915 8.4 7.5 9.27915 7.5 10.3636V13.6364C7.5 14.7208 8.37915 15.6 9.46364 15.6ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#1C1C1C" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>                        
+                          <span>Cancel anytime - no commitment</span>
+                        </p>
+                        <p class="text-sm font-medium text-[#1C1C1C] flex items-center gap-2">
+                          <svg class="min-w-[25px]" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 10.5V16M15.25 16H8.75C8.19772 16 7.75 15.5523 7.75 15V11.5C7.75 10.9477 8.19772 10.5 8.75 10.5H15.25C15.8023 10.5 16.25 10.9477 16.25 11.5V15C16.25 15.5523 15.8023 16 15.25 16ZM12.069 10.5C13.0007 10.5041 13.8997 10.1571 14.587 9.528C15.1431 8.94037 15.1431 8.02063 14.587 7.433C14.3254 7.15624 13.9613 6.99941 13.5805 6.99941C13.1997 6.99941 12.8356 7.15624 12.574 7.433C11.723 8.32 12.069 10.5 12.069 10.5ZM11.931 10.5C10.9993 10.5041 10.1003 10.1571 9.413 9.528C8.85692 8.94037 8.85692 8.02063 9.413 7.433C9.67447 7.15597 10.0386 6.99895 10.4195 6.99895C10.8004 6.99895 11.1645 7.15597 11.426 7.433C12.277 8.32 11.931 10.5 11.931 10.5ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#1C1C1C" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>                        
+                          <span>No surprises, we email you 3 days before each renewal</span>
+                        </p>
+                        <p class="text-sm font-medium text-[#1C1C1C] flex items-center gap-2">
+                          <svg class="min-w-[25px]" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 15L15 9" stroke="#1C1C1C" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9.249 9C9.111 9 8.999 9.112 9 9.25C9 9.388 9.112 9.5 9.25 9.5C9.388 9.5 9.5 9.388 9.5 9.25C9.5 9.112 9.388 9 9.249 9" stroke="#1C1C1C" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14.749 14.5C14.611 14.5 14.499 14.612 14.5 14.75C14.5 14.888 14.612 15 14.75 15C14.888 15 15 14.888 15 14.75C15 14.612 14.888 14.5 14.749 14.5" stroke="#1C1C1C" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 21C7.03 21 3 16.971 3 12C3 7.03 7.03 3 12 3C16.971 3 21 7.03 21 12C21 16.971 16.971 21 12 21" stroke="#1C1C1C" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>                        
+                          <span>Free mystery gifts</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="otp_div cursor-pointer w-full flex flex-col gap-y-6 py-3.5 px-5 rounded-xl border border-[#1c1c1c1f]">
+                    <div class="flex items-center justify-between">
+                      <div class="flex items-center gap-2">
+                        <svg class="custom-radio-svg" width="24" height="24" fill="#1C1C1C" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <path fill="none" d="M0 0h24v24H0z"/>
+                                <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm0-3a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/>
+                            </g>
+                        </svg>
+                      <p class="text-base font-medium text-[#1C1C1C]">One time purchase</p>
+                      </div>
+                      <span class="text-xl font-medium text-[#1C1C1C]">{{ product.selected_or_first_available_variant.price | money }}</span>
+                    </div>
+                    <div class="otp_data items-start justify-start gap-x-2 hidden">
+                      <div class="w-6 h-6">
+                        {% render 'icon-shop' %}
+                      </div>
+                      <p class="text-sm font-medium text-[#1C1C1C]">Consistency is key to success and you're 4x more likely to succeed if you subscribe.</p>
                     </div>
                   </div>
                 </div>
-                <div class="otp_div cursor-pointer w-full flex flex-col gap-y-6 py-3.5 px-5 rounded-xl border border-[#1c1c1c1f]">
-                  <div class="flex items-center justify-between">
-                    <p class="text-base font-medium text-[#1C1C1C]">One time purchase</p>
-                    <span class="text-xl font-medium text-[#1C1C1C]">{{ product.selected_or_first_available_variant.price | money }}</span>
-                  </div>
-                  <div class="otp_data items-start justify-start gap-x-2 hidden">
-                    <div class="w-6 h-6">
-                      {% render 'icon-shop' %}
-                    </div>
-                    <p class="text-sm font-medium text-[#1C1C1C]">Consistency is key to success and you're 4x more likely to succeed if you subscribe.</p>
-                  </div>
-                </div>
-              </div>
             {%- when 'buy_buttons' -%}
               {%- render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: false -%}
               <div class="flex flex-col gap-y-2 mb-6 md:flex-col-reverse">
