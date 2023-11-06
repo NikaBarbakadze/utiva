@@ -14,15 +14,6 @@
     "header": {
       "type": "custom-header",
       "blocks": {
-        "2ce8a383-16d5-44a5-9172-bc4b8192c627": {
-          "type": "maga_menu",
-          "settings": {
-            "menu_item_title": "Give $20, get $20",
-            "link_title": "Give $20, get $20",
-            "image": "shopify:\/\/shop_images\/banner.png",
-            "url": "shopify:\/\/collections\/collections-page-shop-all"
-          }
-        },
         "45dd1614-e790-4b11-898f-4993198641dc": {
           "type": "product",
           "settings": {
@@ -34,12 +25,21 @@
           "settings": {
             "product_image": "cranberry-pacs"
           }
+        },
+        "2ce8a383-16d5-44a5-9172-bc4b8192c627": {
+          "type": "maga_menu",
+          "settings": {
+            "menu_item_title": "Give $20, get $20",
+            "link_title": "Give $20, get $20",
+            "image": "shopify:\/\/shop_images\/banner.png",
+            "url": "shopify:\/\/collections\/collections-page-shop-all"
+          }
         }
       },
       "block_order": [
-        "2ce8a383-16d5-44a5-9172-bc4b8192c627",
         "45dd1614-e790-4b11-898f-4993198641dc",
-        "69c96ed3-d1f5-488c-baeb-651339cd579b"
+        "69c96ed3-d1f5-488c-baeb-651339cd579b",
+        "2ce8a383-16d5-44a5-9172-bc4b8192c627"
       ],
       "settings": {
         "header_logo": "shopify:\/\/shop_images\/logo_white.png",
