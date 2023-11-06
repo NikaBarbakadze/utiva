@@ -14,7 +14,7 @@
         "title": "Sophisticated science, simple product",
         "description": "<p>You’ve probably tried it all for UTI prevention. Wiped front to back, swapped out your underwear to cotton and drank ALL the cranberry juice. How are Utiva Cranberry PACs different? It’s surprisingly simple.<\/p>",
         "btn_text": "Discover",
-        "btn_url": ""
+        "btn_url": "#custom-carousel-section"
       }
     },
     "carousel": {
@@ -325,8 +325,8 @@
         "img": "shopify:\/\/shop_images\/rectangle_11.webp",
         "title": "What are customers saying about Utiva?",
         "subtitle": "Real Customers. Real Reviews.",
-        "cta_text": "Shop now",
-        "cta_url": ""
+        "cta_text": "Explore Reviews",
+        "cta_url": "shopify:\/\/pages\/reviews"
       }
     }
   },
