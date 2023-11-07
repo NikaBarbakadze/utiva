@@ -107,11 +107,12 @@
   <div id="shipping" class="page-width px-6 flex flex-col gap-y-8 pb-6 mt-4 md:mt-14 md:flex-row md:justify-between md:gap-x-6 md:pb-0">
     <h3 class="text-2xl font-medium text-[#1c1c1c] md:text-[2.8rem] md:leading-[3.92rem] md:-tracking-[0.028rem]">Shipping & Return policy</h3>
     <div class="flex flex-col md:w-[72rem]">
-      {% assign shippingQuestions = section.blocks | where: 'type', 'shipping' %}
+      {% assign shippingQuestions = shop.metaobjects["faq"].values | where: 'type', 'Shipping and Returns' %}
       {% for block in shippingQuestions %}
+        {% if block.type contains "Shipping" %}
         <div class="questionWrapper {% unless forloop.first %} border-t border-[#1c1c1c1f] py-5 {% else %} pb-5 {% endunless %} flex flex-col gap-y-4">
           <div class="questionWrapperHeader cursor-pointer flex items-center justify-between gap-x-4">
-            <p class="text-[#1C1C1C] text-xl font-normal md:text-2xl md:leading-[3.36rem] md:-tracking-[0.024rem]">{{ block.settings.question }}</p>
+            <p class="text-[#1C1C1C] text-xl font-normal md:text-2xl md:leading-[3.36rem] md:-tracking-[0.024rem]">{{ block.question }}</p>
             <div class="closed">
               {% render 'faq-plus' %}
             </div>
@@ -120,29 +121,17 @@
             </div>
           </div>
           <div class="answer">
-            {% if block.settings.video %}
-                <div class="rounded-[1.6rem] overflow-hidden relative">
-                    <div class="fade z-10 absolute top-0 left-0 bottom-0 right-0 bg-[#1c1c1c38] flex items-center justify-center">
-                    <div class="playbutton p-4 rounded-[6rem] backdrop-blur-[8px] bg-[#f2f2f066]">
-                        <svg
-                        class="pointer-events-none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="32"
-                        height="32"
-                        viewBox="0 0 32 32"
-                        fill="none">
-                        <path d="M9.33301 7.66333C9.33301 6.081 11.0835 5.12532 12.4145 5.98097L25.3827 14.3176C26.6073 15.1049 26.6073 16.8951 25.3827 17.6824L12.4145 26.019C11.0835 26.8747 9.33301 25.919 9.33301 24.3367V7.66333Z" fill="white" />
-                        </svg>
-                    </div>
-                    </div>
-                    <video class="section_video object-cover w-full h-full" poster="{{ block.settings.video.preview_image.src | img_url: '800x800' }}">
-                    <source src="{{ block.settings.video.sources[1].url }}">
-                    </video>
-                </div>
-            {% endif %}
-            <p class="text-base text-[#1c1c1ccc] leading-[2.24rem] md:text-lg">{{ block.settings.answer }}</p>
+            {% if block.media %}
+              <div class="rounded-[1.6rem] overflow-hidden relative mb-8">
+                  <video controls class="section_video object-cover w-full h-full" poster="{{ block.media.value.preview_image.src | img_url: '800x800' }}">
+                  <source src="{{ block.media.value.sources[1].url }}">
+                  </video>
+              </div>
+          {% endif %}
+            <p class="text-base text-[#1c1c1ccc] leading-[2.24rem] md:text-lg">{{ block.answer | metafield_tag }}</p>
           </div>
         </div>
+        {% endif %}
       {% endfor %}
     </div>
   </div>
@@ -173,27 +162,14 @@
               </div>
             </div>
             <div class="answer">
-              {% if block.settings.video %}
-                  <div class="rounded-[1.6rem] overflow-hidden relative">
-                      <div class="fade z-10 absolute top-0 left-0 bottom-0 right-0 bg-[#1c1c1c38] flex items-center justify-center">
-                      <div class="playbutton p-4 rounded-[6rem] backdrop-blur-[8px] bg-[#f2f2f066]">
-                          <svg
-                          class="pointer-events-none"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="32"
-                          height="32"
-                          viewBox="0 0 32 32"
-                          fill="none">
-                          <path d="M9.33301 7.66333C9.33301 6.081 11.0835 5.12532 12.4145 5.98097L25.3827 14.3176C26.6073 15.1049 26.6073 16.8951 25.3827 17.6824L12.4145 26.019C11.0835 26.8747 9.33301 25.919 9.33301 24.3367V7.66333Z" fill="white" />
-                          </svg>
-                      </div>
-                      </div>
-                      <video class="section_video object-cover w-full h-full" poster="{{ block.settings.video.preview_image.src | img_url: '800x800' }}">
-                      <source src="{{ block.settings.video.sources[1].url }}">
-                      </video>
-                  </div>
-              {% endif %}
-              <p class="text-base text-[#1c1c1ccc] leading-[2.24rem] md:text-lg">{{ block.settings.answer }}</p>
+              {% if block.media %}
+                <div class="rounded-[1.6rem] overflow-hidden relative mb-8">
+                    <video controls class="section_video object-cover w-full h-full" poster="{{ block.media.value.preview_image.src | img_url: '800x800' }}">
+                    <source src="{{ block.media.value.sources[1].url }}">
+                    </video>
+                </div>
+            {% endif %}
+              <p class="text-base text-[#1c1c1ccc] leading-[2.24rem] md:text-lg">{{ block.settings.answer | metafield_tag }}</p>
             </div>
           </div>
         {% endfor %}
@@ -215,11 +191,11 @@
   <div id="rewards" class="page-width px-6 flex flex-col gap-y-8 pb-6 mt-4 md:mt-14 md:flex-row md:justify-between md:gap-x-6 md:pb-0">
     <h3 class="text-2xl font-medium text-[#1c1c1c] md:text-[2.8rem] md:leading-[3.92rem] md:-tracking-[0.028rem]">Rewards & Referrals</h3>
     <div class="flex flex-col md:w-[72rem]">
-      {% assign rewardQuestions = section.blocks | where: 'type', 'rewards' %}
+      {% assign rewardQuestions = shop.metaobjects["faq"].values | where: 'type', 'Rewards' %}
       {% for block in rewardQuestions %}
         <div class="questionWrapper {% unless forloop.first %} border-t border-[#1c1c1c1f] py-5 {% else %} pb-5 {% endunless %} flex flex-col gap-y-4">
           <div class="questionWrapperHeader cursor-pointer flex items-center justify-between gap-x-4">
-            <p class="text-[#1C1C1C] text-xl font-normal md:text-2xl md:leading-[3.36rem] md:-tracking-[0.024rem]">{{ block.settings.question }}</p>
+            <p class="text-[#1C1C1C] text-xl font-normal md:text-2xl md:leading-[3.36rem] md:-tracking-[0.024rem]">{{ block.question }}</p>
             <div class="closed">
               {% render 'faq-plus' %}
             </div>
@@ -228,27 +204,14 @@
             </div>
           </div>
           <div class="answer">
-            {% if block.settings.video %}
-                <div class="rounded-[1.6rem] overflow-hidden relative">
-                    <div class="fade z-10 absolute top-0 left-0 bottom-0 right-0 bg-[#1c1c1c38] flex items-center justify-center">
-                    <div class="playbutton p-4 rounded-[6rem] backdrop-blur-[8px] bg-[#f2f2f066]">
-                        <svg
-                        class="pointer-events-none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="32"
-                        height="32"
-                        viewBox="0 0 32 32"
-                        fill="none">
-                        <path d="M9.33301 7.66333C9.33301 6.081 11.0835 5.12532 12.4145 5.98097L25.3827 14.3176C26.6073 15.1049 26.6073 16.8951 25.3827 17.6824L12.4145 26.019C11.0835 26.8747 9.33301 25.919 9.33301 24.3367V7.66333Z" fill="white" />
-                        </svg>
-                    </div>
-                    </div>
-                    <video class="section_video object-cover w-full h-full" poster="{{ block.settings.video.preview_image.src | img_url: '800x800' }}">
-                    <source src="{{ block.settings.video.sources[1].url }}">
-                    </video>
-                </div>
-            {% endif %}
-            <p class="text-base text-[#1c1c1ccc] leading-[2.24rem] md:text-lg">{{ block.settings.answer }}</p>
+            {% if block.media %}
+              <div class="rounded-[1.6rem] overflow-hidden relative mb-8">
+                  <video controls class="section_video object-cover w-full h-full" poster="{{ block.media.value.preview_image.src | img_url: '800x800' }}">
+                  <source src="{{ block.media.value.sources[1].url }}">
+                  </video>
+              </div>
+          {% endif %}
+            <p class="text-base text-[#1c1c1ccc] leading-[2.24rem] md:text-lg">{{ block.answer | metafield_tag }}</p>
           </div>
         </div>
       {% endfor %}
@@ -257,11 +220,11 @@
   <div id="subscriptions" class="page-width px-6 flex flex-col gap-y-8 pb-6 mt-4 md:mt-14 md:flex-row md:justify-between md:gap-x-6 md:pb-0">
     <h3 class="text-2xl font-medium text-[#1c1c1c] md:text-[2.8rem] md:leading-[3.92rem] md:-tracking-[0.028rem]">Subscribe & Save</h3>
     <div class="flex flex-col md:w-[72rem]">
-      {% assign subscriptionQuestions = section.blocks | where: 'type', 'subscriptions' %}
-      {% for block in subscriptionQuestions %}
+      {% assign subQuestions = shop.metaobjects["faq"].values | where: 'type', 'Subscriptions' %}
+      {% for block in subQuestions %}
         <div class="questionWrapper {% unless forloop.first %} border-t border-[#1c1c1c1f] py-5 {% else %} pb-5 {% endunless %} flex flex-col gap-y-4">
           <div class="questionWrapperHeader cursor-pointer flex items-center justify-between gap-x-4">
-            <p class="text-[#1C1C1C] text-xl font-normal md:text-2xl md:leading-[3.36rem] md:-tracking-[0.024rem]">{{ block.settings.question }}</p>
+            <p class="text-[#1C1C1C] text-xl font-normal md:text-2xl md:leading-[3.36rem] md:-tracking-[0.024rem]">{{ block.question }}</p>
             <div class="closed">
               {% render 'faq-plus' %}
             </div>
@@ -270,27 +233,14 @@
             </div>
           </div>
           <div class="answer">
-            {% if block.settings.video %}
-                <div class="rounded-[1.6rem] overflow-hidden relative">
-                    <div class="fade z-10 absolute top-0 left-0 bottom-0 right-0 bg-[#1c1c1c38] flex items-center justify-center">
-                    <div class="playbutton p-4 rounded-[6rem] backdrop-blur-[8px] bg-[#f2f2f066]">
-                        <svg
-                        class="pointer-events-none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="32"
-                        height="32"
-                        viewBox="0 0 32 32"
-                        fill="none">
-                        <path d="M9.33301 7.66333C9.33301 6.081 11.0835 5.12532 12.4145 5.98097L25.3827 14.3176C26.6073 15.1049 26.6073 16.8951 25.3827 17.6824L12.4145 26.019C11.0835 26.8747 9.33301 25.919 9.33301 24.3367V7.66333Z" fill="white" />
-                        </svg>
-                    </div>
-                    </div>
-                    <video class="section_video object-cover w-full h-full" poster="{{ block.settings.video.preview_image.src | img_url: '800x800' }}">
-                    <source src="{{ block.settings.video.sources[1].url }}">
-                    </video>
-                </div>
-            {% endif %}
-            <p class="text-base text-[#1c1c1ccc] leading-[2.24rem] md:text-lg">{{ block.settings.answer }}</p>
+            {% if block.media %}
+              <div class="rounded-[1.6rem] overflow-hidden relative mb-8">
+                  <video controls class="section_video object-cover w-full h-full" poster="{{ block.media.value.preview_image.src | img_url: '800x800' }}">
+                  <source src="{{ block.media.value.sources[1].url }}">
+                  </video>
+              </div>
+          {% endif %}
+            <p class="text-base text-[#1c1c1ccc] leading-[2.24rem] md:text-lg">{{ block.answer | metafield_tag }}</p>
           </div>
         </div>
       {% endfor %}
