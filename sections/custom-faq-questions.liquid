@@ -150,10 +150,11 @@
     <div class="page-width px-6 flex flex-col gap-y-8 pb-6 mt-4 md:mt-[8.8rem] md:flex-row md:justify-between md:gap-x-6 md:pb-0">
       <h3 id="displayedProductFaqTitle" class="text-2xl font-medium text-[#1c1c1c] md:text-[2.8rem] md:leading-[3.92rem] md:-tracking-[0.028rem]"></h3>
       <div class="flex flex-col md:w-[72rem]">
-        {% for block in productQuestions %} 
-          <div data-product="{{ block.settings.product.handle }}" class="hidden questionWrapper productQuestionWrapper productQuestionHandle-{{ block.settings.product.handle }} flex flex-col gap-y-4">
+        {% for producti in productQuestions %} 
+          {% for block in producti.settings.product.metafields.custom.faqs.value %}
+          <div data-product="{{ producti.settings.product.handle }}" class="hidden questionWrapper productQuestionWrapper productQuestionHandle-{{ prodacti.settings.product.handle }} flex flex-col gap-y-4">
             <div class="questionWrapperHeader cursor-pointer flex items-center justify-between gap-x-4">
-              <p class="text-[#1C1C1C] text-xl font-normal md:text-2xl md:leading-[3.36rem] md:-tracking-[0.024rem]">{{ block.settings.question }}</p>
+              <p class="text-[#1C1C1C] text-xl font-normal md:text-2xl md:leading-[3.36rem] md:-tracking-[0.024rem]">{{ block.question }}</p>
               <div class="closed">
                 {% render 'faq-plus' %}
               </div>
@@ -169,9 +170,10 @@
                     </video>
                 </div>
             {% endif %}
-              <p class="text-base text-[#1c1c1ccc] leading-[2.24rem] md:text-lg">{{ block.settings.answer | metafield_tag }}</p>
+              <p class="text-base text-[#1c1c1ccc] leading-[2.24rem] md:text-lg">{{ block.answer | metafield_tag }}</p>
             </div>
           </div>
+          {% endfor %}
         {% endfor %}
       </div>
     </div>
@@ -285,44 +287,14 @@
     "name": "Questions",
     "tag": "section",
     "blocks": [
-      {
-        "name": "Shipping & Returns",
-        "type": "shipping",
-        "settings": [
-          {
-            "type": "text",
-            "id": "question",
-            "label": "Question"
-          }, {
-            "type": "inline_richtext",
-            "id": "answer",
-            "label": "Answer"
-          }, {
-            "type": "video",
-            "id": "video",
-            "label": "Video (If present)"
-          }
-        ]
-      }, {
+       {
         "name": "Products",
         "type": "products",
         "settings": [
           {
-            "type": "text",
-            "id": "question",
-            "label": "Question"
-          }, {
-            "type": "inline_richtext",
-            "id": "answer",
-            "label": "Answer"
-          }, {
             "type": "product",
             "id": "product",
             "label": "Product"
-          }, {
-            "type": "video",
-            "id": "video",
-            "label": "Video (If present)"
           }
         ]
       }, {
@@ -333,42 +305,6 @@
             "type": "inline_richtext",
             "id": "hsa_rich",
             "label": "HSA Content"
-          }
-        ]
-      }, {
-        "name": "Rewards",
-        "type": "rewards",
-        "settings": [
-          {
-            "type": "text",
-            "id": "question",
-            "label": "Question"
-          }, {
-            "type": "inline_richtext",
-            "id": "answer",
-            "label": "Answer"
-          }, {
-            "type": "video",
-            "id": "video",
-            "label": "Video (If present)"
-          }
-        ]
-      }, {
-        "name": "Subscriptions",
-        "type": "subscriptions",
-        "settings": [
-          {
-            "type": "text",
-            "id": "question",
-            "label": "Question"
-          }, {
-            "type": "inline_richtext",
-            "id": "answer",
-            "label": "Answer"
-          }, {
-            "type": "video",
-            "id": "video",
-            "label": "Video (If present)"
           }
         ]
       }
