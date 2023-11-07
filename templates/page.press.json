@@ -46,13 +46,24 @@
             "source": "utiva.com",
             "alt_text": "Well + Good UTI prevention tips"
           }
+        },
+        "c2d31627-b280-4d77-93b5-a9d42316e196": {
+          "type": "press_items",
+          "settings": {
+            "date": "Apr 26, 2023",
+            "title": "RANKING CANADA’S TOP GROWING COMPANIES OF 2023",
+            "url": "https:\/\/www.theglobeandmail.com\/business\/rob-magazine\/top-growing-companies\/article-canadas-top-growing-companies-2023\/",
+            "source": "utiva.com",
+            "alt_text": "Utiva ranked within Canada's top growing businesses"
+          }
         }
       },
       "block_order": [
         "47283d27-3b4e-4244-99bd-0007442772fe",
         "17ba72c3-62e0-4084-bcc8-0830c7ca9e76",
         "105b0b99-a618-4a93-a194-114ed162d217",
-        "ab4d3073-cd53-4f21-aeaf-eb791d563dc3"
+        "ab4d3073-cd53-4f21-aeaf-eb791d563dc3",
+        "c2d31627-b280-4d77-93b5-a9d42316e196"
       ],
       "settings": {
         "title": "In the Press",
