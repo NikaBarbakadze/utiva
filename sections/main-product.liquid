@@ -898,8 +898,6 @@
                   <p class="text-xs font-normal text-[#1c1c1c99] md:text-[#1c1c1ccc] md:text-sm md:font-medium">100% money back guarantee</p>
                 </div>
               </div>
-              {% assign rewards_block = section.blocks | where: 'type', 'rewards' %}
-              {% if rewards_block %}
                 <div class="custom_accordion_rewards py-5 md:py-7 cursor-pointer md:mt-[2.8rem]">
                   <div class="accordion_title_wrapper flex items-center justify-between">
                     <p class="text-2xl text-[#1c1c1c] font-normal -tracking-[0.24px] md:text-[2.8rem] md:leading-[3.92rem] md:-tracking-[0.28px]">Rewards</p>
@@ -907,12 +905,9 @@
                     <div class="close">{% render 'icon-accordion-minus' %}</div>
                   </div>
                   <div class="custom_accordion_content mb-8">
-                    {% for block in rewards_block %} 
-                      <p class="text-base font-normal text-[#1c1c1c] md:text-lg">{{ block.settings.content }}</p>
-                    {% endfor %}
+                      <p class="text-base font-normal text-[#1c1c1c] md:text-lg">{{ product.metafields.custom.tab_rewards | default: "Earn free reward points with every purchase when you have an account on this website. Reward points will be credited after the product has been shipped and can be used towards your next purchase." }}</p>
                   </div>
                 </div>
-              {% endif %}
               {% assign faq_blocks = section.blocks | where: 'type', 'faq' %}
               {% if faq_blocks %} 
                 <div class="custom_accordion_faqs border-t border-[#1c1c1c1f] py-5 md:py-7 cursor-pointer">
