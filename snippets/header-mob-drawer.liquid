@@ -64,7 +64,7 @@
 		{% for link in section.settings.mob_menu.links %}
 			<li class='mobile-menu__open--li accordion-wrapper'>
 				<div class='mobile-menu__open--item accordion-wrapper__button'>
-					<a href='{{ link_url }}' class='mobile-menu__open--title'>{{ link.title }}</a>
+					<a href='{{ link.url }}' class='mobile-menu__open--title'>{{ link.title }}</a>
 					{% if link.links.size > 0 %}
 						<div class='plusminus accordion-wrapper__plusminus'></div>
 					{% endif %}
