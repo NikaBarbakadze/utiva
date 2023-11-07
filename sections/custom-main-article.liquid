@@ -30,8 +30,16 @@
     <div class="article-header lg:text-center">
         <div class="flex gap-2.5 items-center my-2 text-[#777777] text-sm lg:text-base font-normal lg:justify-center">
             {% if article.tags.size > 0 %}
-            <div class="flex gap-2.5">
+            <div class="gap-2.5 hidden lg:flex">
                 {% for tag in article.tags %}
+                    <span class="text-[#494948] font-medium capitalize">
+                        {{ tag }}
+                    </span>
+                {% endfor %}
+            </div>
+
+            <div class="flex gap-2.5 lg:hidden">
+                {% for tag in article.tags limit: 1 %}
                     <span class="text-[#494948] font-medium capitalize">
                         {{ tag }}
                     </span>

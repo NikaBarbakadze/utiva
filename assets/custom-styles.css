@@ -3483,6 +3483,10 @@ video {
     display: flex !important;
   }
 
+  .lg\:flex {
+    display: flex;
+  }
+
   .lg\:hidden {
     display: none;
   }
