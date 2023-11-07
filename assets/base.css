@@ -3742,11 +3742,18 @@ input, textarea, select, .faux-select {
   rotate: 90deg;
 }
 
-.subs_wrapper > div.active svg.custom-radio-svg{
-  fill: #C33635 !important;
+.subs_wrapper > div.active .custom-radio-svg .custom-radio-svg-empty{
+  display: none;
 }
 
-.subs_wrapper > div:not(.active) svg.custom-radio-svg{
-  display: none !important;
+.subs_wrapper > div.active .custom-radio-svg .custom-radio-svg-filled{
+  display: block;
 }
 
+.subs_wrapper > div:not(.active) .custom-radio-svg .custom-radio-svg-empty{
+  display: block;
+}
+
+.subs_wrapper > div:not(.active) .custom-radio-svg .custom-radio-svg-filled{
+  display: none;
+}

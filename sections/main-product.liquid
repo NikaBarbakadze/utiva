@@ -788,12 +788,17 @@
                   </div>
                   <div class="flex items-center justify-between">
                     <div class="flex items-center gap-2">
-                      <svg class="custom-radio-svg" width="24" height="24" fill="#C33635" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                          <g>
-                              <path fill="none" d="M0 0h24v24H0z"/>
-                              <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm0-3a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/>
-                          </g>
-                      </svg>
+                      <div class="custom-radio-svg">
+                        <svg class="custom-radio-svg-filled" width="24" height="24" fill="#C33635" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <path fill="none" d="M0 0h24v24H0z"/>
+                                <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm0-3a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/>
+                            </g>
+                        </svg>
+                        <svg class="custom-radio-svg-empty" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="10" cy="10" r="9.5" stroke="#1C1C1C" stroke-opacity="0.4"/>
+                        </svg>
+                      </div>
                       <p class="text-base font-medium text-[#1C1C1C]">Subscribe & Save</p>
                     </div>
                     <span class="text-xl font-medium text-[#1C1C1C]">{{ product.selected_or_first_available_variant.price | times: 0.75 | money }}</span>
@@ -857,12 +862,17 @@
                 <div class="otp_div cursor-pointer w-full flex flex-col gap-y-6 py-3.5 px-5 rounded-xl border border-[#1c1c1c1f]">
                   <div class="flex items-center justify-between">
                     <div class="flex items-center gap-2">
-                      <svg class="custom-radio-svg" width="24" height="24" fill="#C33635" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                          <g>
-                              <path fill="none" d="M0 0h24v24H0z"/>
-                              <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm0-3a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/>
-                          </g>
-                      </svg>
+                      <div class="custom-radio-svg">
+                        <svg class="custom-radio-svg-filled" width="24" height="24" fill="#C33635" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <path fill="none" d="M0 0h24v24H0z"/>
+                                <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm0-3a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/>
+                            </g>
+                        </svg>
+                        <svg class="custom-radio-svg-empty" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="10" cy="10" r="9.5" stroke="#1C1C1C" stroke-opacity="0.4"/>
+                        </svg>
+                      </div>
                     <p class="text-base font-medium text-[#1C1C1C]">One time purchase</p>
                     </div>
                     <span class="text-xl font-medium text-[#1C1C1C]">{{ product.selected_or_first_available_variant.price | money }}</span>
