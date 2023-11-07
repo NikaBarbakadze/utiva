@@ -906,10 +906,8 @@
                   </div>
                   <div class="custom_accordion_content mb-8">
                       <p class="text-base font-normal text-[#1c1c1c] md:text-lg">{{ product.metafields.custom.tab_rewards | default: "Earn free reward points with every purchase when you have an account on this website. Reward points will be credited after the product has been shipped and can be used towards your next purchase." }}</p>
-                  </div>
+                  </div> 
                 </div>
-              {% assign faq_blocks = section.blocks | where: 'type', 'faq' %}
-              {% if faq_blocks %} 
                 <div class="custom_accordion_faqs border-t border-[#1c1c1c1f] py-5 md:py-7 cursor-pointer">
                   <div class="accordion_title_wrapper flex items-center justify-between">
                     <p class="text-2xl text-[#1c1c1c] font-normal -tracking-[0.24px] md:text-[2.8rem] md:leading-[3.92rem] md:-tracking-[0.28px]">FAQ</p>
@@ -917,21 +915,20 @@
                     <div class="close">{% render 'icon-accordion-minus' %}</div>
                   </div>
                   <div class="custom_accordion_content_wrapper">
-                    {% for block in faq_blocks %} 
+                    {% for block in product.metafields.custom.faqs.value %} 
                       <div class="accordion_content_wrapper_inner{% if forloop.first %} pb-5 md:pb-6 {% elsif forloop.last %} pt-5 md:pt-6 {% else %} py-5 md:py-6 {% endif %}{% unless forloop.first %} border-t border-[#1c1c1c1f]{% endunless %}">
                         <div class="accordion_title_wrapper_inner flex items-start justify-between">
-                          <p class="text-xl text-[#1c1c1c] font-medium md:-tracking-[0.22px] md:text-[2.2rem] md:leading-[3.08rem]">{{ block.settings.question }}</p>
+                          <p class="text-xl text-[#1c1c1c] font-medium md:-tracking-[0.22px] md:text-[2.2rem] md:leading-[3.08rem]">{{ block.question }}</p>
                           <div class="shrink-0 open w-[2.4rem] h-[2.4rem]">{% render 'icon-accordion-plus' %}</div>
                           <div class="shrink-0 close w-[2.4rem] h-[2.4rem]">{% render 'icon-accordion-minus' %}</div>
                         </div>
                         <div class="custom_accordion_content">
-                          {{ block.settings.answer }}
+                          {{ block.answer | metafield_tag }}
                         </div>
                       </div>
                     {% endfor %}
                   </div>
                 </div>
-              {% endif %}
             {%- when 'rating' -%}
               {%- if product.metafields.reviews.rating.value != blank -%}
                 {% liquid
@@ -1462,33 +1459,6 @@
   "blocks": [
     {
       "type": "@app"
-    },
-    {
-      "limit": 1,
-      "name": "Rewards",
-      "type": "rewards",
-      "settings": [
-        {
-          "type": "textarea",
-          "id": "content",
-          "label": "Content"
-        }
-      ]
-    },
-    {
-      "type": "faq",
-      "name": "FAQ",
-      "settings": [
-        {
-          "type": "text",
-          "id": "question",
-          "label": "Question"
-        }, {
-          "type": "richtext",
-          "id": "answer",
-          "label": "Answer"
-        }
-      ]
     },
     {
       "type": "text",
