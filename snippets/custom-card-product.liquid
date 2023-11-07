@@ -40,6 +40,7 @@
                     </g>
                 </svg>
                 <span> {% if product.metafields.stamped.reviews_average != blank %} {{ product.metafields.stamped.reviews_average | round: 1 }} {% else %} 5.0 {% endif %}</span>
+                {% if product.metafields.reviews.rating_count != blank %}<span>({{ product.metafields.reviews.rating_count }})</span>{% endif %}
             </figure>
         </div>
     </div>

@@ -19,7 +19,7 @@
 .benefit-section__title{
     margin:0;
     font-family:var(--font-family-heading);
-    font-size:var(--font-size-xxl);
+    font-size:calc(var(--font-size-xl + 3px));
     font-weight:500;
     line-height:35.2px;
     color: #1c1c1c;
