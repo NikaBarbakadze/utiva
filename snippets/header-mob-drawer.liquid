@@ -19,13 +19,14 @@
 				</span>
 				{% comment %} <a href='{{ toggle_url }}'> {% endcomment %}
 
-				<label class='toggle' for='mobile-menu__toggle'>
+				<label class='toggle' for='header-desk__toggle'>
 					<input
 						type='checkbox'
 						class='toggle__input'
-
-						id='mobile-menu__toggle'
-						checked
+						id='header-desk__toggle'
+						{% if request.host contains "fr." %}
+							checked
+						{% endif %}
 					>
 					<span class='toggle-track'>
 						<span class='toggle-indicator'></span>
