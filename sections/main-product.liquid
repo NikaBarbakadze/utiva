@@ -65,12 +65,15 @@
       <li>
         <a href="/collections/all">Shop all</a>
       </li>
+      {% if product.tags[0] != blank %}
       <div>
         /
       </div>
+
       <li>
         <a href="{{ product.collections[0].url }}">{{ product.tags[0] }}</a>
       </li>
+    {% endif %}
     </ul>
   </div>
 
