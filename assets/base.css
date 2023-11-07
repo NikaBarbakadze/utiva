@@ -3757,3 +3757,7 @@ input, textarea, select, .faux-select {
 .subs_wrapper > div:not(.active) .custom-radio-svg .custom-radio-svg-filled{
   display: none;
 }
+
+.yotpo-step-icons img{
+  margin-inline: auto;
+}
