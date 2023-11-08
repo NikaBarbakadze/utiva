@@ -1,3 +1,5 @@
+{% if product.metafields.custom.section_how_to_use != blank %}
+
 <div class="px-6 pt-10 pb-6 md:flex md:items-start md:justify-between md:gap-x-6 md:py-20 md:px-[9.6rem]">
   <h2 class="text-[3.2rem] lg:text-5xl leading-[3.84rem] -tracking-[0.64px] text-[#1c1c1c] mb-8 md:w-[40rem] md:mt-12">{{ section.settings.title }}</h2>
   <div class="rounded-[1.6rem] overflow-hidden relative md:w-[80rem] md:h-[46rem]">
@@ -14,11 +16,13 @@
         </svg>
       </div>
     </div>
-    <video class="section_video object-cover w-full h-full" poster="{{ section.settings.video.preview_image.src | img_url: '800x800' }}">
-      <source src="{{ section.settings.video.sources[1].url }}">
+    <video class="section_video object-cover w-full h-full" poster="{{ product.metafields.custom.section_how_to_use.value.preview_image.src | img_url: '800x800' }}">
+      <source src="{{ product.metafields.custom.section_how_to_use.value.sources[1].url }}">
     </video>
   </div>
 </div>
+
+{% endif %}
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
@@ -51,10 +55,6 @@
         "id": "title",
         "default": "How to use",
         "label": "Title"
-      }, {
-        "type": "video",
-        "id": "video",
-        "label": "Video"
       }
     ]
   }

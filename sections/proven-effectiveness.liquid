@@ -1,3 +1,5 @@
+{% if product.metafields.custom.proven_effectiveness_main_text != blank %}
+
 <style>
   .custom-proven-effectivness .text_1_wrapper p,
   .custom-proven-effectivness .text_1_wrapper a {
@@ -36,33 +38,25 @@
     <h2 class="text-[32px] leading-[38.4px] -tracking-[0.64px] text-[#1C1C1C] font-medium mb-6 md:w-full md:text-5xl md:!leading-[52.8px] md:-tracking-[0.96px]">{{ section.settings.title }}</h2>
     <div class="md:w-[65rem]">
       <div class="text_1_wrapper mb-4 md:mb-3">
-        {{ section.settings.text_1 }}
+        {{ product.metafields.custom.proven_effectiveness_main_text | metafield_tag }}
       </div>
       <div class="text_2_wrapper">
-        {{ section.settings.text_2 }}
+        {{ product.metafields.custom.proven_effectiveness_sub_text }}
       </div>
     </div>
   </div>
   <div class="block md:hidden">
-    <div class="flex items-end justify-start gap-x-3 -mt-[14px]">
-      <p class="text-[#C33635] text-[17rem] leading-[18.7rem] -tracking-[8.5px] font-normal">{{ section.settings.percentage }}</p>
-      <span class="text-[8.8rem] leading-[9.68rem] -tracking-[1.76px] text-[#C33635] font-normal ml-1 mb-2">%</span>
-    </div>
     <img
-      src="{{ section.settings.image_md | img_url: 'master' }}"
-      class="-mt-[3rem] w-full"
+      src="{{ product.metafields.custom.proven_effectiveness_mobile_graph | img_url: 'master' }}"
+      class="mt-[3rem] w-full"
       alt="graph">
   </div>
   <div class="hidden md:!flex items-center justify-between gap-x-10">
-    <div class="flex items-center justify-between">
-      <div class="flex items-end justify-start gap-x-4 mb-10">
-        <p class="text-[#C33635] text-[30rem] leading-[33rem] -tracking-[15px] font-normal">{{ section.settings.percentage }}</p>
-        <span class="text-[16rem] leading-[17.6rem] -tracking-[3.2px] text-[#C33635] font-normal ml-3 mb-6">%</span>
-      </div>
-    </div>
-    <img src="{{ section.settings.image | img_url: 'master' }}" alt="graph">
+    <img src="{{ product.metafields.custom.proven_effectiveness_desktop_graph | img_url: 'master' }}" alt="graph">
   </div>
 </div>
+
+{% endif %}
 
 {% schema %}
   {
@@ -74,29 +68,6 @@
         "type": "text",
         "id": "title",
         "label": "Title"
-      },
-      {
-        "type": "richtext",
-        "label": "Text 1",
-        "id": "text_1"
-      },
-      {
-        "type": "richtext",
-        "label": "Text 2",
-        "id": "text_2"
-      },
-      {
-        "type": "number",
-        "id": "percentage",
-        "label": "Percentage"
-      }, {
-        "type": "image_picker",
-        "id": "image",
-        "label": "Graph"
-      }, {
-        "type": "image_picker",
-        "id": "image_md",
-        "label": "Graph Mobile"
       }
     ]
   }

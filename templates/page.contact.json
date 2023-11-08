@@ -41,50 +41,6 @@
     },
     "faq": {
       "type": "custom-contact-faq",
-      "blocks": {
-        "55ddcc3a-d818-4a57-8689-d4bf4d114a4d": {
-          "type": "shipping",
-          "settings": {
-            "question": "How long will my order take?",
-            "answer": "All orders are processed every night and our carriers make every effort to deliver within 2-6 business days. We provide tracking information with all orders so you can continue to monitor your shipment. Please contact us directly if you have any special instructions or if your shipment is past due so we can help you out right away."
-          }
-        },
-        "00cbbc6f-38a6-4f48-969e-b5607c1495a5": {
-          "type": "shipping",
-          "settings": {
-            "question": "How long will my order take?",
-            "answer": "All orders are processed every night and our carriers make every effort to deliver within 2-6 business days. We provide tracking information with all orders so you can continue to monitor your shipment. Please contact us directly if you have any special instructions or if your shipment is past due so we can help you out right away."
-          }
-        },
-        "42626bb6-5f18-452c-8f53-42595b6e7e3c": {
-          "type": "shipping",
-          "settings": {
-            "question": "How long will my order take?",
-            "answer": "All orders are processed every night and our carriers make every effort to deliver within 2-6 business days. We provide tracking information with all orders so you can continue to monitor your shipment. Please contact us directly if you have any special instructions or if your shipment is past due so we can help you out right away."
-          }
-        },
-        "770e403f-1338-4e57-987a-20943a3fd0fa": {
-          "type": "sub",
-          "settings": {
-            "question": "How can I update my order, delivery address once the order is submitted?",
-            "answer": "All orders are processed every night and our carriers make every effort to deliver within 2-6 business days. We provide tracking information with all orders so you can continue to monitor your shipment. Please contact us directly if you have any special instructions or if your shipment is past due so we can help you out right away."
-          }
-        },
-        "adb62344-7fe5-413f-817c-206d6067e4a3": {
-          "type": "sub",
-          "settings": {
-            "question": "How can I update my order, delivery address once the order is submitted?",
-            "answer": "All orders are processed every night and our carriers make every effort to deliver within 2-6 business days. We provide tracking information with all orders so you can continue to monitor your shipment. Please contact us directly if you have any special instructions or if your shipment is past due so we can help you out right away."
-          }
-        }
-      },
-      "block_order": [
-        "55ddcc3a-d818-4a57-8689-d4bf4d114a4d",
-        "00cbbc6f-38a6-4f48-969e-b5607c1495a5",
-        "42626bb6-5f18-452c-8f53-42595b6e7e3c",
-        "770e403f-1338-4e57-987a-20943a3fd0fa",
-        "adb62344-7fe5-413f-817c-206d6067e4a3"
-      ],
       "settings": {
         "title": "Get the info you're looking for right now",
         "subtitle": "There is a good chance your question has been answered before, see the topics below for helpful information."

@@ -102,12 +102,7 @@
     "proven-effectiveness": {
       "type": "proven-effectiveness",
       "settings": {
-        "title": "Proven Effectiveness",
-        "text_1": "<p>96% of patients taking Utiva Cranberry PACs for 6+ months had a significant decrease in UTIs.*<br\/>How it works?<\/p>",
-        "text_2": "<p>* Based on a survey of over 500 participants<\/p>",
-        "percentage": 96,
-        "image": "shopify:\/\/shop_images\/graph.svg",
-        "image_md": "shopify:\/\/shop_images\/graph.svg"
+        "title": "Proven Effectiveness"
       }
     },
     "customer-testimonials": {
@@ -200,8 +195,7 @@
     "how-to-use": {
       "type": "how-to-use",
       "settings": {
-        "title": "How to use",
-        "video": "shopify:\/\/files\/videos\/pill_infographic.mp4"
+        "title": "How to use"
       }
     },
     "new-trusted-recommended-doctors": {
