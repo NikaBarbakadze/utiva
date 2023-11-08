@@ -71,6 +71,7 @@
         },
         "acfe1c87-82f7-49e7-90d1-1fda14bf5c5a": {
           "type": "media_items",
+          "disabled": true,
           "settings": {
             "date": "Jan 26, 2023",
             "title": "Up To 40 Percent Of Women Don't Need Antibiotics To Clear Up A UTI",
@@ -103,16 +104,6 @@
             "source": "utiva.com",
             "alt_text": "Image Alt Text"
           }
-        },
-        "df9ca21a-439d-4843-ab8e-450effe269b1": {
-          "type": "press_items",
-          "settings": {
-            "date": "Apr 26, 2023",
-            "title": "Press Title",
-            "url": "#",
-            "source": "utiva.com",
-            "alt_text": "Image Alt Text"
-          }
         }
       },
       "block_order": [
@@ -124,8 +115,7 @@
         "8c67b8f3-ed79-4b7b-80ad-30400d5e69a3",
         "acfe1c87-82f7-49e7-90d1-1fda14bf5c5a",
         "3de2cddf-5505-4d5a-891c-777f5cb7daf8",
-        "e316cb6e-1a2c-4cee-b51a-61c141c7ab35",
-        "df9ca21a-439d-4843-ab8e-450effe269b1"
+        "e316cb6e-1a2c-4cee-b51a-61c141c7ab35"
       ],
       "settings": {
         "title": "In the Press",
