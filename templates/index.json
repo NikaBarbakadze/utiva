@@ -3,9 +3,9 @@
     "main-banner": {
       "type": "main-banner",
       "settings": {
-        "img_desktop": "shopify:\/\/shop_images\/main_img_ebb897f3-5136-4d21-80ae-d17b13a44945.png",
+        "img_desktop": "shopify:\/\/shop_images\/Hero_banner_Web.jpg",
         "img_desktop_blur": "shopify:\/\/shop_images\/main_img_986cc0ee-48e9-444e-a4a9-174cb39d03d8.png",
-        "img_mobile": "shopify:\/\/shop_images\/img_main_mob.png",
+        "img_mobile": "shopify:\/\/shop_images\/Hero_Banner_Mobile.png",
         "img_mobile_blur": "shopify:\/\/shop_images\/Frame_118.png",
         "background_color": "#b9a18f",
         "label_text": "Doctor Recommended #1 brand in UTI prevention*",
