@@ -10,25 +10,43 @@
             "slide_video": "shopify:\/\/files\/videos\/UTI episode gone bad--(720p).mp4"
           }
         },
-        "9fe66a13-aefc-497a-937a-b75a95789f4e": {
-          "type": "slider_item",
-          "settings": {
-            "slide_image": "shopify:\/\/shop_images\/img_0fc686c7-3fea-493c-8efb-16602d2b258f.png",
-            "slide_video": "shopify:\/\/files\/videos\/pill_infographic.mp4"
-          }
-        },
         "9dba51e4-4350-472e-a76d-4d665b6a73e3": {
           "type": "slider_item",
+          "disabled": true,
           "settings": {
             "slide_image": "shopify:\/\/shop_images\/66123b80-1748-43f2-b161-6e75eaf892af-64fa5a3341bfc.webp",
             "slide_video": "shopify:\/\/files\/videos\/video-test.mp4"
+          }
+        },
+        "386fc7e8-eaba-4733-a466-158f4a8985c4": {
+          "type": "slider_item",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/Untitled_design_44.png",
+            "slide_video": "shopify:\/\/files\/videos\/Jane Barkley's UTI Story-Modified.mp4"
+          }
+        },
+        "9fe66a13-aefc-497a-937a-b75a95789f4e": {
+          "type": "slider_item",
+          "disabled": true,
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/img_0fc686c7-3fea-493c-8efb-16602d2b258f.png",
+            "slide_video": "shopify:\/\/files\/videos\/Jane Barkley's UTI Story-Modified.mp4"
+          }
+        },
+        "6dad3236-a780-44b0-b0e9-da2d7c391a8b": {
+          "type": "slider_item",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/Kathy_UTI_Story.png",
+            "slide_video": "shopify:\/\/files\/videos\/Kathy's struggle with a Silent UTI--(720p).mp4"
           }
         }
       },
       "block_order": [
         "ab95943c-adcc-4a44-b1a5-2b56242abb0d",
+        "9dba51e4-4350-472e-a76d-4d665b6a73e3",
+        "386fc7e8-eaba-4733-a466-158f4a8985c4",
         "9fe66a13-aefc-497a-937a-b75a95789f4e",
-        "9dba51e4-4350-472e-a76d-4d665b6a73e3"
+        "6dad3236-a780-44b0-b0e9-da2d7c391a8b"
       ],
       "settings": {
         "background_color": "#c33635",
