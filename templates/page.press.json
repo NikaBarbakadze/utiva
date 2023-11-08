@@ -82,6 +82,7 @@
         },
         "3de2cddf-5505-4d5a-891c-777f5cb7daf8": {
           "type": "press_items",
+          "disabled": true,
           "settings": {
             "date": "Apr 26, 2023",
             "title": "Press Title",
@@ -93,10 +94,12 @@
         },
         "e316cb6e-1a2c-4cee-b51a-61c141c7ab35": {
           "type": "press_items",
+          "disabled": true,
           "settings": {
             "date": "Apr 26, 2023",
             "title": "Press Title",
             "url": "#",
+            "image": "shopify:\/\/shop_images\/Logo_CUA_1.png",
             "source": "utiva.com",
             "alt_text": "Image Alt Text"
           }
