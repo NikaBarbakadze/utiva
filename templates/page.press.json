@@ -58,17 +58,6 @@
             "alt_text": "Utiva ranked within Canada's top growing businesses"
           }
         },
-        "acfe1c87-82f7-49e7-90d1-1fda14bf5c5a": {
-          "type": "media_items",
-          "settings": {
-            "date": "Jan 26, 2023",
-            "title": "Up To 40 Percent Of Women Don't Need Antibiotics To Clear Up A UTI",
-            "url": "Up To 40 Percent Of Women Don't Need Antibiotics To Clear Up A UTI (aol.com)",
-            "image": "shopify:\/\/shop_images\/Logo-04_aa22e644-f32e-4ce5-af27-e8935620682c.png",
-            "source": "utiva.com",
-            "alt_text": "Up To 40 Percent Of Women Don't Need Antibiotics To Clear Up A UTI (aol.com)"
-          }
-        },
         "8c67b8f3-ed79-4b7b-80ad-30400d5e69a3": {
           "type": "press_items",
           "settings": {
@@ -78,6 +67,17 @@
             "image": "shopify:\/\/shop_images\/Logo_abc_1.png",
             "source": "utiva.com",
             "alt_text": "Tampa Bay Morning Blend March Refresh with Grace Gold"
+          }
+        },
+        "acfe1c87-82f7-49e7-90d1-1fda14bf5c5a": {
+          "type": "media_items",
+          "settings": {
+            "date": "Jan 26, 2023",
+            "title": "Up To 40 Percent Of Women Don't Need Antibiotics To Clear Up A UTI",
+            "url": "Up To 40 Percent Of Women Don't Need Antibiotics To Clear Up A UTI (aol.com)",
+            "image": "shopify:\/\/shop_images\/Logo-04_aa22e644-f32e-4ce5-af27-e8935620682c.png",
+            "source": "utiva.com",
+            "alt_text": "Up To 40 Percent Of Women Don't Need Antibiotics To Clear Up A UTI (aol.com)"
           }
         },
         "3de2cddf-5505-4d5a-891c-777f5cb7daf8": {
@@ -117,8 +117,8 @@
         "105b0b99-a618-4a93-a194-114ed162d217",
         "ab4d3073-cd53-4f21-aeaf-eb791d563dc3",
         "c2d31627-b280-4d77-93b5-a9d42316e196",
-        "acfe1c87-82f7-49e7-90d1-1fda14bf5c5a",
         "8c67b8f3-ed79-4b7b-80ad-30400d5e69a3",
+        "acfe1c87-82f7-49e7-90d1-1fda14bf5c5a",
         "3de2cddf-5505-4d5a-891c-777f5cb7daf8",
         "e316cb6e-1a2c-4cee-b51a-61c141c7ab35",
         "df9ca21a-439d-4843-ab8e-450effe269b1"
