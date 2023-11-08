@@ -521,15 +521,15 @@ $thumbBottomPositionSmall: $thumbButtonHeight + ($thumbGutter / 2);
 
 // Font-face header styles
 
-$type_header_family: {{ settings.type_header_font_family.family | default: "Poppins" }};
+$type_header_family: {{ settings.type_header_font_family.family | default: "poppins_n7" }};
 
-$type_header_fallback: {{ settings.type_header_font_family.fallback_families | default: "" }};
+$type_header_fallback: {{ settings.type_header_font_family.fallback_families | default: "poppins_n7" }};
 
 $type_header_stack: #{"'" + $type_header_family + "', " + $type_header_fallback};
 
-$type_header_weight: {{ settings.type_header_font_family.weight | default: "" }};
+$type_header_weight: {{ settings.type_header_font_family.weight | default: "400" }};
 
-$type_header_style: {{ settings.type_header_font_family.style | default: "" }};
+$type_header_style: {{ settings.type_header_font_family.style | default: "normal" }};
 
 $type_header_capitalize: {{ settings.type_header_capitalize | default: false }};
 
