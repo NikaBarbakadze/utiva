@@ -33,10 +33,9 @@
         },
         "9dba51e4-4350-472e-a76d-4d665b6a73e3": {
           "type": "slider_item",
-          "disabled": true,
           "settings": {
-            "slide_image": "shopify:\/\/shop_images\/66123b80-1748-43f2-b161-6e75eaf892af-64fa5a3341bfc.webp",
-            "slide_video": "shopify:\/\/files\/videos\/video-test.mp4"
+            "slide_image": "shopify:\/\/shop_images\/Testimonial_Rachel.jpg",
+            "slide_video": "shopify:\/\/files\/videos\/Rachel Walker for Customer Ambassador Program_2_1.mp4"
           }
         },
         "9fe66a13-aefc-497a-937a-b75a95789f4e": {
