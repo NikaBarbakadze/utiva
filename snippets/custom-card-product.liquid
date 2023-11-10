@@ -19,12 +19,12 @@
         </div>
         <div class="flex justify-between mt-2 lg:mt-5"> <!-- This element will move to the bottom of the remaining space -->
             <div class="flex gap-2 items-center">
-                <span class="text-[#1C1C1C] text-base block">{{ product.price | money }}</span>
-                {% if product.compare_at_price > product.price %}
-                    <span class="text-[#C33635] text-base block">{{ product.compare_at_price | money }}</span>
+                <span class="text-[#1C1C1C] text-base block">{{ product.selected_or_first_available_variant.price | money }}</span>
+                {% if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %}
+                    <span class="text-[#C33635] text-base block">{{ product.selected_or_first_available_variant.compare_at_price | money }}</span>
                     
-                    {% assign discount_amount = product.compare_at_price | minus: product.price %}
-                    {% assign discount_percentage = discount_amount | times: 100 | divided_by: product.compare_at_price %}
+                    {% assign discount_amount = product.selected_or_first_available_variant.compare_at_price | minus: product.price %}
+                    {% assign discount_percentage = discount_amount | times: 100 | divided_by: product.selected_or_first_available_variant.compare_at_price %}
                     
                     <div class="bg-[#C33635] px-2 py-[3px] text-white rounded-full text-xs">{{ discount_percentage | round: 0 }}% off</div>
                 {% endif %}
