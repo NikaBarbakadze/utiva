@@ -161,7 +161,7 @@
         "title": "Not sure where to start?",
         "description": "<p>Take our UTI quiz to find the right solution<\/p>",
         "btn_text": "Solution finder",
-        "btn_url": ""
+        "btn_url": "shopify:\/\/pages\/quiz"
       }
     },
     "money-back-garantee": {
