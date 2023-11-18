@@ -92,13 +92,35 @@
   }
 </style>
 
+<template id="success">
+  <div class="px-4 flex flex-col gap-y-10 h-[44.5rem] items-center justify-center rounded-[2rem] bg-[#F2F2F0]">
+    <div class="flex flex-col gap-y-6 items-center">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="41"
+        height="41"
+        viewBox="0 0 41 41"
+        fill="none">
+        <path d="M20.5 25.774L14.6187 33.3813L9.44064 29.5457L15.3219 22.322L6.5 19.5092L8.35388 13.564L17.4315 16.6325L17.0479 7.61877H23.9521L23.5685 16.6325L32.6461 13.564L34.5 19.5092L25.6781 22.322L31.5594 29.5457L26.3813 33.3813L20.5 25.774Z" fill="#C33635" />
+      </svg>
+      <div class="flex flex-col gap-y-3">
+        <h3 class="text-center text-[2.8rem] leading-[4rem] -tracking-[0.028rem] text-[#1c1c1c]">Thanks for contacting us!</h3>
+        <p class="text-base font-normal leading-[2.24rem] text-center text-[#1C1C1CCC]">We will get back to you
+          <span class="font-medium text-[#1c1c1c]">within 1-2 business days.</span>
+        </p>
+      </div>
+    </div>
+    <a href="/pages/contact-us" class="py-4 px-12 bg-[#C33635] rounded-[8rem] text-white text-base font-medium leading-[2.24rem]">Send another message</a>
+  </div>
+</template>
+
 <div class="pt-2.5 pb-10 px-2 md:px-6 md:pt-[13.2rem] md:pb-[10rem]">
   <div class="page-width rounded-[2rem] bg-[#C33635] flex justify-center p-5 pt-8 flex-col gap-y-8 md:flex-row md:gap-x-24 md:pl-14 md:p-12">
     <div class="flex flex-col gap-y-3 w-full md:gap-y-5">
       <h2 class="text-white text-[3.2rem] -tracking-[.064rem] leading-[3.84rem] font-medium md:text-5xl md:leading-[5.28rem] md:-tracking-[.096rem] md:font-medium">{{ section.settings.title }}</h2>
       <p class="text-[#ffffffcc] text-base leading-[2.24rem] font-normal md:text-xl md:leading-[2.8rem]">{{ section.settings.subtitle }}</p>
     </div>
-    <div class="p-5 rounded-[1.6rem] bg-white w-full md:p-[3rem]">
+    <div class="p-5 rounded-[1.6rem] bg-white w-full md:p-[3rem] contact-form-wrapper">
       {% form 'contact' %}
         {{ form.errors | default_errors }}
 
@@ -141,6 +163,12 @@
             value="Send"
             disabled />
         </div>
+
+        {% if form.posted_successfully? %}
+          <script>
+            document.querySelector(".contact-form-wrapper").innerHTML = document.querySelector("template#success").innerHTML;
+          </script>
+        {% endif %}
       {% endform %}
     </div>
   </div>
