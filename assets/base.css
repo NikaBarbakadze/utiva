@@ -3918,3 +3918,7 @@ input, textarea, select, .faux-select {
     margin-top: 20px
   }
 }
+
+.page-page .rte > * {
+  margin-bottom: 20px;
+}
