@@ -62,10 +62,10 @@
       "width": 1024,
       "height": 1024
     }
-    {% if product.metafields.stamped.reviews_count and product.metafields.stamped.reviews_count != "0" %},"aggregateRating": {
+    {% if product.metafields.yotpo.reviews_count and product.metafields.yotpo.reviews_count != "0" %},"aggregateRating": {
 "@type": "AggregateRating",
-"ratingValue": {{ product.metafields.stamped.reviews_average | round:2 }},
-"reviewCount": {{ product.metafields.stamped.reviews_count }},
+"ratingValue": {{ product.metafields.yotpo.reviews_average | round:2 }},
+"reviewCount": {{ product.metafields.yotpo.reviews_count }},
 "bestRating": 5,
 "worstRating": 1
 }
