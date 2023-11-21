@@ -466,15 +466,15 @@
       "success": "We've sent you an email with a link to update your password."
     },
     "register": {
-      "title": "Create account",
+      "title": "Don't Have An Account?",
       "first_name": "First name",
       "last_name": "Last name",
       "email": "Email",
       "password": "Password",
-      "submit": "Create"
+      "submit": "Create account"
     },
     "reset_password": {
-      "title": "Reset account password",
+      "title": "Reset Password",
       "subtext": "Enter a new password",
       "password": "Password",
       "password_confirm": "Confirm password",
