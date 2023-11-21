@@ -3,85 +3,6 @@
     "main": {
       "type": "custom-press-listing",
       "blocks": {
-        "47283d27-3b4e-4244-99bd-0007442772fe": {
-          "type": "media_items",
-          "settings": {
-            "date": "Jan 26, 2023",
-            "title": "How Long Does A UTI Last And Can It Go Away On Its Own?",
-            "url": "https:\/\/www.womenshealthmag.com\/health\/a42590887\/how-long-does-uti-last\/",
-            "image": "shopify:\/\/shop_images\/Logo-04_aa22e644-f32e-4ce5-af27-e8935620682c.png",
-            "source": "utiva.com",
-            "alt_text": "Image Alt Text"
-          }
-        },
-        "17ba72c3-62e0-4084-bcc8-0830c7ca9e76": {
-          "type": "media_items",
-          "settings": {
-            "date": "Jun 29, 2021",
-            "title": "Here’s how to know if you have a UTI—and ways to treat it",
-            "url": "https:\/\/www.cityline.tv\/video\/heres-how-to-know-if-you-have-a-uti-and-ways-to-treat-it\/",
-            "image": "shopify:\/\/shop_images\/Logo-06.png",
-            "source": "utiva.com",
-            "alt_text": "Cityline Here’s how to know if you have a UTI—and ways to treat it"
-          }
-        },
-        "c2d31627-b280-4d77-93b5-a9d42316e196": {
-          "type": "press_items",
-          "settings": {
-            "date": "Apr 26, 2023",
-            "title": "Ranking Canada’s Top Growing Companies Of 2023",
-            "url": "https:\/\/www.theglobeandmail.com\/business\/rob-magazine\/top-growing-companies\/article-canadas-top-growing-companies-2023\/",
-            "image": "shopify:\/\/shop_images\/Logo_The_Globe_and_Mail_-_2.png",
-            "source": "utiva.com",
-            "alt_text": "Utiva ranked within Canada's top growing businesses"
-          }
-        },
-        "8c67b8f3-ed79-4b7b-80ad-30400d5e69a3": {
-          "type": "press_items",
-          "settings": {
-            "date": "Apr 23, 2021",
-            "title": "Tampa Bay Morning Blend March Refresh with Grace Gold",
-            "url": "https:\/\/www.youtube.com\/watch?v=9z3cqGBNlVU&t=1s",
-            "image": "shopify:\/\/shop_images\/Logo_abc_1.png",
-            "source": "utiva.com",
-            "alt_text": "Tampa Bay Morning Blend March Refresh with Grace Gold"
-          }
-        },
-        "acfe1c87-82f7-49e7-90d1-1fda14bf5c5a": {
-          "type": "media_items",
-          "disabled": true,
-          "settings": {
-            "date": "Jan 26, 2023",
-            "title": "Up To 40 Percent Of Women Don't Need Antibiotics To Clear Up A UTI",
-            "url": "Up To 40 Percent Of Women Don't Need Antibiotics To Clear Up A UTI (aol.com)",
-            "image": "shopify:\/\/shop_images\/Logo-04_aa22e644-f32e-4ce5-af27-e8935620682c.png",
-            "source": "utiva.com",
-            "alt_text": "Up To 40 Percent Of Women Don't Need Antibiotics To Clear Up A UTI (aol.com)"
-          }
-        },
-        "3de2cddf-5505-4d5a-891c-777f5cb7daf8": {
-          "type": "press_items",
-          "settings": {
-            "date": "Mar 11, 2021",
-            "title": "Canada-based Utiva Launches a New Line of Urinary Tract Health and Wellness Products",
-            "url": "Canada-based Utiva Launches a New Line of Urinary Tract Health and Wellness Products (femtechinsider.com)",
-            "image": "shopify:\/\/shop_images\/Logo_Femtech.png",
-            "source": "utiva.com",
-            "alt_text": "Canada-based Utiva Launches a New Line of Urinary Tract Health and Wellness Products"
-          }
-        },
-        "e316cb6e-1a2c-4cee-b51a-61c141c7ab35": {
-          "type": "press_items",
-          "disabled": true,
-          "settings": {
-            "date": "Apr 26, 2023",
-            "title": "Press Title",
-            "url": "#",
-            "image": "shopify:\/\/shop_images\/Logo_CUA_1.png",
-            "source": "utiva.com",
-            "alt_text": "Image Alt Text"
-          }
-        },
         "01d93f58-05ba-4f51-bddb-eeda6c756efc": {
           "type": "media_items",
           "settings": {
@@ -114,19 +35,72 @@
             "source": "finance.yahoo.com",
             "alt_text": "Yahoo Finance Logo"
           }
+        },
+        "3d6e1a56-0cf9-465c-ba7f-f419e05277bf": {
+          "type": "media_items",
+          "settings": {
+            "date": "Apr 26, 2023",
+            "title": "Ranking Canada’s Top Growing Companies Of 2023",
+            "url": "https:\/\/www.theglobeandmail.com\/business\/rob-magazine\/top-growing-companies\/article-canadas-top-growing-companies-2023\/",
+            "image": "shopify:\/\/shop_images\/Logo_The_Globe_and_Mail_-_2.png",
+            "source": "www.theglobeandmail.com",
+            "alt_text": "Utiva ranked within Canada's top growing businesses"
+          }
+        },
+        "47283d27-3b4e-4244-99bd-0007442772fe": {
+          "type": "media_items",
+          "settings": {
+            "date": "Jan 26, 2023",
+            "title": "How Long Does A UTI Last And Can It Go Away On Its Own?",
+            "url": "https:\/\/www.womenshealthmag.com\/health\/a42590887\/how-long-does-uti-last\/",
+            "image": "shopify:\/\/shop_images\/Logo-04_aa22e644-f32e-4ce5-af27-e8935620682c.png",
+            "source": "www.womenshealthmag.com",
+            "alt_text": "Women's Health Logo"
+          }
+        },
+        "17ba72c3-62e0-4084-bcc8-0830c7ca9e76": {
+          "type": "media_items",
+          "settings": {
+            "date": "Jun 29, 2021",
+            "title": "Here’s how to know if you have a UTI—and ways to treat it",
+            "url": "https:\/\/www.cityline.tv\/video\/heres-how-to-know-if-you-have-a-uti-and-ways-to-treat-it\/",
+            "image": "shopify:\/\/shop_images\/Logo-06.png",
+            "source": "www.cityline.tv",
+            "alt_text": "Cityline Logo"
+          }
+        },
+        "0d7a2b3c-2519-4950-8575-f69926fbe1b8": {
+          "type": "media_items",
+          "settings": {
+            "date": "Apr 23, 2021",
+            "title": "Tampa Bay Morning Blend March Refresh with Grace Gold",
+            "url": "https:\/\/www.youtube.com\/watch?v=9z3cqGBNlVU&t=1s",
+            "image": "shopify:\/\/shop_images\/Logo_abc_1.png",
+            "source": "abcnews.go.com",
+            "alt_text": "ABC News Logo"
+          }
+        },
+        "4ec6d413-8010-4f17-956c-7646210f021f": {
+          "type": "media_items",
+          "settings": {
+            "date": "Mar 11, 2021",
+            "title": "Canada-based Utiva Launches a New Line of Urinary Tract Health and Wellness Products",
+            "url": "https:\/\/femtechinsider.com\/utiva-uti-products\/",
+            "image": "shopify:\/\/shop_images\/Logo_Femtech.png",
+            "source": "femtechinsider.com",
+            "alt_text": "Femtech Insider logo"
+          }
         }
       },
       "block_order": [
-        "47283d27-3b4e-4244-99bd-0007442772fe",
-        "17ba72c3-62e0-4084-bcc8-0830c7ca9e76",
-        "c2d31627-b280-4d77-93b5-a9d42316e196",
-        "8c67b8f3-ed79-4b7b-80ad-30400d5e69a3",
-        "acfe1c87-82f7-49e7-90d1-1fda14bf5c5a",
-        "3de2cddf-5505-4d5a-891c-777f5cb7daf8",
-        "e316cb6e-1a2c-4cee-b51a-61c141c7ab35",
         "01d93f58-05ba-4f51-bddb-eeda6c756efc",
         "83b84670-2df5-49c6-b954-70e7357ac790",
-        "2c214e27-7b3a-4504-a662-715e457d6a92"
+        "2c214e27-7b3a-4504-a662-715e457d6a92",
+        "3d6e1a56-0cf9-465c-ba7f-f419e05277bf",
+        "47283d27-3b4e-4244-99bd-0007442772fe",
+        "17ba72c3-62e0-4084-bcc8-0830c7ca9e76",
+        "0d7a2b3c-2519-4950-8575-f69926fbe1b8",
+        "4ec6d413-8010-4f17-956c-7646210f021f"
       ],
       "settings": {
         "title": "In the Press",
