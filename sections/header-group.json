@@ -43,7 +43,7 @@
       ],
       "settings": {
         "header_logo": "shopify:\/\/shop_images\/logo_white.png",
-        "header_logo_desk": "shopify:\/\/shop_images\/logo_color.png",
+        "header_logo_desk": "shopify:\/\/shop_images\/Utiva_Logo.svg",
         "bg_color": "#b7a08e",
         "bg_transparent": false,
         "toggle": true,
