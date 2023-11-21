@@ -45,13 +45,21 @@
         "bc1dacc4-a198-4a5d-9c96-1fe6250c8bb1": {
           "type": "shipping",
           "settings": {
+            "question": "Test question",
+            "answer": "Test answer"
+          }
+        },
+        "ff9e1d70-5f85-4766-9bb9-0813ba364a35": {
+          "type": "shipping",
+          "settings": {
             "question": "",
             "answer": ""
           }
         }
       },
       "block_order": [
-        "bc1dacc4-a198-4a5d-9c96-1fe6250c8bb1"
+        "bc1dacc4-a198-4a5d-9c96-1fe6250c8bb1",
+        "ff9e1d70-5f85-4766-9bb9-0813ba364a35"
       ],
       "settings": {
         "title": "Get the info you're looking for right now",
