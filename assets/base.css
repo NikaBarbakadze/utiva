@@ -3762,7 +3762,7 @@ input, textarea, select, .faux-select {
   margin-inline: auto;
 }
 
-.custom-main-article h1{
+.custom-main-article .article-template__content h1{
   color: #1C1C1C;
   font-size: 48px;
   font-style: normal;
@@ -3772,7 +3772,7 @@ input, textarea, select, .faux-select {
   margin-bottom: 16px;
 }
 
-.custom-main-article h2{
+.custom-main-article .article-template__content h2{
   color: #1C1C1C;
   font-size: 36px;
   font-style: normal;
@@ -3782,7 +3782,7 @@ input, textarea, select, .faux-select {
   margin-bottom: 16px;
 }
 
-.custom-main-article h3{
+.custom-main-article .article-template__content h3{
   color: #1C1C1C;
   font-size: 28px;
   font-style: normal;
@@ -3792,7 +3792,7 @@ input, textarea, select, .faux-select {
   margin-bottom: 16px;
 }
 
-.custom-main-article h4{
+.custom-main-article .article-template__content h4{
   color: #1C1C1C;
   font-size: 24px;
   font-style: normal;
@@ -3802,7 +3802,7 @@ input, textarea, select, .faux-select {
   margin-bottom: 16px;
 }
 
-.custom-main-article h5{
+.custom-main-article .article-template__content h5{
   color: #1C1C1C;
   font-size: 20px;
   font-style: normal;
@@ -3811,7 +3811,7 @@ input, textarea, select, .faux-select {
   margin-bottom: 16px;
 }
 
-.custom-main-article h6{
+.custom-main-article .article-template__content h6{
   color: #1C1C1C;
   font-size: 18px;
   font-style: normal;
@@ -3820,7 +3820,7 @@ input, textarea, select, .faux-select {
   margin-bottom: 16px;
 }
 
-.custom-main-article p{
+.custom-main-article .article-template__content p{
   color: #1C1C1C;
   font-size: 18px;
   font-style: normal;
@@ -3828,7 +3828,7 @@ input, textarea, select, .faux-select {
   line-height: 150%; /* 27px */
 }
 
-.custom-main-article a{
+.custom-main-article .article-template__content a{
   color: #C33635;
   /* Desktop/Body/M-regular-150 */
   font-size: 18px;
@@ -3842,8 +3842,8 @@ input, textarea, select, .faux-select {
 }
 
 @media screen and (max-width: 992px) {
-  .custom-main-article h1{
-    color: #1C1C1C;
+  .custom-main-article .article-template__content h1{
+    color: #1C1C1C; 
     font-size: 28px;
     font-style: normal;
     font-weight: 500;
@@ -3852,7 +3852,7 @@ input, textarea, select, .faux-select {
     margin-bottom: 8px;
   }
   
-  .custom-main-article h2{
+  .custom-main-article .article-template__content h2{
     color: #1C1C1C;
     font-size: 24px;
     font-style: normal;
@@ -3862,7 +3862,7 @@ input, textarea, select, .faux-select {
     margin-bottom: 8px;
   }
   
-  .custom-main-article h3{
+  .custom-main-article .article-template__content h3{
     color: #1C1C1C;
     font-size: 24px;
     font-style: normal;
@@ -3871,7 +3871,7 @@ input, textarea, select, .faux-select {
     margin-bottom: 8px;
   }
   
-  .custom-main-article h4{
+  .custom-main-article .article-template__content h4{
     color: #1C1C1C;
     font-size: 20px;
     font-style: normal;
@@ -3880,7 +3880,7 @@ input, textarea, select, .faux-select {
     margin-bottom: 8px;
   }
   
-  .custom-main-article h5{
+  .custom-main-article .article-template__content h5{
     color: #1C1C1C;
     font-size: 18px;
     font-style: normal;
@@ -3889,7 +3889,7 @@ input, textarea, select, .faux-select {
     margin-bottom: 8px;
   }
   
-  .custom-main-article h6{
+  .custom-main-article .article-template__content h6{
     color: #1C1C1C;
     font-size: 16px;
     font-style: normal;
@@ -3898,7 +3898,7 @@ input, textarea, select, .faux-select {
     margin-bottom: 8px;
   }
   
-  .custom-main-article p{
+  .custom-main-article .article-template__content p{
     color: #1C1C1C;
     font-size: 16px;
     font-style: normal;
@@ -3906,7 +3906,7 @@ input, textarea, select, .faux-select {
     line-height: 140%; /* 22.4px */
   }
   
-  .custom-main-article a{
+  .custom-main-article .article-template__content a{
     color: #C33635;
     font-size: 16px;
     font-style: normal;

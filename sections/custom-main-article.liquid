@@ -30,7 +30,7 @@
     <div class="article-header lg:text-center">
         <div class="flex gap-2.5 items-center my-2 text-[#777777] text-sm lg:text-base font-normal lg:justify-center">
             {% if article.tags.size > 0 %}
-            <div class="gap-2.5 hidden lg:flex">
+            <div class="gap-2.5 hidden lg:!flex">
                 {% for tag in article.tags %}
                     <span class="text-[#494948] font-medium capitalize">
                         {{ tag }}
@@ -76,8 +76,8 @@
             </span>
         </div>
         <h1 class="text-base lg:text-5xl text-[#1C1C1C] mt-3 lg:mt-8">{{ article.title }}</h1>
-        <div class="mt-5 lg:mt-12 lg:w-[75%] mx-auto">
-            <img class="rounded-[24px]" src="{{ article.image | img_url: "master" }}" alt="">
+        <div class="mt-5 lg:mt-12 mx-auto">
+            <img class="rounded-[24px] lg:max-h-[600px] w-full object-cover" src="{{ article.image | img_url: "master" }}" alt="">
         </div>
     </div>
     <div class="article-body mt-6 lg:mt-16 flex flex-col-reverse lg:flex-row">
@@ -165,8 +165,7 @@
 <script defer>
     document.addEventListener('DOMContentLoaded', function () {
         // Step 1: Generate the table of content
-        const titles = Array.from(document.querySelectorAll(".article-template__content p>b"))
-        .filter(b => b.parentElement.childElementCount <= 1 && b.textContent.trim() !== '');
+        const titles = document.querySelectorAll(".article-template__content h3");
       
         const tableContent = document.querySelector('.custom-table-content');
         const articleContent = document.querySelector('.article-template__content');
