@@ -60,15 +60,49 @@
 				{% endif %}
 			</div>
 
+			<script>
+				const options = {
+					method: 'GET',
+					headers: { accept: 'application/json', 'Content-Type': 'application/json' }
+				};
+				
+				fetch('https://api.yotpo.com/v1/apps/3NhG13UQDuUl6r31Ov5IEKsACm6Md9TxF4TTruxD/bottom_lines?count=100', options)
+				.then(response => response.json())
+					.then(response => {
+						// Assuming the response contains a property 'reviews_label'
+						// Update this according to the actual structure of your API response
+						const reviews = response.response.bottomlines;
+
+						let reviewScore = 0;
+						let reviewCount = 0;
+
+						reviews.forEach((item)=>{
+							reviewScore += item.product_score;
+							reviewCount += item.total_reviews;
+						})
+
+						reviewScore = (reviewScore / reviews.length).toFixed(1);
+
+						console.log(reviewScore, reviewCount)
+				
+						// Select the element and update its content
+						const reviewsLabelElement = document.getElementById('reviewsLabel');
+						reviewsLabelElement.innerHTML = `
+						{% render 'icon', icon: 'star-20' %}
+						${reviewScore} out of 5 stars from ${reviewCount} reviews
+						`;
+					})
+					.catch(err => console.error(err));				
+			</script>
+
 			<div class='customer-feedback__desc-wrap'>
 				<div class='customer-feedback__desc-wrap--label'>
-					{% if reviews_label != blank %}
-						<div class='element-tag label-new'>
-							{% render 'icon', icon: 'star-20' %}
-							{{ reviews_label }}
-						</div>
-					{% endif %}
-				</div>
+					<div class='element-tag label-new' id="reviewsLabel">
+						{% render 'icon', icon: 'star-20' %}
+						{{ reviews_label }}
+					</div>
+			</div>
+			
 
 				{% if desc != blank %}
 					<span class='customer-feedback__desc-wrap--desc'>
