@@ -25,14 +25,14 @@
         "22fde590-a43f-4f09-b089-51c27da06093": {
           "type": "navigation_link",
           "settings": {
-            "title": "Bladder",
+            "title": "Overactive Bladder",
             "url": "shopify:\/\/collections\/collections-page-bladder-health"
           }
         },
         "6ff33767-4138-4237-b8c9-c53788b89e30": {
           "type": "navigation_link",
           "settings": {
-            "title": "Gut",
+            "title": "Gut Health",
             "url": "shopify:\/\/collections\/collections-page-gut-health"
           }
         },
