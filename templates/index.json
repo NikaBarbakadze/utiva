@@ -378,19 +378,10 @@
           "type": "text",
           "settings": {
             "doctors_image": "shopify:\/\/shop_images\/dr._giudice.png",
-            "title": "",
+            "title": "I recommend Utiva Bladder Health to help improve OAB symptoms",
             "description": "<p>Many of my patients make lifestyle changes due to the challenges of overactive bladder symptoms when there are frequent urges to use the washroom. We offer medications to help control symptoms but nothing is 100% effective. When patients ask if there is anything natural that can help, I recommend Utiva Bladder Health to help improve the symptoms of OAB and have seen promising results.<\/p>",
             "doctors_name": "Dr. Thomas P. Giudice, MD",
             "position": "Urogynecologist"
-          }
-        },
-        "085a3f24-ee7f-461b-b283-b8f89b5ba719": {
-          "type": "text",
-          "settings": {
-            "title": "",
-            "description": "",
-            "doctors_name": "",
-            "position": ""
           }
         }
       },
@@ -400,8 +391,7 @@
         "21fb4f97-5504-4a87-a0aa-12fb6b2fe3dc",
         "c647f522-e133-46a8-83ca-7cecce112a9c",
         "1491bd30-5d14-42ae-9b77-f0f3bbebf57d",
-        "539a67cd-58c5-43de-a711-0afe803b49fe",
-        "085a3f24-ee7f-461b-b283-b8f89b5ba719"
+        "539a67cd-58c5-43de-a711-0afe803b49fe"
       ],
       "settings": {
         "paddingTop_mobile": 0,
