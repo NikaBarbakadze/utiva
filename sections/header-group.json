@@ -5,7 +5,7 @@
     "announcement-bar": {
       "type": "custom-announcement-bar",
       "settings": {
-        "description": "<p>Free shipping on all orders over 50$<\/p>",
+        "description": "<p>Free shipping on all orders over $50<\/p>",
         "bg_color": "#c33635",
         "text_color": "#ffffff",
         "text_alignment": "center"
