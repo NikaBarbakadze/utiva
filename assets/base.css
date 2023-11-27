@@ -3927,3 +3927,14 @@ input, textarea, select, .faux-select {
   color: #C33635;
   font-weight: 500;
 }
+
+.account-page .custom-link-button{
+  padding: 0 !important;
+  color: #1c1c1c;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 33.6px;
+  letter-spacing: -0.24px;
+  margin-top: 24px;
+  display: block;
+}
