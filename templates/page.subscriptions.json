@@ -21,7 +21,7 @@
           "type": "list_items",
           "settings": {
             "item_icon": "<svg width=\"28\" height=\"28\" viewbox=\"0 0 28 28\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\"><path d=\"M11.8611 5.44427H16.1389C16.7292 5.44427 17.2083 5.92339 17.2083 6.51372V17.2082H3.30554M6.51388 21.9308H4.37499C3.78465 21.9308 3.30554 21.4517 3.30554 20.8614V15.0693M17.2083 8.65261H21.8315C22.2689 8.65261 22.6625 8.9189 22.824 9.32529L24.5415 13.618C24.642 13.8704 24.6944 14.1399 24.6944 14.4116V20.7726C24.6944 21.363 24.2153 21.8421 23.625 21.8421H21.6668M18.2777 21.9352H9.90393M24.6944 16.1387H20.4167V11.8609H23.8389M3.30573 5.44432H8.65295M3.30554 8.65261H6.51388M4.37499 11.8609H3.30554M21.1693 20.7331C21.8313 21.3951 21.8313 22.4677 21.1693 23.1286C20.5073 23.7906 19.4346 23.7906 18.7737 23.1286C18.1117 22.4667 18.1117 21.394 18.7737 20.7331C19.4357 20.0711 20.5084 20.0711 21.1693 20.7331ZM9.40552 20.7331C10.0675 21.3951 10.0675 22.4677 9.40552 23.1286C8.74353 23.7906 7.67088 23.7906 7.00996 23.1286C6.34905 22.4667 6.34798 21.394 7.00996 20.7331C7.67195 20.0722 8.74353 20.0711 9.40552 20.7331Z\" stroke=\"white\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg>",
-            "item_text": "Free shipping on orders over $25\/$50"
+            "item_text": "Free shipping on orders over $50"
           }
         }
       },
@@ -58,7 +58,7 @@
           "settings": {
             "icon": "shopify:\/\/shop_images\/Frame_137.svg",
             "title": "A plan that is flexible",
-            "content": "Skip, pause, cancel, modify - it's up to you. There is no commitment or strings attached. Edit directly in your account, you can even text us! XXX-XXX-XXXX"
+            "content": "Skip, pause, cancel, modify - it's up to you. There is no commitment or strings attached and you can edit directly in your account."
           }
         },
         "c397a9a0-b9ce-4ee7-a651-4ef56c1fa87c": {
