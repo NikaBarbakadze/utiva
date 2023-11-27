@@ -282,7 +282,7 @@
     console.log("hello")
     const customPlayButton = (videosrc) => {
         const instance = basicLightbox.create(`
-            <video controls>
+            <video controls autoplay playsinline="playsinline">
                 <source src="${videosrc}" type="video/mp4">
             </video>
         `).show();
