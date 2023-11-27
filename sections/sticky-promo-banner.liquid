@@ -1,7 +1,17 @@
 {{ 'sticky-promo-banner.css' | asset_url | stylesheet_tag }}
+
+<script src="
+	https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js
+	" defer></script>
+	<link href="
+	https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css
+	" rel="stylesheet">
+	
+
 {% if section.settings.text != blank %}
 	<div
-		class='sticky-promo-banner'
+		class='sticky-promo-banner cursor-pointer'
+		id="sticky-promo-banner"
 		style='
 			background-color: {{ section.settings.bg-color }};
 			color: {{ section.settings.text-color }}
@@ -10,6 +20,26 @@
 		<div class='sticky-promo-banner__content'>{{ section.settings.text }}</div>
 	</div>
 {% endif %}
+
+<template>
+	<div class="bg-white klaviyo-form-{{ section.settings.klavyio-form-id }}"></div>
+</template>
+
+<script defer>
+	document.addEventListener("DOMContentLoaded", function() {
+    const promoBanner = document.getElementById('sticky-promo-banner');
+    const emailPopup = document.getElementById('custom-email-popup');
+
+		const instance = basicLightbox.create(
+			document.querySelector('template')
+		)
+
+    promoBanner.addEventListener('click', function() {
+			instance.show()
+    });
+});
+
+</script>
 
 {% schema %}
 {
@@ -32,6 +62,12 @@
 			"label": "Text color",
 			"id": "text-color",
 			"default": "#fff"
+		}, 
+		{
+			"type": "text",
+			"label": "Klavyio form ID",
+			"id": "klavyio-form-id",
+			"default": "RkEBeK"
 		}
 	]
 }
