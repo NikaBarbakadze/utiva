@@ -3561,6 +3561,10 @@ video {
     border-radius: 24px;
   }
 
+  .lg\:border-t {
+    border-top-width: 1px;
+  }
+
   .lg\:bg-\[\#fcfcfa\] {
     --tw-bg-opacity: 1;
     background-color: rgb(252 252 250 / var(--tw-bg-opacity));

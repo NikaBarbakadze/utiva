@@ -3938,3 +3938,34 @@ input, textarea, select, .faux-select {
   margin-top: 24px;
   display: block;
 }
+
+.yotpo-widget-loyalty-floater-widget{
+  display: none;
+}
+
+.product__media-item{
+  position: relative;
+}
+.custom-stickers{
+  position: absolute !important;
+  top: 16px;
+  left: 16px;
+  z-index: 1;
+  display: flex !important;
+  flex-direction: column;
+  gap: 16px; 
+  align-items: center;
+  justify-content: center;
+}
+.custom-stickers img{
+  display: block;
+  max-width: 100px;
+  max-height: 108px;
+}
+@media screen and (max-width: 992px) {
+  .custom-stickers img{
+    display: block;
+    max-width: 72px;
+    max-height: 70px;
+  }
+}

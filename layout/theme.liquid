@@ -440,7 +440,7 @@
     </main>
 
     {% if template.name == "product" %}
-      <div class="lg:bg-[#fcfcfa] fixed bottom-[48px] w-full z-10 fixed-sidebar collapsed border-t border-solid border-[#cfcfce]" id="fixedSidebar">
+      <div class="lg:bg-[#fcfcfa] fixed bottom-[48px] w-full z-10 fixed-sidebar collapsed lg:border-t border-solid border-[#cfcfce]" id="fixedSidebar">
         <div class="page-width flex items-center justify-between py-4">
           <div class="items-center gap-3 hidden lg:!flex">
             <figure>
@@ -448,7 +448,7 @@
             </figure>
             <h3 class="text-lg text-[#1C1C1C] font-medium">{{ product.title }}</h3>
           </div>
-          <div class="flex gap-6 items-center">
+          <div class="flex gap-6 items-center w-full lg:w-auto">
             <div class="gap-2 hidden">
               <div class="text-sm text-[#1C1C1C] px-4 py-2.5 rounded-full border border-solid border-[#cfcfce] custom-sticky-supply">30 days supply</div>
               <div class="text-sm text-[#1C1C1C] px-4 py-2.5 rounded-full border border-solid border-[#cfcfce] custom-sticky-subscribe">Subscribe & Save</div>
