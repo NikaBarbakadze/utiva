@@ -7,35 +7,55 @@
           "type": "slider_item",
           "settings": {
             "slide_image": "shopify:\/\/shop_images\/65f515b3c7d2e5dd496289e87fb3a92f_1.webp",
-            "slide_video": "shopify:\/\/files\/videos\/UTI episode gone bad--(720p).mp4"
+            "slide_video": "shopify:\/\/files\/videos\/UTI episode gone bad--(720p).mp4",
+            "testimonial_title": "An episode gone bad",
+            "testimonial_paragraph": "Utiva is a product that delivers on its promises - and as the old saying goes, an ounce of prevention is worth a pound of cure. This has been a good investment in my personal health.",
+            "testimonial_author": "Elaine Li",
+            "testimonial_rating": "5.0"
           }
         },
         "386fc7e8-eaba-4733-a466-158f4a8985c4": {
           "type": "slider_item",
           "settings": {
             "slide_image": "shopify:\/\/shop_images\/Jane_2.png",
-            "slide_video": "shopify:\/\/files\/videos\/Jane Barkley's UTI Story-Modified.mp4"
+            "slide_video": "shopify:\/\/files\/videos\/Jane Barkley's UTI Story-Modified.mp4",
+            "testimonial_title": "An episode gone bad 2",
+            "testimonial_paragraph": "Utiva is a product that delivers on its promises - and as the old saying goes, an ounce of prevention is worth a pound of cure. This has been a good investment in my personal health.",
+            "testimonial_author": "Elaine Li",
+            "testimonial_rating": "5.0"
           }
         },
         "9f20bb36-aa34-42b7-9e41-46b6052c3250": {
           "type": "slider_item",
           "settings": {
             "slide_image": "shopify:\/\/shop_images\/3_73bc7550-c37a-4bec-8a36-aab45a14d10d.png",
-            "slide_video": "shopify:\/\/files\/videos\/How Sandra recovered from chronic UTIs naturally--(720p).mp4"
+            "slide_video": "shopify:\/\/files\/videos\/How Sandra recovered from chronic UTIs naturally--(720p).mp4",
+            "testimonial_title": "An episode gone bad 3",
+            "testimonial_paragraph": "Utiva is a product that delivers on its promises - and as the old saying goes, an ounce of prevention is worth a pound of cure. This has been a good investment in my personal health.",
+            "testimonial_author": "Elaine Li",
+            "testimonial_rating": "5.0"
           }
         },
         "6dad3236-a780-44b0-b0e9-da2d7c391a8b": {
           "type": "slider_item",
           "settings": {
             "slide_image": "shopify:\/\/shop_images\/Kathy_UTI_Story.png",
-            "slide_video": "shopify:\/\/files\/videos\/Kathy's struggle with a Silent UTI--(720p).mp4"
+            "slide_video": "shopify:\/\/files\/videos\/Kathy's struggle with a Silent UTI--(720p).mp4",
+            "testimonial_title": "An episode gone bad",
+            "testimonial_paragraph": "Utiva is a product that delivers on its promises - and as the old saying goes, an ounce of prevention is worth a pound of cure. This has been a good investment in my personal health.",
+            "testimonial_author": "Elaine Li",
+            "testimonial_rating": "5.0"
           }
         },
         "9dba51e4-4350-472e-a76d-4d665b6a73e3": {
           "type": "slider_item",
           "settings": {
             "slide_image": "shopify:\/\/shop_images\/Testimonial_Rachel.jpg",
-            "slide_video": "shopify:\/\/files\/videos\/Rachel Walker for Customer Ambassador Program_2_1.mp4"
+            "slide_video": "shopify:\/\/files\/videos\/Rachel Walker for Customer Ambassador Program_2_1.mp4",
+            "testimonial_title": "An episode gone bad",
+            "testimonial_paragraph": "Utiva is a product that delivers on its promises - and as the old saying goes, an ounce of prevention is worth a pound of cure. This has been a good investment in my personal health.",
+            "testimonial_author": "Elaine Li",
+            "testimonial_rating": "5.0"
           }
         },
         "9fe66a13-aefc-497a-937a-b75a95789f4e": {
@@ -43,7 +63,11 @@
           "disabled": true,
           "settings": {
             "slide_image": "shopify:\/\/shop_images\/4_6aaf231e-8d85-424c-8303-f544d20a3935.png",
-            "slide_video": "shopify:\/\/files\/videos\/Family history of UTIs - Tamana's Experience--(720p).mp4"
+            "slide_video": "shopify:\/\/files\/videos\/Family history of UTIs - Tamana's Experience--(720p).mp4",
+            "testimonial_title": "An episode gone bad",
+            "testimonial_paragraph": "Utiva is a product that delivers on its promises - and as the old saying goes, an ounce of prevention is worth a pound of cure. This has been a good investment in my personal health.",
+            "testimonial_author": "Elaine Li",
+            "testimonial_rating": "5.0"
           }
         }
       },
@@ -62,11 +86,7 @@
         "paragraph_text_2": "Tell us about your story and how Utiva has help change your life for the better.",
         "button_text": "Submit your story using Video Vocal",
         "link_url": "https:\/\/vocalvideo.com\/c\/szio-inc-customer-testimonial-videos",
-        "link_text": "",
-        "testimonial_title": "An episode gone bad",
-        "testimonial_paragraph": "Utiva is a product that delivers on its promises - and as the old saying goes, an ounce of prevention is worth a pound of cure. This has been a good investment in my personal health.",
-        "testimonial_author": "Elaine Li",
-        "testimonial_rating": "5.0"
+        "link_text": ""
       }
     },
     "dace5875-fa24-4342-b941-b4508cd98e88": {

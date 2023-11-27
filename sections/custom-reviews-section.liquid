@@ -191,32 +191,37 @@
         background-repeat: no-repeat;
         background-position: center;
     }
+    .active-block{
+      display: flex !important;
+    }
 </style>
 
 <div class="flex flex-col-reverse lg:flex-row items-stretch">
     <div class="basis-1/2 blur-part">
-        <div class="bg-white p-8 lg:rounded-[24px] flex flex-col gap-6 text-center lg:m-24">
+      {% for block in section.blocks %}
+        <div class="bg-white p-8 lg:rounded-[24px] hidden flex-col gap-6 text-center lg:m-24 {% if forloop.first %} active-block {% endif %}">
             <div class="mb-2 lg:mb-6">
                 <svg class="mx-auto" width="41" height="28" viewBox="0 0 41 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.636469 17.536C0.636469 9.92 6.34847 0.943998 17.7725 0.671993V4.888C10.9725 5.432 6.21247 10.056 5.80447 15.768C6.89247 15.224 7.98047 15.088 9.06847 15.088C12.7405 15.088 15.4605 17.808 15.4605 21.208C15.4605 25.152 12.4685 27.6 8.66047 27.6C3.08447 27.6 0.636469 22.976 0.636469 17.536ZM23.7565 17.536C23.7565 9.92 29.4685 0.943998 40.8925 0.671993V4.888C33.9565 5.432 29.3325 10.056 28.9245 15.768C30.0125 15.224 31.1005 15.088 32.1885 15.088C35.8605 15.088 38.5805 17.808 38.5805 21.208C38.5805 25.152 35.5885 27.6 31.7805 27.6C26.0685 27.6 23.7565 22.976 23.7565 17.536Z" fill="#C33635"/>
                 </svg>    
             </div>
             <div class="flex flex-col">
-                <h5 class="mb-3 text-[28px] text-[#1C1C1C]">An episode gone bad</h5>
-                <p class="mb-7 text-base text-[#1C1C1C] font-normal">Utiva is a product that delivers on its promises - and as the old saying goes, an ounce of prevention is worth a pound of cure. This has been a good investment in my personal health.</p>
+                <h5 class="mb-3 text-[28px] text-[#1C1C1C]">{{ block.settings.testimonial_title }}</h5>
+                <p class="mb-7 text-base text-[#1C1C1C] font-normal">{{ block.settings.testimonial_paragraph }}</p>
                 <div class="flex flex-col gap-2">
-                    <span class="text-[#1C1C1C] text-sm">Elaine Li</span>
+                    <span class="text-[#1C1C1C] text-sm">{{ block.settings.testimonial_author }}</span>
                     <div class="py-0.5 pl-1.5 pr-2.5 self-center border border-solid border-[#C33635] flex justify-center gap-1 rounded-full items-center">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g id="Interface, Essential/Star">
                             <path id="Path" fill-rule="evenodd" clip-rule="evenodd" d="M7.99998 2.29999L9.7731 5.92054L13.7392 6.50473L10.8696 9.32119L11.5468 13.3L7.99998 11.4205L4.45313 13.3L5.13036 9.32119L2.26074 6.50473L6.22625 5.92054L7.99998 2.29999Z" fill="#C33635" stroke="#C33635" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
                             </g>
                         </svg>
-                        <span class="text-[#1C1C1C] text-sm inline-block">5.0</span>
+                        <span class="text-[#1C1C1C] text-sm inline-block">{{ block.settings.testimonial_rating }}</span>
                     </div>
                 </div>
             </div>
         </div>
+      {% endfor %}
     </div>
     <div class="basis-1/2">
         <div class="embla relative flex h-full min-h-[400px] lg:min-h-0">
@@ -284,17 +289,34 @@
     }
 
     document.addEventListener("DOMContentLoaded", ()=>{
-        const OPTIONS = {}
-        const OPTIONS_THUMBS = {
-          containScroll: 'keepSnaps',
-          dragFree: true
+      const OPTIONS = {}
+      const OPTIONS_THUMBS = {
+        containScroll: 'keepSnaps',
+        dragFree: true
+      }
+      
+      const viewportNodeMainCarousel = document.querySelector('.embla__viewport')
+      const viewportNodeThumbCarousel = document.querySelector('.embla-thumbs__viewport')
+      
+      const emblaApiMain = EmblaCarousel(viewportNodeMainCarousel, OPTIONS)
+      const emblaApiThumb = EmblaCarousel(viewportNodeThumbCarousel, OPTIONS_THUMBS)
+      
+      // Function to synchronize text blocks with the Embla slider
+      function syncTextBlocks(emblaApiMain) {
+        const textBlocks = document.querySelectorAll('.blur-part > div');
+        textBlocks.forEach(block => block.classList.remove('active-block'));
+  
+        const selectedIndex = emblaApiMain.selectedScrollSnap();
+        if (textBlocks[selectedIndex]) {
+          textBlocks[selectedIndex].classList.add('active-block');
         }
-        
-        const viewportNodeMainCarousel = document.querySelector('.embla__viewport')
-        const viewportNodeThumbCarousel = document.querySelector('.embla-thumbs__viewport')
-        
-        const emblaApiMain = EmblaCarousel(viewportNodeMainCarousel, OPTIONS)
-        const emblaApiThumb = EmblaCarousel(viewportNodeThumbCarousel, OPTIONS_THUMBS)
+      }
+  
+      // Add event listener to synchronize on slide change
+      emblaApiMain.on('select', () => syncTextBlocks(emblaApiMain));
+  
+      // Initial synchronization
+      syncTextBlocks(emblaApiMain);
         
         function addThumbBtnsClickHandlers(emblaApiMain, emblaApiThumb) {
           const slidesThumbs = emblaApiThumb.slideNodes()
@@ -400,30 +422,6 @@
       "id": "link_text",
       "label": "Learn More Text",
       "default": "Learn more about our customer ambassador program"
-    },
-    {
-      "type": "text",
-      "id": "testimonial_title",
-      "label": "Testimonial Title",
-      "default": "An episode gone bad"
-    },
-    {
-      "type": "text",
-      "id": "testimonial_paragraph",
-      "label": "Testimonial Paragraph",
-      "default": "Utiva is a product that delivers on its promises - and as the old saying goes, an ounce of prevention is worth a pound of cure. This has been a good investment in my personal health."
-    },
-    {
-      "type": "text",
-      "id": "testimonial_author",
-      "label": "Testimonial Author",
-      "default": "Elaine Li"
-    },
-    {
-      "type": "text",
-      "id": "testimonial_rating",
-      "label": "Testimonial Rating",
-      "default": "5.0"
     }
   ],
   "blocks": [
@@ -441,6 +439,30 @@
           "type": "video",
           "id": "slide_video",
           "label": "Slide Video"
+        },
+        {
+          "type": "text",
+          "id": "testimonial_title",
+          "label": "Testimonial Title",
+          "default": "An episode gone bad"
+        },
+        {
+          "type": "text",
+          "id": "testimonial_paragraph",
+          "label": "Testimonial Paragraph",
+          "default": "Utiva is a product that delivers on its promises - and as the old saying goes, an ounce of prevention is worth a pound of cure. This has been a good investment in my personal health."
+        },
+        {
+          "type": "text",
+          "id": "testimonial_author",
+          "label": "Testimonial Author",
+          "default": "Elaine Li"
+        },
+        {
+          "type": "text",
+          "id": "testimonial_rating",
+          "label": "Testimonial Rating",
+          "default": "5.0"
         }
       ]
     }
