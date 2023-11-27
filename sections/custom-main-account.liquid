@@ -4,8 +4,8 @@
 <script src="{{ 'customer.js' | asset_url }}" defer></script>
 
 <section class="custom-main-account">
-    <div class="flex items-stretch justify-start gap-x-6">
-        <div class="sidebar min-h-[83rem] flex flex-col justify-between px-24 py-12 bg-[#F2F2F0] border-r border-[#1C1C1C1F]">
+    <div class="flex flex-col lg:flex-row items-stretch justify-start gap-x-6">
+        <div class="sidebar lg:min-h-[65rem] flex flex-col justify-between px-[1.5rem] lg:px-24 py-12 bg-[#F2F2F0] border-r border-[#1C1C1C1F]">
            <div>
               <ul data-tabs>
                   <li>
@@ -15,7 +15,7 @@
                       <a href="#orders">Order history</a>
                   </li>
               </ul>
-              <div class="loop-custom-url">{% render 'loop-subscriptions', type: 'customer-portal-link'%}</div>
+              <div class="loop-custom-url">{% render 'loop-subscriptions', type: 'customer-portal-link' %}</div>
            </div>
            <div>
               <p class="text-base text-[#1c1c1c] font-normal leading-[22.4px]">Have questions? Visit our</p>
@@ -25,10 +25,10 @@
               </a>
            </div>
         </div>
-        <div id="profile" class="p-12">
-            <h1 class="text-[4rem] font-medium leading-[4.8rem] -tracking-[.04rem] text-[#1c1c1c] mb-10" >Hello, {{ customer.first_name }}</h1>
+        <div id="profile" class="p-[1.5rem] lg:p-12">
+            <h1 class="text-3xl lg:text-[4rem] font-medium leading-[4.8rem] -tracking-[.04rem] text-[#1c1c1c] mb-4 lg:mb-10" >Hello, {{ customer.first_name }}</h1>
             <div class="flex flex-col gap-y-6">
-                <div class="information_box">
+                <div class="information_box !w-full lg:!w-[630px]">
                     <div class="information_header">
                         <span>Personal information</span>
                         <button class="hidden" data-edit="personal">Edit</button>
@@ -55,7 +55,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="information_box">
+                <div class="information_box !w-full lg:!w-[630px]">
                     <div class="information_header">
                         <span>Shipping address</span>
                         <button data-edit="address">Edit</button>
@@ -156,8 +156,8 @@
                 </div>
             </div>
         </div>
-        <div id="orders" class="p-12">
-          <h2 class="text-[4rem] font-medium leading-[4.8rem] -tracking-[.04rem] text-[#1c1c1c] mb-10">Order history</h2>
+        <div id="orders" class="p-[1.5rem] lg:p-12">
+          <h2 class="text-3xl lg:text-[4rem] font-medium leading-[4.8rem] -tracking-[.04rem] text-[#1c1c1c] mb-5 lg:mb-10">Order history</h2>
           <div class="order-table-wrapper">
             <table role="table" class="order-history">
               <caption class="visually-hidden">
