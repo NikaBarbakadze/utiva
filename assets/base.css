@@ -991,8 +991,8 @@ summary::-webkit-details-marker {
   }
 
   .grid--4-col-desktop .grid__item {
-    width: calc(25% - var(--grid-desktop-horizontal-spacing) * 3 / 4);
-    max-width: calc(25% - var(--grid-desktop-horizontal-spacing) * 3 / 4);
+    width: calc(25% - 24px * 3 / 4);
+    max-width: calc(25% - 24px * 3 / 4);
   }
 
   .grid--3-col-desktop .grid__item {
@@ -3968,4 +3968,13 @@ input, textarea, select, .faux-select {
     max-width: 72px;
     max-height: 70px;
   }
+  .search-page .grid__item{
+    width: 100%;
+    max-width: 100%;
+  }
 }
+
+.search-page .facets-container{
+  display: none;
+}
+
