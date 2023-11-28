@@ -76,6 +76,11 @@
             </span>
         </div>
         <h1 class="text-base lg:text-5xl text-[#1C1C1C] mt-3 lg:mt-8">{{ article.title }}</h1>
+        {% if article.metafields.custom.overview != blank %}
+        <div class="flex-1 article-template__content text-left mt-5 lg:mt-12">
+            {{ article.metafields.custom.overview | metafield_tag }}
+        </div>
+        {% endif %}
         <div class="mt-5 lg:mt-12 mx-auto">
             <img class="rounded-[24px] lg:max-h-[600px] w-full object-cover" src="{{ article.image | img_url: "master" }}" alt="">
         </div>
