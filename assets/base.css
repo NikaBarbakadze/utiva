@@ -3978,3 +3978,7 @@ input, textarea, select, .faux-select {
   display: none;
 }
 
+.search-page .custom-blog-card img{
+  min-height: 200px;
+  object-fit: cover;
+}
