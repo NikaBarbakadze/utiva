@@ -146,7 +146,7 @@
       <div class="flex flex-col md:w-[72rem]">
         {% for producti in productQuestions %} 
           {% for block in producti.settings.product.metafields.custom.faqs.value %}
-          <div data-product="{{ producti.settings.product.handle }}" class="hidden questionWrapper productQuestionWrapper productQuestionHandle-{{ prodacti.settings.product.handle }} flex flex-col gap-y-4">
+          <div data-product="{{ producti.settings.product.handle }}" class="hidden questionWrapper productQuestionWrapper {% if forloop.first %} border-none !p-0 !pb-[20px] {% endif %} productQuestionHandle-{{ producti.settings.product.handle }} flex flex-col gap-y-4">
             <div class="questionWrapperHeader cursor-pointer flex items-center justify-between gap-x-4">
               <p class="text-[#1C1C1C] text-xl font-normal md:text-2xl md:leading-[3.36rem] md:-tracking-[0.024rem]">{{ block.question }}</p>
               <div class="closed">
@@ -248,10 +248,19 @@
   const questions = document.querySelectorAll(".questionWrapperHeader");
   questions.forEach((question, i) => {
     question.addEventListener("click", () => {
+      // Check if the clicked question is already active
+      const isActive = question.parentNode.classList.contains("active");
+  
+      // Remove 'active' class from all questions
       questions.forEach(e => e.parentNode.classList.remove("active"));
-      question.parentNode.classList.add("active");
+  
+      // If the clicked question was not active, set it to active
+      if (!isActive) {
+        question.parentNode.classList.add("active");
+      }
     });
   });
+  
 
   document.addEventListener("DOMContentLoaded", () => {
     const tabs = new Tabby('[data-tabs]');
