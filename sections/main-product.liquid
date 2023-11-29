@@ -924,7 +924,7 @@
                     <div class="close">{% render 'icon-accordion-minus' %}</div>
                   </div>
                   <div class="custom_accordion_content_wrapper">
-                    {% for block in product.metafields.custom.faqs.value %} 
+                    {% for block in product.metafields.custom.faqs.value limit: 5 %} 
                       <div class="accordion_content_wrapper_inner{% if forloop.first %} pb-5 md:pb-6 {% elsif forloop.last %} pt-5 md:pt-6 {% else %} py-5 md:py-6 {% endif %}{% unless forloop.first %} border-t border-[#1c1c1c1f]{% endunless %}">
                         <div class="accordion_title_wrapper_inner flex items-start justify-between">
                           <p class="text-xl text-[#1c1c1c] font-medium md:-tracking-[0.22px] md:text-[2.2rem] md:leading-[3.08rem]">{{ block.question }}</p>
