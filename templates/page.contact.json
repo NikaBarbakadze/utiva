@@ -84,18 +84,18 @@
             "answer": "We offer returns within 30 days of purchase to the original payment method. To be eligible for a return, your order must be in its original packaging and condition that it was received in. Please note, we do not cover the cost of the return shipping label.We are unable to provide refunds for products purchased through one of our stockists, but we'll do our best to support you with a resolution."
           }
         },
+        "f61bbfc5-2c45-4acf-8bfd-4ce44c9440c1": {
+          "type": "shipping",
+          "settings": {
+            "question": "How can I start a return?",
+            "answer": "To start a return, please email us at hello@utivahealth.com and include your order number with a description of the reason for your return. Items sent back to us without first requesting a return, will not be accepted."
+          }
+        },
         "ddacda5f-0de1-4770-a1eb-805ae1c0117c": {
           "type": "shipping",
           "settings": {
             "question": "International shipping",
             "answer": "International shipping is available through our US site. Please visit us at <a href=\"https:\/\/www.utivahealth.com\" target=\"_blank\" title=\"https:\/\/www.utivahealth.com\">www.utivahealth.com<\/a>."
-          }
-        },
-        "f61bbfc5-2c45-4acf-8bfd-4ce44c9440c1": {
-          "type": "shipping",
-          "settings": {
-            "question": "How can I update my order, delivery address once the order is submitted?",
-            "answer": "For any changes to an existing order, please email us at <a href=\"mailto:hello@utivahealth.com\">hello@utivahealth.com<\/a> and\/or call us at 1-888-622-3613."
           }
         }
       },
@@ -106,8 +106,8 @@
         "f5c90d44-959e-4749-8e7d-c4f26ea0630e",
         "722fb7c9-26de-4895-888d-cbf0e0fd1342",
         "ff9e1d70-5f85-4766-9bb9-0813ba364a35",
-        "ddacda5f-0de1-4770-a1eb-805ae1c0117c",
-        "f61bbfc5-2c45-4acf-8bfd-4ce44c9440c1"
+        "f61bbfc5-2c45-4acf-8bfd-4ce44c9440c1",
+        "ddacda5f-0de1-4770-a1eb-805ae1c0117c"
       ],
       "settings": {
         "title": "Get the info you're looking for right now",
