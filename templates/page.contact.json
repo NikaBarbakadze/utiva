@@ -130,7 +130,7 @@
           "type": "sub",
           "settings": {
             "question": "How can I change my shipping information?",
-            "answer": "Start my logging into your account <a href=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\" target=\"_blank\" title=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\"><span style=\"text-decoration:underline\">here<\/span><\/a>. To change your shipping address, under the profile section you can edit your shipping information."
+            "answer": "Start my logging into your account <a href=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\" target=\"_blank\" title=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\">here<\/a>. To change your shipping address, under the profile section you can edit your shipping information."
           }
         },
         "742817df-e951-42ca-a3a7-487a4120bd0a": {
