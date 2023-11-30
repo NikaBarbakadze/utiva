@@ -104,6 +104,27 @@
             "question": "How does Utiva's subscribe and save program work?",
             "answer": "Utiva's subscribe and save is a recurring order, billed and shipped automatically at your chosen frequency, until canceled or skipped. With each subscription order, you will automatically save 25% on your ordered products. Your subscription is obligation-free, so you can skip, pause or cancel your subscription at any time, right from your account."
           }
+        },
+        "5903d79c-8eb6-43e5-9fe5-f9a03273da0a": {
+          "type": "sub",
+          "settings": {
+            "question": "What are the benefits of a subscription?",
+            "answer": "A subscription allows for you to stay consistent with taking Utiva products, which is best for long-term success, plus: you save 25% on each order with a subscription, your subscription is obligation-free, so you can cancel at any time, and you access to additional perks for subscription customers."
+          }
+        },
+        "03b7191d-ab26-4eca-8544-2260ed7a8370": {
+          "type": "sub",
+          "settings": {
+            "question": "How can I access my account?",
+            "answer": "You can access your account your account using the account icon at the top of the website or here: <a href=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\">https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount<\/a>"
+          }
+        },
+        "4c44c704-2f51-4b83-99ba-60437badacb7": {
+          "type": "sub",
+          "settings": {
+            "question": "Why can't I log into my account?",
+            "answer": "Usually when this happens, it is because your subscription order was processed a guest and that your customer account was never created. You can easily create your account now, using the same email you used to complete your purchase. To set up an account, use this link: <a href=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\">https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount<\/a>"
+          }
         }
       },
       "block_order": [
@@ -115,7 +136,10 @@
         "ff9e1d70-5f85-4766-9bb9-0813ba364a35",
         "f61bbfc5-2c45-4acf-8bfd-4ce44c9440c1",
         "ddacda5f-0de1-4770-a1eb-805ae1c0117c",
-        "3da337ef-7d80-4dea-9c02-3053957be723"
+        "3da337ef-7d80-4dea-9c02-3053957be723",
+        "5903d79c-8eb6-43e5-9fe5-f9a03273da0a",
+        "03b7191d-ab26-4eca-8544-2260ed7a8370",
+        "4c44c704-2f51-4b83-99ba-60437badacb7"
       ],
       "settings": {
         "title": "Get the info you're looking for right now",
