@@ -29,8 +29,8 @@
         "2ce8a383-16d5-44a5-9172-bc4b8192c627": {
           "type": "maga_menu",
           "settings": {
-            "menu_item_title": "Give $20, get $20",
-            "link_title": "Give $20, get $20",
+            "menu_item_title": "Give 25%, get $20",
+            "link_title": "Invite friends and earn money",
             "image": "shopify:\/\/shop_images\/banner.png",
             "url": "shopify:\/\/pages\/test-rewards-widget"
           }
