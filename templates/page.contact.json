@@ -90,6 +90,13 @@
             "question": "How can I update my order, delivery address once the order is submitted?",
             "answer": "For any changes to an existing order, please email us at <a href=\"mailto:hello@utivahealth.com\">hello@utivahealth.com<\/a> and\/or call us at 1-888-622-3613."
           }
+        },
+        "f5c90d44-959e-4749-8e7d-c4f26ea0630e": {
+          "type": "shipping",
+          "settings": {
+            "question": "Can I make changes to or cancel my order?",
+            "answer": "As soon as your order has been accepted, we immediately begin processing to get it to you as soon as possible. Unfortunately, this means that we are unable to make any changes to orders once placed. If you need to make changes, you can contact us at hello@utivahealth.com or call us at 1-800-622-3613 and we will try our best to get to it before your order ships but cannot guarantee this."
+          }
         }
       },
       "block_order": [
@@ -99,7 +106,8 @@
         "bc1dacc4-a198-4a5d-9c96-1fe6250c8bb1",
         "ff9e1d70-5f85-4766-9bb9-0813ba364a35",
         "ddacda5f-0de1-4770-a1eb-805ae1c0117c",
-        "f61bbfc5-2c45-4acf-8bfd-4ce44c9440c1"
+        "f61bbfc5-2c45-4acf-8bfd-4ce44c9440c1",
+        "f5c90d44-959e-4749-8e7d-c4f26ea0630e"
       ],
       "settings": {
         "title": "Get the info you're looking for right now",
