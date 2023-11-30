@@ -223,11 +223,19 @@
             "question": "What are the benefits of a subscription?",
             "answer": "A subscription allows for you to stay consistent with taking Utiva products, which is best for long-term success, plus: you save 25% on each order with a subscription, your subscription is obligation-free, so you can cancel at any time, and you access to additional perks for subscription customers."
           }
+        },
+        "90323301-f612-4ce8-81ba-f63cf98a4ac6": {
+          "type": "sub",
+          "settings": {
+            "question": "How can I access my account?",
+            "answer": "You can access your account your account using the account icon at the top of the website or here: <a href=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\">https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount<\/a>"
+          }
         }
       },
       "block_order": [
         "770e403f-1338-4e57-987a-20943a3fd0fa",
-        "adb62344-7fe5-413f-817c-206d6067e4a3"
+        "adb62344-7fe5-413f-817c-206d6067e4a3",
+        "90323301-f612-4ce8-81ba-f63cf98a4ac6"
       ],
       "settings": {
         "title": "Have subscription questions?",
