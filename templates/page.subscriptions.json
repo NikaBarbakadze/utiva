@@ -258,6 +258,13 @@
             "question": "Can I change my next delivery date?",
             "answer": "Sign into your online account <a href=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\" target=\"_blank\" title=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\">here<\/a>. Click My Subscriptions > View Details of your active subcription(s). From this page you can skip, reschedule or delay your next upcoming order."
           }
+        },
+        "14748880-759e-4d40-941f-f393935ebd46": {
+          "type": "sub",
+          "settings": {
+            "question": "How can I pause my subscription?",
+            "answer": "Sign into your online account <a href=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\" target=\"_blank\" title=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\">here<\/a>. Click My Subscriptions > View Details of your active subcription(s). From this page you can skip, reschedule or delay your next upcoming order."
+          }
         }
       },
       "block_order": [
@@ -267,7 +274,8 @@
         "8b79fbbe-aebd-43ae-b95c-e28ed6c1950d",
         "281cc261-cb53-4026-b544-556c0fa7bbac",
         "3a43a580-c726-4dc1-9383-f3c56b3a4f71",
-        "1e0f0c9e-5c84-4828-bc70-15e7a0fc252a"
+        "1e0f0c9e-5c84-4828-bc70-15e7a0fc252a",
+        "14748880-759e-4d40-941f-f393935ebd46"
       ],
       "settings": {
         "title": "Have subscription questions?",
