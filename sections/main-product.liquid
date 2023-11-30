@@ -891,7 +891,12 @@
                       <span class="text-lg font-medium custom-compare-at-price">{{ product.selected_or_first_available_variant.compare_at_price | money }}</span>
                       <span class="text-xl font-medium custom-price">{{ product.selected_or_first_available_variant.price | money }}</span>
                       <div class="absolute right-[3.7%] md:right-[3%] -top-[20%] py-0.5 px-2 bg-[#C33635] rounded-[4rem] flex items-center justify-center gap-x-0.5 custom-badge">
-                        <span class="text-xs font-medium text-white">Save %<span class="custom-badge-percentage">10</span></span>
+                        {% assign tp-price = product.selected_or_first_available_variant.price %}
+                        {% assign tp-compare_at_price = product.selected_or_first_available_variant.compare_at_price %}
+                        {% assign tp-difference = tp-compare_at_price | minus: tp-price %}
+                        {% assign tp-percentage_difference = tp-difference | times: 100 | divided_by: tp-compare_at_price %}
+
+                        <span class="text-xs font-medium text-white">Save <span class="custom-badge-percentage">{{ tp-percentage_difference | abs | round: 2 }}</span>%</span>
                       </div>
                     </div>
                   </div>
