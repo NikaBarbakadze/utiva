@@ -49,8 +49,8 @@
           "type": "properties",
           "settings": {
             "icon": "shopify:\/\/shop_images\/Frame_138.svg",
-            "title": "25% off + free shipping",
-            "content": "Consistency is key to lasting results, which is why we offer 25% off all subscription orders. Your best deal starts here"
+            "title": "25% off for life",
+            "content": "Consistency is key to lasting results, which is why we offer 25% off all subscription orders. Your best deal starts here!"
           }
         },
         "f4ba4b7a-edfd-4a35-b278-cac11051942c": {
@@ -66,7 +66,7 @@
           "settings": {
             "icon": "shopify:\/\/shop_images\/Frame_139.svg",
             "title": "Earn more Rewards points as a subscriber",
-            "content": "Subscribers earn more points, and can unlock VIP tiers for even greater savings that can be redeemed! Learn more about our rewards program"
+            "content": "Subscribers earn points, and can unlock VIP tiers for even greater savings that can be redeemed! Learn more about our rewards program"
           }
         },
         "19f6d1f1-7f1a-45ef-adeb-084f187e8428": {
