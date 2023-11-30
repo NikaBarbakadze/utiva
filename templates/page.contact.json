@@ -76,6 +76,13 @@
             "question": "How can I update my order, delivery address once the order is submitted?",
             "answer": "For any changes to an existing order, please email us at <a href=\"mailto:hello@utivahealth.com\">hello@utivahealth.com<\/a> and\/or call us at 1-888-622-3613."
           }
+        },
+        "4e19bd46-1f39-45ec-b8e5-d08729b4c8aa": {
+          "type": "shipping",
+          "settings": {
+            "question": "Is shipping free?",
+            "answer": "Free standard shipping is available to all  orders over $50+. To be eligible for free shipping your subtotal must be greater than $50 once any promotions or discounts are applied. Orders under $50 will be charged a $10 shipping fee."
+          }
         }
       },
       "block_order": [
@@ -83,7 +90,8 @@
         "ff9e1d70-5f85-4766-9bb9-0813ba364a35",
         "5f81f5b6-22bc-4bf7-ba33-59fac7fd5428",
         "ddacda5f-0de1-4770-a1eb-805ae1c0117c",
-        "f61bbfc5-2c45-4acf-8bfd-4ce44c9440c1"
+        "f61bbfc5-2c45-4acf-8bfd-4ce44c9440c1",
+        "4e19bd46-1f39-45ec-b8e5-d08729b4c8aa"
       ],
       "settings": {
         "title": "Get the info you're looking for right now",
