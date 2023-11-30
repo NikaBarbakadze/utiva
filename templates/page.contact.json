@@ -146,6 +146,13 @@
             "question": "How can I update my billing information?",
             "answer": "Sign into your account. Click My Subscriptions > View Details. Under “Payment details” select, Update and a link will be sent to your email to make the necessary changes."
           }
+        },
+        "81f926c4-4816-40ca-8da3-99f2bea3e9af": {
+          "type": "sub",
+          "settings": {
+            "question": "Can I change my next delivery date?",
+            "answer": "Sign into your online account <a href=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\" target=\"_blank\" title=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\">here<\/a>. Click My Subscriptions > View Details of your active subcription(s). From this page you can skip, reschedule or delay your next upcoming order."
+          }
         }
       },
       "block_order": [
@@ -163,7 +170,8 @@
         "4c44c704-2f51-4b83-99ba-60437badacb7",
         "cfecf529-4c77-4ee0-81f9-bd4a3de30f62",
         "63d9cb5f-9a5b-4dca-857a-8f8df39d9bb2",
-        "742817df-e951-42ca-a3a7-487a4120bd0a"
+        "742817df-e951-42ca-a3a7-487a4120bd0a",
+        "81f926c4-4816-40ca-8da3-99f2bea3e9af"
       ],
       "settings": {
         "title": "Get the info you're looking for right now",
