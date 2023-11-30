@@ -125,6 +125,13 @@
             "question": "Why can't I log into my account?",
             "answer": "Usually when this happens, it is because your subscription order was processed a guest and that your customer account was never created. You can easily create your account now, using the same email you used to complete your purchase. To set up an account, use this link: <a href=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\">https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount<\/a>"
           }
+        },
+        "cfecf529-4c77-4ee0-81f9-bd4a3de30f62": {
+          "type": "sub",
+          "settings": {
+            "question": "How can I change my shipping information?",
+            "answer": "Start my logging into your account <a href=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\" target=\"_blank\" title=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\"><span style=\"text-decoration:underline\">here<\/span><\/a>. To change your shipping address, under the profile section you can edit your shipping information."
+          }
         }
       },
       "block_order": [
@@ -139,7 +146,8 @@
         "3da337ef-7d80-4dea-9c02-3053957be723",
         "5903d79c-8eb6-43e5-9fe5-f9a03273da0a",
         "03b7191d-ab26-4eca-8544-2260ed7a8370",
-        "4c44c704-2f51-4b83-99ba-60437badacb7"
+        "4c44c704-2f51-4b83-99ba-60437badacb7",
+        "cfecf529-4c77-4ee0-81f9-bd4a3de30f62"
       ],
       "settings": {
         "title": "Get the info you're looking for right now",
