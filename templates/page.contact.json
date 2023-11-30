@@ -153,6 +153,20 @@
             "question": "Can I change my next delivery date?",
             "answer": "Sign into your online account <a href=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\" target=\"_blank\" title=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\">here<\/a>. Click My Subscriptions > View Details of your active subcription(s). From this page you can skip, reschedule or delay your next upcoming order."
           }
+        },
+        "a7ef335f-ba21-4b2c-9d0e-100414539f37": {
+          "type": "sub",
+          "settings": {
+            "question": "How can I pause my subscription?",
+            "answer": "Sign into your online account <a href=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\" target=\"_blank\" title=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\">here<\/a>. Click My Subscriptions > View Details of your active subcription(s). From this page you can skip, reschedule or delay your next upcoming order."
+          }
+        },
+        "df153350-cc53-49e6-87cd-c4ae120e728f": {
+          "type": "sub",
+          "settings": {
+            "question": "How can I cancel my subscription?",
+            "answer": "Sign into your online account <a href=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\" target=\"_blank\" title=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\">here<\/a>. Click My Subscriptions > View Details of your active subcription(s). Scroll to the bottom of the page a start the cancellation process by clicking the link: Cancel subscription"
+          }
         }
       },
       "block_order": [
@@ -171,7 +185,9 @@
         "cfecf529-4c77-4ee0-81f9-bd4a3de30f62",
         "63d9cb5f-9a5b-4dca-857a-8f8df39d9bb2",
         "742817df-e951-42ca-a3a7-487a4120bd0a",
-        "81f926c4-4816-40ca-8da3-99f2bea3e9af"
+        "81f926c4-4816-40ca-8da3-99f2bea3e9af",
+        "a7ef335f-ba21-4b2c-9d0e-100414539f37",
+        "df153350-cc53-49e6-87cd-c4ae120e728f"
       ],
       "settings": {
         "title": "Get the info you're looking for right now",
