@@ -91,16 +91,6 @@
             "alt_text": "Femtech Insider logo"
           }
         },
-        "58d845d6-e559-4782-9db2-c8307cc8f719": {
-          "type": "press_items",
-          "settings": {
-            "date": "March 8, 2021",
-            "title": "Utiva Announces Line of Flagship Urinary Tract Health and Wellness Products",
-            "url": "#https:\/\/www.newswire.ca\/news-releases\/utiva-announces-line-of-flagship-urinary-health-and-wellness-products-810540537.html",
-            "source": "utiva.com",
-            "alt_text": "Image Alt Text"
-          }
-        },
         "3b4ab5b1-8c93-4a54-b4ae-1a63b30a81a1": {
           "type": "press_items",
           "settings": {
@@ -108,6 +98,16 @@
             "title": "Utiva Health voted #1 Doctor Recommended OTC Brand for UTI Prevention in Canada",
             "url": "#https:\/\/www.newswire.ca\/news-releases\/utiva-health-voted-1-doctor-recommended-otc-brand-for-uti-prevention-in-canada-818023905.html",
             "image": "shopify:\/\/shop_images\/logo_9d8ecd37-396f-427a-b3a3-8315d87522ee.png",
+            "source": "utiva.com",
+            "alt_text": "Image Alt Text"
+          }
+        },
+        "58d845d6-e559-4782-9db2-c8307cc8f719": {
+          "type": "press_items",
+          "settings": {
+            "date": "March 8, 2021",
+            "title": "Utiva Announces Line of Flagship Urinary Tract Health and Wellness Products",
+            "url": "#https:\/\/www.newswire.ca\/news-releases\/utiva-announces-line-of-flagship-urinary-health-and-wellness-products-810540537.html",
             "source": "utiva.com",
             "alt_text": "Image Alt Text"
           }
@@ -122,8 +122,8 @@
         "17ba72c3-62e0-4084-bcc8-0830c7ca9e76",
         "0d7a2b3c-2519-4950-8575-f69926fbe1b8",
         "4ec6d413-8010-4f17-956c-7646210f021f",
-        "58d845d6-e559-4782-9db2-c8307cc8f719",
-        "3b4ab5b1-8c93-4a54-b4ae-1a63b30a81a1"
+        "3b4ab5b1-8c93-4a54-b4ae-1a63b30a81a1",
+        "58d845d6-e559-4782-9db2-c8307cc8f719"
       ],
       "settings": {
         "title": "In the Press",
