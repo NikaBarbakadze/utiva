@@ -228,14 +228,38 @@
           "type": "sub",
           "settings": {
             "question": "How can I access my account?",
-            "answer": "You can access your account your account using the account icon at the top of the website or here: <a href=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\">https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount<\/a>"
+            "answer": "You can access your account your account using the account icon at the top of the website or here: <a href=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\" target=\"_blank\">https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount<\/a>"
+          }
+        },
+        "8b79fbbe-aebd-43ae-b95c-e28ed6c1950d": {
+          "type": "sub",
+          "settings": {
+            "question": "Why can't I log into my account?",
+            "answer": "Usually when this happens, it is because your subscription order was processed a guest and that your customer account was never created. You can easily create your account now, using the same email you used to complete your purchase. To set up an account, use this link: <a href=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\" target=\"_blank\">https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount<\/a>"
+          }
+        },
+        "281cc261-cb53-4026-b544-556c0fa7bbac": {
+          "type": "sub",
+          "settings": {
+            "question": "How can I change my shipping information?",
+            "answer": "Start my logging into your account <a href=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\" target=\"_blank\" title=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\"><span style=\"text-decoration:underline\">here<\/span><\/a>. To change your shipping address, under the profile section you can edit your shipping information."
+          }
+        },
+        "3a43a580-c726-4dc1-9383-f3c56b3a4f71": {
+          "type": "sub",
+          "settings": {
+            "question": "How can I update my billing information?",
+            "answer": "Sign into your account. Click My Subscriptions > View Details. Under “Payment details” select, Update and a link will be sent to your email to make the necessary changes."
           }
         }
       },
       "block_order": [
         "770e403f-1338-4e57-987a-20943a3fd0fa",
         "adb62344-7fe5-413f-817c-206d6067e4a3",
-        "90323301-f612-4ce8-81ba-f63cf98a4ac6"
+        "90323301-f612-4ce8-81ba-f63cf98a4ac6",
+        "8b79fbbe-aebd-43ae-b95c-e28ed6c1950d",
+        "281cc261-cb53-4026-b544-556c0fa7bbac",
+        "3a43a580-c726-4dc1-9383-f3c56b3a4f71"
       ],
       "settings": {
         "title": "Have subscription questions?",
