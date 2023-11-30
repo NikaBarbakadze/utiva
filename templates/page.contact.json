@@ -116,14 +116,14 @@
           "type": "sub",
           "settings": {
             "question": "How can I access my account?",
-            "answer": "You can access your account your account using the account icon at the top of the website or here: <a href=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\">https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount<\/a>"
+            "answer": "You can access your account your account using the account icon at the top of the website or here: <a href=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\" target=\"_blank\">https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount<\/a>"
           }
         },
         "4c44c704-2f51-4b83-99ba-60437badacb7": {
           "type": "sub",
           "settings": {
             "question": "Why can't I log into my account?",
-            "answer": "Usually when this happens, it is because your subscription order was processed a guest and that your customer account was never created. You can easily create your account now, using the same email you used to complete your purchase. To set up an account, use this link: <a href=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\">https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount<\/a>"
+            "answer": "Usually when this happens, it is because your subscription order was processed a guest and that your customer account was never created. You can easily create your account now, using the same email you used to complete your purchase. To set up an account, use this link: <a href=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\" target=\"_blank\">https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount<\/a>"
           }
         },
         "cfecf529-4c77-4ee0-81f9-bd4a3de30f62": {
