@@ -97,6 +97,13 @@
             "question": "International shipping",
             "answer": "International shipping is available through our US site. Please visit us at <a href=\"https:\/\/www.utivahealth.com\" target=\"_blank\" title=\"https:\/\/www.utivahealth.com\">www.utivahealth.com<\/a>."
           }
+        },
+        "3da337ef-7d80-4dea-9c02-3053957be723": {
+          "type": "sub",
+          "settings": {
+            "question": "How does Utiva's subscribe and save program work?",
+            "answer": "Utiva's subscribe and save is a recurring order, billed and shipped automatically at your chosen frequency, until canceled or skipped. With each subscription order, you will automatically save 25% on your ordered products. Your subscription is obligation-free, so you can skip, pause or cancel your subscription at any time, right from your account."
+          }
         }
       },
       "block_order": [
@@ -107,7 +114,8 @@
         "722fb7c9-26de-4895-888d-cbf0e0fd1342",
         "ff9e1d70-5f85-4766-9bb9-0813ba364a35",
         "f61bbfc5-2c45-4acf-8bfd-4ce44c9440c1",
-        "ddacda5f-0de1-4770-a1eb-805ae1c0117c"
+        "ddacda5f-0de1-4770-a1eb-805ae1c0117c",
+        "3da337ef-7d80-4dea-9c02-3053957be723"
       ],
       "settings": {
         "title": "Get the info you're looking for right now",
