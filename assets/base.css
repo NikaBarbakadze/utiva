@@ -3982,3 +3982,29 @@ input, textarea, select, .faux-select {
   min-height: 200px;
   object-fit: cover;
 }
+
+.custom-is-on-sale:not(.active) .custom-compare-at-price{
+  display: none;
+}
+
+.custom-is-on-sale:not(.active) .custom-price{
+  color: #1C1C1C !important;
+}
+
+.custom-is-on-sale:not(.active) .custom-badge{
+  display: none !important;
+}
+
+.custom-is-on-sale.active .custom-compare-at-price{
+  color: #1C1C1C !important;
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+.custom-is-on-sale.active .custom-price{
+  color: #c33634 !important;
+}
+
+.custom-is-on-sale.active .custom-badge{
+  display: flex !important;
+}

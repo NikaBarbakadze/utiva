@@ -50,6 +50,7 @@ block: block
     <input
       type="radio"
       data-price="{{ product.variants[index].price | money }}"
+      data-compare-at-price="{{ product.variants[index].compare_at_price | money }}"
       id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
       name="{{ option.name }}"
       value="{{ value | escape }}"

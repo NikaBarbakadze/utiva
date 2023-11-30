@@ -1162,6 +1162,9 @@ class VariantSelects extends HTMLElement {
 
   updatePriceContainers(node) {
     const otpPrice = node.dataset.price;
+    const comparePrice = node.dataset.compareAtPrice;
+
+    console.log(otpPrice.replace(/\D/g, ""), comparePrice.replace(/\D/g, ""));
     if (!otpPrice) return;
 
     let subscriptionPrice = otpPrice.match(/\$([\d.]+)/);
@@ -1176,7 +1179,30 @@ class VariantSelects extends HTMLElement {
     const otpDiv = document.querySelector(".otp_div");
 
     subDiv.querySelector("span.sub-div-price").textContent = subscriptionPrice;
-    otpDiv.querySelector("span").textContent = otpPrice;
+
+    if (
+      Number(otpPrice.replace(/\D/g, "")) <
+      Number(comparePrice.replace(/\D/g, ""))
+    ) {
+      otpDiv.querySelector(".custom-is-on-sale").classList.add("active");
+      otpDiv.querySelector("span.custom-price").textContent = otpPrice;
+      otpDiv.querySelector("span.custom-compare-at-price").textContent =
+        comparePrice;
+
+      const otpPriceNumeric = Number(otpPrice.replace(/\D/g, ""));
+      const comparePriceNumeric = Number(comparePrice.replace(/\D/g, ""));
+
+      const percentageDifference = Math.abs(
+        ((otpPriceNumeric - comparePriceNumeric) / comparePriceNumeric) * 100
+      );
+
+      const result = Math.round(percentageDifference); // toFixed(2) is used to round the number to 2 decimal places
+
+      otpDiv.querySelector(".custom-badge-percentage").textContent = result;
+    } else {
+      otpDiv.querySelector("span.custom-price").textContent = otpPrice;
+      otpDiv.querySelector(".custom-is-on-sale").classList.remove("active");
+    }
   }
 
   updateSellingPlanContainers() {
