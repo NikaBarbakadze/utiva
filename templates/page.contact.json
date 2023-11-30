@@ -42,6 +42,27 @@
     "faq": {
       "type": "custom-contact-faq",
       "blocks": {
+        "4e19bd46-1f39-45ec-b8e5-d08729b4c8aa": {
+          "type": "shipping",
+          "settings": {
+            "question": "Is shipping free?",
+            "answer": "Free standard shipping is available to all  orders over $50+. To be eligible for free shipping your subtotal must be greater than $50 once any promotions or discounts are applied. Orders under $50 will be charged a $10 shipping fee."
+          }
+        },
+        "5f81f5b6-22bc-4bf7-ba33-59fac7fd5428": {
+          "type": "shipping",
+          "settings": {
+            "question": "How long will my order take?",
+            "answer": "Our goal is to ensure your Utiva order is received as soon as possible. We process and ship all orders within 1-2 business days (Monday through Friday, not including holidays). All orders received before 11:00 AM are shipped same-day. GTA and Ontario order delivery is typically between 1-4 business days after your purchase (excluding weekends and holidays)Rest of Canada is typically between 2-6 business days days after your purchase (excluding weekends and holidays)Please note, we cannot always guarantee these delivery windows, as mail carriers may encounter delays beyond our control."
+          }
+        },
+        "93fe2e6f-9db0-4818-82b7-5c155876c2c5": {
+          "type": "shipping",
+          "settings": {
+            "question": "How can I view \/ track my order?",
+            "answer": "You can check the status of your order by <a href=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\" target=\"_blank\" title=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\">signing into your account<\/a>. After you have signed in, you will be able to view your order and its fulfillment status. Once your order has shipped, you will receive an email from us with your tracking number. You can use this number to track your package. Please allow 48 hours for the tracking information to become available."
+          }
+        },
         "bc1dacc4-a198-4a5d-9c96-1fe6250c8bb1": {
           "type": "shipping",
           "settings": {
@@ -54,13 +75,6 @@
           "settings": {
             "question": "What is the return policy for the supplement?",
             "answer": "At Utiva, we offer free shipping on orders over $50 and therefore most of products already quality for this. Orders that are placed before 11am will ship out the same day. Order placed after 11am will ship the following business day."
-          }
-        },
-        "5f81f5b6-22bc-4bf7-ba33-59fac7fd5428": {
-          "type": "shipping",
-          "settings": {
-            "question": "How long will my order take?",
-            "answer": "<em>All orders received before 11:00 AM are shipped same-day. <\/em>GTA and Ontario orders are delivered the following day for 1-4 business days. Rest of Canada is approximately 2-6 business days."
           }
         },
         "ddacda5f-0de1-4770-a1eb-805ae1c0117c": {
@@ -76,22 +90,16 @@
             "question": "How can I update my order, delivery address once the order is submitted?",
             "answer": "For any changes to an existing order, please email us at <a href=\"mailto:hello@utivahealth.com\">hello@utivahealth.com<\/a> and\/or call us at 1-888-622-3613."
           }
-        },
-        "4e19bd46-1f39-45ec-b8e5-d08729b4c8aa": {
-          "type": "shipping",
-          "settings": {
-            "question": "Is shipping free?",
-            "answer": "Free standard shipping is available to all  orders over $50+. To be eligible for free shipping your subtotal must be greater than $50 once any promotions or discounts are applied. Orders under $50 will be charged a $10 shipping fee."
-          }
         }
       },
       "block_order": [
+        "4e19bd46-1f39-45ec-b8e5-d08729b4c8aa",
+        "5f81f5b6-22bc-4bf7-ba33-59fac7fd5428",
+        "93fe2e6f-9db0-4818-82b7-5c155876c2c5",
         "bc1dacc4-a198-4a5d-9c96-1fe6250c8bb1",
         "ff9e1d70-5f85-4766-9bb9-0813ba364a35",
-        "5f81f5b6-22bc-4bf7-ba33-59fac7fd5428",
         "ddacda5f-0de1-4770-a1eb-805ae1c0117c",
-        "f61bbfc5-2c45-4acf-8bfd-4ce44c9440c1",
-        "4e19bd46-1f39-45ec-b8e5-d08729b4c8aa"
+        "f61bbfc5-2c45-4acf-8bfd-4ce44c9440c1"
       ],
       "settings": {
         "title": "Get the info you're looking for right now",
