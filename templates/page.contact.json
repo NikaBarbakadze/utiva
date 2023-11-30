@@ -63,6 +63,13 @@
             "answer": "You can check the status of your order by <a href=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\" target=\"_blank\" title=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\">signing into your account<\/a>. After you have signed in, you will be able to view your order and its fulfillment status. Once your order has shipped, you will receive an email from us with your tracking number. You can use this number to track your package. Please allow 48 hours for the tracking information to become available."
           }
         },
+        "f5c90d44-959e-4749-8e7d-c4f26ea0630e": {
+          "type": "shipping",
+          "settings": {
+            "question": "Can I make changes to or cancel my order?",
+            "answer": "As soon as your order has been accepted, we immediately begin processing to get it to you as soon as possible. Unfortunately, this means that we are unable to make any changes to orders once placed. If you need to make changes, you can contact us at hello@utivahealth.com or call us at 1-800-622-3613 and we will try our best to get to it before your order ships but cannot guarantee this."
+          }
+        },
         "bc1dacc4-a198-4a5d-9c96-1fe6250c8bb1": {
           "type": "shipping",
           "settings": {
@@ -91,11 +98,11 @@
             "answer": "For any changes to an existing order, please email us at <a href=\"mailto:hello@utivahealth.com\">hello@utivahealth.com<\/a> and\/or call us at 1-888-622-3613."
           }
         },
-        "f5c90d44-959e-4749-8e7d-c4f26ea0630e": {
+        "722fb7c9-26de-4895-888d-cbf0e0fd1342": {
           "type": "shipping",
           "settings": {
-            "question": "Can I make changes to or cancel my order?",
-            "answer": "As soon as your order has been accepted, we immediately begin processing to get it to you as soon as possible. Unfortunately, this means that we are unable to make any changes to orders once placed. If you need to make changes, you can contact us at hello@utivahealth.com or call us at 1-800-622-3613 and we will try our best to get to it before your order ships but cannot guarantee this."
+            "question": "Do you have a money-back guarantee?",
+            "answer": "Yes, we do have a 30-day money-back guarantee! We encourage you to try Utiva and want to ensure you are fully satisfied with your purchase. Should you wish to request a refund, please contact us within 30 days of your order. Just email our Support Team at hello@utivahealth.com or call us at 1-800-622-3613 with your order number and we'll be happy to help!"
           }
         }
       },
@@ -103,11 +110,12 @@
         "4e19bd46-1f39-45ec-b8e5-d08729b4c8aa",
         "5f81f5b6-22bc-4bf7-ba33-59fac7fd5428",
         "93fe2e6f-9db0-4818-82b7-5c155876c2c5",
+        "f5c90d44-959e-4749-8e7d-c4f26ea0630e",
         "bc1dacc4-a198-4a5d-9c96-1fe6250c8bb1",
         "ff9e1d70-5f85-4766-9bb9-0813ba364a35",
         "ddacda5f-0de1-4770-a1eb-805ae1c0117c",
         "f61bbfc5-2c45-4acf-8bfd-4ce44c9440c1",
-        "f5c90d44-959e-4749-8e7d-c4f26ea0630e"
+        "722fb7c9-26de-4895-888d-cbf0e0fd1342"
       ],
       "settings": {
         "title": "Get the info you're looking for right now",
