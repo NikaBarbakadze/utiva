@@ -133,13 +133,6 @@
             "answer": "Start my logging into your account <a href=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\" target=\"_blank\" title=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\"><span style=\"text-decoration:underline\">here<\/span><\/a>. To change your shipping address, under the profile section you can edit your shipping information."
           }
         },
-        "63d9cb5f-9a5b-4dca-857a-8f8df39d9bb2": {
-          "type": "sub",
-          "settings": {
-            "question": "How can I change my shipping information?",
-            "answer": "Start my logging into your account <span style=\"text-decoration:underline\">here<\/span>. To change your shipping address, under the profile section you can edit your shipping information."
-          }
-        },
         "742817df-e951-42ca-a3a7-487a4120bd0a": {
           "type": "sub",
           "settings": {
@@ -183,7 +176,6 @@
         "03b7191d-ab26-4eca-8544-2260ed7a8370",
         "4c44c704-2f51-4b83-99ba-60437badacb7",
         "cfecf529-4c77-4ee0-81f9-bd4a3de30f62",
-        "63d9cb5f-9a5b-4dca-857a-8f8df39d9bb2",
         "742817df-e951-42ca-a3a7-487a4120bd0a",
         "81f926c4-4816-40ca-8da3-99f2bea3e9af",
         "a7ef335f-ba21-4b2c-9d0e-100414539f37",
