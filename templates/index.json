@@ -285,6 +285,15 @@
             "reviewed_product": "Bladder Health Supplement",
             "image": "shopify:\/\/shop_images\/Testimonial_BH.png"
           }
+        },
+        "29702452-a68d-4d1e-9d48-289d3bd34fac": {
+          "type": "video",
+          "settings": {
+            "user_video": "shopify:\/\/files\/videos\/Rachel Walker - UTI Story .mp4",
+            "user_name": "Rachel Walker",
+            "user_rating": "5",
+            "user_img": "shopify:\/\/shop_images\/Rachel_Walker.jpg"
+          }
         }
       },
       "block_order": [
@@ -292,7 +301,8 @@
         "d41d337b-b0e0-4a36-8f24-2c4d8b6a1cad",
         "d828798e-4427-40b8-af6f-08a2f30910e7",
         "01289a4a-ee13-4333-ab3b-7eb70af78d3a",
-        "8d53c16d-870f-4a90-963c-831c0115bc15"
+        "8d53c16d-870f-4a90-963c-831c0115bc15",
+        "29702452-a68d-4d1e-9d48-289d3bd34fac"
       ],
       "settings": {
         "paddingTop_mobile": 24,
