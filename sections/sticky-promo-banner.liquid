@@ -26,8 +26,9 @@
 </template> {% endcomment %}
 
 <script defer>
-	window._klOnsite = window._klOnsite || [];
-	document.addEventListener("DOMContentLoaded", function() {
+	document.addEventListener("load", function() {
+		window._klOnsite = window._klOnsite || [];
+
     const promoBanner = document.getElementById('sticky-promo-banner');
     const emailPopup = document.getElementById('custom-email-popup');
 
