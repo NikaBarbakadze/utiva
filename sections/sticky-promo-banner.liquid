@@ -21,9 +21,9 @@
 	</div>
 {% endif %}
 
-{% comment %} <template>
+<template>
 	<div class="bg-white klaviyo-form-{{ section.settings.klavyio-form-id }}"></div>
-</template> {% endcomment %}
+</template>
 
 <script defer>
 	document.addEventListener("DOMContentLoaded", function() {
@@ -35,8 +35,7 @@
 			window._klOnsite = window._klOnsite || [];
 			window._klOnsite.push(['openForm', '{{ section.settings.klavyio-form-id }}']);
     });
-});
-
+	});
 </script>
 
 {% schema %}
@@ -65,7 +64,7 @@
 			"type": "text",
 			"label": "Klavyio form ID",
 			"id": "klavyio-form-id",
-			"default": "RkEBeK"
+			"default": "QVP9Lv"
 		}
 	]
 }
