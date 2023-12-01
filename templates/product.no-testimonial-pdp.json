@@ -1,0 +1,206 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "variant_picker",
+        "buy_buttons"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "show",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "properties": {
+      "type": "product-properties",
+      "blocks": {
+        "2d42701e-c492-45b4-829a-332aa966405d": {
+          "type": "properties",
+          "settings": {
+            "text": "Antibiotic-Free",
+            "icon": "shopify:\/\/shop_images\/icn.svg"
+          }
+        },
+        "90cc3b85-c0d9-40d2-b5eb-0d16a2c62699": {
+          "type": "properties",
+          "settings": {
+            "text": "Vegan & Halal",
+            "icon": "shopify:\/\/shop_images\/icn-1.svg"
+          }
+        },
+        "f2b50b29-3ef7-45bc-b32d-90d2cc294230": {
+          "type": "properties",
+          "settings": {
+            "text": "Trusted quality",
+            "icon": "shopify:\/\/shop_images\/icn-2.svg"
+          }
+        },
+        "e3fcab3d-f912-4889-80cf-5b7fb62d5a5e": {
+          "type": "properties",
+          "settings": {
+            "text": "Less fillers",
+            "icon": "shopify:\/\/shop_images\/icn-3.svg"
+          }
+        },
+        "4aaf08c0-9c6f-461e-9a3c-1db3726230b1": {
+          "type": "properties",
+          "settings": {
+            "text": "Gluten-Free",
+            "icon": "shopify:\/\/shop_images\/icn-4.svg"
+          }
+        },
+        "69810fe6-c4e0-40e9-aa3f-46e84588cb1b": {
+          "type": "properties",
+          "settings": {
+            "text": "Locally made",
+            "icon": "shopify:\/\/shop_images\/icn-5.svg"
+          }
+        }
+      },
+      "block_order": [
+        "2d42701e-c492-45b4-829a-332aa966405d",
+        "90cc3b85-c0d9-40d2-b5eb-0d16a2c62699",
+        "f2b50b29-3ef7-45bc-b32d-90d2cc294230",
+        "e3fcab3d-f912-4889-80cf-5b7fb62d5a5e",
+        "4aaf08c0-9c6f-461e-9a3c-1db3726230b1",
+        "69810fe6-c4e0-40e9-aa3f-46e84588cb1b"
+      ],
+      "settings": {
+      }
+    },
+    "proven-effectiveness": {
+      "type": "proven-effectiveness",
+      "settings": {
+        "title": "Proven Effectiveness"
+      }
+    },
+    "c8dae995-780a-4003-9876-093a01bd3220": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"445219\" data-yotpo-product-id=\"{{product.id}}\" data-yotpo-name=\"{{ product.title | escape }}\" data-yotpo-url=\"{{ shop.url }}{{ product.url }}\" data-yotpo-image-url=\"{{ product.featured_image | product_img_url: \"large\" | prepend: \"https:\" | replace: '?', '%3F' | replace: '&','%26'}}\" data-yotpo-price=\"{{ product.price | divided_by: 100.00 }}\" data-yotpo-currency=\"{{ shop.currency }}\" data-yotpo-description=\"{{ product.description | escape }}\"><\/div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "how-to-use": {
+      "type": "how-to-use",
+      "settings": {
+        "title": "How to use"
+      }
+    },
+    "new-trusted-recommended-doctors": {
+      "type": "new-trusted-recommended-doctors",
+      "blocks": {
+        "2d42196f-364c-4153-9050-fe3a46837cdf": {
+          "type": "text",
+          "settings": {
+            "doctors_image": "shopify:\/\/shop_images\/ceccacad3c7ff53f3aa2f2a65265e78b.png",
+            "title": "Managing urinary tract health can be complex",
+            "description": "<p>Antibiotics are the first line treatment, but there are clinically proven options to help prevent. When considering cranberry supplements, I recommend my patients select a product with 36 mg of PACs.<\/p>",
+            "doctors_name": "Dr. Colleen McDermott",
+            "position": "Urogynecologist"
+          }
+        },
+        "d78cbc73-7151-4116-8433-c6f957683800": {
+          "type": "text",
+          "settings": {
+            "doctors_image": "shopify:\/\/shop_images\/image_512_010d3567-2f73-4e35-b834-1212963b6695.png",
+            "title": "Overuse of antibiotics is a concern",
+            "description": "<p>I always consider natural options to help manage urinary tract health in my patients. Utiva is a great, clean cranberry product which has been very effective in many of my patients.<\/p>",
+            "doctors_name": "Dr. Yanina Barbalat",
+            "position": "Urologist"
+          }
+        },
+        "21fb4f97-5504-4a87-a0aa-12fb6b2fe3dc": {
+          "type": "text",
+          "settings": {
+            "doctors_image": "shopify:\/\/shop_images\/image_513_6caf6acb-6b77-4bd4-8686-aaf7e4ad985d.png",
+            "title": "Using Utiva with patients has been great",
+            "description": "<p>There is a lot of evidence that shows that cranberry supplements are safe and effective. You can find all sorts of cranberry supplements  but if they don’t have that 36 mg PAC and measured by DMAC\/A2 then they are a waste of money.<\/p>",
+            "doctors_name": "Dr. Emily Rutledge",
+            "position": "Urogynecologist"
+          }
+        },
+        "c647f522-e133-46a8-83ca-7cecce112a9c": {
+          "type": "text",
+          "settings": {
+            "doctors_image": "shopify:\/\/shop_images\/image_514.png",
+            "title": "Utiva is clinically proven",
+            "description": "<p>According to clinical studies you need 36 mg PACs to prevent bacteria from forming an infection in the urinary tract. Utiva is the only brand that has the right dose of cranberry PACs to help prevent UTIs.<\/p>",
+            "doctors_name": "Dr. Colleen McDermott",
+            "position": "Urogynecologist"
+          }
+        }
+      },
+      "block_order": [
+        "2d42196f-364c-4153-9050-fe3a46837cdf",
+        "d78cbc73-7151-4116-8433-c6f957683800",
+        "21fb4f97-5504-4a87-a0aa-12fb6b2fe3dc",
+        "c647f522-e133-46a8-83ca-7cecce112a9c"
+      ],
+      "settings": {
+        "paddingTop_mobile": 0,
+        "paddingBottom_mobile": 48,
+        "paddingTop_desktop": 120,
+        "paddingBottom_desktop": 120,
+        "title": "Trusted and recommended by over 10,000 doctors",
+        "button_text": "See all",
+        "button_url": "shopify:\/\/pages\/about-us"
+      }
+    },
+    "product-slider": {
+      "type": "product-slider",
+      "settings": {
+        "paddingTop_mobile": 0,
+        "paddingBottom_mobile": 40,
+        "paddingTop_desktop": 120,
+        "paddingBottom_desktop": 80,
+        "title": "Our most popular solutions",
+        "button_text": "Shop all",
+        "button_url": "",
+        "collection": "best-sellers"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "properties",
+    "proven-effectiveness",
+    "c8dae995-780a-4003-9876-093a01bd3220",
+    "how-to-use",
+    "new-trusted-recommended-doctors",
+    "product-slider"
+  ]
+}
