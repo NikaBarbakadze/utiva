@@ -26,14 +26,14 @@
 </template> {% endcomment %}
 
 <script defer>
-	document.addEventListener("load", function() {
-		window._klOnsite = window._klOnsite || [];
+	document.addEventListener("DOMContentLoaded", function() {
 
     const promoBanner = document.getElementById('sticky-promo-banner');
     const emailPopup = document.getElementById('custom-email-popup');
 
     promoBanner.addEventListener('click', function() {
-			window._klOnsite.push('openForm','{{ section.settings.klavyio-form-id }}');
+			window._klOnsite = window._klOnsite || [];
+			window._klOnsite.push(['openForm', '{{ section.settings.klavyio-form-id }}']);
     });
 });
 
