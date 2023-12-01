@@ -91,7 +91,7 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 gap-y-[56px] my-6 lg:my-10">
                     {% for article in blog.articles offset: 4 %}
                         {% if forloop.index == 3 %}
-                            <div class="rounded-[24px] bg-[#E3F2F0] p-6 lg:p-8 flex flex-col gap-6 items-start justify-between">
+                            {% comment %} <div class="rounded-[24px] bg-[#E3F2F0] p-6 lg:p-8 flex flex-col gap-6 items-start justify-between">
                                 <div class="flex gap-4 items-center">
                                     <div class="basis-1/3">
                                         <img src="https://cdn.shopify.com/s/files/1/0152/2181/7444/files/image_16.jpg?v=1697129087" alt="">
@@ -116,7 +116,8 @@
 
                                       {% endform %}
                                 </div>
-                            </div>
+                            </div> {% endcomment %}
+                            <div class="klaviyo-form-YhBAti"></div>
                         {% endif %}
                         {% render "custom-blog-card", article: article, index: forloop.index %}
                     {% endfor %}
