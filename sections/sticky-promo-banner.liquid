@@ -21,21 +21,18 @@
 	</div>
 {% endif %}
 
-<template>
+{% comment %} <template>
 	<div class="bg-white klaviyo-form-{{ section.settings.klavyio-form-id }}"></div>
-</template>
+</template> {% endcomment %}
 
 <script defer>
 	document.addEventListener("DOMContentLoaded", function() {
     const promoBanner = document.getElementById('sticky-promo-banner');
     const emailPopup = document.getElementById('custom-email-popup');
 
-		const instance = basicLightbox.create(
-			document.querySelector('template')
-		)
-
     promoBanner.addEventListener('click', function() {
-			instance.show()
+
+			window._klOnsite.push({ openForm: '{{ section.settings.klavyio-form-id }}' });
     });
 });
 
