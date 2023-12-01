@@ -37,6 +37,14 @@
 				--padding-bottom: {{ section.settings.paddingBottom_mobile }}px;
 			}
 		}
+
+		{% if template contains "product" %}
+			{% if product.metafields.custom.show_testimonials_section != true %}
+				.customer-feedback{
+					display: none !important;
+				}
+			{% endif %}
+		{% endif %}
 {% endstyle %}
 
 <div
