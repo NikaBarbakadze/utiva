@@ -26,8 +26,17 @@
 			<a href="/account">
 				{% render 'icon', icon: 'account-32' %}
 			</a>
-			<a href="javascipt:void()" onclick="document.querySelector('#cart-icon-bubble').click();">
-			{% render 'icon', icon: 'cart-32' %}
+			<a href="javascipt:void()" class="relative cart-icon-bubble-mobile" id="cart-icon-bubble-mobile" onclick="document.querySelector('#cart-icon-bubble').click();">
+				{% render 'icon', icon: 'cart-32' %}
+				<span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
+				{%- if cart != empty -%}
+					<div class="cart-count-bubble">
+						{%- if cart.item_count < 100 -%}
+							<span aria-hidden="true">{{ cart.item_count }}</span>
+						{%- endif -%}
+						<span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+					</div>
+				{%- endif -%}
 			</a>
 		</div>
 

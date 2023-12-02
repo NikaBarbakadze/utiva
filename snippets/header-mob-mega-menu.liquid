@@ -5,7 +5,7 @@
 		<li class='mega-menu__mob--item'>
 			<a href='{{ link.url }}' class='mega-menu__mob--link'>{{ link.title }}</a>
 			{% if link.links.size > 0 %}
-				<ul class='mega-menu__nested'>
+				<ul class='mega-menu__nested relative left-4'>
 					{% for child_link in link.links %}
 						<li class='mega-menu__nested--item'>
 							<a href='{{ child_link.url }}' class='mega-menu__nested--link'>

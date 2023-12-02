@@ -700,6 +700,14 @@ video {
   top: 1rem;
 }
 
+.left-3 {
+  left: 12px;
+}
+
+.left-4 {
+  left: 16px;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -1751,10 +1759,6 @@ video {
   padding: 1.5rem;
 }
 
-.p-0 {
-  padding: 0px;
-}
-
 .\!px-0 {
   padding-left: 0px !important;
   padding-right: 0px !important;
@@ -1803,6 +1807,11 @@ video {
 .px-3 {
   padding-left: 12px;
   padding-right: 12px;
+}
+
+.px-3\.5 {
+  padding-left: 14px;
+  padding-right: 14px;
 }
 
 .px-4 {
@@ -1925,13 +1934,12 @@ video {
   padding-bottom: 6rem;
 }
 
-.px-3\.5 {
-  padding-left: 14px;
-  padding-right: 14px;
-}
-
 .\!pb-0 {
   padding-bottom: 0px !important;
+}
+
+.\!pb-\[20px\] {
+  padding-bottom: 20px !important;
 }
 
 .\!pl-10 {
@@ -2054,14 +2062,6 @@ video {
   padding-top: 6rem;
 }
 
-.pb-\[20px\] {
-  padding-bottom: 20px;
-}
-
-.\!pb-\[20px\] {
-  padding-bottom: 20px !important;
-}
-
 .text-left {
   text-align: left;
 }
@@ -2158,6 +2158,10 @@ video {
 .text-xs {
   font-size: 12px;
   line-height: 16px;
+}
+
+.\!font-medium {
+  font-weight: 500 !important;
 }
 
 .\!font-normal {
@@ -3613,6 +3617,11 @@ video {
     padding-right: 96px;
   }
 
+  .lg\:px-5 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .lg\:px-6 {
     padding-left: 24px;
     padding-right: 24px;
@@ -3626,11 +3635,6 @@ video {
   .lg\:py-2\.5 {
     padding-top: 10px;
     padding-bottom: 10px;
-  }
-
-  .lg\:px-5 {
-    padding-left: 20px;
-    padding-right: 20px;
   }
 
   .lg\:pb-4 {
