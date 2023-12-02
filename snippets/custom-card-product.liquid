@@ -43,7 +43,7 @@
                     </g>
                 </svg>
                 <span> {% if product.metafields.yotpo.reviews_average != blank %} {{ product.metafields.yotpo.reviews_average | round: 1 }} {% else %} 5.0 {% endif %}</span>
-                {% if product.metafields.reviews.rating_count != blank %}<span>({{ product.metafields.reviews.rating_count }})</span>{% endif %}
+                {% if product.metafields.yotpo.reviews_count != blank %}<span>({{ product.metafields.yotpo.reviews_count }})</span>{% endif %}
             </figure>
         </div>
     </div>
