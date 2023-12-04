@@ -24,7 +24,7 @@
 						type='checkbox'
 						class='toggle__input'
 						id='header-desk__toggle'
-						{% if request.host contains "fr." %}
+						{% if localization.language.iso_code == "fr" %}
 							checked
 						{% endif %}
 					>

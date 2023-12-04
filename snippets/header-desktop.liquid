@@ -204,9 +204,9 @@
 				<label class='toggle' for='header-desk__toggle'>
 					<input
 						type='checkbox'
-						class='toggle__input {{ request.host }} '
+						class='toggle__input'
 						id='header-desk__toggle'
-						{% if request.host contains "fr." %}
+						{% if localization.language.iso_code == "fr" %}
 							checked
 						{% endif %}
 					>
