@@ -108,6 +108,15 @@
     "customer-testimonials": {
       "type": "customer-testimonials",
       "blocks": {
+        "ec4ae0b1-f27a-49c0-8fbd-1a3119e0a70c": {
+          "type": "video",
+          "settings": {
+            "user_video": "shopify:\/\/files\/videos\/Jane Barkley's UTI Story  (1).mp4",
+            "user_name": "Jane | Menopause related UTIs",
+            "user_rating": "5",
+            "user_img": "shopify:\/\/shop_images\/Rachel_Walker.jpg"
+          }
+        },
         "d828798e-4427-40b8-af6f-08a2f30910e7": {
           "type": "text",
           "settings": {
@@ -150,22 +159,23 @@
             "image": "shopify:\/\/shop_images\/Testimonial_BH.png"
           }
         },
-        "ec4ae0b1-f27a-49c0-8fbd-1a3119e0a70c": {
+        "e6f1bf4a-ec0b-4a88-b79e-6668bcfa00c7": {
           "type": "video",
           "settings": {
-            "user_video": "shopify:\/\/files\/videos\/Jane Barkley's UTI Story  (1).mp4",
-            "user_name": "Jane | Menopause related UTIs",
+            "user_video": "shopify:\/\/files\/videos\/Rachel Walker - UTI Story .mp4",
+            "user_name": "Rachel | Recurrent UTIs",
             "user_rating": "5",
             "user_img": "shopify:\/\/shop_images\/Rachel_Walker.jpg"
           }
         }
       },
       "block_order": [
+        "ec4ae0b1-f27a-49c0-8fbd-1a3119e0a70c",
         "d828798e-4427-40b8-af6f-08a2f30910e7",
         "01289a4a-ee13-4333-ab3b-7eb70af78d3a",
         "1dc78747-aa0c-422c-a6cf-2bb9914b1002",
         "8d53c16d-870f-4a90-963c-831c0115bc15",
-        "ec4ae0b1-f27a-49c0-8fbd-1a3119e0a70c"
+        "e6f1bf4a-ec0b-4a88-b79e-6668bcfa00c7"
       ],
       "settings": {
         "paddingTop_mobile": 24,
