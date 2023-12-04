@@ -34,6 +34,16 @@ window.TriplePixelData={TripleName:"utiva.myshopify.com",ver:"1.9",plat:"SHOPIFY
       <meta name="description" content="{{ page_description | escape }}">
     {% endif %}
 
+    <meta name="google-site-verification" content="2bcKVxBKujX46mFr3eif_x_JXzeklotRnZBONfKj838"/>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MNQ2T9T');</script>
+    <!-- End Google Tag Manager -->
+
     {% render 'meta-tags' %}
 
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
@@ -42,6 +52,10 @@ window.TriplePixelData={TripleName:"utiva.myshopify.com",ver:"1.9",plat:"SHOPIFY
     {%- if settings.animations_reveal_on_scroll -%}
       <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+
+    {% if template.suffix contains 'bm-hcp' or request.path == "/pages/uti-thumbs-up" or request.path == "/pages/survey-not-purchase" or request.path == "/pages/uti-thumbs-down" or request.path == "/pages/oab-thumbs-up" or request.path == "/pages/oab-thumbs-down" %} 
+      <meta name="robots" content="noindex,nofollow">
+    {% endif %}
 
     {{ content_for_header }}
 
@@ -428,11 +442,31 @@ window.TriplePixelData={TripleName:"utiva.myshopify.com",ver:"1.9",plat:"SHOPIFY
 				display: none;
 			}
 		</style>
+
+        <!-- SegMetrics -->
+    <script type="text/javascript">
+      var _segq = _segq || [];
+      var _segs = _segs || {};
+      (function() {
+        var dc = document.createElement('script');
+        dc.type = 'text/javascript';
+        dc.async = true;
+        dc.src = '//tag.segmetrics.io/a1o3WX.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(dc, s);
+      })();
+    </script>
+    <!-- SegMetrics END -->
     
     <script src="https://cdn-widgetsrepository.yotpo.com/v1/loader/3NhG13UQDuUl6r31Ov5IEKsACm6Md9TxF4TTruxD" async></script>
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MNQ2T9T"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
