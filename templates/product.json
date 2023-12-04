@@ -135,17 +135,6 @@
             "user_img": "shopify:\/\/shop_images\/women.png"
           }
         },
-        "d828798e-4427-40b8-af6f-08a2f30910e7": {
-          "type": "text",
-          "settings": {
-            "review_rating": "4.9",
-            "name": "Alaina Mills",
-            "title": "I am so thankful for this product!",
-            "description": "<p>About 3 years ago I started getting UTIs. I went from having a UTI here and there to having chronic UTIs. Ever since I started taking Utiva a couple of months ago, I haven’t had any infections and my bladder health feels more secure and protected. I am so thankful for this product, and I am definitely going to stay on it for the rest of my life.<\/p>",
-            "reviewed_product": "D-Mannose Supplement",
-            "image": "shopify:\/\/shop_images\/Testimonial_Dmannose.png"
-          }
-        },
         "01289a4a-ee13-4333-ab3b-7eb70af78d3a": {
           "type": "text",
           "settings": {
@@ -156,26 +145,13 @@
             "reviewed_product": "CranberryPACS",
             "image": "shopify:\/\/shop_images\/Testimonial_PACs.png"
           }
-        },
-        "8d53c16d-870f-4a90-963c-831c0115bc15": {
-          "type": "text",
-          "settings": {
-            "review_rating": "5.0",
-            "name": "Anonymous",
-            "title": "Pleasantly surprised!",
-            "description": "<p>I was pleasantly surprised by how quickly I started noticing changes. Within the first few weeks I noticed less urgency and frequency in needing the bathroom. Symptoms have continued to improve at the 3 month mark now and I am very happy!! A quality product with excellent results and quick shipping.<\/p>",
-            "reviewed_product": "Bladder Health Supplement",
-            "image": "shopify:\/\/shop_images\/Testimonial_BH.png"
-          }
         }
       },
       "block_order": [
         "ec4ae0b1-f27a-49c0-8fbd-1a3119e0a70c",
         "e6f1bf4a-ec0b-4a88-b79e-6668bcfa00c7",
         "1dc78747-aa0c-422c-a6cf-2bb9914b1002",
-        "d828798e-4427-40b8-af6f-08a2f30910e7",
-        "01289a4a-ee13-4333-ab3b-7eb70af78d3a",
-        "8d53c16d-870f-4a90-963c-831c0115bc15"
+        "01289a4a-ee13-4333-ab3b-7eb70af78d3a"
       ],
       "settings": {
         "paddingTop_mobile": 24,
