@@ -139,20 +139,10 @@
         "include_margins": true
       }
     },
-    "6a181839-02dd-4278-a639-f32de2ce0cc8": {
-      "type": "page",
-      "settings": {
-        "page": "",
-        "heading_size": "h1",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "a0c71852-e568-432c-9382-cdadf4b3d32c": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "",
+        "custom_liquid": "<div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"505575\"><\/div>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
@@ -162,7 +152,6 @@
   "order": [
     "main",
     "170171686610c25725",
-    "6a181839-02dd-4278-a639-f32de2ce0cc8",
     "a0c71852-e568-432c-9382-cdadf4b3d32c"
   ]
 }
