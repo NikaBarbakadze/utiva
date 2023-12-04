@@ -126,14 +126,22 @@
         "3b4ab5b1-8c93-4a54-b4ae-1a63b30a81a1",
         "58d845d6-e559-4782-9db2-c8307cc8f719"
       ],
+      "disabled": true,
       "settings": {
         "title": "In the Press",
         "paragraph": "If you’re a member of the media and would like to talk, please get in touch by sending an email to",
         "email_address": "hello@utivahealth.com"
       }
+    },
+    "170171686610c25725": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "170171686610c25725"
   ]
 }
