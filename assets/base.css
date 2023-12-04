@@ -4016,3 +4016,54 @@ input, textarea, select, .faux-select {
 cart-drawer-items.is-empty{
   display: none;
 }
+
+.input-new__container > div{
+  width: 100%;
+}
+
+.input-new__container input{
+  border: none !important;
+  border-bottom: 1px solid #cec7c0 !important;
+  font-size: 24px !important;
+}
+
+.input-new__container button{
+  border-bottom: 1px solid #cec7c0 !important;
+  position: relative;
+
+}
+
+.input-new__container input::placeholder{
+  font-size: 24px !important;
+}
+.input-new__container input:hover{
+  border-bottom: 1px solid #1c1c1c !important;
+
+}
+
+
+@media screen and (max-width: 768px) {
+  .input-new__container input{
+    border: none !important;
+    border-bottom: 1px solid #cec7c0 !important;
+    font-size: 16px !important;
+    height: 54px !important;
+  }
+
+  .input-new__container button{
+    border-bottom: 1px solid #cec7c0 !important;
+    position: relative;
+    top: 0.5px;
+  }
+  
+  .input-new__container input::placeholder{
+    font-size: 16px !important;
+  }
+  .input-new__container form > div{
+    min-height: 54px !important;
+  }
+
+  .input-new__container button img{
+    scale: 0.7;
+  }
+}
