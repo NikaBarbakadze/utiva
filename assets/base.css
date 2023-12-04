@@ -4012,3 +4012,7 @@ input, textarea, select, .faux-select {
 .custom-is-on-sale.active .custom-badge{
   display: flex !important;
 }
+
+cart-drawer-items.is-empty{
+  display: none;
+}

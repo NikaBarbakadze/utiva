@@ -155,7 +155,7 @@ class CartDrawerItems extends CartItems {
       },
       {
         id: "cart-icon-bubble-mobile",
-        section: "cart-icon-bubble",
+        section: "cart-icon-bubble-mobile",
         selector: ".shopify-section",
       },
     ];
