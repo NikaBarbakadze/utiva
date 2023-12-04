@@ -235,20 +235,11 @@
     "customer-testimonials": {
       "type": "customer-testimonials",
       "blocks": {
-        "1dc78747-aa0c-422c-a6cf-2bb9914b1002": {
-          "type": "video",
-          "settings": {
-            "user_video": "shopify:\/\/files\/videos\/Elaine Li-2.mp4",
-            "user_name": "Elaine | UTI story",
-            "user_rating": "5.0",
-            "user_img": "shopify:\/\/shop_images\/women.png"
-          }
-        },
         "d41d337b-b0e0-4a36-8f24-2c4d8b6a1cad": {
           "type": "video",
           "settings": {
             "user_video": "shopify:\/\/files\/videos\/Jane Barkley's UTI Story-Modified.mp4",
-            "user_name": "Jane Barkley",
+            "user_name": "Jane | Menopause related UTIs",
             "user_rating": "5.0",
             "user_img": "shopify:\/\/shop_images\/Jane_2.png"
           }
@@ -260,6 +251,15 @@
             "user_name": "Rachel Walker",
             "user_rating": "5",
             "user_img": "shopify:\/\/shop_images\/Rachel_Walker.jpg"
+          }
+        },
+        "1dc78747-aa0c-422c-a6cf-2bb9914b1002": {
+          "type": "video",
+          "settings": {
+            "user_video": "shopify:\/\/files\/videos\/Elaine Li-2.mp4",
+            "user_name": "Elaine | UTI story",
+            "user_rating": "5.0",
+            "user_img": "shopify:\/\/shop_images\/women.png"
           }
         },
         "d828798e-4427-40b8-af6f-08a2f30910e7": {
@@ -297,9 +297,9 @@
         }
       },
       "block_order": [
-        "1dc78747-aa0c-422c-a6cf-2bb9914b1002",
         "d41d337b-b0e0-4a36-8f24-2c4d8b6a1cad",
         "29702452-a68d-4d1e-9d48-289d3bd34fac",
+        "1dc78747-aa0c-422c-a6cf-2bb9914b1002",
         "d828798e-4427-40b8-af6f-08a2f30910e7",
         "01289a4a-ee13-4333-ab3b-7eb70af78d3a",
         "8d53c16d-870f-4a90-963c-831c0115bc15"
