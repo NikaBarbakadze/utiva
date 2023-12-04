@@ -114,7 +114,25 @@
             "user_video": "shopify:\/\/files\/videos\/Jane Barkley's UTI Story  (1).mp4",
             "user_name": "Jane | Menopause related UTIs",
             "user_rating": "5",
+            "user_img": "shopify:\/\/shop_images\/Jane_2.png"
+          }
+        },
+        "e6f1bf4a-ec0b-4a88-b79e-6668bcfa00c7": {
+          "type": "video",
+          "settings": {
+            "user_video": "shopify:\/\/files\/videos\/Rachel Walker - UTI Story .mp4",
+            "user_name": "Rachel | Recurrent UTIs",
+            "user_rating": "5",
             "user_img": "shopify:\/\/shop_images\/Rachel_Walker.jpg"
+          }
+        },
+        "1dc78747-aa0c-422c-a6cf-2bb9914b1002": {
+          "type": "video",
+          "settings": {
+            "user_video": "shopify:\/\/files\/videos\/Elaine Li-2.mp4",
+            "user_name": "Elaine Li",
+            "user_rating": "5.0",
+            "user_img": "shopify:\/\/shop_images\/women.png"
           }
         },
         "d828798e-4427-40b8-af6f-08a2f30910e7": {
@@ -139,15 +157,6 @@
             "image": "shopify:\/\/shop_images\/Testimonial_PACs.png"
           }
         },
-        "1dc78747-aa0c-422c-a6cf-2bb9914b1002": {
-          "type": "video",
-          "settings": {
-            "user_video": "shopify:\/\/files\/videos\/Elaine Li-2.mp4",
-            "user_name": "Elaine Li",
-            "user_rating": "5.0",
-            "user_img": "shopify:\/\/shop_images\/women.png"
-          }
-        },
         "8d53c16d-870f-4a90-963c-831c0115bc15": {
           "type": "text",
           "settings": {
@@ -158,24 +167,15 @@
             "reviewed_product": "Bladder Health Supplement",
             "image": "shopify:\/\/shop_images\/Testimonial_BH.png"
           }
-        },
-        "e6f1bf4a-ec0b-4a88-b79e-6668bcfa00c7": {
-          "type": "video",
-          "settings": {
-            "user_video": "shopify:\/\/files\/videos\/Rachel Walker - UTI Story .mp4",
-            "user_name": "Rachel | Recurrent UTIs",
-            "user_rating": "5",
-            "user_img": "shopify:\/\/shop_images\/Rachel_Walker.jpg"
-          }
         }
       },
       "block_order": [
         "ec4ae0b1-f27a-49c0-8fbd-1a3119e0a70c",
+        "e6f1bf4a-ec0b-4a88-b79e-6668bcfa00c7",
+        "1dc78747-aa0c-422c-a6cf-2bb9914b1002",
         "d828798e-4427-40b8-af6f-08a2f30910e7",
         "01289a4a-ee13-4333-ab3b-7eb70af78d3a",
-        "1dc78747-aa0c-422c-a6cf-2bb9914b1002",
-        "8d53c16d-870f-4a90-963c-831c0115bc15",
-        "e6f1bf4a-ec0b-4a88-b79e-6668bcfa00c7"
+        "8d53c16d-870f-4a90-963c-831c0115bc15"
       ],
       "settings": {
         "paddingTop_mobile": 24,
