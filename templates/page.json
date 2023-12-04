@@ -3,7 +3,7 @@
     "main": {
       "type": "main-page",
       "custom_css": [
-        ".section-template--16918648652026__main-padding{max-width: 990px;}"
+        ".section-template--16918648652026__main-padding {max-width: 990px!important;}"
       ],
       "settings": {
         "padding_top": 28,
