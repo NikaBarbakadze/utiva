@@ -1,0 +1,139 @@
+{
+  "sections": {
+    "main": {
+      "type": "custom-press-listing",
+      "blocks": {
+        "01d93f58-05ba-4f51-bddb-eeda6c756efc": {
+          "type": "media_items",
+          "settings": {
+            "date": "July 15, 2023",
+            "title": "Your Risk of Getting a UTI Goes Up in Summer—Here’s What You Can Do To Prevent One",
+            "url": "https:\/\/www.wellandgood.com\/summer-uti-prevention-tips\/",
+            "image": "shopify:\/\/shop_images\/Logo_Well_Good.png",
+            "source": "www.wellandgood.com",
+            "alt_text": "Well + Good UTI prevention tips"
+          }
+        },
+        "83b84670-2df5-49c6-b954-70e7357ac790": {
+          "type": "media_items",
+          "settings": {
+            "date": "May 25, 2023",
+            "title": "Father’s Day Gift Guide: The Best Wellness Products For Dad",
+            "url": "https:\/\/www.forbes.com\/sites\/oliviaobryon\/2023\/05\/25\/fathers-day-gift-guide-the-best-wellness-products-for-dad\/?sh=342bf3ad309f&fbclid=IwAR257R0ch7ZivrJkej_oxvfPiV4eKfQ__mSykXWcP_SG4-F5O3JL-Az6Ync",
+            "image": "shopify:\/\/shop_images\/Logo-07.png",
+            "source": "www.forbes.com",
+            "alt_text": "Image Alt Text"
+          }
+        },
+        "2c214e27-7b3a-4504-a662-715e457d6a92": {
+          "type": "media_items",
+          "settings": {
+            "date": "May 4, 2023",
+            "title": "Utiva Health voted #1 Doctor Recommended OTC Brand for UTI Prevention in Canada",
+            "url": "https:\/\/finance.yahoo.com\/news\/utiva-health-voted-1-doctor-130200687.html?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAAB142qTkc32yRtosVCJ60FH7uzdQq0MBXsriAXF9BUDGrwoWgURi4tpGdwWR9T_YNfXuKCkNcWMp1tn9BaZUcxadFtbDfSkSgLEzSTrwUTmL9dzX7f3kj-xKmmrR2BRHv8K_Bw3TWPnjodcwhLYhDd18NXGDNZyr3OACyrhaOjPc",
+            "image": "shopify:\/\/shop_images\/Logo_Yahoo.png",
+            "source": "finance.yahoo.com",
+            "alt_text": "Yahoo Finance Logo"
+          }
+        },
+        "3d6e1a56-0cf9-465c-ba7f-f419e05277bf": {
+          "type": "media_items",
+          "settings": {
+            "date": "Apr 26, 2023",
+            "title": "Ranking Canada’s Top Growing Companies Of 2023",
+            "url": "https:\/\/www.theglobeandmail.com\/business\/rob-magazine\/top-growing-companies\/article-canadas-top-growing-companies-2023\/",
+            "image": "shopify:\/\/shop_images\/Logo_The_Globe_and_Mail_-_2.png",
+            "source": "www.theglobeandmail.com",
+            "alt_text": "Utiva ranked within Canada's top growing businesses"
+          }
+        },
+        "47283d27-3b4e-4244-99bd-0007442772fe": {
+          "type": "media_items",
+          "settings": {
+            "date": "Jan 26, 2023",
+            "title": "How Long Does A UTI Last And Can It Go Away On Its Own?",
+            "url": "https:\/\/www.womenshealthmag.com\/health\/a42590887\/how-long-does-uti-last\/",
+            "image": "shopify:\/\/shop_images\/Logo-04_aa22e644-f32e-4ce5-af27-e8935620682c.png",
+            "source": "www.womenshealthmag.com",
+            "alt_text": "Women's Health Logo"
+          }
+        },
+        "17ba72c3-62e0-4084-bcc8-0830c7ca9e76": {
+          "type": "media_items",
+          "settings": {
+            "date": "Jun 29, 2021",
+            "title": "Here’s how to know if you have a UTI—and ways to treat it",
+            "url": "https:\/\/www.cityline.tv\/video\/heres-how-to-know-if-you-have-a-uti-and-ways-to-treat-it\/",
+            "image": "shopify:\/\/shop_images\/Logo-06.png",
+            "source": "www.cityline.tv",
+            "alt_text": "Cityline Logo"
+          }
+        },
+        "0d7a2b3c-2519-4950-8575-f69926fbe1b8": {
+          "type": "media_items",
+          "settings": {
+            "date": "Apr 23, 2021",
+            "title": "Tampa Bay Morning Blend March Refresh with Grace Gold",
+            "url": "https:\/\/www.youtube.com\/watch?v=9z3cqGBNlVU&t=1s",
+            "image": "shopify:\/\/shop_images\/Logo_abc_1.png",
+            "source": "abcnews.go.com",
+            "alt_text": "ABC News Logo"
+          }
+        },
+        "4ec6d413-8010-4f17-956c-7646210f021f": {
+          "type": "media_items",
+          "settings": {
+            "date": "Mar 11, 2021",
+            "title": "Canada-based Utiva Launches a New Line of Urinary Tract Health and Wellness Products",
+            "url": "https:\/\/femtechinsider.com\/utiva-uti-products\/",
+            "image": "shopify:\/\/shop_images\/Logo_Femtech.png",
+            "source": "femtechinsider.com",
+            "alt_text": "Femtech Insider logo"
+          }
+        },
+        "3b4ab5b1-8c93-4a54-b4ae-1a63b30a81a1": {
+          "type": "press_items",
+          "settings": {
+            "date": "May 4, 2023",
+            "title": "Utiva Health voted #1 Doctor Recommended OTC Brand for UTI Prevention in Canada",
+            "url": "https:\/\/www.newswire.ca\/news-releases\/utiva-health-voted-1-doctor-recommended-otc-brand-for-uti-prevention-in-canada-818023905.html",
+            "image": "shopify:\/\/shop_images\/cision_logo.svg",
+            "source": "www.newswire.ca",
+            "alt_text": "Image Alt Text"
+          }
+        },
+        "58d845d6-e559-4782-9db2-c8307cc8f719": {
+          "type": "press_items",
+          "settings": {
+            "date": "March 8, 2021",
+            "title": "Utiva Announces Line of Flagship Urinary Tract Health and Wellness Products",
+            "url": "https:\/\/www.newswire.ca\/news-releases\/utiva-announces-line-of-flagship-urinary-health-and-wellness-products-810540537.html",
+            "image": "shopify:\/\/shop_images\/cision_logo.svg",
+            "source": "www.newswire.ca",
+            "alt_text": "Image Alt Text"
+          }
+        }
+      },
+      "block_order": [
+        "01d93f58-05ba-4f51-bddb-eeda6c756efc",
+        "83b84670-2df5-49c6-b954-70e7357ac790",
+        "2c214e27-7b3a-4504-a662-715e457d6a92",
+        "3d6e1a56-0cf9-465c-ba7f-f419e05277bf",
+        "47283d27-3b4e-4244-99bd-0007442772fe",
+        "17ba72c3-62e0-4084-bcc8-0830c7ca9e76",
+        "0d7a2b3c-2519-4950-8575-f69926fbe1b8",
+        "4ec6d413-8010-4f17-956c-7646210f021f",
+        "3b4ab5b1-8c93-4a54-b4ae-1a63b30a81a1",
+        "58d845d6-e559-4782-9db2-c8307cc8f719"
+      ],
+      "settings": {
+        "title": "In the Press",
+        "paragraph": "If you’re a member of the media and would like to talk, please get in touch by sending an email to",
+        "email_address": "hello@utivahealth.com"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
