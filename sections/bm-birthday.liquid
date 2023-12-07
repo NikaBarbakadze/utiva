@@ -1,12 +1,34 @@
+<div class="bm-birthday-content">
+  <div class="page-width">
+    <div class="bm-birthday-main">
+      {{ section.settings.bm_birthday_form }}
+    </div>
+  </div>
+</div>
+<style>
+.bm-birthday-content {
+    padding: 50px 0;
+}
+.main-content {
+    min-height: auto;
+}
+</style>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Birthday Form",
+    "settings": [
+      {
+        "type": "html",
+        "id": "bm_birthday_form",
+        "label": "Form Id"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Birthday Form",
+        "category": "Custom content"
+      }
+    ]
   }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
