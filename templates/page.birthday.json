@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "main": {
+      "type": "bm-birthday",
+      "settings": {
+        "bm_birthday_form": "<div class=\"klaviyo-form-Xcb4fz\"><\/div>"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
