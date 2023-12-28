@@ -85,7 +85,7 @@
 			{% for block in section.blocks %}
 				{% if block.type == 'social_media' %}
 					{% if block.settings.social_icon != blank %}
-						<a class='footer-new__social-block--icon' href='{{ block.settings.social_link }}'>
+						<a class='footer-new__social-block--icon' target="_blank" href='{{ block.settings.social_link }}'>
 							{{ block.settings.social_icon }}
 						</a>
 					{% endif %}
