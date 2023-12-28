@@ -3,26 +3,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
   checkboxes.forEach((checkbox) => {
     checkbox.addEventListener("change", function () {
-      let currentUrl = window.location.href;
-      let newUrl;
+      let currentUrl = new URL(window.location.href);
+      let hostname = currentUrl.hostname.split(".");
 
       if (checkbox.checked) {
-        // If checkbox is checked, change to French (fr.) subdomain
-        newUrl = currentUrl.replace(
-          /^(https?:\/\/)(www\.)?(utivahealth\.ca)/,
-          "$1fr.$3"
-        );
+        // Add 'fr' subdomain if not present
+        if (hostname[0] !== "fr") {
+          hostname.unshift("fr");
+        }
       } else {
-        // If checkbox is unchecked, change to English (remove fr.) subdomain
-        newUrl = currentUrl.replace(
-          /^(https?:\/\/)fr\.(utivahealth\.ca)/,
-          "$1$2"
-        );
+        // Remove 'fr' subdomain if present
+        if (hostname[0] === "fr") {
+          hostname.shift();
+        }
       }
 
-      if (newUrl) {
-        window.location.href = newUrl;
-      }
+      currentUrl.hostname = hostname.join(".");
+
+      window.location.href = currentUrl.href;
     });
   });
 });
