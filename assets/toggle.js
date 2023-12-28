@@ -2,25 +2,31 @@ document.addEventListener("DOMContentLoaded", function () {
   var checkboxes = document.querySelectorAll(".header-desk__toggle");
 
   checkboxes.forEach((checkbox) => {
-    checkbox.addEventListener("change", function () {
-      let currentUrl = new URL(window.location.href);
-      let hostname = currentUrl.hostname.split(".");
+    // Check if the current domain is the French subdomain
+    if (window.location.href.includes("fr.")) {
+      checkbox.checked = true;
+    }
 
-      if (checkbox.checked) {
-        // Add 'fr' subdomain if not present
-        if (hostname[0] !== "fr") {
-          hostname.unshift("fr");
-        }
+    checkbox.addEventListener("change", function () {
+      // Extract path and query string from the current URL
+      let path = window.location.pathname;
+      let queryString = window.location.search;
+
+      // Construct the new URL based on the checkbox state
+      let newUrl;
+      if (checkbox.checked === true) {
+        newUrl = "https://fr.utivahealth.ca" + path + queryString;
       } else {
-        // Remove 'fr' subdomain if present
-        if (hostname[0] === "fr") {
-          hostname.shift();
+        // Remove 'www.' from the URL if it's there
+        let domain = "utivahealth.ca";
+        if (window.location.host.includes("www.")) {
+          domain = "utivahealth.ca";
         }
+        newUrl = "https://" + domain + path + queryString;
       }
 
-      currentUrl.hostname = hostname.join(".");
-
-      window.location.href = currentUrl.href;
+      // Redirect to the new URL
+      window.location.href = newUrl;
     });
   });
 });
