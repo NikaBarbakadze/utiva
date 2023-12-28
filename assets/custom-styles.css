@@ -1032,6 +1032,10 @@ video {
   min-height: 70px;
 }
 
+.min-h-\[60px\] {
+  min-height: 60px;
+}
+
 .\!w-\[6\.4rem\] {
   width: 6.4rem !important;
 }

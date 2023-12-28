@@ -56,7 +56,7 @@
 				</a>
 				<div class='new-product-slider__item--text'>
 					{{- product.title | link_to: product.url }}
-					<div class='new-product-slider__item--description text-[#1C1C1C] opacity-60 text-sm'>
+					<div class='new-product-slider__item--description text-[#1C1C1C] opacity-60 text-sm min-h-[60px] lg:min-h-0'>
 						{{ product.description | strip_html | truncatewords: 20, "..." }}
 					</div>
 				</div>
