@@ -3845,6 +3845,15 @@ input, textarea, select, .faux-select {
   margin-top: 80px
 }
 
+.custom-main-article .article-template__content ul li{
+  list-style-type: disc;
+  color: #1C1C1C;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
 @media screen and (max-width: 992px) {
   .custom-main-article .article-template__content h1{
     color: #1C1C1C; 
