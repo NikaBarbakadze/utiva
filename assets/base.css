@@ -4088,3 +4088,9 @@ cart-drawer-items.is-empty{
     padding-top: 50px;
   }
 }
+.mega-menu__block--wrap{
+  transition: 0.4s all ease;
+}
+.mega-menu__block--wrap:hover{
+  filter: brightness(0.8);
+}
