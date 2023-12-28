@@ -3658,6 +3658,11 @@ video {
     padding-bottom: 10px;
   }
 
+  .lg\:py-3 {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
   .lg\:pb-4 {
     padding-bottom: 16px;
   }

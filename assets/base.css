@@ -4083,4 +4083,8 @@ cart-drawer-items.is-empty{
     position: relative;
     top:0.5px;
   }
+
+  .yotpo-customer-email-view{
+    padding-top: 50px;
+  }
 }
