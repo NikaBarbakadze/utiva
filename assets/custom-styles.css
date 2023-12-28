@@ -704,6 +704,14 @@ video {
   top: 1rem;
 }
 
+.top-1 {
+  top: 4px;
+}
+
+.top-\[1px\] {
+  top: 1px;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -1161,6 +1169,10 @@ video {
 
 .max-w-\[90\%\] {
   max-width: 90%;
+}
+
+.max-w-\[30px\] {
+  max-width: 30px;
 }
 
 .flex-1 {
