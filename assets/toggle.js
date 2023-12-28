@@ -10,11 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
       let path = window.location.pathname;
       let queryString = window.location.search;
 
-      // Determine the base domain, removing 'www.' if present
-      let baseDomain = window.location.host.replace("www.", "");
-      if (!baseDomain.includes("utivahealth.ca")) {
-        baseDomain = "utivahealth.ca"; // Fallback to the main domain if needed
-      }
+      // Remove 'www.' if present and construct the base domain
+      let baseDomain = "utivahealth.ca";
 
       // Construct the new URL based on the checkbox state
       let newUrl = checkbox.checked
