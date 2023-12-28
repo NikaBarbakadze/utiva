@@ -3,27 +3,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
   checkboxes.forEach((checkbox) => {
     // Check if the current domain is the French subdomain
-    if (window.location.href.includes("fr.")) {
-      checkbox.checked = true;
-    }
+    checkbox.checked = window.location.href.includes("fr.");
 
     checkbox.addEventListener("change", function () {
       // Extract path and query string from the current URL
       let path = window.location.pathname;
       let queryString = window.location.search;
 
-      // Construct the new URL based on the checkbox state
-      let newUrl;
-      if (checkbox.checked === true) {
-        newUrl = "https://fr.utivahealth.ca" + path + queryString;
-      } else {
-        // Remove 'www.' from the URL if it's there
-        let domain = "utivahealth.ca";
-        if (window.location.host.includes("www.")) {
-          domain = "utivahealth.ca";
-        }
-        newUrl = "https://" + domain + path + queryString;
+      // Determine the base domain
+      let baseDomain = "utivahealth.ca";
+      if (window.location.host.includes("www.")) {
+        baseDomain = "www.utivahealth.ca";
       }
+
+      // Construct the new URL based on the checkbox state
+      let newUrl = checkbox.checked
+        ? "https://fr." + baseDomain + path + queryString
+        : "https://" + baseDomain.replace("www.", "") + path + queryString;
 
       // Redirect to the new URL
       window.location.href = newUrl;
