@@ -60,6 +60,7 @@
         },
         "9fe66a13-aefc-497a-937a-b75a95789f4e": {
           "type": "slider_item",
+          "disabled": true,
           "settings": {
             "slide_image": "shopify:\/\/shop_images\/4_6aaf231e-8d85-424c-8303-f544d20a3935.png",
             "slide_video": "shopify:\/\/files\/videos\/Family history of UTIs - Tamana's Experience--(720p).mp4",
