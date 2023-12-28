@@ -41,8 +41,12 @@
 		{% endif %}
 
 		<div class='mobile-menu__icons flex gap-1'>
-			{% render 'icon', icon: 'account-32' %}
-			{% render 'icon', icon: 'cart-32' %}
+			<a href="/account">
+				{% render 'icon', icon: 'account-32' %}
+			</a>
+			<button onclick="document.querySelector('#cart-icon-bubble').click();">
+				{% render 'icon', icon: 'cart-32' %}
+			</button>
 		</div>
 	</div>
 
