@@ -4067,3 +4067,13 @@ cart-drawer-items.is-empty{
     scale: 0.7;
   }
 }
+
+.section-banner-product img{
+  filter: brightness(0) invert(1);
+}
+
+.section-banner-product .input-new__container button{
+  border-bottom: 1px solid #fff !important;
+  position: relative;
+  top:0.5px;
+}

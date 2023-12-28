@@ -40,7 +40,6 @@
 
 		if ({{ section.blocks | size }})
 		{
-			if ( window.innerWidth < 767) return;
 			if ({{ section.blocks | size }} <= 5) return;
 			slick.slick(
 				{
