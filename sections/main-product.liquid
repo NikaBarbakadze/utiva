@@ -799,7 +799,7 @@
             {%- when 'variant_picker' -%}
               {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
               <div class="subs_wrapper w-full flex flex-col gap-y-3 pb-6">
-                <div class="sub_div cursor-pointer w-full flex flex-col gap-y-6 py-3.5 px-3.5 lg:px-5 rounded-xl border border-[#1c1c1c1f] relative active">
+                <div class="{% if product.selling_plan_groups.size < 1 %}hidden {% else %} active {% endif %} sub_div cursor-pointer w-full flex flex-col gap-y-6 py-3.5 px-3.5 lg:px-5 rounded-xl border border-[#1c1c1c1f] relative">
                   <div class="absolute right-[3.7%] md:right-[3%] -top-[20%] py-0.5 px-2 bg-[#C33635] rounded-[4rem] flex items-center justify-center gap-x-0.5 custom-badge">
                     <span class="text-xs font-medium text-white">Save 25%</span>
                   </div>
@@ -876,7 +876,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="otp_div cursor-pointer w-full flex flex-col gap-y-6 py-3.5 px-3.5 lg:px-5 rounded-xl border border-[#1c1c1c1f] relative">
+                <div class="{% if product.selling_plan_groups.size < 1 %}active {% endif %} otp_div cursor-pointer w-full flex flex-col gap-y-6 py-3.5 px-3.5 lg:px-5 rounded-xl border border-[#1c1c1c1f] relative">
                   <div class="flex items-center justify-between">
                     <div class="flex items-center gap-2">
                       <div class="custom-radio-svg">
