@@ -1,7 +1,7 @@
 {
   "sections": {
-    "custom-contact-form": {
-      "type": "custom-contact-form",
+    "custom-hpc-form": {
+      "type": "custom-hpc-form",
       "blocks": {
         "95bfed18-2361-4252-9863-f609c7fc8089": {
           "type": "address",
@@ -35,8 +35,8 @@
         "dd4c66c9-720d-436d-af73-78a98cf80801"
       ], 
       "settings": {
-        "title": "Get in touch",
-        "subtitle": "Feel free to reach out to us, fill out our form, give us a call or send us an email. <strong>Our team will respond by email within 24  hours of your submission.<\/strong>"
+        "title": "Get 25% off <\/br> your first order",
+        "subtitle": "<strong>We're glad you're here, let’s get started!<\/strong><\/br> <\/br>Now that your doctor has recommended you try Utiva, we're here to help you along your journey to improve your pelvic health. Whether it's to prevent UTIs or manage an overactive bladder, we've got you covered!"
       }
     },
     "quality-and-trust": {
@@ -233,7 +233,7 @@
     }
   },
   "order": [
-    "custom-contact-form",
+    "custom-hpc-form",
     "product-slider",
     "new-trusted-recommended-doctors",
     "customer-testimonials",
