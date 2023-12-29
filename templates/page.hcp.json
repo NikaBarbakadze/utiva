@@ -1,0 +1,242 @@
+{
+  "sections": {
+    "form": {
+      "type": "custom-contact-form",
+      "blocks": {
+        "95bfed18-2361-4252-9863-f609c7fc8089": {
+          "type": "address",
+          "settings": {
+            "content": "<p>Szio+ Inc.<br\/>Pickering, Ontario, Canada<\/p>"
+          }
+        },
+        "05330823-21ed-4d6a-a7d4-6aac03e0c571": {
+          "type": "hours_of_operation",
+          "settings": {
+            "content": "<p>Monday - Friday<br\/>9am - 6pm EST<\/p>"
+          }
+        },
+        "5e1a8ea2-a616-43bb-97ad-a162e994fbf8": {
+          "type": "email",
+          "settings": {
+            "content": "<p>hello@utivahealth.com<\/p>"
+          }
+        },
+        "dd4c66c9-720d-436d-af73-78a98cf80801": {
+          "type": "phone",
+          "settings": {
+            "content": "<p>1-888-622-3613<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "95bfed18-2361-4252-9863-f609c7fc8089",
+        "05330823-21ed-4d6a-a7d4-6aac03e0c571",
+        "5e1a8ea2-a616-43bb-97ad-a162e994fbf8",
+        "dd4c66c9-720d-436d-af73-78a98cf80801"
+      ],
+      "settings": {
+        "title": "Get in touch",
+        "subtitle": "Feel free to reach out to us, fill out our form, give us a call or send us an email. <strong>Our team will respond by email within 24  hours of your submission.<\/strong>"
+      }
+    },
+    "quality-and-trust": {
+      "type": "quality-and-trust",
+      "settings": {
+        "bg_color": "",
+        "paddingTop_mobile": 64,
+        "paddingBottom_mobile": 64,
+        "paddingTop_desktop": 64,
+        "paddingBottom_desktop": 96,
+        "image": "shopify:\/\/shop_images\/Frame_9fb43be8-92a2-4c53-9864-7402bd40a5d9.svg",
+        "title": "Quality and trust — that is the Utiva promise",
+        "description": "Our #1 goal is to help our customers lead happier, healthier, more natural lives."
+      }
+    },
+    "product-slider": {
+      "type": "product-slider",
+      "settings": {
+        "paddingTop_mobile": 0,
+        "paddingBottom_mobile": 40,
+        "paddingTop_desktop": 120,
+        "paddingBottom_desktop": 80,
+        "title": "Our most popular solutions",
+        "button_text": "Shop all",
+        "button_url": "shopify:\/\/collections\/collections-page-shop-all",
+        "collection": "best-sellers"
+      }
+    },
+    "customer-testimonials": {
+      "type": "customer-testimonials",
+      "blocks": {
+        "d41d337b-b0e0-4a36-8f24-2c4d8b6a1cad": {
+          "type": "video",
+          "settings": {
+            "user_video": "shopify:\/\/files\/videos\/Jane Barkley's UTI Story-Modified.mp4",
+            "user_name": "Jane | Menopause related UTIs",
+            "user_rating": "5.0",
+            "user_img": "shopify:\/\/shop_images\/Jane_2.png"
+          }
+        },
+        "29702452-a68d-4d1e-9d48-289d3bd34fac": {
+          "type": "video",
+          "settings": {
+            "user_video": "shopify:\/\/files\/videos\/Rachel Walker - UTI Story  (2).mp4",
+            "user_name": "Rachel | Recurrent UTIs",
+            "user_rating": "5",
+            "user_img": "shopify:\/\/shop_images\/Rachel_Walker.jpg"
+          }
+        },
+        "1dc78747-aa0c-422c-a6cf-2bb9914b1002": {
+          "type": "video",
+          "settings": {
+            "user_video": "shopify:\/\/files\/videos\/Elaine Li-2.mp4",
+            "user_name": "Elaine | UTI story",
+            "user_rating": "5.0",
+            "user_img": "shopify:\/\/shop_images\/women.png"
+          }
+        },
+        "d828798e-4427-40b8-af6f-08a2f30910e7": {
+          "type": "text",
+          "settings": {
+            "review_rating": "4.9",
+            "name": "Alaina Mills",
+            "title": "I am so thankful for this product!",
+            "description": "<p>About 3 years ago I started getting UTIs. I went from having a UTI here and there to having Chronic UTIs. Ever since I started taking Utiva a couple of months ago, I haven’t had any infections and my bladder health feels more secure and protected. I am so thankful for this product, and I am definitely going to stay on it for the rest of my life. <\/p>",
+            "reviewed_product": "D-Mannose Supplement",
+            "image": "shopify:\/\/shop_images\/Testimonial_Dmannose.png"
+          }
+        },
+        "01289a4a-ee13-4333-ab3b-7eb70af78d3a": {
+          "type": "text",
+          "settings": {
+            "review_rating": "5.0",
+            "name": "Nannette",
+            "title": "I recommend this product",
+            "description": "<p>I started these pills on the advice of my urologist and they certainly have helped. I found out that they could be purchased directly from the company and have been so pleased. Customer service is excellent with all the updated emails regarding notification of upcoming orders, shipment and potential date of delivery of the product. Would not buy these pills anywhere else. Excellent<\/p>",
+            "reviewed_product": "CranberryPACS",
+            "image": "shopify:\/\/shop_images\/Testimonial_PACs.png"
+          }
+        },
+        "8d53c16d-870f-4a90-963c-831c0115bc15": {
+          "type": "text",
+          "settings": {
+            "review_rating": "5.0",
+            "name": "Anonymous",
+            "title": "Pleasantly Surprised!",
+            "description": "<p>I was pleasantly surprised by how quickly I started noticing changes. Within the first few weeks I noticed less urgency and frequency in needing the bathroom. Symptoms have continued to improve at the 3 month mark now and I am very happy!! A quality product with excellent results and quick shipping.<\/p>",
+            "reviewed_product": "Bladder Health Supplement",
+            "image": "shopify:\/\/shop_images\/Testimonial_BH.png"
+          }
+        }
+      },
+      "block_order": [
+        "d41d337b-b0e0-4a36-8f24-2c4d8b6a1cad",
+        "29702452-a68d-4d1e-9d48-289d3bd34fac",
+        "1dc78747-aa0c-422c-a6cf-2bb9914b1002",
+        "d828798e-4427-40b8-af6f-08a2f30910e7",
+        "01289a4a-ee13-4333-ab3b-7eb70af78d3a",
+        "8d53c16d-870f-4a90-963c-831c0115bc15"
+      ],
+      "settings": {
+        "paddingTop_mobile": 24,
+        "paddingBottom_mobile": 48,
+        "paddingTop_desktop": 0,
+        "paddingBottom_desktop": 100,
+        "title": "What are our customers saying?",
+        "subtitle": "Real Customers. Real Reviews.",
+        "reviews_label": "4.8 out of 5 stars from 653 reviews",
+        "desc": "<p>We are helping over 50,000 customers proactively manage their pelvic health! See what some of them have to say.<\/p>",
+        "button_text": "See all"
+      }
+    },
+    "new-trusted-recommended-doctors": {
+      "type": "new-trusted-recommended-doctors",
+      "blocks": {
+        "2d42196f-364c-4153-9050-fe3a46837cdf": {
+          "type": "text",
+          "settings": {
+            "doctors_image": "shopify:\/\/shop_images\/ceccacad3c7ff53f3aa2f2a65265e78b.png",
+            "title": "Managing urinary tract health can be complex",
+            "description": "<p>Antibiotics are the first line treatment, but there are clinically proven options to help prevent. When considering cranberry supplements, I recommend my patients select a product with 36 mg of PACs.<\/p>",
+            "doctors_name": "Dr. Colleen McDermott",
+            "position": "Urogynecologist"
+          }
+        },
+        "d78cbc73-7151-4116-8433-c6f957683800": {
+          "type": "text",
+          "settings": {
+            "doctors_image": "shopify:\/\/shop_images\/image_512_010d3567-2f73-4e35-b834-1212963b6695.png",
+            "title": "Overuse of antibiotics is a concern",
+            "description": "<p>I always consider natural options to help reduce the frequency of UTIs in my patients. Utiva is a great, clean cranberry product which has been very effective in preventing UTIs in many of my patients.<\/p>",
+            "doctors_name": "Dr. Yanina Barbalat",
+            "position": "Urologist"
+          }
+        },
+        "21fb4f97-5504-4a87-a0aa-12fb6b2fe3dc": {
+          "type": "text",
+          "settings": {
+            "doctors_image": "shopify:\/\/shop_images\/image_513_6caf6acb-6b77-4bd4-8686-aaf7e4ad985d.png",
+            "title": "Using Utiva with patients has been great",
+            "description": "<p>There is a lot of evidence that shows that cranberry supplements are safe and effective. You can find all sorts of cranberry supplements  but if they don’t have that 36 mg PAC and measured by DMAC\/A2 then they are a waste of money.<\/p>",
+            "doctors_name": "Dr. Emily Rutledge",
+            "position": "Urogynecologist"
+          }
+        },
+        "c647f522-e133-46a8-83ca-7cecce112a9c": {
+          "type": "text",
+          "settings": {
+            "doctors_image": "shopify:\/\/shop_images\/image_514.png",
+            "title": "Utiva is clinically proven",
+            "description": "<p>According to clinical studies you need 36 mg PACs to prevent bacteria from forming an infection in the urinary tract. Utiva is the only brand that has the right dose of cranberry PACs to help prevent UTIs.<\/p>",
+            "doctors_name": "Dr. Carolyn Best",
+            "position": "Urogynecologist"
+          }
+        },
+        "1491bd30-5d14-42ae-9b77-f0f3bbebf57d": {
+          "type": "text",
+          "settings": {
+            "doctors_image": "shopify:\/\/shop_images\/DrChungtai_HP.png",
+            "title": "Based on my clinical research",
+            "description": "<p> I believe the proprietary blend of cranberry in Utiva Bladder Health is safe and has efficacy comparable to other common medications for OAB. It helps in treating symptoms of OAB by reducing urinary urgency episodes and frequency.<\/p>",
+            "doctors_name": "Dr. Bilal Chughtai",
+            "position": "Urologist"
+          }
+        },
+        "539a67cd-58c5-43de-a711-0afe803b49fe": {
+          "type": "text",
+          "settings": {
+            "doctors_image": "shopify:\/\/shop_images\/dr._giudice.png",
+            "title": "I recommend Utiva Bladder Health",
+            "description": "<p>Many of my patients make lifestyle changes due to the challenges of overactive bladder. We offer medications to help but nothing is 100% effective. When patients ask if there is anything natural, I recommend Utiva Bladder Health to help improve the symptoms of OAB and have seen promising results.<\/p>",
+            "doctors_name": "Dr. Thomas P. Giudice",
+            "position": "Urogynecologist"
+          }
+        }
+      },
+      "block_order": [
+        "2d42196f-364c-4153-9050-fe3a46837cdf",
+        "d78cbc73-7151-4116-8433-c6f957683800",
+        "21fb4f97-5504-4a87-a0aa-12fb6b2fe3dc",
+        "c647f522-e133-46a8-83ca-7cecce112a9c",
+        "1491bd30-5d14-42ae-9b77-f0f3bbebf57d",
+        "539a67cd-58c5-43de-a711-0afe803b49fe"
+      ],
+      "settings": {
+        "paddingTop_mobile": 0,
+        "paddingBottom_mobile": 48,
+        "paddingTop_desktop": 120,
+        "paddingBottom_desktop": 120,
+        "title": "Trusted and recommended by over 10,000 doctors",
+        "button_text": "See all",
+        "button_url": "shopify:\/\/pages\/reviews"
+      }
+    }
+  },
+  "order": [
+    "custom-contact-form",
+    "quality-and-trust",
+    "product-slider",
+    "customer-testimonials",
+    "new-trusted-recommended-doctors"
+  ]
+}
