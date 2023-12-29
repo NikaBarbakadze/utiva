@@ -234,9 +234,9 @@
   },
   "order": [
     "custom-contact-form",
-    "quality-and-trust",
     "product-slider",
+    "new-trusted-recommended-doctors",
     "customer-testimonials",
-    "new-trusted-recommended-doctors"
+    "quality-and-trust"
   ]
 }
