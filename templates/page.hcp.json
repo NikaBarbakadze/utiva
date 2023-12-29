@@ -1,6 +1,6 @@
 {
   "sections": {
-    "form": {
+    "custom-contact-form": {
       "type": "custom-contact-form",
       "blocks": {
         "95bfed18-2361-4252-9863-f609c7fc8089": {
@@ -33,7 +33,7 @@
         "05330823-21ed-4d6a-a7d4-6aac03e0c571",
         "5e1a8ea2-a616-43bb-97ad-a162e994fbf8",
         "dd4c66c9-720d-436d-af73-78a98cf80801"
-      ],
+      ], 
       "settings": {
         "title": "Get in touch",
         "subtitle": "Feel free to reach out to us, fill out our form, give us a call or send us an email. <strong>Our team will respond by email within 24  hours of your submission.<\/strong>"
