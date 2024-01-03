@@ -76,7 +76,7 @@
     "promo-banner": {
       "type": "sticky-promo-banner",
       "settings": {
-        "text": "<p>Get  15% OFF on your first order <\/p>",
+        "text": "<p>Get a discount on your first order <\/p>",
         "bg-color": "#52b7af",
         "text-color": "#ffffff",
         "klavyio-form-id": "QVP9Lv"
