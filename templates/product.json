@@ -167,6 +167,7 @@
     },
     "customer-testimonials-pdp": {
       "type": "customer-testimonials-pdp",
+      "disabled": true,
       "settings": {
         "paddingTop_mobile": 24,
         "paddingBottom_mobile": 48,
