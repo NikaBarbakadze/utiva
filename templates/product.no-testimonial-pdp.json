@@ -105,6 +105,21 @@
         "title": "Proven Effectiveness"
       }
     },
+    "customer-testimonials-pdp": {
+      "type": "customer-testimonials-pdp",
+      "disabled": true,
+      "settings": {
+        "paddingTop_mobile": 24,
+        "paddingBottom_mobile": 48,
+        "paddingTop_desktop": 0,
+        "paddingBottom_desktop": 100,
+        "title": "What are our customers saying?",
+        "subtitle": "Real Customers. Real Reviews.",
+        "reviews_label": "4.8 out of 5 stars from 653 reviews",
+        "desc": "<p>We are helping over 50,000 customers proactively manage their pelvic health! See what some of them have to say.<\/p>",
+        "button_text": "See all"
+      }
+    },
     "c8dae995-780a-4003-9876-093a01bd3220": {
       "type": "custom-liquid",
       "settings": {
@@ -198,6 +213,7 @@
     "main",
     "properties",
     "proven-effectiveness",
+    "customer-testimonials-pdp",
     "c8dae995-780a-4003-9876-093a01bd3220",
     "how-to-use",
     "new-trusted-recommended-doctors",
