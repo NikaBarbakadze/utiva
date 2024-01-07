@@ -4107,3 +4107,9 @@ cart-drawer-items.is-empty{
 .is-empty-custom{
   display: none;
 }
+
+.klaviyo-form-VmNUsi input{
+  border-top-width: 0 !important;
+  border-left-width: 0 !important;
+  border-right-width: 0 !important;
+}
