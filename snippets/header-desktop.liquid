@@ -125,6 +125,41 @@
 
 <div class='header-desktop  hovered-perma'>
 	<div class='header-desktop__info'>
+
+
+<div class="flex gap-8 items-center pl-[8rem]">
+	<div class='header-desktop__logo static'>
+		<a href='/'>
+			{% if logo and header_logo_desk != blank %}
+				{{
+					logo
+					| image_url: width: logo.width
+					| image_tag:
+						loading: 'lazy',
+						width: logo.width,
+						height: logo.height,
+						sizes: '10vw',
+						class: 'header-desktop__logo--img logo-1',
+						widths: '200'
+				}}
+
+				{{
+					header_logo_desk
+					| image_url: width: header_logo_desk.width
+					| image_tag:
+						loading: 'lazy',
+						width: header_logo_desk.width,
+						height: header_logo_desk.height,
+						sizes: '10vw',
+						class: 'header-desktop__logo--img logo-2',
+						widths: '200'
+				}}
+
+			{% else %}
+				<a href='/'> {{ shop.name }}</a>
+			{% endif %}
+		</a>
+	</div>
 		<nav
 			class='header-desktop__nav'
 		>
@@ -159,39 +194,7 @@
 				</div>
 			{% endfor %}
 		</nav>
-
-		<div class='header-desktop__logo'>
-			<a href='/'>
-				{% if logo and header_logo_desk != blank %}
-					{{
-						logo
-						| image_url: width: logo.width
-						| image_tag:
-							loading: 'lazy',
-							width: logo.width,
-							height: logo.height,
-							sizes: '10vw',
-							class: 'header-desktop__logo--img logo-1',
-							widths: '200'
-					}}
-
-					{{
-						header_logo_desk
-						| image_url: width: header_logo_desk.width
-						| image_tag:
-							loading: 'lazy',
-							width: header_logo_desk.width,
-							height: header_logo_desk.height,
-							sizes: '10vw',
-							class: 'header-desktop__logo--img logo-2',
-							widths: '200'
-					}}
-
-				{% else %}
-					<a href='/'> {{ shop.name }}</a>
-				{% endif %}
-			</a>
-		</div>
+	</div>
 
 		<div class='header-desktop__icons'>
 			<div

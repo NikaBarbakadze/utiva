@@ -4103,3 +4103,7 @@ cart-drawer-items.is-empty{
 .mega-menu__block--wrap:hover{
   filter: brightness(0.8);
 }
+
+.is-empty-custom{
+  display: none;
+}

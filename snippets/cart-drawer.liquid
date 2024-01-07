@@ -482,8 +482,8 @@
           <div id="CartDrawer-CartErrors" role="alert"></div>
         </form>
       </cart-drawer-items>
-      <p class="text-base text-[#777777] my-4 font-normal">Have a discount code? Enter it on the next page</p>
-      <div class="drawer__footer">
+      <p class="text-base text-[#777777] my-4 font-normal {% if cart == empty %} is-empty-custom {% endif %}">Have a discount code? Enter it on the next page</p>
+      <div class="drawer__footer {% if cart == empty %} is-empty-custom {% endif %}">
         {%- if settings.show_cart_note -%}
           <details id="Details-CartDrawer">
             <summary>
