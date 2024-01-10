@@ -161,8 +161,18 @@
             </div>
         </div>
     </div>
+
+    {% liquid
+        
+        if request.path != blog.url 
+            assign article_limit = 1
+        else
+            assign article_limit = 4
+        endif 
     
-    {% unless blog.articles.size < 7 and request.path != blog.url %}
+    %}
+    
+    {% unless blog.articles.size < article_limit and request.path != blog.url %}
         {% assign video_exist = false %}
         {%- for video in blog.articles -%}
             {% if video.tags contains "video" or video.tags contains "Video" %}
@@ -176,10 +186,10 @@
             <h2 class="text-2xl lg:text-4xl text-[#1C1C1C]">Latest videos</h2>
         </div>
         <div class="flex flex-col lg:flex-row gap-6 mt-5 lg:mt-10">
-            {% assign check = 1 %}
+
             {%- for video in blog.articles -%}
-                {% if video.tags contains "video" and video.tags contains "Video" and check < 4 %}
-                {% assign check = check | plus: 1 %}
+                {% if video.tags contains "video" or video.tags contains "Video" %}
+
                 <a href="{{ video.url }}" class="flex-1 block">
                     <div class="relative">
                         <img class="rounded-[10px] lg:min-h-[250px]" src="{{ video.image | img_url: "700x" }}" loading="lazy" alt="">

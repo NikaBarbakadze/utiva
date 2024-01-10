@@ -4113,3 +4113,7 @@ cart-drawer-items.is-empty{
   border-left-width: 0 !important;
   border-right-width: 0 !important;
 }
+
+.custom-blog-tag{
+  text-transform: capitalize;
+}
