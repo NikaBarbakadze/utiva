@@ -3,11 +3,14 @@
         margin-bottom: 25px;
         color: #1C1C1C;
     }
-    .article-template__content img{
+    .article-template__content img:not(.needsclick), .article-template__content > img{
         margin: 40px 0;
     }
     .article-template__content p > b:only-child{
         font-size: 28px;
+    }
+    .article-template__content .klaviyo-form{
+        margin: 20px 0 40px 0;
     }
     .custom-table-content .active{
         color: #C33635;
@@ -167,8 +170,86 @@
 
 {% endif %}
 
+<template>
+    <div>
+    {% assign blog_product = article.metafields.custom.blog_product.value %}
+    <div href="{{ blog_product.url }}" class="flex flex-col lg:flex-row gap-8 blog-product-card my-3">
+        <div class="lg:basis-[320px] relative">
+            <img class="rounded-[24px] w-full object-cover lg:max-w-[320px] max-h-[320px] !my-0" src="{{ blog_product.featured_image | img_url: "master" }}" alt="">
+            <div class="absolute top-2 right-1">
+                <span class="text-white uppercase px-2 py-1 rounded-[30px] backdrop-blur-[20px] text-xs mr-2" style="background: #C33635">
+                    Bestseller
+                </span>
+            </div>
+        </div>
+        <div class="flex-1 flex flex-col justify-between ">
+            <div>
+            <h3 class="text-2xl text-[#1C1C1C] font-medium">{{ blog_product.title }}</h3>
+            <div class="flex items-center justify-start gap-x-2 mb-6 md:mb-8">
+                {% if blog_product.metafields.yotpo.reviews_average %} 
+                  <div class="flex items-center justify-center gap-x-1 rounded-[4rem] border border-[#C33635] py-0.5 pl-1.5 pr-2.5">
+                    {% render 'icon-star' %}
+                    <span class="text-[#1C1C1C] text-sm font-medium leading-[1.96rem]">{{ blog_product.metafields.yotpo.reviews_average | round: 1 }}</span>
+                  </div>
+                {% endif %}
+                {% if blog_product.metafields.yotpo.reviews_count %} 
+                  <p class="text-[#1C1C1C] !text-sm !font-medium leading-[1.96rem] !mb-0">Based on {{ blog_product.metafields.yotpo.reviews_count }} reviews</p>
+                {% endif %}
+              </div>
+            <p class="!text-base text-[#1C1C1C] opacity-60 font-normal mt-3 lg:mt-6">{{ blog_product.description }}</p>
+            </div>
+            <button class="rounded-[80px] border border-solid border-[#C33635] text-[#C33635] py-3 w-full blog-product-card-atc" onclick="blogAddToCart('{{ blog_product.selected_or_first_available_variant.id }}')">Add to cart</button>
+        </div>
+    </div>
+    <div>
+</template>
+
 <script defer>
+
+    function blogAddToCart(variantId) {
+            const object = {
+              items: [
+                {
+                  id: variantId, 
+                  quantity: 1
+                }
+              ],
+              sections: ["cart-drawer"]
+            }
+      
+            fetch('/cart/add.js', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(object)
+            }).then((response)=>{
+              return response.json();
+            }).then((json)=>{
+              console.log(json);
+              const cartForm = new DOMParser().parseFromString(json.sections['cart-drawer'], 'text/html').querySelector('#CartDrawer .drawer__inner').innerHTML;
+      
+              document.querySelector('#CartDrawer .drawer__inner ').innerHTML = cartForm;
+      
+              if(document.querySelector('cart-drawer').classList.contains('is-empty')){
+                  document.querySelector('cart-drawer').classList.remove('is-empty');
+                  document.querySelector('cart-drawer-items').classList.remove('is-empty');
+                  document.querySelector('#CartDrawer-Checkout').disabled = false;
+              }
+      
+              document.querySelector('cart-drawer').open()
+            });
+          }
+
+
     document.addEventListener('DOMContentLoaded', function () {
+        if(document.querySelector('em span strong') && document.querySelector('em span strong').textContent == 'product_tag'){
+            // select <template> content and replace em element with content of template
+            const template = document.querySelector('template');
+            const content = template.content;
+            document.querySelector('em span strong').parentNode.parentNode.replaceWith(content);
+        }
+
         // Step 1: Generate the table of content
         const titles = document.querySelectorAll(".article-template__content h3");
       
