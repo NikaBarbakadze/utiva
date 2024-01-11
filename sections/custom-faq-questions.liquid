@@ -104,6 +104,7 @@
   <div id="shipping" class="page-width px-6 flex flex-col gap-y-8 pb-6 mt-4 md:mt-14 md:flex-row md:justify-between md:gap-x-6 md:pb-0">
     <h3 class="text-2xl font-medium text-[#1c1c1c] md:text-[2.8rem] md:leading-[3.92rem] md:-tracking-[0.028rem]">Shipping & Return policy</h3>
     <div class="flex flex-col md:w-[72rem]">
+      {% paginate shop.metaobjects["faq"].values by 150 %}
       {% assign shippingQuestions = shop.metaobjects["faq"].values | where: 'type', 'Shipping and Returns' %}
       {% for block in shippingQuestions %}
         {% if block.type contains "Shipping" %}
@@ -130,6 +131,7 @@
         </div>
         {% endif %}
       {% endfor %}
+      {% endpaginate %}
     </div>
   </div>
   <div id="prods" class="mt-2.5 md:mt-10">
@@ -187,7 +189,9 @@
   <div id="rewards" class="page-width px-6 flex flex-col gap-y-8 pb-6 mt-4 md:mt-14 md:flex-row md:justify-between md:gap-x-6 md:pb-0">
     <h3 class="text-2xl font-medium text-[#1c1c1c] md:text-[2.8rem] md:leading-[3.92rem] md:-tracking-[0.028rem]">Rewards & Referrals</h3>
     <div class="flex flex-col md:w-[72rem]">
+      {% paginate shop.metaobjects["faq"].values by 150 %}
       {% assign rewardQuestions = shop.metaobjects["faq"].values | where: 'type', 'Rewards' %}
+
       {% for block in rewardQuestions %}
         <div class="questionWrapper {% unless forloop.first %} border-t border-[#1c1c1c1f] py-5 {% else %} pb-5 {% endunless %} flex flex-col gap-y-4">
           <div class="questionWrapperHeader cursor-pointer flex items-center justify-between gap-x-4">
@@ -211,11 +215,13 @@
           </div>
         </div>
       {% endfor %}
+      {% endpaginate %}
     </div>
   </div>
   <div id="subscriptions" class="page-width px-6 flex flex-col gap-y-8 pb-6 mt-4 md:mt-14 md:flex-row md:justify-between md:gap-x-6 md:pb-0">
     <h3 class="text-2xl font-medium text-[#1c1c1c] md:text-[2.8rem] md:leading-[3.92rem] md:-tracking-[0.028rem]">Subscribe & Save</h3>
     <div class="flex flex-col md:w-[72rem]">
+      {% paginate shop.metaobjects["faq"].values by 150 %}
       {% assign subQuestions = shop.metaobjects["faq"].values | where: 'type', 'Subscriptions' %}
       {% for block in subQuestions %}
         <div class="questionWrapper {% unless forloop.first %} border-t border-[#1c1c1c1f] py-5 {% else %} pb-5 {% endunless %} flex flex-col gap-y-4">
@@ -240,11 +246,25 @@
           </div>
         </div>
       {% endfor %}
+      {% endpaginate %}
     </div>
   </div>
 </div>
 
 <script defer>
+  var specialLocations = [];
+  {% paginate shop.metaobjects["faq"].values by 150 %}
+    {% for faq in shop.metaobjects["faq"].values %}
+      specialLocations[{{ forloop.index0 }}] = {
+        "question" :  "{{faq.question}}",
+        "answer" :  '{{faq.answer | escape | metafield_tag }}',
+      }
+    {% endfor %}
+  {% endpaginate %}
+
+  console.log(specialLocations)
+
+
   const questions = document.querySelectorAll(".questionWrapperHeader");
   questions.forEach((question, i) => {
     question.addEventListener("click", () => {
