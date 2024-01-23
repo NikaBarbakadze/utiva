@@ -42,8 +42,7 @@
         "2ce8a383-16d5-44a5-9172-bc4b8192c627"
       ],
       "settings": {
-        "header_logo": "shopify:\/\/shop_images\/logo_white.png",
-        "header_logo_desk": "shopify:\/\/shop_images\/Utiva_Logo.svg",
+        "header_logo": "shopify:\/\/shop_images\/Utiva_Logo.svg",
         "bg_color": "#b7a08e",
         "bg_transparent": false,
         "toggle": true,

@@ -3,9 +3,9 @@
     "main-banner": {
       "type": "main-banner",
       "settings": {
-        "img_desktop": "shopify:\/\/shop_images\/Untitled_design.jpg",
+        "img_desktop": "shopify:\/\/shop_images\/Untitled_design.webp",
         "img_desktop_blur": "shopify:\/\/shop_images\/main_img_986cc0ee-48e9-444e-a4a9-174cb39d03d8.png",
-        "img_mobile": "shopify:\/\/shop_images\/Hero_Banner_Mobile.png",
+        "img_mobile": "shopify:\/\/shop_images\/Hero_Banner_Mobile.webp",
         "img_mobile_blur": "shopify:\/\/shop_images\/Frame_118.png",
         "background_color": "#b9a18f",
         "label_text": "#1  Doctor Recommended brand for UTI prevention*",
@@ -50,7 +50,6 @@
         "a15fa326-c734-4e1e-9fdc-4dedb62dfed7": {
           "type": "card",
           "settings": {
-            "image": "shopify:\/\/shop_images\/yeast_infections.png",
             "title": "Yeast Infections",
             "url": ""
           }
@@ -240,8 +239,7 @@
           "settings": {
             "user_video": "shopify:\/\/files\/videos\/Jane Barkley's UTI Story-Modified.mp4",
             "user_name": "Jane | Menopause related UTIs",
-            "user_rating": "5.0",
-            "user_img": "shopify:\/\/shop_images\/Jane_2.png"
+            "user_rating": "5.0"
           }
         },
         "29702452-a68d-4d1e-9d48-289d3bd34fac": {
@@ -249,8 +247,7 @@
           "settings": {
             "user_video": "shopify:\/\/files\/videos\/Rachel Walker - UTI Story  (2).mp4",
             "user_name": "Rachel | Recurrent UTIs",
-            "user_rating": "5",
-            "user_img": "shopify:\/\/shop_images\/Rachel_Walker.jpg"
+            "user_rating": "5"
           }
         },
         "1dc78747-aa0c-422c-a6cf-2bb9914b1002": {
@@ -269,8 +266,7 @@
             "name": "Alaina Mills",
             "title": "I am so thankful for this product!",
             "description": "<p>About 3 years ago I started getting UTIs. I went from having a UTI here and there to having Chronic UTIs. Ever since I started taking Utiva a couple of months ago, I haven’t had any infections and my bladder health feels more secure and protected. I am so thankful for this product, and I am definitely going to stay on it for the rest of my life. <\/p>",
-            "reviewed_product": "D-Mannose Supplement",
-            "image": "shopify:\/\/shop_images\/Testimonial_Dmannose.png"
+            "reviewed_product": "D-Mannose Supplement"
           }
         },
         "01289a4a-ee13-4333-ab3b-7eb70af78d3a": {
@@ -280,8 +276,7 @@
             "name": "Nannette",
             "title": "I recommend this product",
             "description": "<p>I started these pills on the advice of my urologist and they certainly have helped. I found out that they could be purchased directly from the company and have been so pleased. Customer service is excellent with all the updated emails regarding notification of upcoming orders, shipment and potential date of delivery of the product. Would not buy these pills anywhere else. Excellent<\/p>",
-            "reviewed_product": "CranberryPACS",
-            "image": "shopify:\/\/shop_images\/Testimonial_PACs.png"
+            "reviewed_product": "CranberryPACS"
           }
         },
         "8d53c16d-870f-4a90-963c-831c0115bc15": {
@@ -291,8 +286,7 @@
             "name": "Anonymous",
             "title": "Pleasantly Surprised!",
             "description": "<p>I was pleasantly surprised by how quickly I started noticing changes. Within the first few weeks I noticed less urgency and frequency in needing the bathroom. Symptoms have continued to improve at the 3 month mark now and I am very happy!! A quality product with excellent results and quick shipping.<\/p>",
-            "reviewed_product": "Bladder Health Supplement",
-            "image": "shopify:\/\/shop_images\/Testimonial_BH.png"
+            "reviewed_product": "Bladder Health Supplement"
           }
         }
       },
@@ -387,7 +381,6 @@
         "539a67cd-58c5-43de-a711-0afe803b49fe": {
           "type": "text",
           "settings": {
-            "doctors_image": "shopify:\/\/shop_images\/dr._giudice.png",
             "title": "I recommend Utiva Bladder Health",
             "description": "<p>Many of my patients make lifestyle changes due to the challenges of overactive bladder. We offer medications to help but nothing is 100% effective. When patients ask if there is anything natural, I recommend Utiva Bladder Health to help improve the symptoms of OAB and have seen promising results.<\/p>",
             "doctors_name": "Dr. Thomas P. Giudice",
