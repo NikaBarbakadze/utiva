@@ -1,6 +1,6 @@
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/logo_color.png",
+    "logo": "shopify:\/\/shop_images\/Utiva_Logo.svg",
     "logo_width": 90,
     "favicon": "shopify:\/\/shop_images\/Utiva_Logo-Favicon-02.svg",
     "type_header_font": "dm_sans_n4",
@@ -159,32 +159,6 @@
         "settings": {
           "inject_modules_loader": true,
           "inject_sdk_loader": false
-        }
-      },
-      "10008203421340698720": {
-        "type": "shopify:\/\/apps\/g-translate\/blocks\/dropdown\/408a74ac-f92d-43cf-a1b1-a044341e66bd",
-        "disabled": true,
-        "settings": {
-          "horizontal_position": "left",
-          "vertical_position": "bottom",
-          "select_language_label": "Select Language",
-          "native_language_names": true,
-          "wrapper_selector": "",
-          "custom_css": ""
-        }
-      },
-      "3963213073043125682": {
-        "type": "shopify:\/\/apps\/g-translate\/blocks\/globe\/408a74ac-f92d-43cf-a1b1-a044341e66bd",
-        "disabled": true,
-        "settings": {
-          "horizontal_position": "left",
-          "vertical_position": "bottom",
-          "native_language_names": true,
-          "flag_size": "32",
-          "globe_size": "60",
-          "globe_color": "#66aaff",
-          "wrapper_selector": "",
-          "custom_css": ""
         }
       },
       "855628211100114053": {
