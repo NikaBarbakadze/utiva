@@ -8,7 +8,7 @@
         "img_mobile": "shopify:\/\/shop_images\/Hero_Banner_Mobile.webp",
         "img_mobile_blur": "shopify:\/\/shop_images\/Frame_118.png",
         "background_color": "#b9a18f",
-        "label_text": "#1  Doctor Recommended brand for UTI prevention*",
+        "label_text": "",
         "label_background_color": "#ffffff",
         "label_text_color": "#1c1c1c",
         "title": "Clinically Effective. Always Natural.",
@@ -25,7 +25,7 @@
         "paddingTop_desktop": 60,
         "paddingBottom_desktop": 50,
         "bg_color": "#fcfcfa",
-        "rich_text": "<p>At Utiva we specialize in solutions for common, yet often stigmatized and under-treated <b>pelvic health<\/b> concerns of women. We are committed to developing clinically effective solutions that address root causes and are as natural as the issues themselves.<\/p>"
+        "rich_text": "<p>At Utiva we specialize in solutions for common, yet often stigmatized and under-treated <strong>pelvic health<\/strong> concerns of women. We are committed to developing clinically effective solutions that address root causes and are as natural as the issues themselves.<\/p>"
       }
     },
     "targeted-solutions": {
