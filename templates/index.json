@@ -33,9 +33,10 @@
       "blocks": {
         "c85e708b-ab70-40c4-89b3-355579adc277": {
           "type": "card",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/image_487.jpg",
-            "title": "UTIs",
+            "title": "Urinary Tract Health",
             "url": "shopify:\/\/collections\/collections-page-utis"
           }
         },
