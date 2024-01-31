@@ -47,6 +47,7 @@
         },
         "9dba51e4-4350-472e-a76d-4d665b6a73e3": {
           "type": "slider_item",
+          "disabled": true,
           "settings": {
             "slide_video": "shopify:\/\/files\/videos\/Rachel Walker for Customer Ambassador Program_2_1.mp4",
             "testimonial_title": "A simple solution for my UTI problem",
@@ -60,8 +61,8 @@
           "disabled": true,
           "settings": {
             "slide_video": "shopify:\/\/files\/videos\/Family history of UTIs - Tamana's Experience--(720p).mp4",
-            "testimonial_title": "Family history of UTIs",
-            "testimonial_paragraph": "replace with new copy ....",
+            "testimonial_title": "Family history of urinary tract troubles",
+            "testimonial_paragraph": "Because of my busy work schedule, I sometimes would end up drinking less water than usual and this would aggravate my urinary system.",
             "testimonial_author": "Tamana",
             "testimonial_rating": "5.0"
           }
