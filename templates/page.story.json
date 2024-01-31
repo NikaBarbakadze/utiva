@@ -16,6 +16,7 @@
         },
         "386fc7e8-eaba-4733-a466-158f4a8985c4": {
           "type": "slider_item",
+          "disabled": true,
           "settings": {
             "slide_video": "shopify:\/\/files\/videos\/Jane Barkley's UTI Story-Modified.mp4",
             "testimonial_title": "Menopause related UTIs",
@@ -38,8 +39,8 @@
           "type": "slider_item",
           "settings": {
             "slide_video": "shopify:\/\/files\/videos\/Kathy's struggle with a Silent UTI--(720p).mp4",
-            "testimonial_title": "Silent UTI",
-            "testimonial_paragraph": "I have suffered from UTIs all of my life. The scariest and worst case was the silent UTI that travelled to my kidneys. I ended up in the hospital diagnosed with sepsis.",
+            "testimonial_title": "No signs but ended up in the hospital ",
+            "testimonial_paragraph": "Plagued with urinary tract problems my whole life, the scariest and worst case was when I had no signs or symptoms but ended up in the hospital with a life-threatening condition. ",
             "testimonial_author": "Kathy",
             "testimonial_rating": "5.0"
           }
