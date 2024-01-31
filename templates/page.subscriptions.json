@@ -244,7 +244,7 @@
           "type": "sub",
           "settings": {
             "question": "How can I update my billing information?",
-            "answer": "Sign into your account. Click My Subscriptions > View Details. Under “Payment details” select, Update and a link will be sent to your email to make the necessary changes."
+            "answer": "<a href=\"https:\/\/www.utivahealth.com\/account\/login?return_url=%2Faccount\" target=\"_blank\" title=\"Utiva Health Login\">Sign into your account<\/a>. Click My Subscriptions > View Details. Under “Payment details” select, Update and a link will be sent to your email to make the necessary changes."
           }
         },
         "1e0f0c9e-5c84-4828-bc70-15e7a0fc252a": {
