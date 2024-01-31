@@ -8,7 +8,7 @@
           "settings": {
             "slide_image": "shopify:\/\/shop_images\/65f515b3c7d2e5dd496289e87fb3a92f_1.webp",
             "slide_video": "shopify:\/\/files\/videos\/UTI episode gone bad--(720p).mp4",
-            "testimonial_title": "An episode gone bad",
+            "testimonial_title": "An episode gone wrong",
             "testimonial_paragraph": "Utiva is a product that delivers on its promises - and as the old saying goes, an ounce of prevention is worth a pound of cure. This has been a good investment in my personal health.",
             "testimonial_author": "Elaine Li",
             "testimonial_rating": "5.0"
@@ -17,7 +17,6 @@
         "386fc7e8-eaba-4733-a466-158f4a8985c4": {
           "type": "slider_item",
           "settings": {
-            "slide_image": "shopify:\/\/shop_images\/Jane_2.png",
             "slide_video": "shopify:\/\/files\/videos\/Jane Barkley's UTI Story-Modified.mp4",
             "testimonial_title": "Menopause related UTIs",
             "testimonial_paragraph": "After menopause I started to get one UTI after another, I couldn't believe what was happening to me. The Utiva cranberry PACs saved my life.",
@@ -28,7 +27,6 @@
         "9f20bb36-aa34-42b7-9e41-46b6052c3250": {
           "type": "slider_item",
           "settings": {
-            "slide_image": "shopify:\/\/shop_images\/3_73bc7550-c37a-4bec-8a36-aab45a14d10d.png",
             "slide_video": "shopify:\/\/files\/videos\/How Sandra recovered from chronic UTIs naturally--(720p).mp4",
             "testimonial_title": "Recurrent UTIs",
             "testimonial_paragraph": "With Utiva, I finally feel like I have control over my body. If you suffer from UTIs, I want to tell you that there is hope—I'm proof of it.",
@@ -39,7 +37,6 @@
         "6dad3236-a780-44b0-b0e9-da2d7c391a8b": {
           "type": "slider_item",
           "settings": {
-            "slide_image": "shopify:\/\/shop_images\/Kathy_UTI_Story.png",
             "slide_video": "shopify:\/\/files\/videos\/Kathy's struggle with a Silent UTI--(720p).mp4",
             "testimonial_title": "Silent UTI",
             "testimonial_paragraph": "I have suffered from UTIs all of my life. The scariest and worst case was the silent UTI that travelled to my kidneys. I ended up in the hospital diagnosed with sepsis.",
@@ -50,7 +47,6 @@
         "9dba51e4-4350-472e-a76d-4d665b6a73e3": {
           "type": "slider_item",
           "settings": {
-            "slide_image": "shopify:\/\/shop_images\/Rachel_Walker.jpg",
             "slide_video": "shopify:\/\/files\/videos\/Rachel Walker for Customer Ambassador Program_2_1.mp4",
             "testimonial_title": "A simple solution for my UTI problem",
             "testimonial_paragraph": "I tried many products for my UTIs, at one point I was taking 15 different supplements. I'm so grateful that I found Utiva, with one pill a day my bladder is very happy.",
@@ -62,7 +58,6 @@
           "type": "slider_item",
           "disabled": true,
           "settings": {
-            "slide_image": "shopify:\/\/shop_images\/4_6aaf231e-8d85-424c-8303-f544d20a3935.png",
             "slide_video": "shopify:\/\/files\/videos\/Family history of UTIs - Tamana's Experience--(720p).mp4",
             "testimonial_title": "Family history of UTIs",
             "testimonial_paragraph": "replace with new copy ....",
@@ -180,7 +175,6 @@
         "a15fa326-c734-4e1e-9fdc-4dedb62dfed7": {
           "type": "card",
           "settings": {
-            "image": "shopify:\/\/shop_images\/yeast_infections.png",
             "title": "Yeast infections",
             "url": "shopify:\/\/collections\/collections-page-bundles"
           }
