@@ -1,5 +1,4 @@
 {{ 'new-product-slider.css' | asset_url | stylesheet_tag }}
-<script src='{{ 'reviews-count.js' | asset_url }}' defer='defer'></script>
 <script src='{{ 'product-slider-dragg.js' | asset_url }}' defer='defer'></script>
 
 {% style %}
@@ -62,19 +61,17 @@
 				</div>
 				<div class='new-product-slider__item--price-rating'>
 					<p class='body-m'>{{ product.price | money }}</p>
+
 					<div class='new-product-slider__item--rating'>
-						{% render 'icon' with 'star-20' %}
-						<span
-							class='stamped-product-reviews-badge stamped-main-badge'
-							data-id='{{ product.id }}'
-							data-widget-type='standard'
-							data-product-title='{{ product.title | escape }}'
-							data-product-type='{{ product.type }}'
-							style='display: block;'
-							data-product-sku='{{ product.handle }}'
-						></span>
+						{% if product.metafields.yotpo.reviews_average %} 
+							<div class="flex items-center justify-center gap-x-1">
+							{% render 'icon' with 'star-20' %}
+							<span class="text-[#1C1C1C] text-sm font-medium leading-[1.96rem]">{{ product.metafields.yotpo.reviews_average | round: 1 }}</span>
+							</div>
+						{% endif %}
 					</div>
 				</div>
+
 			</li>
 		{% endfor %}
 	</ul>
