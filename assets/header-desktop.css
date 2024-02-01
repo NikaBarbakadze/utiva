@@ -232,14 +232,6 @@
         gap:24px
     }
 }
-.header-product .stamped-product-reviews-badge{
-    font-family:var(--font-family-body);
-    font-size:var(--font-size-2xs);
-    font-style:normal;
-    font-weight:var(--font-weight-medium);
-    line-height:1.4;
-    color:var(--color-black)
-}
 .header-product ul{
     margin:0;
     list-style:none
