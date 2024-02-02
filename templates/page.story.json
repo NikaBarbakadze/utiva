@@ -51,6 +51,7 @@
           "type": "slider_item",
           "disabled": true,
           "settings": {
+            "slide_image": "shopify:\/\/shop_images\/Rachel_Walker_430x_2de6b374-e8a8-4730-a490-efe1ce67270c.webp",
             "slide_video": "shopify:\/\/files\/videos\/Rachel Walker for Customer Ambassador Program_2_1.mp4",
             "testimonial_title": "A simple solution for my UTI problem",
             "testimonial_paragraph": "I tried many products for my UTIs, at one point I was taking 15 different supplements. I'm so grateful that I found Utiva, with one pill a day my bladder is very happy.",
