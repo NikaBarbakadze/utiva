@@ -28,6 +28,7 @@
         "9f20bb36-aa34-42b7-9e41-46b6052c3250": {
           "type": "slider_item",
           "settings": {
+            "slide_image": "shopify:\/\/shop_images\/testimonial3.png",
             "slide_video": "shopify:\/\/files\/videos\/How Sandra recovered from chronic UTIs naturally--(720p).mp4",
             "testimonial_title": "Recurrent urinary challenges ",
             "testimonial_paragraph": "If you suffer from ongoing urinary tract problems, I want to tell you that there is hope—I'm proof of it.",
