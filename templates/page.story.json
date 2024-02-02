@@ -39,6 +39,7 @@
         "6dad3236-a780-44b0-b0e9-da2d7c391a8b": {
           "type": "slider_item",
           "settings": {
+            "slide_image": "shopify:\/\/shop_images\/testimonial2.png",
             "slide_video": "shopify:\/\/files\/videos\/Kathy's struggle with a Silent UTI--(720p).mp4",
             "testimonial_title": "No signs but ended up in the hospital ",
             "testimonial_paragraph": "Plagued with urinary tract problems my whole life, the scariest and worst case was when I had no signs or symptoms but ended up in the hospital with a life-threatening condition. ",
