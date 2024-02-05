@@ -1,0 +1,138 @@
+<div class="bm-ebook-thank-you">
+  <div class="bm-thank-you-container">
+    <div class="bm-thank-you-main">
+      <div class="bm-thank-you-content">
+        {% if section.settings.bm_thank_title != blank %}
+         <h2>{{ section.settings.bm_thank_title }}</h2>
+        {% endif %}
+        {% if section.settings.bm_thank_description != blank %}
+         <p>{{ section.settings.bm_thank_description }}</p>
+        {% endif %}
+         <div class="bm-thank-you-button">
+           {% if section.settings.bm_one_btn_text != blank %}
+           <a href="{{ section.settings.bm_one_btn_url }}">{{ section.settings.bm_one_btn_text }}</a>
+           {% endif %}
+         </div>
+      </div>
+     </div>
+  </div>
+</div>
+
+
+<style>
+.bm-thank-you-content {
+    background: #EFEBE8;
+    padding: 80px 0;
+    text-align: center;
+}
+.bm-thank-you-content h2 {
+    color: #1C1C1C;
+    text-align: center;
+    font-family: "General Sans";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    letter-spacing: -0.96px;
+    margin-bottom: 20px;
+}
+.bm-thank-you-content p {
+    color: rgba(28, 28, 28, 0.60);
+    text-align: center;
+    font-family: "General Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    letter-spacing: -0.48px;
+    margin: 0 auto;
+    max-width: 414px;
+}
+.bm-thank-you-button a {
+    color: #FCFCFA;
+    text-align: center;
+    font-family: "General Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    background: #C33635;
+    padding: 10px 24px;
+    min-width: 174px;
+    border-radius: 80px;
+    display: inline-block;
+}
+.bm-thank-you-button a:hover {
+    background: #A52322;
+}
+.bm-thank-you-content p a {
+    color: #C33635;
+    font-family: "General Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: -0.48px;
+    text-decoration-line: underline;
+}
+.bm-thank-you-button {
+    margin-top: 20px;
+}
+
+@media only screen and (max-width:767px){
+  .bm-thank-you-button a {
+    margin-left: 0;
+    max-width: 200px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+ }
+  .bm-thank-you-button a:last-child{
+    margin-bottom: 0;
+ }
+  .bm-thank-you-button {
+    display: flex;
+    flex-direction: column;
+ }
+  .bm-thank-you-content {
+    padding: 58px 25px;
+ }
+  .bm-thank-you-content h2 {
+    font-size: 38.443px;
+  }
+  .bm-thank-you-img {
+    display: none;
+ }
+}
+</style>
+{% schema %}
+  {
+    "name": "Ebook Thank you",
+    "settings": [
+      {
+        "type": "text",
+        "id": "bm_thank_title",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "bm_thank_description",
+        "label": "Description"
+      },
+      {
+        "type": "text",
+        "id": "bm_one_btn_text",
+        "label": "Button One Text"
+      },
+      {
+        "type": "url",
+        "id": "bm_one_btn_url",
+        "label": "Button One url"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Ebook Thank you"
+      }
+    ]
+  }
+{% endschema %}
