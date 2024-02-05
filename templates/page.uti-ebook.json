@@ -1,17 +1,72 @@
 {
   "sections": {
     "main": {
-      "type": "main-page",
+      "type": "bm-free-uti-ebook",
       "custom_css": [
-        ".rte {max-width: 990px!important;}"
+        ".rte {max-width: 990px !important;}"
       ],
       "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
+        "bm_free_uti_title": "Free UTI eBook",
+        "bm_free_uti_description": "Understanding and preventing\u2028<br>Urinary Tract infections ",
+        "bm_ebook_form": "<div class=\"klaviyo-form-RULEYR\"><\/div>"
+      }
+    },
+    "bm_unlock_secrets_Fdbwtt": {
+      "type": "bm-unlock-secrets",
+      "blocks": {
+        "block_MH64de": {
+          "type": "block",
+          "settings": {
+            "bm_unlock_img": "shopify:\/\/shop_images\/Frame_138.png",
+            "bm_unlock_text": "<p>Understand what UTIs\u2028really are<\/p>"
+          }
+        },
+        "block_bXi6m9": {
+          "type": "block",
+          "settings": {
+            "bm_unlock_img": "shopify:\/\/shop_images\/Frame_137.png",
+            "bm_unlock_text": "<p>Learn about the most common symptoms<\/p>"
+          }
+        },
+        "block_bzjRjX": {
+          "type": "block",
+          "settings": {
+            "bm_unlock_img": "shopify:\/\/shop_images\/Frame_139.png",
+            "bm_unlock_text": "<p>Look at the connection between complex health conditions and UTIs<\/p>"
+          }
+        },
+        "block_Fj9qGL": {
+          "type": "block",
+          "settings": {
+            "bm_unlock_img": "shopify:\/\/shop_images\/Frame_136.png",
+            "bm_unlock_text": "<p>Explore the root causes behind these infections<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "block_MH64de",
+        "block_bXi6m9",
+        "block_bzjRjX",
+        "block_Fj9qGL"
+      ],
+      "settings": {
+        "bm_unlock_title": "Unlock the Secrets to a Healthy You! 🌟",
+        "bm_unlock_subtitle": "Say goodbye to UTI struggles with Utiva's FREE eBook.",
+        "bm_unlock_description": "Ready to empower yourself with knowledge?<br> Download our free UTI eBook now and take the first step toward a UTI-free life!"
+      }
+    },
+    "bm_quality_trust_xrd8GX": {
+      "type": "bm-quality-trust",
+      "settings": {
+        "bm_quality_title": "Quality and trust — that is the Utiva promise",
+        "bm_quality_img": "shopify:\/\/shop_images\/Frame_4342d9ef-9370-4406-910b-f2121f0691dd.png",
+        "bm_quality_description": "Our #1 goal is to help our customers lead happier, healthier, more natural lives."
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "bm_unlock_secrets_Fdbwtt",
+    "bm_quality_trust_xrd8GX"
   ]
 }
