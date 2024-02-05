@@ -20,6 +20,11 @@
 
 
 <style>
+{% if request.path == "/pages/uti-ebook-thank-you" %}
+.main-content {
+    min-height: auto;
+}
+{% endif %} 
 .bm-thank-you-content {
     background: #EFEBE8;
     padding: 80px 0;
