@@ -13,7 +13,7 @@
          </div>
       </div>
       <div class="bm-free-uti-img">
-        <img src="https://cdn.shopify.com/s/files/1/0060/4677/7455/files/HCP_Landing_Page_GIF.gif?v=1706276132"/>
+           <img src="{{ section.settings.bm_free_uti_img | img_url:"master" }}" alt="{{ section.settings.bm_free_uti_img.alt }}"/>
       </div>
      </div>
   </div>
@@ -39,6 +39,11 @@
         "type": "html",
         "id": "bm_ebook_form",
         "label": "Form Id"
+      },
+       {
+        "type": "image_picker",
+        "id": "bm_free_uti_img",
+        "label": "Image"
       }
     ],
     "presets": [
