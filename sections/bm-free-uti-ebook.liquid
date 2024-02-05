@@ -1,0 +1,50 @@
+<div class="bm-free-uti">
+  <div class="bm-free-uti-container">
+    <div class="bm-free-uti-main">
+      <div class="bm-free-uti-content">
+        {% if section.settings.bm_free_uti_title != blank %}
+         <h2>{{ section.settings.bm_free_uti_title }}</h2>
+        {% endif %}
+        {% if section.settings.bm_free_uti_description != blank %}
+         <p>{{ section.settings.bm_free_uti_description }}</p>
+        {% endif %}
+         <div class="bm-free-uti-form">
+           {{ section.settings.bm_ebook_form }}
+         </div>
+      </div>
+      <div class="bm-free-uti-img">
+        <img src="https://cdn.shopify.com/s/files/1/0060/4677/7455/files/HCP_Landing_Page_GIF.gif?v=1706276132"/>
+      </div>
+     </div>
+  </div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "Free UTI Ebook",
+    "settings": [
+      {
+        "type": "text",
+        "id": "bm_free_uti_title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "bm_free_uti_description",
+        "label": "Description"
+      },
+      {
+        "type": "html",
+        "id": "bm_ebook_form",
+        "label": "Form Id"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Free UTI Ebook"
+      }
+    ]
+  }
+{% endschema %}
