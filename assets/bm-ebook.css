@@ -1,0 +1,319 @@
+.bm-free-uti-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #C33635;
+    backdrop-filter: blur(40px);
+}
+.bm-free-uti-content {
+    width: 50%;
+    text-align: left;
+    padding-left: 100px;
+}
+.bm-free-uti-img {
+    width: 50%;
+}
+.bm-free-uti-content h2 {
+    color: #FCFCFA;
+    font-family: "General Sans";
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    letter-spacing: -1.12px;
+}
+.bm-free-uti-content p {
+    color: #FCFCFA;
+    font-family: "General Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 135%;
+    letter-spacing: -0.48px;
+    margin-top: 15px;
+}
+.bm-free-uti-form input {
+    background: #c33635 !important;
+    border: none !important;
+    border-bottom: 1.2px solid var(--white-60, rgba(255, 255, 255, 0.60)) !important;
+    max-width: 370px !important;
+}
+.bm-free-uti-form button:after {
+    position: absolute;
+    width: 55px;
+    height: 31px;
+    content: "";
+    background-image: url(https://cdn.shopify.com/s/files/1/0060/4677/7455/files/Vector_8_0cd2ee76-56d2-46f3-9a47-ed1e4c814cf4.png?v=1706538899);
+    top: 11px;
+    right: -10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bm-free-uti-form button:hover {
+    color: #A52322 !important;
+    background: #fff !important;
+}
+.bm-free-uti-form button:hover:after{
+    background-image: url(https://cdn.shopify.com/s/files/1/0060/4677/7455/files/Vector_10_0d262f85-1993-49a3-a52d-ddb6ca73fb16.png?v=1706600892);
+    
+}
+
+.bm-free-uti-form .needsclick.kl-private-reset-css-Xuajs1 form [data-testid=form-row]:last-child .needsclick.kl-private-reset-css-Xuajs1 button{
+    position: relative;
+    padding-right: 60px !important;
+    padding-left: 18px !important;
+    max-width: 300px !important;
+}
+@media only screen and (min-width:767px) and (max-width:1024px) {
+  .bm-free-uti-content {
+    padding-left: 65px;
+  }
+  .bm-free-uti-content h2 {
+    font-size: 45px;
+ }
+  .bm-free-uti-content p {
+    font-size: 20px;
+ }
+}
+@media only screen and (max-width:767px){
+  .bm-free-uti-content {
+    width: 100%;
+    text-align: center;
+    padding: 56px 0;
+  }
+  .bm-free-uti-img {
+    width: 100%;
+  }
+  .bm-free-uti-main {
+    flex-direction: column;
+  }
+  .bm-free-uti-content h2 {
+    font-size: 32px;
+  }
+  .bm-free-uti-content p {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .bm-free-uti-form form {
+    margin: 0 auto !important;
+    float: unset !important;
+  }
+  .bm-free-uti-form .needsclick.kl-private-reset-css-Xuajs1 form [data-testid="form-row"]:last-child .needsclick.kl-private-reset-css-Xuajs1 {
+    margin-left: auto !important;
+    padding-right: 0 !important;
+  }
+  .bm-free-uti-form .needsclick.kl-private-reset-css-Xuajs1 form [data-testid=form-row]:first-child .needsclick.kl-private-reset-css-Xuajs1 {
+    padding-left: 20px !important;
+  }
+}
+
+/*styling start for bm-unlock-secrets*/
+.bm-unlock-secrets-container {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+.bm-unlock-secrets {
+    background: #EFEBE8;
+    padding: 80px 0;
+}
+.bm-unlock-secrets-main h2 {
+    font-family: "General Sans";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    letter-spacing: -0.96px;
+    text-align: center;
+}
+.bm-unlock-secrets-main h3 {
+    color: rgba(28, 28, 28, 0.60);
+    text-align: center;
+    font-family: "General Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 50%;
+    letter-spacing: -0.48px;
+    margin-top: 20px;
+}
+.bm-unlock-secrets-content {
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+}
+.bm-unlock-secrets-block {
+    width: 25%;
+    margin-right: 24px;
+    border-radius: 16px;
+    background: var(--white, #FFF);
+    padding: 32px;
+}
+.bm-unlock-secrets-block:last-child {
+    margin-right: 0;
+}
+p.bm-unlock-bottom-info {
+    color: #1C1C1C;
+    text-align: center;
+    font-family: "General Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 170%;
+    letter-spacing: -0.48px;
+}
+.bm-unlock-secrets-item p {
+    color: var(--black, #1C1C1C);
+    font-family: "General Sans";
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    letter-spacing: -0.19px;
+    text-align: left;
+    margin-top: 24px;
+}
+.bm-unlock-secrets-img {
+    max-width: 60px;
+}
+.bm-unlock-secrets-img img {
+    width: 100%;
+    height: 100%;
+}
+.bm-unlock-title-img {
+    width: 35px;
+    height: auto;
+    margin-left: 12px;
+}
+.bm-unlock-title-img img{
+  width: 100%;
+  height: 100%;
+}
+.bm-unlock-secrets-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media only screen and (max-width:767px){
+  .bm-unlock-secrets-main h2 {
+    font-size: 38.443px;
+    line-height: 120%;
+    letter-spacing: -0.769px;
+  }
+  .bm-unlock-secrets-main h3 {
+    font-size: 19.221px;
+    font-weight: 400;
+    line-height: 140%;
+    margin-top: 14px;
+  }
+  .bm-unlock-secrets-content {
+    margin: 38px 0;
+    flex-direction: column;
+  }
+  .bm-unlock-secrets-block {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 28px;
+  }
+  .bm-unlock-secrets-item p {
+    font-size: 21.624px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 14px;
+  }
+  .bm-unlock-secrets-img {
+    margin: 0 auto;
+  }
+  p.bm-unlock-bottom-info {
+    font-size: 19.221px;
+    font-weight: 400;
+    color: #1C1C1C;
+  }
+  .bm-unlock-secrets {
+    padding: 55px 0;
+  }
+  p.bm-unlock-bottom-info br {
+    margin-bottom: 18px;
+    display: flex;
+    content: "";
+}
+}
+/*styling end for bm-unlock-secrets*/
+
+/*styling start for bm-quality-trust*/
+.bm-quality-trust-container {
+    max-width: 1250px;
+    padding: 0 25px;
+    margin: 0 auto;
+}
+.bm-quality-trust-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bm-quality-trust-title h2 {
+    font-family: "General Sans";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: -0.36px;
+    color: #1C1C1C;
+    text-align: left;
+}
+.bm-quality-trust-description p {
+    font-family: "General Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    margin-left: 24px;
+}
+.bm-quality-trust-img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.bm-quality-trust-img {
+    max-width: 96px;
+}
+.bm-quality-trust {
+    padding: 60px 0;
+}
+.bm-quality-trust-title {
+    width: 100%;
+    margin-right: 24px;
+}
+@media only screen and (max-width:767px){
+  .bm-quality-trust-description {
+    order: 3;
+  }
+  .bm-quality-trust-img {
+    order: 1;
+  }
+  .bm-quality-trust-title {
+    margin-right: 0;
+    order: 2;
+    margin-top: 24px;
+    margin-bottom: 14px;
+  }
+  .bm-quality-trust-main {
+    flex-direction: column;
+  }
+  .bm-quality-trust {
+    padding-top: 30px;
+    padding-bottom: 70px;
+  }
+  .bm-quality-trust-description p {
+    font-size: 19.232px;
+    margin-left: 0;
+    text-align: center;
+  }
+  .bm-quality-trust-title h2 {
+    font-size: 33.655px;
+    text-align: center;
+  }
+}
+/*styling start for bm-quality-trust*/
+
+
