@@ -1,17 +1,28 @@
 {
   "sections": {
     "main": {
-      "type": "main-page",
+      "type": "bm-ebook-thank-you",
       "custom_css": [
-        ".rte {max-width: 990px!important;}"
+        ".rte {max-width: 990px !important;}"
       ],
       "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
+        "bm_thank_title": "Thank you for downloading!",
+        "bm_thank_description": "<p>We have sent the e-book to your email, or click <a href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0060\/4677\/7455\/files\/Utiva_UltimateUTIeBook.pdf?v=1703692373\" target=\"_blank\" title=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0060\/4677\/7455\/files\/Utiva_UltimateUTIeBook.pdf?v=1703692373\">here<\/a> to download instantly.<\/p>",
+        "bm_one_btn_text": "SHOP UTI Products",
+        "bm_one_btn_url": "https:\/\/www.utivahealth.ca\/collections\/collections-page-utis"
+      }
+    },
+    "bm_quality_trust_dtEL8w": {
+      "type": "bm-quality-trust",
+      "settings": {
+        "bm_quality_title": "Quality and trust — that is the Utiva promise",
+        "bm_quality_img": "shopify:\/\/shop_images\/Frame_4342d9ef-9370-4406-910b-f2121f0691dd.png",
+        "bm_quality_description": "Our #1 goal is to help our customers lead happier, healthier, more natural lives."
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "bm_quality_trust_dtEL8w"
   ]
 }

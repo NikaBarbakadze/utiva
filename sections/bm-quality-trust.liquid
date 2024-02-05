@@ -1,6 +1,51 @@
+<div class="bm-quality-trust">
+  <div class="bm-quality-trust-container">
+    <div class="bm-quality-trust-main">
+      <div class="bm-quality-trust-title">
+      {% if section.settings.bm_quality_title != blank %}
+         <h2>{{ section.settings.bm_quality_title }}</h2>
+      {% endif %}
+      </div>
+      <div class="bm-quality-trust-img">
+        {% if section.settings.bm_quality_img != blank %}
+        <img src="{{ section.settings.bm_quality_img | img_url:"master" }}" alt="{{ block.settings.bm_quality_img.alt }}"/>
+        {% endif %}
+      </div>
+      <div class="bm-quality-trust-description">
+      {% if section.settings.bm_quality_description != blank %}
+         <p class="bm-unlock-item-info">{{ section.settings.bm_quality_description }}</p>
+      {% endif %}
+      </div>
+     </div>
+  </div>
+</div>
+
+
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Quality Trust Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "bm_quality_title",
+        "label": "Title"
+      },
+      {
+          "type": "image_picker",
+          "id": "bm_quality_img",
+          "label": "Image"
+      },
+      {
+        "type": "textarea",
+        "id": "bm_quality_description",
+        "label": "Description"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Quality Trust Section"
+      }
+    ]
   }
 {% endschema %}
