@@ -54,10 +54,14 @@ window.TriplePixelData={TripleName:"utiva.myshopify.com",ver:"2.12",plat:"SHOPIF
       <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
-    {% if template.suffix contains 'bm-hcp' or request.path == "/pages/uti-thumbs-up" or request.path == "/pages/survey-not-purchase" or request.path == "/pages/uti-thumbs-down" or request.path == "/pages/oab-thumbs-up" or request.path == "/pages/oab-thumbs-down" or template.suffix contains 'klaviyo-embed-form' %} 
+    {% if template.suffix contains 'bm-hcp' or request.path == "/pages/uti-thumbs-up" or request.path == "/pages/survey-not-purchase" or request.path == "/pages/uti-thumbs-down" or request.path == "/pages/oab-thumbs-up" or request.path == "/pages/oab-thumbs-down" or template.suffix contains 'klaviyo-embed-form' or request.path == "/pages/uti-ebook-thank-you" %} 
       <meta name="robots" content="noindex,nofollow">
     {% endif %}
-
+    
+    {% if template.suffix contains "uti-ebook" %}
+     {{ 'bm-ebook.css' | asset_url | stylesheet_tag }}
+     {% endif %}
+     
     {{ content_for_header }}
 
     {%- liquid
