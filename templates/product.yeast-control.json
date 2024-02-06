@@ -182,6 +182,7 @@
     },
     "c8dae995-780a-4003-9876-093a01bd3220": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": "<div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"445219\" data-yotpo-product-id=\"{{product.id}}\" data-yotpo-name=\"{{ product.title | escape }}\" data-yotpo-url=\"{{ shop.url }}{{ product.url }}\" data-yotpo-image-url=\"{{ product.featured_image | product_img_url: \"large\" | prepend: \"https:\" | replace: '?', '%3F' | replace: '&','%26'}}\" data-yotpo-price=\"{{ product.price | divided_by: 100.00 }}\" data-yotpo-currency=\"{{ shop.currency }}\" data-yotpo-description=\"{{ product.description | escape }}\"><\/div>",
         "color_scheme": "",
@@ -267,6 +268,15 @@
         "button_url": "",
         "collection": "best-sellers"
       }
+    },
+    "custom_liquid_JxhLpq": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>\n.yotpo-reviews-count {\n    display: none;\n}\n.otp_div.active .otp_data {\n    display: none !important;\n}\n<\/style>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
@@ -278,6 +288,7 @@
     "c8dae995-780a-4003-9876-093a01bd3220",
     "how-to-use",
     "new-trusted-recommended-doctors",
-    "product-slider"
+    "product-slider",
+    "custom_liquid_JxhLpq"
   ]
 }
