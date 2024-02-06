@@ -50,6 +50,12 @@
           "settings": {
             "product": "cleansing-wipes"
           }
+        },
+        "products_rVn9mi": {
+          "type": "products",
+          "settings": {
+            "product": "yeast-control"
+          }
         }
       },
       "block_order": [
@@ -60,7 +66,8 @@
         "e9db68ca-10b9-4f0b-9c91-9079bb94ec48",
         "d5aba8e8-b974-407c-8505-ba3e79431b4a",
         "fbe0ab39-67b7-4f66-be45-7cc8f8a14c23",
-        "57e9821f-452b-409e-8658-4cc18ecd5870"
+        "57e9821f-452b-409e-8658-4cc18ecd5870",
+        "products_rVn9mi"
       ],
       "settings": {
       }
