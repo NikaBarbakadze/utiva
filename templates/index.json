@@ -17,6 +17,15 @@
         "btn_url": "shopify:\/\/collections\/collections-page-shop-all"
       }
     },
+    "valentines_day_promo_banner_R6EdfB": {
+      "type": "valentines-day-promo-banner",
+      "disabled": true,
+      "settings": {
+        "bm_banner_link": "https:\/\/www.utivahealth.ca\/collections\/collections-page-shop-all",
+        "bm_desktop_banner_image": "shopify:\/\/shop_images\/valentines_day_promo_banner_desktop.png",
+        "bm_mobile_banner_image": "shopify:\/\/shop_images\/valentines_day_promo_banner_mobile.png"
+      }
+    },
     "section-text": {
       "type": "section-text",
       "settings": {
@@ -503,6 +512,7 @@
   },
   "order": [
     "main-banner",
+    "valentines_day_promo_banner_R6EdfB",
     "section-text",
     "targeted-solutions",
     "quality-and-trust",
