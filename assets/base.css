@@ -4120,3 +4120,8 @@ cart-drawer-items.is-empty{
 .custom-blog-tag{
   text-transform: capitalize;
 }
+
+.questionWrapper a{
+  color: #C33635;
+  text-decoration: underline;
+}
