@@ -29,13 +29,13 @@
 					{{ section.settings.title }}
 				</p>
 			{% endif %}
-			{% if section.settings.button_text != blank %}
+			{% comment %} {% if section.settings.button_text != blank %}
 				<div class='new-trusted-doctors__btn-desktop'>
 					<a href='{{ section.settings.button_url }}' class='btn-new btn-new--secondary'>
 						{{ section.settings.button_text }}
 					</a>
 				</div>
-			{% endif %}
+			{% endif %} {% endcomment %}
 		</div>
 
 		<div class='new-trusted-doctors__doctors-block new-trusted-doctors__doctors-block--{{ section.id }}'>
@@ -73,13 +73,13 @@
 				</div>
 			{% endfor %}
 		</div>
-		{% if section.settings.button_text != blank %}
+		{% comment %} {% if section.settings.button_text != blank %}
 			<div class='new-trusted-doctors__btn-mobile'>
 				<a href='{{ section.settings.button_url }}' class='btn-new btn-new--secondary'>
 					{{ section.settings.button_text }}
 				</a>
 			</div>
-		{% endif %}
+		{% endif %} {% endcomment %}
 	</div>
 </div>
 
