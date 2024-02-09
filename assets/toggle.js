@@ -27,10 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
           "https://" + hostWithoutWww.replace("fr.", "") + path + queryString;
       }
 
-      console.log(newUrl);
-
       // Redirect to the new URL
-      // window.location.href = newUrl;
+      window.location.href = newUrl;
     });
   });
 });
