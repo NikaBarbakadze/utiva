@@ -4039,11 +4039,11 @@ cart-drawer-items.is-empty{
   font-size: 24px !important;
 }
 
-.input-new__container button{
+/* .input-new__container button{
   border-bottom: 1px solid #cec7c0 !important;
   position: relative;
 
-}
+} */
 
 .input-new__container input::placeholder{
   font-size: 24px !important;
@@ -4084,17 +4084,17 @@ cart-drawer-items.is-empty{
   filter: brightness(0) invert(1);
 }
 
-.section-banner-product .input-new__container button{
+/* .section-banner-product .input-new__container button{
   border-bottom: 1px solid #fff !important;
   top:0px;
-}
+} */
 
 @media screen and (min-width: 768px) {
-  .section-banner-product .input-new__container button{
+  /* .section-banner-product .input-new__container button{
     border-bottom: 1px solid #fff !important;
     position: relative;
     top:0.5px;
-  }
+  } */
 
   .yotpo-customer-email-view{
     padding-top: 50px;
