@@ -3852,11 +3852,17 @@ input, textarea, select, .faux-select {
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
+  margin-left: 30px;
+}
+
+.custom-main-article .article-template__content ul {
+  margin-bottom: 10px;
 }
 
 @media screen and (max-width: 992px) {
   .custom-main-article .article-template__content ul li{
-    margin-left: 15px;
+    margin-left: 20px;
+    font-size: 16px;
   }
   .custom-main-article .article-template__content h1{
     color: #1C1C1C; 
