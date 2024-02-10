@@ -907,12 +907,14 @@
                       </div>
                     </div>
                   </div>
+                  {% unless product.selling_plan_groups.size < 1 %}
                   <div class="otp_data items-start justify-start gap-x-2 hidden">
                     <div class="w-6 h-6">
                       {% render 'icon-shop' %}
                     </div>
                     <p class="text-sm font-medium text-[#1C1C1C]">Consistency is key to success and you're 4x more likely to succeed if you subscribe.</p>
                   </div>
+                  {% endunless %}
                 </div>
               </div>
             {%- when 'buy_buttons' -%}
