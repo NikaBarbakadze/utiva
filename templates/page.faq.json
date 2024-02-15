@@ -56,6 +56,12 @@
           "settings": {
             "product": "yeast-control"
           }
+        },
+        "products_BphdMi": {
+          "type": "products",
+          "settings": {
+            "product": "suppository-applicators"
+          }
         }
       },
       "block_order": [
@@ -67,7 +73,8 @@
         "d5aba8e8-b974-407c-8505-ba3e79431b4a",
         "fbe0ab39-67b7-4f66-be45-7cc8f8a14c23",
         "57e9821f-452b-409e-8658-4cc18ecd5870",
-        "products_rVn9mi"
+        "products_rVn9mi",
+        "products_BphdMi"
       ],
       "settings": {
       }
