@@ -199,6 +199,16 @@
     "new-trusted-recommended-doctors": {
       "type": "new-trusted-recommended-doctors",
       "blocks": {
+        "text_Y4c6fj": {
+          "type": "text",
+          "settings": {
+            "doctors_image": "shopify:\/\/shop_images\/Susan_Oakley.svg",
+            "title": "Boric Acid Vaginal Suppositories are great for treating Yeast Infections",
+            "description": "<p>My practice uses Boric Acid vaginal suppositories so often! We evaluate a constant stream of referrals for recurrent yeast vaginitis and a 14-night course with Boric Acid typically eradicates symptoms. It’s so easy to use and gets directly to the root of the cause.<\/p>",
+            "doctors_name": "Dr. Susan H. Oakley",
+            "position": "Urogynecologist"
+          }
+        },
         "2d42196f-364c-4153-9050-fe3a46837cdf": {
           "type": "text",
           "settings": {
@@ -238,24 +248,14 @@
             "doctors_name": "Dr. Colleen McDermott",
             "position": "Urogynecologist"
           }
-        },
-        "text_Y4c6fj": {
-          "type": "text",
-          "settings": {
-            "doctors_image": "shopify:\/\/shop_images\/Susan_Oakley.svg",
-            "title": "Boric Acid Vaginal Suppositories are great for treating Yeast Infections",
-            "description": "<p>\"My practice uses Boric Acid vaginal suppositories so often! We evaluate a constant stream of referrals for recurrent yeast vaginitis and a 14-night course with Boric Acid typically eradicates symptoms. It’s so easy to use and gets directly to the root of the cause.”<\/p>",
-            "doctors_name": "Dr. Susan H. Oakley",
-            "position": "Urogynecologist"
-          }
         }
       },
       "block_order": [
+        "text_Y4c6fj",
         "2d42196f-364c-4153-9050-fe3a46837cdf",
         "d78cbc73-7151-4116-8433-c6f957683800",
         "21fb4f97-5504-4a87-a0aa-12fb6b2fe3dc",
-        "c647f522-e133-46a8-83ca-7cecce112a9c",
-        "text_Y4c6fj"
+        "c647f522-e133-46a8-83ca-7cecce112a9c"
       ],
       "settings": {
         "paddingTop_mobile": 0,
