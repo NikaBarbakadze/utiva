@@ -165,6 +165,7 @@
 		>
 			{% for link in mob_menu.links %}
 				<div
+					data-index="{{ forloop.index }}"
 					class='header-desktop__nav--item'
 				>
 					{% if link.links.size > 0 %}
