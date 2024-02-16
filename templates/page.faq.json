@@ -12,7 +12,7 @@
         "d1919bcc-a022-4811-9f28-5578f385c28b": {
           "type": "hsas",
           "settings": {
-            "hsa_rich": "In Canada, natural products may be paid for from your HSA (Health Savings Account) when certain criteria is met. Please verify with your health insurance company to verify what you are eligible for."
+            "hsa_rich": "In the United States, some products may be paid for from your HSA (Health Savings Account) when certain criteria is met. Please verify with your health insurance company to verify what you are eligible for."
           }
         },
         "f10f490c-7fa3-435d-87c4-abc4d1bfd39d": {
@@ -50,18 +50,6 @@
           "settings": {
             "product": "cleansing-wipes"
           }
-        },
-        "products_rVn9mi": {
-          "type": "products",
-          "settings": {
-            "product": "yeast-control"
-          }
-        },
-        "products_BphdMi": {
-          "type": "products",
-          "settings": {
-            "product": "suppository-applicators"
-          }
         }
       },
       "block_order": [
@@ -72,9 +60,7 @@
         "e9db68ca-10b9-4f0b-9c91-9079bb94ec48",
         "d5aba8e8-b974-407c-8505-ba3e79431b4a",
         "fbe0ab39-67b7-4f66-be45-7cc8f8a14c23",
-        "57e9821f-452b-409e-8658-4cc18ecd5870",
-        "products_rVn9mi",
-        "products_BphdMi"
+        "57e9821f-452b-409e-8658-4cc18ecd5870"
       ],
       "settings": {
       }
