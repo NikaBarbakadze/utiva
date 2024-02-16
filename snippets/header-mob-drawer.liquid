@@ -10,7 +10,7 @@
 		</button>
 
 		{% comment %} TOGGLE {% endcomment %}
-		{% if toggle != blank %}
+		{% comment %} {% if toggle != blank %}
 			<div
 				class='mobile-menu__toggle'
 			>
@@ -38,7 +38,7 @@
 					{{- toggle_text_after -}}
 				</span>
 			</div>
-		{% endif %}
+		{% endif %} {% endcomment %}
 
 		<div class='mobile-menu__icons flex gap-1'>
 			<a href="/account">

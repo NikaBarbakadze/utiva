@@ -198,7 +198,7 @@
 	</div>
 
 		<div class='header-desktop__icons'>
-			<div
+			{% comment %} <div
 				class='header-desktop__icons--toggle-track'
 			>
 				<span class='header-desktop__icons--toggle-track--before'>
@@ -222,7 +222,7 @@
 				<span class='header-desktop__icons--toggle-track--after'>
 					{{- toggle_text_after -}}
 				</span>
-			</div>
+			</div> {% endcomment %}
 			
 
 			<a href='/account' class='header-desktop__icons--hover'> {% render 'icon', icon: 'account-32' %}</a>
