@@ -4131,3 +4131,16 @@ cart-drawer-items.is-empty{
   color: #C33635;
   text-decoration: underline;
 }
+
+.targeted-solutions__blocks .targeted-solutions__block--link:after{
+  transition: all 0.4s ease;
+}
+
+.targeted-solutions__blocks .targeted-solutions__block--link:hover:after{
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.targeted-solutions__blocks .targeted-solutions__block--link:hover .targeted-solutions__block--link--text{
+  background-color: #ffffff3a;
+}
