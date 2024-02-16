@@ -926,6 +926,10 @@ video {
   margin-top: 3rem;
 }
 
+.mr-10 {
+  margin-right: 40px;
+}
+
 .\!block {
   display: block !important;
 }
@@ -1239,6 +1243,14 @@ video {
 
 .basis-\[60\%\] {
   flex-basis: 60%;
+}
+
+.basis-\[30\%\] {
+  flex-basis: 30%;
+}
+
+.basis-\[70\%\] {
+  flex-basis: 70%;
 }
 
 .-translate-x-1\/2 {
@@ -1976,11 +1988,6 @@ video {
 .py-\[6rem\] {
   padding-top: 6rem;
   padding-bottom: 6rem;
-}
-
-.px-9 {
-  padding-left: 36px;
-  padding-right: 36px;
 }
 
 .\!pb-0 {
@@ -3713,19 +3720,14 @@ video {
     padding-right: 24px;
   }
 
-  .lg\:py-3 {
-    padding-top: 12px;
-    padding-bottom: 12px;
-  }
-
   .lg\:px-9 {
     padding-left: 36px;
     padding-right: 36px;
   }
 
-  .lg\:py-4 {
-    padding-top: 16px;
-    padding-bottom: 16px;
+  .lg\:py-3 {
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
 
   .lg\:py-3\.5 {

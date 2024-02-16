@@ -191,14 +191,19 @@
     display:none
 }
 .header-desktop__submenu--wrapper{
-    padding:48px 0 0
+    padding:48px 0 48px 0;
 }
 .header-desktop__submenu--item{
     font-weight:var(--font-weight-normal)
 }
-.header-desktop__submenu--item:not(:last-child){
-    margin-bottom:28px
+.header-desktop__submenu--item .header-desktop__submenu--link{
+    padding-bottom:14px;
 }
+
+.header-desktop__submenu--item:not(:first-child) .header-desktop__submenu--link{
+    padding-top:14px;
+}
+
 .header-desktop__submenu--link{
     font-size:var(--font-size-2xxl);
     color:var(--color-black);

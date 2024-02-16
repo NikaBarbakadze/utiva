@@ -1,7 +1,7 @@
 <div
 	class='header-desktop__submenu hide-scroll-bar'
 >
-	<div class='header-desktop__submenu--wrapper basis-1/4'>
+	<div class='header-desktop__submenu--wrapper basis-[30%]'>
 		{% for link in parent_link.links %}
 			<div class='header-desktop__submenu--item {% if link.links.size < 1 %} menu-empty {% endif %}' data-index="{{ forloop.index }}">
 				{% liquid
@@ -12,7 +12,7 @@
 				%}
 				<a
 					href='{{ link.url }}'
-					class='header-desktop__submenu--link flex items-center justify-between pr-10'
+					class='header-desktop__submenu--link flex items-center justify-between mr-10'
 				>
 					<span>{{- link.title -}}</span>
 					{% if link.links.size > 0 %}
@@ -27,7 +27,7 @@
 		{% endfor %}
 	</div>
 
-	<div class='basis-3/4 border-l !pl-10 border-solid border-[#e1e1df] items-center header-product__products-block header-product__products-block--header-main header-product__products-block--{{ section.id }}'>
+	<div class='basis-[70%] border-l !pl-10 border-solid border-[#e1e1df] items-center header-product__products-block header-product__products-block--header-main header-product__products-block--{{ section.id }}'>
 		<div class="basis-[40%] flex items-start">
 			{% assign check = 1 %}
 			{% for link in parent_link.links %}

@@ -4144,3 +4144,17 @@ cart-drawer-items.is-empty{
 .targeted-solutions__blocks .targeted-solutions__block--link:hover .targeted-solutions__block--link--text{
   background-color: #ffffff3a;
 }
+
+.header-desktop__submenu--item:last-child .header-desktop__submenu--link{
+  border-top: 1.5px solid black;
+  margin-top: 15px;
+}
+
+.header-desktop__submenu--item[data-index="2"] .header-desktop__submenu--link{
+  border-bottom: 1.5px solid black;
+  margin-bottom: 15px;
+}
+
+.header-desktop__submenu--item[data-index="3"], .header-desktop__submenu--item[data-index="4"], .header-desktop__submenu--item[data-index="5"]{
+  margin-left: 15px;
+}
