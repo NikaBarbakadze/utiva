@@ -77,20 +77,27 @@
 				fetch('https://api.yotpo.com/v1/apps/3NhG13UQDuUl6r31Ov5IEKsACm6Md9TxF4TTruxD/bottom_lines?count=100', options)
 				.then(response => response.json())
 					.then(response => {
-						// Assuming the response contains a property 'reviews_label'
-						// Update this according to the actual structure of your API response
 						const reviews = response.response.bottomlines;
-
+				
+						console.log(response)
+				
 						let reviewScore = 0;
 						let reviewCount = 0;
-
-						reviews.forEach((item)=>{
-							reviewScore += item.product_score;
-							reviewCount += item.total_reviews;
+						const uniqueReviews = new Set(); // Store unique identifiers
+				
+						reviews.forEach((item) => {
+							// Create a unique identifier for each review
+							const uniqueId = `${item.product_score}-${item.total_reviews}`;
+				
+							if (!uniqueReviews.has(uniqueId)) {
+								uniqueReviews.add(uniqueId); // Add unique identifier to the set
+								reviewScore += item.product_score;
+								reviewCount += item.total_reviews;
+							}
 						})
-
-						reviewScore = (reviewScore / reviews.length).toFixed(1);
-
+				
+						reviewScore = reviewCount > 0 ? (reviewScore / uniqueReviews.size).toFixed(1) : 0;
+				
 						console.log(reviewScore, reviewCount)
 				
 						// Select the element and update its content
@@ -100,7 +107,8 @@
 						${reviewScore} out of 5 stars from ${reviewCount} reviews
 						`;
 					})
-					.catch(err => console.error(err));				
+					.catch(err => console.error(err));
+							
 			</script>
 
 			<div class='customer-feedback__desc-wrap'>
