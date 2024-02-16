@@ -3,27 +3,18 @@
     "main-banner": {
       "type": "main-banner",
       "settings": {
-        "img_desktop": "shopify:\/\/shop_images\/Untitled_design.jpg",
+        "img_desktop": "shopify:\/\/shop_images\/Untitled_design.webp",
         "img_desktop_blur": "shopify:\/\/shop_images\/main_img_986cc0ee-48e9-444e-a4a9-174cb39d03d8.png",
-        "img_mobile": "shopify:\/\/shop_images\/Hero_Banner_Mobile.png",
+        "img_mobile": "shopify:\/\/shop_images\/Hero_Banner_Mobile.webp",
         "img_mobile_blur": "shopify:\/\/shop_images\/Frame_118.png",
         "background_color": "#b9a18f",
-        "label_text": "#1  Doctor Recommended brand for UTI prevention*",
+        "label_text": "",
         "label_background_color": "#ffffff",
         "label_text_color": "#1c1c1c",
         "title": "Clinically Effective. Always Natural.",
-        "description": "<p>Addressing women's pelvic health conditions<br\/>with science-backed solutions that work.<\/p>",
+        "description": "<p>Addressing women's pelvic health concerns<br\/>with science-backed solutions that work.<\/p>",
         "btn_text": "Shop all",
         "btn_url": "shopify:\/\/collections\/collections-page-shop-all"
-      }
-    },
-    "valentines_day_promo_banner_R6EdfB": {
-      "type": "valentines-day-promo-banner",
-      "disabled": true,
-      "settings": {
-        "bm_banner_link": "https:\/\/www.utivahealth.ca\/collections\/collections-page-shop-all",
-        "bm_desktop_banner_image": "shopify:\/\/shop_images\/valentines_day_promo_banner_desktop.png",
-        "bm_mobile_banner_image": "shopify:\/\/shop_images\/valentines_day_promo_banner_mobile.png"
       }
     },
     "section-text": {
@@ -34,7 +25,7 @@
         "paddingTop_desktop": 60,
         "paddingBottom_desktop": 50,
         "bg_color": "#fcfcfa",
-        "rich_text": "<p>At Utiva we specialize in solutions for common, yet often stigmatized and under-treated <b>pelvic health<\/b> concerns of women. We are committed to developing clinically effective solutions that address root causes and are as natural as the issues themselves.<\/p>"
+        "rich_text": "<p>At Utiva we specialize in solutions for common, yet often stigmatized and under-treated <strong>pelvic health<\/strong> concerns of women. We are committed to developing clinically effective solutions that address root causes and are as natural as the issues themselves.<\/p>"
       }
     },
     "targeted-solutions": {
@@ -42,9 +33,10 @@
       "blocks": {
         "c85e708b-ab70-40c4-89b3-355579adc277": {
           "type": "card",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/image_487.jpg",
-            "title": "UTIs",
+            "title": "Urinary Tract Health",
             "url": "shopify:\/\/collections\/collections-page-utis"
           }
         },
@@ -52,16 +44,15 @@
           "type": "card",
           "settings": {
             "image": "shopify:\/\/shop_images\/image_491.jpg",
-            "title": "Overactive bladder",
+            "title": "Bladder Health",
             "url": "shopify:\/\/collections\/collections-page-bladder-health"
           }
         },
         "a15fa326-c734-4e1e-9fdc-4dedb62dfed7": {
           "type": "card",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image_492.jpg",
-            "title": "Yeast Infections",
-            "url": "shopify:\/\/products\/yeast-control"
+            "title": "Vaginal Health",
+            "url": ""
           }
         },
         "4a4714b8-fdbe-45d7-aae7-55e6e38b60ec": {
@@ -86,7 +77,7 @@
         "paddingBottom_desktop": 0,
         "bg_color": "#ede5dd",
         "title": "Shop by targeted solutions",
-        "description": "For UTIs, overactive bladder, vaginal wellness and gut",
+        "description": "For urinary tract health,  bladder Health, vaginal wellness, and gut health.",
         "button_text": "Shop all",
         "button_url": "shopify:\/\/collections\/collections-page-shop-all"
       }
@@ -168,7 +159,7 @@
         "paddingBottom_desktop": 64,
         "background_color": "#ede5dd",
         "title": "Not sure where to start?",
-        "description": "<p>Take our UTI quiz to find the right solution<\/p>",
+        "description": "<p>Take our urinary tract health quiz to find the right solution<\/p>",
         "btn_text": "Solution finder",
         "btn_url": "shopify:\/\/pages\/quiz"
       }
@@ -249,8 +240,7 @@
           "settings": {
             "user_video": "shopify:\/\/files\/videos\/Jane Barkley's UTI Story-Modified.mp4",
             "user_name": "Jane | Menopause related UTIs",
-            "user_rating": "5.0",
-            "user_img": "shopify:\/\/shop_images\/Jane_2.png"
+            "user_rating": "5.0"
           }
         },
         "29702452-a68d-4d1e-9d48-289d3bd34fac": {
@@ -258,8 +248,7 @@
           "settings": {
             "user_video": "shopify:\/\/files\/videos\/Rachel Walker - UTI Story  (2).mp4",
             "user_name": "Rachel | Recurrent UTIs",
-            "user_rating": "5",
-            "user_img": "shopify:\/\/shop_images\/Rachel_Walker.jpg"
+            "user_rating": "5"
           }
         },
         "1dc78747-aa0c-422c-a6cf-2bb9914b1002": {
@@ -277,9 +266,8 @@
             "review_rating": "4.9",
             "name": "Alaina Mills",
             "title": "I am so thankful for this product!",
-            "description": "<p>About 3 years ago I started getting UTIs. I went from having a UTI here and there to having Chronic UTIs. Ever since I started taking Utiva a couple of months ago, I haven’t had any infections and my bladder health feels more secure and protected. I am so thankful for this product, and I am definitely going to stay on it for the rest of my life. <\/p>",
-            "reviewed_product": "D-Mannose Supplement",
-            "image": "shopify:\/\/shop_images\/Testimonial_Dmannose.png"
+            "description": "<p>About 3 years ago I started getting UTIs. I went from having a UTI here and there to having Chronic UTIs. Ever since I started taking Utiva a couple of months ago, I have significantly improved my urinary tract health. I am so thankful for this product, and I am definitely going to stay on it for the rest of my life. <\/p>",
+            "reviewed_product": "D-Mannose Supplement"
           }
         },
         "01289a4a-ee13-4333-ab3b-7eb70af78d3a": {
@@ -289,8 +277,7 @@
             "name": "Nannette",
             "title": "I recommend this product",
             "description": "<p>I started these pills on the advice of my urologist and they certainly have helped. I found out that they could be purchased directly from the company and have been so pleased. Customer service is excellent with all the updated emails regarding notification of upcoming orders, shipment and potential date of delivery of the product. Would not buy these pills anywhere else. Excellent<\/p>",
-            "reviewed_product": "CranberryPACS",
-            "image": "shopify:\/\/shop_images\/Testimonial_PACs.png"
+            "reviewed_product": "CranberryPACS"
           }
         },
         "8d53c16d-870f-4a90-963c-831c0115bc15": {
@@ -300,8 +287,7 @@
             "name": "Anonymous",
             "title": "Pleasantly Surprised!",
             "description": "<p>I was pleasantly surprised by how quickly I started noticing changes. Within the first few weeks I noticed less urgency and frequency in needing the bathroom. Symptoms have continued to improve at the 3 month mark now and I am very happy!! A quality product with excellent results and quick shipping.<\/p>",
-            "reviewed_product": "Bladder Health Supplement",
-            "image": "shopify:\/\/shop_images\/Testimonial_BH.png"
+            "reviewed_product": "Bladder Health Supplement"
           }
         }
       },
@@ -348,7 +334,7 @@
           "settings": {
             "doctors_image": "shopify:\/\/shop_images\/ceccacad3c7ff53f3aa2f2a65265e78b.png",
             "title": "Managing urinary tract health can be complex",
-            "description": "<p>Antibiotics are the first line treatment, but there are clinically proven options to help prevent. When considering cranberry supplements, I recommend my patients select a product with 36 mg of PACs.<\/p>",
+            "description": "<p>Managing recurrent urinary tract issues can be hard. Antibiotics are the first line treatment, but there are clinically proven options to help prevent. When considering cranberry supplements, I recommend my patients select a product with 36 mg of PACs.<\/p>",
             "doctors_name": "Dr. Colleen McDermott",
             "position": "Urogynecologist"
           }
@@ -358,7 +344,7 @@
           "settings": {
             "doctors_image": "shopify:\/\/shop_images\/image_512_010d3567-2f73-4e35-b834-1212963b6695.png",
             "title": "Overuse of antibiotics is a concern",
-            "description": "<p>I always consider natural options to help reduce the frequency of UTIs in my patients. Utiva is a great, clean cranberry product which has been very effective in preventing UTIs in many of my patients.<\/p>",
+            "description": "<p>I always consider natural options to help reduce urinary discomfort in my patients. Utiva is a great, clean cranberry product which has been very effective in helping my patients navigate urinary tract discomfort. <\/p>",
             "doctors_name": "Dr. Yanina Barbalat",
             "position": "Urologist"
           }
@@ -378,7 +364,7 @@
           "settings": {
             "doctors_image": "shopify:\/\/shop_images\/image_514.png",
             "title": "Utiva is clinically proven",
-            "description": "<p>According to clinical studies you need 36 mg PACs to prevent bacteria from forming an infection in the urinary tract. Utiva is the only brand that has the right dose of cranberry PACs to help prevent UTIs.<\/p>",
+            "description": "<p>There is an active molecule in cranberries called proanthocyanidins (PACs). According to clinical studies you need 36 mg PACs to stop bacteria from irritating the urinary tract. Utiva is the only brand that has the right dose of cranberry PACs.<\/p>",
             "doctors_name": "Dr. Carolyn Best",
             "position": "Urogynecologist"
           }
@@ -388,7 +374,7 @@
           "settings": {
             "doctors_image": "shopify:\/\/shop_images\/DrChungtai_HP.png",
             "title": "Based on my clinical research",
-            "description": "<p> I believe the proprietary blend of cranberry in Utiva Bladder Health is safe and has efficacy comparable to other common medications for OAB. It helps in treating symptoms of OAB by reducing urinary urgency episodes and frequency.<\/p>",
+            "description": "<p>Through my clinical research on patients, I believe the proprietary blend of cranberry in Utiva Bladder Health is safe and reliable. It supports urinary health and bladder health. I recommend it for people experiencing bladder health challenges.<\/p>",
             "doctors_name": "Dr. Bilal Chughtai",
             "position": "Urologist"
           }
@@ -396,7 +382,6 @@
         "539a67cd-58c5-43de-a711-0afe803b49fe": {
           "type": "text",
           "settings": {
-            "doctors_image": "shopify:\/\/shop_images\/dr._giudice.png",
             "title": "I recommend Utiva Bladder Health",
             "description": "<p>Many of my patients make lifestyle changes due to the challenges of overactive bladder. We offer medications to help but nothing is 100% effective. When patients ask if there is anything natural, I recommend Utiva Bladder Health to help improve the symptoms of OAB and have seen promising results.<\/p>",
             "doctors_name": "Dr. Thomas P. Giudice",
@@ -512,7 +497,6 @@
   },
   "order": [
     "main-banner",
-    "valentines_day_promo_banner_R6EdfB",
     "section-text",
     "targeted-solutions",
     "quality-and-trust",
