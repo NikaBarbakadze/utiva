@@ -111,7 +111,6 @@
         "a15fa326-c734-4e1e-9fdc-4dedb62dfed7": {
           "type": "card",
           "settings": {
-            "image": "shopify:\/\/shop_images\/yeast_infections.png",
             "title": "Yeast infections",
             "url": "shopify:\/\/collections\/collections-page-shop-all"
           }
@@ -151,8 +150,7 @@
           "settings": {
             "user_video": "shopify:\/\/files\/videos\/Jane Barkley's UTI Story-Modified.mp4",
             "user_name": "Jane",
-            "user_rating": "5.0",
-            "user_img": "shopify:\/\/shop_images\/Untitled_design_44.png"
+            "user_rating": "5.0"
           }
         },
         "d828798e-4427-40b8-af6f-08a2f30910e7": {
@@ -162,8 +160,7 @@
             "name": "Alaina Mills",
             "title": "I am so thankful for this product!",
             "description": "<p>About 3 years ago I started getting UTIs. I went from having a UTI here and there to having Chronic UTIs. Ever since I started taking Utiva a couple of months ago, I haven’t had any infections and my bladder health feels more secure and protected. I am so thankful for this product, and I am definitely going to stay on it for the rest of my life.<\/p>",
-            "reviewed_product": "D-Mannose Supplement",
-            "image": "shopify:\/\/shop_images\/Testimonial_Dmannose.png"
+            "reviewed_product": "D-Mannose Supplement"
           }
         },
         "01289a4a-ee13-4333-ab3b-7eb70af78d3a": {
@@ -173,8 +170,7 @@
             "name": "Nannette",
             "title": "I recommend this product",
             "description": "<p>I started these pills on the advice of my urologist and they certainly have helped. I found out that they could be purchased directly from the company and have been so pleased. Customer service is excellent with all the updated emails regarding notification of upcoming orders, shipment and potential date of delivery of the product. Would not buy these pills anywhere else. Excellent<\/p>",
-            "reviewed_product": "CranberryPACS",
-            "image": "shopify:\/\/shop_images\/Testimonial_PACs.png"
+            "reviewed_product": "CranberryPACS"
           }
         },
         "8d53c16d-870f-4a90-963c-831c0115bc15": {
@@ -184,8 +180,7 @@
             "name": "Anonymous",
             "title": "Pleasantly surprised!",
             "description": "<p>I was pleasantly surprised by how quickly I started noticing changes. Within the first few weeks I noticed less urgency and frequency in needing the bathroom. Symptoms have continued to improve at the 3 month mark now and I am very happy!! A quality product with excellent results and quick shipping.<\/p>",
-            "reviewed_product": "Bladder Health Supplement",
-            "image": "shopify:\/\/shop_images\/Testimonial_BH.png"
+            "reviewed_product": "Bladder Health Supplement"
           }
         }
       },
@@ -228,49 +223,49 @@
           "type": "sub",
           "settings": {
             "question": "How can I access my account?",
-            "answer": "You can access your account your account using the account icon at the top of the website or here: <a href=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\" target=\"_blank\">https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount<\/a>"
+            "answer": "You can access your account your account using the account icon at the top of the website or here: <a href=\"https:\/\/www.utivahealth.com\/account\/register\" target=\"_blank\" title=\"Utiva Health Login\">https:\/\/www.utivahealth.com\/account\/login?return_url=%2Faccount<\/a>"
           }
         },
         "8b79fbbe-aebd-43ae-b95c-e28ed6c1950d": {
           "type": "sub",
           "settings": {
             "question": "Why can't I log into my account?",
-            "answer": "Usually when this happens, it is because your subscription order was processed a guest and that your customer account was never created. You can easily create your account now, using the same email you used to complete your purchase. To set up an account, use this link: <a href=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\" target=\"_blank\">https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount<\/a>"
+            "answer": "Usually when this happens, it is because your subscription order was processed a guest and that your customer account was never created. You can easily create your account now, using the same email you used to complete your purchase. To set up an account, use this link: <a href=\"https:\/\/www.utivahealth.com\/account\/register\" target=\"_blank\" title=\"Utiva Health: create an account\">https:\/\/www.utivahealth.com\/account\/register<\/a>"
           }
         },
         "281cc261-cb53-4026-b544-556c0fa7bbac": {
           "type": "sub",
           "settings": {
             "question": "How can I change my shipping information?",
-            "answer": "Start my logging into your account <a href=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\" target=\"_blank\" title=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\"><span style=\"text-decoration:underline\">here<\/span><\/a>. To change your shipping address, under the profile section you can edit your shipping information."
+            "answer": "Start my logging into your account <a href=\"https:\/\/www.utivahealth.com\/account\/login?return_url=%2Faccount\" target=\"_blank\" title=\"Utiva Health Login\"><span style=\"text-decoration:underline\">here<\/span><\/a>. To change your shipping address, under the profile section you can edit your shipping information."
           }
         },
         "3a43a580-c726-4dc1-9383-f3c56b3a4f71": {
           "type": "sub",
           "settings": {
             "question": "How can I update my billing information?",
-            "answer": "Sign into your account. Click My Subscriptions > View Details. Under “Payment details” select, Update and a link will be sent to your email to make the necessary changes."
+            "answer": "<a href=\"https:\/\/www.utivahealth.com\/account\/login?return_url=%2Faccount\" target=\"_blank\" title=\"Utiva Health Login\">Sign into your account<\/a>. Click My Subscriptions > View Details. Under “Payment details” select, Update and a link will be sent to your email to make the necessary changes."
           }
         },
         "1e0f0c9e-5c84-4828-bc70-15e7a0fc252a": {
           "type": "sub",
           "settings": {
             "question": "Can I change my next delivery date?",
-            "answer": "Sign into your online account <a href=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\" target=\"_blank\" title=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\">here<\/a>. Click My Subscriptions > View Details of your active subcription(s). From this page you can skip, reschedule or delay your next upcoming order."
+            "answer": "Sign into your online account <a href=\"https:\/\/www.utivahealth.com\/account\/login?return_url=%2Faccount\" target=\"_blank\" title=\"Utiva Health Login\">here<\/a>. Click My Subscriptions > View Details of your active subcription(s). From this page you can skip, reschedule or delay your next upcoming order."
           }
         },
         "14748880-759e-4d40-941f-f393935ebd46": {
           "type": "sub",
           "settings": {
             "question": "How can I pause my subscription?",
-            "answer": "Sign into your online account <a href=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\" target=\"_blank\" title=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\">here<\/a>. Click My Subscriptions > View Details of your active subcription(s). From this page you can skip, reschedule or delay your next upcoming order."
+            "answer": "Sign into your online account <a href=\"https:\/\/www.utivahealth.com\/account\/login?return_url=%2Faccount\" target=\"_blank\" title=\"Utiva Health Login\">here<\/a>. Click My Subscriptions > View Details of your active subcription(s). From this page you can skip, reschedule or delay your next upcoming order."
           }
         },
         "531b5a4e-d670-4c32-85d3-516d620f8eb8": {
           "type": "sub",
           "settings": {
             "question": "How can I cancel my subscription?",
-            "answer": "Sign into your online account <a href=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\" target=\"_blank\" title=\"https:\/\/www.utivahealth.ca\/account\/login?return_url=%2Faccount\">here<\/a>. Click My Subscriptions > View Details of your active subcription(s). Scroll to the bottom of the page a start the cancellation process by clicking the link: Cancel subscription"
+            "answer": "Sign into your online account <a href=\"https:\/\/www.utivahealth.com\/account\/login?return_url=%2Faccount\" target=\"_blank\" title=\"Utiva Health Login\">here<\/a>. Click My Subscriptions > View Details of your active subcription(s). Scroll to the bottom of the page a start the cancellation process by clicking the link: Cancel subscription"
           }
         }
       },
