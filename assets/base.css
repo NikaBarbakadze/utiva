@@ -4186,3 +4186,7 @@ cart-drawer-items{
 .drawer .drawer__inner .items-upsells-wrapper{
 padding-right: 0 !important;
 }
+
+.drawer.is-empty .items-upsells-wrapper{
+  display: none !important;
+}
