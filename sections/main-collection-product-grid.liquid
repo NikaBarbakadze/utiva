@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log(json);
         const cartForm = new DOMParser().parseFromString(json.sections['cart-drawer'], 'text/html').querySelector('#CartDrawer .drawer__inner').innerHTML;
 
-        document.querySelector('#CartDrawer .drawer__inner ').innerHTML = cartForm;
+        document.querySelector('#CartDrawer .drawer__inner').innerHTML = cartForm;
 
         if(document.querySelector('cart-drawer').classList.contains('is-empty')){
             document.querySelector('cart-drawer').classList.remove('is-empty');
@@ -153,7 +153,23 @@ document.addEventListener('DOMContentLoaded', function () {
             document.querySelector('#CartDrawer-Checkout').disabled = false;
         }
 
-        document.querySelector('cart-drawer').open()
+        var emblaNode = document.querySelector('.embla-cart')
+        var emblaViewport = emblaNode.querySelector('.embla__viewport');
+        var options = { draggable: true, loop: false, align: 'start'}
+    
+        // Grab button nodes
+        const prevButtonNode = document.querySelector('.embla__prev')
+        const nextButtonNode = document.querySelector('.embla__next')
+    
+        var embla = EmblaCarousel(emblaViewport, options)
+    
+    
+        prevButtonNode.addEventListener('click', embla.scrollPrev, false)
+        nextButtonNode.addEventListener('click', embla.scrollNext, false)
+
+        document.querySelector('cart-drawer').open();
+
+        
       });
 
     }, false); // The third parameter 'false' indicates the event is handled in the bubbling phase not in the capturing phase
