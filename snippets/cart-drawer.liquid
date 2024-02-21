@@ -664,6 +664,62 @@
 
 <script>
 
+  function addToCartCust(item){
+    event.preventDefault();  // Prevents the default action (navigation or form submission)
+    event.stopPropagation(); // Prevents the event from bubbling up the DOM tree
+  
+    const variantId = item.closest('.custom-product-card').dataset.variantId;
+  
+    const object = {
+      items: [
+        {
+          id: variantId, 
+          quantity: 1
+        }
+      ],
+      sections: ["cart-drawer"]
+    }
+  
+    fetch('/cart/add.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(object)
+    }).then((response)=>{
+      return response.json();
+    }).then((json)=>{
+      console.log(json);
+      const cartForm = new DOMParser().parseFromString(json.sections['cart-drawer'], 'text/html').querySelector('#CartDrawer .drawer__inner').innerHTML;
+  
+      document.querySelector('#CartDrawer .drawer__inner').innerHTML = cartForm;
+  
+      if(document.querySelector('cart-drawer').classList.contains('is-empty')){
+          document.querySelector('cart-drawer').classList.remove('is-empty');
+          document.querySelector('cart-drawer-items').classList.remove('is-empty');
+          document.querySelector('#CartDrawer-Checkout').disabled = false;
+      }
+  
+      var emblaNode = document.querySelector('.embla-cart')
+      var emblaViewport = emblaNode.querySelector('.embla__viewport');
+      var options = { draggable: true, loop: false, align: 'start'}
+  
+      // Grab button nodes
+      const prevButtonNode = document.querySelector('.embla__prev')
+      const nextButtonNode = document.querySelector('.embla__next')
+  
+      var embla = EmblaCarousel(emblaViewport, options)
+  
+  
+      prevButtonNode.addEventListener('click', embla.scrollPrev, false)
+      nextButtonNode.addEventListener('click', embla.scrollNext, false)
+  
+      document.querySelector('cart-drawer').open();
+  
+      
+    });
+  }
+
   async function addItems(object, svg) {
     fetch("/cart/add.js", {
             body: JSON.stringify(object),
@@ -693,6 +749,21 @@
             document.querySelector('cart-drawer-items').classList.remove('is-empty');
             document.querySelector('#CartDrawer-Checkout').disabled = false;
           }
+
+          var emblaNode = document.querySelector('.embla-cart')
+          var emblaViewport = emblaNode.querySelector('.embla__viewport');
+          var options = { draggable: true, loop: false, align: 'start'}
+      
+          // Grab button nodes
+          const prevButtonNode = document.querySelector('.embla__prev')
+          const nextButtonNode = document.querySelector('.embla__next')
+      
+          var embla = EmblaCarousel(emblaViewport, options)
+      
+      
+          prevButtonNode.addEventListener('click', embla.scrollPrev, false)
+          nextButtonNode.addEventListener('click', embla.scrollNext, false)
+
           document.querySelector('#CartDrawer-Form').scrollIntoView({ block: 'start',  behavior: 'smooth' });
         })
         //   .then(getItems())
@@ -727,6 +798,7 @@
         }
 
         addItems(object, svg);
+
       })
     })
 
