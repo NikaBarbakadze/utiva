@@ -143,9 +143,9 @@ document.addEventListener('DOMContentLoaded', function () {
         return response.json();
       }).then((json)=>{
         console.log(json);
-        const cartForm = new DOMParser().parseFromString(json.sections['cart-drawer'], 'text/html').querySelector('#CartDrawer .drawer__inner').innerHTML;
+        const cartForm = new DOMParser().parseFromString(json.sections['cart-drawer'], 'text/html').querySelector('#CartDrawer .drawer__inner #CartDrawer-CartItems').innerHTML;
 
-        document.querySelector('#CartDrawer .drawer__inner ').innerHTML = cartForm;
+        document.querySelector('#CartDrawer .drawer__inner #CartDrawer-CartItems').innerHTML = cartForm;
 
         if(document.querySelector('cart-drawer').classList.contains('is-empty')){
             document.querySelector('cart-drawer').classList.remove('is-empty');
