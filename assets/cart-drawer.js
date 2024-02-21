@@ -116,7 +116,7 @@ class CartDrawer extends HTMLElement {
     return [
       {
         id: "cart-drawer",
-        selector: "#CartDrawer",
+        selector: "#CartDrawer #CartDrawer-CartItems",
       },
       {
         id: "cart-icon-bubble",
@@ -146,7 +146,7 @@ class CartDrawerItems extends CartItems {
       {
         id: "CartDrawer",
         section: "cart-drawer",
-        selector: ".drawer__inner",
+        selector: ".drawer__inner #CartDrawer-CartItems",
       },
       {
         id: "cart-icon-bubble",

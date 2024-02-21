@@ -4158,3 +4158,31 @@ cart-drawer-items.is-empty{
 .header-desktop__nav--item[data-index="1"] .header-desktop__submenu--item[data-index="3"], .header-desktop__nav--item[data-index="1"] .header-desktop__submenu--item[data-index="4"], .header-desktop__nav--item[data-index="1"] .header-desktop__submenu--item[data-index="5"]{
   margin-left: 15px;
 }
+
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+
+.drawer__inner, .drawer .drawer__inner .items-upsells-wrapper .custom-upsells{
+  padding-right: 0 !important;
+}
+
+.drawer .drawer__inner > *, cart-drawer-items{
+  padding-right: 15px !important;
+}
+
+cart-drawer-items{
+  display: block;
+}
+
+.drawer .drawer__inner .items-upsells-wrapper{
+padding-right: 0 !important;
+}
