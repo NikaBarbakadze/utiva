@@ -36,6 +36,13 @@
             "url": "shopify:\/\/collections\/collections-page-gut-health"
           }
         },
+        "navigation_link_mppr7W": {
+          "type": "navigation_link",
+          "settings": {
+            "title": "Yeast Infections",
+            "url": "https:\/\/www.utivahealth.ca\/collections\/yeast-infections"
+          }
+        },
         "2329f94e-d3b1-4c89-9a66-adc181516900": {
           "type": "navigation_link",
           "settings": {
@@ -49,6 +56,7 @@
         "d35787d9-ddb8-4cbf-8a7c-8d57cf9bae08",
         "22fde590-a43f-4f09-b089-51c27da06093",
         "6ff33767-4138-4237-b8c9-c53788b89e30",
+        "navigation_link_mppr7W",
         "2329f94e-d3b1-4c89-9a66-adc181516900"
       ],
       "settings": {
