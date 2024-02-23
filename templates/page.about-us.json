@@ -310,15 +310,6 @@
             "domain": "cityline.tv"
           }
         },
-        "0a9b9f33-1a9d-4f23-8ded-638385f018b5": {
-          "type": "press",
-          "settings": {
-            "date": "Apr 26, 2023",
-            "title": "Utiva Health Partners with Leading Gynecologists to Develop Innovative Solutions for Women's Health",
-            "url": "https:\/\/www.google.com\/",
-            "domain": "utiva.com"
-          }
-        },
         "40d85c7a-e787-4d94-a11a-1983b742d177": {
           "type": "press",
           "settings": {
@@ -333,7 +324,6 @@
       "block_order": [
         "103fa728-ec00-487f-bb04-d29861771364",
         "c3799fff-382c-4ef4-b41e-675623906f1a",
-        "0a9b9f33-1a9d-4f23-8ded-638385f018b5",
         "40d85c7a-e787-4d94-a11a-1983b742d177"
       ],
       "settings": {
