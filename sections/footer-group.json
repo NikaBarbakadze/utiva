@@ -7,6 +7,7 @@
       "blocks": {
         "1090a3c5-9c66-45fb-a269-caf239fdac1f": {
           "type": "additional_links",
+          "disabled": true,
           "settings": {
             "title": "For healthcare professionals",
             "additional_url": "https:\/\/utivahcp.com\/",
@@ -52,7 +53,7 @@
         "6a4a10d9-5afa-415b-9abf-85cc1eeb83bb": {
           "type": "privacy_links",
           "settings": {
-            "privacy_menu": "terms-of-service-menu",
+            "privacy_menu": "",
             "message": "<p>†Published in the Medical Post and Profession Santé 2023 Survey on OTC Counselling and Recommendations<\/p>"
           }
         }
