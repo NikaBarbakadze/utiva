@@ -18,14 +18,14 @@
         "d35787d9-ddb8-4cbf-8a7c-8d57cf9bae08": {
           "type": "navigation_link",
           "settings": {
-            "title": "UTIs",
+            "title": "Urinary Tract Health",
             "url": "shopify:\/\/collections\/collections-page-utis"
           }
         },
         "22fde590-a43f-4f09-b089-51c27da06093": {
           "type": "navigation_link",
           "settings": {
-            "title": "Overactive Bladder",
+            "title": "Bladder Health",
             "url": "shopify:\/\/collections\/collections-page-bladder-health"
           }
         },
