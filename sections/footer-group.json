@@ -53,8 +53,8 @@
         "6a4a10d9-5afa-415b-9abf-85cc1eeb83bb": {
           "type": "privacy_links",
           "settings": {
-            "privacy_menu": "",
-            "message": "<p>†Published in the Medical Post and Profession Santé 2023 Survey on OTC Counselling and Recommendations<\/p>"
+            "privacy_menu": "terms-of-service-menu",
+            "message": "<p>*These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.<br\/><br\/>†Published in the Medical Post and Profession Santé 2023 Survey on OTC Counselling and Recommendations<\/p>"
           }
         }
       },
