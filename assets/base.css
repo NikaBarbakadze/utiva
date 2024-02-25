@@ -4209,3 +4209,12 @@ padding-right: 0 !important;
     margin-bottom: 20px;
   }
 }
+
+.predictive-search{
+  display: none !important
+}
+
+.template-search__header .search__button .icon{
+  width: 2.8rem;
+  height: 2.8rem;
+}

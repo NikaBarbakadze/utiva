@@ -3744,6 +3744,10 @@ video {
     flex-direction: row;
   }
 
+  .lg\:flex-wrap {
+    flex-wrap: wrap;
+  }
+
   .lg\:items-center {
     align-items: center;
   }
@@ -3778,6 +3782,10 @@ video {
 
   .lg\:gap-6 {
     gap: 24px;
+  }
+
+  .lg\:gap-y-3 {
+    row-gap: 12px;
   }
 
   .lg\:overflow-auto {

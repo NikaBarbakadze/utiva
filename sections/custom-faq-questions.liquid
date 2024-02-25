@@ -137,7 +137,7 @@
   <div id="prods" class="mt-2.5 md:mt-10">
     {% assign productQuestions = section.blocks | where: 'type', 'products' %}
     <div class="overflow-x-scroll product_tab_slider w-full px-6 md:overflow-x-hidden md:max-w-[135rem] md:mx-auto">
-      <div class="flex items-center gap-x-4 w-max md:justify-center md:w-auto">
+      <div class="flex items-center gap-x-4 w-max md:justify-center md:w-auto lg:flex-wrap lg:gap-y-3">
         {% for block in productQuestions %}
             <div data-product="{{ block.settings.product.handle }}" class="product_tab_slide py-1.5 px-3 rounded-[4rem] text-sm font-medium leading-[19.6px] text-[#1c1c1c] border border-[#1c1c1c1f] md:py-[.9rem] md:px-4 md:text-base md:-tracking-[.032rem] md:leading-[2.24rem] md:cursor-pointer {% if forloop.first %}active{% endif %}">{{ block.settings.product.title }}</div>
         {% endfor %}
