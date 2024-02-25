@@ -224,7 +224,7 @@
       {% endfor %}
     </div>
     <div class="basis-1/2">
-        <div class="embla relative flex h-full min-h-[400px] lg:min-h-0">
+        <div class="embla embla-reviews relative flex h-full min-h-[400px] lg:min-h-0">
             <div class="embla__viewport">
               <div class="embla__container h-full">
                 {% for block in section.blocks %}
@@ -295,7 +295,7 @@
         dragFree: true
       }
       
-      const viewportNodeMainCarousel = document.querySelector('.embla__viewport')
+      const viewportNodeMainCarousel = document.querySelector('.embla-reviews .embla__viewport')
       const viewportNodeThumbCarousel = document.querySelector('.embla-thumbs__viewport')
       
       const emblaApiMain = EmblaCarousel(viewportNodeMainCarousel, OPTIONS)
