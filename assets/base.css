@@ -3945,7 +3945,7 @@ input, textarea, select, .faux-select {
   margin-bottom: 20px;
 }
 
-.text-section-container b{
+.text-section-container b, .text-section-container strong{
   color: #C33635;
   font-weight: 500;
 }
@@ -4189,4 +4189,23 @@ padding-right: 0 !important;
 
 .drawer.is-empty .items-upsells-wrapper{
   display: none !important;
+}
+
+.shopify-policy__container{
+  margin-top: 40px;
+  margin-bottom: 40px;
+  max-width: 135rem;
+  padding: 5rem;
+}
+
+.shopify-policy__title{
+  margin-bottom: 3rem;
+}
+
+@media screen and (max-width: 992px) {
+  .shopify-policy__container{
+    padding: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }

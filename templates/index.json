@@ -318,12 +318,12 @@
         "paddingBottom_mobile": 40,
         "paddingTop_desktop": 20,
         "paddingBottom_desktop": 0,
-        "image_desktop": "shopify:\/\/shop_images\/img_d494f8ce-076e-4da2-830f-55d642a8a0b5.png",
-        "image_mobile": "shopify:\/\/shop_images\/img_efefb323-1150-4203-9f09-44d634c52469.png",
+        "image_desktop": "shopify:\/\/shop_images\/Yeast_Control_Banner_Desktop_Option_2_1.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/Yeast_Control_Banner_Mobile_Option_2.jpg",
         "bg_color": "#91d5d0",
-        "title": "Save from 10% with our bundles!",
-        "button_text": "Explore bundles",
-        "button_link": "shopify:\/\/collections\/collections-page-bundles"
+        "title": "Your ultimate solution for a balanced vaginal pH.",
+        "button_text": "Shop Yeast Control",
+        "button_link": "shopify:\/\/products\/yeast-control"
       }
     },
     "new-trusted-recommended-doctors": {
@@ -369,6 +369,16 @@
             "position": "Urogynecologist"
           }
         },
+        "text_xe9KWH": {
+          "type": "text",
+          "settings": {
+            "doctors_image": "shopify:\/\/shop_images\/Susan_Oakley.svg",
+            "title": "Boric Acid is a great natural solution",
+            "description": "<p>My practice uses Boric Acid vaginal suppositories so often! We evaluate a constant stream of referrals for recurrent yeast vaginitis and a 14-night course with Boric Acid typically eradicates symptoms. It’s so easy to use and gets directly to the root of the cause.<\/p>",
+            "doctors_name": "Dr. Susan Oakley",
+            "position": "Urogynecologist"
+          }
+        },
         "1491bd30-5d14-42ae-9b77-f0f3bbebf57d": {
           "type": "text",
           "settings": {
@@ -394,6 +404,7 @@
         "d78cbc73-7151-4116-8433-c6f957683800",
         "21fb4f97-5504-4a87-a0aa-12fb6b2fe3dc",
         "c647f522-e133-46a8-83ca-7cecce112a9c",
+        "text_xe9KWH",
         "1491bd30-5d14-42ae-9b77-f0f3bbebf57d",
         "539a67cd-58c5-43de-a711-0afe803b49fe"
       ],
