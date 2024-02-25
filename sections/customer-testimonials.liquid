@@ -69,12 +69,12 @@
 			</div>
 
 			<script>
-				const options = {
+				const options2 = {
 					method: 'GET',
 					headers: { accept: 'application/json', 'Content-Type': 'application/json' }
 				};
 				
-				fetch('https://api.yotpo.com/v1/apps/3NhG13UQDuUl6r31Ov5IEKsACm6Md9TxF4TTruxD/bottom_lines?count=100', options)
+				fetch('https://api.yotpo.com/v1/apps/3NhG13UQDuUl6r31Ov5IEKsACm6Md9TxF4TTruxD/bottom_lines?count=100', options2)
 				.then(response => response.json())
 					.then(response => {
 						const reviews = response.response.bottomlines;
