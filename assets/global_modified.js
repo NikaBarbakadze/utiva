@@ -1167,7 +1167,7 @@ class VariantSelects extends HTMLElement {
     console.log(otpPrice.replace(/\D/g, ""), comparePrice.replace(/\D/g, ""));
     if (!otpPrice) return;
 
-    let subscriptionPrice = otpPrice.match(/\$([\d.]+)/);
+    let subscriptionPrice = otpPrice.match(/(\$|\€)[\d.]+/);
     if (subscriptionPrice.length > 0) {
       subscriptionPrice = Number(subscriptionPrice[1]) * 0.75;
       subscriptionPrice = `$${(
