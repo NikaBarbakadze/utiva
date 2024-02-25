@@ -60,6 +60,9 @@
             <span>
                 {{ article.published_at | date: "%B %d, %Y" }}
             </span>
+
+            {% unless article.tags contains "video" or article.tags contains "Video" %}
+
     
             <svg width="3" height="20" viewBox="0 0 3 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g id="Frame">
@@ -77,6 +80,7 @@
                 {% assign reading_time = article.content | strip_html | split: ' ' | size | times: 1.0 | divided_by: 250 | ceil %}
                 {{ reading_time }} min read
             </span>
+            {% endunless %}
         </div>
         <h1 class="text-base lg:text-5xl text-[#1C1C1C] mt-3 lg:mt-8">{{ article.title }}</h1>
         {% if article.metafields.custom.overview != blank %}
@@ -84,10 +88,15 @@
             {{ article.metafields.custom.overview | metafield_tag }}
         </div>
         {% endif %}
-        <div class="mt-5 lg:mt-12 mx-auto">
+        {% unless article.tags contains "video" or article.tags contains "Video" %}
+        <div class="mt-5 lg:mt-12 mx-auto ">
             <img class="rounded-[24px] lg:max-h-[600px] w-full object-cover" src="{{ article.image | img_url: "master" }}" alt="">
         </div>
+        {% endunless %}
     </div>
+    {% if article.tags contains "video" or article.tags contains "Video" %}
+        {{ article.content }}
+    {%  else %}
     <div class="article-body mt-6 lg:mt-16 flex flex-col-reverse lg:flex-row">
         <div class="basis-[400px] lg:px-10 mt-8 lg:mt-0">
             <div class="lg:sticky lg:top-[3rem]">
@@ -138,7 +147,11 @@
             {{ article.content }}
         </div>
     </div>
+    {% endif %}
 </div>
+
+{% unless article.tags contains "video" or article.tags contains "Video" %}
+
 
 <div class="page-width mt-10 lg:mt-0">
     <div class="rounded-[24px] flex flex-col-reverse lg:flex-row gap-4 lg:gap-1.5 items-center my-6 lg:my-20 p-6 lg:p-20" style="background: linear-gradient(264deg, #0777A3 -4.31%, #1FA9B8 53.39%, #52B7AF 104.58%);">
@@ -153,6 +166,8 @@
         </div>
     </div>
 </div>
+
+{% endunless %}
 
 {% assign blog = blogs['resources'].articles | where: "tags", article.tags[0] %}
 

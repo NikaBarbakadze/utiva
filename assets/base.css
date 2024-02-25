@@ -4218,3 +4218,17 @@ padding-right: 0 !important;
   width: 2.8rem;
   height: 2.8rem;
 }
+
+.article-page iframe[title="YouTube video player"]{
+  width: 100%;
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+  .article-page iframe[title="YouTube video player"]{
+    min-width: 100%;
+    margin-top: 5rem;
+    aspect-ratio: 16 / 9;
+    min-height: 600px;
+  }
+}
