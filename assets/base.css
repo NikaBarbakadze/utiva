@@ -3945,7 +3945,7 @@ input, textarea, select, .faux-select {
   margin-bottom: 20px;
 }
 
-.text-section-container b{
+.text-section-container b, .text-section-container strong{
   color: #C33635;
   font-weight: 500;
 }
