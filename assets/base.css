@@ -4232,3 +4232,12 @@ padding-right: 0 !important;
     min-height: 600px;
   }
 }
+
+.rte p, .rte ul, .rte ol, .rte table {
+  margin-bottom: 25px;
+}
+
+.rte a{
+  color: #C33635;
+  text-decoration: underline;
+}
