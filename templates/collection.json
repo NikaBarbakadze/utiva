@@ -38,6 +38,7 @@
         },
         "navigation_link_mppr7W": {
           "type": "navigation_link",
+          "disabled": true,
           "settings": {
             "title": "Yeast Infections",
             "url": "https:\/\/www.utivahealth.ca\/collections\/yeast-infections"
