@@ -339,6 +339,7 @@
         },
         "text_RQE9fK": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "title": "",
             "description": "",
@@ -398,6 +399,7 @@
         },
         "539a67cd-58c5-43de-a711-0afe803b49fe": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "title": "I recommend Utiva Bladder Health",
             "description": "<p>Many of my patients make lifestyle changes due to the challenges of overactive bladder. We offer medications to help but nothing is 100% effective. When patients ask if there is anything natural, I recommend Utiva Bladder Health to help improve the symptoms of OAB and have seen promising results.<\/p>",
