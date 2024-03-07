@@ -79,7 +79,7 @@
 					.then(response => {
 						const reviews = response.response.bottomlines;
 				
-						console.log(response)
+						{% comment %} console.log(response) {% endcomment %}
 				
 						let reviewScore = 0;
 						let reviewCount = 0;
@@ -98,7 +98,7 @@
 				
 						reviewScore = reviewCount > 0 ? (reviewScore / uniqueReviews.size).toFixed(1) : 0;
 				
-						console.log(reviewScore, reviewCount)
+						{% comment %} console.log(reviewScore, reviewCount) {% endcomment %}
 				
 						// Select the element and update its content
 						const reviewsLabelElement = document.getElementById('reviewsLabel');

@@ -32,7 +32,7 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    document.querySelector(".fade .playbutton").addEventListener("click", (e) => {
+    document.querySelector(".fade .playbutton")?.addEventListener("click", (e) => {
       e.target.classList.add("hidden");
       e
         .target
@@ -40,13 +40,13 @@
         .classList
         .add("hidden");
 
-      document.querySelector(".section_video").play();
+      document.querySelector(".section_video")?.play();
     });
 
-    document.querySelector(".section_video").addEventListener("click", (e) => {
+    document.querySelector(".section_video")?.addEventListener("click", (e) => {
       e.target.pause();
       document.querySelector(".fade").classList.remove("hidden");
-      document.querySelector(".fade .playbutton").classList.remove("hidden");
+      document.querySelector(".fade .playbutton")?.classList.remove("hidden");
     });
   });
 </script>

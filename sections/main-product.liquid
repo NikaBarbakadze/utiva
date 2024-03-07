@@ -833,7 +833,8 @@
                       {% for selling_plan_group in product.selling_plan_groups %}
                         {% assign forloop_index = forloop.index | minus: 1 %}
                         <div data-variant-id="{{ product.variants[forloop_index].id }}" class="product_selling_plans_wrapper items-center justify-between gap-x-3 {% if forloop.index == index %} hidden active {% else %} hidden {% endif %}">
-                          {% for selling_plan in selling_plan_group.selling_plans %}
+                          {% for selling_plan_allocation in product.variants[forloop_index].selling_plan_allocations %}
+                            {% assign selling_plan = selling_plan_allocation.selling_plan %}
                             <div data-selling-plan="{{ selling_plan.id }}" class="{% if forloop.first %}active {% endif %}product_selling_plan border-[#1c1c1c1f] text-center text-sm font-medium text-[#1C1C1C] border rounded-lg py-2.5 px-4 w-1/3">
                               {{ selling_plan.name 
                               | replace: 'Deliver Every', '' 
