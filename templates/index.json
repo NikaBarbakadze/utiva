@@ -238,7 +238,6 @@
         "d41d337b-b0e0-4a36-8f24-2c4d8b6a1cad": {
           "type": "video",
           "settings": {
-            "user_video": "shopify:\/\/files\/videos\/Jane Barkley's UTI Story-Modified.mp4",
             "user_name": "Jane | Menopause related UTIs",
             "user_rating": "5.0"
           }
@@ -254,7 +253,6 @@
         "1dc78747-aa0c-422c-a6cf-2bb9914b1002": {
           "type": "video",
           "settings": {
-            "user_video": "shopify:\/\/files\/videos\/Elaine Li-2.mp4",
             "user_name": "Elaine | UTI story",
             "user_rating": "5.0",
             "user_img": "shopify:\/\/shop_images\/women.png"
@@ -371,6 +369,7 @@
         },
         "text_xe9KWH": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "title": "Boric Acid is a great natural solution",
             "description": "<p>My practice uses Boric Acid vaginal suppositories so often! We evaluate a constant stream of referrals for recurrent yeast vaginitis and a 14-night course with Boric Acid typically eradicates symptoms. It’s so easy to use and gets directly to the root of the cause.<\/p>",
