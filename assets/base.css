@@ -4241,3 +4241,8 @@ padding-right: 0 !important;
   color: #C33635;
   text-decoration: underline;
 }
+
+.footer-new__pravicy-block--message{
+  border: 1px solid #ccc4be;
+  padding: 10px;
+}

@@ -54,7 +54,7 @@
           "type": "privacy_links",
           "settings": {
             "privacy_menu": "terms-of-service-menu",
-            "message": "<p>*These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.<br\/><br\/>†Published in the Medical Post and Profession Santé 2023 Survey on OTC Counselling and Recommendations<\/p>"
+            "message": "<p>*These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.<\/p>"
           }
         }
       },
