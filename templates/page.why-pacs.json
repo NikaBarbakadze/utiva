@@ -298,16 +298,23 @@
             "content": "Antioxidants are compounds found in many plant-based foods that can help protect your cells from damage caused by free radicals"
           }
         },
+        "text_7edM9g": {
+          "type": "text",
+          "settings": {
+            "content": "Free radicals may interfere with a normal cell's ability to function."
+          }
+        },
         "792d7b2b-39c1-4886-a5b6-dc5160452c87": {
           "type": "text",
           "settings": {
-            "content": "By providing protection against free radicals, antioxidants are thought to help fight the signs of aging while helping to prevent the onset of disease"
+            "content": "By providing protection against free radicals, antioxidants fight oxidative stress and assist in maintaining good health."
           }
         }
       },
       "block_order": [
         "a3d5b91c-92e0-49c4-befd-a358df643c4c",
         "1054d6a2-aa1f-4585-97b3-437c72ed3c96",
+        "text_7edM9g",
         "792d7b2b-39c1-4886-a5b6-dc5160452c87"
       ],
       "settings": {
