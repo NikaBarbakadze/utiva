@@ -400,7 +400,6 @@
         },
         "539a67cd-58c5-43de-a711-0afe803b49fe": {
           "type": "text",
-          "disabled": true,
           "settings": {
             "doctors_image": "shopify:\/\/shop_images\/dr._giudice.png",
             "title": "I recommend Utiva Bladder Health",
