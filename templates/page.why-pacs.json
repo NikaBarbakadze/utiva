@@ -248,11 +248,17 @@
             "content": "Virtually no oxalates—ideal for those prone to kidney stones"
           }
         },
+        "property_ziC9PX": {
+          "type": "property",
+          "settings": {
+            "content": ""
+          }
+        },
         "5724557b-9b8d-4c91-bcc3-36221d7519fa": {
           "type": "property",
           "settings": {
             "icon": "shopify:\/\/shop_images\/Union.svg",
-            "content": "No vitamin K—making it safe to take with most medications, including blood thinners."
+            "content": "No oxalates and no Vitamin K."
           }
         },
         "037cb87d-bbad-4289-a89d-ea1e7964f48f": {
@@ -266,6 +272,7 @@
       "block_order": [
         "1105133a-e2ca-4a82-9a17-ccec54ae9d72",
         "9ea25345-2683-4f86-b655-8f43fc2b8788",
+        "property_ziC9PX",
         "5724557b-9b8d-4c91-bcc3-36221d7519fa",
         "037cb87d-bbad-4289-a89d-ea1e7964f48f"
       ],
