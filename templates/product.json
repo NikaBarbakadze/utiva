@@ -113,8 +113,7 @@
           "settings": {
             "user_video": "shopify:\/\/files\/videos\/Jane Barkley's UTI Story-Modified.mp4",
             "user_name": "Jane | Menopause related UTIs",
-            "user_rating": "5",
-            "user_img": "shopify:\/\/shop_images\/Jane_2.png"
+            "user_rating": "5"
           }
         },
         "e6f1bf4a-ec0b-4a88-b79e-6668bcfa00c7": {
@@ -122,8 +121,7 @@
           "settings": {
             "user_video": "shopify:\/\/files\/videos\/Rachel Walker - UTI Story .mp4",
             "user_name": "Rachel | Recurrent UTIs",
-            "user_rating": "5",
-            "user_img": "shopify:\/\/shop_images\/Rachel_Walker.jpg"
+            "user_rating": "5"
           }
         },
         "1dc78747-aa0c-422c-a6cf-2bb9914b1002": {
@@ -142,8 +140,7 @@
             "name": "Nannette",
             "title": "I recommend this product",
             "description": "<p>I started these pills on the advice of my urologist and they certainly have helped. I found out that they could be purchased directly from the company and have been so pleased. Customer service is excellent with all the updated emails regarding notification of upcoming orders, shipment and potential date of delivery of the product. Would not buy these pills anywhere else. Excellent<\/p>",
-            "reviewed_product": "CranberryPACS",
-            "image": "shopify:\/\/shop_images\/Testimonial_PACs.png"
+            "reviewed_product": "CranberryPACS"
           }
         }
       },
@@ -202,7 +199,7 @@
           "type": "text",
           "settings": {
             "doctors_image": "shopify:\/\/shop_images\/ceccacad3c7ff53f3aa2f2a65265e78b.png",
-            "title": "Managing urinary tract health can be complex",
+            "title": "Managing urinary tract health can be hard",
             "description": "<p>Antibiotics are the first line treatment, but there are clinically proven options to help prevent. When considering cranberry supplements, I recommend my patients select a product with 36 mg of PACs.<\/p>",
             "doctors_name": "Dr. Colleen McDermott",
             "position": "Urogynecologist"
