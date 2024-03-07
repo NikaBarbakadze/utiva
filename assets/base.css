@@ -4241,3 +4241,32 @@ padding-right: 0 !important;
   color: #C33635;
   text-decoration: underline;
 }
+
+.footer-new__pravicy-block--message{
+  border: 1px solid #ccc4be;
+  padding: 10px;
+}
+
+.article-page blockquote{
+  padding: 32px 40px;
+  background-color: #f2f2f0;
+  border-radius: 16px;
+  border-left: 0;
+  margin: 56px 0;
+}
+
+.article-page blockquote p{
+  font-size: 24px !important;
+  color: #1C1C1C;
+  margin: 0 !important;
+}
+
+@media screen and (max-width: 992px) {
+  .article-page blockquote{
+    padding: 24px 32px !important;
+    margin: 24px 0 !important;
+  }
+  .article-page blockquote p{
+    font-size: 16px !important;
+  }
+}
