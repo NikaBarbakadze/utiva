@@ -243,6 +243,7 @@
         },
         "9ea25345-2683-4f86-b655-8f43fc2b8788": {
           "type": "property",
+          "disabled": true,
           "settings": {
             "icon": "shopify:\/\/shop_images\/icn_72e51bac-f4ed-42d9-a35b-8ce6df2c6d8c.svg",
             "content": "Virtually no oxalates—ideal for those prone to kidney stones"
@@ -250,6 +251,7 @@
         },
         "property_ziC9PX": {
           "type": "property",
+          "disabled": true,
           "settings": {
             "content": ""
           }
@@ -311,7 +313,7 @@
       "settings": {
         "bg": "shopify:\/\/shop_images\/rectangle.webp",
         "bg_desktop": "shopify:\/\/shop_images\/rectangle_1_3a81b8d8-69ea-4bbc-a199-a9706eb5bbc1.webp",
-        "title": "Benefits beyond UTI Prevention",
+        "title": "Benefits beyond urinary tract support",
         "cta_text": "Shop now",
         "cta_url": "shopify:\/\/collections\/collections-page-shop-all"
       }
