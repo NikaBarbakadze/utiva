@@ -12,7 +12,7 @@
         "label_background_color": "#ffffff",
         "label_text_color": "#1c1c1c",
         "title": "Sophisticated science, simple product",
-        "description": "<p>You’ve probably tried it all for UTI prevention. Wiped front to back, swapped out your underwear to cotton and drank ALL the cranberry juice. How are Utiva Cranberry PACs different? It’s surprisingly simple.<\/p>",
+        "description": "<p>You’ve probably tried it all for UTI prevention: wiped front to back, swapped out your underwear to cotton and drank ALL the cranberry juice. How are Utiva Cranberry PACs different? It’s surprisingly simple.<\/p>",
         "btn_text": "Discover",
         "btn_url": "#custom-carousel-section"
       }
@@ -23,7 +23,7 @@
         "show_slider": true,
         "carousel_text": "discover",
         "title": "Revolutionize your UTI prevention game plan",
-        "subtitle": "The active ingredient – proanthocyanidins or PACs for short, make all the difference. Taken once daily, this molecule which is found in cranberries and when dosed at <em>36mg a day<\/em> is clinically proven to help prevent UTIs.",
+        "subtitle": "The active ingredient — proanthocyanidins or PACs for short, make all the difference. Taken once daily, this molecule which is found in cranberries and when dosed at <em>36 mg a day<\/em> is clinically proven to help prevent UTIs.",
         "word": "Proanthocyanidins",
         "pro": "[Prow·an·thow·sai·a·nuh·dnz]",
         "subtext": "or PACs for short, are the active molecules found in cranberries that fight UTI-causing bacteria"
@@ -36,7 +36,7 @@
           "type": "htw",
           "settings": {
             "image": "shopify:\/\/shop_images\/Group_49_1_c3054442-5e41-499c-a3e0-ba16a97d0bcb.webp",
-            "desc": "UTI causing bacteria have arms with hand-like suction cups that allow them to stick to your bladder wall, which causes an infection. PACs work by blocking these hands."
+            "desc": "UTI-causing bacteria have arms with hand-like suction cups that allow them to stick to your bladder wall, which causes an infection. PACs work by blocking these hands."
           }
         },
         "5cbf89f4-5b61-4e98-b722-29299c63defb": {
@@ -67,8 +67,8 @@
       "type": "why-pacs-video1",
       "settings": {
         "title": "Not all cranberry supplements are created equal",
-        "subtext": "This is the exact, clinically proven dose needed to be effective in preventing bacteria from sticking to the bladder. And the precise amount that is meticulously extracted and contained in every single Utiva Cranberry PACs capsule.",
-        "mg": "36mg of PACs",
+        "subtext": "This is the exact clinically proven dose needed to be effective in preventing bacteria from sticking to the bladder. And the precise amount that is meticulously extracted and contained in every single Utiva Cranberry PACs capsule.",
+        "mg": "36 mg of PACs",
         "video": "shopify:\/\/files\/videos\/Utiva - Cranberry PAC Explanatory Video..mp4"
       }
     },
@@ -101,7 +101,7 @@
       ],
       "settings": {
         "title": "The Measurement Matters",
-        "subtext": "We use the most accurate, standard of measurement, called DMAC\/A2 to ensure that every capsule contains the necessary 36 mg of soluble PACs measured in the most precise method possible. Other less reliable standards of measurement can leave you short.",
+        "subtext": "We use the most accurate, standard of measurement, called DMAC\/A2, to ensure that every capsule contains the necessary 36 mg of soluble PACs measured in the most precise method possible. Other less reliable standards of measurement can leave you short.",
         "desktop_subtitle": "Utiva Cranberry PACs vs. other cranberry supplements",
         "mobile_image": "shopify:\/\/shop_images\/Group_19_03ac2a0d-5a18-4999-8529-b3812fdc880b.webp",
         "desktop_image": "shopify:\/\/shop_images\/Stats_7d7e36b0-0d8d-4480-9274-5ef0c00e5737.webp"
