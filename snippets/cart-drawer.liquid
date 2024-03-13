@@ -549,11 +549,7 @@
           <div class="relative">
             <div class="embla embla-cart overflow-x-clip overflow-y-visible">
               <div class="embla__viewport">
-                <div class="embla__container gap-4">
-                  {% for product in collections['popular-add-ons'].products %} 
-                    {% render 'custom-product-buy-card', product: product, forloop: forloop %}
-                  {% endfor %}
-                </div>
+                <div class="embla__container gap-4"> {% for product in collections['popular-add-ons'].products %} {% assign product_in_cart = false %} {% for item in cart.items %} {% if product.id == item.product_id %} {% assign product_in_cart = true %} {% break %} {% endif %} {% endfor %} {% unless product_in_cart %} {% render 'custom-product-buy-card', product: product, forloop: forloop %} {% endunless %} {% endfor %} </div>
               </div>
             </div>
           </div>
