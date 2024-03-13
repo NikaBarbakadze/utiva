@@ -31,7 +31,6 @@
             "date": "May 4, 2023",
             "title": "Utiva Health voted #1 Doctor Recommended OTC Brand for UTI Prevention in Canada",
             "url": "https:\/\/finance.yahoo.com\/news\/utiva-health-voted-1-doctor-130200687.html?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAAB142qTkc32yRtosVCJ60FH7uzdQq0MBXsriAXF9BUDGrwoWgURi4tpGdwWR9T_YNfXuKCkNcWMp1tn9BaZUcxadFtbDfSkSgLEzSTrwUTmL9dzX7f3kj-xKmmrR2BRHv8K_Bw3TWPnjodcwhLYhDd18NXGDNZyr3OACyrhaOjPc",
-            "image": "shopify:\/\/shop_images\/Logo_Yahoo.png",
             "source": "finance.yahoo.com",
             "alt_text": "Yahoo Finance Logo"
           }
@@ -75,7 +74,6 @@
             "date": "Apr 23, 2021",
             "title": "Tampa Bay Morning Blend March Refresh with Grace Gold",
             "url": "https:\/\/www.youtube.com\/watch?v=9z3cqGBNlVU&t=1s",
-            "image": "shopify:\/\/shop_images\/Logo_abc_1.png",
             "source": "abcnews.go.com",
             "alt_text": "ABC News Logo"
           }
@@ -86,7 +84,6 @@
             "date": "Mar 11, 2021",
             "title": "Canada-based Utiva Launches a New Line of Urinary Tract Health and Wellness Products",
             "url": "https:\/\/femtechinsider.com\/utiva-uti-products\/",
-            "image": "shopify:\/\/shop_images\/Logo_Femtech.png",
             "source": "femtechinsider.com",
             "alt_text": "Femtech Insider logo"
           }
@@ -97,7 +94,6 @@
             "date": "May 4, 2023",
             "title": "Utiva Health voted #1 Doctor Recommended OTC Brand for UTI Prevention in Canada",
             "url": "https:\/\/www.newswire.ca\/news-releases\/utiva-health-voted-1-doctor-recommended-otc-brand-for-uti-prevention-in-canada-818023905.html",
-            "image": "shopify:\/\/shop_images\/cision_logo.svg",
             "source": "www.newswire.ca",
             "alt_text": "Image Alt Text"
           }
@@ -108,7 +104,6 @@
             "date": "March 8, 2021",
             "title": "Utiva Announces Line of Flagship Urinary Tract Health and Wellness Products",
             "url": "https:\/\/www.newswire.ca\/news-releases\/utiva-announces-line-of-flagship-urinary-health-and-wellness-products-810540537.html",
-            "image": "shopify:\/\/shop_images\/cision_logo.svg",
             "source": "www.newswire.ca",
             "alt_text": "Image Alt Text"
           }
@@ -136,7 +131,7 @@
     "a0c71852-e568-432c-9382-cdadf4b3d32c": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"505575\"><\/div>",
+        "custom_liquid": "<div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"475435\"><\/div>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
