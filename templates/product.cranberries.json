@@ -187,7 +187,7 @@
     "c8dae995-780a-4003-9876-093a01bd3220": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"445219\" data-yotpo-product-id=\"{{product.id}}\" data-yotpo-name=\"{{ product.title | escape }}\" data-yotpo-url=\"{{ shop.url }}{{ product.url }}\" data-yotpo-image-url=\"{{ product.featured_image | product_img_url: \"large\" | prepend: \"https:\" | replace: '?', '%3F' | replace: '&','%26'}}\" data-yotpo-price=\"{{ product.price | divided_by: 100.00 }}\" data-yotpo-currency=\"{{ shop.currency }}\" data-yotpo-description=\"{{ product.description | escape }}\"><\/div>",
+        "custom_liquid": "<div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"434875\" data-yotpo-product-id=\"{{product.id}}\" data-yotpo-name=\"{{ product.title | escape }}\" data-yotpo-url=\"{{ shop.url }}{{ product.url }}\" data-yotpo-image-url=\"{{ product.featured_image | product_img_url: \"large\" | prepend: \"https:\" | replace: '?', '%3F' | replace: '&','%26'}}\" data-yotpo-price=\"{{ product.price | divided_by: 100.00 }}\" data-yotpo-currency=\"{{ shop.currency }}\" data-yotpo-description=\"{{ product.description | escape }}\"><\/div>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
