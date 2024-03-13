@@ -92,6 +92,20 @@ if (!customElements.get('product-form')) {
             if (this.cart && this.cart.classList.contains('is-empty')) this.cart.classList.remove('is-empty');
             if (!this.error) this.submitButton.removeAttribute('aria-disabled');
             this.querySelector('.loading-overlay__spinner').classList.add('hidden');
+
+            var emblaNode = document.querySelector('.embla-cart')
+            var emblaViewport = emblaNode.querySelector('.embla__viewport');
+            var options = { draggable: true, loop: false, align: 'start'}
+        
+            // Grab button nodes
+            const prevButtonNode = document.querySelector('.embla__prev')
+            const nextButtonNode = document.querySelector('.embla__next')
+        
+            var embla = EmblaCarousel(emblaViewport, options)
+        
+        
+            prevButtonNode.addEventListener('click', embla.scrollPrev, false)
+            nextButtonNode.addEventListener('click', embla.scrollNext, false)
           });
       }
 
