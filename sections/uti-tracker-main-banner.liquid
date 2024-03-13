@@ -1,6 +1,246 @@
+{{ 'uti-tracker-main-banner.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign img_desktop = section.settings.img_desktop | image_url: width: img_desktop.width
+  assign img_desktop_blur = section.settings.img_desktop_blur | image_url: width: img_desktop_blur.width
+  assign img_mobile = section.settings.img_mobile | image_url: width: img_mobile.width
+  assign img_mobile_blur = section.settings.img_mobile_blur | image_url: width: img_mobile_blur.width
+%}
+
+<style>
+   .main-banner__container--image {
+     background-image: url('{{ img_mobile }}');
+     width: 100%;
+     background-repeat: no-repeat;
+     background-size: cover;
+     height: 60%;
+     background-position: top;
+   }
+
+  {% if template.suffix == "about-us" %}
+   .main-banner__content {
+     max-width: 610px !important;
+   }
+   @media screen and (max-width: 770px) {
+     .main-banner__container--bottom {
+       height: 30%;
+     }
+     .main-banner {
+       height: 410px;
+     }
+     .main-banner__container--image {
+       height: 70%;
+     }
+   }
+  {% endif %}
+
+  {% if template.suffix == "why-pacs" %}
+   @media screen and (min-width: 770px) {
+     .main-banner {
+       height: 600px !important;
+     }
+   }
+   @media screen and (max-width: 770px) {
+     .main-banner__container--image {
+       background-position: center;
+       height: 45%;
+     }
+     .main-banner__content {
+       top: 60%;
+     }
+   }
+  {% endif %}
+
+   .main-banner__container--blur-image {
+     background-image: url('{{ img_mobile_blur }}');
+     width: 100%;
+     background-repeat: no-repeat;
+     background-size: cover;
+     height: 100%;
+   }
+
+   @media screen and (min-width: 480px) {
+     .main-banner__container--image {
+       background-size: cover;
+       background-position: center;
+     }
+   }
+
+   @media screen and (min-width: 1024px) {
+     .main-banner__container--image {
+       width: 50%;
+       background-image: url('{{ img_desktop }}');
+       height: 100%;
+       background-size: cover;
+     }
+
+     .main-banner__container--blur-image {
+       background-image: url('{{ img_desktop_blur }}');
+     }
+   }
+
+   @media screen and (min-width: 1439px) {
+     .main-banner__container--image {
+       background-size: cover;
+       background-position: top;
+     }
+   }
+</style>
+
+<div class="main-banner main-banner--{{ section.id }} {{ template.suffix }}-banner">
+  <div class="main-banner__container">
+    <div class="main-banner__container--image" style="background-color: {{ section.settings.background_color }}">
+      {% if section.settings.label_text != blank %}
+        <div
+          class="body-s mobile"
+          style="background-color: {{ section.settings.label_background_color }}; color: {{ section.settings.label_text_color }}"
+        >
+          {{ section.settings.label_text }}
+        </div>
+      {% endif %}
+    </div>
+    <div class="main-banner__container--bottom">
+      <div class="main-banner__container--blur-image">
+        {% unless template.suffix == 'about-us' %}
+          <div class="main-banner__container--blur"></div>
+        {% endunless %}
+      </div>
+      <div class="main-banner__content">
+        {% if section.settings.title != blank %}
+          <h1 class="main-banner__content--title">{{ section.settings.title }}</h1>
+        {% endif %}
+        {% if section.settings.description != blank %}
+          {{ section.settings.description }}
+        {% endif %}
+        <div class="uti-tracker-banner-buttons">
+          {% if section.settings.btn_text_1 != blank or section.settings.btn_img_1 != blank %}
+            <a
+              href="{{ section.settings.btn_url_1 }}"
+              class="{% if section.settings.btn_img_1 != blank %}uti-banner-button{% else %}btn-new btn-new--primary{% endif %}"
+            >
+              {% if section.settings.btn_img_1 == blank %}
+                {{ section.settings.btn_text_1 }}
+                {% render 'icon', icon: 'primary-btn-icon' %}
+              {% else %}
+                <img
+                  src="{{ section.settings.btn_img_1 | img_url: 'original' }}"
+                  alt="{{ section.settings.btn_img_1.alt }}"
+                >
+              {% endif %}
+            </a>
+          {% endif %}
+          {% if section.settings.btn_text_2 != blank or section.settings.btn_img_2 != blank %}
+            <a
+              href="{{ section.settings.btn_url_2 }}"
+              class="{% if section.settings.btn_img_2 != blank %}uti-banner-button{% else %}btn-new btn-new--primary{% endif %}"
+            >
+              {% if section.settings.btn_img_2 == blank %}
+                {{ section.settings.btn_text_2 }}
+                {% render 'icon', icon: 'primary-btn-icon' %}
+              {% else %}
+                <img
+                  src="{{ section.settings.btn_img_2 | img_url: 'original' }}"
+                  alt="{{ section.settings.btn_img_2.alt }}"
+                >
+              {% endif %}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "UTI Tracker Main Banner",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Background settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_desktop",
+      "label": "Image (Desktop)"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_desktop_blur",
+      "label": "Blur Image (Desktop)"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_mobile",
+      "label": "Image (Mobile)"
+    },
+	  {
+      "type": "image_picker",
+      "id": "img_mobile_blur",
+      "label": "Image Blur (Mobile)"
+    },
+	  {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color"
+    },
+	  {
+      "type": "header",
+      "content": "Content settings"
+    },
+	  {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Download Utiva's UTI Tracker App"
+    },
+	  {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Our UTI Tracker App is a simple and convenient way to manage your bladder wellness journey. Plus it is FREE!</p>"
+    },
+	  {
+      "type": "header",
+      "content": "Button settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "btn_img_1",
+      "label": "Button Image 1"
+    },
+	  {
+      "type": "text",
+      "id": "btn_text_1",
+      "label": "Button Text 1",
+      "default": "App Store"
+    },
+	  {
+      "type": "url",
+      "id": "btn_url_1",
+      "label": "Button URL 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "btn_img_2",
+      "label": "Button Image 2"
+    },
+    {
+      "type": "text",
+      "id": "btn_text_2",
+      "label": "Button Text 2",
+      "default": "App Store"
+    },
+    {
+      "type": "url",
+      "id": "btn_url_2",
+      "label": "Button URL 2"
+    }
+  ],
+  "presets": [
+    {
+      "name": "UTI Tracker Main Banner"
+    }
+  ]
+}
 {% endschema %}
