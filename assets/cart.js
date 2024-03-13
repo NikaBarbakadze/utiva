@@ -240,8 +240,6 @@ class CartItems extends HTMLElement {
 
         prevButtonNode.addEventListener("click", embla.scrollPrev, false);
         nextButtonNode.addEventListener("click", embla.scrollNext, false);
-
-        console.log("here");
       });
   }
 
