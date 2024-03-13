@@ -14,6 +14,38 @@
 			--padding-bottom: {{ section.settings.paddingBottom_mobile }}px;
 		}
 	}
+
+	.new-product-slider button.slick-next.slick-arrow,
+	.new-product-slider button.slick-prev.slick-arrow {
+			display: block !important;
+	}
+	.new-product-slider button.slick-next.slick-arrow {
+			right: 28px;
+			z-index: 1;
+	}
+	.new-product-slider button.slick-prev.slick-arrow {
+			left: 28px;
+			z-index: 1;
+	}
+	.new-product-slider .slick-prev:before,
+	.new-product-slider .slick-next:before {
+			background: unset !important;
+	}
+	.new-product-slider .slick-prev:focus,
+	.new-product-slider .slick-next:focus {
+			background-color: var(--color-white);
+	}
+	.new-product-slider .slick-prev:hover,
+	.new-product-slider .slick-next:hover {
+			background-color: var(--grey);
+	}
+	.new-product-slider .btn-new--arrow {
+			padding-top: 4px;
+	}
+	.new-product-slider button.slick-next.slick-arrow[aria-disabled="true"],
+	.new-product-slider button.slick-prev.slick-arrow[aria-disabled="true"] {
+			display: none !important;
+	}
 {% endstyle %}
 
 <div
@@ -118,18 +150,33 @@
 				{
 					breakpoint: 1024,
 					settings: {
+						arrows: true,
+						prevArrow:
+							"<button type='button' class='slick-prev pull-left btn-new btn-new--arrow'><svg xmlns='http://www.w3.org/2000/svg' width='32'height='32' viewBox='0 0 32 32' fill='none'> <path d='M5.3335 15.9999H28.0002M5.3335 15.9999L12.0002 9.33325M5.3335 15.9999L12.0002 22.6666' stroke='#1C1C1C' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/> </svg></button>",
+						nextArrow:
+							"<button type='button' class='slick-next pull-right btn-new btn-new--arrow'><svg xmlns='http://www.w3.org/2000/svg' width='32'height='32' viewBox='0 0 32 32' fill='none'> <path d='M26.6667 15.9999H4M26.6667 15.9999L20 22.6666M26.6667 15.9999L20 9.33325' stroke='#1C1C1C' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/> </svg></button>",
 						slidesToShow: 2.53,
 					},
 				},
 				{
 					breakpoint: 1441,
 					settings: {
+						arrows: true,
+						prevArrow:
+							"<button type='button' class='slick-prev pull-left btn-new btn-new--arrow'><svg xmlns='http://www.w3.org/2000/svg' width='32'height='32' viewBox='0 0 32 32' fill='none'> <path d='M5.3335 15.9999H28.0002M5.3335 15.9999L12.0002 9.33325M5.3335 15.9999L12.0002 22.6666' stroke='#1C1C1C' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/> </svg></button>",
+						nextArrow:
+							"<button type='button' class='slick-next pull-right btn-new btn-new--arrow'><svg xmlns='http://www.w3.org/2000/svg' width='32'height='32' viewBox='0 0 32 32' fill='none'> <path d='M26.6667 15.9999H4M26.6667 15.9999L20 22.6666M26.6667 15.9999L20 9.33325' stroke='#1C1C1C' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/> </svg></button>",
 						slidesToShow: 3.5,
 					},
 				},
 				{
 					breakpoint: 2000,
 					settings: {
+						arrows: true,
+						prevArrow:
+							"<button type='button' class='slick-prev pull-left btn-new btn-new--arrow'><svg xmlns='http://www.w3.org/2000/svg' width='32'height='32' viewBox='0 0 32 32' fill='none'> <path d='M5.3335 15.9999H28.0002M5.3335 15.9999L12.0002 9.33325M5.3335 15.9999L12.0002 22.6666' stroke='#1C1C1C' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/> </svg></button>",
+						nextArrow:
+							"<button type='button' class='slick-next pull-right btn-new btn-new--arrow'><svg xmlns='http://www.w3.org/2000/svg' width='32'height='32' viewBox='0 0 32 32' fill='none'> <path d='M26.6667 15.9999H4M26.6667 15.9999L20 22.6666M26.6667 15.9999L20 9.33325' stroke='#1C1C1C' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/> </svg></button>",
 						slidesToShow: 4.5,
 					},
 				},
