@@ -237,6 +237,7 @@
       "blocks": {
         "d41d337b-b0e0-4a36-8f24-2c4d8b6a1cad": {
           "type": "video",
+          "disabled": true,
           "settings": {
             "user_name": "Jane | Menopause related UTIs",
             "user_rating": "5.0"
@@ -252,6 +253,7 @@
         },
         "1dc78747-aa0c-422c-a6cf-2bb9914b1002": {
           "type": "video",
+          "disabled": true,
           "settings": {
             "user_name": "Elaine | UTI story",
             "user_rating": "5.0",
