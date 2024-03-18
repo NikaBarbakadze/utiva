@@ -4261,6 +4261,14 @@ padding-right: 0 !important;
   margin: 0 !important;
 }
 
+.article-body img[alt="desktop-image"]{
+  display: block;
+}
+
+.article-body img[alt="mobile-image"]{
+  display: none;
+}
+
 @media screen and (max-width: 992px) {
   .article-page blockquote{
     padding: 24px 32px !important;
@@ -4269,4 +4277,13 @@ padding-right: 0 !important;
   .article-page blockquote p{
     font-size: 16px !important;
   }
+
+  .article-body img[alt="desktop-image"]{
+    display: none;
+  }
+  
+  .article-body img[alt="mobile-image"]{
+    display: block;
+  }
 }
+
