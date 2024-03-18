@@ -378,7 +378,7 @@
                   </h2>
                 </a>
               </div>
-              <div class="yotpo-reviews-count flex items-center justify-start gap-x-2 mb-6 md:mb-8">
+              <a id="yotpo-reviews-main-widget" class="yotpo-reviews-count flex items-center justify-start gap-x-2 mb-6 md:mb-8">
                 {% if product.metafields.yotpo.reviews_average %} 
                   <div class="flex items-center justify-center gap-x-1 rounded-[4rem] border border-[#C33635] py-0.5 pl-1.5 pr-2.5">
                     {% render 'icon-star' %}
@@ -388,7 +388,7 @@
                 {% if product.metafields.yotpo.reviews_count %} 
                   <p class="text-[#1C1C1C] text-sm font-medium leading-[1.96rem]">Based on {{ product.metafields.yotpo.reviews_count }} reviews</p>
                 {% endif %}
-              </div>
+              </a>
               <div class="product_data_tabs_wrapper overflow-x-scroll">
                 <div class="flex items-center justify-start gap-x-6 w-max">
                   <p class="product_data_tab text-base font-normal cursor-pointer text-[#1c1c1c99] py-1 active">Overview</p>
