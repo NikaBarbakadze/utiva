@@ -13,7 +13,7 @@ If you plan to remove PageFly, please see the guide in our help center first: ht
 window.TriplePixelData={TripleName:"utiva.myshopify.com",ver:"2.12",plat:"SHOPIFY",isHeadless:false},function(W,H,A,L,E,_,B,N){function O(U,T,P,H,R){void 0===R&&(R=!1),H=new XMLHttpRequest,P?(H.open("POST",U,!0),H.setRequestHeader("Content-Type","text/plain")):H.open("GET",U,!0),H.send(JSON.stringify(P||{})),H.onreadystatechange=function(){4===H.readyState&&200===H.status?(R=H.responseText,U.includes(".txt")?eval(R):P||(N[B]=R)):(299<H.status||H.status<200)&&T&&!R&&(R=!0,O(U,T-1,P))}}if(N=window,!N[H+"sn"]){N[H+"sn"]=1,L=function(){return Date.now().toString(36)+"_"+Math.random().toString(36)};try{A.setItem(H,1+(0|A.getItem(H)||0)),(E=JSON.parse(A.getItem(H+"U")||"[]")).push({u:location.href,r:document.referrer,t:Date.now(),id:L()}),A.setItem(H+"U",JSON.stringify(E))}catch(e){}var i,m,p;A.getItem('"!nC`')||(_=A,A=N,A[H]||(E=A[H]=function(t,e,a){return void 0===a&&(a=[]),"State"==t?E.s:(W=L(),(E._q=E._q||[]).push([W,t,e].concat(a)),W)},E.s="Installed",E._q=[],E.ch=W,B="configSecurityConfModel",N[B]=1,O("https://conf.config-security.com/model",5),i=L(),m=A[atob("c2NyZWVu")],_.setItem("di_pmt_wt",i),p={id:i,action:"profile",avatar:_.getItem("auth-security_rand_salt_"),time:m[atob("d2lkdGg=")]+":"+m[atob("aGVpZ2h0")],host:A.TriplePixelData.TripleName,plat:A.TriplePixelData.plat,url:window.location.href,ref:document.referrer,ver:A.TriplePixelData.ver},O("https://api.config-security.com/event",5,p),O("https://whale.camera/live/dot.txt",5)))}}("","TriplePixel",localStorage);
 /* << TriplePixel :: end*/
 </script>
-<link rel='preconnect dns-prefetch' href='https://triplewhale-pixel.web.app/' crossorigin />{% render 'pagefly-head' %}
+<link rel='preconnect dns-prefetch' href='https://triplewhale-pixel.web.app/' crossorigin />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -39,6 +39,16 @@ window.TriplePixelData={TripleName:"utiva.myshopify.com",ver:"2.12",plat:"SHOPIF
       <meta name="description" content="{{ page_description | escape }}">
     {% endif %}
 
+    <meta name="google-site-verification" content="2bcKVxBKujX46mFr3eif_x_JXzeklotRnZBONfKj838"/>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MNQ2T9T');</script>
+    <!-- End Google Tag Manager -->
+
     {% render 'meta-tags' %}
 
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
@@ -48,6 +58,14 @@ window.TriplePixelData={TripleName:"utiva.myshopify.com",ver:"2.12",plat:"SHOPIF
       <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
+    {% if template.suffix contains 'bm-hcp' or request.path == "/pages/uti-thumbs-up" or request.path == "/pages/survey-not-purchase" or request.path == "/pages/uti-thumbs-down" or request.path == "/pages/oab-thumbs-up" or request.path == "/pages/oab-thumbs-down" or template.suffix contains 'klaviyo-embed-form' or request.path == "/pages/uti-ebook-thank-you" %} 
+      <meta name="robots" content="noindex,nofollow">
+    {% endif %}
+    
+    {% if template.suffix contains "uti-ebook" %}
+     {{ 'bm-ebook.css' | asset_url | stylesheet_tag }}
+     {% endif %}
+     
     {{ content_for_header }}
 
     {%- liquid
@@ -262,7 +280,7 @@ window.TriplePixelData={TripleName:"utiva.myshopify.com",ver:"2.12",plat:"SHOPIF
     {%- render 'css-variables' -%}
 
     {% render 'critical-css' %}
-		{% render 'load-css' %}
+		{% comment %} {% render 'load-css' %} {% endcomment %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
 
@@ -433,9 +451,120 @@ window.TriplePixelData={TripleName:"utiva.myshopify.com",ver:"2.12",plat:"SHOPIF
 				display: none;
 			}
 		</style>
-    
-    <script src="https://cdn-widgetsrepository.yotpo.com/v1/loader/3NhG13UQDuUl6r31Ov5IEKsACm6Md9TxF4TTruxD" async></script>
-  </head>
 
-  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}"><div class="pagefly-container">{{ content_for_layout }}</div></body>
+        <!-- SegMetrics -->
+    <script type="text/javascript">
+      var _segq = _segq || [];
+      var _segs = _segs || {};
+      (function() {
+        var dc = document.createElement('script');
+        dc.type = 'text/javascript';
+        dc.async = true;
+        dc.src = '//tag.segmetrics.io/a1o3WX.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(dc, s);
+      })();
+    </script>
+    <!-- SegMetrics END -->
+    
+    <script src="https://cdn-widgetsrepository.yotpo.com/v1/loader/NQCtvc7XR9VM319BAkqg8t2SzNJ3lJ4frdAN8UbZ" async></script>
+    
+    <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+    <script src="https://unpkg.com/embla-carousel-class-names/embla-carousel-class-names.umd.js"></script>
+
+    <script src="{{ 'emblaHelpers.js' | asset_url }}"></script>
+  
+{% include 'pagefly-app-header' %}</head>
+
+  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}"><div class="pagefly-container">
+              {{ content_for_layout }}
+            </div></body>
 </html>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=98fcc2ac-8d3a-4d27-988c-2f316d1b6f10'></script>

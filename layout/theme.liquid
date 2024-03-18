@@ -469,7 +469,8 @@ window.TriplePixelData={TripleName:"utiva.myshopify.com",ver:"2.12",plat:"SHOPIF
     <script src="https://unpkg.com/embla-carousel-class-names/embla-carousel-class-names.umd.js"></script>
 
     <script src="{{ 'emblaHelpers.js' | asset_url }}"></script>
-  </head>
+  
+{% include 'pagefly-app-header' %}</head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
     <!-- Google Tag Manager (noscript) -->
