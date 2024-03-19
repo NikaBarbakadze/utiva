@@ -46,7 +46,7 @@
           "type": "shipping",
           "settings": {
             "question": "Is shipping free?",
-            "answer": "Free standard shipping is available to all  orders over $50+. To be eligible for free shipping your subtotal must be greater than $50 once any promotions or discounts are applied. Orders under $50 will be charged a $10 shipping fee."
+            "answer": "Free standard shipping is available to all  orders over $25+. To be eligible for free shipping your subtotal must be greater than $25 once any promotions or discounts are applied. Orders under $25 will be charged a $10 shipping fee."
           }
         },
         "5f81f5b6-22bc-4bf7-ba33-59fac7fd5428": {
