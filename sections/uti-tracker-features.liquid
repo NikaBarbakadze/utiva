@@ -1,6 +1,177 @@
+{{ 'uti-tracker-features.css' | asset_url | stylesheet_tag }}
+
+<div class="uti-tracker-feature">
+  <div class="uti-tracker-feature__container">
+    <div class="uti-tracker-feature__container-left">
+      {% if section.settings.title != blank %}
+        <div class="container-left-title">
+          {{ section.settings.title }}
+        </div>
+      {% endif %}
+      <div class="container-left-blocks">
+        {% for block in section.blocks %}
+          <p class="left-blocks-content">
+            <span class="content-icon__wrapper">
+              {% if block.settings.icon != blank %}
+                <img
+                  class="content-icon {% if block.settings.icon_mobile == blank %}both-device{% else %}desktop{% endif %}"
+                  src="{{ block.settings.icon | img_url: 'original' }}"
+                  alt="{{ block.settings.icon.alt }}"
+                >
+              {% endif %}
+              {% if block.settings.icon_mobile != blank %}
+                <img
+                  class="content-icon mobile"
+                  src="{{ block.settings.icon_mobile | img_url: 'original' }}"
+                  alt="{{ block.settings.icon_mobile.alt }}"
+                >
+              {% endif %}
+            </span>
+            {% if block.settings.title != blank %}
+              <span class="content-texts">{{ block.settings.title }}</span>
+            {% endif %}
+          </p>
+        {% endfor %}
+      </div>
+      <div class="uti-tracker-feature-buttons">
+        {% if section.settings.btn_text_1 != blank or section.settings.btn_img_1 != blank %}
+          <a
+            href="{{ section.settings.btn_url_1 }}"
+            class="{% if section.settings.btn_img_1 != blank %}uti-feature-button{% else %}btn-new btn-new--primary{% endif %}"
+          >
+            {% if section.settings.btn_img_1 == blank %}
+              {{ section.settings.btn_text_1 }}
+              {% render 'icon', icon: 'primary-btn-icon' %}
+            {% else %}
+              <img
+                src="{{ section.settings.btn_img_1 | img_url: 'original' }}"
+                alt="{{ section.settings.btn_img_1.alt }}"
+              >
+            {% endif %}
+          </a>
+        {% endif %}
+        {% if section.settings.btn_text_2 != blank or section.settings.btn_img_2 != blank %}
+          <a
+            href="{{ section.settings.btn_url_2 }}"
+            class="{% if section.settings.btn_img_2 != blank %}uti-feature-button{% else %}btn-new btn-new--primary{% endif %}"
+          >
+            {% if section.settings.btn_img_2 == blank %}
+              {{ section.settings.btn_text_2 }}
+              {% render 'icon', icon: 'primary-btn-icon' %}
+            {% else %}
+              <img
+                src="{{ section.settings.btn_img_2 | img_url: 'original' }}"
+                alt="{{ section.settings.btn_img_2.alt }}"
+              >
+            {% endif %}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+    <div class="uti-tracker-feature__container-right">
+      {% if section.settings.video_url != blank %}
+        <iframe
+          width="560"
+          height="315"
+          src="{{ section.settings.video_url }}"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        >
+        </iframe>
+      {% endif %}
+    </div>
+    <div class="container-mobile-title">
+      {{ section.settings.title }}
+    </div>
+  </div>
+</div>
+
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+   "name": "UTI Tracker Features",
+	"settings": [
+     {
+       "type": "header",
+       "content": "Content settings"
+     },
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Title",
+			"default": "App Features"
+     },
+		{
+       "type": "text",
+       "id": "video_url",
+       "label": "Video Url",
+			"info": "Please insert the embedded url"
+     },
+     {
+       "type": "header",
+       "content": "Button settings"
+     },
+     {
+       "type": "image_picker",
+       "id": "btn_img_1",
+       "label": "Button Image 1"
+     },
+     {
+       "type": "text",
+       "id": "btn_text_1",
+       "label": "Button Text 1",
+       "default": "App Store"
+     },
+     {
+       "type": "url",
+       "id": "btn_url_1",
+       "label": "Button URL 1"
+     },
+     {
+       "type": "image_picker",
+       "id": "btn_img_2",
+       "label": "Button Image 2"
+     },
+     {
+       "type": "text",
+       "id": "btn_text_2",
+       "label": "Button Text 2",
+       "default": "App Store"
+     },
+     {
+       "type": "url",
+       "id": "btn_url_2",
+       "label": "Button URL 2"
+     }
+	],
+	"blocks": [
+		{
+			"type": "feature",
+			"name": "Feature",
+			"settings": [
+				{
+					"type": "image_picker",
+					"id": "icon",
+					"label": "Desktop Icon"
+         },
+         {
+           "type": "image_picker",
+           "id": "icon_mobile",
+           "label": "Mobile Icon"
+         },
+				{
+           "type": "text",
+           "id": "title",
+           "label": "Feature"
+         }
+			]
+     }
+	],
+	"presets": [
+		{
+       "name": "UTI Tracker Features"
+     }
+	]
+ }
 {% endschema %}
