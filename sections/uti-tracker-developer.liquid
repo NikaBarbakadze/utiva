@@ -1,6 +1,45 @@
+{{ 'uti-tracker-developer.css' | asset_url | stylesheet_tag }}
+
+<div class="uti-tracker-developer">
+  <div class="uti-tracker-developer__container">
+    <div class="uti-tracker-developer__contents">
+      {% if section.settings.image != blank %}
+        <div class="contents-image__wrapper">
+          <img
+            class="uti-tracker-developer__contents-image"
+            src="{{ section.settings.image | img_url: 'original' }}"
+            alt="{{ section.settings.image.alt }}"
+          >
+        </div>
+      {% endif %}
+      {% if section.settings.title != blank %}
+        <div class="uti-tracker-developer__contents-text">
+          <p>{{ section.settings.title }}</p>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "UTI Tracker Developer",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "Content"
+    }
+  ],
+  "presets": [
+    {
+      "name": "UTI Tracker Developer"
+    }
+  ]
+}
 {% endschema %}
