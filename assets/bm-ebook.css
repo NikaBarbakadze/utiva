@@ -57,7 +57,16 @@
     background-image: url(https://cdn.shopify.com/s/files/1/0060/4677/7455/files/Vector_10_0d262f85-1993-49a3-a52d-ddb6ca73fb16.png?v=1706600892);
     
 }
-
+.bm-free-uti-form input.go4278279308.go4278279308.go4278279308:hover {
+    border-radius: 0 !important;
+    border-color: var(--white-60, rgba(255, 255, 255, .6)) !important;
+}
+.bm-free-uti-form input::placeholder{
+    color: rgb(255, 255, 255) !important;
+    font-family: "General Sans", Arial, "Helvetica Neue", Helvetica, sans-serif !important;
+    font-size: 24px !important;
+    font-weight: 300 !important;
+}
 .bm-free-uti-form .needsclick.kl-private-reset-css-Xuajs1 form [data-testid=form-row]:last-child .needsclick.kl-private-reset-css-Xuajs1 button{
     position: relative;
     padding-right: 60px !important;
@@ -74,6 +83,15 @@
   .bm-free-uti-content p {
     font-size: 20px;
  }
+}
+@media only screen and (min-width:768px) {
+  .bm-free-uti-form form {
+      margin-left: 0 !important;
+      padding-left: 0 !important;
+  }
+  .bm-free-uti-form form .needsclick.kl-private-reset-css-Xuajs1 {
+    min-height: auto !important;
+  }
 }
 @media only screen and (max-width:767px){
   .bm-free-uti-content {
@@ -101,9 +119,11 @@
   .bm-free-uti-form .needsclick.kl-private-reset-css-Xuajs1 form [data-testid="form-row"]:last-child .needsclick.kl-private-reset-css-Xuajs1 {
     margin-left: auto !important;
     padding-right: 0 !important;
+    margin: 0 auto;
+    padding-left: 0 !important;
   }
   .bm-free-uti-form .needsclick.kl-private-reset-css-Xuajs1 form [data-testid=form-row]:first-child .needsclick.kl-private-reset-css-Xuajs1 {
-    padding-left: 20px !important;
+    padding-left: 10px !important;
   }
 }
 
