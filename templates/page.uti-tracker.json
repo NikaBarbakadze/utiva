@@ -21,8 +21,10 @@
         "background_color": "#958172",
         "title": "Download Utiva's UTI Tracker App",
         "description": "<p>Our UTI Tracker App is a simple and convenient way to manage your bladder wellness journey. Plus it is FREE!<\/p>",
+        "btn_img_1": "shopify:\/\/shop_images\/apple-store.png",
         "btn_text_1": "App Store",
         "btn_url_1": "",
+        "btn_img_2": "shopify:\/\/shop_images\/google-play.png",
         "btn_text_2": "Google Play",
         "btn_url_2": ""
       }
@@ -69,8 +71,10 @@
       "settings": {
         "title": "App Features",
         "video_url": "https:\/\/www.youtube.com\/embed\/lvDd98VjS0c?si=Y_AX4SaMX4p6GcBw",
+        "btn_img_1": "shopify:\/\/shop_images\/apple-store.png",
         "btn_text_1": "App Store",
         "btn_url_1": "",
+        "btn_img_2": "shopify:\/\/shop_images\/google-play.png",
         "btn_text_2": "App Store",
         "btn_url_2": ""
       }
