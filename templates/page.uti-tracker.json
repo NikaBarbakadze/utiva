@@ -14,10 +14,10 @@
     "uti_tracker_main_banner_j6UJww": {
       "type": "uti-tracker-main-banner",
       "settings": {
-        "img_desktop": "shopify:\/\/shop_images\/tracker-banner.jpg",
+        "img_desktop": "shopify:\/\/shop_images\/uti-tracker-banner.jpg",
         "img_desktop_blur": "shopify:\/\/shop_images\/img_0fc686c7-3fea-493c-8efb-16602d2b258f.png",
-        "img_mobile": "shopify:\/\/shop_images\/tracker-banner.jpg",
-        "img_mobile_blur": "shopify:\/\/shop_images\/tracker-banner.jpg",
+        "img_mobile": "shopify:\/\/shop_images\/uti-tracker-banner.jpg",
+        "img_mobile_blur": "shopify:\/\/shop_images\/uti-tracker-banner.jpg",
         "background_color": "#958172",
         "title": "Download Utiva's UTI Tracker App",
         "description": "<p>Our UTI Tracker App is a simple and convenient way to manage your bladder wellness journey. Plus it is FREE!<\/p>",
