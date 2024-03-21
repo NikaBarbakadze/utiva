@@ -120,6 +120,7 @@
     "uti_developer_xHrEfN": {
       "type": "uti-tracker-developer",
       "settings": {
+        "image": "shopify:\/\/shop_images\/uti-developer.png",
         "title": "Originally developed by Dr. Dana Rice, a board-certified urologist, the UTI Tracker App was created to assist both patients and physicians in achieving the shared objective of enhanced urinary health."
       }
     }
