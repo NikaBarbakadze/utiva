@@ -33,24 +33,29 @@
         "feature_mkib7P": {
           "type": "feature",
           "settings": {
+            "icon": "shopify:\/\/shop_images\/ezgif.com-webp-to-png-converter_5.png",
             "title": "UTI prevention tips, symptom tracking"
           }
         },
         "feature_A8Ca9W": {
           "type": "feature",
           "settings": {
+            "icon": "shopify:\/\/shop_images\/ezgif.com-webp-to-png-converter_1.png",
+            "icon_mobile": "shopify:\/\/shop_images\/ezgif.com-webp-to-png-converter_4.png",
             "title": "UTI recurrence tracking medication & supplement reminders"
           }
         },
         "feature_JTJYEn": {
           "type": "feature",
           "settings": {
+            "icon": "shopify:\/\/shop_images\/ezgif.com-webp-to-png-converter_2.png",
             "title": "Voiding diary"
           }
         },
         "feature_e3MGC8": {
           "type": "feature",
           "settings": {
+            "icon": "shopify:\/\/shop_images\/ezgif.com-webp-to-png-converter_3.png",
             "title": "Export capabilities to share with you healthcare provider"
           }
         }
