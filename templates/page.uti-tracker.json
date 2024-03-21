@@ -81,24 +81,28 @@
         "ui_YdN4jz": {
           "type": "ui",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Group_23.png",
             "title": "Send to Doctor"
           }
         },
         "ui_ix7pTD": {
           "type": "ui",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Group_20.png",
             "title": "Symptom Tracking"
           }
         },
         "ui_xYxwnm": {
           "type": "ui",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Group_22.png",
             "title": "Voiding Diary"
           }
         },
         "ui_ktVFMX": {
           "type": "ui",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Group_21.png",
             "title": "Calendar View"
           }
         }
