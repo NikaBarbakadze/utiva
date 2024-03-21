@@ -14,17 +14,15 @@
     "uti_tracker_main_banner_j6UJww": {
       "type": "uti-tracker-main-banner",
       "settings": {
-        "img_desktop": "shopify:\/\/shop_images\/20a10bcf00aa64f0f99b17f09b4e302f_eb314e16-460d-4b6a-8056-39a6eb75d9a3.jpg",
+        "img_desktop": "shopify:\/\/shop_images\/tracker-banner.jpg",
         "img_desktop_blur": "shopify:\/\/shop_images\/img_0fc686c7-3fea-493c-8efb-16602d2b258f.png",
-        "img_mobile": "shopify:\/\/shop_images\/20a10bcf00aa64f0f99b17f09b4e302f_eb314e16-460d-4b6a-8056-39a6eb75d9a3.jpg",
-        "img_mobile_blur": "shopify:\/\/shop_images\/20a10bcf00aa64f0f99b17f09b4e302f_eb314e16-460d-4b6a-8056-39a6eb75d9a3.jpg",
+        "img_mobile": "shopify:\/\/shop_images\/tracker-banner.jpg",
+        "img_mobile_blur": "shopify:\/\/shop_images\/tracker-banner.jpg",
         "background_color": "#958172",
         "title": "Download Utiva's UTI Tracker App",
         "description": "<p>Our UTI Tracker App is a simple and convenient way to manage your bladder wellness journey. Plus it is FREE!<\/p>",
-        "btn_img_1": "shopify:\/\/shop_images\/Frame_47ab3e3e-f86c-4f63-a1ed-406412d7c361.png",
         "btn_text_1": "App Store",
         "btn_url_1": "",
-        "btn_img_2": "shopify:\/\/shop_images\/Frame_1_9938c5a3-cbf3-441b-ad8a-483a400a5a91.png",
         "btn_text_2": "Google Play",
         "btn_url_2": ""
       }
@@ -35,29 +33,24 @@
         "feature_mkib7P": {
           "type": "feature",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Group_34_ac68a816-07a4-41d3-a0ff-14b47ef8ef38.png",
             "title": "UTI prevention tips, symptom tracking"
           }
         },
         "feature_A8Ca9W": {
           "type": "feature",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Group_3_33457494-c470-4687-9622-0771651b1898.png",
-            "icon_mobile": "shopify:\/\/shop_images\/Group_36_fd6445b4-aaac-4eaf-a436-58eeb8e963aa.png",
             "title": "UTI recurrence tracking medication & supplement reminders"
           }
         },
         "feature_JTJYEn": {
           "type": "feature",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Group_6_455fa4ea-2249-499d-aa47-af228034f230.png",
             "title": "Voiding diary"
           }
         },
         "feature_e3MGC8": {
           "type": "feature",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Group_2.png",
             "title": "Export capabilities to share with you healthcare provider"
           }
         }
@@ -71,10 +64,8 @@
       "settings": {
         "title": "App Features",
         "video_url": "https:\/\/www.youtube.com\/embed\/lvDd98VjS0c?si=Y_AX4SaMX4p6GcBw",
-        "btn_img_1": "shopify:\/\/shop_images\/Frame_47ab3e3e-f86c-4f63-a1ed-406412d7c361.png",
         "btn_text_1": "App Store",
         "btn_url_1": "",
-        "btn_img_2": "shopify:\/\/shop_images\/Frame_1_9938c5a3-cbf3-441b-ad8a-483a400a5a91.png",
         "btn_text_2": "App Store",
         "btn_url_2": ""
       }
@@ -85,28 +76,24 @@
         "ui_YdN4jz": {
           "type": "ui",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_23.png",
             "title": "Send to Doctor"
           }
         },
         "ui_ix7pTD": {
           "type": "ui",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_20.png",
             "title": "Symptom Tracking"
           }
         },
         "ui_xYxwnm": {
           "type": "ui",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_22.png",
             "title": "Voiding Diary"
           }
         },
         "ui_ktVFMX": {
           "type": "ui",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_21.png",
             "title": "Calendar View"
           }
         }
@@ -118,13 +105,12 @@
         "ui_ktVFMX"
       ],
       "settings": {
-        "bg_color": "#F8F4F1"
+        "bg_color": "#f8f4f1"
       }
     },
     "uti_developer_xHrEfN": {
       "type": "uti-tracker-developer",
       "settings": {
-        "image": "shopify:\/\/shop_images\/5c3ebd22b82d30a6fdf73a1fb3b64cbc.png",
         "title": "Originally developed by Dr. Dana Rice, a board-certified urologist, the UTI Tracker App was created to assist both patients and physicians in achieving the shared objective of enhanced urinary health."
       }
     }
