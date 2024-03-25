@@ -4261,6 +4261,10 @@ padding-right: 0 !important;
   margin: 0 !important;
 }
 
+.article-template__content{
+  overflow: hidden;
+}
+
 .article-body img[alt="desktop-image"]{
   display: block;
 }
