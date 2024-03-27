@@ -1,10 +1,19 @@
 <div class="px-6 grid grid-cols-2 justify-between gap-y-8 gap-x-4 py-10 md:flex md:items-center md:gap-x-10 md:px-[9.6rem]">
-  {% for block in section.blocks %}
-    <div class="flex flex-col items-center justify-start gap-y-3 md:w-1/6">
-      <img src="{{ block.settings.icon | img_url: 'master' }}" alt="{{ block.settings.text }} visualization">
-      <p class="text-xs font-medium text-[#1C1C1C] text-center">{{ block.settings.text }}</p>
-    </div>
-  {% endfor %}
+  {% if product.metafields.custom.product_badges == blank %}
+    {% for block in section.blocks %}
+      <div class="flex flex-col items-center justify-start gap-y-3 md:w-1/6">
+        <img src="{{ block.settings.icon | img_url: 'master' }}" alt="{{ block.settings.text }} visualization">
+        <p class="text-xs font-medium text-[#1C1C1C] text-center">{{ block.settings.text }}</p>
+      </div>
+    {% endfor %}
+  {% else %}
+    {% for badge in product.metafields.custom.product_badges.value %}
+      <div class="flex flex-col items-center justify-start gap-y-3 md:w-1/6">
+        <img src="{{ badge.icon | img_url: 'master' }}" alt="{{ badge.title }} visualization">
+        <p class="text-xs font-medium text-[#1C1C1C] text-center">{{ badge.title }}</p>
+      </div>
+    {% endfor %}
+  {% endif %}
 </div>
 
 {% schema %}
